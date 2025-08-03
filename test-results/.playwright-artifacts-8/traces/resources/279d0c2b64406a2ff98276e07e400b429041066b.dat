@@ -1,0 +1,48 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { atom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+import { currentContract$ } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/contract-atoms.ts";
+import { currentSalesProcess, currentSalesProcessForLog } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/sales-process-atoms.ts";
+export const currentPlicoCode = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\current-contract-info-atoms.ts/currentPlicoCode", atom(async (get) => {
+  const plicoCodeAtom = get(currentContract$)?.plicoCode;
+  if (plicoCodeAtom) {
+    return plicoCodeAtom && await get(plicoCodeAtom);
+  }
+}));
+currentPlicoCode.debugLabel = "currentPlicoCode";
+export const currentIdLead = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\current-contract-info-atoms.ts/currentIdLead", atom((get) => {
+  const idAtom = get(currentContract$)?.id;
+  if (idAtom) {
+    return get(idAtom);
+  }
+}));
+currentIdLead.debugLabel = "currentIdLead";
+export const currentContractInfoAtom = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\current-contract-info-atoms.ts/currentContractInfoAtom", atom((get) => {
+  return new Proxy({}, {
+    get: (_target, prop) => {
+      if (prop === "salesProcess") {
+        return get(currentSalesProcess);
+      }
+      if (prop === "salesProcessForLog") {
+        return get(currentSalesProcessForLog);
+      }
+      if (prop === "plicoCode") {
+        return get(currentPlicoCode)?.then((x) => x || "");
+      }
+      if (prop === "idLead") {
+        return get(currentIdLead) || "";
+      }
+    }
+  });
+}));
+currentContractInfoAtom.debugLabel = "currentContractInfoAtom";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLFlBQVk7QUFDckIsU0FBU0Msd0JBQXdCO0FBQ2pDLFNBQ0VDLHFCQUNBQyxpQ0FHSztBQUVQLGFBQUFDLG1CQUFBQyxXQUFBQyxlQUFBQyxJQUFBLHNJQUFnQ1AsS0FBSyxPQUFPTyxRQUFRO0FBQ2xELFFBQU1DLGdCQUFnQkQsSUFBSU4sZ0JBQWdCLEdBQUdRO0FBQzdDLE1BQUlELGVBQWU7QUFDakIsV0FBT0EsaUJBQWtCLE1BQU1ELElBQUlDLGFBQWE7QUFBQSxFQUNsRDtBQUNGLENBQUMsQ0FBQztBQUFDSixpQkFBQU0sYUFBQTtBQUVILGFBQUFDLGdCQUFBTixXQUFBQyxlQUFBQyxJQUFBLG1JQUE2QlAsS0FBTU8sU0FBUTtBQUN6QyxRQUFNSyxTQUFTTCxJQUFJTixnQkFBZ0IsR0FBR1k7QUFDdEMsTUFBSUQsUUFBUTtBQUNWLFdBQU9MLElBQUlLLE1BQU07QUFBQSxFQUNuQjtBQUNGLENBQUMsQ0FBQztBQUFDRCxjQUFBRCxhQUFBO0FBU0gsYUFBQUksMEJBQUFULFdBQUFDLGVBQUFDLElBQUEsNklBQXVDUCxLQUFNTyxTQUFRO0FBQ25ELFNBQU8sSUFBSVEsTUFBTSxDQUFDLEdBQTBCO0FBQUEsSUFDMUNSLEtBQUtBLENBQUNTLFNBQVNDLFNBQVM7QUFDdEIsVUFBSUEsU0FBUyxnQkFBZ0I7QUFDM0IsZUFBT1YsSUFBSUwsbUJBQW1CO0FBQUEsTUFDaEM7QUFDQSxVQUFJZSxTQUFTLHNCQUFzQjtBQUNqQyxlQUFPVixJQUFJSix5QkFBeUI7QUFBQSxNQUN0QztBQUNBLFVBQUljLFNBQVMsYUFBYTtBQUN4QixlQUFPVixJQUFJSCxnQkFBZ0IsR0FBR2MsS0FBTUMsT0FBTUEsS0FBSyxFQUFFO0FBQUEsTUFDbkQ7QUFDQSxVQUFJRixTQUFTLFVBQVU7QUFDckIsZUFBT1YsSUFBSUksYUFBYSxLQUFLO0FBQUEsTUFDL0I7QUFBQSxJQUNGO0FBQUEsRUFDRixDQUFDO0FBQ0gsQ0FBQyxDQUFDO0FBQUNHLHdCQUFBSixhQUFBIiwibmFtZXMiOlsiYXRvbSIsImN1cnJlbnRDb250cmFjdCQiLCJjdXJyZW50U2FsZXNQcm9jZXNzIiwiY3VycmVudFNhbGVzUHJvY2Vzc0ZvckxvZyIsImN1cnJlbnRQbGljb0NvZGUiLCJnbG9iYWxUaGlzIiwiam90YWlBdG9tQ2FjaGUiLCJnZXQiLCJwbGljb0NvZGVBdG9tIiwicGxpY29Db2RlIiwiZGVidWdMYWJlbCIsImN1cnJlbnRJZExlYWQiLCJpZEF0b20iLCJpZCIsImN1cnJlbnRDb250cmFjdEluZm9BdG9tIiwiUHJveHkiLCJfdGFyZ2V0IiwicHJvcCIsInRoZW4iLCJ4Il0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbImN1cnJlbnQtY29udHJhY3QtaW5mby1hdG9tcy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBhdG9tIH0gZnJvbSAnam90YWknO1xyXG5pbXBvcnQgeyBjdXJyZW50Q29udHJhY3QkIH0gZnJvbSAnLi9jb250cmFjdC1hdG9tcyc7XHJcbmltcG9ydCB7XHJcbiAgY3VycmVudFNhbGVzUHJvY2VzcyxcclxuICBjdXJyZW50U2FsZXNQcm9jZXNzRm9yTG9nLFxyXG4gIHR5cGUgU2FsZXNQcm9jZXNzLFxyXG4gIHR5cGUgU2FsZXNQcm9jZXNzRm9yTG9nLFxyXG59IGZyb20gJy4vc2FsZXMtcHJvY2Vzcy1hdG9tcyc7XHJcblxyXG5leHBvcnQgY29uc3QgY3VycmVudFBsaWNvQ29kZSA9IGF0b20oYXN5bmMgKGdldCkgPT4ge1xyXG4gIGNvbnN0IHBsaWNvQ29kZUF0b20gPSBnZXQoY3VycmVudENvbnRyYWN0JCk/LnBsaWNvQ29kZTtcclxuICBpZiAocGxpY29Db2RlQXRvbSkge1xyXG4gICAgcmV0dXJuIHBsaWNvQ29kZUF0b20gJiYgKGF3YWl0IGdldChwbGljb0NvZGVBdG9tKSk7XHJcbiAgfVxyXG59KTtcclxuXHJcbmV4cG9ydCBjb25zdCBjdXJyZW50SWRMZWFkID0gYXRvbSgoZ2V0KSA9PiB7XHJcbiAgY29uc3QgaWRBdG9tID0gZ2V0KGN1cnJlbnRDb250cmFjdCQpPy5pZDtcclxuICBpZiAoaWRBdG9tKSB7XHJcbiAgICByZXR1cm4gZ2V0KGlkQXRvbSk7XHJcbiAgfVxyXG59KTtcclxuXHJcbnR5cGUgQ3VycmVudENvbnRyYWN0SW5mbyA9IHtcclxuICBzYWxlc1Byb2Nlc3M6IFByb21pc2U8U2FsZXNQcm9jZXNzPjtcclxuICBzYWxlc1Byb2Nlc3NGb3JMb2c6IFByb21pc2U8U2FsZXNQcm9jZXNzRm9yTG9nPjtcclxuICBpZExlYWQ6IHN0cmluZztcclxuICBwbGljb0NvZGU6IFByb21pc2U8c3RyaW5nPjtcclxufTtcclxuXHJcbmV4cG9ydCBjb25zdCBjdXJyZW50Q29udHJhY3RJbmZvQXRvbSA9IGF0b20oKGdldCkgPT4ge1xyXG4gIHJldHVybiBuZXcgUHJveHkoe30gYXMgQ3VycmVudENvbnRyYWN0SW5mbywge1xyXG4gICAgZ2V0OiAoX3RhcmdldCwgcHJvcCkgPT4ge1xyXG4gICAgICBpZiAocHJvcCA9PT0gJ3NhbGVzUHJvY2VzcycpIHtcclxuICAgICAgICByZXR1cm4gZ2V0KGN1cnJlbnRTYWxlc1Byb2Nlc3MpO1xyXG4gICAgICB9XHJcbiAgICAgIGlmIChwcm9wID09PSAnc2FsZXNQcm9jZXNzRm9yTG9nJykge1xyXG4gICAgICAgIHJldHVybiBnZXQoY3VycmVudFNhbGVzUHJvY2Vzc0ZvckxvZyk7XHJcbiAgICAgIH1cclxuICAgICAgaWYgKHByb3AgPT09ICdwbGljb0NvZGUnKSB7XHJcbiAgICAgICAgcmV0dXJuIGdldChjdXJyZW50UGxpY29Db2RlKT8udGhlbigoeCkgPT4geCB8fCAnJyk7XHJcbiAgICAgIH1cclxuICAgICAgaWYgKHByb3AgPT09ICdpZExlYWQnKSB7XHJcbiAgICAgICAgcmV0dXJuIGdldChjdXJyZW50SWRMZWFkKSB8fCAnJztcclxuICAgICAgfVxyXG4gICAgfSxcclxuICB9KTtcclxufSk7XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvZGF0YS1hY2Nlc3Mvc3JjL2xpYi9hdG9tcy9jdXJyZW50LWNvbnRyYWN0LWluZm8tYXRvbXMudHMifQ==

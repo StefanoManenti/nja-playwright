@@ -1,0 +1,18 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/change-offer.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/expired-session.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/max-operation-error.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/no-connection.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/service-unavailable.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/transfer.tsx";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLGNBQWM7QUFDZCxjQUFjO0FBQ2QsY0FBYztBQUNkLGNBQWM7QUFDZCxjQUFjO0FBQ2QsY0FBYyIsIm5hbWVzIjpbXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiaW5kZXgudHMiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0ICogZnJvbSAnLi9jaGFuZ2Utb2ZmZXInO1xyXG5leHBvcnQgKiBmcm9tICcuL2V4cGlyZWQtc2Vzc2lvbic7XHJcbmV4cG9ydCAqIGZyb20gJy4vbWF4LW9wZXJhdGlvbi1lcnJvcic7XHJcbmV4cG9ydCAqIGZyb20gJy4vbm8tY29ubmVjdGlvbic7XHJcbmV4cG9ydCAqIGZyb20gJy4vc2VydmljZS11bmF2YWlsYWJsZSc7XHJcbmV4cG9ydCAqIGZyb20gJy4vdHJhbnNmZXInO1xyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL3VpLW9yZ2FuaXNtcy9zcmMvbGliL2Vycm9ycy9pbmRleC50cyJ9

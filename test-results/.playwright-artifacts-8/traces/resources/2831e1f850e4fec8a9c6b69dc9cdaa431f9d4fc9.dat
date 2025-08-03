@@ -1,0 +1,85 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Skeleton.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Skeleton.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import clsx from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/clsx.js?v=0189a8d1";
+import classes from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Skeleton.module.less";
+export function Skeleton(props) {
+  const {
+    animation = "pulse",
+    children,
+    height,
+    variant = "text",
+    width,
+    maxWidth,
+    component: Component = "span",
+    className
+  } = props;
+  return /* @__PURE__ */ jsxDEV(
+    Component,
+    {
+      className: clsx(
+        classes.root,
+        animation === "pulse" && classes.animationPulse,
+        variant === "circular" && classes.variantCircular,
+        variant === "rectangular" && classes.variantRectangular,
+        variant === "rounded" && classes.variantRounded,
+        variant === "text" && classes.variantText,
+        className
+      ),
+      style: {
+        height,
+        width,
+        maxWidth,
+        ...props.style
+      },
+      children
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Skeleton.tsx",
+      lineNumber: 30,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_c = Skeleton;
+var _c;
+$RefreshReg$(_c, "Skeleton");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Skeleton.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBNkJJOzs7OztnQkE3QkosT0FBVyxjQUFZO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBRXZCLE9BQU9BLGFBQWE7QUFjYixnQkFBU0MsU0FBU0MsT0FBc0I7QUFDN0MsUUFBTTtBQUFBLElBQ0pDLFlBQVk7QUFBQSxJQUNaQztBQUFBQSxJQUNBQztBQUFBQSxJQUNBQyxVQUFVO0FBQUEsSUFDVkM7QUFBQUEsSUFDQUM7QUFBQUEsSUFDQUMsV0FBV0MsWUFBWTtBQUFBLElBQ3ZCQztBQUFBQSxFQUNGLElBQUlUO0FBRUosU0FDRTtBQUFBLElBQUM7QUFBQTtBQUFBLE1BQ0MsV0FBV1U7QUFBQUEsUUFDVFosUUFBUWE7QUFBQUEsUUFDUlYsY0FBYyxXQUFXSCxRQUFRYztBQUFBQSxRQUNqQ1IsWUFBWSxjQUFjTixRQUFRZTtBQUFBQSxRQUNsQ1QsWUFBWSxpQkFBaUJOLFFBQVFnQjtBQUFBQSxRQUNyQ1YsWUFBWSxhQUFhTixRQUFRaUI7QUFBQUEsUUFDakNYLFlBQVksVUFBVU4sUUFBUWtCO0FBQUFBLFFBQzlCUDtBQUFBQSxNQUNGO0FBQUEsTUFDQSxPQUFPO0FBQUEsUUFDTE47QUFBQUEsUUFDQUU7QUFBQUEsUUFDQUM7QUFBQUEsUUFDQSxHQUFHTixNQUFNaUI7QUFBQUEsTUFDWDtBQUFBLE1BRUNmO0FBQUFBO0FBQUFBLElBakJIO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxFQWtCQTtBQUVKO0FBQUNnQixLQWpDZW5CO0FBQVEsSUFBQW1CO0FBQUFDLGFBQUFELElBQUEiLCJuYW1lcyI6WyJjbGFzc2VzIiwiU2tlbGV0b24iLCJwcm9wcyIsImFuaW1hdGlvbiIsImNoaWxkcmVuIiwiaGVpZ2h0IiwidmFyaWFudCIsIndpZHRoIiwibWF4V2lkdGgiLCJjb21wb25lbnQiLCJDb21wb25lbnQiLCJjbGFzc05hbWUiLCJjbHN4Iiwicm9vdCIsImFuaW1hdGlvblB1bHNlIiwidmFyaWFudENpcmN1bGFyIiwidmFyaWFudFJlY3Rhbmd1bGFyIiwidmFyaWFudFJvdW5kZWQiLCJ2YXJpYW50VGV4dCIsInN0eWxlIiwiX2MiLCIkUmVmcmVzaFJlZyQiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiU2tlbGV0b24udHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBjbHN4IGZyb20gJ2Nsc3gnO1xyXG5pbXBvcnQgeyBDU1NQcm9wZXJ0aWVzLCBFbGVtZW50VHlwZSwgUmVhY3ROb2RlIH0gZnJvbSAncmVhY3QnO1xyXG5pbXBvcnQgY2xhc3NlcyBmcm9tICcuL1NrZWxldG9uLm1vZHVsZS5sZXNzJztcclxuXHJcbmV4cG9ydCB0eXBlIFNrZWxldG9uUHJvcHMgPSB7XHJcbiAgYW5pbWF0aW9uPzogJ3B1bHNlJyB8IGZhbHNlO1xyXG4gIGNsYXNzTmFtZT86IHN0cmluZztcclxuICBjaGlsZHJlbj86IFJlYWN0Tm9kZTtcclxuICBjb21wb25lbnQ/OiBFbGVtZW50VHlwZTtcclxuICBoZWlnaHQ/OiBudW1iZXIgfCBzdHJpbmc7XHJcbiAgdmFyaWFudD86ICdjaXJjdWxhcicgfCAncmVjdGFuZ3VsYXInIHwgJ3JvdW5kZWQnIHwgJ3RleHQnIHwgc3RyaW5nO1xyXG4gIHdpZHRoPzogbnVtYmVyIHwgc3RyaW5nO1xyXG4gIG1heFdpZHRoPzogbnVtYmVyIHwgc3RyaW5nO1xyXG4gIHN0eWxlPzogQ1NTUHJvcGVydGllcyB8IHVuZGVmaW5lZDtcclxufTtcclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBTa2VsZXRvbihwcm9wczogU2tlbGV0b25Qcm9wcykge1xyXG4gIGNvbnN0IHtcclxuICAgIGFuaW1hdGlvbiA9ICdwdWxzZScsXHJcbiAgICBjaGlsZHJlbixcclxuICAgIGhlaWdodCxcclxuICAgIHZhcmlhbnQgPSAndGV4dCcsXHJcbiAgICB3aWR0aCxcclxuICAgIG1heFdpZHRoLFxyXG4gICAgY29tcG9uZW50OiBDb21wb25lbnQgPSAnc3BhbicsXHJcbiAgICBjbGFzc05hbWUsXHJcbiAgfSA9IHByb3BzO1xyXG5cclxuICByZXR1cm4gKFxyXG4gICAgPENvbXBvbmVudFxyXG4gICAgICBjbGFzc05hbWU9e2Nsc3goXHJcbiAgICAgICAgY2xhc3Nlcy5yb290LFxyXG4gICAgICAgIGFuaW1hdGlvbiA9PT0gJ3B1bHNlJyAmJiBjbGFzc2VzLmFuaW1hdGlvblB1bHNlLFxyXG4gICAgICAgIHZhcmlhbnQgPT09ICdjaXJjdWxhcicgJiYgY2xhc3Nlcy52YXJpYW50Q2lyY3VsYXIsXHJcbiAgICAgICAgdmFyaWFudCA9PT0gJ3JlY3Rhbmd1bGFyJyAmJiBjbGFzc2VzLnZhcmlhbnRSZWN0YW5ndWxhcixcclxuICAgICAgICB2YXJpYW50ID09PSAncm91bmRlZCcgJiYgY2xhc3Nlcy52YXJpYW50Um91bmRlZCxcclxuICAgICAgICB2YXJpYW50ID09PSAndGV4dCcgJiYgY2xhc3Nlcy52YXJpYW50VGV4dCxcclxuICAgICAgICBjbGFzc05hbWVcclxuICAgICAgKX1cclxuICAgICAgc3R5bGU9e3tcclxuICAgICAgICBoZWlnaHQ6IGhlaWdodCxcclxuICAgICAgICB3aWR0aDogd2lkdGgsXHJcbiAgICAgICAgbWF4V2lkdGg6IG1heFdpZHRoLFxyXG4gICAgICAgIC4uLnByb3BzLnN0eWxlLFxyXG4gICAgICB9fVxyXG4gICAgPlxyXG4gICAgICB7Y2hpbGRyZW59XHJcbiAgICA8L0NvbXBvbmVudD5cclxuICApO1xyXG59XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvdWktYXRvbXMvc3JjL2xpYi9Ta2VsZXRvbi50c3gifQ==

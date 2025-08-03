@@ -1,0 +1,17 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+export { corrispettiviTransformedAtom, offerContractGas$, offerContractPower$, offerNameAtom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/offerta/atoms.ts";
+export { corrispettiviCommodityAtom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/offerta/corrispettivi-commodity-atom.ts";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/offerta/corrispettivi/prices.ts";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/offerta/corrispettiviV2Atom.ts";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/offerta/promo-atoms.ts";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQ0VBLDhCQUNBQyxtQkFDQUMscUJBQ0FDLHFCQUNLO0FBQ1AsU0FBU0Msa0NBQWtDO0FBQzNDLGNBQWM7QUFDZCxjQUFjO0FBQ2QsY0FBYyIsIm5hbWVzIjpbImNvcnJpc3BldHRpdmlUcmFuc2Zvcm1lZEF0b20iLCJvZmZlckNvbnRyYWN0R2FzJCIsIm9mZmVyQ29udHJhY3RQb3dlciQiLCJvZmZlck5hbWVBdG9tIiwiY29ycmlzcGV0dGl2aUNvbW1vZGl0eUF0b20iXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiaW5kZXgudHMiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IHtcclxuICBjb3JyaXNwZXR0aXZpVHJhbnNmb3JtZWRBdG9tLFxyXG4gIG9mZmVyQ29udHJhY3RHYXMkLFxyXG4gIG9mZmVyQ29udHJhY3RQb3dlciQsXHJcbiAgb2ZmZXJOYW1lQXRvbSxcclxufSBmcm9tICcuL2F0b21zJztcclxuZXhwb3J0IHsgY29ycmlzcGV0dGl2aUNvbW1vZGl0eUF0b20gfSBmcm9tICcuL2NvcnJpc3BldHRpdmktY29tbW9kaXR5LWF0b20nO1xyXG5leHBvcnQgKiBmcm9tICcuL2NvcnJpc3BldHRpdmkvcHJpY2VzJztcclxuZXhwb3J0ICogZnJvbSAnLi9jb3JyaXNwZXR0aXZpVjJBdG9tJztcclxuZXhwb3J0ICogZnJvbSAnLi9wcm9tby1hdG9tcyc7XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvZGF0YS1hY2Nlc3Mvc3JjL2xpYi9vZmZlcnRhL2luZGV4LnRzIn0=

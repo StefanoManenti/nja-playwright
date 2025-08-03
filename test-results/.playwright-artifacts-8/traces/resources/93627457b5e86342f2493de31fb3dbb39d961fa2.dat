@@ -1,0 +1,118 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/elements/PaymentElementSwitcher.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/elements/PaymentElementSwitcher.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { atom, useAtom, useAtomValue } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+import {
+  domiciliationMandatory$,
+  existingDomiciliation$,
+  Payment,
+  paymentType$
+} from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/index.ts";
+import { DataElementSwitcher } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/index.ts";
+import { FootnoteRef } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+const pm$ = globalThis.jotaiAtomCache.get(
+  "C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\ui-organisms\\src\\lib\\cart\\elements\\PaymentElementSwitcher.tsx/pm$",
+  atom(async (get) => {
+    return await get(domiciliationMandatory$) || await get(existingDomiciliation$);
+  })
+);
+pm$.debugLabel = "pm$";
+export function PaymentElementSwitcher({ editable }) {
+  _s();
+  const [value, setValue] = useAtom(paymentType$, { delay: 0 });
+  const mandatory = useAtomValue(pm$, { delay: 0 });
+  if (!value) {
+    return;
+  }
+  editable &&= !mandatory;
+  return /* @__PURE__ */ jsxDEV(
+    DataElementSwitcher,
+    {
+      readOnly: !editable,
+      title: editable ? /* @__PURE__ */ jsxDEV(
+        FootnoteRef,
+        {
+          description: /* @__PURE__ */ jsxDEV(Fragment, { children: [
+            "Ti ricordiamo che se scegli di pagare con bollettino, ti addebiteremo il deposito cauzionale nella prima bolletta.",
+            /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+              fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/elements/PaymentElementSwitcher.tsx",
+              lineNumber: 38,
+              columnNumber: 17
+            }, this),
+            "Se scegli l’addebito diretto, sono accettati solo IBAN collegati a un conto corrente. Sono esclusi IBAN associati a carte prepagate o ad altri strumenti di moneta elettronica."
+          ] }, void 0, true, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/elements/PaymentElementSwitcher.tsx",
+            lineNumber: 35,
+            columnNumber: 9
+          }, this),
+          children: "Modalità di pagamento"
+        },
+        void 0,
+        false,
+        {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/elements/PaymentElementSwitcher.tsx",
+          lineNumber: 33,
+          columnNumber: 7
+        },
+        this
+      ) : "Modalità di pagamento",
+      value,
+      setValue,
+      valueA: Payment.POSTAL,
+      valueB: Payment.DOMICILIATION,
+      labelA: "Bollettino",
+      labelB: "Addebito su C/C"
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/elements/PaymentElementSwitcher.tsx",
+      lineNumber: 29,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_s(PaymentElementSwitcher, "BuO1ehVBKpJTvK5EYXf1cFu/lvw=", false, function() {
+  return [useAtom, useAtomValue];
+});
+_c = PaymentElementSwitcher;
+var _c;
+$RefreshReg$(_c, "PaymentElementSwitcher");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/elements/PaymentElementSwitcher.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBa0NjLG1CQUdFLGNBSEY7Ozs7O3FDQWxDZDtBQUFBLE9BQVNBLE9BQU1DLDBDQUFvQztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNuRDtBQUFBLEVBQ0VDO0FBQUFBLEVBQ0FDO0FBQUFBLEVBQ0FDO0FBQUFBLEVBQ0FDO0FBQUFBLE9BQ0s7QUFDUCxTQUFTQywyQkFBMkI7QUFDcEMsU0FBU0MsbUJBQW1CO0FBQ0YsTUFBQUMsTUFBQUMsV0FBQUMsZUFBQUM7QUFBQUEsRUFBQTtBQUFBLEVBRWRYLEtBQUssT0FBT1csUUFBUTtBQUM5QixXQUNHLE1BQU1BLElBQUlULHVCQUF1QixLQUFPLE1BQU1TLElBQUlSLHNCQUFzQjtBQUFBLEVBRTdFLENBQUM7QUFBQztBQUFBSyxJQUFBSSxhQUFBO0FBRUssZ0JBQVNDLHVCQUF1QixFQUFFQyxTQUFpQyxHQUFHO0FBQUFDLEtBQUE7QUFDM0UsUUFBTSxDQUFDQyxPQUFPQyxRQUFRLElBQUloQixRQUFRSSxjQUFjLEVBQUVhLE9BQU8sRUFBRSxDQUFDO0FBQzVELFFBQU1DLFlBQVlDLGFBQWFaLEtBQUssRUFBRVUsT0FBTyxFQUFFLENBQUM7QUFFaEQsTUFBSSxDQUFDRixPQUFPO0FBQ1Y7QUFBQSxFQUNGO0FBRUFGLGVBQWEsQ0FBQ0s7QUFFZCxTQUNFO0FBQUEsSUFBQztBQUFBO0FBQUEsTUFDQyxVQUFVLENBQUNMO0FBQUFBLE1BQ1gsT0FDRUEsV0FDRTtBQUFBLFFBQUM7QUFBQTtBQUFBLFVBQ0MsYUFDRSxtQ0FBRTtBQUFBO0FBQUEsWUFHQSx1QkFBQyxVQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUEsbUJBQUc7QUFBQSxZQUFHO0FBQUEsZUFIUjtBQUFBO0FBQUE7QUFBQTtBQUFBLGlCQU9BO0FBQUEsVUFDRDtBQUFBO0FBQUEsUUFWSDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsTUFhQSxJQUVBO0FBQUEsTUFHSjtBQUFBLE1BQ0E7QUFBQSxNQUNBLFFBQVFWLFFBQVFpQjtBQUFBQSxNQUNoQixRQUFRakIsUUFBUWtCO0FBQUFBLE1BQ2hCLFFBQVE7QUFBQSxNQUNSLFFBQVE7QUFBQTtBQUFBLElBM0JWO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxFQTJCNEI7QUFHaEM7QUFBQ1AsR0F6Q2VGLHdCQUFzQjtBQUFBLFVBQ1ZaLFNBQ1JtQixZQUFZO0FBQUE7QUFBQUcsS0FGaEJWO0FBQXNCLElBQUFVO0FBQUFDLGFBQUFELElBQUEiLCJuYW1lcyI6WyJhdG9tIiwidXNlQXRvbSIsImRvbWljaWxpYXRpb25NYW5kYXRvcnkkIiwiZXhpc3RpbmdEb21pY2lsaWF0aW9uJCIsIlBheW1lbnQiLCJwYXltZW50VHlwZSQiLCJEYXRhRWxlbWVudFN3aXRjaGVyIiwiRm9vdG5vdGVSZWYiLCJwbSQiLCJnbG9iYWxUaGlzIiwiam90YWlBdG9tQ2FjaGUiLCJnZXQiLCJkZWJ1Z0xhYmVsIiwiUGF5bWVudEVsZW1lbnRTd2l0Y2hlciIsImVkaXRhYmxlIiwiX3MiLCJ2YWx1ZSIsInNldFZhbHVlIiwiZGVsYXkiLCJtYW5kYXRvcnkiLCJ1c2VBdG9tVmFsdWUiLCJQT1NUQUwiLCJET01JQ0lMSUFUSU9OIiwiX2MiLCIkUmVmcmVzaFJlZyQiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiUGF5bWVudEVsZW1lbnRTd2l0Y2hlci50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgYXRvbSwgdXNlQXRvbSwgdXNlQXRvbVZhbHVlIH0gZnJvbSAnam90YWknO1xyXG5pbXBvcnQge1xyXG4gIGRvbWljaWxpYXRpb25NYW5kYXRvcnkkLFxyXG4gIGV4aXN0aW5nRG9taWNpbGlhdGlvbiQsXHJcbiAgUGF5bWVudCxcclxuICBwYXltZW50VHlwZSQsXHJcbn0gZnJvbSAnQG5hai13by9kYXRhLWFjY2Vzcyc7XHJcbmltcG9ydCB7IERhdGFFbGVtZW50U3dpdGNoZXIgfSBmcm9tICdAbmFqLXdvL3VpLW1vbGVjdWxlcyc7XHJcbmltcG9ydCB7IEZvb3Rub3RlUmVmIH0gZnJvbSAnQG5hai13by91aS1hdG9tcyc7XHJcbmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XHJcblxyXG5jb25zdCBwbSQgPSBhdG9tKGFzeW5jIChnZXQpID0+IHtcclxuICByZXR1cm4gKFxyXG4gICAgKGF3YWl0IGdldChkb21pY2lsaWF0aW9uTWFuZGF0b3J5JCkpIHx8IChhd2FpdCBnZXQoZXhpc3RpbmdEb21pY2lsaWF0aW9uJCkpXHJcbiAgKTtcclxufSk7XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gUGF5bWVudEVsZW1lbnRTd2l0Y2hlcih7IGVkaXRhYmxlIH06IHsgZWRpdGFibGU/OiBib29sZWFuIH0pIHtcclxuICBjb25zdCBbdmFsdWUsIHNldFZhbHVlXSA9IHVzZUF0b20ocGF5bWVudFR5cGUkLCB7IGRlbGF5OiAwIH0pO1xyXG4gIGNvbnN0IG1hbmRhdG9yeSA9IHVzZUF0b21WYWx1ZShwbSQsIHsgZGVsYXk6IDAgfSk7XHJcblxyXG4gIGlmICghdmFsdWUpIHtcclxuICAgIHJldHVybjtcclxuICB9XHJcblxyXG4gIGVkaXRhYmxlICYmPSAhbWFuZGF0b3J5O1xyXG5cclxuICByZXR1cm4gKFxyXG4gICAgPERhdGFFbGVtZW50U3dpdGNoZXJcclxuICAgICAgcmVhZE9ubHk9eyFlZGl0YWJsZX1cclxuICAgICAgdGl0bGU9e1xyXG4gICAgICAgIGVkaXRhYmxlID8gKFxyXG4gICAgICAgICAgPEZvb3Rub3RlUmVmXHJcbiAgICAgICAgICAgIGRlc2NyaXB0aW9uPXtcclxuICAgICAgICAgICAgICA8PlxyXG4gICAgICAgICAgICAgICAgVGkgcmljb3JkaWFtbyBjaGUgc2Ugc2NlZ2xpIGRpIHBhZ2FyZSBjb24gYm9sbGV0dGlubywgdGlcclxuICAgICAgICAgICAgICAgIGFkZGViaXRlcmVtbyBpbCBkZXBvc2l0byBjYXV6aW9uYWxlIG5lbGxhIHByaW1hIGJvbGxldHRhLlxyXG4gICAgICAgICAgICAgICAgPGJyIC8+XHJcbiAgICAgICAgICAgICAgICBTZSBzY2VnbGkgbOKAmWFkZGViaXRvIGRpcmV0dG8sIHNvbm8gYWNjZXR0YXRpIHNvbG8gSUJBTiBjb2xsZWdhdGlcclxuICAgICAgICAgICAgICAgIGEgdW4gY29udG8gY29ycmVudGUuIFNvbm8gZXNjbHVzaSBJQkFOIGFzc29jaWF0aSBhIGNhcnRlXHJcbiAgICAgICAgICAgICAgICBwcmVwYWdhdGUgbyBhZCBhbHRyaSBzdHJ1bWVudGkgZGkgbW9uZXRhIGVsZXR0cm9uaWNhLlxyXG4gICAgICAgICAgICAgIDwvPlxyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgICA+XHJcbiAgICAgICAgICAgIE1vZGFsaXTDoCBkaSBwYWdhbWVudG9cclxuICAgICAgICAgIDwvRm9vdG5vdGVSZWY+XHJcbiAgICAgICAgKSA6IChcclxuICAgICAgICAgICdNb2RhbGl0w6AgZGkgcGFnYW1lbnRvJ1xyXG4gICAgICAgIClcclxuICAgICAgfVxyXG4gICAgICB2YWx1ZT17dmFsdWV9XHJcbiAgICAgIHNldFZhbHVlPXtzZXRWYWx1ZX1cclxuICAgICAgdmFsdWVBPXtQYXltZW50LlBPU1RBTH1cclxuICAgICAgdmFsdWVCPXtQYXltZW50LkRPTUlDSUxJQVRJT059XHJcbiAgICAgIGxhYmVsQT17J0JvbGxldHRpbm8nfVxyXG4gICAgICBsYWJlbEI9eydBZGRlYml0byBzdSBDL0MnfVxyXG4gICAgLz5cclxuICApO1xyXG59XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvdWktb3JnYW5pc21zL3NyYy9saWIvY2FydC9lbGVtZW50cy9QYXltZW50RWxlbWVudFN3aXRjaGVyLnRzeCJ9

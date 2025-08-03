@@ -1,0 +1,163 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/change-offer.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/change-offer.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { ButtonPln } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+import { SmileBadIcon, ToolsIcon } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/index.ts";
+import { FullScreenError } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/FullScreenError.tsx";
+export function ChangeOffer1FullScreenError() {
+  return /* @__PURE__ */ jsxDEV(
+    FullScreenError,
+    {
+      icon: ToolsIcon,
+      title: /* @__PURE__ */ jsxDEV(Fragment, { children: "Modifica non disponibile" }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/change-offer.tsx",
+        lineNumber: 9,
+        columnNumber: 14
+      }, this),
+      description: [
+        /* @__PURE__ */ jsxDEV(Fragment, { children: "Non è possibile modificare l’offerta durante un’operazione in corso sulla tua fornitura." }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/change-offer.tsx",
+          lineNumber: 11,
+          columnNumber: 7
+        }, this),
+        /* @__PURE__ */ jsxDEV(Fragment, { children: "Contatta il nostro Servizio Clienti per assistenza." }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/change-offer.tsx",
+          lineNumber: 15,
+          columnNumber: 7
+        }, this)
+      ],
+      cta: /* @__PURE__ */ jsxDEV(ButtonPln, { color: "primary", children: "Contatta il Servizio Clienti" }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/change-offer.tsx",
+        lineNumber: 17,
+        columnNumber: 12
+      }, this)
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/change-offer.tsx",
+      lineNumber: 7,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_c = ChangeOffer1FullScreenError;
+export function ChangeOffer2FullScreenError() {
+  return /* @__PURE__ */ jsxDEV(
+    FullScreenError,
+    {
+      icon: ToolsIcon,
+      title: /* @__PURE__ */ jsxDEV(Fragment, { children: "Cambio offerta non riuscito" }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/change-offer.tsx",
+        lineNumber: 26,
+        columnNumber: 14
+      }, this),
+      description: [
+        /* @__PURE__ */ jsxDEV(Fragment, { children: "Non puoi effettuare il cambio dell’offerta in questo momento." }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/change-offer.tsx",
+          lineNumber: 28,
+          columnNumber: 7
+        }, this),
+        /* @__PURE__ */ jsxDEV(Fragment, { children: "Contatta il nostro Servizio Clienti per procedere." }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/change-offer.tsx",
+          lineNumber: 29,
+          columnNumber: 7
+        }, this)
+      ],
+      cta: /* @__PURE__ */ jsxDEV(ButtonPln, { color: "primary", children: "Contatta il Servizio Clienti" }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/change-offer.tsx",
+        lineNumber: 31,
+        columnNumber: 12
+      }, this)
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/change-offer.tsx",
+      lineNumber: 24,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_c2 = ChangeOffer2FullScreenError;
+export function ChangeOffer3FullScreenError() {
+  return /* @__PURE__ */ jsxDEV(
+    FullScreenError,
+    {
+      icon: SmileBadIcon,
+      title: /* @__PURE__ */ jsxDEV(Fragment, { children: "Operazione non disponibile" }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/change-offer.tsx",
+        lineNumber: 40,
+        columnNumber: 14
+      }, this),
+      description: [
+        /* @__PURE__ */ jsxDEV(Fragment, { children: "Non puoi effettuare il cambio dell’offerta in questo momento." }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/change-offer.tsx",
+          lineNumber: 42,
+          columnNumber: 7
+        }, this),
+        /* @__PURE__ */ jsxDEV(Fragment, { children: "Verifica prima che la tua utenza sia attiva." }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/change-offer.tsx",
+          lineNumber: 43,
+          columnNumber: 7
+        }, this)
+      ],
+      cta: /* @__PURE__ */ jsxDEV(ButtonPln, { color: "primary", children: "Ricarica la pagina" }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/change-offer.tsx",
+        lineNumber: 45,
+        columnNumber: 12
+      }, this)
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/change-offer.tsx",
+      lineNumber: 38,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_c3 = ChangeOffer3FullScreenError;
+var _c, _c2, _c3;
+$RefreshReg$(_c, "ChangeOffer1FullScreenError");
+$RefreshReg$(_c2, "ChangeOffer2FullScreenError");
+$RefreshReg$(_c3, "ChangeOffer3FullScreenError");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/errors/change-offer.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBUWE7Ozs7O2dCQVJiLE9BQVNBLGNBQVM7QUFBUSx3REFBa0I7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQzVDLFNBQVNDLGNBQWNDLGlCQUFpQjtBQUN4QyxTQUFTQyx1QkFBdUI7QUFFekIsZ0JBQVNDLDhCQUE4QjtBQUM1QyxTQUNFO0FBQUEsSUFBQztBQUFBO0FBQUEsTUFDQyxNQUFNRjtBQUFBQSxNQUNOLE9BQU8sbUNBQUUsd0NBQUY7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUEwQjtBQUFBLE1BQ2pDLGFBQWE7QUFBQSxRQUNYLG1DQUFFLHdHQUFGO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFHQTtBQUFBLFFBQ0EsbUNBQUUsbUVBQUY7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUFxRDtBQUFBLE1BQUc7QUFBQSxNQUUxRCxLQUFLLHVCQUFDLGFBQVUsT0FBTSxXQUFVLDRDQUEzQjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQXVEO0FBQUE7QUFBQSxJQVY5RDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsRUFVMkU7QUFHL0U7QUFBQ0csS0FmZUQ7QUFpQlQsZ0JBQVNFLDhCQUE4QjtBQUM1QyxTQUNFO0FBQUEsSUFBQztBQUFBO0FBQUEsTUFDQyxNQUFNSjtBQUFBQSxNQUNOLE9BQU8sbUNBQUUsMkNBQUY7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUE2QjtBQUFBLE1BQ3BDLGFBQWE7QUFBQSxRQUNYLG1DQUFFLDZFQUFGO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFBK0Q7QUFBQSxRQUMvRCxtQ0FBRSxrRUFBRjtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQW9EO0FBQUEsTUFBRztBQUFBLE1BRXpELEtBQUssdUJBQUMsYUFBVSxPQUFNLFdBQVUsNENBQTNCO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFBdUQ7QUFBQTtBQUFBLElBUDlEO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxFQU8yRTtBQUcvRTtBQUFDSyxNQVplRDtBQWNULGdCQUFTRSw4QkFBOEI7QUFDNUMsU0FDRTtBQUFBLElBQUM7QUFBQTtBQUFBLE1BQ0MsTUFBTVA7QUFBQUEsTUFDTixPQUFPLG1DQUFFLDBDQUFGO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFBNEI7QUFBQSxNQUNuQyxhQUFhO0FBQUEsUUFDWCxtQ0FBRSw2RUFBRjtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQStEO0FBQUEsUUFDL0QsbUNBQUUsNERBQUY7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUE4QztBQUFBLE1BQUc7QUFBQSxNQUVuRCxLQUFLLHVCQUFDLGFBQVUsT0FBTSxXQUFVLGtDQUEzQjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQTZDO0FBQUE7QUFBQSxJQVBwRDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsRUFPaUU7QUFHckU7QUFBQ1EsTUFaZUQ7QUFBMkIsSUFBQUgsSUFBQUUsS0FBQUU7QUFBQUMsYUFBQUwsSUFBQTtBQUFBSyxhQUFBSCxLQUFBO0FBQUFHLGFBQUFELEtBQUEiLCJuYW1lcyI6WyJCdXR0b25QbG4iLCJTbWlsZUJhZEljb24iLCJUb29sc0ljb24iLCJGdWxsU2NyZWVuRXJyb3IiLCJDaGFuZ2VPZmZlcjFGdWxsU2NyZWVuRXJyb3IiLCJfYyIsIkNoYW5nZU9mZmVyMkZ1bGxTY3JlZW5FcnJvciIsIl9jMiIsIkNoYW5nZU9mZmVyM0Z1bGxTY3JlZW5FcnJvciIsIl9jMyIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJjaGFuZ2Utb2ZmZXIudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEJ1dHRvblBsbiB9IGZyb20gJ0BuYWotd28vdWktYXRvbXMnO1xyXG5pbXBvcnQgeyBTbWlsZUJhZEljb24sIFRvb2xzSWNvbiB9IGZyb20gJ0BuYWotd28vdWktaWNvbnMnO1xyXG5pbXBvcnQgeyBGdWxsU2NyZWVuRXJyb3IgfSBmcm9tICcuLi9GdWxsU2NyZWVuRXJyb3InO1xyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIENoYW5nZU9mZmVyMUZ1bGxTY3JlZW5FcnJvcigpIHtcclxuICByZXR1cm4gKFxyXG4gICAgPEZ1bGxTY3JlZW5FcnJvclxyXG4gICAgICBpY29uPXtUb29sc0ljb259XHJcbiAgICAgIHRpdGxlPXs8Pk1vZGlmaWNhIG5vbiBkaXNwb25pYmlsZTwvPn1cclxuICAgICAgZGVzY3JpcHRpb249e1tcclxuICAgICAgICA8PlxyXG4gICAgICAgICAgTm9uIMOoIHBvc3NpYmlsZSBtb2RpZmljYXJlIGzigJlvZmZlcnRhIGR1cmFudGUgdW7igJlvcGVyYXppb25lIGluIGNvcnNvXHJcbiAgICAgICAgICBzdWxsYSB0dWEgZm9ybml0dXJhLlxyXG4gICAgICAgIDwvPixcclxuICAgICAgICA8PkNvbnRhdHRhIGlsIG5vc3RybyBTZXJ2aXppbyBDbGllbnRpIHBlciBhc3Npc3RlbnphLjwvPixcclxuICAgICAgXX1cclxuICAgICAgY3RhPXs8QnV0dG9uUGxuIGNvbG9yPVwicHJpbWFyeVwiPkNvbnRhdHRhIGlsIFNlcnZpemlvIENsaWVudGk8L0J1dHRvblBsbj59XHJcbiAgICAvPlxyXG4gICk7XHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBDaGFuZ2VPZmZlcjJGdWxsU2NyZWVuRXJyb3IoKSB7XHJcbiAgcmV0dXJuIChcclxuICAgIDxGdWxsU2NyZWVuRXJyb3JcclxuICAgICAgaWNvbj17VG9vbHNJY29ufVxyXG4gICAgICB0aXRsZT17PD5DYW1iaW8gb2ZmZXJ0YSBub24gcml1c2NpdG88Lz59XHJcbiAgICAgIGRlc2NyaXB0aW9uPXtbXHJcbiAgICAgICAgPD5Ob24gcHVvaSBlZmZldHR1YXJlIGlsIGNhbWJpbyBkZWxs4oCZb2ZmZXJ0YSBpbiBxdWVzdG8gbW9tZW50by48Lz4sXHJcbiAgICAgICAgPD5Db250YXR0YSBpbCBub3N0cm8gU2Vydml6aW8gQ2xpZW50aSBwZXIgcHJvY2VkZXJlLjwvPixcclxuICAgICAgXX1cclxuICAgICAgY3RhPXs8QnV0dG9uUGxuIGNvbG9yPVwicHJpbWFyeVwiPkNvbnRhdHRhIGlsIFNlcnZpemlvIENsaWVudGk8L0J1dHRvblBsbj59XHJcbiAgICAvPlxyXG4gICk7XHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBDaGFuZ2VPZmZlcjNGdWxsU2NyZWVuRXJyb3IoKSB7XHJcbiAgcmV0dXJuIChcclxuICAgIDxGdWxsU2NyZWVuRXJyb3JcclxuICAgICAgaWNvbj17U21pbGVCYWRJY29ufVxyXG4gICAgICB0aXRsZT17PD5PcGVyYXppb25lIG5vbiBkaXNwb25pYmlsZTwvPn1cclxuICAgICAgZGVzY3JpcHRpb249e1tcclxuICAgICAgICA8Pk5vbiBwdW9pIGVmZmV0dHVhcmUgaWwgY2FtYmlvIGRlbGzigJlvZmZlcnRhIGluIHF1ZXN0byBtb21lbnRvLjwvPixcclxuICAgICAgICA8PlZlcmlmaWNhIHByaW1hIGNoZSBsYSB0dWEgdXRlbnphIHNpYSBhdHRpdmEuPC8+LFxyXG4gICAgICBdfVxyXG4gICAgICBjdGE9ezxCdXR0b25QbG4gY29sb3I9XCJwcmltYXJ5XCI+UmljYXJpY2EgbGEgcGFnaW5hPC9CdXR0b25QbG4+fVxyXG4gICAgLz5cclxuICApO1xyXG59XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvdWktb3JnYW5pc21zL3NyYy9saWIvZXJyb3JzL2NoYW5nZS1vZmZlci50c3gifQ==

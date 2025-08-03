@@ -1,0 +1,20 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/FormControlLabel.module.less");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from "/@vite/client"
+const __vite__id = "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/FormControlLabel.module.less"
+const __vite__css = "._root_12tv2_1 {\n  position: relative;\n}\n._label_12tv2_4 {\n  display: flex;\n  align-items: stretch;\n  gap: var(--grid-base);\n  cursor: pointer;\n}\n._label_12tv2_4._verticalAlignCenter_12tv2_10 {\n  align-items: center;\n}\n._icon_12tv2_13 {\n  flex: none;\n}\n._iconContainer_12tv2_16 {\n  display: flex;\n}\n._labelContainer_12tv2_19 {\n  display: flex;\n  align-items: center;\n}\n"
+__vite__updateStyle(__vite__id, __vite__css)
+export const root = "_root_12tv2_1";
+export const label = "_label_12tv2_4";
+export const verticalAlignCenter = "_verticalAlignCenter_12tv2_10";
+export const icon = "_icon_12tv2_13";
+export const iconContainer = "_iconContainer_12tv2_16";
+export const labelContainer = "_labelContainer_12tv2_19";
+export default {
+	root: root,
+	label: label,
+	verticalAlignCenter: verticalAlignCenter,
+	icon: icon,
+	iconContainer: iconContainer,
+	labelContainer: labelContainer
+};
+
+import.meta.hot.prune(() => __vite__removeStyle(__vite__id))

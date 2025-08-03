@@ -1,0 +1,56 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/NodeStepper.tsx");import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/NodeStepper.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import __vite__cjsImport2_react from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react.js?v=0189a8d1"; const React = __vite__cjsImport2_react.__esModule ? __vite__cjsImport2_react.default : __vite__cjsImport2_react; const useEffect = __vite__cjsImport2_react["useEffect"];
+export const NodeStepper = ({ active, children, onComplete }) => {
+  _s();
+  const currentStep = 0;
+  const childArray = React.Children.toArray(children);
+  useEffect(() => {
+    if (active && childArray.length === 0) {
+      onComplete();
+    }
+  }, [childArray, active, onComplete]);
+  return active && childArray.map((child, index) => index === currentStep ? child : null);
+};
+_s(NodeStepper, "OD7bBpZva5O2jO+Puf00hKivP7c=");
+_c = NodeStepper;
+export default NodeStepper;
+var _c;
+$RefreshReg$(_c, "NodeStepper");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/NodeStepper.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7OztxQ0FBQTtBQUFBLE1BQU9BLFFBQVNDLDBDQUFtQztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQVU1QyxhQUFNQyxjQUEwQ0EsQ0FBQyxFQUFFQyxRQUFRQyxVQUFVQyxXQUFXLE1BQU07QUFBQUMsS0FBQTtBQUN6RixRQUFNQyxjQUFjO0FBQ3BCLFFBQU1DLGFBQWFSLE1BQU1TLFNBQVNDLFFBQVFOLFFBQVE7QUFJbERILFlBQVUsTUFBTTtBQUNaLFFBQUlFLFVBQVVLLFdBQVdHLFdBQVcsR0FBRztBQUNuQ04saUJBQVc7QUFBQSxJQUNmO0FBQUEsRUFDSixHQUFHLENBQUNHLFlBQVlMLFFBQVFFLFVBQVUsQ0FBQztBQUduQyxTQUFPRixVQUFVSyxXQUFXSSxJQUFJLENBQUNDLE9BQU9DLFVBQVdBLFVBQVVQLGNBQWVNLFFBQVEsSUFBSTtBQUU1RjtBQUFFUCxHQWZXSixhQUF1QztBQUFBYSxLQUF2Q2I7QUFpQmIsZUFBZUE7QUFBWSxJQUFBYTtBQUFBQyxhQUFBRCxJQUFBIiwibmFtZXMiOlsiUmVhY3QiLCJ1c2VFZmZlY3QiLCJOb2RlU3RlcHBlciIsImFjdGl2ZSIsImNoaWxkcmVuIiwib25Db21wbGV0ZSIsIl9zIiwiY3VycmVudFN0ZXAiLCJjaGlsZEFycmF5IiwiQ2hpbGRyZW4iLCJ0b0FycmF5IiwibGVuZ3RoIiwibWFwIiwiY2hpbGQiLCJpbmRleCIsIl9jIiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIk5vZGVTdGVwcGVyLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgdXNlRWZmZWN0LCBSZWFjdE5vZGUgfSBmcm9tICdyZWFjdCc7XHJcblxyXG50eXBlIE5vZGVTdGVwcGVyUHJvcHMgPSB7XHJcbiAgICBhY3RpdmU6IGJvb2xlYW47XHJcbiAgICBjaGlsZHJlbjogUmVhY3ROb2RlO1xyXG4gICAgb25Db21wbGV0ZTogKCkgPT4gdm9pZDtcclxufTtcclxuXHJcblxyXG5cclxuZXhwb3J0IGNvbnN0IE5vZGVTdGVwcGVyOiBSZWFjdC5GQzxOb2RlU3RlcHBlclByb3BzPiA9ICh7IGFjdGl2ZSwgY2hpbGRyZW4sIG9uQ29tcGxldGUgfSkgPT4ge1xyXG4gICAgY29uc3QgY3VycmVudFN0ZXAgPSAwO1xyXG4gICAgY29uc3QgY2hpbGRBcnJheSA9IFJlYWN0LkNoaWxkcmVuLnRvQXJyYXkoY2hpbGRyZW4pO1xyXG4gICAgLy9jb25zb2xlLmxvZyhcIk5PREVTOiBcIiArIGNoaWxkQXJyYXkubGVuZ3RoKVxyXG5cclxuXHJcbiAgICB1c2VFZmZlY3QoKCkgPT4ge1xyXG4gICAgICAgIGlmIChhY3RpdmUgJiYgY2hpbGRBcnJheS5sZW5ndGggPT09IDApIHtcclxuICAgICAgICAgICAgb25Db21wbGV0ZSgpO1xyXG4gICAgICAgIH1cclxuICAgIH0sIFtjaGlsZEFycmF5LCBhY3RpdmUsIG9uQ29tcGxldGVdKTtcclxuXHJcblxyXG4gICAgcmV0dXJuIGFjdGl2ZSAmJiBjaGlsZEFycmF5Lm1hcCgoY2hpbGQsIGluZGV4KSA9PiAoaW5kZXggPT09IGN1cnJlbnRTdGVwKSA/IGNoaWxkIDogbnVsbCk7XHJcblxyXG59O1xyXG5cclxuZXhwb3J0IGRlZmF1bHQgTm9kZVN0ZXBwZXI7XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvdWktYXRvbXMvc3JjL2xpYi9tb2RhbC9Ob2RlU3RlcHBlci50c3gifQ==

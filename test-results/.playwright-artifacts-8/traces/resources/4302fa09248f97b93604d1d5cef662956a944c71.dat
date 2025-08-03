@@ -1,0 +1,14 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/card-image/CardWithImage.module.less");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from "/@vite/client"
+const __vite__id = "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/card-image/CardWithImage.module.less"
+const __vite__css = "/* Viewport and media queries */\n/* Box shadows */\n._root_1uk3b_3 {\n  border-radius: calc(var(--grid-base) * 4);\n  background: var(--Background-White);\n  box-shadow: 0 0 15px 0 rgba(51, 51, 51, 0.15);\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start;\n}\n._root_1uk3b_3 ._image_1uk3b_11 {\n  padding: 40px 32px;\n  font-size: 200px;\n}\n._root_1uk3b_3 ._description_1uk3b_15 {\n  padding: 40px 32px;\n  gap: calc(var(--grid-base) * 2);\n  display: flex;\n  flex-direction: column;\n}\n._root_1uk3b_3 ._description_1uk3b_15 h2 {\n  color: var(--Background-Broadband);\n}\n"
+__vite__updateStyle(__vite__id, __vite__css)
+export const root = "_root_1uk3b_3";
+export const image = "_image_1uk3b_11";
+export const description = "_description_1uk3b_15";
+export default {
+	root: root,
+	image: image,
+	description: description
+};
+
+import.meta.hot.prune(() => __vite__removeStyle(__vite__id))

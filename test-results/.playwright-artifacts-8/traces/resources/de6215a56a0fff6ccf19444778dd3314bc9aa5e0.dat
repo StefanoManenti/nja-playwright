@@ -1,0 +1,105 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/DateField.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/DateField.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import __vite__cjsImport3_react from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react.js?v=0189a8d1"; const useRef = __vite__cjsImport3_react["useRef"];
+import { TextField } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/TextField.tsx";
+export const DateField = ({
+  label,
+  placeholder = "gg/mm/aaaa",
+  autoComplete,
+  register,
+  errorMessage
+}) => {
+  _s();
+  const previousValue = useRef("");
+  const handleInput = (event) => {
+    let value = event.target.value;
+    const isBackspace = previousValue.current.length > value.length && previousValue.current.startsWith(value);
+    value = value.replace(/[^0-9/]/g, "");
+    if (isBackspace && previousValue.current[value.length] === "/") {
+      value = value.slice(0, -1);
+    }
+    if (value.length > 10) {
+      value = value.slice(0, 10);
+    } else if (!isBackspace) {
+      if (value.length === 2 || value.length === 5) {
+        value += "/";
+      }
+    }
+    const parts = value.split("/");
+    const day = parts[0] ? parseInt(parts[0], 10) : NaN;
+    const month = parts[1] ? parseInt(parts[1], 10) : NaN;
+    if (!isNaN(day) && (day < 0 || day > 31)) {
+      value = previousValue.current;
+    }
+    if (!isNaN(month) && (month < 0 || month > 12)) {
+      value = previousValue.current;
+    }
+    event.target.value = value;
+    previousValue.current = value;
+  };
+  return /* @__PURE__ */ jsxDEV(
+    TextField,
+    {
+      ...register,
+      type: "text",
+      autoComplete,
+      label,
+      placeholder,
+      inputMode: "numeric",
+      pattern: "\\d{2}/\\d{2}/\\d{4}",
+      error: !!errorMessage,
+      helperText: errorMessage,
+      onChange: handleInput
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/DateField.tsx",
+      lineNumber: 59,
+      columnNumber: 5
+    },
+    this
+  );
+};
+_s(DateField, "OQlRKMM29cKTSgFJT9l7bvaZBGw=");
+_c = DateField;
+var _c;
+$RefreshReg$(_c, "DateField");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/DateField.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBMERJOzs7OztxQ0ExREo7QUFBQSxNQUFPQSxRQUFTQywwQ0FBcUI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFFckMsU0FBU0MsaUJBQWlCO0FBVW5CLGFBQU1DLFlBQXNDQSxDQUFDO0FBQUEsRUFDbERDO0FBQUFBLEVBQ0FDLGNBQWM7QUFBQSxFQUNkQztBQUFBQSxFQUNBQztBQUFBQSxFQUNBQztBQUNGLE1BQU07QUFBQUMsS0FBQTtBQUNKLFFBQU1DLGdCQUFnQlQsT0FBZSxFQUFFO0FBRXZDLFFBQU1VLGNBQWNBLENBQUNDLFVBQStDO0FBQ2xFLFFBQUlDLFFBQVFELE1BQU1FLE9BQU9EO0FBQ3pCLFVBQU1FLGNBQ0pMLGNBQWNNLFFBQVFDLFNBQVNKLE1BQU1JLFVBQ3JDUCxjQUFjTSxRQUFRRSxXQUFXTCxLQUFLO0FBRXhDQSxZQUFRQSxNQUFNTSxRQUFRLFlBQVksRUFBRTtBQUVwQyxRQUFJSixlQUFlTCxjQUFjTSxRQUFRSCxNQUFNSSxNQUFNLE1BQU0sS0FBSztBQUM5REosY0FBUUEsTUFBTU8sTUFBTSxHQUFHLEVBQUU7QUFBQSxJQUMzQjtBQUVBLFFBQUlQLE1BQU1JLFNBQVMsSUFBSTtBQUNyQkosY0FBUUEsTUFBTU8sTUFBTSxHQUFHLEVBQUU7QUFBQSxJQUMzQixXQUFXLENBQUNMLGFBQWE7QUFDdkIsVUFBSUYsTUFBTUksV0FBVyxLQUFLSixNQUFNSSxXQUFXLEdBQUc7QUFDNUNKLGlCQUFTO0FBQUEsTUFDWDtBQUFBLElBQ0Y7QUFFQSxVQUFNUSxRQUFRUixNQUFNUyxNQUFNLEdBQUc7QUFDN0IsVUFBTUMsTUFBTUYsTUFBTSxDQUFDLElBQUlHLFNBQVNILE1BQU0sQ0FBQyxHQUFHLEVBQUUsSUFBSUk7QUFDaEQsVUFBTUMsUUFBUUwsTUFBTSxDQUFDLElBQUlHLFNBQVNILE1BQU0sQ0FBQyxHQUFHLEVBQUUsSUFBSUk7QUFFbEQsUUFBSSxDQUFDRSxNQUFNSixHQUFHLE1BQU1BLE1BQU0sS0FBS0EsTUFBTSxLQUFLO0FBQ3hDVixjQUFRSCxjQUFjTTtBQUFBQSxJQUN4QjtBQUVBLFFBQUksQ0FBQ1csTUFBTUQsS0FBSyxNQUFNQSxRQUFRLEtBQUtBLFFBQVEsS0FBSztBQUM5Q2IsY0FBUUgsY0FBY007QUFBQUEsSUFDeEI7QUFFQUosVUFBTUUsT0FBT0QsUUFBUUE7QUFDckJILGtCQUFjTSxVQUFVSDtBQUFBQSxFQUMxQjtBQUVBLFNBQ0U7QUFBQSxJQUFDO0FBQUE7QUFBQSxNQUNDLEdBQUlOO0FBQUFBLE1BQ0osTUFBSztBQUFBLE1BQ0w7QUFBQSxNQUNBO0FBQUEsTUFDQTtBQUFBLE1BQ0EsV0FBVTtBQUFBLE1BQ1YsU0FBUTtBQUFBLE1BQ1IsT0FBTyxDQUFDLENBQUNDO0FBQUFBLE1BQ1QsWUFBWUE7QUFBQUEsTUFDWixVQUFVRztBQUFBQTtBQUFBQSxJQVZaO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxFQVV3QjtBQUc1QjtBQUFFRixHQTNEV04sV0FBbUM7QUFBQXlCLEtBQW5DekI7QUFBbUMsSUFBQXlCO0FBQUFDLGFBQUFELElBQUEiLCJuYW1lcyI6WyJSZWFjdCIsInVzZVJlZiIsIlRleHRGaWVsZCIsIkRhdGVGaWVsZCIsImxhYmVsIiwicGxhY2Vob2xkZXIiLCJhdXRvQ29tcGxldGUiLCJyZWdpc3RlciIsImVycm9yTWVzc2FnZSIsIl9zIiwicHJldmlvdXNWYWx1ZSIsImhhbmRsZUlucHV0IiwiZXZlbnQiLCJ2YWx1ZSIsInRhcmdldCIsImlzQmFja3NwYWNlIiwiY3VycmVudCIsImxlbmd0aCIsInN0YXJ0c1dpdGgiLCJyZXBsYWNlIiwic2xpY2UiLCJwYXJ0cyIsInNwbGl0IiwiZGF5IiwicGFyc2VJbnQiLCJOYU4iLCJtb250aCIsImlzTmFOIiwiX2MiLCIkUmVmcmVzaFJlZyQiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiRGF0ZUZpZWxkLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgdXNlUmVmIH0gZnJvbSAncmVhY3QnO1xyXG5pbXBvcnQgeyBVc2VGb3JtUmVnaXN0ZXJSZXR1cm4gfSBmcm9tICdyZWFjdC1ob29rLWZvcm0nO1xyXG5pbXBvcnQgeyBUZXh0RmllbGQgfSBmcm9tICcuL1RleHRGaWVsZCc7XHJcblxyXG5leHBvcnQgdHlwZSBEYXRlRmllbGRQcm9wcyA9IHtcclxuICBsYWJlbDogc3RyaW5nO1xyXG4gIHBsYWNlaG9sZGVyPzogc3RyaW5nO1xyXG4gIGF1dG9Db21wbGV0ZT86IHN0cmluZztcclxuICByZWdpc3RlcjogVXNlRm9ybVJlZ2lzdGVyUmV0dXJuO1xyXG4gIGVycm9yTWVzc2FnZT86IHN0cmluZztcclxufTtcclxuXHJcbmV4cG9ydCBjb25zdCBEYXRlRmllbGQ6IFJlYWN0LkZDPERhdGVGaWVsZFByb3BzPiA9ICh7XHJcbiAgbGFiZWwsXHJcbiAgcGxhY2Vob2xkZXIgPSAnZ2cvbW0vYWFhYScsXHJcbiAgYXV0b0NvbXBsZXRlLFxyXG4gIHJlZ2lzdGVyLFxyXG4gIGVycm9yTWVzc2FnZSxcclxufSkgPT4ge1xyXG4gIGNvbnN0IHByZXZpb3VzVmFsdWUgPSB1c2VSZWY8c3RyaW5nPignJyk7XHJcblxyXG4gIGNvbnN0IGhhbmRsZUlucHV0ID0gKGV2ZW50OiBSZWFjdC5DaGFuZ2VFdmVudDxIVE1MSW5wdXRFbGVtZW50PikgPT4ge1xyXG4gICAgbGV0IHZhbHVlID0gZXZlbnQudGFyZ2V0LnZhbHVlO1xyXG4gICAgY29uc3QgaXNCYWNrc3BhY2UgPVxyXG4gICAgICBwcmV2aW91c1ZhbHVlLmN1cnJlbnQubGVuZ3RoID4gdmFsdWUubGVuZ3RoICYmXHJcbiAgICAgIHByZXZpb3VzVmFsdWUuY3VycmVudC5zdGFydHNXaXRoKHZhbHVlKTtcclxuXHJcbiAgICB2YWx1ZSA9IHZhbHVlLnJlcGxhY2UoL1teMC05L10vZywgJycpO1xyXG5cclxuICAgIGlmIChpc0JhY2tzcGFjZSAmJiBwcmV2aW91c1ZhbHVlLmN1cnJlbnRbdmFsdWUubGVuZ3RoXSA9PT0gJy8nKSB7XHJcbiAgICAgIHZhbHVlID0gdmFsdWUuc2xpY2UoMCwgLTEpO1xyXG4gICAgfVxyXG5cclxuICAgIGlmICh2YWx1ZS5sZW5ndGggPiAxMCkge1xyXG4gICAgICB2YWx1ZSA9IHZhbHVlLnNsaWNlKDAsIDEwKTtcclxuICAgIH0gZWxzZSBpZiAoIWlzQmFja3NwYWNlKSB7XHJcbiAgICAgIGlmICh2YWx1ZS5sZW5ndGggPT09IDIgfHwgdmFsdWUubGVuZ3RoID09PSA1KSB7XHJcbiAgICAgICAgdmFsdWUgKz0gJy8nO1xyXG4gICAgICB9XHJcbiAgICB9XHJcblxyXG4gICAgY29uc3QgcGFydHMgPSB2YWx1ZS5zcGxpdCgnLycpO1xyXG4gICAgY29uc3QgZGF5ID0gcGFydHNbMF0gPyBwYXJzZUludChwYXJ0c1swXSwgMTApIDogTmFOO1xyXG4gICAgY29uc3QgbW9udGggPSBwYXJ0c1sxXSA/IHBhcnNlSW50KHBhcnRzWzFdLCAxMCkgOiBOYU47XHJcblxyXG4gICAgaWYgKCFpc05hTihkYXkpICYmIChkYXkgPCAwIHx8IGRheSA+IDMxKSkge1xyXG4gICAgICB2YWx1ZSA9IHByZXZpb3VzVmFsdWUuY3VycmVudDtcclxuICAgIH1cclxuXHJcbiAgICBpZiAoIWlzTmFOKG1vbnRoKSAmJiAobW9udGggPCAwIHx8IG1vbnRoID4gMTIpKSB7XHJcbiAgICAgIHZhbHVlID0gcHJldmlvdXNWYWx1ZS5jdXJyZW50O1xyXG4gICAgfVxyXG5cclxuICAgIGV2ZW50LnRhcmdldC52YWx1ZSA9IHZhbHVlO1xyXG4gICAgcHJldmlvdXNWYWx1ZS5jdXJyZW50ID0gdmFsdWU7XHJcbiAgfTtcclxuXHJcbiAgcmV0dXJuIChcclxuICAgIDxUZXh0RmllbGRcclxuICAgICAgey4uLnJlZ2lzdGVyfVxyXG4gICAgICB0eXBlPVwidGV4dFwiXHJcbiAgICAgIGF1dG9Db21wbGV0ZT17YXV0b0NvbXBsZXRlfVxyXG4gICAgICBsYWJlbD17bGFiZWx9XHJcbiAgICAgIHBsYWNlaG9sZGVyPXtwbGFjZWhvbGRlcn1cclxuICAgICAgaW5wdXRNb2RlPVwibnVtZXJpY1wiXHJcbiAgICAgIHBhdHRlcm49XCJcXGR7Mn0vXFxkezJ9L1xcZHs0fVwiXHJcbiAgICAgIGVycm9yPXshIWVycm9yTWVzc2FnZX1cclxuICAgICAgaGVscGVyVGV4dD17ZXJyb3JNZXNzYWdlfVxyXG4gICAgICBvbkNoYW5nZT17aGFuZGxlSW5wdXR9XHJcbiAgICAvPlxyXG4gICk7XHJcbn07XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvdWktYXRvbXMvc3JjL2xpYi9EYXRlRmllbGQudHN4In0=

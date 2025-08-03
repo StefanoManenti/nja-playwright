@@ -1,0 +1,10 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/services/CollaudoIndicator.module.less");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from "/@vite/client"
+const __vite__id = "C:/Users/aintrona/Desktop/App/react/naj/apps/naj/src/services/CollaudoIndicator.module.less"
+const __vite__css = "._CollaudoIndicator_s1sos_1 {\n  position: fixed;\n  top: 0;\n  width: 18em;\n  left: calc(50vw - (18em / 2));\n  z-index: 10000;\n  text-align: center;\n  background: #d0021b;\n  color: white;\n  padding: 2px;\n  border-radius: 0 0 12px 12px;\n  text-transform: uppercase;\n  font-weight: bold;\n}\n"
+__vite__updateStyle(__vite__id, __vite__css)
+export const CollaudoIndicator = "_CollaudoIndicator_s1sos_1";
+export default {
+	CollaudoIndicator: CollaudoIndicator
+};
+
+import.meta.hot.prune(() => __vite__removeStyle(__vite__id))

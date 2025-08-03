@@ -1,0 +1,50 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/TypIcon.tsx");import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/TypIcon.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import clsx from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/clsx.js?v=0189a8d1";
+import __vite__cjsImport3_react from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react.js?v=0189a8d1"; const cloneElement = __vite__cjsImport3_react["cloneElement"];
+import classes from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/FullScreenError.module.less";
+export function TypIcon({ children }) {
+  return cloneElement(children, {
+    ...children.props,
+    className: clsx(children.props.className, classes.icon)
+  });
+}
+_c = TypIcon;
+var _c;
+$RefreshReg$(_c, "TypIcon");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/TypIcon.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7OztnQkFBQSxPQUFXLGNBQVk7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDdkIsU0FBU0Esb0JBQWtDO0FBQzNDLE9BQU9DLGFBQWE7QUFJYixnQkFBU0MsUUFBUSxFQUFFQyxTQUFvQyxHQUFHO0FBQy9ELFNBQU9ILGFBQWFHLFVBQVU7QUFBQSxJQUM1QixHQUFHQSxTQUFTQztBQUFBQSxJQUNaQyxXQUFXQyxLQUFLSCxTQUFTQyxNQUFNQyxXQUFXSixRQUFRTSxJQUFJO0FBQUEsRUFDeEQsQ0FBQztBQUNIO0FBQUNDLEtBTGVOO0FBQU8sSUFBQU07QUFBQUMsYUFBQUQsSUFBQSIsIm5hbWVzIjpbImNsb25lRWxlbWVudCIsImNsYXNzZXMiLCJUeXBJY29uIiwiY2hpbGRyZW4iLCJwcm9wcyIsImNsYXNzTmFtZSIsImNsc3giLCJpY29uIiwiX2MiLCIkUmVmcmVzaFJlZyQiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiVHlwSWNvbi50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGNsc3ggZnJvbSAnY2xzeCc7XHJcbmltcG9ydCB7IGNsb25lRWxlbWVudCwgUmVhY3RFbGVtZW50IH0gZnJvbSAncmVhY3QnO1xyXG5pbXBvcnQgY2xhc3NlcyBmcm9tICcuL0Z1bGxTY3JlZW5FcnJvci5tb2R1bGUubGVzcyc7XHJcblxyXG5leHBvcnQgdHlwZSBJY29uRWxlbWVudCA9IFJlYWN0RWxlbWVudDx7IGNsYXNzTmFtZT86IHN0cmluZyB9PjtcclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBUeXBJY29uKHsgY2hpbGRyZW4gfTogeyBjaGlsZHJlbjogSWNvbkVsZW1lbnQgfSkge1xyXG4gIHJldHVybiBjbG9uZUVsZW1lbnQoY2hpbGRyZW4sIHtcclxuICAgIC4uLmNoaWxkcmVuLnByb3BzLFxyXG4gICAgY2xhc3NOYW1lOiBjbHN4KGNoaWxkcmVuLnByb3BzLmNsYXNzTmFtZSwgY2xhc3Nlcy5pY29uKSxcclxuICB9KTtcclxufVxyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL3VpLW9yZ2FuaXNtcy9zcmMvbGliL1R5cEljb24udHN4In0=

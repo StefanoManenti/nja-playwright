@@ -1,0 +1,104 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalErrorContent.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalErrorContent.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { ButtonPln } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/ButtonPln.tsx";
+import { Typography } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Typography.tsx";
+import { ModalBox } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalBox.tsx";
+import { ModalCloseButton } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalCloseButton.tsx";
+import { ModalTopIcon } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalTopIcon.tsx";
+export function ModalErrorContent(props) {
+  return /* @__PURE__ */ jsxDEV(ModalBox, { vPad: true, children: [
+    /* @__PURE__ */ jsxDEV(ModalCloseButton, { onClick: props.onClose }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalErrorContent.tsx",
+      lineNumber: 20,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(ModalBox, { align: "center", gap: 4, hPad: true, children: [
+      /* @__PURE__ */ jsxDEV(ModalBox, { align: "center", gap: 2, children: [
+        /* @__PURE__ */ jsxDEV(ModalTopIcon, { icon: props.icon }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalErrorContent.tsx",
+          lineNumber: 23,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV(Typography, { variant: "h2", component: "h1", children: props.title }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalErrorContent.tsx",
+          lineNumber: 24,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV(Typography, { variant: "body2", children: props.text }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalErrorContent.tsx",
+          lineNumber: 27,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalErrorContent.tsx",
+        lineNumber: 22,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV(
+        ButtonPln,
+        {
+          color: "primary",
+          onClick: props.onCtaClick || props.onClose,
+          type: "button",
+          children: props.cta
+        },
+        void 0,
+        false,
+        {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalErrorContent.tsx",
+          lineNumber: 29,
+          columnNumber: 9
+        },
+        this
+      )
+    ] }, void 0, true, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalErrorContent.tsx",
+      lineNumber: 21,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalErrorContent.tsx",
+    lineNumber: 19,
+    columnNumber: 5
+  }, this);
+}
+_c = ModalErrorContent;
+var _c;
+$RefreshReg$(_c, "ModalErrorContent");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalErrorContent.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBbUJNOzs7OztnQkFuQk4sT0FBUyxjQUFjO0FBQUEsTUFBUSxRQUFPO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDdEMsU0FBU0EsaUJBQWlCO0FBQzFCLFNBQVNDLGtCQUFrQjtBQUMzQixTQUFTQyxnQkFBZ0I7QUFDekIsU0FBU0Msd0JBQXdCO0FBQ2pDLFNBQVNDLG9CQUFvQjtBQVd0QixnQkFBU0Msa0JBQWtCQyxPQUErQjtBQUMvRCxTQUNFLHVCQUFDLFlBQVMsTUFBSSxNQUNaO0FBQUEsMkJBQUMsb0JBQWlCLFNBQVNBLE1BQU1DLFdBQWpDO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBeUM7QUFBQSxJQUN6Qyx1QkFBQyxZQUFTLE9BQU0sVUFBUyxLQUFLLEdBQUcsTUFBSSxNQUNuQztBQUFBLDZCQUFDLFlBQVMsT0FBTSxVQUFTLEtBQUssR0FDNUI7QUFBQSwrQkFBQyxnQkFBYSxNQUFNRCxNQUFNRSxRQUExQjtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQStCO0FBQUEsUUFDL0IsdUJBQUMsY0FBVyxTQUFRLE1BQUssV0FBVSxNQUNoQ0YsZ0JBQU1HLFNBRFQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUVBO0FBQUEsUUFDQSx1QkFBQyxjQUFXLFNBQVEsU0FBU0gsZ0JBQU1JLFFBQW5DO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFBd0M7QUFBQSxXQUwxQztBQUFBO0FBQUE7QUFBQTtBQUFBLGFBTUE7QUFBQSxNQUNBO0FBQUEsUUFBQztBQUFBO0FBQUEsVUFDQyxPQUFNO0FBQUEsVUFDTixTQUFTSixNQUFNSyxjQUFjTCxNQUFNQztBQUFBQSxVQUNuQyxNQUFLO0FBQUEsVUFFSkQsZ0JBQU1NO0FBQUFBO0FBQUFBLFFBTFQ7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLE1BTUE7QUFBQSxTQWRGO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FlQTtBQUFBLE9BakJGO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FrQkE7QUFFSjtBQUFDQyxLQXRCZVI7QUFBaUIsSUFBQVE7QUFBQUMsYUFBQUQsSUFBQSIsIm5hbWVzIjpbIkJ1dHRvblBsbiIsIlR5cG9ncmFwaHkiLCJNb2RhbEJveCIsIk1vZGFsQ2xvc2VCdXR0b24iLCJNb2RhbFRvcEljb24iLCJNb2RhbEVycm9yQ29udGVudCIsInByb3BzIiwib25DbG9zZSIsImljb24iLCJ0aXRsZSIsInRleHQiLCJvbkN0YUNsaWNrIiwiY3RhIiwiX2MiLCIkUmVmcmVzaFJlZyQiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiTW9kYWxFcnJvckNvbnRlbnQudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHR5cGUgUmVhY3ROb2RlIH0gZnJvbSAncmVhY3QnO1xyXG5pbXBvcnQgeyBCdXR0b25QbG4gfSBmcm9tICcuLi9CdXR0b25QbG4nO1xyXG5pbXBvcnQgeyBUeXBvZ3JhcGh5IH0gZnJvbSAnLi4vVHlwb2dyYXBoeSc7XHJcbmltcG9ydCB7IE1vZGFsQm94IH0gZnJvbSAnLi9Nb2RhbEJveCc7XHJcbmltcG9ydCB7IE1vZGFsQ2xvc2VCdXR0b24gfSBmcm9tICcuL01vZGFsQ2xvc2VCdXR0b24nO1xyXG5pbXBvcnQgeyBNb2RhbFRvcEljb24gfSBmcm9tICcuL01vZGFsVG9wSWNvbic7XHJcblxyXG50eXBlIE1vZGFsRXJyb3JDb250ZW50UHJvcHMgPSB7XHJcbiAgaWNvbjogUmVhY3ROb2RlO1xyXG4gIHRpdGxlOiBSZWFjdE5vZGU7XHJcbiAgdGV4dDogUmVhY3ROb2RlO1xyXG4gIGN0YTogUmVhY3ROb2RlO1xyXG4gIG9uQ2xvc2U6ICgpID0+IHZvaWQ7XHJcbiAgb25DdGFDbGljaz86ICgpID0+IHZvaWQ7XHJcbn07XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gTW9kYWxFcnJvckNvbnRlbnQocHJvcHM6IE1vZGFsRXJyb3JDb250ZW50UHJvcHMpIHtcclxuICByZXR1cm4gKFxyXG4gICAgPE1vZGFsQm94IHZQYWQ+XHJcbiAgICAgIDxNb2RhbENsb3NlQnV0dG9uIG9uQ2xpY2s9e3Byb3BzLm9uQ2xvc2V9IC8+XHJcbiAgICAgIDxNb2RhbEJveCBhbGlnbj1cImNlbnRlclwiIGdhcD17NH0gaFBhZD5cclxuICAgICAgICA8TW9kYWxCb3ggYWxpZ249XCJjZW50ZXJcIiBnYXA9ezJ9PlxyXG4gICAgICAgICAgPE1vZGFsVG9wSWNvbiBpY29uPXtwcm9wcy5pY29ufSAvPlxyXG4gICAgICAgICAgPFR5cG9ncmFwaHkgdmFyaWFudD1cImgyXCIgY29tcG9uZW50PVwiaDFcIj5cclxuICAgICAgICAgICAge3Byb3BzLnRpdGxlfVxyXG4gICAgICAgICAgPC9UeXBvZ3JhcGh5PlxyXG4gICAgICAgICAgPFR5cG9ncmFwaHkgdmFyaWFudD1cImJvZHkyXCI+e3Byb3BzLnRleHR9PC9UeXBvZ3JhcGh5PlxyXG4gICAgICAgIDwvTW9kYWxCb3g+XHJcbiAgICAgICAgPEJ1dHRvblBsblxyXG4gICAgICAgICAgY29sb3I9XCJwcmltYXJ5XCJcclxuICAgICAgICAgIG9uQ2xpY2s9e3Byb3BzLm9uQ3RhQ2xpY2sgfHwgcHJvcHMub25DbG9zZX1cclxuICAgICAgICAgIHR5cGU9XCJidXR0b25cIlxyXG4gICAgICAgID5cclxuICAgICAgICAgIHtwcm9wcy5jdGF9XHJcbiAgICAgICAgPC9CdXR0b25QbG4+XHJcbiAgICAgIDwvTW9kYWxCb3g+XHJcbiAgICA8L01vZGFsQm94PlxyXG4gICk7XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy91aS1hdG9tcy9zcmMvbGliL21vZGFsL01vZGFsRXJyb3JDb250ZW50LnRzeCJ9

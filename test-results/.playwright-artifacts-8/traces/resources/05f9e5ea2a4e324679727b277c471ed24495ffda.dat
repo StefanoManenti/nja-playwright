@@ -1,0 +1,15 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+export { useTagId, useTrackingPage } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-page.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLFVBQVVDLHVCQUF1QjtBQUMxQyxjQUFjO0FBQ2QsY0FBYyIsIm5hbWVzIjpbInVzZVRhZ0lkIiwidXNlVHJhY2tpbmdQYWdlIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbImluZGV4LnRzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCB7IHVzZVRhZ0lkLCB1c2VUcmFja2luZ1BhZ2UgfSBmcm9tICcuL2xpYi90cmFja2luZy1wYWdlJztcclxuZXhwb3J0ICogZnJvbSAnLi9saWIvdHJhY2tpbmctcmVhY3QnO1xyXG5leHBvcnQgKiBmcm9tICcuL2xpYi90cmFja2luZy1zdGF0ZSc7XHJcblxyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL3RyYWNraW5nLXJlYWN0L3NyYy9pbmRleC50cyJ9

@@ -1,0 +1,343 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$(), _s2 = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { TechnologyMessageIcon } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/index.ts";
+import __vite__cjsImport4_react from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react.js?v=0189a8d1"; const useCallback = __vite__cjsImport4_react["useCallback"]; const useEffect = __vite__cjsImport4_react["useEffect"]; const useState = __vite__cjsImport4_react["useState"];
+import {
+  ButtonPln,
+  LinkContent,
+  Modal,
+  ModalBox,
+  ModalButtonsBox,
+  ModalCloseButton,
+  TextField,
+  Typography
+} from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+import { usePromise } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/index.ts";
+import { errors } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/index.ts";
+import { useAtom, useAtomValue } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+import { withTrackingWeborderUnicoPage } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/index.ts";
+import { useTracking } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/index.ts";
+const MIN_OTP_SIZE = 6;
+const MAX_WIDTH_STYLE = { maxWidth: "461px" };
+export const ModalOtp = withTrackingWeborderUnicoPage(ModalOtpComponent, {
+  macro_step: "anagrafica",
+  micro_step: "2_verifica"
+});
+_c = ModalOtp;
+export function ModalOtpComponent({
+  telephone$,
+  reject,
+  resolve
+}) {
+  _s();
+  const tracking = useTracking();
+  const [otpValue, setOtpValue] = useState(null);
+  const [errorOtp, setErrorOtp] = useState(null);
+  function handleChangeOtp(value) {
+    setErrorOtp(null);
+    setOtpValue(value);
+  }
+  const [{ full: telephone, otpCanResend$ }, action] = useAtom(telephone$, {
+    delay: 0
+  });
+  const canResend = useAtomValue(otpCanResend$);
+  const resendOtp = useCallback(async () => {
+    setErrorOtp(null);
+    setOtpValue(null);
+    await action({ action: "SEND_OTP" });
+  }, [action]);
+  useEffect(() => {
+    resendOtp();
+  }, [resendOtp]);
+  const submitOtp = useCallback(async () => {
+    if (!otpValue) {
+      return;
+    }
+    try {
+      await action({ action: "CHECK_OTP", otp: otpValue });
+      setErrorOtp(null);
+      setOtpValue(null);
+      resolve();
+    } catch (e) {
+      if (e instanceof errors.OtpNotValidError) {
+        setErrorOtp(
+          canResend ? "Codice non valido, riprova o richiedi un nuovo codice di verifica" : "Codice non valido, riprova."
+        );
+      } else {
+        throw e;
+      }
+    }
+  }, [action, canResend, otpValue, resolve]);
+  const { loading, execute } = usePromise(submitOtp);
+  return /* @__PURE__ */ jsxDEV(Modal, { children: /* @__PURE__ */ jsxDEV(
+    ModalOtpLayout,
+    {
+      showClose: true,
+      onClose: reject,
+      icon: /* @__PURE__ */ jsxDEV(TechnologyMessageIcon, {}, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+        lineNumber: 95,
+        columnNumber: 15
+      }, this),
+      title: /* @__PURE__ */ jsxDEV(Fragment, { children: "Conferma il tuo numero di telefono" }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+        lineNumber: 96,
+        columnNumber: 16
+      }, this),
+      subtitle: /* @__PURE__ */ jsxDEV(Fragment, { children: [
+        "Per proseguire, inserisci qui sotto il codice di verifica temporaneo che hai ricevuto via SMS al numero ",
+        /* @__PURE__ */ jsxDEV("b", { children: telephone }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+          lineNumber: 100,
+          columnNumber: 48
+        }, this),
+        "."
+      ] }, void 0, true, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+        lineNumber: 98,
+        columnNumber: 9
+      }, this),
+      children: [
+        /* @__PURE__ */ jsxDEV("div", { style: MAX_WIDTH_STYLE, children: /* @__PURE__ */ jsxDEV(
+          TextField,
+          {
+            value: otpValue || "",
+            error: !!errorOtp,
+            label: "Inserisci qui il tuo codice di verifica",
+            placeholder: "Inserisci qui",
+            onChange: (e) => handleChangeOtp(e.target.value),
+            helperText: errorOtp
+          },
+          void 0,
+          false,
+          {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+            lineNumber: 105,
+            columnNumber: 11
+          },
+          this
+        ) }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+          lineNumber: 104,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ jsxDEV(Typography, { variant: "body2", children: /* @__PURE__ */ jsxDEV(ResendLink, { telephone$, resendOtp }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+          lineNumber: 116,
+          columnNumber: 11
+        }, this) }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+          lineNumber: 115,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ jsxDEV(ModalButtonsBox, { children: /* @__PURE__ */ jsxDEV(
+          ButtonPln,
+          {
+            disabled: !(otpValue && otpValue.length >= MIN_OTP_SIZE) || loading || !!errorOtp,
+            onClick: () => {
+              tracking.push({
+                event: "otp_click",
+                cta_cliccata: "verifica_subito"
+              });
+              return execute();
+            },
+            color: "primary",
+            type: "button",
+            loading,
+            children: "Verifica subito"
+          },
+          void 0,
+          false,
+          {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+            lineNumber: 120,
+            columnNumber: 11
+          },
+          this
+        ) }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+          lineNumber: 119,
+          columnNumber: 9
+        }, this)
+      ]
+    },
+    void 0,
+    true,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+      lineNumber: 92,
+      columnNumber: 7
+    },
+    this
+  ) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+    lineNumber: 91,
+    columnNumber: 5
+  }, this);
+}
+_s(ModalOtpComponent, "QdvSUoAe/T8XDJRDo+VbpK/Z5Ds=", false, function() {
+  return [useTracking, useAtom, useAtomValue, usePromise];
+});
+_c2 = ModalOtpComponent;
+function ResendLink({
+  telephone$,
+  resendOtp
+}) {
+  _s2();
+  const tracking = useTracking();
+  const t = useAtomValue(telephone$, { delay: 0 });
+  const waitTime = useAtomValue(t.otpTimerForSend$);
+  const canResend = useAtomValue(t.otpCanResend$);
+  const { loading, error, execute } = usePromise(resendOtp);
+  if (!canResend) {
+    return /* @__PURE__ */ jsxDEV(Fragment, { children: [
+      "È stato raggiunto il numero massimo di tentativi di invio del codice di verifica. ",
+      /* @__PURE__ */ jsxDEV("b", { children: "Riprova tra 24 ore." }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+        lineNumber: 163,
+        columnNumber: 19
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+      lineNumber: 161,
+      columnNumber: 7
+    }, this);
+  }
+  if (waitTime > 0) {
+    return /* @__PURE__ */ jsxDEV(Fragment, { children: [
+      "Se non lo hai ricevuto, puoi richiedere un nuovo codice tra",
+      " ",
+      /* @__PURE__ */ jsxDEV("b", { children: [
+        waitTime,
+        " ",
+        waitTime === 1 ? "secondo" : "secondi"
+      ] }, void 0, true, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+        lineNumber: 172,
+        columnNumber: 9
+      }, this),
+      "."
+    ] }, void 0, true, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+      lineNumber: 170,
+      columnNumber: 7
+    }, this);
+  }
+  return /* @__PURE__ */ jsxDEV(Fragment, { children: [
+    "Non l’hai ricevuto?",
+    " ",
+    /* @__PURE__ */ jsxDEV(
+      LinkContent,
+      {
+        loading,
+        underline: true,
+        onClick: () => {
+          tracking.push({
+            event: "otp_click",
+            cta_cliccata: "richiedi_un_nuovo_codice"
+          });
+          return execute();
+        },
+        component: "button",
+        type: "button",
+        children: "Richiedi un nuovo codice"
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+        lineNumber: 183,
+        columnNumber: 7
+      },
+      this
+    )
+  ] }, void 0, true, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+    lineNumber: 181,
+    columnNumber: 5
+  }, this);
+}
+_s2(ResendLink, "4EFOmLKOtHJrB5kPzY9ZakDCShQ=", false, function() {
+  return [useTracking, useAtomValue, useAtomValue, useAtomValue, usePromise];
+});
+_c3 = ResendLink;
+function ModalOtpLayout(props) {
+  return /* @__PURE__ */ jsxDEV(ModalBox, { vPad: true, children: [
+    props.showClose && /* @__PURE__ */ jsxDEV(ModalCloseButton, { onClick: props.onClose }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+      lineNumber: 214,
+      columnNumber: 27
+    }, this),
+    /* @__PURE__ */ jsxDEV(ModalBox, { hPad: true, gap: 4, children: [
+      /* @__PURE__ */ jsxDEV(ModalBox, { gap: 2, children: [
+        /* @__PURE__ */ jsxDEV(Typography, { variant: "h2", component: "h1", children: props.title }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+          lineNumber: 217,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV(Typography, { variant: "body2", children: props.subtitle }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+          lineNumber: 220,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+        lineNumber: 216,
+        columnNumber: 9
+      }, this),
+      props.children
+    ] }, void 0, true, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+      lineNumber: 215,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx",
+    lineNumber: 213,
+    columnNumber: 5
+  }, this);
+}
+_c4 = ModalOtpLayout;
+var _c, _c2, _c3, _c4;
+$RefreshReg$(_c, "ModalOtp");
+$RefreshReg$(_c2, "ModalOtpComponent");
+$RefreshReg$(_c3, "ResendLink");
+$RefreshReg$(_c4, "ModalOtpLayout");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/ModalOtp.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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QVE7QUFBQSxRQUNqQjtBQUFBLFFBQ0EsV0FBVTtBQUFBLFFBQ1YsTUFBSztBQUFBLFFBQVE7QUFBQTtBQUFBLE1BWGY7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLElBY0E7QUFBQSxPQWhCRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBaUJBO0FBRUo7QUFBQ1EsSUF2RFFELFlBQVU7QUFBQSxVQU9BdkMsYUFDUEYsY0FDT0EsY0FDQ0EsY0FFa0JILFVBQVU7QUFBQTtBQUFBa0QsTUFadkNOO0FBa0VULFNBQVNPLGVBQWVDLE9BQTRCO0FBQ2xELFNBQ0UsdUJBQUMsWUFBUyxNQUFJLE1BQ1hBO0FBQUFBLFVBQU1DLGFBQWEsdUJBQUMsb0JBQWlCLFNBQVNELE1BQU1FLFdBQWpDO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBeUM7QUFBQSxJQUM3RCx1QkFBQyxZQUFTLE1BQUksTUFBQyxLQUFLLEdBQ2xCO0FBQUEsNkJBQUMsWUFBUyxLQUFLLEdBQ2I7QUFBQSwrQkFBQyxjQUFXLFNBQVEsTUFBSyxXQUFVLE1BQ2hDRixnQkFBTUcsU0FEVDtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBRUE7QUFBQSxRQUNBLHVCQUFDLGNBQVcsU0FBUSxTQUFTSCxnQkFBTUksWUFBbkM7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUE0QztBQUFBLFdBSjlDO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFLQTtBQUFBLE1BRUNKLE1BQU1LO0FBQUFBLFNBUlQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQVNBO0FBQUEsT0FYRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBWUE7QUFFSjtBQUFDQyxNQWhCUVA7QUFBYyxJQUFBdEMsSUFBQThCLEtBQUFPLEtBQUFRO0FBQUFDLGFBQUE5QyxJQUFBO0FBQUE4QyxhQUFBaEIsS0FBQTtBQUFBZ0IsYUFBQVQsS0FBQTtBQUFBUyxhQUFBRCxLQUFBIiwibmFtZXMiOlsidXNlQ2FsbGJhY2siLCJ1c2VFZmZlY3QiLCJ1c2VTdGF0ZSIsIkJ1dHRvblBsbiIsIkxpbmtDb250ZW50IiwiTW9kYWwiLCJNb2RhbEJveCIsIk1vZGFsQnV0dG9uc0JveCIsIk1vZGFsQ2xvc2VCdXR0b24iLCJUZXh0RmllbGQiLCJUeXBvZ3JhcGh5IiwidXNlUHJvbWlzZSIsImVycm9ycyIsInVzZUF0b20iLCJ1c2VBdG9tVmFsdWUiLCJ3aXRoVHJhY2tpbmdXZWJvcmRlclVuaWNvUGFnZSIsInVzZVRyYWNraW5nIiwiTUlOX09UUF9TSVpFIiwiTUFYX1dJRFRIX1NUWUxFIiwibWF4V2lkdGgiLCJNb2RhbE90cCIsIk1vZGFsT3RwQ29tcG9uZW50IiwibWFjcm9fc3RlcCIsIm1pY3JvX3N0ZXAiLCJfYyIsInRlbGVwaG9uZSQiLCJyZWplY3QiLCJyZXNvbHZlIiwiX3MiLCJ0cmFja2luZyIsIm90cFZhbHVlIiwic2V0T3RwVmFsdWUiLCJlcnJvck90cCIsInNldEVycm9yT3RwIiwiaGFuZGxlQ2hhbmdlT3RwIiwidmFsdWUiLCJmdWxsIiwidGVsZXBob25lIiwib3RwQ2FuUmVzZW5kJCIsImFjdGlvbiIsImRlbGF5IiwiY2FuUmVzZW5kIiwicmVzZW5kT3RwIiwic3VibWl0T3RwIiwib3RwIiwiZSIsIk90cE5vdFZhbGlkRXJyb3IiLCJsb2FkaW5nIiwiZXhlY3V0ZSIsInRhcmdldCIsImxlbmd0aCIsInB1c2giLCJldmVudCIsImN0YV9jbGljY2F0YSIsIl9jMiIsIlJlc2VuZExpbmsiLCJfczIiLCJ0Iiwid2FpdFRpbWUiLCJvdHBUaW1lckZvclNlbmQkIiwiZXJyb3IiLCJfYzMiLCJNb2RhbE90cExheW91dCIsInByb3BzIiwic2hvd0Nsb3NlIiwib25DbG9zZSIsInRpdGxlIiwic3VidGl0bGUiLCJjaGlsZHJlbiIsIl9jNCIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJNb2RhbE90cC50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgVGVjaG5vbG9neU1lc3NhZ2VJY29uIH0gZnJvbSAnQG5hai13by91aS1pY29ucyc7XHJcbmltcG9ydCB7IFJlYWN0Tm9kZSwgdXNlQ2FsbGJhY2ssIHVzZUVmZmVjdCwgdXNlU3RhdGUgfSBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCB7XHJcbiAgQnV0dG9uUGxuLFxyXG4gIExpbmtDb250ZW50LFxyXG4gIE1vZGFsLFxyXG4gIE1vZGFsQm94LFxyXG4gIE1vZGFsQnV0dG9uc0JveCxcclxuICBNb2RhbENsb3NlQnV0dG9uLFxyXG4gIFRleHRGaWVsZCxcclxuICBUeXBvZ3JhcGh5LFxyXG59IGZyb20gJ0BuYWotd28vdWktYXRvbXMnO1xyXG5pbXBvcnQgeyBNb2RhbEFzUHJvbWlzZVByb3BzLCB1c2VQcm9taXNlIH0gZnJvbSAnQG5hai13by91dGlsJztcclxuaW1wb3J0IHsgZXJyb3JzLCBQaG9uZUF0b20gfSBmcm9tICdAbmFqLXdvL2RhdGEtYWNjZXNzJztcclxuaW1wb3J0IHsgdXNlQXRvbSwgdXNlQXRvbVZhbHVlIH0gZnJvbSAnam90YWknO1xyXG5pbXBvcnQgeyB3aXRoVHJhY2tpbmdXZWJvcmRlclVuaWNvUGFnZSB9IGZyb20gJ0BuYWotd28vdHJhY2tpbmctYXBwJztcclxuaW1wb3J0IHsgdXNlVHJhY2tpbmcgfSBmcm9tICdAbmFqLXdvL3RyYWNraW5nLXJlYWN0JztcclxuXHJcbmV4cG9ydCB0eXBlIE1vZGFsT3RwUHJvcHMgPSBNb2RhbEFzUHJvbWlzZVByb3BzPHZvaWQ+ICYge1xyXG4gIHRlbGVwaG9uZSQ6IFBob25lQXRvbTtcclxufTtcclxuXHJcbi8qKiBudW1lcm8gZGkgY2FyYXR0ZXJpIG1pbmltbyBwZXIgaWwgc3VibWl0IGRlbGwnT1RQICovXHJcbmNvbnN0IE1JTl9PVFBfU0laRSA9IDY7XHJcblxyXG5jb25zdCBNQVhfV0lEVEhfU1RZTEUgPSB7IG1heFdpZHRoOiAnNDYxcHgnIH07XHJcblxyXG5leHBvcnQgY29uc3QgTW9kYWxPdHAgPSB3aXRoVHJhY2tpbmdXZWJvcmRlclVuaWNvUGFnZShNb2RhbE90cENvbXBvbmVudCwge1xyXG4gIG1hY3JvX3N0ZXA6ICdhbmFncmFmaWNhJyxcclxuICBtaWNyb19zdGVwOiAnMl92ZXJpZmljYScsXHJcbn0pO1xyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIE1vZGFsT3RwQ29tcG9uZW50KHtcclxuICB0ZWxlcGhvbmUkLFxyXG4gIHJlamVjdCxcclxuICByZXNvbHZlLFxyXG59OiBNb2RhbE90cFByb3BzKSB7XHJcbiAgY29uc3QgdHJhY2tpbmcgPSB1c2VUcmFja2luZygpO1xyXG5cclxuICBjb25zdCBbb3RwVmFsdWUsIHNldE90cFZhbHVlXSA9IHVzZVN0YXRlPHN0cmluZyB8IG51bGw+KG51bGwpO1xyXG4gIGNvbnN0IFtlcnJvck90cCwgc2V0RXJyb3JPdHBdID0gdXNlU3RhdGU8c3RyaW5nIHwgbnVsbD4obnVsbCk7XHJcblxyXG4gIGZ1bmN0aW9uIGhhbmRsZUNoYW5nZU90cCh2YWx1ZTogc3RyaW5nKSB7XHJcbiAgICBzZXRFcnJvck90cChudWxsKTtcclxuICAgIHNldE90cFZhbHVlKHZhbHVlKTtcclxuICB9XHJcblxyXG4gIGNvbnN0IFt7IGZ1bGw6IHRlbGVwaG9uZSwgb3RwQ2FuUmVzZW5kJCB9LCBhY3Rpb25dID0gdXNlQXRvbSh0ZWxlcGhvbmUkLCB7XHJcbiAgICBkZWxheTogMCxcclxuICB9KTtcclxuICBjb25zdCBjYW5SZXNlbmQgPSB1c2VBdG9tVmFsdWUob3RwQ2FuUmVzZW5kJCk7XHJcblxyXG4gIGNvbnN0IHJlc2VuZE90cCA9IHVzZUNhbGxiYWNrKGFzeW5jICgpID0+IHtcclxuICAgIHNldEVycm9yT3RwKG51bGwpO1xyXG4gICAgc2V0T3RwVmFsdWUobnVsbCk7XHJcblxyXG4gICAgLy8gVE9ETyB0cnkgY2F0Y2hcclxuICAgIGF3YWl0IGFjdGlvbih7IGFjdGlvbjogJ1NFTkRfT1RQJyB9KTtcclxuICB9LCBbYWN0aW9uXSk7XHJcblxyXG4gIHVzZUVmZmVjdCgoKSA9PiB7XHJcbiAgICByZXNlbmRPdHAoKTtcclxuICB9LCBbcmVzZW5kT3RwXSk7XHJcblxyXG4gIGNvbnN0IHN1Ym1pdE90cCA9IHVzZUNhbGxiYWNrKGFzeW5jICgpID0+IHtcclxuICAgIGlmICghb3RwVmFsdWUpIHtcclxuICAgICAgcmV0dXJuO1xyXG4gICAgfVxyXG5cclxuICAgIHRyeSB7XHJcbiAgICAgIGF3YWl0IGFjdGlvbih7IGFjdGlvbjogJ0NIRUNLX09UUCcsIG90cDogb3RwVmFsdWUgfSk7XHJcbiAgICAgIHNldEVycm9yT3RwKG51bGwpO1xyXG4gICAgICBzZXRPdHBWYWx1ZShudWxsKTtcclxuICAgICAgcmVzb2x2ZSgpO1xyXG4gICAgfSBjYXRjaCAoZSkge1xyXG4gICAgICBpZiAoZSBpbnN0YW5jZW9mIGVycm9ycy5PdHBOb3RWYWxpZEVycm9yKSB7XHJcbiAgICAgICAgc2V0RXJyb3JPdHAoXHJcbiAgICAgICAgICBjYW5SZXNlbmRcclxuICAgICAgICAgICAgPyAnQ29kaWNlIG5vbiB2YWxpZG8sIHJpcHJvdmEgbyByaWNoaWVkaSB1biBudW92byBjb2RpY2UgZGkgdmVyaWZpY2EnXHJcbiAgICAgICAgICAgIDogJ0NvZGljZSBub24gdmFsaWRvLCByaXByb3ZhLidcclxuICAgICAgICApO1xyXG4gICAgICB9IGVsc2Uge1xyXG4gICAgICAgIHRocm93IGU7XHJcbiAgICAgIH1cclxuICAgIH1cclxuICB9LCBbYWN0aW9uLCBjYW5SZXNlbmQsIG90cFZhbHVlLCByZXNvbHZlXSk7XHJcblxyXG4gIGNvbnN0IHsgbG9hZGluZywgZXhlY3V0ZSB9ID0gdXNlUHJvbWlzZShzdWJtaXRPdHApO1xyXG5cclxuICByZXR1cm4gKFxyXG4gICAgPE1vZGFsPlxyXG4gICAgICA8TW9kYWxPdHBMYXlvdXRcclxuICAgICAgICBzaG93Q2xvc2VcclxuICAgICAgICBvbkNsb3NlPXtyZWplY3R9XHJcbiAgICAgICAgaWNvbj17PFRlY2hub2xvZ3lNZXNzYWdlSWNvbiAvPn1cclxuICAgICAgICB0aXRsZT17PD5Db25mZXJtYSBpbCB0dW8gbnVtZXJvIGRpIHRlbGVmb25vPC8+fVxyXG4gICAgICAgIHN1YnRpdGxlPXtcclxuICAgICAgICAgIDw+XHJcbiAgICAgICAgICAgIFBlciBwcm9zZWd1aXJlLCBpbnNlcmlzY2kgcXVpIHNvdHRvIGlsIGNvZGljZSBkaSB2ZXJpZmljYSB0ZW1wb3JhbmVvXHJcbiAgICAgICAgICAgIGNoZSBoYWkgcmljZXZ1dG8gdmlhIFNNUyBhbCBudW1lcm8gPGI+e3RlbGVwaG9uZX08L2I+LlxyXG4gICAgICAgICAgPC8+XHJcbiAgICAgICAgfVxyXG4gICAgICA+XHJcbiAgICAgICAgPGRpdiBzdHlsZT17TUFYX1dJRFRIX1NUWUxFfT5cclxuICAgICAgICAgIDxUZXh0RmllbGRcclxuICAgICAgICAgICAgdmFsdWU9e290cFZhbHVlIHx8ICcnfVxyXG4gICAgICAgICAgICBlcnJvcj17ISFlcnJvck90cH1cclxuICAgICAgICAgICAgbGFiZWw9eydJbnNlcmlzY2kgcXVpIGlsIHR1byBjb2RpY2UgZGkgdmVyaWZpY2EnfVxyXG4gICAgICAgICAgICBwbGFjZWhvbGRlcj17J0luc2VyaXNjaSBxdWknfVxyXG4gICAgICAgICAgICBvbkNoYW5nZT17KGUpID0+IGhhbmRsZUNoYW5nZU90cChlLnRhcmdldC52YWx1ZSl9XHJcbiAgICAgICAgICAgIGhlbHBlclRleHQ9e2Vycm9yT3RwfVxyXG4gICAgICAgICAgLz5cclxuICAgICAgICA8L2Rpdj5cclxuXHJcbiAgICAgICAgPFR5cG9ncmFwaHkgdmFyaWFudD1cImJvZHkyXCI+XHJcbiAgICAgICAgICA8UmVzZW5kTGluayB0ZWxlcGhvbmUkPXt0ZWxlcGhvbmUkfSByZXNlbmRPdHA9e3Jlc2VuZE90cH0gLz5cclxuICAgICAgICA8L1R5cG9ncmFwaHk+XHJcblxyXG4gICAgICAgIDxNb2RhbEJ1dHRvbnNCb3g+XHJcbiAgICAgICAgICA8QnV0dG9uUGxuXHJcbiAgICAgICAgICAgIGRpc2FibGVkPXtcclxuICAgICAgICAgICAgICAhKG90cFZhbHVlICYmIG90cFZhbHVlLmxlbmd0aCA+PSBNSU5fT1RQX1NJWkUpIHx8XHJcbiAgICAgICAgICAgICAgbG9hZGluZyB8fFxyXG4gICAgICAgICAgICAgICEhZXJyb3JPdHBcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiB7XHJcbiAgICAgICAgICAgICAgdHJhY2tpbmcucHVzaCh7XHJcbiAgICAgICAgICAgICAgICBldmVudDogJ290cF9jbGljaycsXHJcbiAgICAgICAgICAgICAgICBjdGFfY2xpY2NhdGE6ICd2ZXJpZmljYV9zdWJpdG8nLFxyXG4gICAgICAgICAgICAgIH0pO1xyXG4gICAgICAgICAgICAgIHJldHVybiBleGVjdXRlKCk7XHJcbiAgICAgICAgICAgIH19XHJcbiAgICAgICAgICAgIGNvbG9yPVwicHJpbWFyeVwiXHJcbiAgICAgICAgICAgIHR5cGU9XCJidXR0b25cIlxyXG4gICAgICAgICAgICBsb2FkaW5nPXtsb2FkaW5nfVxyXG4gICAgICAgICAgPlxyXG4gICAgICAgICAgICBWZXJpZmljYSBzdWJpdG9cclxuICAgICAgICAgIDwvQnV0dG9uUGxuPlxyXG4gICAgICAgIDwvTW9kYWxCdXR0b25zQm94PlxyXG4gICAgICA8L01vZGFsT3RwTGF5b3V0PlxyXG4gICAgPC9Nb2RhbD5cclxuICApO1xyXG59XHJcblxyXG5mdW5jdGlvbiBSZXNlbmRMaW5rKHtcclxuICB0ZWxlcGhvbmUkLFxyXG4gIHJlc2VuZE90cCxcclxufToge1xyXG4gIHJlc2VuZE90cDogKCkgPT4gUHJvbWlzZTx2b2lkPjtcclxuICB0ZWxlcGhvbmUkOiBQaG9uZUF0b207XHJcbn0pIHtcclxuICBjb25zdCB0cmFja2luZyA9IHVzZVRyYWNraW5nKCk7XHJcbiAgY29uc3QgdCA9IHVzZUF0b21WYWx1ZSh0ZWxlcGhvbmUkLCB7IGRlbGF5OiAwIH0pO1xyXG4gIGNvbnN0IHdhaXRUaW1lID0gdXNlQXRvbVZhbHVlKHQub3RwVGltZXJGb3JTZW5kJCk7XHJcbiAgY29uc3QgY2FuUmVzZW5kID0gdXNlQXRvbVZhbHVlKHQub3RwQ2FuUmVzZW5kJCk7XHJcblxyXG4gIGNvbnN0IHsgbG9hZGluZywgZXJyb3IsIGV4ZWN1dGUgfSA9IHVzZVByb21pc2UocmVzZW5kT3RwKTtcclxuXHJcbiAgaWYgKCFjYW5SZXNlbmQpIHtcclxuICAgIHJldHVybiAoXHJcbiAgICAgIDw+XHJcbiAgICAgICAgw4ggc3RhdG8gcmFnZ2l1bnRvIGlsIG51bWVybyBtYXNzaW1vIGRpIHRlbnRhdGl2aSBkaSBpbnZpbyBkZWwgY29kaWNlIGRpXHJcbiAgICAgICAgdmVyaWZpY2EuIDxiPlJpcHJvdmEmbmJzcDt0cmEmbmJzcDsyNCZuYnNwO29yZS48L2I+XHJcbiAgICAgIDwvPlxyXG4gICAgKTtcclxuICB9XHJcblxyXG4gIGlmICh3YWl0VGltZSA+IDApIHtcclxuICAgIHJldHVybiAoXHJcbiAgICAgIDw+XHJcbiAgICAgICAgU2Ugbm9uIGxvIGhhaSByaWNldnV0bywgcHVvaSByaWNoaWVkZXJlIHVuIG51b3ZvIGNvZGljZSB0cmF7JyAnfVxyXG4gICAgICAgIDxiPlxyXG4gICAgICAgICAge3dhaXRUaW1lfSZuYnNwO3t3YWl0VGltZSA9PT0gMSA/ICdzZWNvbmRvJyA6ICdzZWNvbmRpJ31cclxuICAgICAgICA8L2I+XHJcbiAgICAgICAgLlxyXG4gICAgICA8Lz5cclxuICAgICk7XHJcbiAgfVxyXG5cclxuICByZXR1cm4gKFxyXG4gICAgPD5cclxuICAgICAgTm9uIGzigJloYWkgcmljZXZ1dG8/eycgJ31cclxuICAgICAgPExpbmtDb250ZW50XHJcbiAgICAgICAgbG9hZGluZz17bG9hZGluZ31cclxuICAgICAgICB1bmRlcmxpbmVcclxuICAgICAgICBvbkNsaWNrPXsoKSA9PiB7XHJcbiAgICAgICAgICB0cmFja2luZy5wdXNoKHtcclxuICAgICAgICAgICAgZXZlbnQ6ICdvdHBfY2xpY2snLFxyXG4gICAgICAgICAgICBjdGFfY2xpY2NhdGE6ICdyaWNoaWVkaV91bl9udW92b19jb2RpY2UnLFxyXG4gICAgICAgICAgfSk7XHJcbiAgICAgICAgICByZXR1cm4gZXhlY3V0ZSgpO1xyXG4gICAgICAgIH19XHJcbiAgICAgICAgY29tcG9uZW50PVwiYnV0dG9uXCJcclxuICAgICAgICB0eXBlPVwiYnV0dG9uXCJcclxuICAgICAgPlxyXG4gICAgICAgIFJpY2hpZWRpIHVuIG51b3ZvIGNvZGljZVxyXG4gICAgICA8L0xpbmtDb250ZW50PlxyXG4gICAgPC8+XHJcbiAgKTtcclxufVxyXG5cclxudHlwZSBNb2RhbE90cExheW91dFByb3BzID0ge1xyXG4gIGljb24/OiBSZWFjdE5vZGU7XHJcbiAgdGl0bGU/OiBSZWFjdE5vZGU7XHJcbiAgc3VidGl0bGU/OiBSZWFjdE5vZGU7XHJcbiAgY2hpbGRyZW4/OiBSZWFjdE5vZGU7XHJcbiAgc2hvd0Nsb3NlPzogYm9vbGVhbjtcclxuICBvbkNsb3NlPzogKCkgPT4gdm9pZDtcclxufTtcclxuXHJcbmZ1bmN0aW9uIE1vZGFsT3RwTGF5b3V0KHByb3BzOiBNb2RhbE90cExheW91dFByb3BzKSB7XHJcbiAgcmV0dXJuIChcclxuICAgIDxNb2RhbEJveCB2UGFkPlxyXG4gICAgICB7cHJvcHMuc2hvd0Nsb3NlICYmIDxNb2RhbENsb3NlQnV0dG9uIG9uQ2xpY2s9e3Byb3BzLm9uQ2xvc2V9IC8+fVxyXG4gICAgICA8TW9kYWxCb3ggaFBhZCBnYXA9ezR9PlxyXG4gICAgICAgIDxNb2RhbEJveCBnYXA9ezJ9PlxyXG4gICAgICAgICAgPFR5cG9ncmFwaHkgdmFyaWFudD1cImgyXCIgY29tcG9uZW50PVwiaDFcIj5cclxuICAgICAgICAgICAge3Byb3BzLnRpdGxlfVxyXG4gICAgICAgICAgPC9UeXBvZ3JhcGh5PlxyXG4gICAgICAgICAgPFR5cG9ncmFwaHkgdmFyaWFudD1cImJvZHkyXCI+e3Byb3BzLnN1YnRpdGxlfTwvVHlwb2dyYXBoeT5cclxuICAgICAgICA8L01vZGFsQm94PlxyXG5cclxuICAgICAgICB7cHJvcHMuY2hpbGRyZW59XHJcbiAgICAgIDwvTW9kYWxCb3g+XHJcbiAgICA8L01vZGFsQm94PlxyXG4gICk7XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy9zdGVwcy9zcmMvbGliL2N1c3RvbWVyL01vZGFsT3RwLnRzeCJ9

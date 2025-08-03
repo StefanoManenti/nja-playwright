@@ -1,0 +1,169 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/pod.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/pod.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { Alert, Modal, ModalErrorContent } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+import { ToolsIcon } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/index.ts";
+import { ModalErrorRequestNotAvailable } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/modals.tsx";
+export const CannotActivateError = (type) => ({
+  modal: function CannotActivateErrorModal(props) {
+    return /* @__PURE__ */ jsxDEV(ModalErrorRequestNotAvailable, { onClose: props.onClose }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/pod.tsx",
+      lineNumber: 11,
+      columnNumber: 12
+    }, this);
+  },
+  alert: function CannotActivateErrorAlert() {
+    return /* @__PURE__ */ jsxDEV(Alert, { type: "alert", children: [
+      /* @__PURE__ */ jsxDEV("b", { children: "Attenzione!" }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/pod.tsx",
+        lineNumber: 17,
+        columnNumber: 9
+      }, this),
+      " Siamo spiacenti, si è verificato un problema durante l'attivazione del ",
+      /* @__PURE__ */ jsxDEV("b", { children: type }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/pod.tsx",
+        lineNumber: 18,
+        columnNumber: 27
+      }, this),
+      " inserito. Ti invitiamo a contattare il Servizio Clienti per ricevere assistenza."
+    ] }, void 0, true, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/pod.tsx",
+      lineNumber: 16,
+      columnNumber: 7
+    }, this);
+  }
+});
+_c = CannotActivateError;
+export const SupplyAlreadyActiveError = (type) => ({
+  modal: function SupplyAlreadyActiveErrorModal(props) {
+    return /* @__PURE__ */ jsxDEV(Modal, { children: /* @__PURE__ */ jsxDEV(
+      ModalErrorContent,
+      {
+        icon: /* @__PURE__ */ jsxDEV(ToolsIcon, {}, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/pod.tsx",
+          lineNumber: 35,
+          columnNumber: 17
+        }, this),
+        title: "Attenzione!",
+        text: /* @__PURE__ */ jsxDEV(Fragment, { children: [
+          "Questa fornitura risulta già attiva.",
+          /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/pod.tsx",
+            lineNumber: 40,
+            columnNumber: 15
+          }, this),
+          "Per maggiori informazioni contatta il nostro servizio clienti."
+        ] }, void 0, true, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/pod.tsx",
+          lineNumber: 38,
+          columnNumber: 11
+        }, this),
+        cta: "Ok ho capito",
+        onClose: props.onClose
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/pod.tsx",
+        lineNumber: 34,
+        columnNumber: 9
+      },
+      this
+    ) }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/pod.tsx",
+      lineNumber: 33,
+      columnNumber: 7
+    }, this);
+  },
+  alert: function SupplyAlreadyActiveErrorAlert() {
+    return /* @__PURE__ */ jsxDEV(Alert, { type: "alert", children: [
+      /* @__PURE__ */ jsxDEV("b", { children: "Attenzione!" }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/pod.tsx",
+        lineNumber: 55,
+        columnNumber: 9
+      }, this),
+      " Siamo spiacenti, si è verificato un problema durante l'attivazione del ",
+      /* @__PURE__ */ jsxDEV("b", { children: type }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/pod.tsx",
+        lineNumber: 56,
+        columnNumber: 27
+      }, this),
+      " inserito. Ti invitiamo a contattare il Servizio Clienti per ricevere assistenza."
+    ] }, void 0, true, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/pod.tsx",
+      lineNumber: 54,
+      columnNumber: 7
+    }, this);
+  }
+});
+_c2 = SupplyAlreadyActiveError;
+export const SwitchInCheckAssetError = (type) => ({
+  modal: function SwitchInCheckAssetErrorModal(props) {
+    return /* @__PURE__ */ jsxDEV(ModalErrorRequestNotAvailable, { onClose: props.onClose }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/pod.tsx",
+      lineNumber: 68,
+      columnNumber: 12
+    }, this);
+  },
+  alert: function SwitchInCheckAssetErrorAlert() {
+    return /* @__PURE__ */ jsxDEV(Alert, { type: "alert", children: [
+      /* @__PURE__ */ jsxDEV("b", { children: "Attenzione!" }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/pod.tsx",
+        lineNumber: 74,
+        columnNumber: 9
+      }, this),
+      " Questo ",
+      /* @__PURE__ */ jsxDEV("b", { children: type }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/pod.tsx",
+        lineNumber: 74,
+        columnNumber: 35
+      }, this),
+      " risulta già associato ad una fornitura attiva con Plenitude."
+    ] }, void 0, true, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/pod.tsx",
+      lineNumber: 73,
+      columnNumber: 7
+    }, this);
+  }
+});
+_c3 = SwitchInCheckAssetError;
+var _c, _c2, _c3;
+$RefreshReg$(_c, "CannotActivateError");
+$RefreshReg$(_c2, "SupplyAlreadyActiveError");
+$RefreshReg$(_c3, "SwitchInCheckAssetError");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/pod.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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cnJvclJlcXVlc3ROb3RBdmFpbGFibGUiLCJDYW5ub3RBY3RpdmF0ZUVycm9yIiwidHlwZSIsIm1vZGFsIiwiQ2Fubm90QWN0aXZhdGVFcnJvck1vZGFsIiwicHJvcHMiLCJvbkNsb3NlIiwiYWxlcnQiLCJDYW5ub3RBY3RpdmF0ZUVycm9yQWxlcnQiLCJfYyIsIlN1cHBseUFscmVhZHlBY3RpdmVFcnJvciIsIlN1cHBseUFscmVhZHlBY3RpdmVFcnJvck1vZGFsIiwiU3VwcGx5QWxyZWFkeUFjdGl2ZUVycm9yQWxlcnQiLCJfYzIiLCJTd2l0Y2hJbkNoZWNrQXNzZXRFcnJvciIsIlN3aXRjaEluQ2hlY2tBc3NldEVycm9yTW9kYWwiLCJTd2l0Y2hJbkNoZWNrQXNzZXRFcnJvckFsZXJ0IiwiX2MzIiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbInBvZC50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQWxlcnQsIE1vZGFsLCBNb2RhbEVycm9yQ29udGVudCB9IGZyb20gJ0BuYWotd28vdWktYXRvbXMnO1xyXG5pbXBvcnQgeyBUb29sc0ljb24gfSBmcm9tICdAbmFqLXdvL3VpLWljb25zJztcclxuaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcclxuaW1wb3J0IHsgTW9kYWxFcnJvclJlcXVlc3ROb3RBdmFpbGFibGUgfSBmcm9tICcuL21vZGFscyc7XHJcblxyXG4vKipcclxuICogQW4gZXJyb3IgdGhhdCBpbmRpY2F0ZXMgdGhhdCBcInN3aXRjaCBpbi9uZXcgYWN0aXZhdGlvblwiIGlzIG5vdCBhdmFpbGFibGUgZm9yIGEgUE9EL1BEUi5cclxuICovXHJcbmV4cG9ydCBjb25zdCBDYW5ub3RBY3RpdmF0ZUVycm9yID0gKHR5cGU6ICdQT0QnIHwgJ1BEUicpID0+ICh7XHJcbiAgbW9kYWw6IGZ1bmN0aW9uIENhbm5vdEFjdGl2YXRlRXJyb3JNb2RhbChwcm9wczogeyBvbkNsb3NlOiAoKSA9PiB2b2lkIH0pIHtcclxuICAgIHJldHVybiA8TW9kYWxFcnJvclJlcXVlc3ROb3RBdmFpbGFibGUgb25DbG9zZT17cHJvcHMub25DbG9zZX0gLz47XHJcbiAgfSxcclxuXHJcbiAgYWxlcnQ6IGZ1bmN0aW9uIENhbm5vdEFjdGl2YXRlRXJyb3JBbGVydCgpIHtcclxuICAgIHJldHVybiAoXHJcbiAgICAgIDxBbGVydCB0eXBlPVwiYWxlcnRcIj5cclxuICAgICAgICA8Yj5BdHRlbnppb25lITwvYj4gU2lhbW8gc3BpYWNlbnRpLCBzaSDDqCB2ZXJpZmljYXRvIHVuIHByb2JsZW1hIGR1cmFudGVcclxuICAgICAgICBsJ2F0dGl2YXppb25lIGRlbCA8Yj57dHlwZX08L2I+IGluc2VyaXRvLiBUaSBpbnZpdGlhbW8gYSBjb250YXR0YXJlIGlsXHJcbiAgICAgICAgU2Vydml6aW8gQ2xpZW50aSBwZXIgcmljZXZlcmUgYXNzaXN0ZW56YS5cclxuICAgICAgPC9BbGVydD5cclxuICAgICk7XHJcbiAgfSxcclxufSk7XHJcblxyXG4vKipcclxuICogQW4gZXJyb3IgdGhhdCBpbmRpY2F0ZXMgdGhhdCBhIFBPRC9QRFIgaXMgYWxyZWFkeSBhY3RpdmUgYW5kIHNvLCBpdCBjYW5ub3QgYmUgYWN0aXZhdGVkIGFnYWluLlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IFN1cHBseUFscmVhZHlBY3RpdmVFcnJvciA9ICh0eXBlOiAnUE9EJyB8ICdQRFInKSA9PiAoe1xyXG4gIG1vZGFsOiBmdW5jdGlvbiBTdXBwbHlBbHJlYWR5QWN0aXZlRXJyb3JNb2RhbChwcm9wczoge1xyXG4gICAgb25DbG9zZTogKCkgPT4gdm9pZDtcclxuICB9KSB7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICA8TW9kYWw+XHJcbiAgICAgICAgPE1vZGFsRXJyb3JDb250ZW50XHJcbiAgICAgICAgICBpY29uPXs8VG9vbHNJY29uIC8+fVxyXG4gICAgICAgICAgdGl0bGU9eydBdHRlbnppb25lISd9XHJcbiAgICAgICAgICB0ZXh0PXtcclxuICAgICAgICAgICAgPD5cclxuICAgICAgICAgICAgICBRdWVzdGEgZm9ybml0dXJhIHJpc3VsdGEgZ2nDoCBhdHRpdmEuXHJcbiAgICAgICAgICAgICAgPGJyIC8+XHJcbiAgICAgICAgICAgICAgUGVyIG1hZ2dpb3JpIGluZm9ybWF6aW9uaSBjb250YXR0YSBpbCBub3N0cm8gc2Vydml6aW8gY2xpZW50aS5cclxuICAgICAgICAgICAgPC8+XHJcbiAgICAgICAgICB9XHJcbiAgICAgICAgICBjdGE9eydPayBobyBjYXBpdG8nfVxyXG4gICAgICAgICAgb25DbG9zZT17cHJvcHMub25DbG9zZX1cclxuICAgICAgICAvPlxyXG4gICAgICA8L01vZGFsPlxyXG4gICAgKTtcclxuICB9LFxyXG5cclxuICBhbGVydDogZnVuY3Rpb24gU3VwcGx5QWxyZWFkeUFjdGl2ZUVycm9yQWxlcnQoKSB7XHJcbiAgICAvLyBUT0RPXHJcbiAgICByZXR1cm4gKFxyXG4gICAgICA8QWxlcnQgdHlwZT1cImFsZXJ0XCI+XHJcbiAgICAgICAgPGI+QXR0ZW56aW9uZSE8L2I+IFNpYW1vIHNwaWFjZW50aSwgc2kgw6ggdmVyaWZpY2F0byB1biBwcm9ibGVtYSBkdXJhbnRlXHJcbiAgICAgICAgbCdhdHRpdmF6aW9uZSBkZWwgPGI+e3R5cGV9PC9iPiBpbnNlcml0by4gVGkgaW52aXRpYW1vIGEgY29udGF0dGFyZSBpbFxyXG4gICAgICAgIFNlcnZpemlvIENsaWVudGkgcGVyIHJpY2V2ZXJlIGFzc2lzdGVuemEuXHJcbiAgICAgIDwvQWxlcnQ+XHJcbiAgICApO1xyXG4gIH0sXHJcbn0pO1xyXG5cclxuLyoqXHJcbiAqIEFuIGVycm9yIHRoYXQgaW5kaWNhdGVzIHRoYXQgdGhlIHVzZXIgZW50ZXJlZCBhIFBsZW5pdHVkZSBQT0QgZHVyaW5nIFwic3dpdGNoIGluXCIuXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgU3dpdGNoSW5DaGVja0Fzc2V0RXJyb3IgPSAodHlwZTogJ1BPRCcgfCAnUERSJykgPT4gKHtcclxuICBtb2RhbDogZnVuY3Rpb24gU3dpdGNoSW5DaGVja0Fzc2V0RXJyb3JNb2RhbChwcm9wczogeyBvbkNsb3NlOiAoKSA9PiB2b2lkIH0pIHtcclxuICAgIHJldHVybiA8TW9kYWxFcnJvclJlcXVlc3ROb3RBdmFpbGFibGUgb25DbG9zZT17cHJvcHMub25DbG9zZX0gLz47XHJcbiAgfSxcclxuXHJcbiAgYWxlcnQ6IGZ1bmN0aW9uIFN3aXRjaEluQ2hlY2tBc3NldEVycm9yQWxlcnQoKSB7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICA8QWxlcnQgdHlwZT1cImFsZXJ0XCI+XHJcbiAgICAgICAgPGI+QXR0ZW56aW9uZSE8L2I+IFF1ZXN0byA8Yj57dHlwZX08L2I+IHJpc3VsdGEgZ2nDoCBhc3NvY2lhdG8gYWQgdW5hXHJcbiAgICAgICAgZm9ybml0dXJhIGF0dGl2YSBjb24gUGxlbml0dWRlLlxyXG4gICAgICA8L0FsZXJ0PlxyXG4gICAgKTtcclxuICB9LFxyXG59KTtcclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy9zdGVwcy9zcmMvbGliL3NlcnZpY2VzLWVycm9ycy9wb2QudHN4In0=

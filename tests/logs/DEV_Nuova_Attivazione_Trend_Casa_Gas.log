@@ -1,0 +1,1399 @@
+[test-start] 2025-08-01T08:45:04.481Z – DEV - Nuova Attivazione / Trend Casa / Gas
+[browser-console] debug: [vite] connecting...
+[browser-console] debug: [vite] connected.
+[browser-console] warning: Cannot determine tier from domain. Current tier: localhost
+[browser-console] info: %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[browser-console] startGroupCollapsed: %c[MSW] Mocking enabled. color:orangered;font-weight:bold;
+[browser-console] log: %cDocumentation: %chttps://mswjs.io/docs font-weight:bold font-weight:normal
+[browser-console] log: Found an issue? https://github.com/mswjs/msw/issues
+[browser-console] log: Worker script URL: http://localhost:4200/mockServiceWorker.js
+[browser-console] log: Worker scope: http://localhost:4200/
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: [MSW] 10:45:09 GET /serviceDAq/api/webOrderCommonServices/infoUtente (%c204 No Content%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 204, statusText: No Content, headers: Object, body: }
+[browser-console] endGroup: console.groupEnd
+[browser-console] info: Tracciamenti.load {userId: undefined, userLoginState: no, userUtenzeAttive: undefined, siteSection1: configura-offerta, siteSection2: configura-offerta}
+[browser-console] info: Tracciamenti.load {userId: undefined, userLoginState: no, userUtenzeAttive: undefined, siteSection1: configura-offerta, siteSection2: configura-offerta}
+[browser-console] warning: [MSW] Warning: intercepted a request without a matching request handler:
+
+  • GET /graphql/execute.json/enigaseluce/OffertaCommodityBusinessList;code=BASE_LTCASAV-GTCASAV?t=1754037911129
+
+If you still wish to intercept this unhandled request, please create a request handler for it.
+Read more: https://mswjs.io/docs/getting-started/mocks
+[browser-console] error: Failed to load resource: the server responded with a status of 500 (Internal Server Error)
+[browser-console] startGroupCollapsed: [MSW] 10:45:11 GET /graphql/execute.json/enigaseluce/OffertaCommodityResidenzialeList;code=BASE_LTCASAV-GTCASAV (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"data":{"eniGasELuceDettaglioOffertaCommodityResi…,"notaStep4CarrelloAStep":{"plaintext":null}}]}}}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(24)
+[browser-console] debug: dipendenze Map(21)
+[browser-console] debug: dipendenti Map(6)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "CustomerIdentityResidential"
+[browser-console] debug: Controllo step "iban"
+[browser-console] debug: Controllo step "newCustomer"
+[browser-console] debug: Controllo step "gasPdr"
+[browser-console] debug: Controllo step "address"
+[browser-console] debug: Controllo step "LocationMeter"
+[browser-console] debug: Controllo step "GasAppointment"
+[browser-console] debug: Controllo step "UnitaAbitative"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "effectiveDates"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "vulnerability-available"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [0] commodity
+[browser-console] log: [2] operativeModeGas
+[browser-console] log: [3] disambiguation
+[browser-console] log: [5] activationGas
+[browser-console] log: [6] recapMobile
+[browser-console] log: [7] ending
+[browser-console] log: [8] vas
+[browser-console] log: [10] vulnerability-available
+[browser-console] log: [10] newCustomer
+[browser-console] log: [11] CustomerIdentityResidential
+[browser-console] log: [15] address
+[browser-console] log: [19] UnitaAbitative
+[browser-console] log: [21] gasPdr
+[browser-console] log: [30] iban
+[browser-console] log: [90] contract
+[browser-console] log: [92] effectiveDates
+[browser-console] log: [97] GasAppointment
+[browser-console] log: [98] LocationMeter
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+commodity,operativeModeGas / commodity,operativeModeGas,activationGas,ending,newCustomer,CustomerIdentityResidential,address,UnitaAbitative,gasPdr,iban,contract,effectiveDates,GasAppointment,LocationMeter,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: ActivationGas, direction: 0, progress: 17.647058823529413}
+[browser-console] log: {prices: Array(4), discounts: Object, texts: Object, greenEnergyIncluded: true}
+[browser-console] log: {prices: Array(4), discounts: Object, texts: Object, greenEnergyIncluded: true}
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(22)
+[browser-console] debug: dipendenze Map(18)
+[browser-console] debug: dipendenti Map(6)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "CustomerIdentityResidential"
+[browser-console] debug: Controllo step "transfer-pdf"
+[browser-console] debug: Controllo step "TipologyTransfer"
+[browser-console] debug: Controllo step "iban"
+[browser-console] debug: Controllo step "newCustomer"
+[browser-console] debug: Controllo step "gasPdr"
+[browser-console] debug: Controllo step "address"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [0] commodity
+[browser-console] log: [2] operativeModeGas
+[browser-console] log: [3] disambiguation
+[browser-console] log: [5] activationGas
+[browser-console] log: [6] recapMobile
+[browser-console] log: [7] ending
+[browser-console] log: [8] vas
+[browser-console] log: [9] TipologyTransfer
+[browser-console] log: [10] newCustomer
+[browser-console] log: [11] CustomerIdentityResidential
+[browser-console] log: [12] transfer-pdf
+[browser-console] log: [15] address
+[browser-console] log: [21] gasPdr
+[browser-console] log: [30] iban
+[browser-console] log: [90] contract
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+commodity,operativeModeGas,activationGas / commodity,operativeModeGas,activationGas,ending,TipologyTransfer,newCustomer,CustomerIdentityResidential,transfer-pdf,address,gasPdr,iban,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: Ending, direction: 1, progress: 26.666666666666668, subflow: undefined}
+[browser-console] info: GTM.push {platform: web, event: carrello, siteSection1: configura-offerta, siteSection2: configura-offerta, from: undefined}
+[browser-console] info: GTM.push {event: cart_step, step_funnel: pre_wo, selezione: Prosegui}
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(22)
+[browser-console] debug: dipendenze Map(18)
+[browser-console] debug: dipendenti Map(6)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "CustomerIdentityResidential"
+[browser-console] debug: Controllo step "transfer-pdf"
+[browser-console] debug: Controllo step "TipologyTransfer"
+[browser-console] debug: Controllo step "iban"
+[browser-console] debug: Controllo step "newCustomer"
+[browser-console] debug: Controllo step "gasPdr"
+[browser-console] debug: Controllo step "address"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [0] commodity
+[browser-console] log: [2] operativeModeGas
+[browser-console] log: [3] disambiguation
+[browser-console] log: [5] activationGas
+[browser-console] log: [6] recapMobile
+[browser-console] log: [7] ending
+[browser-console] log: [8] vas
+[browser-console] log: [9] TipologyTransfer
+[browser-console] log: [10] newCustomer
+[browser-console] log: [11] CustomerIdentityResidential
+[browser-console] log: [12] transfer-pdf
+[browser-console] log: [15] address
+[browser-console] log: [21] gasPdr
+[browser-console] log: [30] iban
+[browser-console] log: [90] contract
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+ / activationGas,TipologyTransfer,newCustomer,CustomerIdentityResidential,transfer-pdf,address,gasPdr,iban,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: TransferType, direction: 1, progress: 8.333333333333332, subflow: undefined}
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: anagrafica, micro_step: dati_utente, operazione: voltura}
+[browser-console] startGroupCollapsed: [MSW] 10:45:45 POST /serviceDAq/api/webOrderCommonServices/v1/maintenance-mode/check (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: POST, headers: Object, body: }
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"attivazioni":false,"switchIn":false,"switchInVol…aleImpianti":false,"ndsStandaloneImpianti":false}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(22)
+[browser-console] debug: dipendenze Map(18)
+[browser-console] debug: dipendenti Map(6)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "CustomerIdentityResidential"
+[browser-console] debug: Controllo step "transfer-pdf"
+[browser-console] debug: Controllo step "TipologyTransfer"
+[browser-console] debug: Controllo step "iban"
+[browser-console] debug: Controllo step "newCustomer"
+[browser-console] debug: Controllo step "gasPdr"
+[browser-console] debug: Controllo step "address"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [0] commodity
+[browser-console] log: [2] operativeModeGas
+[browser-console] log: [3] disambiguation
+[browser-console] log: [5] activationGas
+[browser-console] log: [6] recapMobile
+[browser-console] log: [7] ending
+[browser-console] log: [8] vas
+[browser-console] log: [9] TipologyTransfer
+[browser-console] log: [10] newCustomer
+[browser-console] log: [11] CustomerIdentityResidential
+[browser-console] log: [12] transfer-pdf
+[browser-console] log: [15] address
+[browser-console] log: [21] gasPdr
+[browser-console] log: [30] iban
+[browser-console] log: [90] contract
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+TipologyTransfer / activationGas,TipologyTransfer,newCustomer,CustomerIdentityResidential,transfer-pdf,address,gasPdr,iban,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: NewCustomer, direction: 1, progress: 16.666666666666664, subflow: undefined}
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: anagrafica, micro_step: dati_utente, operazione: voltura}
+[browser-console] startGroupCollapsed: [MSW] 10:46:22 GET /serviceDAq/api/webOrderCommonServices/progressivoWebOrderProcName (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: WO_MOCK}
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: [MSW] 10:46:23 POST /serviceDAq/api/mongoServices/lead (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ltura":{"tipologia":"ORDINARIA"},"collaudo":true}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(22)
+[browser-console] debug: dipendenze Map(18)
+[browser-console] debug: dipendenti Map(6)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "CustomerIdentityResidential"
+[browser-console] debug: Controllo step "transfer-pdf"
+[browser-console] debug: Controllo step "TipologyTransfer"
+[browser-console] debug: Controllo step "iban"
+[browser-console] debug: Controllo step "newCustomer"
+[browser-console] debug: Controllo step "gasPdr"
+[browser-console] debug: Controllo step "address"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [0] commodity
+[browser-console] log: [2] operativeModeGas
+[browser-console] log: [3] disambiguation
+[browser-console] log: [5] activationGas
+[browser-console] log: [6] recapMobile
+[browser-console] log: [7] ending
+[browser-console] log: [8] vas
+[browser-console] log: [9] TipologyTransfer
+[browser-console] log: [10] newCustomer
+[browser-console] log: [11] CustomerIdentityResidential
+[browser-console] log: [12] transfer-pdf
+[browser-console] log: [15] address
+[browser-console] log: [21] gasPdr
+[browser-console] log: [30] iban
+[browser-console] log: [90] contract
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+TipologyTransfer,newCustomer / activationGas,TipologyTransfer,newCustomer,CustomerIdentityResidential,transfer-pdf,address,gasPdr,iban,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: IdentityResidential, direction: 1, progress: 25, subflow: undefined}
+[browser-console] startGroupCollapsed: [MSW] 10:46:23 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] error: Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <p> p 
+    at p
+    at Typography (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Typography.tsx:77:3)
+    at p
+    at Typography (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Typography.tsx:77:3)
+    at div
+    at div
+    at label
+    at div
+    at CardInput2 (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/fields/CardInput.tsx:36:7)
+    at fieldset
+    at StepFieldset (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-fieldset.tsx:30:3)
+    at div
+    at StepContainer (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-container.tsx:27:3)
+    at OwnershipInput (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/identity/OwnershipInput.tsx:57:20)
+    at div
+    at StepContainer (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-container.tsx:27:3)
+    at form
+    at main
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:478:40)
+    at div
+    at Container (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/Container.tsx:26:29)
+    at div
+    at div
+    at Layout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/layout.tsx:29:3)
+    at StepLayout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepLayout.tsx:42:3)
+    at FormProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:102:11)
+    at IdentityResidentialStepComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/identity/IdentityResidentialStep.tsx:82:20)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at WeborderTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:227:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at GlobalTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:51:3)
+    at IdentityResidentialStep
+    at BaseErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:31:5)
+    at BaseErrorBoundaryConnected (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:102:17)
+    at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
+    at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:60:32)
+    at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754037888616:149:3)
+    at MaintenanceMode (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/MaintenanceMode.tsx:33:35)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754037888616:135:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754037888616:41:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx?t=1754037888616:38:15)
+    at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
+    at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
+    at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
+    at HydrateAtoms (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:46:25)
+    at Provider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-TVJE7VNB.js?v=0189a8d1:23:3)
+    at QueryClientProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/@tanstack_react-query.js?v=0189a8d1:58:3)
+    at QueryProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:56:23)
+    at AppProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/app/app-jsx.tsx:35:16)
+    at Services (http://localhost:4200/src/services/services.tsx:29:36)
+    at ErrorBoundary (http://localhost:4200/src/app/ErrorBoundary.tsx:15:5)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/src/app/suspense-components.tsx:26:34)
+    at App
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(22)
+[browser-console] debug: dipendenze Map(18)
+[browser-console] debug: dipendenti Map(6)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "CustomerIdentityResidential"
+[browser-console] debug: Controllo step "transfer-pdf"
+[browser-console] debug: Controllo step "TipologyTransfer"
+[browser-console] debug: Controllo step "iban"
+[browser-console] debug: Controllo step "newCustomer"
+[browser-console] debug: Controllo step "gasPdr"
+[browser-console] debug: Controllo step "address"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [0] commodity
+[browser-console] log: [2] operativeModeGas
+[browser-console] log: [3] disambiguation
+[browser-console] log: [5] activationGas
+[browser-console] log: [6] recapMobile
+[browser-console] log: [7] ending
+[browser-console] log: [8] vas
+[browser-console] log: [9] TipologyTransfer
+[browser-console] log: [10] newCustomer
+[browser-console] log: [11] CustomerIdentityResidential
+[browser-console] log: [12] transfer-pdf
+[browser-console] log: [15] address
+[browser-console] log: [21] gasPdr
+[browser-console] log: [30] iban
+[browser-console] log: [90] contract
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+TipologyTransfer,newCustomer,CustomerIdentityResidential / activationGas,TipologyTransfer,newCustomer,CustomerIdentityResidential,transfer-pdf,address,gasPdr,iban,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: TransferPdfStep, direction: 1, progress: 33.33333333333333, subflow: undefined}
+[browser-console] startGroupCollapsed: [MSW] 10:46:47 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(22)
+[browser-console] debug: dipendenze Map(18)
+[browser-console] debug: dipendenti Map(6)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "CustomerIdentityResidential"
+[browser-console] debug: Controllo step "transfer-pdf"
+[browser-console] debug: Controllo step "TipologyTransfer"
+[browser-console] debug: Controllo step "iban"
+[browser-console] debug: Controllo step "newCustomer"
+[browser-console] debug: Controllo step "gasPdr"
+[browser-console] debug: Controllo step "address"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [0] commodity
+[browser-console] log: [2] operativeModeGas
+[browser-console] log: [3] disambiguation
+[browser-console] log: [5] activationGas
+[browser-console] log: [6] recapMobile
+[browser-console] log: [7] ending
+[browser-console] log: [8] vas
+[browser-console] log: [9] TipologyTransfer
+[browser-console] log: [10] newCustomer
+[browser-console] log: [11] CustomerIdentityResidential
+[browser-console] log: [12] transfer-pdf
+[browser-console] log: [15] address
+[browser-console] log: [21] gasPdr
+[browser-console] log: [30] iban
+[browser-console] log: [90] contract
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+TipologyTransfer,newCustomer,CustomerIdentityResidential,transfer-pdf / activationGas,TipologyTransfer,newCustomer,CustomerIdentityResidential,transfer-pdf,address,gasPdr,iban,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: Address, direction: 1, progress: 41.66666666666667, subflow: undefined}
+[browser-console] startGroupCollapsed: [MSW] 10:47:02 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: fornitura_indirizzo, micro_step: fornitura_indirizzo, operazione: voltura}
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(22)
+[browser-console] debug: dipendenze Map(18)
+[browser-console] debug: dipendenti Map(6)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "CustomerIdentityResidential"
+[browser-console] debug: Controllo step "transfer-pdf"
+[browser-console] debug: Controllo step "TipologyTransfer"
+[browser-console] debug: Controllo step "iban"
+[browser-console] debug: Controllo step "newCustomer"
+[browser-console] debug: Controllo step "gasPdr"
+[browser-console] debug: Controllo step "address"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [0] commodity
+[browser-console] log: [2] operativeModeGas
+[browser-console] log: [3] disambiguation
+[browser-console] log: [5] activationGas
+[browser-console] log: [6] recapMobile
+[browser-console] log: [7] ending
+[browser-console] log: [8] vas
+[browser-console] log: [9] TipologyTransfer
+[browser-console] log: [10] newCustomer
+[browser-console] log: [11] CustomerIdentityResidential
+[browser-console] log: [12] transfer-pdf
+[browser-console] log: [15] address
+[browser-console] log: [21] gasPdr
+[browser-console] log: [30] iban
+[browser-console] log: [90] contract
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+TipologyTransfer,newCustomer,CustomerIdentityResidential,transfer-pdf,address / activationGas,TipologyTransfer,newCustomer,CustomerIdentityResidential,transfer-pdf,address,gasPdr,iban,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: GasPdr, direction: 1, progress: 50, subflow: undefined}
+[browser-console] startGroupCollapsed: [MSW] 10:47:26 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: pdr, micro_step: inserisci_pdr, operazione: voltura}
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(22)
+[browser-console] debug: dipendenze Map(18)
+[browser-console] debug: dipendenti Map(6)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "CustomerIdentityResidential"
+[browser-console] debug: Controllo step "transfer-pdf"
+[browser-console] debug: Controllo step "TipologyTransfer"
+[browser-console] debug: Controllo step "iban"
+[browser-console] debug: Controllo step "newCustomer"
+[browser-console] debug: Controllo step "gasPdr"
+[browser-console] debug: Controllo step "address"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [0] commodity
+[browser-console] log: [2] operativeModeGas
+[browser-console] log: [3] disambiguation
+[browser-console] log: [5] activationGas
+[browser-console] log: [6] recapMobile
+[browser-console] log: [7] ending
+[browser-console] log: [8] vas
+[browser-console] log: [9] TipologyTransfer
+[browser-console] log: [10] newCustomer
+[browser-console] log: [11] CustomerIdentityResidential
+[browser-console] log: [12] transfer-pdf
+[browser-console] log: [15] address
+[browser-console] log: [21] gasPdr
+[browser-console] log: [30] iban
+[browser-console] log: [90] contract
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+TipologyTransfer,newCustomer,CustomerIdentityResidential,transfer-pdf,address,gasPdr / activationGas,TipologyTransfer,newCustomer,CustomerIdentityResidential,transfer-pdf,address,gasPdr,iban,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: IbanResidential, direction: 1, progress: 58.333333333333336, subflow: undefined}
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: addebito_diretto, micro_step: addebito_diretto, operazione: voltura}
+[browser-console] debug: [VOLTURA]
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(22)
+[browser-console] debug: dipendenze Map(18)
+[browser-console] debug: dipendenti Map(6)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "CustomerIdentityResidential"
+[browser-console] debug: Controllo step "transfer-pdf"
+[browser-console] debug: Controllo step "TipologyTransfer"
+[browser-console] debug: Controllo step "iban"
+[browser-console] debug: Controllo step "newCustomer"
+[browser-console] debug: Controllo step "gasPdr"
+[browser-console] debug: Controllo step "address"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [0] commodity
+[browser-console] log: [2] operativeModeGas
+[browser-console] log: [3] disambiguation
+[browser-console] log: [5] activationGas
+[browser-console] log: [6] recapMobile
+[browser-console] log: [7] ending
+[browser-console] log: [8] vas
+[browser-console] log: [9] TipologyTransfer
+[browser-console] log: [10] newCustomer
+[browser-console] log: [11] CustomerIdentityResidential
+[browser-console] log: [12] transfer-pdf
+[browser-console] log: [15] address
+[browser-console] log: [21] gasPdr
+[browser-console] log: [30] iban
+[browser-console] log: [90] contract
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+TipologyTransfer,newCustomer,CustomerIdentityResidential,transfer-pdf,address,gasPdr,iban / activationGas,TipologyTransfer,newCustomer,CustomerIdentityResidential,transfer-pdf,address,gasPdr,iban,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: Contract, direction: 1, progress: 66.66666666666666, subflow: undefined}
+[browser-console] startGroupCollapsed: [MSW] 10:48:13 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] error: Warning: Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?%s%s 
+
+Check the render method of `Controller`. 
+    at ContractFlagWithModal (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractFlagWithModal.tsx:34:3)
+    at Controller (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:313:35)
+    at fieldset
+    at StepFieldset (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-fieldset.tsx:30:3)
+    at div
+    at StepContainer (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-container.tsx:27:3)
+    at form
+    at main
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:478:40)
+    at div
+    at Container (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/Container.tsx:26:29)
+    at div
+    at div
+    at Layout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/layout.tsx:29:3)
+    at StepLayout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepLayout.tsx:42:3)
+    at FormProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:102:11)
+    at ContractStep (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractStep.tsx:72:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at WeborderTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:227:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at GlobalTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:51:3)
+    at ContractStepWrapped
+    at BaseErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:31:5)
+    at BaseErrorBoundaryConnected (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:102:17)
+    at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
+    at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:60:32)
+    at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754037888616:149:3)
+    at MaintenanceMode (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/MaintenanceMode.tsx:33:35)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754037888616:135:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754037888616:41:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx?t=1754037888616:38:15)
+    at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
+    at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
+    at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
+    at HydrateAtoms (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:46:25)
+    at Provider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-TVJE7VNB.js?v=0189a8d1:23:3)
+    at QueryClientProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/@tanstack_react-query.js?v=0189a8d1:58:3)
+    at QueryProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:56:23)
+    at AppProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/app/app-jsx.tsx:35:16)
+    at Services (http://localhost:4200/src/services/services.tsx:29:36)
+    at ErrorBoundary (http://localhost:4200/src/app/ErrorBoundary.tsx:15:5)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/src/app/suspense-components.tsx:26:34)
+    at App
+[browser-console] error: Warning: Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?%s%s 
+
+Check the render method of `Controller`. 
+    at Clausole1341 (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/contracts/clausole1341.tsx:37:3)
+    at Controller (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:313:35)
+    at fieldset
+    at StepFieldset (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-fieldset.tsx:30:3)
+    at div
+    at StepContainer (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-container.tsx:27:3)
+    at form
+    at main
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:478:40)
+    at div
+    at Container (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/Container.tsx:26:29)
+    at div
+    at div
+    at Layout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/layout.tsx:29:3)
+    at StepLayout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepLayout.tsx:42:3)
+    at FormProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:102:11)
+    at ContractStep (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractStep.tsx:72:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at WeborderTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:227:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at GlobalTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:51:3)
+    at ContractStepWrapped
+    at BaseErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:31:5)
+    at BaseErrorBoundaryConnected (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:102:17)
+    at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
+    at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:60:32)
+    at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754037888616:149:3)
+    at MaintenanceMode (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/MaintenanceMode.tsx:33:35)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754037888616:135:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754037888616:41:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx?t=1754037888616:38:15)
+    at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
+    at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
+    at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
+    at HydrateAtoms (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:46:25)
+    at Provider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-TVJE7VNB.js?v=0189a8d1:23:3)
+    at QueryClientProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/@tanstack_react-query.js?v=0189a8d1:58:3)
+    at QueryProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:56:23)
+    at AppProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/app/app-jsx.tsx:35:16)
+    at Services (http://localhost:4200/src/services/services.tsx:29:36)
+    at ErrorBoundary (http://localhost:4200/src/app/ErrorBoundary.tsx:15:5)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/src/app/suspense-components.tsx:26:34)
+    at App
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: condizioni_contrattuali, micro_step: condizioni_contrattuali, operazione: voltura}
+[browser-console] error: Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <ul> p 
+    at ul
+    at div
+    at p
+    at Typography (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Typography.tsx:77:3)
+    at div
+    at div
+    at div
+    at div
+    at ModalContractContent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalContractContent.tsx:34:67)
+    at div
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:478:40)
+    at div
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:478:40)
+    at Portal2 (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-7WI2XVXS.js?v=0189a8d1:34:5)
+    at Modal (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/Modal.tsx:31:3)
+    at ContractModal (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractModal.tsx:27:3)
+    at WeborderTrackingWrapper (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/hocs.tsx:30:5)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at WeborderTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:227:3)
+    at withWeborderTrackingState(ContractModal
+    at PresenceChild (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:7684:24)
+    at AnimatePresence (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:7741:26)
+    at ModalWrapper (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalWrapper.tsx:25:32)
+    at ContractFlagWithModal (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractFlagWithModal.tsx:34:3)
+    at Controller (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:313:35)
+    at fieldset
+    at StepFieldset (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-fieldset.tsx:30:3)
+    at div
+    at StepContainer (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-container.tsx:27:3)
+    at form
+    at main
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:478:40)
+    at div
+    at Container (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/Container.tsx:26:29)
+    at div
+    at div
+    at Layout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/layout.tsx:29:3)
+    at StepLayout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepLayout.tsx:42:3)
+    at FormProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:102:11)
+    at ContractStep (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractStep.tsx:72:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at WeborderTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:227:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at GlobalTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:51:3)
+    at ContractStepWrapped
+    at BaseErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:31:5)
+    at BaseErrorBoundaryConnected (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:102:17)
+    at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
+    at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:60:32)
+    at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754037888616:149:3)
+    at MaintenanceMode (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/MaintenanceMode.tsx:33:35)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754037888616:135:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754037888616:41:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx?t=1754037888616:38:15)
+    at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
+    at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
+    at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
+    at HydrateAtoms (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:46:25)
+    at Provider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-TVJE7VNB.js?v=0189a8d1:23:3)
+    at QueryClientProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/@tanstack_react-query.js?v=0189a8d1:58:3)
+    at QueryProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:56:23)
+    at AppProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/app/app-jsx.tsx:35:16)
+    at Services (http://localhost:4200/src/services/services.tsx:29:36)
+    at ErrorBoundary (http://localhost:4200/src/app/ErrorBoundary.tsx:15:5)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/src/app/suspense-components.tsx:26:34)
+    at App
+[browser-console] error: Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <ol> p 
+    at ol
+    at div
+    at p
+    at Typography (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Typography.tsx:77:3)
+    at div
+    at div
+    at div
+    at div
+    at ModalContractContent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalContractContent.tsx:34:67)
+    at div
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:478:40)
+    at div
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:478:40)
+    at Portal2 (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-7WI2XVXS.js?v=0189a8d1:34:5)
+    at Modal (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/Modal.tsx:31:3)
+    at ContractModal (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractModal.tsx:27:3)
+    at WeborderTrackingWrapper (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/hocs.tsx:30:5)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at WeborderTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:227:3)
+    at withWeborderTrackingState(ContractModal
+    at PresenceChild (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:7684:24)
+    at AnimatePresence (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:7741:26)
+    at ModalWrapper (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalWrapper.tsx:25:32)
+    at ContractFlagWithModal (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractFlagWithModal.tsx:34:3)
+    at Controller (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:313:35)
+    at fieldset
+    at StepFieldset (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-fieldset.tsx:30:3)
+    at div
+    at StepContainer (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-container.tsx:27:3)
+    at form
+    at main
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:478:40)
+    at div
+    at Container (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/Container.tsx:26:29)
+    at div
+    at div
+    at Layout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/layout.tsx:29:3)
+    at StepLayout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepLayout.tsx:42:3)
+    at FormProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:102:11)
+    at ContractStep (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractStep.tsx:72:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at WeborderTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:227:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at GlobalTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:51:3)
+    at ContractStepWrapped
+    at BaseErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:31:5)
+    at BaseErrorBoundaryConnected (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:102:17)
+    at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
+    at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:60:32)
+    at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754037888616:149:3)
+    at MaintenanceMode (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/MaintenanceMode.tsx:33:35)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754037888616:135:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754037888616:41:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx?t=1754037888616:38:15)
+    at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
+    at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
+    at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
+    at HydrateAtoms (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:46:25)
+    at Provider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-TVJE7VNB.js?v=0189a8d1:23:3)
+    at QueryClientProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/@tanstack_react-query.js?v=0189a8d1:58:3)
+    at QueryProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:56:23)
+    at AppProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/app/app-jsx.tsx:35:16)
+    at Services (http://localhost:4200/src/services/services.tsx:29:36)
+    at ErrorBoundary (http://localhost:4200/src/app/ErrorBoundary.tsx:15:5)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/src/app/suspense-components.tsx:26:34)
+    at App
+[browser-console] error: Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <div> p 
+    at div
+    at p
+    at Typography (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Typography.tsx:77:3)
+    at div
+    at div
+    at div
+    at div
+    at ModalContractContent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalContractContent.tsx:34:67)
+    at div
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:478:40)
+    at div
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:478:40)
+    at Portal2 (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-7WI2XVXS.js?v=0189a8d1:34:5)
+    at Modal (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/Modal.tsx:31:3)
+    at ContractModal (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractModal.tsx:27:3)
+    at WeborderTrackingWrapper (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/hocs.tsx:30:5)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at WeborderTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:227:3)
+    at withWeborderTrackingState(ContractModal
+    at PresenceChild (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:7684:24)
+    at AnimatePresence (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:7741:26)
+    at ModalWrapper (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalWrapper.tsx:25:32)
+    at ContractFlagWithModal (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractFlagWithModal.tsx:34:3)
+    at Controller (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:313:35)
+    at fieldset
+    at StepFieldset (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-fieldset.tsx:30:3)
+    at div
+    at StepContainer (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-container.tsx:27:3)
+    at form
+    at main
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:478:40)
+    at div
+    at Container (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/Container.tsx:26:29)
+    at div
+    at div
+    at Layout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/layout.tsx:29:3)
+    at StepLayout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepLayout.tsx:42:3)
+    at FormProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:102:11)
+    at ContractStep (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractStep.tsx:72:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at WeborderTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:227:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at GlobalTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:51:3)
+    at ContractStepWrapped
+    at BaseErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:31:5)
+    at BaseErrorBoundaryConnected (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:102:17)
+    at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
+    at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:60:32)
+    at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754037888616:149:3)
+    at MaintenanceMode (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/MaintenanceMode.tsx:33:35)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754037888616:135:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754037888616:41:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx?t=1754037888616:38:15)
+    at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
+    at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
+    at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
+    at HydrateAtoms (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:46:25)
+    at Provider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-TVJE7VNB.js?v=0189a8d1:23:3)
+    at QueryClientProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/@tanstack_react-query.js?v=0189a8d1:58:3)
+    at QueryProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:56:23)
+    at AppProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/app/app-jsx.tsx:35:16)
+    at Services (http://localhost:4200/src/services/services.tsx:29:36)
+    at ErrorBoundary (http://localhost:4200/src/app/ErrorBoundary.tsx:15:5)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/src/app/suspense-components.tsx:26:34)
+    at App
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: condizioni_contrattuali, micro_step: consensi_dichiarazioni, operazione: voltura}
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: condizioni_contrattuali, micro_step: accettazione_clausole, operazione: voltura}
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(22)
+[browser-console] debug: dipendenze Map(18)
+[browser-console] debug: dipendenti Map(6)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "CustomerIdentityResidential"
+[browser-console] debug: Controllo step "transfer-pdf"
+[browser-console] debug: Controllo step "TipologyTransfer"
+[browser-console] debug: Controllo step "iban"
+[browser-console] debug: Controllo step "newCustomer"
+[browser-console] debug: Controllo step "gasPdr"
+[browser-console] debug: Controllo step "address"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [0] commodity
+[browser-console] log: [2] operativeModeGas
+[browser-console] log: [3] disambiguation
+[browser-console] log: [5] activationGas
+[browser-console] log: [6] recapMobile
+[browser-console] log: [7] ending
+[browser-console] log: [8] vas
+[browser-console] log: [9] TipologyTransfer
+[browser-console] log: [10] newCustomer
+[browser-console] log: [11] CustomerIdentityResidential
+[browser-console] log: [12] transfer-pdf
+[browser-console] log: [15] address
+[browser-console] log: [21] gasPdr
+[browser-console] log: [30] iban
+[browser-console] log: [90] contract
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+TipologyTransfer,newCustomer,CustomerIdentityResidential,transfer-pdf,address,gasPdr,iban,contract / activationGas,TipologyTransfer,newCustomer,CustomerIdentityResidential,transfer-pdf,address,gasPdr,iban,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: Privacy, direction: 1, progress: 75, subflow: undefined}
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: consensi, micro_step: consensi_dati_pers, operazione: voltura}
+[browser-console] info: GTM.push {event: consensi_weborder, cta_cliccata: Vai alla verifica finale, consensi_marketing: acconsento|acconsento|acconsento}
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(22)
+[browser-console] debug: dipendenze Map(18)
+[browser-console] debug: dipendenti Map(6)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "CustomerIdentityResidential"
+[browser-console] debug: Controllo step "transfer-pdf"
+[browser-console] debug: Controllo step "TipologyTransfer"
+[browser-console] debug: Controllo step "iban"
+[browser-console] debug: Controllo step "newCustomer"
+[browser-console] debug: Controllo step "gasPdr"
+[browser-console] debug: Controllo step "address"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [0] commodity
+[browser-console] log: [2] operativeModeGas
+[browser-console] log: [3] disambiguation
+[browser-console] log: [5] activationGas
+[browser-console] log: [6] recapMobile
+[browser-console] log: [7] ending
+[browser-console] log: [8] vas
+[browser-console] log: [9] TipologyTransfer
+[browser-console] log: [10] newCustomer
+[browser-console] log: [11] CustomerIdentityResidential
+[browser-console] log: [12] transfer-pdf
+[browser-console] log: [15] address
+[browser-console] log: [21] gasPdr
+[browser-console] log: [30] iban
+[browser-console] log: [90] contract
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+TipologyTransfer,newCustomer,CustomerIdentityResidential,transfer-pdf,address,gasPdr,iban,contract,privacy / activationGas,TipologyTransfer,newCustomer,CustomerIdentityResidential,transfer-pdf,address,gasPdr,iban,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: Recap, direction: 1, progress: 83.33333333333334, subflow: undefined}
+[browser-console] startGroupCollapsed: [MSW] 10:49:17 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: riepilogo, micro_step: riepilogo, operazione: voltura}
+[browser-console] startGroupCollapsed: [MSW] 10:49:18 POST /serviceDAq/api/webOrderCommonServices/costiAttivazioni (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"logHash":"EpZzLfwUQmQkL","idLead":"MOCK","plicoC….928Z","CodiceFornituraOld":"","CodiceISTAT":""}}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"result":"001","status":"Success","response":{"He…PS":35,"PrezziRCA":null}},"errorManagement":null}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: [MSW] 10:49:30 GET https://jsonip.com/ (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"ip":"127.0.0.1"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] warning: GeolocationPositionError
+[browser-console] startGroupCollapsed: [MSW] 10:49:30 POST /serviceDAq/api/webOrderCommonServices/salvataggioDatiGeolocalizzazione (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"operationId":"EpZzLfwUQhotg","applicazione":"WEB….0.0.1","latitudine":"null","longitudine":"null"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: [MSW] 10:49:30 POST /serviceDAq/api/webOrderCommonServices/updateBulkOrder (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"idLead":"MOCK","logHash":"EpZzLfwUQOpQi","plicoCode":"WO_MOCK","salesProcessForLog":"VOLTURA"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(22)
+[browser-console] debug: dipendenze Map(18)
+[browser-console] debug: dipendenti Map(6)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "CustomerIdentityResidential"
+[browser-console] debug: Controllo step "transfer-pdf"
+[browser-console] debug: Controllo step "TipologyTransfer"
+[browser-console] debug: Controllo step "iban"
+[browser-console] debug: Controllo step "newCustomer"
+[browser-console] debug: Controllo step "gasPdr"
+[browser-console] debug: Controllo step "address"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "activationGas"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [0] commodity
+[browser-console] log: [2] operativeModeGas
+[browser-console] log: [3] disambiguation
+[browser-console] log: [5] activationGas
+[browser-console] log: [6] recapMobile
+[browser-console] log: [7] ending
+[browser-console] log: [8] vas
+[browser-console] log: [9] TipologyTransfer
+[browser-console] log: [10] newCustomer
+[browser-console] log: [11] CustomerIdentityResidential
+[browser-console] log: [12] transfer-pdf
+[browser-console] log: [15] address
+[browser-console] log: [21] gasPdr
+[browser-console] log: [30] iban
+[browser-console] log: [90] contract
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+TipologyTransfer,newCustomer,CustomerIdentityResidential,transfer-pdf,address,gasPdr,iban,contract,privacy,recap / activationGas,TipologyTransfer,newCustomer,CustomerIdentityResidential,transfer-pdf,address,gasPdr,iban,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: Typ, direction: 1, progress: 91.66666666666666, subflow: undefined}
+[browser-console] startGroupCollapsed: [MSW] 10:49:30 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…laudo":true,"leadStatus":"COMPLETED","id":"MOCK"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…laudo":true,"leadStatus":"COMPLETED","id":"MOCK"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: 7_typ, micro_step: 7_typ, operazione: voltura}
+[test-success] 2025-08-01T08:49:36.344Z – OK

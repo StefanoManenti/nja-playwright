@@ -1,0 +1,179 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalContractContent.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalContractContent.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { CloseIcon } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/index.ts";
+import clsx from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/clsx.js?v=0189a8d1";
+import { ButtonPln } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/ButtonPln.tsx";
+import { IconButton } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/IconButton.tsx";
+import { Typography } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Typography.tsx";
+import classes from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/Modal.module.less";
+import { useScrollState } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/useScrollState.ts";
+export function ModalContractContent(props) {
+  _s();
+  const [{ overflownTop, overflownBottom, seenAll }, handleRef] = useScrollState();
+  return /* @__PURE__ */ jsxDEV("div", { className: clsx(classes.flex, classes.vPad), children: [
+    /* @__PURE__ */ jsxDEV("div", { className: clsx(classes.flex, classes.hPadClose), children: /* @__PURE__ */ jsxDEV(
+      IconButton,
+      {
+        className: clsx(classes.closeButton),
+        onClick: props.onClose,
+        children: /* @__PURE__ */ jsxDEV(CloseIcon, {}, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalContractContent.tsx",
+          lineNumber: 31,
+          columnNumber: 11
+        }, this)
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalContractContent.tsx",
+        lineNumber: 27,
+        columnNumber: 9
+      },
+      this
+    ) }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalContractContent.tsx",
+      lineNumber: 26,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(
+      "div",
+      {
+        className: clsx(
+          classes.flex,
+          classes.center,
+          classes.hPad,
+          classes.gap4
+        ),
+        children: [
+          /* @__PURE__ */ jsxDEV(
+            "div",
+            {
+              className: clsx(
+                classes.flex,
+                classes.center,
+                classes.gap2,
+                classes.widthFull
+              ),
+              children: [
+                /* @__PURE__ */ jsxDEV(Typography, { variant: "h2", component: "h1", children: props.title }, void 0, false, {
+                  fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalContractContent.tsx",
+                  lineNumber: 50,
+                  columnNumber: 11
+                }, this),
+                /* @__PURE__ */ jsxDEV(
+                  "div",
+                  {
+                    ref: handleRef,
+                    className: clsx(
+                      classes.scrollable,
+                      classes.left,
+                      classes.widthFull,
+                      overflownTop && overflownBottom && classes.hasOverflowBoth,
+                      !overflownTop && overflownBottom && classes.hasOverflowBottom,
+                      overflownTop && !overflownBottom && classes.hasOverflowTop
+                    ),
+                    children: /* @__PURE__ */ jsxDEV(Typography, { variant: "body2", running: true, children: props.text }, void 0, false, {
+                      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalContractContent.tsx",
+                      lineNumber: 64,
+                      columnNumber: 13
+                    }, this)
+                  },
+                  void 0,
+                  false,
+                  {
+                    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalContractContent.tsx",
+                    lineNumber: 53,
+                    columnNumber: 11
+                  },
+                  this
+                )
+              ]
+            },
+            void 0,
+            true,
+            {
+              fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalContractContent.tsx",
+              lineNumber: 42,
+              columnNumber: 9
+            },
+            this
+          ),
+          /* @__PURE__ */ jsxDEV(
+            ButtonPln,
+            {
+              color: "primary",
+              disabled: !seenAll && !props.alwaysEnabled,
+              onClick: props.onCtaClick || props.onClose,
+              type: "button",
+              children: props.cta
+            },
+            void 0,
+            false,
+            {
+              fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalContractContent.tsx",
+              lineNumber: 69,
+              columnNumber: 9
+            },
+            this
+          )
+        ]
+      },
+      void 0,
+      true,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalContractContent.tsx",
+        lineNumber: 34,
+        columnNumber: 7
+      },
+      this
+    )
+  ] }, void 0, true, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalContractContent.tsx",
+    lineNumber: 25,
+    columnNumber: 5
+  }, this);
+}
+_s(ModalContractContent, "Z18dC19HE4tCGHfJx5G2z6fdIqc=", false, function() {
+  return [useScrollState];
+});
+_c = ModalContractContent;
+var _c;
+$RefreshReg$(_c, "ModalContractContent");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalContractContent.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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LE9BcERGO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FxREE7QUFFSjtBQUFDeEIsR0E1RGVGLHNCQUFvQjtBQUFBLFVBRWhDRCxjQUFjO0FBQUE7QUFBQTRCLEtBRkYzQjtBQUFvQixJQUFBMkI7QUFBQUMsYUFBQUQsSUFBQSIsIm5hbWVzIjpbIkNsb3NlSWNvbiIsImNsc3giLCJCdXR0b25QbG4iLCJJY29uQnV0dG9uIiwiVHlwb2dyYXBoeSIsImNsYXNzZXMiLCJ1c2VTY3JvbGxTdGF0ZSIsIk1vZGFsQ29udHJhY3RDb250ZW50IiwicHJvcHMiLCJfcyIsIm92ZXJmbG93blRvcCIsIm92ZXJmbG93bkJvdHRvbSIsInNlZW5BbGwiLCJoYW5kbGVSZWYiLCJmbGV4IiwidlBhZCIsImhQYWRDbG9zZSIsImNsb3NlQnV0dG9uIiwib25DbG9zZSIsImNlbnRlciIsImhQYWQiLCJnYXA0IiwiZ2FwMiIsIndpZHRoRnVsbCIsInRpdGxlIiwic2Nyb2xsYWJsZSIsImxlZnQiLCJoYXNPdmVyZmxvd0JvdGgiLCJoYXNPdmVyZmxvd0JvdHRvbSIsImhhc092ZXJmbG93VG9wIiwidGV4dCIsImFsd2F5c0VuYWJsZWQiLCJvbkN0YUNsaWNrIiwiY3RhIiwiX2MiLCIkUmVmcmVzaFJlZyQiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiTW9kYWxDb250cmFjdENvbnRlbnQudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENsb3NlSWNvbiB9IGZyb20gJ0BuYWotd28vdWktaWNvbnMnO1xyXG5pbXBvcnQgY2xzeCBmcm9tICdjbHN4JztcclxuaW1wb3J0IHsgdHlwZSBSZWFjdE5vZGUgfSBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCB7IEJ1dHRvblBsbiB9IGZyb20gJy4uL0J1dHRvblBsbic7XHJcbmltcG9ydCB7IEljb25CdXR0b24gfSBmcm9tICcuLi9JY29uQnV0dG9uJztcclxuaW1wb3J0IHsgVHlwb2dyYXBoeSB9IGZyb20gJy4uL1R5cG9ncmFwaHknO1xyXG5pbXBvcnQgY2xhc3NlcyBmcm9tICcuL01vZGFsLm1vZHVsZS5sZXNzJztcclxuaW1wb3J0IHsgdXNlU2Nyb2xsU3RhdGUgfSBmcm9tICcuL3VzZVNjcm9sbFN0YXRlJztcclxuXHJcbnR5cGUgTW9kYWxFcnJvckNvbnRlbnRQcm9wcyA9IHtcclxuICAvLyBpY29uOiBSZWFjdE5vZGU7XHJcbiAgdGl0bGU6IFJlYWN0Tm9kZTtcclxuICB0ZXh0OiBSZWFjdE5vZGU7XHJcbiAgY3RhOiBSZWFjdE5vZGU7XHJcbiAgYWx3YXlzRW5hYmxlZD86IGJvb2xlYW47XHJcbiAgb25DbG9zZTogKCkgPT4gdm9pZDtcclxuICBvbkN0YUNsaWNrPzogKCkgPT4gdm9pZDtcclxufTtcclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBNb2RhbENvbnRyYWN0Q29udGVudChwcm9wczogTW9kYWxFcnJvckNvbnRlbnRQcm9wcykge1xyXG4gIGNvbnN0IFt7IG92ZXJmbG93blRvcCwgb3ZlcmZsb3duQm90dG9tLCBzZWVuQWxsIH0sIGhhbmRsZVJlZl0gPVxyXG4gICAgdXNlU2Nyb2xsU3RhdGUoKTtcclxuXHJcbiAgcmV0dXJuIChcclxuICAgIDxkaXYgY2xhc3NOYW1lPXtjbHN4KGNsYXNzZXMuZmxleCwgY2xhc3Nlcy52UGFkKX0+XHJcbiAgICAgIDxkaXYgY2xhc3NOYW1lPXtjbHN4KGNsYXNzZXMuZmxleCwgY2xhc3Nlcy5oUGFkQ2xvc2UpfT5cclxuICAgICAgICA8SWNvbkJ1dHRvblxyXG4gICAgICAgICAgY2xhc3NOYW1lPXtjbHN4KGNsYXNzZXMuY2xvc2VCdXR0b24pfVxyXG4gICAgICAgICAgb25DbGljaz17cHJvcHMub25DbG9zZX1cclxuICAgICAgICA+XHJcbiAgICAgICAgICA8Q2xvc2VJY29uIC8+XHJcbiAgICAgICAgPC9JY29uQnV0dG9uPlxyXG4gICAgICA8L2Rpdj5cclxuICAgICAgPGRpdlxyXG4gICAgICAgIGNsYXNzTmFtZT17Y2xzeChcclxuICAgICAgICAgIGNsYXNzZXMuZmxleCxcclxuICAgICAgICAgIGNsYXNzZXMuY2VudGVyLFxyXG4gICAgICAgICAgY2xhc3Nlcy5oUGFkLFxyXG4gICAgICAgICAgY2xhc3Nlcy5nYXA0XHJcbiAgICAgICAgKX1cclxuICAgICAgPlxyXG4gICAgICAgIDxkaXZcclxuICAgICAgICAgIGNsYXNzTmFtZT17Y2xzeChcclxuICAgICAgICAgICAgY2xhc3Nlcy5mbGV4LFxyXG4gICAgICAgICAgICBjbGFzc2VzLmNlbnRlcixcclxuICAgICAgICAgICAgY2xhc3Nlcy5nYXAyLFxyXG4gICAgICAgICAgICBjbGFzc2VzLndpZHRoRnVsbFxyXG4gICAgICAgICAgKX1cclxuICAgICAgICA+XHJcbiAgICAgICAgICA8VHlwb2dyYXBoeSB2YXJpYW50PVwiaDJcIiBjb21wb25lbnQ9XCJoMVwiPlxyXG4gICAgICAgICAgICB7cHJvcHMudGl0bGV9XHJcbiAgICAgICAgICA8L1R5cG9ncmFwaHk+XHJcbiAgICAgICAgICA8ZGl2XHJcbiAgICAgICAgICAgIHJlZj17aGFuZGxlUmVmfVxyXG4gICAgICAgICAgICBjbGFzc05hbWU9e2Nsc3goXHJcbiAgICAgICAgICAgICAgY2xhc3Nlcy5zY3JvbGxhYmxlLFxyXG4gICAgICAgICAgICAgIGNsYXNzZXMubGVmdCxcclxuICAgICAgICAgICAgICBjbGFzc2VzLndpZHRoRnVsbCxcclxuICAgICAgICAgICAgICBvdmVyZmxvd25Ub3AgJiYgb3ZlcmZsb3duQm90dG9tICYmIGNsYXNzZXMuaGFzT3ZlcmZsb3dCb3RoLFxyXG4gICAgICAgICAgICAgICFvdmVyZmxvd25Ub3AgJiYgb3ZlcmZsb3duQm90dG9tICYmIGNsYXNzZXMuaGFzT3ZlcmZsb3dCb3R0b20sXHJcbiAgICAgICAgICAgICAgb3ZlcmZsb3duVG9wICYmICFvdmVyZmxvd25Cb3R0b20gJiYgY2xhc3Nlcy5oYXNPdmVyZmxvd1RvcFxyXG4gICAgICAgICAgICApfVxyXG4gICAgICAgICAgPlxyXG4gICAgICAgICAgICA8VHlwb2dyYXBoeSB2YXJpYW50PVwiYm9keTJcIiBydW5uaW5nPlxyXG4gICAgICAgICAgICAgIHtwcm9wcy50ZXh0fVxyXG4gICAgICAgICAgICA8L1R5cG9ncmFwaHk+XHJcbiAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgICA8QnV0dG9uUGxuXHJcbiAgICAgICAgICBjb2xvcj1cInByaW1hcnlcIlxyXG4gICAgICAgICAgZGlzYWJsZWQ9eyFzZWVuQWxsICYmICFwcm9wcy5hbHdheXNFbmFibGVkfVxyXG4gICAgICAgICAgb25DbGljaz17cHJvcHMub25DdGFDbGljayB8fCBwcm9wcy5vbkNsb3NlfVxyXG4gICAgICAgICAgdHlwZT1cImJ1dHRvblwiXHJcbiAgICAgICAgPlxyXG4gICAgICAgICAge3Byb3BzLmN0YX1cclxuICAgICAgICA8L0J1dHRvblBsbj5cclxuICAgICAgPC9kaXY+XHJcbiAgICA8L2Rpdj5cclxuICApO1xyXG59XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvdWktYXRvbXMvc3JjL2xpYi9tb2RhbC9Nb2RhbENvbnRyYWN0Q29udGVudC50c3gifQ==

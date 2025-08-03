@@ -1,0 +1,104 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { address } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/address.tsx?t=1754037874129";
+import { addressSwitchIn } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/address-switchin.tsx";
+import { broadbandAddress } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/broadband/broadband-address.tsx";
+import { broadbandOptions } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/broadband/broadband-options.tsx";
+import { changeOfferRecap } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/change-offer/change-offer-recap.tsx";
+import { contract } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/contract.tsx";
+import { newBusiness } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/new-business.tsx";
+import { newCustomer } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/new-customer.tsx";
+import { privacy } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/privacy.tsx";
+import { attivareFornitura } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/effective-dates/attivare-fornitura.tsx";
+import { effectiveDatesFiber } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/effective-dates/broadband-effective-dates.tsx";
+import { commodityEffectiveDates } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/effective-dates/commodity-effective-dates.tsx";
+import { gasAppointment } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/gas-appointment/gas-appointment.tsx";
+import { identityBusiness } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/identity/identity-business.tsx";
+import { identityResidential } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/identity/identity-residential.tsx";
+import { ownershipBusiness } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/identity/ownership-business.tsx";
+import { locationMeter } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/location-meter/location-meter.tsx";
+import { login } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/login/login.tsx";
+import { ocr } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/ocr/ocr.tsx";
+import { panels } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/panel-adoption/panels.tsx";
+import { ibanBusiness } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/payment/iban-business.tsx";
+import { ibanResidential } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/payment/iban-residential.tsx?t=1754041213313";
+import { powerKw } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/power-kw/power-kw.tsx";
+import { recap } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/recaps/recap.tsx";
+import { atecoStep } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/small-business/ateco-step.tsx";
+import { gasPdr } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/supply/gas-pdr.tsx";
+import { powerConsumptionBusiness } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/supply/power-consumption-business.tsx";
+import { powerPod } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/supply/power-pod.tsx";
+import { selectAccount } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/supply/selectAccount.tsx";
+import { mortisCausaStep } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/transfer/mortis-causa.tsx";
+import { supplyPoint } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/transfer/supply-point.tsx";
+import { transferPdfStep } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/transfer/transfer-pdf.tsx?t=1754053241441";
+import { transferType } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/transfer/transfer-type.tsx";
+import * as troubleshooting from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/index.ts";
+import { typ } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/typ/typ.tsx";
+import { unitaAbitative } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/unita-abitative/unita-abitative.tsx";
+import { vas } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/vas/vas.tsx";
+import { vulnerabilityAvailable } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/vulnerability/vulnerability-available.tsx";
+import { vulnerabilitySelfCertification } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/vulnerability/vulnerability-self-certification.tsx";
+import { ENABLE_DUAL_OPERATIVE_MODE_STEP } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/flags.ts";
+const steps = [
+  /* Troubleshooting */
+  troubleshooting.commodity,
+  ...ENABLE_DUAL_OPERATIVE_MODE_STEP ? [troubleshooting.operativeModeDual] : [troubleshooting.operativeModePower, troubleshooting.operativeModeGas],
+  troubleshooting.disambiguation,
+  troubleshooting.activationPower,
+  troubleshooting.activationGas,
+  troubleshooting.ending,
+  troubleshooting.recapMobile,
+  ocr,
+  vulnerabilityAvailable,
+  vulnerabilitySelfCertification,
+  vas,
+  newCustomer,
+  commodityEffectiveDates,
+  attivareFornitura,
+  login,
+  selectAccount,
+  panels,
+  recap,
+  privacy,
+  contract,
+  typ,
+  changeOfferRecap,
+  address,
+  unitaAbitative,
+  powerKw,
+  gasAppointment,
+  locationMeter,
+  powerPod,
+  gasPdr,
+  ibanResidential,
+  /* Voltura */
+  transferType,
+  mortisCausaStep,
+  transferPdfStep,
+  /* Fibra */
+  broadbandAddress,
+  broadbandOptions,
+  identityResidential,
+  effectiveDatesFiber,
+  atecoStep,
+  /* Microbusiness */
+  newBusiness,
+  identityBusiness,
+  supplyPoint,
+  ownershipBusiness,
+  powerConsumptionBusiness,
+  ibanBusiness,
+  addressSwitchIn
+];
+export default steps;
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUNBLFNBQVNBLGVBQWU7QUFDeEIsU0FBU0MsdUJBQXVCO0FBQ2hDLFNBQVNDLHdCQUF3QjtBQUNqQyxTQUFTQyx3QkFBd0I7QUFDakMsU0FBU0Msd0JBQXdCO0FBQ2pDLFNBQVNDLGdCQUFnQjtBQUN6QixTQUFTQyxtQkFBbUI7QUFDNUIsU0FBU0MsbUJBQW1CO0FBQzVCLFNBQVNDLGVBQWU7QUFDeEIsU0FBU0MseUJBQXlCO0FBQ2xDLFNBQVNDLDJCQUEyQjtBQUNwQyxTQUFTQywrQkFBK0I7QUFDeEMsU0FBU0Msc0JBQXNCO0FBQy9CLFNBQVNDLHdCQUF3QjtBQUNqQyxTQUFTQywyQkFBMkI7QUFDcEMsU0FBU0MseUJBQXlCO0FBQ2xDLFNBQVNDLHFCQUFxQjtBQUM5QixTQUFTQyxhQUFhO0FBQ3RCLFNBQVNDLFdBQVc7QUFDcEIsU0FBU0MsY0FBYztBQUN2QixTQUFTQyxvQkFBb0I7QUFDN0IsU0FBU0MsdUJBQXVCO0FBQ2hDLFNBQVNDLGVBQWU7QUFDeEIsU0FBU0MsYUFBYTtBQUN0QixTQUFTQyxpQkFBaUI7QUFDMUIsU0FBU0MsY0FBYztBQUN2QixTQUFTQyxnQ0FBZ0M7QUFDekMsU0FBU0MsZ0JBQWdCO0FBQ3pCLFNBQVNDLHFCQUFxQjtBQUM5QixTQUFTQyx1QkFBdUI7QUFDaEMsU0FBU0MsbUJBQW1CO0FBQzVCLFNBQVNDLHVCQUF1QjtBQUNoQyxTQUFTQyxvQkFBb0I7QUFDN0IsWUFBWUMscUJBQXFCO0FBQ2pDLFNBQVNDLFdBQVc7QUFDcEIsU0FBU0Msc0JBQXNCO0FBQy9CLFNBQVNDLFdBQVc7QUFDcEIsU0FBU0MsOEJBQThCO0FBQ3ZDLFNBQVNDLHNDQUFzQztBQUMvQyxTQUFTQyx1Q0FBdUM7QUFFaEQsTUFBTUMsUUFBcUI7QUFBQTtBQUFBLEVBRXpCUCxnQkFBZ0JRO0FBQUFBLEVBQ2hCLEdBQUlGLGtDQUNBLENBQUNOLGdCQUFnQlMsaUJBQWlCLElBQ2xDLENBQUNULGdCQUFnQlUsb0JBQW9CVixnQkFBZ0JXLGdCQUFnQjtBQUFBLEVBQ3pFWCxnQkFBZ0JZO0FBQUFBLEVBQ2hCWixnQkFBZ0JhO0FBQUFBLEVBQ2hCYixnQkFBZ0JjO0FBQUFBLEVBQ2hCZCxnQkFBZ0JlO0FBQUFBLEVBQ2hCZixnQkFBZ0JnQjtBQUFBQSxFQUVoQi9CO0FBQUFBLEVBQ0FtQjtBQUFBQSxFQUNBQztBQUFBQSxFQUNBRjtBQUFBQSxFQUVBN0I7QUFBQUEsRUFDQUk7QUFBQUEsRUFDQUY7QUFBQUEsRUFDQVE7QUFBQUEsRUFDQVc7QUFBQUEsRUFDQVQ7QUFBQUEsRUFDQUk7QUFBQUEsRUFDQWY7QUFBQUEsRUFDQUg7QUFBQUEsRUFDQTZCO0FBQUFBLEVBQ0E5QjtBQUFBQSxFQUNBSjtBQUFBQSxFQUNBbUM7QUFBQUEsRUFDQWI7QUFBQUEsRUFDQVY7QUFBQUEsRUFDQUk7QUFBQUEsRUFDQVc7QUFBQUEsRUFFQUY7QUFBQUEsRUFDQUo7QUFBQUE7QUFBQUEsRUFHQVc7QUFBQUEsRUFDQUg7QUFBQUEsRUFDQUU7QUFBQUE7QUFBQUEsRUFHQTdCO0FBQUFBLEVBQ0FDO0FBQUFBLEVBQ0FXO0FBQUFBLEVBQ0FKO0FBQUFBLEVBQ0FjO0FBQUFBO0FBQUFBLEVBR0FsQjtBQUFBQSxFQUNBTztBQUFBQSxFQUNBaUI7QUFBQUEsRUFDQWY7QUFBQUEsRUFDQVc7QUFBQUEsRUFDQU47QUFBQUEsRUFDQW5CO0FBQWU7QUFHakIsZUFBZXVDIiwibmFtZXMiOlsiYWRkcmVzcyIsImFkZHJlc3NTd2l0Y2hJbiIsImJyb2FkYmFuZEFkZHJlc3MiLCJicm9hZGJhbmRPcHRpb25zIiwiY2hhbmdlT2ZmZXJSZWNhcCIsImNvbnRyYWN0IiwibmV3QnVzaW5lc3MiLCJuZXdDdXN0b21lciIsInByaXZhY3kiLCJhdHRpdmFyZUZvcm5pdHVyYSIsImVmZmVjdGl2ZURhdGVzRmliZXIiLCJjb21tb2RpdHlFZmZlY3RpdmVEYXRlcyIsImdhc0FwcG9pbnRtZW50IiwiaWRlbnRpdHlCdXNpbmVzcyIsImlkZW50aXR5UmVzaWRlbnRpYWwiLCJvd25lcnNoaXBCdXNpbmVzcyIsImxvY2F0aW9uTWV0ZXIiLCJsb2dpbiIsIm9jciIsInBhbmVscyIsImliYW5CdXNpbmVzcyIsImliYW5SZXNpZGVudGlhbCIsInBvd2VyS3ciLCJyZWNhcCIsImF0ZWNvU3RlcCIsImdhc1BkciIsInBvd2VyQ29uc3VtcHRpb25CdXNpbmVzcyIsInBvd2VyUG9kIiwic2VsZWN0QWNjb3VudCIsIm1vcnRpc0NhdXNhU3RlcCIsInN1cHBseVBvaW50IiwidHJhbnNmZXJQZGZTdGVwIiwidHJhbnNmZXJUeXBlIiwidHJvdWJsZXNob290aW5nIiwidHlwIiwidW5pdGFBYml0YXRpdmUiLCJ2YXMiLCJ2dWxuZXJhYmlsaXR5QXZhaWxhYmxlIiwidnVsbmVyYWJpbGl0eVNlbGZDZXJ0aWZpY2F0aW9uIiwiRU5BQkxFX0RVQUxfT1BFUkFUSVZFX01PREVfU1RFUCIsInN0ZXBzIiwiY29tbW9kaXR5Iiwib3BlcmF0aXZlTW9kZUR1YWwiLCJvcGVyYXRpdmVNb2RlUG93ZXIiLCJvcGVyYXRpdmVNb2RlR2FzIiwiZGlzYW1iaWd1YXRpb24iLCJhY3RpdmF0aW9uUG93ZXIiLCJhY3RpdmF0aW9uR2FzIiwiZW5kaW5nIiwicmVjYXBNb2JpbGUiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsic3RlcHMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgU3RlcCB9IGZyb20gJ0BuYWotd28vZW5naW5lJztcclxuaW1wb3J0IHsgYWRkcmVzcyB9IGZyb20gJy4vYWRkcmVzcy9hZGRyZXNzJztcclxuaW1wb3J0IHsgYWRkcmVzc1N3aXRjaEluIH0gZnJvbSAnLi9hZGRyZXNzL2FkZHJlc3Mtc3dpdGNoaW4nO1xyXG5pbXBvcnQgeyBicm9hZGJhbmRBZGRyZXNzIH0gZnJvbSAnLi9icm9hZGJhbmQvYnJvYWRiYW5kLWFkZHJlc3MnO1xyXG5pbXBvcnQgeyBicm9hZGJhbmRPcHRpb25zIH0gZnJvbSAnLi9icm9hZGJhbmQvYnJvYWRiYW5kLW9wdGlvbnMnO1xyXG5pbXBvcnQgeyBjaGFuZ2VPZmZlclJlY2FwIH0gZnJvbSAnLi9jaGFuZ2Utb2ZmZXIvY2hhbmdlLW9mZmVyLXJlY2FwJztcclxuaW1wb3J0IHsgY29udHJhY3QgfSBmcm9tICcuL2NvbnRyYWN0cy9jb250cmFjdCc7XHJcbmltcG9ydCB7IG5ld0J1c2luZXNzIH0gZnJvbSAnLi9jdXN0b21lci9uZXctYnVzaW5lc3MnO1xyXG5pbXBvcnQgeyBuZXdDdXN0b21lciB9IGZyb20gJy4vY3VzdG9tZXIvbmV3LWN1c3RvbWVyJztcclxuaW1wb3J0IHsgcHJpdmFjeSB9IGZyb20gJy4vY3VzdG9tZXIvcHJpdmFjeSc7XHJcbmltcG9ydCB7IGF0dGl2YXJlRm9ybml0dXJhIH0gZnJvbSAnLi9lZmZlY3RpdmUtZGF0ZXMvYXR0aXZhcmUtZm9ybml0dXJhJztcclxuaW1wb3J0IHsgZWZmZWN0aXZlRGF0ZXNGaWJlciB9IGZyb20gJy4vZWZmZWN0aXZlLWRhdGVzL2Jyb2FkYmFuZC1lZmZlY3RpdmUtZGF0ZXMnO1xyXG5pbXBvcnQgeyBjb21tb2RpdHlFZmZlY3RpdmVEYXRlcyB9IGZyb20gJy4vZWZmZWN0aXZlLWRhdGVzL2NvbW1vZGl0eS1lZmZlY3RpdmUtZGF0ZXMnO1xyXG5pbXBvcnQgeyBnYXNBcHBvaW50bWVudCB9IGZyb20gJy4vZ2FzLWFwcG9pbnRtZW50L2dhcy1hcHBvaW50bWVudCc7XHJcbmltcG9ydCB7IGlkZW50aXR5QnVzaW5lc3MgfSBmcm9tICcuL2lkZW50aXR5L2lkZW50aXR5LWJ1c2luZXNzJztcclxuaW1wb3J0IHsgaWRlbnRpdHlSZXNpZGVudGlhbCB9IGZyb20gJy4vaWRlbnRpdHkvaWRlbnRpdHktcmVzaWRlbnRpYWwnO1xyXG5pbXBvcnQgeyBvd25lcnNoaXBCdXNpbmVzcyB9IGZyb20gJy4vaWRlbnRpdHkvb3duZXJzaGlwLWJ1c2luZXNzJztcclxuaW1wb3J0IHsgbG9jYXRpb25NZXRlciB9IGZyb20gJy4vbG9jYXRpb24tbWV0ZXIvbG9jYXRpb24tbWV0ZXInO1xyXG5pbXBvcnQgeyBsb2dpbiB9IGZyb20gJy4vbG9naW4vbG9naW4nO1xyXG5pbXBvcnQgeyBvY3IgfSBmcm9tICcuL29jci9vY3InO1xyXG5pbXBvcnQgeyBwYW5lbHMgfSBmcm9tICcuL3BhbmVsLWFkb3B0aW9uL3BhbmVscyc7XHJcbmltcG9ydCB7IGliYW5CdXNpbmVzcyB9IGZyb20gJy4vcGF5bWVudC9pYmFuLWJ1c2luZXNzJztcclxuaW1wb3J0IHsgaWJhblJlc2lkZW50aWFsIH0gZnJvbSAnLi9wYXltZW50L2liYW4tcmVzaWRlbnRpYWwnO1xyXG5pbXBvcnQgeyBwb3dlckt3IH0gZnJvbSAnLi9wb3dlci1rdy9wb3dlci1rdyc7XHJcbmltcG9ydCB7IHJlY2FwIH0gZnJvbSAnLi9yZWNhcHMvcmVjYXAnO1xyXG5pbXBvcnQgeyBhdGVjb1N0ZXAgfSBmcm9tICcuL3NtYWxsLWJ1c2luZXNzL2F0ZWNvLXN0ZXAnO1xyXG5pbXBvcnQgeyBnYXNQZHIgfSBmcm9tICcuL3N1cHBseS9nYXMtcGRyJztcclxuaW1wb3J0IHsgcG93ZXJDb25zdW1wdGlvbkJ1c2luZXNzIH0gZnJvbSAnLi9zdXBwbHkvcG93ZXItY29uc3VtcHRpb24tYnVzaW5lc3MnO1xyXG5pbXBvcnQgeyBwb3dlclBvZCB9IGZyb20gJy4vc3VwcGx5L3Bvd2VyLXBvZCc7XHJcbmltcG9ydCB7IHNlbGVjdEFjY291bnQgfSBmcm9tICcuL3N1cHBseS9zZWxlY3RBY2NvdW50JztcclxuaW1wb3J0IHsgbW9ydGlzQ2F1c2FTdGVwIH0gZnJvbSAnLi90cmFuc2Zlci9tb3J0aXMtY2F1c2EnO1xyXG5pbXBvcnQgeyBzdXBwbHlQb2ludCB9IGZyb20gJy4vdHJhbnNmZXIvc3VwcGx5LXBvaW50JztcclxuaW1wb3J0IHsgdHJhbnNmZXJQZGZTdGVwIH0gZnJvbSAnLi90cmFuc2Zlci90cmFuc2Zlci1wZGYnO1xyXG5pbXBvcnQgeyB0cmFuc2ZlclR5cGUgfSBmcm9tICcuL3RyYW5zZmVyL3RyYW5zZmVyLXR5cGUnO1xyXG5pbXBvcnQgKiBhcyB0cm91Ymxlc2hvb3RpbmcgZnJvbSAnLi90cm91Ymxlc2hvb3RpbmcnO1xyXG5pbXBvcnQgeyB0eXAgfSBmcm9tICcuL3R5cC90eXAnO1xyXG5pbXBvcnQgeyB1bml0YUFiaXRhdGl2ZSB9IGZyb20gJy4vdW5pdGEtYWJpdGF0aXZlL3VuaXRhLWFiaXRhdGl2ZSc7XHJcbmltcG9ydCB7IHZhcyB9IGZyb20gJy4vdmFzL3Zhcyc7XHJcbmltcG9ydCB7IHZ1bG5lcmFiaWxpdHlBdmFpbGFibGUgfSBmcm9tICcuL3Z1bG5lcmFiaWxpdHkvdnVsbmVyYWJpbGl0eS1hdmFpbGFibGUnO1xyXG5pbXBvcnQgeyB2dWxuZXJhYmlsaXR5U2VsZkNlcnRpZmljYXRpb24gfSBmcm9tICcuL3Z1bG5lcmFiaWxpdHkvdnVsbmVyYWJpbGl0eS1zZWxmLWNlcnRpZmljYXRpb24nO1xyXG5pbXBvcnQgeyBFTkFCTEVfRFVBTF9PUEVSQVRJVkVfTU9ERV9TVEVQIH0gZnJvbSAnLi9mbGFncyc7XHJcblxyXG5jb25zdCBzdGVwczogU3RlcDxhbnk+W10gPSBbXHJcbiAgLyogVHJvdWJsZXNob290aW5nICovXHJcbiAgdHJvdWJsZXNob290aW5nLmNvbW1vZGl0eSxcclxuICAuLi4oRU5BQkxFX0RVQUxfT1BFUkFUSVZFX01PREVfU1RFUFxyXG4gICAgPyBbdHJvdWJsZXNob290aW5nLm9wZXJhdGl2ZU1vZGVEdWFsXVxyXG4gICAgOiBbdHJvdWJsZXNob290aW5nLm9wZXJhdGl2ZU1vZGVQb3dlciwgdHJvdWJsZXNob290aW5nLm9wZXJhdGl2ZU1vZGVHYXNdKSxcclxuICB0cm91Ymxlc2hvb3RpbmcuZGlzYW1iaWd1YXRpb24sXHJcbiAgdHJvdWJsZXNob290aW5nLmFjdGl2YXRpb25Qb3dlcixcclxuICB0cm91Ymxlc2hvb3RpbmcuYWN0aXZhdGlvbkdhcyxcclxuICB0cm91Ymxlc2hvb3RpbmcuZW5kaW5nLFxyXG4gIHRyb3VibGVzaG9vdGluZy5yZWNhcE1vYmlsZSxcclxuXHJcbiAgb2NyLFxyXG4gIHZ1bG5lcmFiaWxpdHlBdmFpbGFibGUsXHJcbiAgdnVsbmVyYWJpbGl0eVNlbGZDZXJ0aWZpY2F0aW9uLFxyXG4gIHZhcyxcclxuXHJcbiAgbmV3Q3VzdG9tZXIsXHJcbiAgY29tbW9kaXR5RWZmZWN0aXZlRGF0ZXMsXHJcbiAgYXR0aXZhcmVGb3JuaXR1cmEsXHJcbiAgbG9naW4sXHJcbiAgc2VsZWN0QWNjb3VudCxcclxuICBwYW5lbHMsXHJcbiAgcmVjYXAsXHJcbiAgcHJpdmFjeSxcclxuICBjb250cmFjdCxcclxuICB0eXAsXHJcbiAgY2hhbmdlT2ZmZXJSZWNhcCxcclxuICBhZGRyZXNzLFxyXG4gIHVuaXRhQWJpdGF0aXZlLFxyXG4gIHBvd2VyS3csXHJcbiAgZ2FzQXBwb2ludG1lbnQsXHJcbiAgbG9jYXRpb25NZXRlcixcclxuICBwb3dlclBvZCxcclxuXHJcbiAgZ2FzUGRyLFxyXG4gIGliYW5SZXNpZGVudGlhbCxcclxuXHJcbiAgLyogVm9sdHVyYSAqL1xyXG4gIHRyYW5zZmVyVHlwZSxcclxuICBtb3J0aXNDYXVzYVN0ZXAsXHJcbiAgdHJhbnNmZXJQZGZTdGVwLFxyXG5cclxuICAvKiBGaWJyYSAqL1xyXG4gIGJyb2FkYmFuZEFkZHJlc3MsXHJcbiAgYnJvYWRiYW5kT3B0aW9ucyxcclxuICBpZGVudGl0eVJlc2lkZW50aWFsLFxyXG4gIGVmZmVjdGl2ZURhdGVzRmliZXIsXHJcbiAgYXRlY29TdGVwLFxyXG5cclxuICAvKiBNaWNyb2J1c2luZXNzICovXHJcbiAgbmV3QnVzaW5lc3MsXHJcbiAgaWRlbnRpdHlCdXNpbmVzcyxcclxuICBzdXBwbHlQb2ludCxcclxuICBvd25lcnNoaXBCdXNpbmVzcyxcclxuICBwb3dlckNvbnN1bXB0aW9uQnVzaW5lc3MsXHJcbiAgaWJhbkJ1c2luZXNzLFxyXG4gIGFkZHJlc3NTd2l0Y2hJbixcclxuXTtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IHN0ZXBzO1xyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL3N0ZXBzL3NyYy9saWIvc3RlcHMudHMifQ==

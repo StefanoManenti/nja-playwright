@@ -1,0 +1,14 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/step-helpers/contactAlertAtom.ts";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/step-helpers/powerKwAlertAtom.ts";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLGNBQWM7QUFDZCxjQUFjIiwibmFtZXMiOltdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJpbmRleC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgKiBmcm9tICcuL2NvbnRhY3RBbGVydEF0b20nO1xyXG5leHBvcnQgKiBmcm9tICcuL3Bvd2VyS3dBbGVydEF0b20nO1xyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL2RhdGEtYWNjZXNzL3NyYy9saWIvYXRvbXMvc3RlcC1oZWxwZXJzL2luZGV4LnRzIn0=

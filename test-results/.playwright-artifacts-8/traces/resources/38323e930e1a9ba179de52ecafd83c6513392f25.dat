@@ -1,0 +1,13 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+export { generaCorrispettivi } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/offerta/corrispettivi/corrispettivi.ts";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLDJCQUEyQiIsIm5hbWVzIjpbImdlbmVyYUNvcnJpc3BldHRpdmkiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiaW5kZXgudHMiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IHsgZ2VuZXJhQ29ycmlzcGV0dGl2aSB9IGZyb20gXCIuL2NvcnJpc3BldHRpdmlcIjtcclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy9kYXRhLWFjY2Vzcy9zcmMvbGliL29mZmVydGEvY29ycmlzcGV0dGl2aS9pbmRleC50cyJ9

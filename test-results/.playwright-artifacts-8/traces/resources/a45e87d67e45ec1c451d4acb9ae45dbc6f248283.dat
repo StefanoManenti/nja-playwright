@@ -1,0 +1,82 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/modals/ModalBlockingErrorContent.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/modals/ModalBlockingErrorContent.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { ModalBox, ModalTopIcon, Typography } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+import { GoToHomePageButton } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/buttons/GoToHomePageButton.tsx";
+export function ModalBlockingErrorContent(props) {
+  return /* @__PURE__ */ jsxDEV(ModalBox, { vPad: true, children: /* @__PURE__ */ jsxDEV(ModalBox, { align: "center", gap: 4, hPad: true, children: [
+    /* @__PURE__ */ jsxDEV(ModalBox, { align: "center", gap: 2, children: [
+      props.icon && /* @__PURE__ */ jsxDEV(ModalTopIcon, { icon: props.icon }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/modals/ModalBlockingErrorContent.tsx",
+        lineNumber: 22,
+        columnNumber: 26
+      }, this),
+      /* @__PURE__ */ jsxDEV(Typography, { variant: "h2", component: "h1", children: props.title }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/modals/ModalBlockingErrorContent.tsx",
+        lineNumber: 23,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV(Typography, { variant: "body2", children: props.text }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/modals/ModalBlockingErrorContent.tsx",
+        lineNumber: 26,
+        columnNumber: 11
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/modals/ModalBlockingErrorContent.tsx",
+      lineNumber: 21,
+      columnNumber: 9
+    }, this),
+    /* @__PURE__ */ jsxDEV(GoToHomePageButton, { children: props.cta }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/modals/ModalBlockingErrorContent.tsx",
+      lineNumber: 28,
+      columnNumber: 9
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/modals/ModalBlockingErrorContent.tsx",
+    lineNumber: 20,
+    columnNumber: 7
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/modals/ModalBlockingErrorContent.tsx",
+    lineNumber: 19,
+    columnNumber: 5
+  }, this);
+}
+_c = ModalBlockingErrorContent;
+var _c;
+$RefreshReg$(_c, "ModalBlockingErrorContent");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/modals/ModalBlockingErrorContent.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBcUJ5Qjs7Ozs7Z0JBckJ6QixPQUFPQSxDQUFLLGFBQVNDO0FBQUFBLE1BQVMsUUFBUSwwQ0FBTztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQzdDLFNBQVNDLFVBQVVDLGNBQWNDLGtCQUFrQjtBQUNuRCxTQUFTQywwQkFBMEI7QUFjNUIsZ0JBQVNDLDBCQUEwQkMsT0FBK0I7QUFDdkUsU0FDRSx1QkFBQyxZQUFTLE1BQUksTUFDWixpQ0FBQyxZQUFTLE9BQU0sVUFBUyxLQUFLLEdBQUcsTUFBSSxNQUNuQztBQUFBLDJCQUFDLFlBQVMsT0FBTSxVQUFTLEtBQUssR0FDM0JBO0FBQUFBLFlBQU1DLFFBQVEsdUJBQUMsZ0JBQWEsTUFBTUQsTUFBTUMsUUFBMUI7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUErQjtBQUFBLE1BQzlDLHVCQUFDLGNBQVcsU0FBUSxNQUFLLFdBQVUsTUFDaENELGdCQUFNRSxTQURUO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFFQTtBQUFBLE1BQ0EsdUJBQUMsY0FBVyxTQUFRLFNBQVNGLGdCQUFNRyxRQUFuQztBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQXdDO0FBQUEsU0FMMUM7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQU1BO0FBQUEsSUFDQSx1QkFBQyxzQkFBb0JILGdCQUFNSSxPQUEzQjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQStCO0FBQUEsT0FSakM7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQVNBLEtBVkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQVdBO0FBRUo7QUFBQ0MsS0FmZU47QUFBeUIsSUFBQU07QUFBQUMsYUFBQUQsSUFBQSIsIm5hbWVzIjpbIlJlYWN0IiwiUmVhY3ROb2RlIiwiTW9kYWxCb3giLCJNb2RhbFRvcEljb24iLCJUeXBvZ3JhcGh5IiwiR29Ub0hvbWVQYWdlQnV0dG9uIiwiTW9kYWxCbG9ja2luZ0Vycm9yQ29udGVudCIsInByb3BzIiwiaWNvbiIsInRpdGxlIiwidGV4dCIsImN0YSIsIl9jIiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIk1vZGFsQmxvY2tpbmdFcnJvckNvbnRlbnQudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyB0eXBlIFJlYWN0Tm9kZSB9IGZyb20gJ3JlYWN0JztcclxuaW1wb3J0IHsgTW9kYWxCb3gsIE1vZGFsVG9wSWNvbiwgVHlwb2dyYXBoeSB9IGZyb20gJ0BuYWotd28vdWktYXRvbXMnO1xyXG5pbXBvcnQgeyBHb1RvSG9tZVBhZ2VCdXR0b24gfSBmcm9tICcuLi9idXR0b25zL0dvVG9Ib21lUGFnZUJ1dHRvbic7XHJcblxyXG50eXBlIE1vZGFsRXJyb3JDb250ZW50UHJvcHMgPSB7XHJcbiAgaWNvbjogUmVhY3ROb2RlO1xyXG4gIHRpdGxlOiBSZWFjdE5vZGU7XHJcbiAgdGV4dDogUmVhY3ROb2RlO1xyXG4gIGN0YT86IFJlYWN0Tm9kZTtcclxufTtcclxuXHJcbi8qKlxyXG4gKiBNb2RhbCB0aGF0IGhhcyBhIENUQSB0aGF0IGdvZXMgdG8gaG9tZXBhZ2UuXHJcbiAqIEBwYXJhbSBwcm9wc1xyXG4gKiBAY29uc3RydWN0b3JcclxuICovXHJcbmV4cG9ydCBmdW5jdGlvbiBNb2RhbEJsb2NraW5nRXJyb3JDb250ZW50KHByb3BzOiBNb2RhbEVycm9yQ29udGVudFByb3BzKSB7XHJcbiAgcmV0dXJuIChcclxuICAgIDxNb2RhbEJveCB2UGFkPlxyXG4gICAgICA8TW9kYWxCb3ggYWxpZ249XCJjZW50ZXJcIiBnYXA9ezR9IGhQYWQ+XHJcbiAgICAgICAgPE1vZGFsQm94IGFsaWduPVwiY2VudGVyXCIgZ2FwPXsyfT5cclxuICAgICAgICAgIHtwcm9wcy5pY29uICYmIDxNb2RhbFRvcEljb24gaWNvbj17cHJvcHMuaWNvbn0gLz59XHJcbiAgICAgICAgICA8VHlwb2dyYXBoeSB2YXJpYW50PVwiaDJcIiBjb21wb25lbnQ9XCJoMVwiPlxyXG4gICAgICAgICAgICB7cHJvcHMudGl0bGV9XHJcbiAgICAgICAgICA8L1R5cG9ncmFwaHk+XHJcbiAgICAgICAgICA8VHlwb2dyYXBoeSB2YXJpYW50PVwiYm9keTJcIj57cHJvcHMudGV4dH08L1R5cG9ncmFwaHk+XHJcbiAgICAgICAgPC9Nb2RhbEJveD5cclxuICAgICAgICA8R29Ub0hvbWVQYWdlQnV0dG9uPntwcm9wcy5jdGF9PC9Hb1RvSG9tZVBhZ2VCdXR0b24+XHJcbiAgICAgIDwvTW9kYWxCb3g+XHJcbiAgICA8L01vZGFsQm94PlxyXG4gICk7XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy91aS1tb2xlY3VsZXMvc3JjL2xpYi9tb2RhbHMvTW9kYWxCbG9ja2luZ0Vycm9yQ29udGVudC50c3gifQ==

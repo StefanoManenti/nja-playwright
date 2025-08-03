@@ -1,0 +1,22 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { delay, http, HttpResponse } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/msw.js?v=0189a8d1";
+export default http.post(/\/api\/cambio-prodotto-services\/\d+\/prodottiVendibili/, async () => {
+  await delay();
+  return HttpResponse.json({
+    esito: "OK",
+    errorCode: null,
+    descrizione: null,
+    prodotti: ["BASE_LFIXATSV-GFIXATSV", "BASE_LTCASAV-GTCASAV", "BASE_TRVULN", "BASE_TNDVL-TNDVG"]
+  });
+});
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLE9BQU9DLE1BQU1DLG9CQUFvQjtBQUUxQyxlQUFlRCxLQUFLRSxLQUNsQiwyREFDQSxZQUFZO0FBQ1YsUUFBTUgsTUFBTTtBQUVaLFNBQU9FLGFBQWFFLEtBQUs7QUFBQSxJQUN2QkMsT0FBTztBQUFBLElBQ1BDLFdBQVc7QUFBQSxJQUNYQyxhQUFhO0FBQUEsSUFDYkMsVUFBVSxDQUNSLDBCQUNBLHdCQUNBLGVBQ0Esa0JBQWtCO0FBQUEsRUFFdEIsQ0FBQztBQUNILENBQ0YiLCJuYW1lcyI6WyJkZWxheSIsImh0dHAiLCJIdHRwUmVzcG9uc2UiLCJwb3N0IiwianNvbiIsImVzaXRvIiwiZXJyb3JDb2RlIiwiZGVzY3JpemlvbmUiLCJwcm9kb3R0aSJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJwcm9kb3R0aVZlbmRpYmlsaS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBkZWxheSwgaHR0cCwgSHR0cFJlc3BvbnNlIH0gZnJvbSAnbXN3JztcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGh0dHAucG9zdChcclxuICAvXFwvYXBpXFwvY2FtYmlvLXByb2RvdHRvLXNlcnZpY2VzXFwvXFxkK1xcL3Byb2RvdHRpVmVuZGliaWxpLyxcclxuICBhc3luYyAoKSA9PiB7XHJcbiAgICBhd2FpdCBkZWxheSgpO1xyXG5cclxuICAgIHJldHVybiBIdHRwUmVzcG9uc2UuanNvbih7XHJcbiAgICAgIGVzaXRvOiAnT0snLFxyXG4gICAgICBlcnJvckNvZGU6IG51bGwsXHJcbiAgICAgIGRlc2NyaXppb25lOiBudWxsLFxyXG4gICAgICBwcm9kb3R0aTogW1xyXG4gICAgICAgICdCQVNFX0xGSVhBVFNWLUdGSVhBVFNWJyxcclxuICAgICAgICAnQkFTRV9MVENBU0FWLUdUQ0FTQVYnLFxyXG4gICAgICAgICdCQVNFX1RSVlVMTicsXHJcbiAgICAgICAgJ0JBU0VfVE5EVkwtVE5EVkcnLFxyXG4gICAgICBdLFxyXG4gICAgfSk7XHJcbiAgfVxyXG4pO1xyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL2RhdGEtYWNjZXNzLW1vY2svc3JjL2xpYi9oYW5kbGVycy9wcm9kb3R0aVZlbmRpYmlsaS50cyJ9

@@ -1,0 +1,90 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalBox.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalBox.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import clsx from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/clsx.js?v=0189a8d1";
+import classes from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/Modal.module.less";
+export function ModalBox({
+  align,
+  children,
+  component,
+  gap,
+  hPad,
+  vPad,
+  className,
+  ...otherProps
+}) {
+  const Component = component || "div";
+  return /* @__PURE__ */ jsxDEV(
+    Component,
+    {
+      ...otherProps,
+      className: clsx(
+        classes.flex,
+        align === "center" && classes.center,
+        gap === 2 && classes.gap2,
+        gap === 4 && classes.gap4,
+        vPad && classes.vPad,
+        hPad === true && classes.hPad,
+        hPad === "close" && classes.hPadClose,
+        className
+      ),
+      children
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalBox.tsx",
+      lineNumber: 33,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_c = ModalBox;
+export function ModalButtonsBox({ children }) {
+  return /* @__PURE__ */ jsxDEV("div", { className: classes.btnModalContainer, children }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalBox.tsx",
+    lineNumber: 52,
+    columnNumber: 10
+  }, this);
+}
+_c2 = ModalButtonsBox;
+var _c, _c2;
+$RefreshReg$(_c, "ModalBox");
+$RefreshReg$(_c2, "ModalButtonsBox");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalBox.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBZ0NJOzs7OztnQkFoQ0osT0FBVyxjQUFZO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBRXZCLE9BQU9BLGFBQWE7QUFpQmIsZ0JBQVNDLFNBQVM7QUFBQSxFQUN2QkM7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQSxHQUFHQztBQUNVLEdBQUc7QUFDaEIsUUFBTUMsWUFBWU4sYUFBYTtBQUUvQixTQUNFO0FBQUEsSUFBQztBQUFBO0FBQUEsTUFDQyxHQUFJSztBQUFBQSxNQUNKLFdBQVdFO0FBQUFBLFFBQ1RYLFFBQVFZO0FBQUFBLFFBQ1JWLFVBQVUsWUFBWUYsUUFBUWE7QUFBQUEsUUFDOUJSLFFBQVEsS0FBS0wsUUFBUWM7QUFBQUEsUUFDckJULFFBQVEsS0FBS0wsUUFBUWU7QUFBQUEsUUFDckJSLFFBQVFQLFFBQVFPO0FBQUFBLFFBQ2hCRCxTQUFTLFFBQVFOLFFBQVFNO0FBQUFBLFFBQ3pCQSxTQUFTLFdBQVdOLFFBQVFnQjtBQUFBQSxRQUM1QlI7QUFBQUEsTUFDRjtBQUFBLE1BRUNMO0FBQUFBO0FBQUFBLElBYkg7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLEVBY0E7QUFFSjtBQUFDYyxLQTdCZWhCO0FBK0JULGdCQUFTaUIsZ0JBQWdCLEVBQUVmLFNBQWtDLEdBQUc7QUFDckUsU0FBTyx1QkFBQyxTQUFJLFdBQVdILFFBQVFtQixtQkFBb0JoQixZQUE1QztBQUFBO0FBQUE7QUFBQTtBQUFBLFNBQXFEO0FBQzlEO0FBQUNpQixNQUZlRjtBQUFlLElBQUFELElBQUFHO0FBQUFDLGFBQUFKLElBQUE7QUFBQUksYUFBQUQsS0FBQSIsIm5hbWVzIjpbImNsYXNzZXMiLCJNb2RhbEJveCIsImFsaWduIiwiY2hpbGRyZW4iLCJjb21wb25lbnQiLCJnYXAiLCJoUGFkIiwidlBhZCIsImNsYXNzTmFtZSIsIm90aGVyUHJvcHMiLCJDb21wb25lbnQiLCJjbHN4IiwiZmxleCIsImNlbnRlciIsImdhcDIiLCJnYXA0IiwiaFBhZENsb3NlIiwiX2MiLCJNb2RhbEJ1dHRvbnNCb3giLCJidG5Nb2RhbENvbnRhaW5lciIsIl9jMiIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJNb2RhbEJveC50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGNsc3ggZnJvbSAnY2xzeCc7XHJcbmltcG9ydCBSZWFjdCwgeyB0eXBlIEVsZW1lbnRUeXBlLCB0eXBlIFJlYWN0Tm9kZSB9IGZyb20gJ3JlYWN0JztcclxuaW1wb3J0IGNsYXNzZXMgZnJvbSAnLi9Nb2RhbC5tb2R1bGUubGVzcyc7XHJcblxyXG50eXBlIE1vZGFsQm94UHJvcHM8VCBleHRlbmRzIEVsZW1lbnRUeXBlID0gJ2Rpdic+ID0ge1xyXG4gIGNvbXBvbmVudD86IEVsZW1lbnRUeXBlO1xyXG4gIC8qKiBWZXJ0aWNhbCBnYXAgbXVsdGlwbHkgb2YgZ3JpZC1zaXplICovXHJcbiAgZ2FwPzogMiB8IDQ7XHJcbiAgLyoqIENvbnRlbnQgYWxpZ25tZW50ICovXHJcbiAgYWxpZ24/OiAnZGVmYXVsdCcgfCAnY2VudGVyJztcclxuICAvKiogQWRkIHZlcnRpY2FsIHBhZGRpbmcgKi9cclxuICB2UGFkPzogYm9vbGVhbjtcclxuICAvKiogQWRkIGhvcml6b250YWwgcGFkZGluZyAqL1xyXG4gIGhQYWQ/OiBib29sZWFuIHwgJ2Nsb3NlJztcclxufSAmIE9taXQ8XHJcbiAgUmVhY3QuQ29tcG9uZW50UHJvcHM8VD4sXHJcbiAgJ2dhcCcgfCAnYWxpZ24nIHwgJ3ZQYWQnIHwgJ2hQYWQnIHwgJ2NvbXBvbmVudCdcclxuPjtcclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBNb2RhbEJveCh7XHJcbiAgYWxpZ24sXHJcbiAgY2hpbGRyZW4sXHJcbiAgY29tcG9uZW50LFxyXG4gIGdhcCxcclxuICBoUGFkLFxyXG4gIHZQYWQsXHJcbiAgY2xhc3NOYW1lLFxyXG4gIC4uLm90aGVyUHJvcHNcclxufTogTW9kYWxCb3hQcm9wcykge1xyXG4gIGNvbnN0IENvbXBvbmVudCA9IGNvbXBvbmVudCB8fCAnZGl2JztcclxuXHJcbiAgcmV0dXJuIChcclxuICAgIDxDb21wb25lbnRcclxuICAgICAgey4uLm90aGVyUHJvcHN9XHJcbiAgICAgIGNsYXNzTmFtZT17Y2xzeChcclxuICAgICAgICBjbGFzc2VzLmZsZXgsXHJcbiAgICAgICAgYWxpZ24gPT09ICdjZW50ZXInICYmIGNsYXNzZXMuY2VudGVyLFxyXG4gICAgICAgIGdhcCA9PT0gMiAmJiBjbGFzc2VzLmdhcDIsXHJcbiAgICAgICAgZ2FwID09PSA0ICYmIGNsYXNzZXMuZ2FwNCxcclxuICAgICAgICB2UGFkICYmIGNsYXNzZXMudlBhZCxcclxuICAgICAgICBoUGFkID09PSB0cnVlICYmIGNsYXNzZXMuaFBhZCxcclxuICAgICAgICBoUGFkID09PSAnY2xvc2UnICYmIGNsYXNzZXMuaFBhZENsb3NlLFxyXG4gICAgICAgIGNsYXNzTmFtZVxyXG4gICAgICApfVxyXG4gICAgPlxyXG4gICAgICB7Y2hpbGRyZW59XHJcbiAgICA8L0NvbXBvbmVudD5cclxuICApO1xyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gTW9kYWxCdXR0b25zQm94KHsgY2hpbGRyZW4gfTogeyBjaGlsZHJlbjogUmVhY3ROb2RlIH0pIHtcclxuICByZXR1cm4gPGRpdiBjbGFzc05hbWU9e2NsYXNzZXMuYnRuTW9kYWxDb250YWluZXJ9PntjaGlsZHJlbn08L2Rpdj47XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy91aS1hdG9tcy9zcmMvbGliL21vZGFsL01vZGFsQm94LnRzeCJ9

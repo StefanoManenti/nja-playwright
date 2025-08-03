@@ -1,0 +1,20 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+export class MockTracking {
+  constructor() {
+    this.loadAndStart = (mainEvent) => {
+    };
+    this.push = (event) => {
+    };
+  }
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUVPLGFBQU1BLGFBQWlFO0FBQUEsRUFBdkU7QUFDTEMsd0JBQWVBLENBQUNDLGNBQXNCO0FBQUEsSUFBQztBQUN2Q0MsZ0JBQU9BLENBQUNDLFVBQWtCO0FBQUEsSUFBQztBQUFBO0FBQzdCIiwibmFtZXMiOlsiTW9ja1RyYWNraW5nIiwibG9hZEFuZFN0YXJ0IiwibWFpbkV2ZW50IiwicHVzaCIsImV2ZW50Il0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIk1vY2tUcmFja2luZy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBJVHJhY2tpbmcgfSBmcm9tICcuL0lUcmFja2luZyc7XHJcblxyXG5leHBvcnQgY2xhc3MgTW9ja1RyYWNraW5nPFRFdmVudCBleHRlbmRzIG9iamVjdD4gaW1wbGVtZW50cyBJVHJhY2tpbmc8VEV2ZW50PiB7XHJcbiAgbG9hZEFuZFN0YXJ0ID0gKG1haW5FdmVudDogVEV2ZW50KSA9PiB7fTtcclxuICBwdXNoID0gKGV2ZW50OiBURXZlbnQpID0+IHt9O1xyXG59XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvdHJhY2tpbmcvc3JjL2xpYi9Nb2NrVHJhY2tpbmcudHMifQ==

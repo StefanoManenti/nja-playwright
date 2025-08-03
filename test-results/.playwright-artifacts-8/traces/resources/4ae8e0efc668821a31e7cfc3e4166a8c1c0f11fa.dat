@@ -1,0 +1,387 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { Modal, ModalErrorContent } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+import { SmileNoIcon, ToolsIcon } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/index.ts";
+export const VulnerableDocumentoScadutoError = {
+  modal: function VulnerableDocumentoScadutoErrorModal(props) {
+    return /* @__PURE__ */ jsxDEV(
+      ModalVulnerability,
+      {
+        icon: /* @__PURE__ */ jsxDEV(SmileNoIcon, {}, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+          lineNumber: 11,
+          columnNumber: 15
+        }, this),
+        onClose: props.onClose,
+        title: /* @__PURE__ */ jsxDEV(Fragment, { children: "Documento scaduto" }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+          lineNumber: 13,
+          columnNumber: 16
+        }, this),
+        p: /* @__PURE__ */ jsxDEV(Fragment, { children: [
+          "Controlla che il documento sia in ",
+          /* @__PURE__ */ jsxDEV("b", { children: "corso di validità" }, void 0, false, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+            lineNumber: 16,
+            columnNumber: 47
+          }, this),
+          " e riprova.",
+          /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+            lineNumber: 18,
+            columnNumber: 13
+          }, this),
+          "Ti ricordiamo che puoi utilizzare la ",
+          /* @__PURE__ */ jsxDEV("b", { children: "carta d’identità" }, void 0, false, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+            lineNumber: 19,
+            columnNumber: 50
+          }, this),
+          ", la",
+          " ",
+          /* @__PURE__ */ jsxDEV("b", { children: "patente di guida" }, void 0, false, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+            lineNumber: 20,
+            columnNumber: 13
+          }, this),
+          " o il ",
+          /* @__PURE__ */ jsxDEV("b", { children: "passaporto" }, void 0, false, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+            lineNumber: 20,
+            columnNumber: 42
+          }, this),
+          "."
+        ] }, void 0, true, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+          lineNumber: 15,
+          columnNumber: 9
+        }, this)
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+        lineNumber: 10,
+        columnNumber: 7
+      },
+      this
+    );
+  }
+};
+export const VulnerableDocumentoNonLeggibileError = {
+  modal: function VulnerableDocumentoNonLeggibileErrorModal(props) {
+    return /* @__PURE__ */ jsxDEV(
+      ModalVulnerability,
+      {
+        icon: /* @__PURE__ */ jsxDEV(SmileNoIcon, {}, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+          lineNumber: 34,
+          columnNumber: 15
+        }, this),
+        onClose: props.onClose,
+        title: /* @__PURE__ */ jsxDEV(Fragment, { children: "Dati non leggibili" }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+          lineNumber: 36,
+          columnNumber: 16
+        }, this),
+        p: /* @__PURE__ */ jsxDEV(Fragment, { children: [
+          "Controlla che i dati dell’",
+          /* @__PURE__ */ jsxDEV("b", { children: "intestatario del contratto" }, void 0, false, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+            lineNumber: 39,
+            columnNumber: 39
+          }, this),
+          " della fornitura siano ",
+          /* @__PURE__ */ jsxDEV("b", { children: "ben leggibili" }, void 0, false, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+            lineNumber: 40,
+            columnNumber: 29
+          }, this),
+          " e riprova."
+        ] }, void 0, true, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+          lineNumber: 38,
+          columnNumber: 9
+        }, this)
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+        lineNumber: 33,
+        columnNumber: 7
+      },
+      this
+    );
+  }
+};
+export const VulnerableDocumentoNonRiconosciutoError = {
+  modal: function VulnerableDocumentoNonRiconosciutoErrorModal(props) {
+    return /* @__PURE__ */ jsxDEV(
+      ModalVulnerability,
+      {
+        icon: /* @__PURE__ */ jsxDEV(SmileNoIcon, {}, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+          lineNumber: 54,
+          columnNumber: 15
+        }, this),
+        onClose: props.onClose,
+        title: /* @__PURE__ */ jsxDEV(Fragment, { children: "Documento non accettato" }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+          lineNumber: 56,
+          columnNumber: 16
+        }, this),
+        p: /* @__PURE__ */ jsxDEV(Fragment, { children: [
+          "Il documento che hai caricato non rientra tra quelli accettati.",
+          /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+            lineNumber: 60,
+            columnNumber: 13
+          }, this),
+          "Ti ricordiamo che puoi utilizzare la ",
+          /* @__PURE__ */ jsxDEV("b", { children: "carta d’identità" }, void 0, false, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+            lineNumber: 61,
+            columnNumber: 50
+          }, this),
+          ", la",
+          " ",
+          /* @__PURE__ */ jsxDEV("b", { children: "patente di guida" }, void 0, false, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+            lineNumber: 62,
+            columnNumber: 13
+          }, this),
+          " o il ",
+          /* @__PURE__ */ jsxDEV("b", { children: "passaporto" }, void 0, false, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+            lineNumber: 62,
+            columnNumber: 42
+          }, this),
+          "."
+        ] }, void 0, true, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+          lineNumber: 58,
+          columnNumber: 9
+        }, this)
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+        lineNumber: 53,
+        columnNumber: 7
+      },
+      this
+    );
+  }
+};
+export const VulnerableDocumentoNonCompletoError = {
+  modal: function VulnerableDocumentoNonCompletoErrorModal(props) {
+    return /* @__PURE__ */ jsxDEV(
+      ModalVulnerability,
+      {
+        icon: /* @__PURE__ */ jsxDEV(SmileNoIcon, {}, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+          lineNumber: 76,
+          columnNumber: 15
+        }, this),
+        onClose: props.onClose,
+        title: /* @__PURE__ */ jsxDEV(Fragment, { children: "Documento non completo" }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+          lineNumber: 78,
+          columnNumber: 16
+        }, this),
+        p: /* @__PURE__ */ jsxDEV(Fragment, { children: [
+          "Controlla di aver caricato il ",
+          /* @__PURE__ */ jsxDEV("b", { children: "fronte" }, void 0, false, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+            lineNumber: 81,
+            columnNumber: 43
+          }, this),
+          " e il ",
+          /* @__PURE__ */ jsxDEV("b", { children: "retro" }, void 0, false, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+            lineNumber: 81,
+            columnNumber: 62
+          }, this),
+          " del documento e riprova."
+        ] }, void 0, true, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+          lineNumber: 80,
+          columnNumber: 9
+        }, this)
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+        lineNumber: 75,
+        columnNumber: 7
+      },
+      this
+    );
+  }
+};
+export const VulnerableDocumentoDatiAnagraficiError = {
+  modal: function VulnerableDocumentoDatiAnagraficiErrorModal(props) {
+    return /* @__PURE__ */ jsxDEV(
+      ModalVulnerability,
+      {
+        icon: /* @__PURE__ */ jsxDEV(SmileNoIcon, {}, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+          lineNumber: 96,
+          columnNumber: 15
+        }, this),
+        onClose: props.onClose,
+        title: /* @__PURE__ */ jsxDEV(Fragment, { children: "Dati non corrispondenti" }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+          lineNumber: 98,
+          columnNumber: 16
+        }, this),
+        p: /* @__PURE__ */ jsxDEV(Fragment, { children: [
+          "I dati anagrafici non corrispondono all’intestatario del contratto, controlla che il documento appartenga all’",
+          /* @__PURE__ */ jsxDEV("b", { children: "intestatario della fornitura" }, void 0, false, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+            lineNumber: 103,
+            columnNumber: 13
+          }, this),
+          " e riprova."
+        ] }, void 0, true, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+          lineNumber: 100,
+          columnNumber: 9
+        }, this)
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+        lineNumber: 95,
+        columnNumber: 7
+      },
+      this
+    );
+  }
+};
+export const VulnerableDocumentoTecnicoError = {
+  modal: function VulnerableDocumentoTecnicoErrorModal(props) {
+    return /* @__PURE__ */ jsxDEV(
+      ModalVulnerability,
+      {
+        icon: /* @__PURE__ */ jsxDEV(ToolsIcon, {}, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+          lineNumber: 117,
+          columnNumber: 15
+        }, this),
+        title: /* @__PURE__ */ jsxDEV(Fragment, { children: "Servizio non disponibile" }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+          lineNumber: 118,
+          columnNumber: 16
+        }, this),
+        p: /* @__PURE__ */ jsxDEV(Fragment, { children: [
+          "Ci dispiace, al momento il nostro sistema automatico di lettura non è disponibile. ",
+          /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+            lineNumber: 122,
+            columnNumber: 28
+          }, this),
+          /* @__PURE__ */ jsxDEV("b", { children: "Per inviare la tua autocertificazione" }, void 0, false, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+            lineNumber: 123,
+            columnNumber: 13
+          }, this),
+          ", scrivici in chat."
+        ] }, void 0, true, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+          lineNumber: 120,
+          columnNumber: 9
+        }, this),
+        cta: "Scrivici in chat",
+        onClose: () => {
+          props.onClose();
+        }
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+        lineNumber: 116,
+        columnNumber: 7
+      },
+      this
+    );
+  }
+};
+export function ModalVulnerability({
+  onClose,
+  p,
+  title,
+  cta = "Riprova"
+}) {
+  return /* @__PURE__ */ jsxDEV(Modal, { children: /* @__PURE__ */ jsxDEV(
+    ModalErrorContent,
+    {
+      icon: /* @__PURE__ */ jsxDEV(ToolsIcon, {}, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+        lineNumber: 152,
+        columnNumber: 15
+      }, this),
+      title,
+      text: p,
+      cta,
+      onClose
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+      lineNumber: 151,
+      columnNumber: 7
+    },
+    this
+  ) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx",
+    lineNumber: 150,
+    columnNumber: 5
+  }, this);
+}
+_c = ModalVulnerability;
+var _c;
+$RefreshReg$(_c, "ModalVulnerability");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/vulnerability.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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QUFBQSxFQUttQixLQU5yQjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBUUE7QUFFSjtBQUFDRyxLQXZCZUo7QUFBa0IsSUFBQUk7QUFBQUMsYUFBQUQsSUFBQSIsIm5hbWVzIjpbIk1vZGFsIiwiTW9kYWxFcnJvckNvbnRlbnQiLCJTbWlsZU5vSWNvbiIsIlRvb2xzSWNvbiIsIlZ1bG5lcmFibGVEb2N1bWVudG9TY2FkdXRvRXJyb3IiLCJtb2RhbCIsIlZ1bG5lcmFibGVEb2N1bWVudG9TY2FkdXRvRXJyb3JNb2RhbCIsInByb3BzIiwib25DbG9zZSIsIlZ1bG5lcmFibGVEb2N1bWVudG9Ob25MZWdnaWJpbGVFcnJvciIsIlZ1bG5lcmFibGVEb2N1bWVudG9Ob25MZWdnaWJpbGVFcnJvck1vZGFsIiwiVnVsbmVyYWJsZURvY3VtZW50b05vblJpY29ub3NjaXV0b0Vycm9yIiwiVnVsbmVyYWJsZURvY3VtZW50b05vblJpY29ub3NjaXV0b0Vycm9yTW9kYWwiLCJWdWxuZXJhYmxlRG9jdW1lbnRvTm9uQ29tcGxldG9FcnJvciIsIlZ1bG5lcmFibGVEb2N1bWVudG9Ob25Db21wbGV0b0Vycm9yTW9kYWwiLCJWdWxuZXJhYmxlRG9jdW1lbnRvRGF0aUFuYWdyYWZpY2lFcnJvciIsIlZ1bG5lcmFibGVEb2N1bWVudG9EYXRpQW5hZ3JhZmljaUVycm9yTW9kYWwiLCJWdWxuZXJhYmxlRG9jdW1lbnRvVGVjbmljb0Vycm9yIiwiVnVsbmVyYWJsZURvY3VtZW50b1RlY25pY29FcnJvck1vZGFsIiwiTW9kYWxWdWxuZXJhYmlsaXR5IiwicCIsInRpdGxlIiwiY3RhIiwiX2MiLCIkUmVmcmVzaFJlZyQiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsidnVsbmVyYWJpbGl0eS50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgTW9kYWwsIE1vZGFsRXJyb3JDb250ZW50IH0gZnJvbSAnQG5hai13by91aS1hdG9tcyc7XHJcbmltcG9ydCB7IFNtaWxlTm9JY29uLCBUb29sc0ljb24gfSBmcm9tICdAbmFqLXdvL3VpLWljb25zJztcclxuaW1wb3J0IFJlYWN0LCB7IFJlYWN0Tm9kZSB9IGZyb20gJ3JlYWN0JztcclxuXHJcbmV4cG9ydCBjb25zdCBWdWxuZXJhYmxlRG9jdW1lbnRvU2NhZHV0b0Vycm9yID0ge1xyXG4gIG1vZGFsOiBmdW5jdGlvbiBWdWxuZXJhYmxlRG9jdW1lbnRvU2NhZHV0b0Vycm9yTW9kYWwocHJvcHM6IHtcclxuICAgIG9uQ2xvc2U6ICgpID0+IHZvaWQ7XHJcbiAgfSkge1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgPE1vZGFsVnVsbmVyYWJpbGl0eVxyXG4gICAgICAgIGljb249ezxTbWlsZU5vSWNvbiAvPn1cclxuICAgICAgICBvbkNsb3NlPXtwcm9wcy5vbkNsb3NlfVxyXG4gICAgICAgIHRpdGxlPXs8PkRvY3VtZW50byBzY2FkdXRvPC8+fVxyXG4gICAgICAgIHA9e1xyXG4gICAgICAgICAgPD5cclxuICAgICAgICAgICAgQ29udHJvbGxhIGNoZSBpbCBkb2N1bWVudG8gc2lhIGluIDxiPmNvcnNvIGRpIHZhbGlkaXTDoDwvYj4gZVxyXG4gICAgICAgICAgICByaXByb3ZhLlxyXG4gICAgICAgICAgICA8YnIgLz5cclxuICAgICAgICAgICAgVGkgcmljb3JkaWFtbyBjaGUgcHVvaSB1dGlsaXp6YXJlIGxhIDxiPmNhcnRhIGTigJlpZGVudGl0w6A8L2I+LCBsYXsnICd9XHJcbiAgICAgICAgICAgIDxiPnBhdGVudGUgZGkgZ3VpZGE8L2I+IG8gaWwgPGI+cGFzc2Fwb3J0bzwvYj4uXHJcbiAgICAgICAgICA8Lz5cclxuICAgICAgICB9XHJcbiAgICAgIC8+XHJcbiAgICApO1xyXG4gIH0sXHJcbn07XHJcblxyXG5leHBvcnQgY29uc3QgVnVsbmVyYWJsZURvY3VtZW50b05vbkxlZ2dpYmlsZUVycm9yID0ge1xyXG4gIG1vZGFsOiBmdW5jdGlvbiBWdWxuZXJhYmxlRG9jdW1lbnRvTm9uTGVnZ2liaWxlRXJyb3JNb2RhbChwcm9wczoge1xyXG4gICAgb25DbG9zZTogKCkgPT4gdm9pZDtcclxuICB9KSB7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICA8TW9kYWxWdWxuZXJhYmlsaXR5XHJcbiAgICAgICAgaWNvbj17PFNtaWxlTm9JY29uIC8+fVxyXG4gICAgICAgIG9uQ2xvc2U9e3Byb3BzLm9uQ2xvc2V9XHJcbiAgICAgICAgdGl0bGU9ezw+RGF0aSBub24gbGVnZ2liaWxpPC8+fVxyXG4gICAgICAgIHA9e1xyXG4gICAgICAgICAgPD5cclxuICAgICAgICAgICAgQ29udHJvbGxhIGNoZSBpIGRhdGkgZGVsbOKAmTxiPmludGVzdGF0YXJpbyBkZWwgY29udHJhdHRvPC9iPiBkZWxsYVxyXG4gICAgICAgICAgICBmb3JuaXR1cmEgc2lhbm8gPGI+YmVuIGxlZ2dpYmlsaTwvYj4gZSByaXByb3ZhLlxyXG4gICAgICAgICAgPC8+XHJcbiAgICAgICAgfVxyXG4gICAgICAvPlxyXG4gICAgKTtcclxuICB9LFxyXG59O1xyXG5cclxuZXhwb3J0IGNvbnN0IFZ1bG5lcmFibGVEb2N1bWVudG9Ob25SaWNvbm9zY2l1dG9FcnJvciA9IHtcclxuICBtb2RhbDogZnVuY3Rpb24gVnVsbmVyYWJsZURvY3VtZW50b05vblJpY29ub3NjaXV0b0Vycm9yTW9kYWwocHJvcHM6IHtcclxuICAgIG9uQ2xvc2U6ICgpID0+IHZvaWQ7XHJcbiAgfSkge1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgPE1vZGFsVnVsbmVyYWJpbGl0eVxyXG4gICAgICAgIGljb249ezxTbWlsZU5vSWNvbiAvPn1cclxuICAgICAgICBvbkNsb3NlPXtwcm9wcy5vbkNsb3NlfVxyXG4gICAgICAgIHRpdGxlPXs8PkRvY3VtZW50byBub24gYWNjZXR0YXRvPC8+fVxyXG4gICAgICAgIHA9e1xyXG4gICAgICAgICAgPD5cclxuICAgICAgICAgICAgSWwgZG9jdW1lbnRvIGNoZSBoYWkgY2FyaWNhdG8gbm9uIHJpZW50cmEgdHJhIHF1ZWxsaSBhY2NldHRhdGkuXHJcbiAgICAgICAgICAgIDxiciAvPlxyXG4gICAgICAgICAgICBUaSByaWNvcmRpYW1vIGNoZSBwdW9pIHV0aWxpenphcmUgbGEgPGI+Y2FydGEgZOKAmWlkZW50aXTDoDwvYj4sIGxheycgJ31cclxuICAgICAgICAgICAgPGI+cGF0ZW50ZSBkaSBndWlkYTwvYj4gbyBpbCA8Yj5wYXNzYXBvcnRvPC9iPi5cclxuICAgICAgICAgIDwvPlxyXG4gICAgICAgIH1cclxuICAgICAgLz5cclxuICAgICk7XHJcbiAgfSxcclxufTtcclxuXHJcbmV4cG9ydCBjb25zdCBWdWxuZXJhYmxlRG9jdW1lbnRvTm9uQ29tcGxldG9FcnJvciA9IHtcclxuICBtb2RhbDogZnVuY3Rpb24gVnVsbmVyYWJsZURvY3VtZW50b05vbkNvbXBsZXRvRXJyb3JNb2RhbChwcm9wczoge1xyXG4gICAgb25DbG9zZTogKCkgPT4gdm9pZDtcclxuICB9KSB7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICA8TW9kYWxWdWxuZXJhYmlsaXR5XHJcbiAgICAgICAgaWNvbj17PFNtaWxlTm9JY29uIC8+fVxyXG4gICAgICAgIG9uQ2xvc2U9e3Byb3BzLm9uQ2xvc2V9XHJcbiAgICAgICAgdGl0bGU9ezw+RG9jdW1lbnRvIG5vbiBjb21wbGV0bzwvPn1cclxuICAgICAgICBwPXtcclxuICAgICAgICAgIDw+XHJcbiAgICAgICAgICAgIENvbnRyb2xsYSBkaSBhdmVyIGNhcmljYXRvIGlsIDxiPmZyb250ZTwvYj4gZSBpbCA8Yj5yZXRybzwvYj4gZGVsXHJcbiAgICAgICAgICAgIGRvY3VtZW50byBlIHJpcHJvdmEuXHJcbiAgICAgICAgICA8Lz5cclxuICAgICAgICB9XHJcbiAgICAgIC8+XHJcbiAgICApO1xyXG4gIH0sXHJcbn07XHJcblxyXG5leHBvcnQgY29uc3QgVnVsbmVyYWJsZURvY3VtZW50b0RhdGlBbmFncmFmaWNpRXJyb3IgPSB7XHJcbiAgbW9kYWw6IGZ1bmN0aW9uIFZ1bG5lcmFibGVEb2N1bWVudG9EYXRpQW5hZ3JhZmljaUVycm9yTW9kYWwocHJvcHM6IHtcclxuICAgIG9uQ2xvc2U6ICgpID0+IHZvaWQ7XHJcbiAgfSkge1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgPE1vZGFsVnVsbmVyYWJpbGl0eVxyXG4gICAgICAgIGljb249ezxTbWlsZU5vSWNvbiAvPn1cclxuICAgICAgICBvbkNsb3NlPXtwcm9wcy5vbkNsb3NlfVxyXG4gICAgICAgIHRpdGxlPXs8PkRhdGkgbm9uIGNvcnJpc3BvbmRlbnRpPC8+fVxyXG4gICAgICAgIHA9e1xyXG4gICAgICAgICAgPD5cclxuICAgICAgICAgICAgSSBkYXRpIGFuYWdyYWZpY2kgbm9uIGNvcnJpc3BvbmRvbm8gYWxs4oCZaW50ZXN0YXRhcmlvIGRlbCBjb250cmF0dG8sXHJcbiAgICAgICAgICAgIGNvbnRyb2xsYSBjaGUgaWwgZG9jdW1lbnRvIGFwcGFydGVuZ2EgYWxs4oCZXHJcbiAgICAgICAgICAgIDxiPmludGVzdGF0YXJpbyBkZWxsYSBmb3JuaXR1cmE8L2I+IGUgcmlwcm92YS5cclxuICAgICAgICAgIDwvPlxyXG4gICAgICAgIH1cclxuICAgICAgLz5cclxuICAgICk7XHJcbiAgfSxcclxufTtcclxuXHJcbmV4cG9ydCBjb25zdCBWdWxuZXJhYmxlRG9jdW1lbnRvVGVjbmljb0Vycm9yID0ge1xyXG4gIG1vZGFsOiBmdW5jdGlvbiBWdWxuZXJhYmxlRG9jdW1lbnRvVGVjbmljb0Vycm9yTW9kYWwocHJvcHM6IHtcclxuICAgIG9uQ2xvc2U6ICgpID0+IHZvaWQ7XHJcbiAgfSkge1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgPE1vZGFsVnVsbmVyYWJpbGl0eVxyXG4gICAgICAgIGljb249ezxUb29sc0ljb24gLz59XHJcbiAgICAgICAgdGl0bGU9ezw+U2Vydml6aW8gbm9uIGRpc3BvbmliaWxlPC8+fVxyXG4gICAgICAgIHA9e1xyXG4gICAgICAgICAgPD5cclxuICAgICAgICAgICAgQ2kgZGlzcGlhY2UsIGFsIG1vbWVudG8gaWwgbm9zdHJvIHNpc3RlbWEgYXV0b21hdGljbyBkaSBsZXR0dXJhIG5vblxyXG4gICAgICAgICAgICDDqCBkaXNwb25pYmlsZS4gPGJyIC8+XHJcbiAgICAgICAgICAgIDxiPlBlciBpbnZpYXJlIGxhIHR1YSBhdXRvY2VydGlmaWNhemlvbmU8L2I+LCBzY3JpdmljaSBpbiBjaGF0LlxyXG4gICAgICAgICAgPC8+XHJcbiAgICAgICAgfVxyXG4gICAgICAgIGN0YT17J1Njcml2aWNpIGluIGNoYXQnfVxyXG4gICAgICAgIG9uQ2xvc2U9eygpID0+IHtcclxuICAgICAgICAgIC8vIFRPRE9cclxuICAgICAgICAgIC8vIHJlZGlyZWN0VG8oJy9jb250YXR0aScpO1xyXG4gICAgICAgICAgcHJvcHMub25DbG9zZSgpO1xyXG4gICAgICAgIH19XHJcbiAgICAgIC8+XHJcbiAgICApO1xyXG4gIH0sXHJcbn07XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gTW9kYWxWdWxuZXJhYmlsaXR5KHtcclxuICBvbkNsb3NlLFxyXG4gIHAsXHJcbiAgdGl0bGUsXHJcbiAgY3RhID0gJ1JpcHJvdmEnLFxyXG59OiB7XHJcbiAgaWNvbjogUmVhY3ROb2RlO1xyXG4gIHRpdGxlOiBSZWFjdE5vZGU7XHJcbiAgcDogUmVhY3ROb2RlO1xyXG4gIGN0YT86IFJlYWN0Tm9kZTtcclxuICBvbkNsb3NlOiAoKSA9PiB2b2lkO1xyXG59KSB7XHJcbiAgcmV0dXJuIChcclxuICAgIDxNb2RhbD5cclxuICAgICAgPE1vZGFsRXJyb3JDb250ZW50XHJcbiAgICAgICAgaWNvbj17PFRvb2xzSWNvbiAvPn1cclxuICAgICAgICB0aXRsZT17dGl0bGV9XHJcbiAgICAgICAgdGV4dD17cH1cclxuICAgICAgICBjdGE9e2N0YX1cclxuICAgICAgICBvbkNsb3NlPXtvbkNsb3NlfVxyXG4gICAgICAvPlxyXG4gICAgPC9Nb2RhbD5cclxuICApO1xyXG59XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvc3RlcHMvc3JjL2xpYi9zZXJ2aWNlcy1lcnJvcnMvdnVsbmVyYWJpbGl0eS50c3gifQ==

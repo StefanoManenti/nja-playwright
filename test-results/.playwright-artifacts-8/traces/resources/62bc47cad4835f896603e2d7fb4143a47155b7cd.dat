@@ -1,0 +1,14 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/atoms-utils/atoms-utils.ts";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/atoms-utils/optimistic-atom.ts";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLGNBQWM7QUFDZCxjQUFjIiwibmFtZXMiOltdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJpbmRleC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgKiBmcm9tICcuL2F0b21zLXV0aWxzJztcclxuZXhwb3J0ICogZnJvbSAnLi9vcHRpbWlzdGljLWF0b20nO1xyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL3V0aWwvc3JjL2xpYi9hdG9tcy11dGlscy9pbmRleC50cyJ9

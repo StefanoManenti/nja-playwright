@@ -1,0 +1,14 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+export { BackToProductsLink } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/buttons/BackToProductsLink.tsx";
+export { GoToHomePageButton } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/buttons/GoToHomePageButton.tsx";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLDBCQUEwQjtBQUNuQyxTQUFTQywwQkFBMEIiLCJuYW1lcyI6WyJCYWNrVG9Qcm9kdWN0c0xpbmsiLCJHb1RvSG9tZVBhZ2VCdXR0b24iXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiaW5kZXgudHMiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IHsgQmFja1RvUHJvZHVjdHNMaW5rIH0gZnJvbSAnLi9CYWNrVG9Qcm9kdWN0c0xpbmsnO1xyXG5leHBvcnQgeyBHb1RvSG9tZVBhZ2VCdXR0b24gfSBmcm9tICcuL0dvVG9Ib21lUGFnZUJ1dHRvbic7XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvdWktbW9sZWN1bGVzL3NyYy9saWIvYnV0dG9ucy9pbmRleC50cyJ9

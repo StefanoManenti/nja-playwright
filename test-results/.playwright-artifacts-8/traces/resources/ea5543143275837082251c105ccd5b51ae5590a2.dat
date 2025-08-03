@@ -1,0 +1,22 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+export function getFirstTimeFlag() {
+  let firstTime = true;
+  return () => {
+    if (firstTime) {
+      firstTime = false;
+      return true;
+    }
+    return false;
+  };
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFPLGdCQUFTQSxtQkFBbUI7QUFDakMsTUFBSUMsWUFBWTtBQUVoQixTQUFPLE1BQU07QUFDWCxRQUFJQSxXQUFXO0FBQ2JBLGtCQUFZO0FBQ1osYUFBTztBQUFBLElBQ1Q7QUFDQSxXQUFPO0FBQUEsRUFDVDtBQUNGIiwibmFtZXMiOlsiZ2V0Rmlyc3RUaW1lRmxhZyIsImZpcnN0VGltZSJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJmaXJzdC10aW1lLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBmdW5jdGlvbiBnZXRGaXJzdFRpbWVGbGFnKCkge1xyXG4gIGxldCBmaXJzdFRpbWUgPSB0cnVlO1xyXG5cclxuICByZXR1cm4gKCkgPT4ge1xyXG4gICAgaWYgKGZpcnN0VGltZSkge1xyXG4gICAgICBmaXJzdFRpbWUgPSBmYWxzZTtcclxuICAgICAgcmV0dXJuIHRydWU7XHJcbiAgICB9XHJcbiAgICByZXR1cm4gZmFsc2U7XHJcbiAgfTtcclxufVxyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL3V0aWwvc3JjL2xpYi9maXJzdC10aW1lLnRzIn0=

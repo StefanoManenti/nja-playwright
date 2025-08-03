@@ -1,0 +1,54 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/back-plenitude.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/back-plenitude.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import SvgIcon from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/SvgIcon.tsx";
+export const BackPlenitudeIcon = (props) => {
+  return /* @__PURE__ */ jsxDEV(SvgIcon, { ...props, viewBox: "0 0 24 24", children: /* @__PURE__ */ jsxDEV("path", { d: "M12 0C5.38 0 0 5.38 0 12C0 18.62 5.38 24 12 24C18.62 24 24 18.62 24 12C24 5.38 18.62 0 12 0ZM20.45 4.97C21.81 6.61 22.71 8.64 22.94 10.87C22.28 10.8 21.53 10.55 20.96 10.11C19.38 8.91 18.98 6.76 20.06 5.32C20.15 5.2 20.33 5.08 20.45 4.97ZM4.61 9.82C4.61 9.29 4.99 8.9 5.44 8.9C5.97 8.9 6.35 9.28 6.35 9.82C6.35 10.36 5.97 10.74 5.44 10.74C4.98 10.74 4.61 10.36 4.61 9.82ZM15.69 22.35C15.57 21.67 15.23 20.84 14.88 20.78C14.53 20.77 13.87 21.8 12.98 22.03C12.68 22.11 12.67 21.54 12.67 21.54C12.63 20.99 12.2 20.11 11.74 20.06C11.5 20.03 11.56 20.56 10.05 21.22C9.38 21.51 8.42 21.47 7.86 21.31C7.82 21.53 7.76 21.82 7.69 22.12C7.37 21.98 7.06 21.84 6.76 21.67C6.95 20.72 6.68 19.86 6.53 19.42C6.48 19.27 6.45 19.16 6.45 19.12C6.47 18.94 6.57 19.03 6.91 19.37C7.66 20.12 8.83 20.17 9.52 19.99C9.89 19.89 10.38 19.65 10.53 19.4C10.59 19.31 10.53 19.21 10.43 19.19C8.92 18.97 8.45 17.8 7.97 16.62C7.79 16.17 7.61 15.72 7.37 15.32C7.32 15.24 7.28 15.11 7.31 15.09L7.97 15.42C7.97 15.42 10.88 16.04 11.01 16.06C11.3 16.11 11.44 15.78 11.44 15.78C11.47 15.67 11.65 14.98 11.63 14.37C11.63 14.09 11.31 13.92 11.17 14.06C11.16 14.07 11.15 14.08 11.13 14.1C11.09 14.14 11.05 14.19 11 14.22C10.93 14.27 10.83 14.28 10.74 14.26C9.99 14.06 9.74 13.99 8.93 13.65L7.88 11.97C7.82 11.79 7.94 11.7 8.02 11.64C8.03 11.64 8.04 11.62 8.05 11.61C8.87 10.91 9.6 10.4 12.45 8.94C12.66 8.83 12.38 7.74 12.12 6.71C12.04 6.41 11.97 6.11 11.91 5.85C11.82 5.44 11.48 5.33 11.33 5.37C9.99 5.72 8.7 6.17 7.57 6.56C5.63 7.24 4.16 7.76 3.7 7.29L2.47 6.5C4.39 3.22 7.94 1 12 1C15.07 1 17.85 2.27 19.85 4.31C19.67 4.31 19.4 4.31 19.12 4.27C18.17 4.11 18.05 4.09 18.04 4.09C16.1 3.72 15.84 3.68 15.64 4.13C15.41 4.64 16.54 5.33 16.54 5.33L18.2 6.33C18.2 6.33 18.42 6.47 18.4 6.68C18.39 6.86 18.35 6.93 18.07 7.06C17.8 7.19 14.56 8.5 14.53 8.51C14.53 8.51 13.94 8.78 14.27 9.29C14.38 9.41 14.6 9.48 14.9 9.47C15.29 9.46 17.99 9.45 17.99 9.45C17.99 9.45 18.57 9.39 18.83 9.78C19.04 10.09 18.78 10.68 18.78 10.68L16.93 14.41C16.93 14.41 16.57 15.1 17.02 15.45C17.46 15.8 18.02 15.28 18.02 15.28L21.35 12.32C21.35 12.32 21.77 11.89 22.25 12.04C22.56 12.15 22.72 12.46 22.8 12.63C22.81 12.66 22.89 12.86 22.96 13.03C22.55 17.34 19.64 20.93 15.7 22.34L15.69 22.35Z" }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/back-plenitude.tsx",
+    lineNumber: 7,
+    columnNumber: 7
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/back-plenitude.tsx",
+    lineNumber: 6,
+    columnNumber: 5
+  }, this);
+};
+_c = BackPlenitudeIcon;
+var _c;
+$RefreshReg$(_c, "BackPlenitudeIcon");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/back-plenitude.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBTU07Ozs7O2dCQU5OLE9BQU9BLENBQUssYUFBYTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDekIsT0FBT0MsYUFBYTtBQUViLGFBQU1DLG9CQUFvQkEsQ0FBQ0MsVUFBdUM7QUFDdkUsU0FDRSx1QkFBQyxXQUFRLEdBQUlBLE9BQU8sU0FBUSxhQUMxQixpQ0FBQyxVQUFLLEdBQUUsc3JFQUFSO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FBMHJFLEtBRDVyRTtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBRUE7QUFFSjtBQUFFQyxLQU5XRjtBQUFpQixJQUFBRTtBQUFBQyxhQUFBRCxJQUFBIiwibmFtZXMiOlsiUmVhY3QiLCJTdmdJY29uIiwiQmFja1BsZW5pdHVkZUljb24iLCJwcm9wcyIsIl9jIiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbImJhY2stcGxlbml0dWRlLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xyXG5pbXBvcnQgU3ZnSWNvbiBmcm9tICcuL1N2Z0ljb24nO1xyXG5cclxuZXhwb3J0IGNvbnN0IEJhY2tQbGVuaXR1ZGVJY29uID0gKHByb3BzOiBSZWFjdC5Db21wb25lbnRQcm9wczwnc3ZnJz4pID0+IHtcclxuICByZXR1cm4gKFxyXG4gICAgPFN2Z0ljb24gey4uLnByb3BzfSB2aWV3Qm94PVwiMCAwIDI0IDI0XCI+XHJcbiAgICAgIDxwYXRoIGQ9XCJNMTIgMEM1LjM4IDAgMCA1LjM4IDAgMTJDMCAxOC42MiA1LjM4IDI0IDEyIDI0QzE4LjYyIDI0IDI0IDE4LjYyIDI0IDEyQzI0IDUuMzggMTguNjIgMCAxMiAwWk0yMC40NSA0Ljk3QzIxLjgxIDYuNjEgMjIuNzEgOC42NCAyMi45NCAxMC44N0MyMi4yOCAxMC44IDIxLjUzIDEwLjU1IDIwLjk2IDEwLjExQzE5LjM4IDguOTEgMTguOTggNi43NiAyMC4wNiA1LjMyQzIwLjE1IDUuMiAyMC4zMyA1LjA4IDIwLjQ1IDQuOTdaTTQuNjEgOS44MkM0LjYxIDkuMjkgNC45OSA4LjkgNS40NCA4LjlDNS45NyA4LjkgNi4zNSA5LjI4IDYuMzUgOS44MkM2LjM1IDEwLjM2IDUuOTcgMTAuNzQgNS40NCAxMC43NEM0Ljk4IDEwLjc0IDQuNjEgMTAuMzYgNC42MSA5LjgyWk0xNS42OSAyMi4zNUMxNS41NyAyMS42NyAxNS4yMyAyMC44NCAxNC44OCAyMC43OEMxNC41MyAyMC43NyAxMy44NyAyMS44IDEyLjk4IDIyLjAzQzEyLjY4IDIyLjExIDEyLjY3IDIxLjU0IDEyLjY3IDIxLjU0QzEyLjYzIDIwLjk5IDEyLjIgMjAuMTEgMTEuNzQgMjAuMDZDMTEuNSAyMC4wMyAxMS41NiAyMC41NiAxMC4wNSAyMS4yMkM5LjM4IDIxLjUxIDguNDIgMjEuNDcgNy44NiAyMS4zMUM3LjgyIDIxLjUzIDcuNzYgMjEuODIgNy42OSAyMi4xMkM3LjM3IDIxLjk4IDcuMDYgMjEuODQgNi43NiAyMS42N0M2Ljk1IDIwLjcyIDYuNjggMTkuODYgNi41MyAxOS40MkM2LjQ4IDE5LjI3IDYuNDUgMTkuMTYgNi40NSAxOS4xMkM2LjQ3IDE4Ljk0IDYuNTcgMTkuMDMgNi45MSAxOS4zN0M3LjY2IDIwLjEyIDguODMgMjAuMTcgOS41MiAxOS45OUM5Ljg5IDE5Ljg5IDEwLjM4IDE5LjY1IDEwLjUzIDE5LjRDMTAuNTkgMTkuMzEgMTAuNTMgMTkuMjEgMTAuNDMgMTkuMTlDOC45MiAxOC45NyA4LjQ1IDE3LjggNy45NyAxNi42MkM3Ljc5IDE2LjE3IDcuNjEgMTUuNzIgNy4zNyAxNS4zMkM3LjMyIDE1LjI0IDcuMjggMTUuMTEgNy4zMSAxNS4wOUw3Ljk3IDE1LjQyQzcuOTcgMTUuNDIgMTAuODggMTYuMDQgMTEuMDEgMTYuMDZDMTEuMyAxNi4xMSAxMS40NCAxNS43OCAxMS40NCAxNS43OEMxMS40NyAxNS42NyAxMS42NSAxNC45OCAxMS42MyAxNC4zN0MxMS42MyAxNC4wOSAxMS4zMSAxMy45MiAxMS4xNyAxNC4wNkMxMS4xNiAxNC4wNyAxMS4xNSAxNC4wOCAxMS4xMyAxNC4xQzExLjA5IDE0LjE0IDExLjA1IDE0LjE5IDExIDE0LjIyQzEwLjkzIDE0LjI3IDEwLjgzIDE0LjI4IDEwLjc0IDE0LjI2QzkuOTkgMTQuMDYgOS43NCAxMy45OSA4LjkzIDEzLjY1TDcuODggMTEuOTdDNy44MiAxMS43OSA3Ljk0IDExLjcgOC4wMiAxMS42NEM4LjAzIDExLjY0IDguMDQgMTEuNjIgOC4wNSAxMS42MUM4Ljg3IDEwLjkxIDkuNiAxMC40IDEyLjQ1IDguOTRDMTIuNjYgOC44MyAxMi4zOCA3Ljc0IDEyLjEyIDYuNzFDMTIuMDQgNi40MSAxMS45NyA2LjExIDExLjkxIDUuODVDMTEuODIgNS40NCAxMS40OCA1LjMzIDExLjMzIDUuMzdDOS45OSA1LjcyIDguNyA2LjE3IDcuNTcgNi41NkM1LjYzIDcuMjQgNC4xNiA3Ljc2IDMuNyA3LjI5TDIuNDcgNi41QzQuMzkgMy4yMiA3Ljk0IDEgMTIgMUMxNS4wNyAxIDE3Ljg1IDIuMjcgMTkuODUgNC4zMUMxOS42NyA0LjMxIDE5LjQgNC4zMSAxOS4xMiA0LjI3QzE4LjE3IDQuMTEgMTguMDUgNC4wOSAxOC4wNCA0LjA5QzE2LjEgMy43MiAxNS44NCAzLjY4IDE1LjY0IDQuMTNDMTUuNDEgNC42NCAxNi41NCA1LjMzIDE2LjU0IDUuMzNMMTguMiA2LjMzQzE4LjIgNi4zMyAxOC40MiA2LjQ3IDE4LjQgNi42OEMxOC4zOSA2Ljg2IDE4LjM1IDYuOTMgMTguMDcgNy4wNkMxNy44IDcuMTkgMTQuNTYgOC41IDE0LjUzIDguNTFDMTQuNTMgOC41MSAxMy45NCA4Ljc4IDE0LjI3IDkuMjlDMTQuMzggOS40MSAxNC42IDkuNDggMTQuOSA5LjQ3QzE1LjI5IDkuNDYgMTcuOTkgOS40NSAxNy45OSA5LjQ1QzE3Ljk5IDkuNDUgMTguNTcgOS4zOSAxOC44MyA5Ljc4QzE5LjA0IDEwLjA5IDE4Ljc4IDEwLjY4IDE4Ljc4IDEwLjY4TDE2LjkzIDE0LjQxQzE2LjkzIDE0LjQxIDE2LjU3IDE1LjEgMTcuMDIgMTUuNDVDMTcuNDYgMTUuOCAxOC4wMiAxNS4yOCAxOC4wMiAxNS4yOEwyMS4zNSAxMi4zMkMyMS4zNSAxMi4zMiAyMS43NyAxMS44OSAyMi4yNSAxMi4wNEMyMi41NiAxMi4xNSAyMi43MiAxMi40NiAyMi44IDEyLjYzQzIyLjgxIDEyLjY2IDIyLjg5IDEyLjg2IDIyLjk2IDEzLjAzQzIyLjU1IDE3LjM0IDE5LjY0IDIwLjkzIDE1LjcgMjIuMzRMMTUuNjkgMjIuMzVaXCIgLz5cclxuICAgIDwvU3ZnSWNvbj5cclxuICApO1xyXG59O1xyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL3VpLWljb25zL3NyYy9saWIvYmFjay1wbGVuaXR1ZGUudHN4In0=

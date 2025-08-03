@@ -1,0 +1,15 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { createStore } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+const store = createStore();
+export { store };
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLG1CQUFtQjtBQUU1QixNQUFNQyxRQUFRRCxZQUFZO0FBQzFCLFNBQVNDIiwibmFtZXMiOlsiY3JlYXRlU3RvcmUiLCJzdG9yZSJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJzdG9yZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBjcmVhdGVTdG9yZSB9IGZyb20gJ2pvdGFpJztcclxuXHJcbmNvbnN0IHN0b3JlID0gY3JlYXRlU3RvcmUoKTtcclxuZXhwb3J0IHsgc3RvcmUgfTtcclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy9kYXRhLWFjY2Vzcy9zcmMvbGliL3V0aWxzL3N0b3JlLnRzIn0=

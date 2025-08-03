@@ -1,0 +1,25 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+export var StatoCoupon = /* @__PURE__ */ ((StatoCoupon2) => {
+  StatoCoupon2[StatoCoupon2["UNSET"] = -1] = "UNSET";
+  StatoCoupon2[StatoCoupon2["INVALID"] = 0] = "INVALID";
+  StatoCoupon2[StatoCoupon2["VALID"] = 1] = "VALID";
+  return StatoCoupon2;
+})(StatoCoupon || {});
+export const paramsCoupon = {
+  minSize: 4,
+  //minimo di lettere imputabili per inviare il coupon
+  defaultHelper: "Lascia il campo vuoto se non hai un codice",
+  error_1: "Hai già attivato questo codice in precedenza.",
+  error_2: "Controlla che il codice del coupon sia scritto correttamente, sia ancora utilizzabile e sia applicabile per questa operazione."
+};
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFPLFdBQUtBLGNBQUwsa0JBQUtBLGlCQUFMO0FBQ0xDLHVDQUFRLE1BQVJBO0FBQ0FDLHlDQUFVLEtBQVZBO0FBQ0FDLHVDQUFRLEtBQVJBO0FBSFVIO0FBQUFBO0FBTUwsYUFBTUksZUFBZTtBQUFBLEVBQzFCQyxTQUFTO0FBQUE7QUFBQSxFQUNUQyxlQUFlO0FBQUEsRUFDZkMsU0FBUztBQUFBLEVBQ1RDLFNBQ0U7QUFDSiIsIm5hbWVzIjpbIlN0YXRvQ291cG9uIiwiVU5TRVQiLCJJTlZBTElEIiwiVkFMSUQiLCJwYXJhbXNDb3Vwb24iLCJtaW5TaXplIiwiZGVmYXVsdEhlbHBlciIsImVycm9yXzEiLCJlcnJvcl8yIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbInR5cGVzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBlbnVtIFN0YXRvQ291cG9uIHtcclxuICBVTlNFVCA9IC0xLFxyXG4gIElOVkFMSUQgPSAwLFxyXG4gIFZBTElEID0gMSxcclxufVxyXG5cclxuZXhwb3J0IGNvbnN0IHBhcmFtc0NvdXBvbiA9IHtcclxuICBtaW5TaXplOiA0LCAvL21pbmltbyBkaSBsZXR0ZXJlIGltcHV0YWJpbGkgcGVyIGludmlhcmUgaWwgY291cG9uXHJcbiAgZGVmYXVsdEhlbHBlcjogJ0xhc2NpYSBpbCBjYW1wbyB2dW90byBzZSBub24gaGFpIHVuIGNvZGljZScsXHJcbiAgZXJyb3JfMTogJ0hhaSBnacOgIGF0dGl2YXRvIHF1ZXN0byBjb2RpY2UgaW4gcHJlY2VkZW56YS4nLFxyXG4gIGVycm9yXzI6XHJcbiAgICAnQ29udHJvbGxhIGNoZSBpbCBjb2RpY2UgZGVsIGNvdXBvbiBzaWEgc2NyaXR0byBjb3JyZXR0YW1lbnRlLCBzaWEgYW5jb3JhIHV0aWxpenphYmlsZSBlIHNpYSBhcHBsaWNhYmlsZSBwZXIgcXVlc3RhIG9wZXJhemlvbmUuJyxcclxufTtcclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy91aS1vcmdhbmlzbXMvc3JjL2xpYi9jYXJ0L2NvdXBvbi90eXBlcy50cyJ9

@@ -1,0 +1,16 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/controls.module.less");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from "/@vite/client"
+const __vite__id = "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/controls.module.less"
+const __vite__css = ".pln-control-label {\n  --pln-background: var(--Background-White);\n  --pln-primary: var(--Text-Default-Grey);\n}\n.pln-control-label ._circleOuter_yxu7u_5,\n.pln-control-label ._squareOuter_yxu7u_6 {\n  fill: var(--pln-background);\n  stroke: var(--pln-primary);\n}\n.pln-control-label ._circleInner_yxu7u_10,\n.pln-control-label ._squareInner_yxu7u_11 {\n  fill: var(--pln-background);\n}\n.pln-control-input:checked + .pln-control-label {\n  --pln-primary: var(--Primary-Acessible-Green);\n}\n.pln-control-input:checked + .pln-control-label ._circleOuter_yxu7u_5 {\n  fill: var(--pln-background);\n  stroke: var(--pln-primary);\n}\n.pln-control-input:checked + .pln-control-label ._circleInner_yxu7u_10 {\n  fill: var(--pln-primary);\n}\n.pln-control-input:checked + .pln-control-label ._squareOuter_yxu7u_6 {\n  fill: var(--pln-primary);\n  stroke: var(--pln-primary);\n}\n.pln-control-input:checked + .pln-control-label ._squareInner_yxu7u_11 {\n  fill: var(--pln-background);\n}\n.pln-control-input:disabled + .pln-control-label {\n  --pln-background: var(--Text-Light-Grey);\n  --pln-primary: var(--Text-Medium-Grey);\n}\n.pln-control-input:checked:disabled + .pln-control-label {\n  --pln-background: var(--Text-Light-Grey);\n  --pln-primary: var(--Text-Medium-Grey);\n}\n"
+__vite__updateStyle(__vite__id, __vite__css)
+export const circleOuter = "_circleOuter_yxu7u_5";
+export const squareOuter = "_squareOuter_yxu7u_6";
+export const circleInner = "_circleInner_yxu7u_10";
+export const squareInner = "_squareInner_yxu7u_11";
+export default {
+	circleOuter: circleOuter,
+	squareOuter: squareOuter,
+	circleInner: circleInner,
+	squareInner: squareInner
+};
+
+import.meta.hot.prune(() => __vite__removeStyle(__vite__id))

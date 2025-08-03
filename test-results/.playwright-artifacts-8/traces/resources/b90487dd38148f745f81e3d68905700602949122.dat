@@ -1,0 +1,10 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/GreyBox.module.less");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from "/@vite/client"
+const __vite__id = "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/GreyBox.module.less"
+const __vite__css = "._root_lcnwi_1 {\n  padding: calc(var(--grid-base) * 2);\n  background-color: var(--Background-Grey);\n  border-radius: calc(var(--grid-base) * 2);\n}\n"
+__vite__updateStyle(__vite__id, __vite__css)
+export const root = "_root_lcnwi_1";
+export default {
+	root: root
+};
+
+import.meta.hot.prune(() => __vite__removeStyle(__vite__id))

@@ -1,0 +1,79 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/elements/PowerRateElementSwitcher.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/elements/PowerRateElementSwitcher.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { useAtom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+import { PowerRate, powerRateAtom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/index.ts";
+import { DataElementSwitcher } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/index.ts";
+export function PowerRateElementSwitcher({ editable }) {
+  _s();
+  const [value, setValue] = useAtom(powerRateAtom);
+  if (!value) {
+    return;
+  }
+  return /* @__PURE__ */ jsxDEV(
+    DataElementSwitcher,
+    {
+      readOnly: !editable,
+      title: "Tariffa luce",
+      value,
+      setValue,
+      valueA: PowerRate.SINGLE,
+      valueB: PowerRate.BI_HOURLY,
+      labelA: "Monoraria",
+      labelB: "Bioraria",
+      switchTextA: "Tariffa costante in tutte le ore del giorno",
+      switchTextB: "Due tariffe distinte in base a orario e giorno"
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/elements/PowerRateElementSwitcher.tsx",
+      lineNumber: 14,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_s(PowerRateElementSwitcher, "gx4ctYiNspUZrIOsk7FAch9XNzI=", false, function() {
+  return [useAtom];
+});
+_c = PowerRateElementSwitcher;
+var _c;
+$RefreshReg$(_c, "PowerRateElementSwitcher");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/elements/PowerRateElementSwitcher.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBYUk7Ozs7O3FDQWJKO0FBQUEsT0FBU0EsT0FBTywwQ0FBZTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUMvQixTQUFTQyxXQUFXQyxxQkFBcUI7QUFDekMsU0FBU0MsMkJBQTJCO0FBRzdCLGdCQUFTQyx5QkFBeUIsRUFBRUMsU0FBaUMsR0FBRztBQUFBQyxLQUFBO0FBQzdFLFFBQU0sQ0FBQ0MsT0FBT0MsUUFBUSxJQUFJUixRQUFRRSxhQUFhO0FBRS9DLE1BQUksQ0FBQ0ssT0FBTztBQUNWO0FBQUEsRUFDRjtBQUVBLFNBQ0U7QUFBQSxJQUFDO0FBQUE7QUFBQSxNQUNDLFVBQVUsQ0FBQ0Y7QUFBQUEsTUFDWCxPQUFPO0FBQUEsTUFDUDtBQUFBLE1BQ0E7QUFBQSxNQUNBLFFBQVFKLFVBQVVRO0FBQUFBLE1BQ2xCLFFBQVFSLFVBQVVTO0FBQUFBLE1BQ2xCLFFBQVE7QUFBQSxNQUNSLFFBQVE7QUFBQSxNQUNSLGFBQWE7QUFBQSxNQUNiLGFBQWE7QUFBQTtBQUFBLElBVmY7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLEVBVWdFO0FBR3BFO0FBQUNKLEdBckJlRiwwQkFBd0I7QUFBQSxVQUNaSixPQUFPO0FBQUE7QUFBQVcsS0FEbkJQO0FBQXdCLElBQUFPO0FBQUFDLGFBQUFELElBQUEiLCJuYW1lcyI6WyJ1c2VBdG9tIiwiUG93ZXJSYXRlIiwicG93ZXJSYXRlQXRvbSIsIkRhdGFFbGVtZW50U3dpdGNoZXIiLCJQb3dlclJhdGVFbGVtZW50U3dpdGNoZXIiLCJlZGl0YWJsZSIsIl9zIiwidmFsdWUiLCJzZXRWYWx1ZSIsIlNJTkdMRSIsIkJJX0hPVVJMWSIsIl9jIiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIlBvd2VyUmF0ZUVsZW1lbnRTd2l0Y2hlci50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgdXNlQXRvbSB9IGZyb20gJ2pvdGFpJztcclxuaW1wb3J0IHsgUG93ZXJSYXRlLCBwb3dlclJhdGVBdG9tIH0gZnJvbSAnQG5hai13by9kYXRhLWFjY2Vzcyc7XHJcbmltcG9ydCB7IERhdGFFbGVtZW50U3dpdGNoZXIgfSBmcm9tICdAbmFqLXdvL3VpLW1vbGVjdWxlcyc7XHJcbmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gUG93ZXJSYXRlRWxlbWVudFN3aXRjaGVyKHsgZWRpdGFibGUgfTogeyBlZGl0YWJsZT86IGJvb2xlYW4gfSkge1xyXG4gIGNvbnN0IFt2YWx1ZSwgc2V0VmFsdWVdID0gdXNlQXRvbShwb3dlclJhdGVBdG9tKTtcclxuXHJcbiAgaWYgKCF2YWx1ZSkge1xyXG4gICAgcmV0dXJuO1xyXG4gIH1cclxuXHJcbiAgcmV0dXJuIChcclxuICAgIDxEYXRhRWxlbWVudFN3aXRjaGVyXHJcbiAgICAgIHJlYWRPbmx5PXshZWRpdGFibGV9XHJcbiAgICAgIHRpdGxlPXsnVGFyaWZmYSBsdWNlJ31cclxuICAgICAgdmFsdWU9e3ZhbHVlfVxyXG4gICAgICBzZXRWYWx1ZT17c2V0VmFsdWV9XHJcbiAgICAgIHZhbHVlQT17UG93ZXJSYXRlLlNJTkdMRX1cclxuICAgICAgdmFsdWVCPXtQb3dlclJhdGUuQklfSE9VUkxZfVxyXG4gICAgICBsYWJlbEE9eydNb25vcmFyaWEnfVxyXG4gICAgICBsYWJlbEI9eydCaW9yYXJpYSd9XHJcbiAgICAgIHN3aXRjaFRleHRBPXsnVGFyaWZmYSBjb3N0YW50ZSBpbiB0dXR0ZSBsZSBvcmUgZGVsIGdpb3Jubyd9XHJcbiAgICAgIHN3aXRjaFRleHRCPXsnRHVlIHRhcmlmZmUgZGlzdGludGUgaW4gYmFzZSBhIG9yYXJpbyBlIGdpb3Jubyd9XHJcbiAgICAvPlxyXG4gICk7XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy91aS1vcmdhbmlzbXMvc3JjL2xpYi9jYXJ0L2VsZW1lbnRzL1Bvd2VyUmF0ZUVsZW1lbnRTd2l0Y2hlci50c3gifQ==

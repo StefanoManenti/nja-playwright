@@ -1,0 +1,55 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/app/suspense-components.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/apps/naj/src/app/suspense-components.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { StepLayoutSkeleton } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/index.ts";
+import __vite__cjsImport4_react from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react.js?v=0189a8d1"; const Suspense = __vite__cjsImport4_react["Suspense"];
+export function GlobalSuspense({ children }) {
+  return /* @__PURE__ */ jsxDEV(Suspense, { fallback: /* @__PURE__ */ jsxDEV(StepLayoutSkeleton, {}, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/apps/naj/src/app/suspense-components.tsx",
+    lineNumber: 5,
+    columnNumber: 30
+  }, this), children }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/apps/naj/src/app/suspense-components.tsx",
+    lineNumber: 5,
+    columnNumber: 10
+  }, this);
+}
+_c = GlobalSuspense;
+var _c;
+$RefreshReg$(_c, "GlobalSuspense");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/apps/naj/src/app/suspense-components.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBSTZCOzs7OztnQkFKN0IsT0FBU0E7QUFBa0IsY0FBUSwwQ0FBc0I7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ3pELFNBQTJCQyxnQkFBZ0I7QUFFcEMsZ0JBQVNDLGVBQWUsRUFBRUMsU0FBa0MsR0FBRztBQUNwRSxTQUFPLHVCQUFDLFlBQVMsVUFBVSx1QkFBQyx3QkFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBQW1CLEdBQU1BLFlBQTdDO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FBc0Q7QUFDL0Q7QUFBQ0MsS0FGZUY7QUFBYyxJQUFBRTtBQUFBQyxhQUFBRCxJQUFBIiwibmFtZXMiOlsiU3RlcExheW91dFNrZWxldG9uIiwiU3VzcGVuc2UiLCJHbG9iYWxTdXNwZW5zZSIsImNoaWxkcmVuIiwiX2MiLCIkUmVmcmVzaFJlZyQiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsic3VzcGVuc2UtY29tcG9uZW50cy50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgU3RlcExheW91dFNrZWxldG9uIH0gZnJvbSAnQG5hai13by91aS1vcmdhbmlzbXMnO1xyXG5pbXBvcnQgUmVhY3QsIHsgUmVhY3ROb2RlLCBTdXNwZW5zZSB9IGZyb20gJ3JlYWN0JztcclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBHbG9iYWxTdXNwZW5zZSh7IGNoaWxkcmVuIH06IHsgY2hpbGRyZW46IFJlYWN0Tm9kZSB9KSB7XHJcbiAgcmV0dXJuIDxTdXNwZW5zZSBmYWxsYmFjaz17PFN0ZXBMYXlvdXRTa2VsZXRvbiAvPn0+e2NoaWxkcmVufTwvU3VzcGVuc2U+O1xyXG59XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2FwcHMvbmFqL3NyYy9hcHAvc3VzcGVuc2UtY29tcG9uZW50cy50c3gifQ==

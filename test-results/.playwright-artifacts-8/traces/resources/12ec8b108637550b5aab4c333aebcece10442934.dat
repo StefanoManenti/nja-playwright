@@ -1,0 +1,21 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { atom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+export var VulnerabilityFlag = /* @__PURE__ */ ((VulnerabilityFlag2) => {
+  VulnerabilityFlag2["disability"] = "disability";
+  VulnerabilityFlag2["saeMapre"] = "saeMapre";
+  VulnerabilityFlag2["socialBonus"] = "socialBonus";
+  return VulnerabilityFlag2;
+})(VulnerabilityFlag || {});
+export const vulnerabilitySelfCertificationFlags$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\vulnerability\\vulnerability.ts/vulnerabilitySelfCertificationFlags$", atom());
+vulnerabilitySelfCertificationFlags$.debugLabel = "vulnerabilitySelfCertificationFlags$";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLFlBQVk7QUFFZCxXQUFLQyxvQkFBTCxrQkFBS0EsdUJBQUw7QUFDTEMscUNBQWE7QUFDYkMsbUNBQVc7QUFDWEMsc0NBQWM7QUFISkg7QUFBQUE7QUFTWixhQUFBSSx1Q0FBQUMsV0FBQUMsZUFBQUMsSUFBQSwySkFBb0RSLEtBQTBCLENBQUM7QUFBQ0sscUNBQUFJLGFBQUEiLCJuYW1lcyI6WyJhdG9tIiwiVnVsbmVyYWJpbGl0eUZsYWciLCJkaXNhYmlsaXR5Iiwic2FlTWFwcmUiLCJzb2NpYWxCb251cyIsInZ1bG5lcmFiaWxpdHlTZWxmQ2VydGlmaWNhdGlvbkZsYWdzJCIsImdsb2JhbFRoaXMiLCJqb3RhaUF0b21DYWNoZSIsImdldCIsImRlYnVnTGFiZWwiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsidnVsbmVyYWJpbGl0eS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBhdG9tIH0gZnJvbSAnam90YWknO1xyXG5cclxuZXhwb3J0IGVudW0gVnVsbmVyYWJpbGl0eUZsYWcge1xyXG4gIGRpc2FiaWxpdHkgPSAnZGlzYWJpbGl0eScsXHJcbiAgc2FlTWFwcmUgPSAnc2FlTWFwcmUnLFxyXG4gIHNvY2lhbEJvbnVzID0gJ3NvY2lhbEJvbnVzJyxcclxufVxyXG5cclxuLyoqXHJcbiAqIFNhdmVzIEZsYWdzIG9mIFZ1bG5lcmFiaWxpdHkgU2VsZiBDZXJ0aWZpY2F0aW9uLlxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IHZ1bG5lcmFiaWxpdHlTZWxmQ2VydGlmaWNhdGlvbkZsYWdzJCA9IGF0b208VnVsbmVyYWJpbGl0eUZsYWdbXT4oKTtcclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy9kYXRhLWFjY2Vzcy9zcmMvbGliL2F0b21zL3Z1bG5lcmFiaWxpdHkvdnVsbmVyYWJpbGl0eS50cyJ9

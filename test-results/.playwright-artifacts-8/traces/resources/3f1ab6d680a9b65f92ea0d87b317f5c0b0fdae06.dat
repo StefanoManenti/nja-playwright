@@ -1,0 +1,14 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+export { handlers } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access-mock/src/lib/handlers/index.ts";
+export { devModeLogin } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access-mock/src/lib/handlers/_flags.ts";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLGdCQUFnQjtBQUN6QixTQUFTQyxvQkFBb0IiLCJuYW1lcyI6WyJoYW5kbGVycyIsImRldk1vZGVMb2dpbiJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJpbmRleC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgeyBoYW5kbGVycyB9IGZyb20gJy4vbGliL2hhbmRsZXJzJztcclxuZXhwb3J0IHsgZGV2TW9kZUxvZ2luIH0gZnJvbSAnLi9saWIvaGFuZGxlcnMvX2ZsYWdzJztcclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy9kYXRhLWFjY2Vzcy1tb2NrL3NyYy9pbmRleC50cyJ9

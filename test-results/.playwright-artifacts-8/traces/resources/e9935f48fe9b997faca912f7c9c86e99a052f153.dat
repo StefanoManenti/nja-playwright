@@ -1,0 +1,16 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { useMediaQuery } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+export function useMobile() {
+  return useMediaQuery("screen and (max-width: 1023px)");
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLHFCQUFxQjtBQUV2QixnQkFBU0MsWUFBWTtBQUMxQixTQUFPRCxjQUFjLGdDQUFnQztBQUN2RCIsIm5hbWVzIjpbInVzZU1lZGlhUXVlcnkiLCJ1c2VNb2JpbGUiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsibGF5b3V0LXV0aWxzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHVzZU1lZGlhUXVlcnkgfSBmcm9tICdAbmFqLXdvL3VpLWF0b21zJztcclxuXHJcbmV4cG9ydCBmdW5jdGlvbiB1c2VNb2JpbGUoKSB7XHJcbiAgcmV0dXJuIHVzZU1lZGlhUXVlcnkoJ3NjcmVlbiBhbmQgKG1heC13aWR0aDogMTAyM3B4KScpO1xyXG59XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvdWktbW9sZWN1bGVzL3NyYy9saWIvbGF5b3V0L2xheW91dC11dGlscy50cyJ9

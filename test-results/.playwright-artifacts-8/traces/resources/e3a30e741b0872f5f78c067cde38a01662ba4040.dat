@@ -1,0 +1,54 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/send.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/send.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import SvgIcon from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/SvgIcon.tsx";
+export function SendIcon(props) {
+  return /* @__PURE__ */ jsxDEV(SvgIcon, { ...props, viewBox: "0 0 70 70", children: /* @__PURE__ */ jsxDEV("path", { d: "M69.4328 33.1649C69.1198 32.6728 68.6951 32.2926 68.1586 32.0242L4.67427 0.355401C4.04836 0.0422905 3.37775 -0.0695344 2.68479 0.0422905C2.01418 0.154116 1.41063 0.489591 0.918853 0.98162C0.47178 1.47365 0.158829 2.07751 0.0470607 2.74846C-0.0647076 3.41941 0.024707 4.09035 0.292951 4.69421L13.7946 34.9764L0.315304 65.281C0.0470607 65.9072 -0.0423539 66.5782 0.0694143 67.2491C0.181183 67.9201 0.494134 68.5463 0.96356 69.0159C1.43299 69.508 2.03654 69.8435 2.7295 69.9553C2.90833 69.9776 3.08716 70 3.26599 70C3.75777 70 4.24955 69.8882 4.67427 69.6645L68.2033 37.9957C68.7845 37.7049 69.254 37.2353 69.5893 36.6314C69.9022 36.0499 70.0363 35.4014 69.9916 34.7528C69.9469 34.1936 69.7681 33.6345 69.4551 33.1649H69.4328ZM2.95303 3.50887C2.95303 3.50887 2.90833 3.32995 2.90833 3.21812C2.90833 3.12866 2.95303 3.0392 3.0201 2.99447L3.33305 2.94974L64.6044 33.5451H16.3205L2.95303 3.50887ZM3.3554 67.0478L3.04245 67.0031C3.04245 67.0031 2.95303 66.8689 2.93068 66.7794C2.93068 66.69 2.93068 66.5782 2.97539 66.4887L16.3429 36.4749H64.7385L3.3554 67.0478Z", fill: "#008051" }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/send.tsx",
+    lineNumber: 7,
+    columnNumber: 7
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/send.tsx",
+    lineNumber: 6,
+    columnNumber: 5
+  }, this);
+}
+_c = SendIcon;
+var _c;
+$RefreshReg$(_c, "SendIcon");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/send.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBTU07Ozs7O2dCQU5OLE9BQU9BLENBQUssYUFBYTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDekIsT0FBT0MsYUFBYTtBQUViLGdCQUFTQyxTQUFTQyxPQUFvQztBQUMzRCxTQUNFLHVCQUFDLFdBQVEsR0FBSUEsT0FBTyxTQUFRLGFBQzFCLGlDQUFDLFVBQUssR0FBRSxtaUNBQWtpQyxNQUFLLGFBQS9pQztBQUFBO0FBQUE7QUFBQTtBQUFBLFNBQXdqQyxLQUQxakM7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQUVBO0FBRUo7QUFBQ0MsS0FOZUY7QUFBUSxJQUFBRTtBQUFBQyxhQUFBRCxJQUFBIiwibmFtZXMiOlsiUmVhY3QiLCJTdmdJY29uIiwiU2VuZEljb24iLCJwcm9wcyIsIl9jIiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbInNlbmQudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCBTdmdJY29uIGZyb20gJy4vU3ZnSWNvbic7XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gU2VuZEljb24ocHJvcHM6IFJlYWN0LkNvbXBvbmVudFByb3BzPCdzdmcnPikge1xyXG4gIHJldHVybiAoXHJcbiAgICA8U3ZnSWNvbiB7Li4ucHJvcHN9IHZpZXdCb3g9XCIwIDAgNzAgNzBcIj5cclxuICAgICAgPHBhdGggZD1cIk02OS40MzI4IDMzLjE2NDlDNjkuMTE5OCAzMi42NzI4IDY4LjY5NTEgMzIuMjkyNiA2OC4xNTg2IDMyLjAyNDJMNC42NzQyNyAwLjM1NTQwMUM0LjA0ODM2IDAuMDQyMjkwNSAzLjM3Nzc1IC0wLjA2OTUzNDQgMi42ODQ3OSAwLjA0MjI5MDVDMi4wMTQxOCAwLjE1NDExNiAxLjQxMDYzIDAuNDg5NTkxIDAuOTE4ODUzIDAuOTgxNjJDMC40NzE3OCAxLjQ3MzY1IDAuMTU4ODI5IDIuMDc3NTEgMC4wNDcwNjA3IDIuNzQ4NDZDLTAuMDY0NzA3NiAzLjQxOTQxIDAuMDI0NzA3IDQuMDkwMzUgMC4yOTI5NTEgNC42OTQyMUwxMy43OTQ2IDM0Ljk3NjRMMC4zMTUzMDQgNjUuMjgxQzAuMDQ3MDYwNyA2NS45MDcyIC0wLjA0MjM1MzkgNjYuNTc4MiAwLjA2OTQxNDMgNjcuMjQ5MUMwLjE4MTE4MyA2Ny45MjAxIDAuNDk0MTM0IDY4LjU0NjMgMC45NjM1NiA2OS4wMTU5QzEuNDMyOTkgNjkuNTA4IDIuMDM2NTQgNjkuODQzNSAyLjcyOTUgNjkuOTU1M0MyLjkwODMzIDY5Ljk3NzYgMy4wODcxNiA3MCAzLjI2NTk5IDcwQzMuNzU3NzcgNzAgNC4yNDk1NSA2OS44ODgyIDQuNjc0MjcgNjkuNjY0NUw2OC4yMDMzIDM3Ljk5NTdDNjguNzg0NSAzNy43MDQ5IDY5LjI1NCAzNy4yMzUzIDY5LjU4OTMgMzYuNjMxNEM2OS45MDIyIDM2LjA0OTkgNzAuMDM2MyAzNS40MDE0IDY5Ljk5MTYgMzQuNzUyOEM2OS45NDY5IDM0LjE5MzYgNjkuNzY4MSAzMy42MzQ1IDY5LjQ1NTEgMzMuMTY0OUg2OS40MzI4Wk0yLjk1MzAzIDMuNTA4ODdDMi45NTMwMyAzLjUwODg3IDIuOTA4MzMgMy4zMjk5NSAyLjkwODMzIDMuMjE4MTJDMi45MDgzMyAzLjEyODY2IDIuOTUzMDMgMy4wMzkyIDMuMDIwMSAyLjk5NDQ3TDMuMzMzMDUgMi45NDk3NEw2NC42MDQ0IDMzLjU0NTFIMTYuMzIwNUwyLjk1MzAzIDMuNTA4ODdaTTMuMzU1NCA2Ny4wNDc4TDMuMDQyNDUgNjcuMDAzMUMzLjA0MjQ1IDY3LjAwMzEgMi45NTMwMyA2Ni44Njg5IDIuOTMwNjggNjYuNzc5NEMyLjkzMDY4IDY2LjY5IDIuOTMwNjggNjYuNTc4MiAyLjk3NTM5IDY2LjQ4ODdMMTYuMzQyOSAzNi40NzQ5SDY0LjczODVMMy4zNTU0IDY3LjA0NzhaXCIgZmlsbD1cIiMwMDgwNTFcIiAvPlxyXG4gICAgPC9TdmdJY29uPlxyXG4gICk7XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy91aS1pY29ucy9zcmMvbGliL3NlbmQudHN4In0=

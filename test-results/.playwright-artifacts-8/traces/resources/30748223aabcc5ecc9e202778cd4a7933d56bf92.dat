@@ -1,0 +1,16 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/step-layout.module.less");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from "/@vite/client"
+const __vite__id = "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/step-layout.module.less"
+const __vite__css = "/* Viewport and media queries */\n/* Box shadows */\n._main_1e3it_3 {\n  flex: 1;\n}\n._aside_1e3it_6 {\n  flex: 0 0 388px;\n  position: relative;\n}\n._aside_1e3it_6 > * {\n  position: sticky;\n  top: calc(var(--grid-base) * 2 + 80px);\n}\n._cartMobileContainer_1e3it_14 {\n  transform-origin: top right;\n  display: flex;\n  flex-direction: column;\n  gap: calc(var(--grid-base) * 4);\n}\n._aside_1e3it_6 {\n  box-sizing: border-box;\n}\n@media screen and (max-width: 1023px) {\n  ._aside_1e3it_6 {\n    display: none;\n  }\n}\n._centeredContent_1e3it_28 {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n  flex: 1;\n  gap: calc(var(--grid-base) * 4);\n}\n@media screen and (max-width: 1023px) {\n  ._centeredContent_1e3it_28 {\n    gap: calc(var(--grid-base) * 3);\n  }\n}\n"
+__vite__updateStyle(__vite__id, __vite__css)
+export const main = "_main_1e3it_3";
+export const aside = "_aside_1e3it_6";
+export const cartMobileContainer = "_cartMobileContainer_1e3it_14";
+export const centeredContent = "_centeredContent_1e3it_28";
+export default {
+	main: main,
+	aside: aside,
+	cartMobileContainer: cartMobileContainer,
+	centeredContent: centeredContent
+};
+
+import.meta.hot.prune(() => __vite__removeStyle(__vite__id))

@@ -1,0 +1,70 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/cta-container.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/cta-container.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { StickyBottom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/StickyBottom.tsx";
+import classes from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/layout.module.less";
+export function CtaContainer({ children }) {
+  return /* @__PURE__ */ jsxDEV("div", { className: classes.buttonsContainer, children: typeof children === "function" ? children({ noMobileClassName: classes.noMobile }) : children }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/cta-container.tsx",
+    lineNumber: 11,
+    columnNumber: 5
+  }, this);
+}
+_c = CtaContainer;
+export function CtaLayoutContainer({
+  children,
+  variant = "plain"
+}) {
+  if (variant === "sticky-bottom") {
+    return /* @__PURE__ */ jsxDEV(StickyBottom, { children }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/cta-container.tsx",
+      lineNumber: 29,
+      columnNumber: 12
+    }, this);
+  }
+  return /* @__PURE__ */ jsxDEV("div", { className: classes.ctaLayoutContainer, children }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/cta-container.tsx",
+    lineNumber: 31,
+    columnNumber: 10
+  }, this);
+}
+_c2 = CtaLayoutContainer;
+var _c, _c2;
+$RefreshReg$(_c, "CtaContainer");
+$RefreshReg$(_c2, "CtaLayoutContainer");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/cta-container.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBVUk7Ozs7O2dCQVZKLE9BQU9BLENBQUssYUFBYTtBQUFBLE9BQVEsT0FBTztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ3hDLFNBQVNDLG9CQUFvQjtBQUM3QixPQUFPQyxhQUFhO0FBTWIsZ0JBQVNDLGFBQWEsRUFBRUMsU0FBNEIsR0FBRztBQUM1RCxTQUNFLHVCQUFDLFNBQUksV0FBV0YsUUFBUUcsa0JBQ3JCLGlCQUFPRCxhQUFhLGFBQ2pCQSxTQUFTLEVBQUVFLG1CQUFtQkosUUFBUUssU0FBUyxDQUFDLElBQ2hESCxZQUhOO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FJQTtBQUVKO0FBQUNJLEtBUmVMO0FBZVQsZ0JBQVNNLG1CQUFtQjtBQUFBLEVBQ2pDTDtBQUFBQSxFQUNBTSxVQUFVO0FBQ2EsR0FBRztBQUMxQixNQUFJQSxZQUFZLGlCQUFpQjtBQUMvQixXQUFPLHVCQUFDLGdCQUFjTixZQUFmO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBd0I7QUFBQSxFQUNqQztBQUNBLFNBQU8sdUJBQUMsU0FBSSxXQUFXRixRQUFRUyxvQkFBcUJQLFlBQTdDO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FBc0Q7QUFDL0Q7QUFBQ1EsTUFSZUg7QUFBa0IsSUFBQUQsSUFBQUk7QUFBQUMsYUFBQUwsSUFBQTtBQUFBSyxhQUFBRCxLQUFBIiwibmFtZXMiOlsiUmVhY3QiLCJTdGlja3lCb3R0b20iLCJjbGFzc2VzIiwiQ3RhQ29udGFpbmVyIiwiY2hpbGRyZW4iLCJidXR0b25zQ29udGFpbmVyIiwibm9Nb2JpbGVDbGFzc05hbWUiLCJub01vYmlsZSIsIl9jIiwiQ3RhTGF5b3V0Q29udGFpbmVyIiwidmFyaWFudCIsImN0YUxheW91dENvbnRhaW5lciIsIl9jMiIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJjdGEtY29udGFpbmVyLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgUmVhY3ROb2RlIH0gZnJvbSAncmVhY3QnO1xyXG5pbXBvcnQgeyBTdGlja3lCb3R0b20gfSBmcm9tICcuL1N0aWNreUJvdHRvbSc7XHJcbmltcG9ydCBjbGFzc2VzIGZyb20gJy4vbGF5b3V0Lm1vZHVsZS5sZXNzJztcclxuXHJcbmV4cG9ydCBpbnRlcmZhY2UgQ3RhQ29udGFpbmVyUHJvcHMge1xyXG4gIGNoaWxkcmVuOiBSZWFjdE5vZGUgfCAoKGJhZzogeyBub01vYmlsZUNsYXNzTmFtZT86IHN0cmluZyB9KSA9PiBSZWFjdE5vZGUpO1xyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gQ3RhQ29udGFpbmVyKHsgY2hpbGRyZW4gfTogQ3RhQ29udGFpbmVyUHJvcHMpIHtcclxuICByZXR1cm4gKFxyXG4gICAgPGRpdiBjbGFzc05hbWU9e2NsYXNzZXMuYnV0dG9uc0NvbnRhaW5lcn0+XHJcbiAgICAgIHt0eXBlb2YgY2hpbGRyZW4gPT09ICdmdW5jdGlvbidcclxuICAgICAgICA/IGNoaWxkcmVuKHsgbm9Nb2JpbGVDbGFzc05hbWU6IGNsYXNzZXMubm9Nb2JpbGUgfSlcclxuICAgICAgICA6IGNoaWxkcmVufVxyXG4gICAgPC9kaXY+XHJcbiAgKTtcclxufVxyXG5cclxuaW50ZXJmYWNlIEN0YUxheW91dENvbnRhaW5lclByb3BzIHtcclxuICB2YXJpYW50OiAnc3RpY2t5LWJvdHRvbScgfCAncGxhaW4nO1xyXG4gIGNoaWxkcmVuOiBSZWFjdE5vZGU7XHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBDdGFMYXlvdXRDb250YWluZXIoe1xyXG4gIGNoaWxkcmVuLFxyXG4gIHZhcmlhbnQgPSAncGxhaW4nLFxyXG59OiBDdGFMYXlvdXRDb250YWluZXJQcm9wcykge1xyXG4gIGlmICh2YXJpYW50ID09PSAnc3RpY2t5LWJvdHRvbScpIHtcclxuICAgIHJldHVybiA8U3RpY2t5Qm90dG9tPntjaGlsZHJlbn08L1N0aWNreUJvdHRvbT47XHJcbiAgfVxyXG4gIHJldHVybiA8ZGl2IGNsYXNzTmFtZT17Y2xhc3Nlcy5jdGFMYXlvdXRDb250YWluZXJ9PntjaGlsZHJlbn08L2Rpdj47XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy91aS1tb2xlY3VsZXMvc3JjL2xpYi9sYXlvdXQvY3RhLWNvbnRhaW5lci50c3gifQ==

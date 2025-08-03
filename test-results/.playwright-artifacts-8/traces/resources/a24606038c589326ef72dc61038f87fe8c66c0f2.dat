@@ -1,0 +1,53 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app-integration.tsx");import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app-integration.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { useEngine } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/index.ts";
+import { useAppEvent } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/index.ts";
+export function EngineAppIntegration() {
+  _s();
+  const { prev } = useEngine();
+  useAppEvent("back", prev);
+  return null;
+}
+_s(EngineAppIntegration, "wsYhlAt6w0KSpCnKTTUoliocuL0=", false, function() {
+  return [useEngine, useAppEvent];
+});
+_c = EngineAppIntegration;
+var _c;
+$RefreshReg$(_c, "EngineAppIntegration");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app-integration.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7OztxQ0FBQTtBQUFBLE9BQVNBLGlEQUFpQztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUMxQyxTQUFTQyxtQkFBbUI7QUFFckIsZ0JBQVNDLHVCQUF1QjtBQUFBQyxLQUFBO0FBQ3JDLFFBQU0sRUFBRUMsS0FBSyxJQUFJSixVQUFVO0FBQzNCQyxjQUFZLFFBQVFHLElBQUk7QUFFeEIsU0FBTztBQUNUO0FBQUNELEdBTGVELHNCQUFvQjtBQUFBLFVBQ2pCRixXQUNqQkMsV0FBVztBQUFBO0FBQUFJLEtBRkdIO0FBQW9CLElBQUFHO0FBQUFDLGFBQUFELElBQUEiLCJuYW1lcyI6WyJ1c2VFbmdpbmUiLCJ1c2VBcHBFdmVudCIsIkVuZ2luZUFwcEludGVncmF0aW9uIiwiX3MiLCJwcmV2IiwiX2MiLCIkUmVmcmVzaFJlZyQiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiZW5naW5lLWFwcC1pbnRlZ3JhdGlvbi50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgdXNlRW5naW5lIH0gZnJvbSAnQG5hai13by9lbmdpbmUnO1xyXG5pbXBvcnQgeyB1c2VBcHBFdmVudCB9IGZyb20gJ0BuYWotd28vdXRpbCc7XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gRW5naW5lQXBwSW50ZWdyYXRpb24oKSB7XHJcbiAgY29uc3QgeyBwcmV2IH0gPSB1c2VFbmdpbmUoKTtcclxuICB1c2VBcHBFdmVudCgnYmFjaycsIHByZXYpO1xyXG5cclxuICByZXR1cm4gbnVsbDtcclxufVxyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL3N0ZXBzL3NyYy9saWIvZW5naW5lLWFwcC1pbnRlZ3JhdGlvbi50c3gifQ==

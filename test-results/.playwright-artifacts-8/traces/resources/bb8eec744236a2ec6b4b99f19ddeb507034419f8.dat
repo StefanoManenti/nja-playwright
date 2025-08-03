@@ -1,0 +1,126 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/modals.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/modals.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { Modal, ModalErrorContent } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+import { ToolsIcon } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/index.ts";
+export function ModalErrorRequestNotAvailable(props) {
+  return /* @__PURE__ */ jsxDEV(Modal, { children: /* @__PURE__ */ jsxDEV(
+    ModalErrorContent,
+    {
+      icon: /* @__PURE__ */ jsxDEV(ToolsIcon, {}, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/modals.tsx",
+        lineNumber: 9,
+        columnNumber: 15
+      }, this),
+      title: "Richiesta non disponibile",
+      text: /* @__PURE__ */ jsxDEV(Fragment, { children: [
+        "Ci dispiace, purtroppo non è possibile continuare con la richiesta.",
+        /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/modals.tsx",
+          lineNumber: 14,
+          columnNumber: 13
+        }, this),
+        "Per maggiori informazioni contatta il nostro servizio clienti."
+      ] }, void 0, true, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/modals.tsx",
+        lineNumber: 12,
+        columnNumber: 9
+      }, this),
+      cta: "Ok ho capito",
+      onClose: props.onClose
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/modals.tsx",
+      lineNumber: 8,
+      columnNumber: 7
+    },
+    this
+  ) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/modals.tsx",
+    lineNumber: 7,
+    columnNumber: 5
+  }, this);
+}
+_c = ModalErrorRequestNotAvailable;
+export function ModalErrorCreditCheck(props) {
+  return /* @__PURE__ */ jsxDEV(Modal, { children: /* @__PURE__ */ jsxDEV(
+    ModalErrorContent,
+    {
+      icon: /* @__PURE__ */ jsxDEV(ToolsIcon, {}, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/modals.tsx",
+        lineNumber: 29,
+        columnNumber: 15
+      }, this),
+      title: "Attenzione",
+      text: /* @__PURE__ */ jsxDEV(Fragment, { children: [
+        "Ci dispiace, al momento la tua richiesta di sottoscrizione non può essere inoltrata.",
+        /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/modals.tsx",
+          lineNumber: 35,
+          columnNumber: 13
+        }, this),
+        "Riprova tra poco, oppure entra in chat per chiedere assistenza."
+      ] }, void 0, true, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/modals.tsx",
+        lineNumber: 32,
+        columnNumber: 9
+      }, this),
+      cta: "Ok ho capito",
+      onClose: props.onClose
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/modals.tsx",
+      lineNumber: 28,
+      columnNumber: 7
+    },
+    this
+  ) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/modals.tsx",
+    lineNumber: 27,
+    columnNumber: 5
+  }, this);
+}
+_c2 = ModalErrorCreditCheck;
+var _c, _c2;
+$RefreshReg$(_c, "ModalErrorRequestNotAvailable");
+$RefreshReg$(_c2, "ModalErrorCreditCheck");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/modals.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBUWMsU0FHSixVQUhJOzs7OztnQkFSZCxPQUFTQSxjQUFPQztBQUFBQSxPQUFpQixpREFBMEI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQzNELFNBQVNDLGlCQUFpQjtBQUduQixnQkFBU0MsOEJBQThCQyxPQUFnQztBQUM1RSxTQUNFLHVCQUFDLFNBQ0M7QUFBQSxJQUFDO0FBQUE7QUFBQSxNQUNDLE1BQU0sdUJBQUMsZUFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQVU7QUFBQSxNQUNoQixPQUFPO0FBQUEsTUFDUCxNQUNFLG1DQUFFO0FBQUE7QUFBQSxRQUVBLHVCQUFDLFVBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUFHO0FBQUEsUUFBRztBQUFBLFdBRlI7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUlBO0FBQUEsTUFFRixLQUFLO0FBQUEsTUFDTCxTQUFTQSxNQUFNQztBQUFBQTtBQUFBQSxJQVhqQjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsRUFXeUIsS0FaM0I7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQWNBO0FBRUo7QUFBQ0MsS0FsQmVIO0FBb0JULGdCQUFTSSxzQkFBc0JILE9BQWdDO0FBQ3BFLFNBQ0UsdUJBQUMsU0FDQztBQUFBLElBQUM7QUFBQTtBQUFBLE1BQ0MsTUFBTSx1QkFBQyxlQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFBVTtBQUFBLE1BQ2hCLE9BQU87QUFBQSxNQUNQLE1BQ0UsbUNBQUU7QUFBQTtBQUFBLFFBR0EsdUJBQUMsVUFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQUc7QUFBQSxRQUFHO0FBQUEsV0FIUjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBS0E7QUFBQSxNQUVGLEtBQUs7QUFBQSxNQUNMLFNBQVNBLE1BQU1DO0FBQUFBO0FBQUFBLElBWmpCO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxFQVl5QixLQWIzQjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBZUE7QUFFSjtBQUFDRyxNQW5CZUQ7QUFBcUIsSUFBQUQsSUFBQUU7QUFBQUMsYUFBQUgsSUFBQTtBQUFBRyxhQUFBRCxLQUFBIiwibmFtZXMiOlsiTW9kYWwiLCJNb2RhbEVycm9yQ29udGVudCIsIlRvb2xzSWNvbiIsIk1vZGFsRXJyb3JSZXF1ZXN0Tm90QXZhaWxhYmxlIiwicHJvcHMiLCJvbkNsb3NlIiwiX2MiLCJNb2RhbEVycm9yQ3JlZGl0Q2hlY2siLCJfYzIiLCIkUmVmcmVzaFJlZyQiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsibW9kYWxzLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBNb2RhbCwgTW9kYWxFcnJvckNvbnRlbnQgfSBmcm9tICdAbmFqLXdvL3VpLWF0b21zJztcclxuaW1wb3J0IHsgVG9vbHNJY29uIH0gZnJvbSAnQG5hai13by91aS1pY29ucyc7XHJcbmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gTW9kYWxFcnJvclJlcXVlc3ROb3RBdmFpbGFibGUocHJvcHM6IHsgb25DbG9zZTogKCkgPT4gdm9pZCB9KSB7XHJcbiAgcmV0dXJuIChcclxuICAgIDxNb2RhbD5cclxuICAgICAgPE1vZGFsRXJyb3JDb250ZW50XHJcbiAgICAgICAgaWNvbj17PFRvb2xzSWNvbiAvPn1cclxuICAgICAgICB0aXRsZT17J1JpY2hpZXN0YSBub24gZGlzcG9uaWJpbGUnfVxyXG4gICAgICAgIHRleHQ9e1xyXG4gICAgICAgICAgPD5cclxuICAgICAgICAgICAgQ2kgZGlzcGlhY2UsIHB1cnRyb3BwbyBub24gw6ggcG9zc2liaWxlIGNvbnRpbnVhcmUgY29uIGxhIHJpY2hpZXN0YS5cclxuICAgICAgICAgICAgPGJyIC8+XHJcbiAgICAgICAgICAgIFBlciBtYWdnaW9yaSBpbmZvcm1hemlvbmkgY29udGF0dGEgaWwgbm9zdHJvIHNlcnZpemlvIGNsaWVudGkuXHJcbiAgICAgICAgICA8Lz5cclxuICAgICAgICB9XHJcbiAgICAgICAgY3RhPXsnT2sgaG8gY2FwaXRvJ31cclxuICAgICAgICBvbkNsb3NlPXtwcm9wcy5vbkNsb3NlfVxyXG4gICAgICAvPlxyXG4gICAgPC9Nb2RhbD5cclxuICApO1xyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gTW9kYWxFcnJvckNyZWRpdENoZWNrKHByb3BzOiB7IG9uQ2xvc2U6ICgpID0+IHZvaWQgfSkge1xyXG4gIHJldHVybiAoXHJcbiAgICA8TW9kYWw+XHJcbiAgICAgIDxNb2RhbEVycm9yQ29udGVudFxyXG4gICAgICAgIGljb249ezxUb29sc0ljb24gLz59XHJcbiAgICAgICAgdGl0bGU9eydBdHRlbnppb25lJ31cclxuICAgICAgICB0ZXh0PXtcclxuICAgICAgICAgIDw+XHJcbiAgICAgICAgICAgIENpIGRpc3BpYWNlLCBhbCBtb21lbnRvIGxhIHR1YSByaWNoaWVzdGEgZGkgc290dG9zY3JpemlvbmUgbm9uIHB1w7JcclxuICAgICAgICAgICAgZXNzZXJlIGlub2x0cmF0YS5cclxuICAgICAgICAgICAgPGJyIC8+XHJcbiAgICAgICAgICAgIFJpcHJvdmEgdHJhIHBvY28sIG9wcHVyZSBlbnRyYSBpbiBjaGF0IHBlciBjaGllZGVyZSBhc3Npc3RlbnphLlxyXG4gICAgICAgICAgPC8+XHJcbiAgICAgICAgfVxyXG4gICAgICAgIGN0YT17J09rIGhvIGNhcGl0byd9XHJcbiAgICAgICAgb25DbG9zZT17cHJvcHMub25DbG9zZX1cclxuICAgICAgLz5cclxuICAgIDwvTW9kYWw+XHJcbiAgKTtcclxufVxyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL3N0ZXBzL3NyYy9saWIvc2VydmljZXMtZXJyb3JzL21vZGFscy50c3gifQ==

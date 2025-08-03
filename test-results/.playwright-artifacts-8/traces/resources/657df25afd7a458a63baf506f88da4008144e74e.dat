@@ -1,0 +1,19 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { delay, http, HttpResponse } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/msw.js?v=0189a8d1";
+export default [http.post(/\/webOrderCommonServices\/file\/identityOcrUpload/, async () => {
+  await delay();
+  return HttpResponse.json({
+    outcome: "OK"
+  });
+})];
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLE9BQU9DLE1BQU1DLG9CQUFvQjtBQUUxQyxlQUFlLENBQ2JELEtBQUtFLEtBQUsscURBQXFELFlBQVk7QUFDekUsUUFBTUgsTUFBTTtBQUVaLFNBQU9FLGFBQWFFLEtBQUs7QUFBQSxJQUN2QkMsU0FBUztBQUFBLEVBQ1gsQ0FBQztBQUNILENBQUMsQ0FBQyIsIm5hbWVzIjpbImRlbGF5IiwiaHR0cCIsIkh0dHBSZXNwb25zZSIsInBvc3QiLCJqc29uIiwib3V0Y29tZSJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJ2dWxuZXJhYmlsaXR5LnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGRlbGF5LCBodHRwLCBIdHRwUmVzcG9uc2UgfSBmcm9tICdtc3cnO1xyXG5cclxuZXhwb3J0IGRlZmF1bHQgW1xyXG4gIGh0dHAucG9zdCgvXFwvd2ViT3JkZXJDb21tb25TZXJ2aWNlc1xcL2ZpbGVcXC9pZGVudGl0eU9jclVwbG9hZC8sIGFzeW5jICgpID0+IHtcclxuICAgIGF3YWl0IGRlbGF5KCk7XHJcblxyXG4gICAgcmV0dXJuIEh0dHBSZXNwb25zZS5qc29uKHtcclxuICAgICAgb3V0Y29tZTogJ09LJyxcclxuICAgIH0pO1xyXG4gIH0pLFxyXG5dO1xyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL2RhdGEtYWNjZXNzLW1vY2svc3JjL2xpYi9oYW5kbGVycy92dWxuZXJhYmlsaXR5LnRzIn0=

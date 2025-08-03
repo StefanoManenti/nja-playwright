@@ -1,0 +1,14 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/IconButton.module.less");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from "/@vite/client"
+const __vite__id = "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/IconButton.module.less"
+const __vite__css = "._resetButton_lrqi3_1 {\n  background-color: transparent;\n  border: 0;\n  padding: 0;\n  cursor: pointer;\n  color: inherit;\n  text-align: left;\n}\n._resetButton_lrqi3_1:focus-visible {\n  outline: 2px solid var(--Text-Default-Grey);\n}\n._resetButtonWithPadding_lrqi3_12 {\n  background-color: transparent;\n  border: 0;\n  padding: 0;\n  cursor: pointer;\n  color: inherit;\n  text-align: left;\n  margin: calc(var(--grid-base) * -2);\n  padding: calc(var(--grid-base) * 2);\n  border-radius: var(--grid-base);\n  transition: all 150ms ease;\n  display: flex;\n  gap: var(--grid-base);\n  align-items: center;\n}\n._resetButtonWithPadding_lrqi3_12:focus-visible {\n  outline: 2px solid var(--Text-Default-Grey);\n}\n._resetButtonWithPadding_lrqi3_12:hover {\n  text-decoration-line: underline;\n}\n._resetButtonWithPadding_lrqi3_12:active {\n  background: var(--Background-Future-Grey);\n}\n/**\n * needs position: relative on some ancestor\n */\n.pln-control-input {\n  cursor: inherit;\n  position: absolute;\n  opacity: 0;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  z-index: -1;\n}\n._IconButton_lrqi3_51 {\n  background-color: transparent;\n  border: 0;\n  padding: 0;\n  cursor: pointer;\n  color: inherit;\n  text-align: left;\n  border-radius: 2px;\n  padding: 4px;\n  margin: -4px;\n  font-size: 1.5rem;\n  display: flex;\n}\n._IconButton_lrqi3_51:focus-visible {\n  outline: 2px solid var(--Text-Default-Grey);\n}\n._IconButton_lrqi3_51:active {\n  color: var(--Text-Medium-Grey);\n}\n"
+__vite__updateStyle(__vite__id, __vite__css)
+export const resetButton = "_resetButton_lrqi3_1";
+export const resetButtonWithPadding = "_resetButtonWithPadding_lrqi3_12";
+export const IconButton = "_IconButton_lrqi3_51";
+export default {
+	resetButton: resetButton,
+	resetButtonWithPadding: resetButtonWithPadding,
+	IconButton: IconButton
+};
+
+import.meta.hot.prune(() => __vite__removeStyle(__vite__id))

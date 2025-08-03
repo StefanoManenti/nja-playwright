@@ -1,0 +1,18 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataRecapBox.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataElement.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataElementSwitcher.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/SwitcherHelperText.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataElementErrorBoundary.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataElementSuspense.tsx";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLGNBQWM7QUFDZCxjQUFjO0FBQ2QsY0FBYztBQUNkLGNBQWM7QUFDZCxjQUFjO0FBQ2QsY0FBYyIsIm5hbWVzIjpbXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiaW5kZXgudHMiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0ICogZnJvbSAnLi9EYXRhUmVjYXBCb3gnO1xyXG5leHBvcnQgKiBmcm9tICcuL0RhdGFFbGVtZW50JztcclxuZXhwb3J0ICogZnJvbSAnLi9EYXRhRWxlbWVudFN3aXRjaGVyJztcclxuZXhwb3J0ICogZnJvbSAnLi9Td2l0Y2hlckhlbHBlclRleHQnO1xyXG5leHBvcnQgKiBmcm9tICcuL0RhdGFFbGVtZW50RXJyb3JCb3VuZGFyeSc7XHJcbmV4cG9ydCAqIGZyb20gJy4vRGF0YUVsZW1lbnRTdXNwZW5zZSc7XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvdWktbW9sZWN1bGVzL3NyYy9saWIvcmVjYXAtYm94L2luZGV4LnRzIn0=

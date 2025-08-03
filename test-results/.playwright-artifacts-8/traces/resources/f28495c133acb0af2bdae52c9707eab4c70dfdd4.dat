@@ -1,0 +1,54 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/fiber.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/fiber.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import SvgIcon from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/SvgIcon.tsx";
+export function FiberIcon(props) {
+  return /* @__PURE__ */ jsxDEV(SvgIcon, { ...props, viewBox: "0 0 24 24", children: /* @__PURE__ */ jsxDEV("path", { d: "M1 8.99977L3 10.9998C7.97 6.02977 16.03 6.02977 21 10.9998L23 8.99977C16.93 2.92977 7.08 2.92977 1 8.99977ZM9 16.9998L12 19.9998L15 16.9998C13.35 15.3398 10.66 15.3398 9 16.9998ZM5 12.9998L7 14.9998C9.76 12.2398 14.24 12.2398 17 14.9998L19 12.9998C15.14 9.13977 8.87 9.13977 5 12.9998Z" }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/fiber.tsx",
+    lineNumber: 7,
+    columnNumber: 7
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/fiber.tsx",
+    lineNumber: 6,
+    columnNumber: 5
+  }, this);
+}
+_c = FiberIcon;
+var _c;
+$RefreshReg$(_c, "FiberIcon");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/fiber.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBTU07Ozs7O2dCQU5OLE9BQU9BLENBQUssYUFBYTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDekIsT0FBT0MsYUFBYTtBQUViLGdCQUFTQyxVQUFVQyxPQUFvQztBQUM1RCxTQUNFLHVCQUFDLFdBQVEsR0FBSUEsT0FBTyxTQUFRLGFBQzFCLGlDQUFDLFVBQUssR0FBRSxtU0FBUjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBQXVTLEtBRHpTO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FFQTtBQUVKO0FBQUNDLEtBTmVGO0FBQVMsSUFBQUU7QUFBQUMsYUFBQUQsSUFBQSIsIm5hbWVzIjpbIlJlYWN0IiwiU3ZnSWNvbiIsIkZpYmVySWNvbiIsInByb3BzIiwiX2MiLCIkUmVmcmVzaFJlZyQiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiZmliZXIudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCBTdmdJY29uIGZyb20gJy4vU3ZnSWNvbic7XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gRmliZXJJY29uKHByb3BzOiBSZWFjdC5Db21wb25lbnRQcm9wczwnc3ZnJz4pIHtcclxuICByZXR1cm4gKFxyXG4gICAgPFN2Z0ljb24gey4uLnByb3BzfSB2aWV3Qm94PVwiMCAwIDI0IDI0XCI+XHJcbiAgICAgIDxwYXRoIGQ9XCJNMSA4Ljk5OTc3TDMgMTAuOTk5OEM3Ljk3IDYuMDI5NzcgMTYuMDMgNi4wMjk3NyAyMSAxMC45OTk4TDIzIDguOTk5NzdDMTYuOTMgMi45Mjk3NyA3LjA4IDIuOTI5NzcgMSA4Ljk5OTc3Wk05IDE2Ljk5OThMMTIgMTkuOTk5OEwxNSAxNi45OTk4QzEzLjM1IDE1LjMzOTggMTAuNjYgMTUuMzM5OCA5IDE2Ljk5OThaTTUgMTIuOTk5OEw3IDE0Ljk5OThDOS43NiAxMi4yMzk4IDE0LjI0IDEyLjIzOTggMTcgMTQuOTk5OEwxOSAxMi45OTk4QzE1LjE0IDkuMTM5NzcgOC44NyA5LjEzOTc3IDUgMTIuOTk5OFpcIiAvPlxyXG4gICAgPC9TdmdJY29uPlxyXG4gICk7XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy91aS1pY29ucy9zcmMvbGliL2ZpYmVyLnRzeCJ9

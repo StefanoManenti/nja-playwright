@@ -1,0 +1,86 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/PowerCartSection.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/PowerCartSection.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { offerContractPower$ } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/index.ts";
+import { PowerSmallIcon } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/index.ts";
+import { CartSection } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/CartSection.tsx";
+import { PowerRateElementSwitcher } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/elements/PowerRateElementSwitcher.tsx";
+import { PowerCartPrices } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/prices/index.tsx";
+import { CommodityContractButton } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/CommodityContractButton.tsx";
+export function PowerCartSection({
+  editable,
+  tsOperativeModes
+}) {
+  return /* @__PURE__ */ jsxDEV(
+    CartSection,
+    {
+      variant: "commodity",
+      title: "Dettagli luce",
+      icon: PowerSmallIcon,
+      children: [
+        /* @__PURE__ */ jsxDEV(PowerRateElementSwitcher, { editable }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/PowerCartSection.tsx",
+          lineNumber: 21,
+          columnNumber: 7
+        }, this),
+        /* @__PURE__ */ jsxDEV(PowerCartPrices, { tsOperativeModes }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/PowerCartSection.tsx",
+          lineNumber: 22,
+          columnNumber: 7
+        }, this),
+        !editable && /* @__PURE__ */ jsxDEV(CommodityContractButton, { atom: offerContractPower$, label: "Luce" }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/PowerCartSection.tsx",
+          lineNumber: 24,
+          columnNumber: 7
+        }, this)
+      ]
+    },
+    void 0,
+    true,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/PowerCartSection.tsx",
+      lineNumber: 16,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_c = PowerCartSection;
+var _c;
+$RefreshReg$(_c, "PowerCartSection");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/PowerCartSection.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBb0JNOzs7OztnQkFwQk4sT0FBU0E7QUFBbUIsY0FBUSwwQ0FBcUI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ3pELFNBQVNDLHNCQUFzQjtBQUMvQixTQUFTQyxtQkFBbUI7QUFDNUIsU0FBU0MsZ0NBQWdDO0FBQ3pDLFNBQVNDLHVCQUF1QjtBQUNoQyxTQUFTQywrQkFBK0I7QUFFakMsZ0JBQVNDLGlCQUFpQjtBQUFBLEVBQy9CQztBQUFBQSxFQUNBQztBQUlGLEdBQUc7QUFDRCxTQUNFO0FBQUEsSUFBQztBQUFBO0FBQUEsTUFDQyxTQUFRO0FBQUEsTUFDUixPQUFPO0FBQUEsTUFDUCxNQUFNUDtBQUFBQSxNQUVOO0FBQUEsK0JBQUMsNEJBQXlCLFlBQTFCO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFBNkM7QUFBQSxRQUM3Qyx1QkFBQyxtQkFBZ0Isb0JBQWpCO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFBb0Q7QUFBQSxRQUNuRCxDQUFDTSxZQUNBLHVCQUFDLDJCQUF3QixNQUFNUCxxQkFBcUIsT0FBTyxVQUEzRDtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQWtFO0FBQUE7QUFBQTtBQUFBLElBUnRFO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxFQVVBO0FBRUo7QUFBQ1MsS0FwQmVIO0FBQWdCLElBQUFHO0FBQUFDLGFBQUFELElBQUEiLCJuYW1lcyI6WyJvZmZlckNvbnRyYWN0UG93ZXIkIiwiUG93ZXJTbWFsbEljb24iLCJDYXJ0U2VjdGlvbiIsIlBvd2VyUmF0ZUVsZW1lbnRTd2l0Y2hlciIsIlBvd2VyQ2FydFByaWNlcyIsIkNvbW1vZGl0eUNvbnRyYWN0QnV0dG9uIiwiUG93ZXJDYXJ0U2VjdGlvbiIsImVkaXRhYmxlIiwidHNPcGVyYXRpdmVNb2RlcyIsIl9jIiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIlBvd2VyQ2FydFNlY3Rpb24udHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IG9mZmVyQ29udHJhY3RQb3dlciQgfSBmcm9tICdAbmFqLXdvL2RhdGEtYWNjZXNzJztcclxuaW1wb3J0IHsgUG93ZXJTbWFsbEljb24gfSBmcm9tICdAbmFqLXdvL3VpLWljb25zJztcclxuaW1wb3J0IHsgQ2FydFNlY3Rpb24gfSBmcm9tICcuLi9DYXJ0U2VjdGlvbic7XHJcbmltcG9ydCB7IFBvd2VyUmF0ZUVsZW1lbnRTd2l0Y2hlciB9IGZyb20gJy4uL2VsZW1lbnRzL1Bvd2VyUmF0ZUVsZW1lbnRTd2l0Y2hlcic7XHJcbmltcG9ydCB7IFBvd2VyQ2FydFByaWNlcyB9IGZyb20gJy4uL3ByaWNlcyc7XHJcbmltcG9ydCB7IENvbW1vZGl0eUNvbnRyYWN0QnV0dG9uIH0gZnJvbSAnLi9Db21tb2RpdHlDb250cmFjdEJ1dHRvbic7XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gUG93ZXJDYXJ0U2VjdGlvbih7XHJcbiAgZWRpdGFibGUsXHJcbiAgdHNPcGVyYXRpdmVNb2RlcyxcclxufToge1xyXG4gIGVkaXRhYmxlPzogYm9vbGVhbjtcclxuICB0c09wZXJhdGl2ZU1vZGVzPzogYm9vbGVhbjtcclxufSkge1xyXG4gIHJldHVybiAoXHJcbiAgICA8Q2FydFNlY3Rpb25cclxuICAgICAgdmFyaWFudD1cImNvbW1vZGl0eVwiXHJcbiAgICAgIHRpdGxlPXsnRGV0dGFnbGkgbHVjZSd9XHJcbiAgICAgIGljb249e1Bvd2VyU21hbGxJY29ufVxyXG4gICAgPlxyXG4gICAgICA8UG93ZXJSYXRlRWxlbWVudFN3aXRjaGVyIGVkaXRhYmxlPXtlZGl0YWJsZX0gLz5cclxuICAgICAgPFBvd2VyQ2FydFByaWNlcyB0c09wZXJhdGl2ZU1vZGVzPXt0c09wZXJhdGl2ZU1vZGVzfSAvPlxyXG4gICAgICB7IWVkaXRhYmxlICYmIChcclxuICAgICAgICA8Q29tbW9kaXR5Q29udHJhY3RCdXR0b24gYXRvbT17b2ZmZXJDb250cmFjdFBvd2VyJH0gbGFiZWw9eydMdWNlJ30gLz5cclxuICAgICAgKX1cclxuICAgIDwvQ2FydFNlY3Rpb24+XHJcbiAgKTtcclxufVxyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL3VpLW9yZ2FuaXNtcy9zcmMvbGliL2NhcnQvc2VjdGlvbnMvUG93ZXJDYXJ0U2VjdGlvbi50c3gifQ==

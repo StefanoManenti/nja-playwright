@@ -1,0 +1,16 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/TextField.module.less");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from "/@vite/client"
+const __vite__id = "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/TextField.module.less"
+const __vite__css = "._root_1588n_1 {\n  /*.helperText {\n    color: var(--Text-Medium-Grey);\n  }*/\n}\n._root_1588n_1._error_1588n_6 {\n  --color: var(--System-Colors-Ruby-Red);\n  --background: var(--System-Colors-Lavender-Blush);\n  color: var(--color);\n}\n._root_1588n_1 ._textArea_1588n_11 {\n  width: 100%;\n  --input-background: var(--background, var(--Background-White));\n  --input-color: var(--color, var(--Text-Default-Grey));\n  cursor: pointer;\n  display: flex;\n  padding: var(--grid-base) calc(var(--grid-base)*2);\n  justify-content: flex-start;\n  gap: var(--grid-base);\n  flex-shrink: 0;\n  border-radius: calc(var(--grid-base)*0.5);\n  border: 1px solid var(--input-color);\n  color: var(--input-color);\n  background: var(--input-background);\n  position: relative;\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 24px;\n  resize: vertical;\n}\n._root_1588n_1 ._helperTextGrid_1588n_32 {\n  display: flex;\n  justify-content: space-between;\n}\n"
+__vite__updateStyle(__vite__id, __vite__css)
+export const root = "_root_1588n_1";
+export const error = "_error_1588n_6";
+export const textArea = "_textArea_1588n_11";
+export const helperTextGrid = "_helperTextGrid_1588n_32";
+export default {
+	root: root,
+	error: error,
+	textArea: textArea,
+	helperTextGrid: helperTextGrid
+};
+
+import.meta.hot.prune(() => __vite__removeStyle(__vite__id))

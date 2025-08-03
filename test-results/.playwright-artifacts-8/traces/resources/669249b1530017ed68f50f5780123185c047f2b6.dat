@@ -1,0 +1,40 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import {
+  OperativeMode,
+  operativeModeAtom,
+  operativeModeEnabled$,
+  TransferType,
+  transferTypeAtom
+} from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/index.ts";
+import { Step, StepPriority } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/index.ts";
+import StepErrorBoundary from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx";
+class MortisCausaStep extends Step {
+  constructor() {
+    super(...arguments);
+    this.priority = new StepPriority(11);
+    this.WrapperComponent = StepErrorBoundary;
+    this.lazy = () => import("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/transfer/MortisCausaStep.tsx");
+  }
+  toString() {
+    return "MortisCausaStep";
+  }
+  depends() {
+    return ["TipologyTransferStep", "name"];
+  }
+  provides() {
+    return [];
+  }
+  isInFlux(get) {
+    const operativeMode = get(operativeModeAtom);
+    return operativeMode === OperativeMode.TRANSFER && get(operativeModeEnabled$) && get(transferTypeAtom) === TransferType.MORTIS_CAUSA;
+  }
+}
+export const mortisCausaStep = new MortisCausaStep();
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBO0FBQUEsRUFDRUE7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQUM7QUFBQUEsT0FDSztBQUNQLFNBQVNDLE1BQU1DLG9CQUFvQjtBQUNuQyxPQUFPQyx1QkFBdUI7QUFHOUIsTUFBTUMsd0JBQXdCSCxLQUFLO0FBQUEsRUFBbkM7QUFBQTtBQUNFSSxvQkFBVyxJQUFJSCxhQUFhLEVBQUU7QUFDOUJJLDRCQUFtQkg7QUFFbkJJLGdCQUFPQSxNQUFNLE9BQU8sbUJBQW1CO0FBQUE7QUFBQSxFQUV2Q0MsV0FBVztBQUNULFdBQU87QUFBQSxFQUNUO0FBQUEsRUFFQUMsVUFBVTtBQUNSLFdBQU8sQ0FBQyx3QkFBd0IsTUFBTTtBQUFBLEVBQ3hDO0FBQUEsRUFFQUMsV0FBVztBQUNULFdBQU87QUFBQSxFQUNUO0FBQUEsRUFFVUMsU0FBU0MsS0FBYTtBQUM5QixVQUFNQyxnQkFBZ0JELElBQUlmLGlCQUFpQjtBQUUzQyxXQUNFZ0Isa0JBQWtCakIsY0FBY2tCLFlBQ2hDRixJQUFJZCxxQkFBcUIsS0FDekJjLElBQUlaLGdCQUFnQixNQUFNRCxhQUFhZ0I7QUFBQUEsRUFFM0M7QUFDRjtBQUVPLGFBQU1DLGtCQUFrQixJQUFJWixnQkFBZ0IiLCJuYW1lcyI6WyJPcGVyYXRpdmVNb2RlIiwib3BlcmF0aXZlTW9kZUF0b20iLCJvcGVyYXRpdmVNb2RlRW5hYmxlZCQiLCJUcmFuc2ZlclR5cGUiLCJ0cmFuc2ZlclR5cGVBdG9tIiwiU3RlcCIsIlN0ZXBQcmlvcml0eSIsIlN0ZXBFcnJvckJvdW5kYXJ5IiwiTW9ydGlzQ2F1c2FTdGVwIiwicHJpb3JpdHkiLCJXcmFwcGVyQ29tcG9uZW50IiwibGF6eSIsInRvU3RyaW5nIiwiZGVwZW5kcyIsInByb3ZpZGVzIiwiaXNJbkZsdXgiLCJnZXQiLCJvcGVyYXRpdmVNb2RlIiwiVFJBTlNGRVIiLCJNT1JUSVNfQ0FVU0EiLCJtb3J0aXNDYXVzYVN0ZXAiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsibW9ydGlzLWNhdXNhLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge1xyXG4gIE9wZXJhdGl2ZU1vZGUsXHJcbiAgb3BlcmF0aXZlTW9kZUF0b20sXHJcbiAgb3BlcmF0aXZlTW9kZUVuYWJsZWQkLFxyXG4gIFRyYW5zZmVyVHlwZSxcclxuICB0cmFuc2ZlclR5cGVBdG9tLFxyXG59IGZyb20gJ0BuYWotd28vZGF0YS1hY2Nlc3MnO1xyXG5pbXBvcnQgeyBTdGVwLCBTdGVwUHJpb3JpdHkgfSBmcm9tICdAbmFqLXdvL2VuZ2luZSc7XHJcbmltcG9ydCBTdGVwRXJyb3JCb3VuZGFyeSBmcm9tICcuLi9TdGVwRXJyb3JCb3VuZGFyeSc7XHJcbmltcG9ydCB7IEdldHRlciB9IGZyb20gJ2pvdGFpL3ZhbmlsbGEvdHlwZVV0aWxzJztcclxuXHJcbmNsYXNzIE1vcnRpc0NhdXNhU3RlcCBleHRlbmRzIFN0ZXAge1xyXG4gIHByaW9yaXR5ID0gbmV3IFN0ZXBQcmlvcml0eSgxMSk7XHJcbiAgV3JhcHBlckNvbXBvbmVudCA9IFN0ZXBFcnJvckJvdW5kYXJ5O1xyXG5cclxuICBsYXp5ID0gKCkgPT4gaW1wb3J0KCcuL01vcnRpc0NhdXNhU3RlcCcpO1xyXG5cclxuICB0b1N0cmluZygpIHtcclxuICAgIHJldHVybiAnTW9ydGlzQ2F1c2FTdGVwJztcclxuICB9XHJcblxyXG4gIGRlcGVuZHMoKSB7XHJcbiAgICByZXR1cm4gWydUaXBvbG9neVRyYW5zZmVyU3RlcCcsICduYW1lJ107XHJcbiAgfVxyXG5cclxuICBwcm92aWRlcygpIHtcclxuICAgIHJldHVybiBbXTtcclxuICB9XHJcblxyXG4gIHByb3RlY3RlZCBpc0luRmx1eChnZXQ6IEdldHRlcikge1xyXG4gICAgY29uc3Qgb3BlcmF0aXZlTW9kZSA9IGdldChvcGVyYXRpdmVNb2RlQXRvbSk7XHJcblxyXG4gICAgcmV0dXJuIChcclxuICAgICAgb3BlcmF0aXZlTW9kZSA9PT0gT3BlcmF0aXZlTW9kZS5UUkFOU0ZFUiAmJlxyXG4gICAgICBnZXQob3BlcmF0aXZlTW9kZUVuYWJsZWQkKSAmJlxyXG4gICAgICBnZXQodHJhbnNmZXJUeXBlQXRvbSkgPT09IFRyYW5zZmVyVHlwZS5NT1JUSVNfQ0FVU0FcclxuICAgICk7XHJcbiAgfVxyXG59XHJcblxyXG5leHBvcnQgY29uc3QgbW9ydGlzQ2F1c2FTdGVwID0gbmV3IE1vcnRpc0NhdXNhU3RlcCgpO1xyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL3N0ZXBzL3NyYy9saWIvdHJhbnNmZXIvbW9ydGlzLWNhdXNhLnRzeCJ9

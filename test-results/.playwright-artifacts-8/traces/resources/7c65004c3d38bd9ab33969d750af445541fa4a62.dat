@@ -1,0 +1,18 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/elements/PromoElement.module.less");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from "/@vite/client"
+const __vite__id = "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/elements/PromoElement.module.less"
+const __vite__css = "._PromoElement_1yy8m_1 {\n  display: flex;\n  gap: var(--grid-base);\n  margin-top: var(--grid-base);\n}\n._container_1yy8m_6 {\n  display: flex;\n  flex-direction: column;\n  gap: var(--grid-base);\n  flex: 1 0 0;\n}\n._image_1yy8m_12 {\n  width: 70px;\n  height: 70px;\n  border-radius: var(--grid-base);\n}\n._header_1yy8m_17 {\n  display: flex;\n  gap: var(--grid-base);\n}\n._title_1yy8m_21 {\n  flex: 1;\n}\n"
+__vite__updateStyle(__vite__id, __vite__css)
+export const PromoElement = "_PromoElement_1yy8m_1";
+export const container = "_container_1yy8m_6";
+export const image = "_image_1yy8m_12";
+export const header = "_header_1yy8m_17";
+export const title = "_title_1yy8m_21";
+export default {
+	PromoElement: PromoElement,
+	container: container,
+	image: image,
+	header: header,
+	title: title
+};
+
+import.meta.hot.prune(() => __vite__removeStyle(__vite__id))

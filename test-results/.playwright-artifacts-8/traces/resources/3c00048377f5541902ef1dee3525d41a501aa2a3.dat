@@ -1,0 +1,63 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/MaintenanceMode.tsx");import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/MaintenanceMode.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { showMaintenanceModeAtom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/index.ts";
+import { goToPlenitude } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/index.ts";
+import { useAtomValue } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+import { loadable } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai_utils.js?v=0189a8d1";
+const atom = globalThis.jotaiAtomCache.get(
+  "C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\steps\\src\\lib\\MaintenanceMode.tsx/atom",
+  loadable(showMaintenanceModeAtom)
+);
+atom.debugLabel = "atom";
+export function MaintenanceMode({ children }) {
+  _s();
+  const isMaintenanceMode = useAtomValue(atom);
+  if (isMaintenanceMode.state === "hasData" && isMaintenanceMode.data) {
+    goToPlenitude("/public/cortesia/rilascio.html");
+    return null;
+  }
+  return children;
+}
+_s(MaintenanceMode, "mAN929AYycwOnoTyTsIRm+jWme8=", false, function() {
+  return [useAtomValue];
+});
+_c = MaintenanceMode;
+var _c;
+$RefreshReg$(_c, "MaintenanceMode");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/MaintenanceMode.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7OztxQ0FBQTtBQUFBLE9BQVNBLGlEQUErQjtBQUFxQjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDN0QsU0FBU0MscUJBQXFCO0FBQzlCLFNBQVNDLG9CQUFvQjtBQUM3QixTQUFTQyxnQkFBZ0I7QUFDUyxNQUFBQyxPQUFBQyxXQUFBQyxlQUFBQztBQUFBQSxFQUFBO0FBQUEsRUFFckJKLFNBQVNILHVCQUF1QjtBQUFDO0FBRTlDSSxLQUFBSSxhQUFBO0FBSU8sZ0JBQVNDLGdCQUFnQixFQUFFQyxTQUFrQyxHQUFHO0FBQUFDLEtBQUE7QUFDckUsUUFBTUMsb0JBQW9CVixhQUFhRSxJQUFJO0FBRTNDLE1BQUlRLGtCQUFrQkMsVUFBVSxhQUFhRCxrQkFBa0JFLE1BQU07QUFDbkViLGtCQUFjLGdDQUFnQztBQUM5QyxXQUFPO0FBQUEsRUFDVDtBQUVBLFNBQU9TO0FBQ1Q7QUFBQ0MsR0FUZUYsaUJBQWU7QUFBQSxVQUNIUCxZQUFZO0FBQUE7QUFBQWEsS0FEeEJOO0FBQWUsSUFBQU07QUFBQUMsYUFBQUQsSUFBQSIsIm5hbWVzIjpbInNob3dNYWludGVuYW5jZU1vZGVBdG9tIiwiZ29Ub1BsZW5pdHVkZSIsInVzZUF0b21WYWx1ZSIsImxvYWRhYmxlIiwiYXRvbSIsImdsb2JhbFRoaXMiLCJqb3RhaUF0b21DYWNoZSIsImdldCIsImRlYnVnTGFiZWwiLCJNYWludGVuYW5jZU1vZGUiLCJjaGlsZHJlbiIsIl9zIiwiaXNNYWludGVuYW5jZU1vZGUiLCJzdGF0ZSIsImRhdGEiLCJfYyIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJNYWludGVuYW5jZU1vZGUudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHNob3dNYWludGVuYW5jZU1vZGVBdG9tIH0gZnJvbSAnQG5hai13by9kYXRhLWFjY2Vzcyc7XHJcbmltcG9ydCB7IGdvVG9QbGVuaXR1ZGUgfSBmcm9tICdAbmFqLXdvL3V0aWwnO1xyXG5pbXBvcnQgeyB1c2VBdG9tVmFsdWUgfSBmcm9tICdqb3RhaSc7XHJcbmltcG9ydCB7IGxvYWRhYmxlIH0gZnJvbSAnam90YWkvdXRpbHMnO1xyXG5pbXBvcnQgeyBSZWFjdE5vZGUgfSBmcm9tICdyZWFjdCc7XHJcblxyXG5jb25zdCBhdG9tID0gbG9hZGFibGUoc2hvd01haW50ZW5hbmNlTW9kZUF0b20pO1xyXG5cclxuLyoqXHJcbiAqIEEgUmVhY3QgY29tcG9uZW50IHRoYXQgcmVuZGVycyBpdHMgY2hpbGRyZW4gdW5sZXNzIHRoZSBhcHBsaWNhdGlvbiBpcyBpbiBtYWludGVuYW5jZSBtb2RlLlxyXG4gKiBJZiB0aGUgbWFpbnRlbmFuY2UgbW9kZSBpcyBhY3RpdmUsIGl0IHJlZGlyZWN0cyB0aGUgdXNlciB0byBhIHNwZWNpZmllZCBVUkwuXHJcbiAqL1xyXG5leHBvcnQgZnVuY3Rpb24gTWFpbnRlbmFuY2VNb2RlKHsgY2hpbGRyZW4gfTogeyBjaGlsZHJlbjogUmVhY3ROb2RlIH0pIHtcclxuICBjb25zdCBpc01haW50ZW5hbmNlTW9kZSA9IHVzZUF0b21WYWx1ZShhdG9tKTtcclxuXHJcbiAgaWYgKGlzTWFpbnRlbmFuY2VNb2RlLnN0YXRlID09PSAnaGFzRGF0YScgJiYgaXNNYWludGVuYW5jZU1vZGUuZGF0YSkge1xyXG4gICAgZ29Ub1BsZW5pdHVkZSgnL3B1YmxpYy9jb3J0ZXNpYS9yaWxhc2Npby5odG1sJyk7XHJcbiAgICByZXR1cm4gbnVsbDtcclxuICB9XHJcblxyXG4gIHJldHVybiBjaGlsZHJlbjtcclxufVxyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL3N0ZXBzL3NyYy9saWIvTWFpbnRlbmFuY2VNb2RlLnRzeCJ9

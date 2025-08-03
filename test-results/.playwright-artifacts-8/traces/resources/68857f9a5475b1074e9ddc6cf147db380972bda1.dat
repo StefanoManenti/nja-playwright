@@ -1,0 +1,14 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/api/lead/lead-services.ts";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/api/lead/lead-services-atoms.ts";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLGNBQWM7QUFDZCxjQUFjIiwibmFtZXMiOltdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJpbmRleC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgKiBmcm9tICcuL2xlYWQtc2VydmljZXMnO1xyXG5leHBvcnQgKiBmcm9tICcuL2xlYWQtc2VydmljZXMtYXRvbXMnO1xyXG5leHBvcnQgeyB0eXBlIE1vbmdvTGVhZCB9IGZyb20gJy4vX3R5cGVzJztcclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy9kYXRhLWFjY2Vzcy9zcmMvbGliL2FwaS9sZWFkL2luZGV4LnRzIn0=

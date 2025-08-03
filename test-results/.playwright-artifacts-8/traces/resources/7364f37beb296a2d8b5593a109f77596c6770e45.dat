@@ -1,0 +1,22 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { atom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+export var TransferType = /* @__PURE__ */ ((TransferType2) => {
+  TransferType2["ORDINARIA"] = "ORDINARIA";
+  TransferType2["MORTIS_CAUSA"] = "MORTIS_CAUSA";
+  TransferType2["INCORPORAZIONE_SOCIETARIA"] = "INCORPORAZIONE_SOCIETARIA";
+  TransferType2["NOT_SELECTED"] = "";
+  return TransferType2;
+})(TransferType || {});
+export const transferTypeAtom = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\transfer.ts/transferTypeAtom", atom("" /* NOT_SELECTED */));
+transferTypeAtom.debugLabel = "transferTypeAtom";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLFlBQVk7QUFFZCxXQUFLQyxlQUFMLGtCQUFLQSxrQkFBTDtBQUNMQywrQkFBWTtBQUNaQyxrQ0FBZTtBQUNmQywrQ0FBNEI7QUFDNUJDLGtDQUFlO0FBSkxKO0FBQUFBO0FBVVosYUFBQUssbUJBQUFDLFdBQUFDLGVBQUFDLElBQUEsbUhBQWdDVCxLQUFLQyxxQkFBeUIsQ0FBQztBQUFDSyxpQkFBQUksYUFBQSIsIm5hbWVzIjpbImF0b20iLCJUcmFuc2ZlclR5cGUiLCJPUkRJTkFSSUEiLCJNT1JUSVNfQ0FVU0EiLCJJTkNPUlBPUkFaSU9ORV9TT0NJRVRBUklBIiwiTk9UX1NFTEVDVEVEIiwidHJhbnNmZXJUeXBlQXRvbSIsImdsb2JhbFRoaXMiLCJqb3RhaUF0b21DYWNoZSIsImdldCIsImRlYnVnTGFiZWwiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsidHJhbnNmZXIudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgYXRvbSB9IGZyb20gJ2pvdGFpJztcclxuXHJcbmV4cG9ydCBlbnVtIFRyYW5zZmVyVHlwZSB7XHJcbiAgT1JESU5BUklBID0gJ09SRElOQVJJQScsXHJcbiAgTU9SVElTX0NBVVNBID0gJ01PUlRJU19DQVVTQScsXHJcbiAgSU5DT1JQT1JBWklPTkVfU09DSUVUQVJJQSA9ICdJTkNPUlBPUkFaSU9ORV9TT0NJRVRBUklBJyxcclxuICBOT1RfU0VMRUNURUQgPSAnJyxcclxufVxyXG4vL1RPRE8gJ0lOQ09SUE9SQVpJT05FX1NPQ0lFVEFSSUEnXHJcbi8qKlxyXG4gKiBUaGUgdHJhbnNmZXIgdGlwb2xvZ3k6ICcnfCAnT3JkaW5hcmlhJyB8ICdNb3J0aXMgQ2F1c2EnXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgdHJhbnNmZXJUeXBlQXRvbSA9IGF0b20oVHJhbnNmZXJUeXBlLk5PVF9TRUxFQ1RFRCk7XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvZGF0YS1hY2Nlc3Mvc3JjL2xpYi9hdG9tcy90cmFuc2Zlci50cyJ9

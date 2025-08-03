@@ -1,0 +1,70 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/elements/CommodityElement.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/elements/CommodityElement.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import __vite__cjsImport3_react from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react.js?v=0189a8d1"; const useCallback = __vite__cjsImport3_react["useCallback"];
+import { DataElement } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/index.ts";
+export function CommodityElement(props) {
+  _s();
+  const { onEdit, editing, power, gas } = props;
+  const handleEdit = useCallback(() => {
+    onEdit("Fornitura scelta", "tsPower");
+  }, [onEdit]);
+  return (power || gas) && /* @__PURE__ */ jsxDEV(
+    DataElement,
+    {
+      title: "Fornitura scelta",
+      description: power && gas ? "Luce e Gas" : power ? "Luce" : gas ? "Gas" : "",
+      editing,
+      onEdit: handleEdit
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/elements/CommodityElement.tsx",
+      lineNumber: 19,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_s(CommodityElement, "qLXmpy691Zi84mVBsM39IzxZDns=");
+_c = CommodityElement;
+var _c;
+$RefreshReg$(_c, "CommodityElement");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/elements/CommodityElement.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBa0JNOzs7OztxQ0FsQk47QUFBQSxPQUFTQSxPQUFNLDBDQUFrQjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDakMsU0FBZ0JDLG1CQUFtQjtBQUNuQyxTQUFTQyxtQkFBbUI7QUFFckIsZ0JBQVNDLGlCQUFpQkMsT0FLOUI7QUFBQUMsS0FBQTtBQUNELFFBQU0sRUFBRUMsUUFBUUMsU0FBU0MsT0FBT0MsSUFBSSxJQUFJTDtBQUV4QyxRQUFNTSxhQUFhVCxZQUFZLE1BQU07QUFDbkNLLFdBQU8sb0JBQW9CLFNBQVM7QUFBQSxFQUN0QyxHQUFHLENBQUNBLE1BQU0sQ0FBQztBQUVYLFVBQ0dFLFNBQVNDLFFBQ1I7QUFBQSxJQUFDO0FBQUE7QUFBQSxNQUNDLE9BQU07QUFBQSxNQUNOLGFBQ0VELFNBQVNDLE1BQU0sZUFBZUQsUUFBUSxTQUFTQyxNQUFNLFFBQVE7QUFBQSxNQUUvRDtBQUFBLE1BQ0EsUUFBUUM7QUFBQUE7QUFBQUEsSUFOVjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsRUFNcUI7QUFJM0I7QUFBQ0wsR0F4QmVGLGtCQUFnQjtBQUFBUSxLQUFoQlI7QUFBZ0IsSUFBQVE7QUFBQUMsYUFBQUQsSUFBQSIsIm5hbWVzIjpbIkVkaXRDYiIsInVzZUNhbGxiYWNrIiwiRGF0YUVsZW1lbnQiLCJDb21tb2RpdHlFbGVtZW50IiwicHJvcHMiLCJfcyIsIm9uRWRpdCIsImVkaXRpbmciLCJwb3dlciIsImdhcyIsImhhbmRsZUVkaXQiLCJfYyIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJDb21tb2RpdHlFbGVtZW50LnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBFZGl0Q2IgfSBmcm9tICcuLi90eXBlcyc7XHJcbmltcG9ydCBSZWFjdCwgeyB1c2VDYWxsYmFjayB9IGZyb20gJ3JlYWN0JztcclxuaW1wb3J0IHsgRGF0YUVsZW1lbnQgfSBmcm9tICdAbmFqLXdvL3VpLW1vbGVjdWxlcyc7XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gQ29tbW9kaXR5RWxlbWVudChwcm9wczoge1xyXG4gIG9uRWRpdDogRWRpdENiO1xyXG4gIGVkaXRpbmc6IGJvb2xlYW47XHJcbiAgcG93ZXI6IGJvb2xlYW47XHJcbiAgZ2FzOiBib29sZWFuO1xyXG59KSB7XHJcbiAgY29uc3QgeyBvbkVkaXQsIGVkaXRpbmcsIHBvd2VyLCBnYXMgfSA9IHByb3BzO1xyXG5cclxuICBjb25zdCBoYW5kbGVFZGl0ID0gdXNlQ2FsbGJhY2soKCkgPT4ge1xyXG4gICAgb25FZGl0KCdGb3JuaXR1cmEgc2NlbHRhJywgJ3RzUG93ZXInKTtcclxuICB9LCBbb25FZGl0XSk7XHJcblxyXG4gIHJldHVybiAoXHJcbiAgICAocG93ZXIgfHwgZ2FzKSAmJiAoXHJcbiAgICAgIDxEYXRhRWxlbWVudFxyXG4gICAgICAgIHRpdGxlPVwiRm9ybml0dXJhIHNjZWx0YVwiXHJcbiAgICAgICAgZGVzY3JpcHRpb249e1xyXG4gICAgICAgICAgcG93ZXIgJiYgZ2FzID8gJ0x1Y2UgZSBHYXMnIDogcG93ZXIgPyAnTHVjZScgOiBnYXMgPyAnR2FzJyA6ICcnXHJcbiAgICAgICAgfVxyXG4gICAgICAgIGVkaXRpbmc9e2VkaXRpbmd9XHJcbiAgICAgICAgb25FZGl0PXtoYW5kbGVFZGl0fVxyXG4gICAgICAvPlxyXG4gICAgKVxyXG4gICk7XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy91aS1vcmdhbmlzbXMvc3JjL2xpYi9jYXJ0L2VsZW1lbnRzL0NvbW1vZGl0eUVsZW1lbnQudHN4In0=

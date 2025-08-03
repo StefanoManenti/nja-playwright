@@ -1,0 +1,48 @@
+import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { link_servizioClienti } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/index.ts";
+import { FieldErrorAlert } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/index.ts";
+export const CustomerWithNoAccounts = {
+  alert: function CustomerWithNoAccountsAlert() {
+    return /* @__PURE__ */ jsxDEV(
+      FieldErrorAlert,
+      {
+        message: "**Ci dispiace**, non risultano forniture disponibili per questa richiesta."
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/change-offer.tsx",
+        lineNumber: 7,
+        columnNumber: 7
+      },
+      this
+    );
+  }
+};
+export const CustomerWithNoAccountsForChangeOffer = {
+  alert: function CustomerWithNoAccountsForChangeOfferAlert() {
+    return /* @__PURE__ */ jsxDEV(
+      FieldErrorAlert,
+      {
+        message: `Ci dispiace, nessuna delle tue forniture è compatibile con il cambio offerta. Contatta il nostro [Servizio Clienti](${link_servizioClienti}) per assistenza.`
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/change-offer.tsx",
+        lineNumber: 19,
+        columnNumber: 7
+      },
+      this
+    );
+  }
+};
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBTU07Ozs7Ozs7O0FBTk4sU0FBU0EsNEJBQTRCO0FBQ3JDLFNBQVNDLHVCQUF1QjtBQUV6QixhQUFNQyx5QkFBeUI7QUFBQSxFQUNwQ0MsT0FBTyxTQUFTQyw4QkFBOEI7QUFDNUMsV0FDRTtBQUFBLE1BQUM7QUFBQTtBQUFBLFFBQ0MsU0FDRTtBQUFBO0FBQUEsTUFGSjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsSUFHRztBQUFBLEVBR1A7QUFDRjtBQUVPLGFBQU1DLHVDQUF1QztBQUFBLEVBQ2xERixPQUFPLFNBQVNHLDRDQUE0QztBQUMxRCxXQUNFO0FBQUEsTUFBQztBQUFBO0FBQUEsUUFDQyxTQUFTLHVIQUF1SE4sb0JBQW9CO0FBQUE7QUFBQSxNQUR0SjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsSUFDMEs7QUFBQSxFQUc5SztBQUNGIiwibmFtZXMiOlsibGlua19zZXJ2aXppb0NsaWVudGkiLCJGaWVsZEVycm9yQWxlcnQiLCJDdXN0b21lcldpdGhOb0FjY291bnRzIiwiYWxlcnQiLCJDdXN0b21lcldpdGhOb0FjY291bnRzQWxlcnQiLCJDdXN0b21lcldpdGhOb0FjY291bnRzRm9yQ2hhbmdlT2ZmZXIiLCJDdXN0b21lcldpdGhOb0FjY291bnRzRm9yQ2hhbmdlT2ZmZXJBbGVydCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJjaGFuZ2Utb2ZmZXIudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGxpbmtfc2Vydml6aW9DbGllbnRpIH0gZnJvbSAnQG5hai13by91dGlsJztcclxuaW1wb3J0IHsgRmllbGRFcnJvckFsZXJ0IH0gZnJvbSAnQG5hai13by91aS1tb2xlY3VsZXMnO1xyXG5cclxuZXhwb3J0IGNvbnN0IEN1c3RvbWVyV2l0aE5vQWNjb3VudHMgPSB7XHJcbiAgYWxlcnQ6IGZ1bmN0aW9uIEN1c3RvbWVyV2l0aE5vQWNjb3VudHNBbGVydCgpIHtcclxuICAgIHJldHVybiAoXHJcbiAgICAgIDxGaWVsZEVycm9yQWxlcnRcclxuICAgICAgICBtZXNzYWdlPXtcclxuICAgICAgICAgICcqKkNpIGRpc3BpYWNlKiosIG5vbiByaXN1bHRhbm8gZm9ybml0dXJlIGRpc3BvbmliaWxpIHBlciBxdWVzdGEgcmljaGllc3RhLidcclxuICAgICAgICB9XHJcbiAgICAgIC8+XHJcbiAgICApO1xyXG4gIH0sXHJcbn07XHJcblxyXG5leHBvcnQgY29uc3QgQ3VzdG9tZXJXaXRoTm9BY2NvdW50c0ZvckNoYW5nZU9mZmVyID0ge1xyXG4gIGFsZXJ0OiBmdW5jdGlvbiBDdXN0b21lcldpdGhOb0FjY291bnRzRm9yQ2hhbmdlT2ZmZXJBbGVydCgpIHtcclxuICAgIHJldHVybiAoXHJcbiAgICAgIDxGaWVsZEVycm9yQWxlcnRcclxuICAgICAgICBtZXNzYWdlPXtgQ2kgZGlzcGlhY2UsIG5lc3N1bmEgZGVsbGUgdHVlIGZvcm5pdHVyZSDDqCBjb21wYXRpYmlsZSBjb24gaWwgY2FtYmlvIG9mZmVydGEuIENvbnRhdHRhIGlsIG5vc3RybyBbU2Vydml6aW8gQ2xpZW50aV0oJHtsaW5rX3NlcnZpemlvQ2xpZW50aX0pIHBlciBhc3Npc3RlbnphLmB9XHJcbiAgICAgIC8+XHJcbiAgICApO1xyXG4gIH0sXHJcbn07XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvc3RlcHMvc3JjL2xpYi9zZXJ2aWNlcy1lcnJvcnMvY2hhbmdlLW9mZmVyLnRzeCJ9

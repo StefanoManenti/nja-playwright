@@ -1,0 +1,10 @@
+import {
+  clsx,
+  clsx_default
+} from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-MRXL75NW.js?v=0189a8d1";
+import "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-OL46QLBJ.js?v=0189a8d1";
+export {
+  clsx,
+  clsx_default as default
+};
+//# sourceMappingURL=clsx.js.map

@@ -1,0 +1,306 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import {
+  addressAtom,
+  normalizeAddress,
+  residentialAddressSameAsSupplyAtom,
+  saveContracts$,
+  supplyAddressSelectedAtom
+} from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/index.ts";
+import { useEngine } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/index.ts";
+import {
+  GlobalTrackingState,
+  useTrackingWeborderUnicoPage,
+  WeborderTrackingState
+} from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/index.ts";
+import { HomeCityApartment, PlusCircle } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/index.ts";
+import {
+  CardInput,
+  StepContainer,
+  StepFieldset,
+  StepTitle
+} from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/index.ts";
+import { StepCtaConnected, StepLayout } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/index.ts";
+import { atom, useAtomValue } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+import { useAtomCallback } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai_utils.js?v=0189a8d1";
+import __vite__cjsImport11_react from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react.js?v=0189a8d1"; const useCallback = __vite__cjsImport11_react["useCallback"]; const useId = __vite__cjsImport11_react["useId"];
+import {
+  Controller,
+  FormProvider,
+  useForm
+} from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react-hook-form.js?v=0189a8d1";
+import { AddressInput } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressInput.tsx";
+import { fromYesNo, toYesNo } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/index.ts";
+const defaultValuesAtom = globalThis.jotaiAtomCache.get(
+  "C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\steps\\src\\lib\\address\\AddressSwitchInStep.tsx/defaultValuesAtom",
+  atom(async (get) => {
+    const residentialAddress = await get(addressAtom);
+    const addressSupply = await get(supplyAddressSelectedAtom);
+    const residentialAddressSameAsSupply = await get(
+      residentialAddressSameAsSupplyAtom
+    );
+    return [
+      {
+        addressSupply: addressSupply?.asSuggestion(),
+        same: toYesNo(residentialAddressSameAsSupply)
+      },
+      {
+        residentialAddressSuggestion: residentialAddress.asSuggestion()
+      }
+    ];
+  })
+);
+defaultValuesAtom.debugLabel = "defaultValuesAtom";
+export default function AddressSupplyStepWrapped() {
+  return /* @__PURE__ */ jsxDEV(GlobalTrackingState, { children: /* @__PURE__ */ jsxDEV(
+    WeborderTrackingState,
+    {
+      macro_step: "address_switch_in",
+      micro_step: "address_switch_in",
+      children: /* @__PURE__ */ jsxDEV(AddressSupplyStep, {}, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx",
+        lineNumber: 66,
+        columnNumber: 9
+      }, this)
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx",
+      lineNumber: 62,
+      columnNumber: 7
+    },
+    this
+  ) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx",
+    lineNumber: 61,
+    columnNumber: 5
+  }, this);
+}
+_c = AddressSupplyStepWrapped;
+function AddressSupplyStep() {
+  _s();
+  useTrackingWeborderUnicoPage();
+  const { next } = useEngine();
+  const formId = useId();
+  const [defaultValues, { residentialAddressSuggestion }] = useAtomValue(
+    defaultValuesAtom,
+    { delay: 0 }
+  );
+  const methods = useForm({
+    defaultValues,
+    mode: "onChange"
+  });
+  const { register, handleSubmit, watch } = methods;
+  const onSubmit = useAtomCallback(
+    useCallback(
+      async (get, set, data) => {
+        const same = fromYesNo(data?.same);
+        const egonAddress = same ? await get(addressAtom) : await normalizeAddress(data.addressSupply);
+        await set(supplyAddressSelectedAtom, egonAddress);
+        await set(saveContracts$);
+        next();
+      },
+      [next]
+    )
+  );
+  const isSame = watch("same") === "YES";
+  return /* @__PURE__ */ jsxDEV(FormProvider, { ...methods, children: /* @__PURE__ */ jsxDEV(StepLayout, { cta: /* @__PURE__ */ jsxDEV(StepCtaConnected, { form: formId }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx",
+    lineNumber: 109,
+    columnNumber: 24
+  }, this), children: /* @__PURE__ */ jsxDEV("form", { id: formId, onSubmit: handleSubmit(onSubmit), children: /* @__PURE__ */ jsxDEV(StepContainer, { children: [
+    /* @__PURE__ */ jsxDEV(
+      StepTitle,
+      {
+        title: /* @__PURE__ */ jsxDEV(Fragment, { children: "Dove vuoi attivare la fornitura?" }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx",
+          lineNumber: 113,
+          columnNumber: 22
+        }, this),
+        subtitle: /* @__PURE__ */ jsxDEV(Fragment, { children: "Se l'azienda ha più sedi o punti di fornitura su cui vuoi attivare questa offerta, ti chiederemo le informazioni necessarie in seguito." }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx",
+          lineNumber: 115,
+          columnNumber: 15
+        }, this)
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx",
+        lineNumber: 112,
+        columnNumber: 13
+      },
+      this
+    ),
+    /* @__PURE__ */ jsxDEV(StepFieldset, { direction: "row", children: [
+      /* @__PURE__ */ jsxDEV(
+        CardInput,
+        {
+          labelIcon: /* @__PURE__ */ jsxDEV(HomeCityApartment, {}, void 0, false, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx",
+            lineNumber: 124,
+            columnNumber: 28
+          }, this),
+          ...register("same", { required: true }),
+          type: "radio",
+          labelTitle: "Sede legale",
+          value: "YES"
+        },
+        void 0,
+        false,
+        {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx",
+          lineNumber: 123,
+          columnNumber: 15
+        },
+        this
+      ),
+      /* @__PURE__ */ jsxDEV(
+        CardInput,
+        {
+          labelIcon: /* @__PURE__ */ jsxDEV(PlusCircle, {}, void 0, false, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx",
+            lineNumber: 131,
+            columnNumber: 28
+          }, this),
+          ...register("same"),
+          type: "radio",
+          labelTitle: "Altra sede",
+          value: "NO"
+        },
+        void 0,
+        false,
+        {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx",
+          lineNumber: 130,
+          columnNumber: 15
+        },
+        this
+      )
+    ] }, void 0, true, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx",
+      lineNumber: 122,
+      columnNumber: 13
+    }, this),
+    /* @__PURE__ */ jsxDEV(StepFieldset, { children: isSame ? (
+      // @ts-expect-error disabled, this should be safe
+      /* @__PURE__ */ jsxDEV(
+        AddressInput,
+        {
+          label: "Indirizzo",
+          value: residentialAddressSuggestion,
+          disabled: true
+        },
+        void 0,
+        false,
+        {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx",
+          lineNumber: 142,
+          columnNumber: 15
+        },
+        this
+      )
+    ) : /* @__PURE__ */ jsxDEV(
+      Controller,
+      {
+        render: ({ field: { ref, ...field }, fieldState }) => {
+          return /* @__PURE__ */ jsxDEV(
+            AddressInput,
+            {
+              label: "Indirizzo",
+              myRef: ref,
+              ...field,
+              ...fieldState,
+              value: field.value
+            },
+            void 0,
+            false,
+            {
+              fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx",
+              lineNumber: 151,
+              columnNumber: 21
+            },
+            this
+          );
+        },
+        rules: AddressInput.rules,
+        control: methods.control,
+        name: "addressSupply"
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx",
+        lineNumber: 148,
+        columnNumber: 15
+      },
+      this
+    ) }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx",
+      lineNumber: 139,
+      columnNumber: 13
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx",
+    lineNumber: 111,
+    columnNumber: 11
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx",
+    lineNumber: 110,
+    columnNumber: 9
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx",
+    lineNumber: 109,
+    columnNumber: 7
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx",
+    lineNumber: 108,
+    columnNumber: 5
+  }, this);
+}
+_s(AddressSupplyStep, "p4/XaZ1edlIS06IaQRNeYigf6EE=", false, function() {
+  return [useTrackingWeborderUnicoPage, useEngine, useId, useAtomValue, useForm, useAtomCallback];
+});
+_c2 = AddressSupplyStep;
+var _c, _c2;
+$RefreshReg$(_c, "AddressSupplyStepWrapped");
+$RefreshReg$(_c2, "AddressSupplyStep");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressSwitchInStep.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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QSIsIm5hbWVzIjpbImFkZHJlc3NBdG9tIiwibm9ybWFsaXplQWRkcmVzcyIsInJlc2lkZW50aWFsQWRkcmVzc1NhbWVBc1N1cHBseUF0b20iLCJzYXZlQ29udHJhY3RzJCIsInN1cHBseUFkZHJlc3NTZWxlY3RlZEF0b20iLCJ1c2VFbmdpbmUiLCJHbG9iYWxUcmFja2luZ1N0YXRlIiwidXNlVHJhY2tpbmdXZWJvcmRlclVuaWNvUGFnZSIsIldlYm9yZGVyVHJhY2tpbmdTdGF0ZSIsIkhvbWVDaXR5QXBhcnRtZW50IiwiUGx1c0NpcmNsZSIsIkNhcmRJbnB1dCIsIlN0ZXBDb250YWluZXIiLCJTdGVwRmllbGRzZXQiLCJTdGVwVGl0bGUiLCJTdGVwQ3RhQ29ubmVjdGVkIiwiU3RlcExheW91dCIsImF0b20iLCJ1c2VBdG9tVmFsdWUiLCJ1c2VBdG9tQ2FsbGJhY2siLCJ1c2VDYWxsYmFjayIsInVzZUlkIiwiQ29udHJvbGxlciIsIkZvcm1Qcm92aWRlciIsInVzZUZvcm0iLCJBZGRyZXNzSW5wdXQiLCJmcm9tWWVzTm8iLCJ0b1llc05vIiwiZGVmYXVsdFZhbHVlc0F0b20iLCJnbG9iYWxUaGlzIiwiam90YWlBdG9tQ2FjaGUiLCJnZXQiLCJyZXNpZGVudGlhbEFkZHJlc3MiLCJhZGRyZXNzU3VwcGx5IiwicmVzaWRlbnRpYWxBZGRyZXNzU2FtZUFzU3VwcGx5IiwiYXNTdWdnZXN0aW9uIiwic2FtZSIsInJlc2lkZW50aWFsQWRkcmVzc1N1Z2dlc3Rpb24iLCJkZWJ1Z0xhYmVsIiwiQWRkcmVzc1N1cHBseVN0ZXBXcmFwcGVkIiwiX2MiLCJBZGRyZXNzU3VwcGx5U3RlcCIsIl9zIiwibmV4dCIsImZvcm1JZCIsImRlZmF1bHRWYWx1ZXMiLCJkZWxheSIsIm1ldGhvZHMiLCJtb2RlIiwicmVnaXN0ZXIiLCJoYW5kbGVTdWJtaXQiLCJ3YXRjaCIsIm9uU3VibWl0Iiwic2V0IiwiZGF0YSIsImVnb25BZGRyZXNzIiwiaXNTYW1lIiwicmVxdWlyZWQiLCJmaWVsZCIsInJlZiIsImZpZWxkU3RhdGUiLCJ2YWx1ZSIsInJ1bGVzIiwiY29udHJvbCIsIl9jMiIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJBZGRyZXNzU3dpdGNoSW5TdGVwLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge1xyXG4gIGFkZHJlc3NBdG9tLFxyXG4gIEVnb25TdWdnZXN0aW9uLFxyXG4gIG5vcm1hbGl6ZUFkZHJlc3MsXHJcbiAgcmVzaWRlbnRpYWxBZGRyZXNzU2FtZUFzU3VwcGx5QXRvbSxcclxuICBzYXZlQ29udHJhY3RzJCxcclxuICBzdXBwbHlBZGRyZXNzU2VsZWN0ZWRBdG9tLFxyXG59IGZyb20gJ0BuYWotd28vZGF0YS1hY2Nlc3MnO1xyXG5pbXBvcnQgeyB1c2VFbmdpbmUgfSBmcm9tICdAbmFqLXdvL2VuZ2luZSc7XHJcbmltcG9ydCB7XHJcbiAgR2xvYmFsVHJhY2tpbmdTdGF0ZSxcclxuICB1c2VUcmFja2luZ1dlYm9yZGVyVW5pY29QYWdlLFxyXG4gIFdlYm9yZGVyVHJhY2tpbmdTdGF0ZSxcclxufSBmcm9tICdAbmFqLXdvL3RyYWNraW5nLWFwcCc7XHJcbmltcG9ydCB7IEhvbWVDaXR5QXBhcnRtZW50LCBQbHVzQ2lyY2xlIH0gZnJvbSAnQG5hai13by91aS1pY29ucyc7XHJcbmltcG9ydCB7XHJcbiAgQ2FyZElucHV0LFxyXG4gIFN0ZXBDb250YWluZXIsXHJcbiAgU3RlcEZpZWxkc2V0LFxyXG4gIFN0ZXBUaXRsZSxcclxufSBmcm9tICdAbmFqLXdvL3VpLW1vbGVjdWxlcyc7XHJcbmltcG9ydCB7IFN0ZXBDdGFDb25uZWN0ZWQsIFN0ZXBMYXlvdXQgfSBmcm9tICdAbmFqLXdvL3VpLW9yZ2FuaXNtcyc7XHJcbmltcG9ydCB7IGF0b20sIHVzZUF0b21WYWx1ZSB9IGZyb20gJ2pvdGFpJztcclxuaW1wb3J0IHsgdXNlQXRvbUNhbGxiYWNrIH0gZnJvbSAnam90YWkvdXRpbHMnO1xyXG5pbXBvcnQgeyB1c2VDYWxsYmFjaywgdXNlSWQgfSBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCB7XHJcbiAgQ29udHJvbGxlcixcclxuICBGb3JtUHJvdmlkZXIsXHJcbiAgU3VibWl0SGFuZGxlcixcclxuICB1c2VGb3JtLFxyXG59IGZyb20gJ3JlYWN0LWhvb2stZm9ybSc7XHJcbmltcG9ydCB7IEFkZHJlc3NJbnB1dCB9IGZyb20gJy4vQWRkcmVzc0lucHV0JztcclxuaW1wb3J0IHsgZnJvbVllc05vLCB0b1llc05vIH0gZnJvbSAnQG5hai13by91dGlsJztcclxuXHJcbnR5cGUgSW5wdXRzID0ge1xyXG4gIHNhbWU6ICdZRVMnIHwgJ05PJztcclxuICBhZGRyZXNzU3VwcGx5OiBFZ29uU3VnZ2VzdGlvbjtcclxufTtcclxuXHJcbmNvbnN0IGRlZmF1bHRWYWx1ZXNBdG9tID0gYXRvbShhc3luYyAoZ2V0KSA9PiB7XHJcbiAgY29uc3QgcmVzaWRlbnRpYWxBZGRyZXNzID0gYXdhaXQgZ2V0KGFkZHJlc3NBdG9tKTtcclxuICBjb25zdCBhZGRyZXNzU3VwcGx5ID0gYXdhaXQgZ2V0KHN1cHBseUFkZHJlc3NTZWxlY3RlZEF0b20pO1xyXG5cclxuICBjb25zdCByZXNpZGVudGlhbEFkZHJlc3NTYW1lQXNTdXBwbHkgPSBhd2FpdCBnZXQoXHJcbiAgICByZXNpZGVudGlhbEFkZHJlc3NTYW1lQXNTdXBwbHlBdG9tXHJcbiAgKTtcclxuXHJcbiAgcmV0dXJuIFtcclxuICAgIHtcclxuICAgICAgYWRkcmVzc1N1cHBseTogYWRkcmVzc1N1cHBseT8uYXNTdWdnZXN0aW9uKCksXHJcbiAgICAgIHNhbWU6IHRvWWVzTm8ocmVzaWRlbnRpYWxBZGRyZXNzU2FtZUFzU3VwcGx5KSxcclxuICAgIH0gYXMgSW5wdXRzLFxyXG4gICAge1xyXG4gICAgICByZXNpZGVudGlhbEFkZHJlc3NTdWdnZXN0aW9uOiByZXNpZGVudGlhbEFkZHJlc3MhLmFzU3VnZ2VzdGlvbigpLFxyXG4gICAgfSxcclxuICBdIGFzIGNvbnN0O1xyXG59KTtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEFkZHJlc3NTdXBwbHlTdGVwV3JhcHBlZCgpIHtcclxuICByZXR1cm4gKFxyXG4gICAgPEdsb2JhbFRyYWNraW5nU3RhdGU+XHJcbiAgICAgIDxXZWJvcmRlclRyYWNraW5nU3RhdGVcclxuICAgICAgICBtYWNyb19zdGVwPVwiYWRkcmVzc19zd2l0Y2hfaW5cIlxyXG4gICAgICAgIG1pY3JvX3N0ZXA9XCJhZGRyZXNzX3N3aXRjaF9pblwiXHJcbiAgICAgID5cclxuICAgICAgICA8QWRkcmVzc1N1cHBseVN0ZXAgLz5cclxuICAgICAgPC9XZWJvcmRlclRyYWNraW5nU3RhdGU+XHJcbiAgICA8L0dsb2JhbFRyYWNraW5nU3RhdGU+XHJcbiAgKTtcclxufVxyXG5cclxuZnVuY3Rpb24gQWRkcmVzc1N1cHBseVN0ZXAoKSB7XHJcbiAgdXNlVHJhY2tpbmdXZWJvcmRlclVuaWNvUGFnZSgpO1xyXG4gIGNvbnN0IHsgbmV4dCB9ID0gdXNlRW5naW5lKCk7XHJcblxyXG4gIGNvbnN0IGZvcm1JZCA9IHVzZUlkKCk7XHJcblxyXG4gIGNvbnN0IFtkZWZhdWx0VmFsdWVzLCB7IHJlc2lkZW50aWFsQWRkcmVzc1N1Z2dlc3Rpb24gfV0gPSB1c2VBdG9tVmFsdWUoXHJcbiAgICBkZWZhdWx0VmFsdWVzQXRvbSxcclxuICAgIHsgZGVsYXk6IDAgfVxyXG4gICk7XHJcblxyXG4gIGNvbnN0IG1ldGhvZHMgPSB1c2VGb3JtPElucHV0cz4oe1xyXG4gICAgZGVmYXVsdFZhbHVlczogZGVmYXVsdFZhbHVlcyxcclxuICAgIG1vZGU6ICdvbkNoYW5nZScsXHJcbiAgfSk7XHJcblxyXG4gIGNvbnN0IHsgcmVnaXN0ZXIsIGhhbmRsZVN1Ym1pdCwgd2F0Y2ggfSA9IG1ldGhvZHM7XHJcblxyXG4gIGNvbnN0IG9uU3VibWl0OiBTdWJtaXRIYW5kbGVyPElucHV0cz4gPSB1c2VBdG9tQ2FsbGJhY2soXHJcbiAgICB1c2VDYWxsYmFjayhcclxuICAgICAgYXN5bmMgKGdldCwgc2V0LCBkYXRhKSA9PiB7XHJcbiAgICAgICAgY29uc3Qgc2FtZSA9IGZyb21ZZXNObyhkYXRhPy5zYW1lKTtcclxuICAgICAgICBjb25zdCBlZ29uQWRkcmVzcyA9IHNhbWVcclxuICAgICAgICAgID8gKGF3YWl0IGdldChhZGRyZXNzQXRvbSkpIVxyXG4gICAgICAgICAgOiBhd2FpdCBub3JtYWxpemVBZGRyZXNzKGRhdGEuYWRkcmVzc1N1cHBseSk7XHJcbiAgICAgICAgYXdhaXQgc2V0KHN1cHBseUFkZHJlc3NTZWxlY3RlZEF0b20sIGVnb25BZGRyZXNzKTtcclxuICAgICAgICBhd2FpdCBzZXQoc2F2ZUNvbnRyYWN0cyQpO1xyXG4gICAgICAgIG5leHQoKTtcclxuICAgICAgfSxcclxuICAgICAgW25leHRdXHJcbiAgICApXHJcbiAgKTtcclxuXHJcbiAgY29uc3QgaXNTYW1lID0gd2F0Y2goJ3NhbWUnKSA9PT0gJ1lFUyc7XHJcblxyXG4gIHJldHVybiAoXHJcbiAgICA8Rm9ybVByb3ZpZGVyIHsuLi5tZXRob2RzfT5cclxuICAgICAgPFN0ZXBMYXlvdXQgY3RhPXs8U3RlcEN0YUNvbm5lY3RlZCBmb3JtPXtmb3JtSWR9IC8+fT5cclxuICAgICAgICA8Zm9ybSBpZD17Zm9ybUlkfSBvblN1Ym1pdD17aGFuZGxlU3VibWl0KG9uU3VibWl0KX0+XHJcbiAgICAgICAgICA8U3RlcENvbnRhaW5lcj5cclxuICAgICAgICAgICAgPFN0ZXBUaXRsZVxyXG4gICAgICAgICAgICAgIHRpdGxlPXs8PkRvdmUgdnVvaSBhdHRpdmFyZSBsYSBmb3JuaXR1cmE/PC8+fVxyXG4gICAgICAgICAgICAgIHN1YnRpdGxlPXtcclxuICAgICAgICAgICAgICAgIDw+XHJcbiAgICAgICAgICAgICAgICAgIFNlIGwnYXppZW5kYSBoYSBwacO5IHNlZGkgbyBwdW50aSBkaSBmb3JuaXR1cmEgc3UgY3VpIHZ1b2lcclxuICAgICAgICAgICAgICAgICAgYXR0aXZhcmUgcXVlc3RhIG9mZmVydGEsIHRpIGNoaWVkZXJlbW8gbGUgaW5mb3JtYXppb25pXHJcbiAgICAgICAgICAgICAgICAgIG5lY2Vzc2FyaWUgaW4gc2VndWl0by5cclxuICAgICAgICAgICAgICAgIDwvPlxyXG4gICAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgLz5cclxuICAgICAgICAgICAgPFN0ZXBGaWVsZHNldCBkaXJlY3Rpb249XCJyb3dcIj5cclxuICAgICAgICAgICAgICA8Q2FyZElucHV0XHJcbiAgICAgICAgICAgICAgICBsYWJlbEljb249ezxIb21lQ2l0eUFwYXJ0bWVudCAvPn1cclxuICAgICAgICAgICAgICAgIHsuLi5yZWdpc3Rlcignc2FtZScsIHsgcmVxdWlyZWQ6IHRydWUgfSl9XHJcbiAgICAgICAgICAgICAgICB0eXBlPVwicmFkaW9cIlxyXG4gICAgICAgICAgICAgICAgbGFiZWxUaXRsZT1cIlNlZGUgbGVnYWxlXCJcclxuICAgICAgICAgICAgICAgIHZhbHVlPVwiWUVTXCJcclxuICAgICAgICAgICAgICAvPlxyXG4gICAgICAgICAgICAgIDxDYXJkSW5wdXRcclxuICAgICAgICAgICAgICAgIGxhYmVsSWNvbj17PFBsdXNDaXJjbGUgLz59XHJcbiAgICAgICAgICAgICAgICB7Li4ucmVnaXN0ZXIoJ3NhbWUnKX1cclxuICAgICAgICAgICAgICAgIHR5cGU9XCJyYWRpb1wiXHJcbiAgICAgICAgICAgICAgICBsYWJlbFRpdGxlPVwiQWx0cmEgc2VkZVwiXHJcbiAgICAgICAgICAgICAgICB2YWx1ZT1cIk5PXCJcclxuICAgICAgICAgICAgICAvPlxyXG4gICAgICAgICAgICA8L1N0ZXBGaWVsZHNldD5cclxuXHJcbiAgICAgICAgICAgIDxTdGVwRmllbGRzZXQ+XHJcbiAgICAgICAgICAgICAge2lzU2FtZSA/IChcclxuICAgICAgICAgICAgICAgIC8vIEB0cy1leHBlY3QtZXJyb3IgZGlzYWJsZWQsIHRoaXMgc2hvdWxkIGJlIHNhZmVcclxuICAgICAgICAgICAgICAgIDxBZGRyZXNzSW5wdXRcclxuICAgICAgICAgICAgICAgICAgbGFiZWw9eydJbmRpcml6em8nfVxyXG4gICAgICAgICAgICAgICAgICB2YWx1ZT17cmVzaWRlbnRpYWxBZGRyZXNzU3VnZ2VzdGlvbn1cclxuICAgICAgICAgICAgICAgICAgZGlzYWJsZWRcclxuICAgICAgICAgICAgICAgIC8+XHJcbiAgICAgICAgICAgICAgKSA6IChcclxuICAgICAgICAgICAgICAgIDxDb250cm9sbGVyXHJcbiAgICAgICAgICAgICAgICAgIHJlbmRlcj17KHsgZmllbGQ6IHsgcmVmLCAuLi5maWVsZCB9LCBmaWVsZFN0YXRlIH0pID0+IHtcclxuICAgICAgICAgICAgICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICAgICAgICAgICAgPEFkZHJlc3NJbnB1dFxyXG4gICAgICAgICAgICAgICAgICAgICAgICBsYWJlbD17J0luZGlyaXp6byd9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIG15UmVmPXtyZWZ9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIHsuLi5maWVsZH1cclxuICAgICAgICAgICAgICAgICAgICAgICAgey4uLmZpZWxkU3RhdGV9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIHZhbHVlPXtmaWVsZC52YWx1ZX1cclxuICAgICAgICAgICAgICAgICAgICAgIC8+XHJcbiAgICAgICAgICAgICAgICAgICAgKTtcclxuICAgICAgICAgICAgICAgICAgfX1cclxuICAgICAgICAgICAgICAgICAgcnVsZXM9e0FkZHJlc3NJbnB1dC5ydWxlc31cclxuICAgICAgICAgICAgICAgICAgY29udHJvbD17bWV0aG9kcy5jb250cm9sfVxyXG4gICAgICAgICAgICAgICAgICBuYW1lPVwiYWRkcmVzc1N1cHBseVwiXHJcbiAgICAgICAgICAgICAgICAvPlxyXG4gICAgICAgICAgICAgICl9XHJcbiAgICAgICAgICAgIDwvU3RlcEZpZWxkc2V0PlxyXG4gICAgICAgICAgPC9TdGVwQ29udGFpbmVyPlxyXG4gICAgICAgIDwvZm9ybT5cclxuICAgICAgPC9TdGVwTGF5b3V0PlxyXG4gICAgPC9Gb3JtUHJvdmlkZXI+XHJcbiAgKTtcclxufVxyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL3N0ZXBzL3NyYy9saWIvYWRkcmVzcy9BZGRyZXNzU3dpdGNoSW5TdGVwLnRzeCJ9

@@ -1,0 +1,10 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.module.less");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from "/@vite/client"
+const __vite__id = "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.module.less"
+const __vite__css = "/* Viewport and media queries */\n/* Box shadows */\n._recapBox_1jwyi_3 {\n  box-shadow: 0 0 15px 0 rgba(51, 51, 51, 0.15);\n  border-radius: calc(var(--grid-base) * 2);\n  background: var(--Background-White);\n  display: flex;\n  padding: calc(var(--grid-base) * 3) calc(var(--grid-base) * 2);\n  gap: calc(var(--grid-base) * 2);\n  flex-direction: column;\n}\n._recapBox_1jwyi_3 ul {\n  margin: 0;\n  display: flex;\n  gap: calc(var(--grid-base) * 2);\n  flex-direction: column;\n}\n"
+__vite__updateStyle(__vite__id, __vite__css)
+export const recapBox = "_recapBox_1jwyi_3";
+export default {
+	recapBox: recapBox
+};
+
+import.meta.hot.prune(() => __vite__removeStyle(__vite__id))

@@ -1,0 +1,67 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { atom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+import { Segment } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/enums.ts";
+import { offerIdAtom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/troubleshooting/atoms.ts";
+import { atomWithRetryableQuery } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/index.ts";
+import { fetchProduct } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/api/products-collection/products.ts";
+export const offer$ = atomWithRetryableQuery(async (get) => {
+  const offer = get(offerIdAtom);
+  if (!offer) {
+    return;
+  }
+  return {
+    queryKey: ["products", offer.code, offer.channel, offer.touchpoint],
+    queryFn: async () => {
+      const {
+        type,
+        ...fetchedProduct
+      } = await fetchProduct(offer);
+      return {
+        ...fetchedProduct,
+        segment: type === "BUSINESS" ? Segment.SMALL : Segment.RESID
+      };
+    }
+  };
+});
+export const virtualPanelOffer$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\api\\products-collection\\get.ts/virtualPanelOffer$", atom(async (get) => {
+  const virtualPanel = (await get(offer$))?.virtualPanel;
+  if (!virtualPanel) {
+    return;
+  }
+  return {
+    ...virtualPanel,
+    locations: virtualPanel.locations.map((l) => ({
+      id: l.location,
+      name: l.location,
+      lat: l.latDecDegree,
+      lng: l.lngDecDegree,
+      sizes: l.sizes
+    }))
+  };
+}));
+virtualPanelOffer$.debugLabel = "virtualPanelOffer$";
+export const broadbandOffer$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\api\\products-collection\\get.ts/broadbandOffer$", atom(async (get) => (await get(offer$))?.broadband));
+broadbandOffer$.debugLabel = "broadbandOffer$";
+export const gasOffer$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\api\\products-collection\\get.ts/gasOffer$", atom(async (get) => (await get(offer$))?.gas));
+gasOffer$.debugLabel = "gasOffer$";
+export const powerOffer$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\api\\products-collection\\get.ts/powerOffer$", atom(async (get) => (await get(offer$))?.power));
+powerOffer$.debugLabel = "powerOffer$";
+export const contentFragment$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\api\\products-collection\\get.ts/contentFragment$", atom(async (get) => {
+  const offer = await get(offer$);
+  if (!("contentFragment" in offer)) {
+    return;
+  }
+  return offer.contentFragment;
+}));
+contentFragment$.debugLabel = "contentFragment$";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLFlBQVk7QUFDckIsU0FBU0MsZUFBZTtBQUN4QixTQUFTQyxtQkFBbUI7QUFDNUIsU0FBU0MsOEJBQThCO0FBRXZDLFNBQVNDLG9CQUFvQjtBQUV0QixhQUFNQyxTQUFTRix1QkFBdUIsT0FBT0csUUFBUTtBQUMxRCxRQUFNQyxRQUFRRCxJQUFJSixXQUFXO0FBRTdCLE1BQUksQ0FBQ0ssT0FBTztBQUNWO0FBQUEsRUFDRjtBQUVBLFNBQU87QUFBQSxJQUNMQyxVQUFVLENBQUMsWUFBWUQsTUFBTUUsTUFBTUYsTUFBTUcsU0FBU0gsTUFBTUksVUFBVTtBQUFBLElBQ2xFQyxTQUFTLFlBQVk7QUFDbkIsWUFBTTtBQUFBLFFBQUVDO0FBQUFBLFFBQU0sR0FBR0M7QUFBQUEsTUFBZSxJQUFJLE1BQU1WLGFBQWFHLEtBQUs7QUFDNUQsYUFBTztBQUFBLFFBQ0wsR0FBR087QUFBQUEsUUFDSEMsU0FBU0YsU0FBUyxhQUFhWixRQUFRZSxRQUFRZixRQUFRZ0I7QUFBQUEsTUFDekQ7QUFBQSxJQUNGO0FBQUEsRUFDRjtBQUNGLENBQUM7QUFFRCxhQUFBQyxxQkFBQUMsV0FBQUMsZUFBQWQsSUFBQSxtSUFBa0NOLEtBQUssT0FBT00sUUFBUTtBQUNwRCxRQUFNZSxnQkFBZ0IsTUFBTWYsSUFBSUQsTUFBTSxJQUFJZ0I7QUFDMUMsTUFBSSxDQUFDQSxjQUFjO0FBQ2pCO0FBQUEsRUFDRjtBQUVBLFNBQU87QUFBQSxJQUNMLEdBQUdBO0FBQUFBLElBQ0hDLFdBQVdELGFBQWFDLFVBQVVDLElBQUtDLFFBQU87QUFBQSxNQUM1Q0MsSUFBSUQsRUFBRUU7QUFBQUEsTUFDTkMsTUFBTUgsRUFBRUU7QUFBQUEsTUFDUkUsS0FBS0osRUFBRUs7QUFBQUEsTUFDUEMsS0FBS04sRUFBRU87QUFBQUEsTUFDUEMsT0FBT1IsRUFBRVE7QUFBQUEsSUFDWCxFQUFFO0FBQUEsRUFDSjtBQUNGLENBQUMsQ0FBQztBQUFDZCxtQkFBQWUsYUFBQTtBQUVILGFBQUFDLGtCQUFBZixXQUFBQyxlQUFBZCxJQUFBLGdJQUErQk4sS0FDN0IsT0FBT00sU0FBUyxNQUFNQSxJQUFJRCxNQUFNLElBQUk4QixTQUN0QyxDQUFDO0FBQUNELGdCQUFBRCxhQUFBO0FBRUYsYUFBQUcsWUFBQWpCLFdBQUFDLGVBQUFkLElBQUEsMEhBQXlCTixLQUFLLE9BQU9NLFNBQVMsTUFBTUEsSUFBSUQsTUFBTSxJQUFJZ0MsR0FBRyxDQUFDO0FBQUNELFVBQUFILGFBQUE7QUFFdkUsYUFBQUssY0FBQW5CLFdBQUFDLGVBQUFkLElBQUEsNEhBQTJCTixLQUFLLE9BQU9NLFNBQVMsTUFBTUEsSUFBSUQsTUFBTSxJQUFJa0MsS0FBSyxDQUFDO0FBQUNELFlBQUFMLGFBQUE7QUFFM0UsYUFBQU8sbUJBQUFyQixXQUFBQyxlQUFBZCxJQUFBLGlJQUFnQ04sS0FBSyxPQUFPTSxRQUFRO0FBQ2xELFFBQU1DLFFBQVEsTUFBTUQsSUFBSUQsTUFBTTtBQUM5QixNQUFJLEVBQUUscUJBQXFCRSxRQUFRO0FBQ2pDO0FBQUEsRUFDRjtBQUNBLFNBQU9BLE1BQU1rQztBQUNmLENBQUMsQ0FBQztBQUFDRCxpQkFBQVAsYUFBQSIsIm5hbWVzIjpbImF0b20iLCJTZWdtZW50Iiwib2ZmZXJJZEF0b20iLCJhdG9tV2l0aFJldHJ5YWJsZVF1ZXJ5IiwiZmV0Y2hQcm9kdWN0Iiwib2ZmZXIkIiwiZ2V0Iiwib2ZmZXIiLCJxdWVyeUtleSIsImNvZGUiLCJjaGFubmVsIiwidG91Y2hwb2ludCIsInF1ZXJ5Rm4iLCJ0eXBlIiwiZmV0Y2hlZFByb2R1Y3QiLCJzZWdtZW50IiwiU01BTEwiLCJSRVNJRCIsInZpcnR1YWxQYW5lbE9mZmVyJCIsImdsb2JhbFRoaXMiLCJqb3RhaUF0b21DYWNoZSIsInZpcnR1YWxQYW5lbCIsImxvY2F0aW9ucyIsIm1hcCIsImwiLCJpZCIsImxvY2F0aW9uIiwibmFtZSIsImxhdCIsImxhdERlY0RlZ3JlZSIsImxuZyIsImxuZ0RlY0RlZ3JlZSIsInNpemVzIiwiZGVidWdMYWJlbCIsImJyb2FkYmFuZE9mZmVyJCIsImJyb2FkYmFuZCIsImdhc09mZmVyJCIsImdhcyIsInBvd2VyT2ZmZXIkIiwicG93ZXIiLCJjb250ZW50RnJhZ21lbnQkIiwiY29udGVudEZyYWdtZW50Il0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbImdldC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBhdG9tIH0gZnJvbSAnam90YWknO1xyXG5pbXBvcnQgeyBTZWdtZW50IH0gZnJvbSAnLi4vLi4vYXRvbXMvZW51bXMnO1xyXG5pbXBvcnQgeyBvZmZlcklkQXRvbSB9IGZyb20gJy4uLy4uL3Ryb3VibGVzaG9vdGluZy9hdG9tcyc7XHJcbmltcG9ydCB7IGF0b21XaXRoUmV0cnlhYmxlUXVlcnkgfSBmcm9tICcuLi8uLi91dGlscyc7XHJcbmltcG9ydCB0eXBlIHsgVmlydHVhbFBhbmVsT2ZmZXIgfSBmcm9tICcuL3BhbmVsLXR5cGVzJztcclxuaW1wb3J0IHsgZmV0Y2hQcm9kdWN0IH0gZnJvbSAnLi9wcm9kdWN0cyc7XHJcblxyXG5leHBvcnQgY29uc3Qgb2ZmZXIkID0gYXRvbVdpdGhSZXRyeWFibGVRdWVyeShhc3luYyAoZ2V0KSA9PiB7XHJcbiAgY29uc3Qgb2ZmZXIgPSBnZXQob2ZmZXJJZEF0b20pO1xyXG5cclxuICBpZiAoIW9mZmVyKSB7XHJcbiAgICByZXR1cm47XHJcbiAgfVxyXG5cclxuICByZXR1cm4ge1xyXG4gICAgcXVlcnlLZXk6IFsncHJvZHVjdHMnLCBvZmZlci5jb2RlLCBvZmZlci5jaGFubmVsLCBvZmZlci50b3VjaHBvaW50XSxcclxuICAgIHF1ZXJ5Rm46IGFzeW5jICgpID0+IHtcclxuICAgICAgY29uc3QgeyB0eXBlLCAuLi5mZXRjaGVkUHJvZHVjdCB9ID0gYXdhaXQgZmV0Y2hQcm9kdWN0KG9mZmVyKTtcclxuICAgICAgcmV0dXJuIHtcclxuICAgICAgICAuLi5mZXRjaGVkUHJvZHVjdCxcclxuICAgICAgICBzZWdtZW50OiB0eXBlID09PSAnQlVTSU5FU1MnID8gU2VnbWVudC5TTUFMTCA6IFNlZ21lbnQuUkVTSUQsXHJcbiAgICAgIH07XHJcbiAgICB9LFxyXG4gIH07XHJcbn0pO1xyXG5cclxuZXhwb3J0IGNvbnN0IHZpcnR1YWxQYW5lbE9mZmVyJCA9IGF0b20oYXN5bmMgKGdldCkgPT4ge1xyXG4gIGNvbnN0IHZpcnR1YWxQYW5lbCA9IChhd2FpdCBnZXQob2ZmZXIkKSk/LnZpcnR1YWxQYW5lbDtcclxuICBpZiAoIXZpcnR1YWxQYW5lbCkge1xyXG4gICAgcmV0dXJuO1xyXG4gIH1cclxuXHJcbiAgcmV0dXJuIHtcclxuICAgIC4uLnZpcnR1YWxQYW5lbCxcclxuICAgIGxvY2F0aW9uczogdmlydHVhbFBhbmVsLmxvY2F0aW9ucy5tYXAoKGwpID0+ICh7XHJcbiAgICAgIGlkOiBsLmxvY2F0aW9uLFxyXG4gICAgICBuYW1lOiBsLmxvY2F0aW9uLFxyXG4gICAgICBsYXQ6IGwubGF0RGVjRGVncmVlLFxyXG4gICAgICBsbmc6IGwubG5nRGVjRGVncmVlLFxyXG4gICAgICBzaXplczogbC5zaXplcyxcclxuICAgIH0pKSxcclxuICB9IGFzIFZpcnR1YWxQYW5lbE9mZmVyO1xyXG59KTtcclxuXHJcbmV4cG9ydCBjb25zdCBicm9hZGJhbmRPZmZlciQgPSBhdG9tKFxyXG4gIGFzeW5jIChnZXQpID0+IChhd2FpdCBnZXQob2ZmZXIkKSk/LmJyb2FkYmFuZFxyXG4pO1xyXG5cclxuZXhwb3J0IGNvbnN0IGdhc09mZmVyJCA9IGF0b20oYXN5bmMgKGdldCkgPT4gKGF3YWl0IGdldChvZmZlciQpKT8uZ2FzKTtcclxuXHJcbmV4cG9ydCBjb25zdCBwb3dlck9mZmVyJCA9IGF0b20oYXN5bmMgKGdldCkgPT4gKGF3YWl0IGdldChvZmZlciQpKT8ucG93ZXIpO1xyXG5cclxuZXhwb3J0IGNvbnN0IGNvbnRlbnRGcmFnbWVudCQgPSBhdG9tKGFzeW5jIChnZXQpID0+IHtcclxuICBjb25zdCBvZmZlciA9IGF3YWl0IGdldChvZmZlciQpO1xyXG4gIGlmICghKCdjb250ZW50RnJhZ21lbnQnIGluIG9mZmVyKSkge1xyXG4gICAgcmV0dXJuO1xyXG4gIH1cclxuICByZXR1cm4gb2ZmZXIuY29udGVudEZyYWdtZW50O1xyXG59KTtcclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy9kYXRhLWFjY2Vzcy9zcmMvbGliL2FwaS9wcm9kdWN0cy1jb2xsZWN0aW9uL2dldC50cyJ9

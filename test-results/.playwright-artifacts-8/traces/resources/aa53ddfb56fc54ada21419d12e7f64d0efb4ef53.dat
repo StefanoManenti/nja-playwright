@@ -1,0 +1,185 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataElementSwitcher.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataElementSwitcher.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { Switcher, SwitcherOption } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+import __vite__cjsImport4_react from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react.js?v=0189a8d1"; const useId = __vite__cjsImport4_react["useId"];
+import { DataElement } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataElement.tsx";
+import { useTagId } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/index.ts";
+import { getTrackingTag } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/index.ts";
+export function DataElementSwitcher(props) {
+  _s();
+  const {
+    title,
+    value,
+    setValue,
+    valueA,
+    valueB,
+    valueC,
+    labelA,
+    labelB,
+    labelC,
+    switchTextA,
+    switchTextB,
+    switchTextC,
+    readOnly
+  } = props;
+  const name = useId();
+  const tagId = useTagId();
+  let tagIdA;
+  let tagIdB;
+  let tagIdC;
+  if (valueA) {
+    tagIdA = getTrackingTag("SWITCHER", tagId, valueA);
+  }
+  if (valueB) {
+    tagIdB = getTrackingTag("SWITCHER", tagId, valueB);
+  }
+  if (valueC) {
+    tagIdC = getTrackingTag("SWITCHER", tagId, valueC);
+  }
+  if (readOnly) {
+    return /* @__PURE__ */ jsxDEV(
+      DataElement,
+      {
+        title,
+        description: value === valueA ? labelA : value === valueB ? labelB : value === valueC ? labelC : ""
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataElementSwitcher.tsx",
+        lineNumber: 60,
+        columnNumber: 7
+      },
+      this
+    );
+  }
+  return /* @__PURE__ */ jsxDEV(
+    DataElement,
+    {
+      title: /* @__PURE__ */ jsxDEV("span", { id: `${name}-label`, children: title }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataElementSwitcher.tsx",
+        lineNumber: 77,
+        columnNumber: 14
+      }, this),
+      switcher: /* @__PURE__ */ jsxDEV(Switcher, { "aria-labelledby": `${name}-label`, children: [
+        /* @__PURE__ */ jsxDEV(
+          SwitcherOption,
+          {
+            name,
+            value: valueA,
+            checked: value === valueA,
+            onChange: () => setValue(valueA),
+            id: `${name}-a`,
+            "data-cs-override-id": tagIdA,
+            children: labelA
+          },
+          void 0,
+          false,
+          {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataElementSwitcher.tsx",
+            lineNumber: 80,
+            columnNumber: 11
+          },
+          this
+        ),
+        /* @__PURE__ */ jsxDEV(
+          SwitcherOption,
+          {
+            name,
+            value: valueB,
+            checked: value === valueB,
+            onChange: () => setValue(valueB),
+            id: `${name}-b`,
+            "data-cs-override-id": tagIdB,
+            children: labelB
+          },
+          void 0,
+          false,
+          {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataElementSwitcher.tsx",
+            lineNumber: 90,
+            columnNumber: 11
+          },
+          this
+        ),
+        valueC && /* @__PURE__ */ jsxDEV(
+          SwitcherOption,
+          {
+            name,
+            value: valueC,
+            checked: value === valueC,
+            onChange: () => setValue(valueC),
+            id: `${name}-c`,
+            "data-cs-override-id": tagIdC,
+            children: labelC
+          },
+          void 0,
+          false,
+          {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataElementSwitcher.tsx",
+            lineNumber: 101,
+            columnNumber: 9
+          },
+          this
+        )
+      ] }, void 0, true, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataElementSwitcher.tsx",
+        lineNumber: 79,
+        columnNumber: 7
+      }, this),
+      switchHelperText: value === valueA ? switchTextA : value === valueB ? switchTextB : value === valueC ? switchTextC : void 0
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataElementSwitcher.tsx",
+      lineNumber: 76,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_s(DataElementSwitcher, "SfZyN/n6LRlbNBs6ebM0LY3IhUA=", false, function() {
+  return [useId, useTagId];
+});
+_c = DataElementSwitcher;
+var _c;
+$RefreshReg$(_c, "DataElementSwitcher");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataElementSwitcher.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBMkRNOzs7OztxQ0EzRE47QUFBQSxPQUFTQSxpREFBZ0M7QUFBa0I7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQzNELFNBQW9CQyxhQUFhO0FBQ2pDLFNBQVNDLG1CQUFtQjtBQUU1QixTQUFTQyxnQkFBZ0I7QUFDekIsU0FBU0Msc0JBQXNCO0FBRXhCLGdCQUFTQyxvQkFFZEMsT0FjQztBQUFBQyxLQUFBO0FBQ0QsUUFBTTtBQUFBLElBQ0pDO0FBQUFBLElBQ0FDO0FBQUFBLElBQ0FDO0FBQUFBLElBQ0FDO0FBQUFBLElBQ0FDO0FBQUFBLElBQ0FDO0FBQUFBLElBQ0FDO0FBQUFBLElBQ0FDO0FBQUFBLElBQ0FDO0FBQUFBLElBQ0FDO0FBQUFBLElBQ0FDO0FBQUFBLElBQ0FDO0FBQUFBLElBQ0FDO0FBQUFBLEVBQ0YsSUFBSWQ7QUFFSixRQUFNZSxPQUFPcEIsTUFBTTtBQUVuQixRQUFNcUIsUUFBUW5CLFNBQVM7QUFFdkIsTUFBSW9CO0FBQ0osTUFBSUM7QUFDSixNQUFJQztBQUNKLE1BQUlkLFFBQVE7QUFDVlksYUFBU25CLGVBQWUsWUFBWWtCLE9BQU9YLE1BQU07QUFBQSxFQUNuRDtBQUNBLE1BQUlDLFFBQVE7QUFDVlksYUFBU3BCLGVBQWUsWUFBWWtCLE9BQU9WLE1BQU07QUFBQSxFQUNuRDtBQUNBLE1BQUlDLFFBQVE7QUFDVlksYUFBU3JCLGVBQWUsWUFBWWtCLE9BQU9ULE1BQU07QUFBQSxFQUNuRDtBQUVBLE1BQUlPLFVBQVU7QUFDWixXQUNFO0FBQUEsTUFBQztBQUFBO0FBQUEsUUFDQztBQUFBLFFBQ0EsYUFDRVgsVUFBVUUsU0FDTkcsU0FDQUwsVUFBVUcsU0FDVkcsU0FDQU4sVUFBVUksU0FDVkcsU0FDQTtBQUFBO0FBQUEsTUFUUjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsSUFVRztBQUFBLEVBR1A7QUFFQSxTQUNFO0FBQUEsSUFBQztBQUFBO0FBQUEsTUFDQyxPQUFPLHVCQUFDLFVBQUssSUFBSSxHQUFHSyxJQUFJLFVBQVdiLG1CQUE1QjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQWtDO0FBQUEsTUFDekMsVUFDRSx1QkFBQyxZQUFTLG1CQUFpQixHQUFHYSxJQUFJLFVBQ2hDO0FBQUE7QUFBQSxVQUFDO0FBQUE7QUFBQSxZQUNDO0FBQUEsWUFDQSxPQUFPVjtBQUFBQSxZQUNQLFNBQVNGLFVBQVVFO0FBQUFBLFlBQ25CLFVBQVUsTUFBTUQsU0FBU0MsTUFBTTtBQUFBLFlBQy9CLElBQUksR0FBR1UsSUFBSTtBQUFBLFlBQ1gsdUJBQXFCRTtBQUFBQSxZQUVwQlQ7QUFBQUE7QUFBQUEsVUFSSDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsUUFTQTtBQUFBLFFBQ0E7QUFBQSxVQUFDO0FBQUE7QUFBQSxZQUNDO0FBQUEsWUFDQSxPQUFPRjtBQUFBQSxZQUNQLFNBQVNILFVBQVVHO0FBQUFBLFlBQ25CLFVBQVUsTUFBTUYsU0FBU0UsTUFBTTtBQUFBLFlBQy9CLElBQUksR0FBR1MsSUFBSTtBQUFBLFlBQ1gsdUJBQXFCRztBQUFBQSxZQUVwQlQ7QUFBQUE7QUFBQUEsVUFSSDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsUUFTQTtBQUFBLFFBQ0NGLFVBQ0M7QUFBQSxVQUFDO0FBQUE7QUFBQSxZQUNDO0FBQUEsWUFDQSxPQUFPQTtBQUFBQSxZQUNQLFNBQVNKLFVBQVVJO0FBQUFBLFlBQ25CLFVBQVUsTUFBTUgsU0FBU0csTUFBTTtBQUFBLFlBQy9CLElBQUksR0FBR1EsSUFBSTtBQUFBLFlBQ1gsdUJBQXFCSTtBQUFBQSxZQUVwQlQ7QUFBQUE7QUFBQUEsVUFSSDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsUUFTQTtBQUFBLFdBL0JKO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFpQ0E7QUFBQSxNQUVGLGtCQUNFUCxVQUFVRSxTQUNOTSxjQUNBUixVQUFVRyxTQUNWTSxjQUNBVCxVQUFVSSxTQUNWTSxjQUNBTztBQUFBQTtBQUFBQSxJQTdDUjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsRUE4Q0c7QUFHUDtBQUFDbkIsR0FySGVGLHFCQUFtQjtBQUFBLFVBaUNwQkosT0FFQ0UsUUFBUTtBQUFBO0FBQUF3QixLQW5DUnRCO0FBQW1CLElBQUFzQjtBQUFBQyxhQUFBRCxJQUFBIiwibmFtZXMiOlsiU3dpdGNoZXIiLCJ1c2VJZCIsIkRhdGFFbGVtZW50IiwidXNlVGFnSWQiLCJnZXRUcmFja2luZ1RhZyIsIkRhdGFFbGVtZW50U3dpdGNoZXIiLCJwcm9wcyIsIl9zIiwidGl0bGUiLCJ2YWx1ZSIsInNldFZhbHVlIiwidmFsdWVBIiwidmFsdWVCIiwidmFsdWVDIiwibGFiZWxBIiwibGFiZWxCIiwibGFiZWxDIiwic3dpdGNoVGV4dEEiLCJzd2l0Y2hUZXh0QiIsInN3aXRjaFRleHRDIiwicmVhZE9ubHkiLCJuYW1lIiwidGFnSWQiLCJ0YWdJZEEiLCJ0YWdJZEIiLCJ0YWdJZEMiLCJ1bmRlZmluZWQiLCJfYyIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJEYXRhRWxlbWVudFN3aXRjaGVyLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBTd2l0Y2hlciwgU3dpdGNoZXJPcHRpb24gfSBmcm9tICdAbmFqLXdvL3VpLWF0b21zJztcclxuaW1wb3J0IHsgUmVhY3ROb2RlLCB1c2VJZCB9IGZyb20gJ3JlYWN0JztcclxuaW1wb3J0IHsgRGF0YUVsZW1lbnQgfSBmcm9tICcuL0RhdGFFbGVtZW50JztcclxuLy8gZXNsaW50LWRpc2FibGUtbmV4dC1saW5lIEBueC9lbmZvcmNlLW1vZHVsZS1ib3VuZGFyaWVzXHJcbmltcG9ydCB7IHVzZVRhZ0lkIH0gZnJvbSAnQG5hai13by90cmFja2luZy1yZWFjdCc7XHJcbmltcG9ydCB7IGdldFRyYWNraW5nVGFnIH0gZnJvbSAnQG5hai13by91dGlsJztcclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBEYXRhRWxlbWVudFN3aXRjaGVyPFxyXG4gIFYgZXh0ZW5kcyBzdHJpbmcgfCBudW1iZXIgfCByZWFkb25seSBzdHJpbmdbXSB8IHVuZGVmaW5lZFxyXG4+KHByb3BzOiB7XHJcbiAgdGl0bGU6IFJlYWN0Tm9kZTtcclxuICB2YWx1ZTogVjtcclxuICBzZXRWYWx1ZTogKHZhbHVlOiBWKSA9PiB2b2lkO1xyXG4gIHZhbHVlQTogVjtcclxuICB2YWx1ZUI6IFY7XHJcbiAgdmFsdWVDPzogVjtcclxuICBsYWJlbEE6IFJlYWN0Tm9kZTtcclxuICBsYWJlbEI6IFJlYWN0Tm9kZTtcclxuICBsYWJlbEM/OiBSZWFjdE5vZGU7XHJcbiAgc3dpdGNoVGV4dEE/OiBSZWFjdE5vZGU7XHJcbiAgc3dpdGNoVGV4dEI/OiBSZWFjdE5vZGU7XHJcbiAgc3dpdGNoVGV4dEM/OiBSZWFjdE5vZGU7XHJcbiAgcmVhZE9ubHk/OiBib29sZWFuO1xyXG59KSB7XHJcbiAgY29uc3Qge1xyXG4gICAgdGl0bGUsXHJcbiAgICB2YWx1ZSxcclxuICAgIHNldFZhbHVlLFxyXG4gICAgdmFsdWVBLFxyXG4gICAgdmFsdWVCLFxyXG4gICAgdmFsdWVDLFxyXG4gICAgbGFiZWxBLFxyXG4gICAgbGFiZWxCLFxyXG4gICAgbGFiZWxDLFxyXG4gICAgc3dpdGNoVGV4dEEsXHJcbiAgICBzd2l0Y2hUZXh0QixcclxuICAgIHN3aXRjaFRleHRDLFxyXG4gICAgcmVhZE9ubHksXHJcbiAgfSA9IHByb3BzO1xyXG5cclxuICBjb25zdCBuYW1lID0gdXNlSWQoKTtcclxuXHJcbiAgY29uc3QgdGFnSWQgPSB1c2VUYWdJZCgpO1xyXG5cclxuICBsZXQgdGFnSWRBO1xyXG4gIGxldCB0YWdJZEI7XHJcbiAgbGV0IHRhZ0lkQztcclxuICBpZiAodmFsdWVBKSB7XHJcbiAgICB0YWdJZEEgPSBnZXRUcmFja2luZ1RhZygnU1dJVENIRVInLCB0YWdJZCwgdmFsdWVBKTtcclxuICB9XHJcbiAgaWYgKHZhbHVlQikge1xyXG4gICAgdGFnSWRCID0gZ2V0VHJhY2tpbmdUYWcoJ1NXSVRDSEVSJywgdGFnSWQsIHZhbHVlQik7XHJcbiAgfVxyXG4gIGlmICh2YWx1ZUMpIHtcclxuICAgIHRhZ0lkQyA9IGdldFRyYWNraW5nVGFnKCdTV0lUQ0hFUicsIHRhZ0lkLCB2YWx1ZUMpO1xyXG4gIH1cclxuXHJcbiAgaWYgKHJlYWRPbmx5KSB7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICA8RGF0YUVsZW1lbnRcclxuICAgICAgICB0aXRsZT17dGl0bGV9XHJcbiAgICAgICAgZGVzY3JpcHRpb249e1xyXG4gICAgICAgICAgdmFsdWUgPT09IHZhbHVlQVxyXG4gICAgICAgICAgICA/IGxhYmVsQVxyXG4gICAgICAgICAgICA6IHZhbHVlID09PSB2YWx1ZUJcclxuICAgICAgICAgICAgPyBsYWJlbEJcclxuICAgICAgICAgICAgOiB2YWx1ZSA9PT0gdmFsdWVDXHJcbiAgICAgICAgICAgID8gbGFiZWxDXHJcbiAgICAgICAgICAgIDogJydcclxuICAgICAgICB9XHJcbiAgICAgIC8+XHJcbiAgICApO1xyXG4gIH1cclxuXHJcbiAgcmV0dXJuIChcclxuICAgIDxEYXRhRWxlbWVudFxyXG4gICAgICB0aXRsZT17PHNwYW4gaWQ9e2Ake25hbWV9LWxhYmVsYH0+e3RpdGxlfTwvc3Bhbj59XHJcbiAgICAgIHN3aXRjaGVyPXtcclxuICAgICAgICA8U3dpdGNoZXIgYXJpYS1sYWJlbGxlZGJ5PXtgJHtuYW1lfS1sYWJlbGB9PlxyXG4gICAgICAgICAgPFN3aXRjaGVyT3B0aW9uXHJcbiAgICAgICAgICAgIG5hbWU9e25hbWV9XHJcbiAgICAgICAgICAgIHZhbHVlPXt2YWx1ZUF9XHJcbiAgICAgICAgICAgIGNoZWNrZWQ9e3ZhbHVlID09PSB2YWx1ZUF9XHJcbiAgICAgICAgICAgIG9uQ2hhbmdlPXsoKSA9PiBzZXRWYWx1ZSh2YWx1ZUEpfVxyXG4gICAgICAgICAgICBpZD17YCR7bmFtZX0tYWB9XHJcbiAgICAgICAgICAgIGRhdGEtY3Mtb3ZlcnJpZGUtaWQ9e3RhZ0lkQX1cclxuICAgICAgICAgID5cclxuICAgICAgICAgICAge2xhYmVsQX1cclxuICAgICAgICAgIDwvU3dpdGNoZXJPcHRpb24+XHJcbiAgICAgICAgICA8U3dpdGNoZXJPcHRpb25cclxuICAgICAgICAgICAgbmFtZT17bmFtZX1cclxuICAgICAgICAgICAgdmFsdWU9e3ZhbHVlQn1cclxuICAgICAgICAgICAgY2hlY2tlZD17dmFsdWUgPT09IHZhbHVlQn1cclxuICAgICAgICAgICAgb25DaGFuZ2U9eygpID0+IHNldFZhbHVlKHZhbHVlQil9XHJcbiAgICAgICAgICAgIGlkPXtgJHtuYW1lfS1iYH1cclxuICAgICAgICAgICAgZGF0YS1jcy1vdmVycmlkZS1pZD17dGFnSWRCfVxyXG4gICAgICAgICAgPlxyXG4gICAgICAgICAgICB7bGFiZWxCfVxyXG4gICAgICAgICAgPC9Td2l0Y2hlck9wdGlvbj5cclxuICAgICAgICAgIHt2YWx1ZUMgJiYgKFxyXG4gICAgICAgICAgICA8U3dpdGNoZXJPcHRpb25cclxuICAgICAgICAgICAgICBuYW1lPXtuYW1lfVxyXG4gICAgICAgICAgICAgIHZhbHVlPXt2YWx1ZUN9XHJcbiAgICAgICAgICAgICAgY2hlY2tlZD17dmFsdWUgPT09IHZhbHVlQ31cclxuICAgICAgICAgICAgICBvbkNoYW5nZT17KCkgPT4gc2V0VmFsdWUodmFsdWVDKX1cclxuICAgICAgICAgICAgICBpZD17YCR7bmFtZX0tY2B9XHJcbiAgICAgICAgICAgICAgZGF0YS1jcy1vdmVycmlkZS1pZD17dGFnSWRDfVxyXG4gICAgICAgICAgICA+XHJcbiAgICAgICAgICAgICAge2xhYmVsQ31cclxuICAgICAgICAgICAgPC9Td2l0Y2hlck9wdGlvbj5cclxuICAgICAgICAgICl9XHJcbiAgICAgICAgPC9Td2l0Y2hlcj5cclxuICAgICAgfVxyXG4gICAgICBzd2l0Y2hIZWxwZXJUZXh0PXtcclxuICAgICAgICB2YWx1ZSA9PT0gdmFsdWVBXHJcbiAgICAgICAgICA/IHN3aXRjaFRleHRBXHJcbiAgICAgICAgICA6IHZhbHVlID09PSB2YWx1ZUJcclxuICAgICAgICAgID8gc3dpdGNoVGV4dEJcclxuICAgICAgICAgIDogdmFsdWUgPT09IHZhbHVlQ1xyXG4gICAgICAgICAgPyBzd2l0Y2hUZXh0Q1xyXG4gICAgICAgICAgOiB1bmRlZmluZWRcclxuICAgICAgfVxyXG4gICAgLz5cclxuICApO1xyXG59XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvdWktbW9sZWN1bGVzL3NyYy9saWIvcmVjYXAtYm94L0RhdGFFbGVtZW50U3dpdGNoZXIudHN4In0=

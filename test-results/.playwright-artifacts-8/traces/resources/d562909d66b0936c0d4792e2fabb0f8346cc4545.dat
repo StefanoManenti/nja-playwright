@@ -1,0 +1,68 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/services/tracking.tsx");import.meta.env = {"BASE_URL": "/", "DEV": true, "MODE": "development", "PROD": false, "SSR": false};import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/apps/naj/src/services/tracking.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { mainDataLayerConfAtom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/index.ts";
+import { StubTracking, Tracking } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking/src/index.ts";
+import { TrackingProvider as TrackingProviderOriginal } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/index.ts";
+import { useApp } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/index.ts";
+import { useAtomValue } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+import __vite__cjsImport8_react from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react.js?v=0189a8d1"; const useEffect = __vite__cjsImport8_react["useEffect"]; const useMemo = __vite__cjsImport8_react["useMemo"];
+export default function TrackingProvider(props) {
+  _s();
+  const app = useApp();
+  const mainDataLayerConf = useAtomValue(mainDataLayerConfAtom);
+  const tracking = useMemo(() => {
+    return app?.tracking ?? (import.meta.env.DEV ? new StubTracking() : new Tracking());
+  }, [app]);
+  useEffect(() => {
+    tracking.loadAndStart(mainDataLayerConf);
+  }, []);
+  return /* @__PURE__ */ jsxDEV(TrackingProviderOriginal, { tracking, children: props.children }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/apps/naj/src/services/tracking.tsx",
+    lineNumber: 24,
+    columnNumber: 5
+  }, this);
+}
+_s(TrackingProvider, "5G1iYnZS+lqevEfzxQ1RtSO61TY=", false, function() {
+  return [useApp, useAtomValue];
+});
+_c = TrackingProvider;
+var _c;
+$RefreshReg$(_c, "TrackingProvider");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/apps/naj/src/services/tracking.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBdUJJOzs7OztxQ0F2Qko7QUFBQSxPQUFTQSxpREFBNkI7QUFBcUI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQzNELFNBQVNDLGNBQWNDLGdCQUFnQjtBQUN2QyxTQUFTQyxvQkFBb0JDLGdDQUFnQztBQUM3RCxTQUFTQyxjQUFjO0FBQ3ZCLFNBQVNDLG9CQUFvQjtBQUM3QixTQUFvQkMsV0FBV0MsZUFBZTtBQUU5Qyx3QkFBd0JMLGlCQUFpQk0sT0FBZ0M7QUFBQUMsS0FBQTtBQUN2RSxRQUFNQyxNQUFNTixPQUFPO0FBQ25CLFFBQU1PLG9CQUFvQk4sYUFBYU4scUJBQXFCO0FBRTVELFFBQU1hLFdBQVdMLFFBQVEsTUFBTTtBQUM3QixXQUNFRyxLQUFLRSxhQUNKQyxZQUFZQyxJQUFJQyxNQUFNLElBQUlmLGFBQWEsSUFBSSxJQUFJQyxTQUFTO0FBQUEsRUFFN0QsR0FBRyxDQUFDUyxHQUFHLENBQUM7QUFFUkosWUFBVSxNQUFNO0FBQ2RNLGFBQVNJLGFBQWFMLGlCQUFpQjtBQUFBLEVBQ3pDLEdBQUcsRUFBRTtBQUVMLFNBQ0UsdUJBQUMsNEJBQXlCLFVBQ3ZCSCxnQkFBTVMsWUFEVDtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBRUE7QUFFSjtBQUFDUixHQXBCdUJQLGtCQUFnQjtBQUFBLFVBQzFCRSxRQUNjQyxZQUFZO0FBQUE7QUFBQWEsS0FGaEJoQjtBQUFnQixJQUFBZ0I7QUFBQUMsYUFBQUQsSUFBQSIsIm5hbWVzIjpbIm1haW5EYXRhTGF5ZXJDb25mQXRvbSIsIlN0dWJUcmFja2luZyIsIlRyYWNraW5nIiwiVHJhY2tpbmdQcm92aWRlciIsIlRyYWNraW5nUHJvdmlkZXJPcmlnaW5hbCIsInVzZUFwcCIsInVzZUF0b21WYWx1ZSIsInVzZUVmZmVjdCIsInVzZU1lbW8iLCJwcm9wcyIsIl9zIiwiYXBwIiwibWFpbkRhdGFMYXllckNvbmYiLCJ0cmFja2luZyIsImltcG9ydCIsImVudiIsIkRFViIsImxvYWRBbmRTdGFydCIsImNoaWxkcmVuIiwiX2MiLCIkUmVmcmVzaFJlZyQiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsidHJhY2tpbmcudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IG1haW5EYXRhTGF5ZXJDb25mQXRvbSB9IGZyb20gJ0BuYWotd28vZGF0YS1hY2Nlc3MnO1xyXG5pbXBvcnQgeyBTdHViVHJhY2tpbmcsIFRyYWNraW5nIH0gZnJvbSAnQG5hai13by90cmFja2luZyc7XHJcbmltcG9ydCB7IFRyYWNraW5nUHJvdmlkZXIgYXMgVHJhY2tpbmdQcm92aWRlck9yaWdpbmFsIH0gZnJvbSAnQG5hai13by90cmFja2luZy1yZWFjdCc7XHJcbmltcG9ydCB7IHVzZUFwcCB9IGZyb20gJ0BuYWotd28vdXRpbCc7XHJcbmltcG9ydCB7IHVzZUF0b21WYWx1ZSB9IGZyb20gJ2pvdGFpJztcclxuaW1wb3J0IHsgUmVhY3ROb2RlLCB1c2VFZmZlY3QsIHVzZU1lbW8gfSBmcm9tICdyZWFjdCc7XHJcblxyXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBUcmFja2luZ1Byb3ZpZGVyKHByb3BzOiB7IGNoaWxkcmVuOiBSZWFjdE5vZGUgfSkge1xyXG4gIGNvbnN0IGFwcCA9IHVzZUFwcCgpO1xyXG4gIGNvbnN0IG1haW5EYXRhTGF5ZXJDb25mID0gdXNlQXRvbVZhbHVlKG1haW5EYXRhTGF5ZXJDb25mQXRvbSk7XHJcblxyXG4gIGNvbnN0IHRyYWNraW5nID0gdXNlTWVtbygoKSA9PiB7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICBhcHA/LnRyYWNraW5nID8/XHJcbiAgICAgIChpbXBvcnQubWV0YS5lbnYuREVWID8gbmV3IFN0dWJUcmFja2luZygpIDogbmV3IFRyYWNraW5nKCkpXHJcbiAgICApO1xyXG4gIH0sIFthcHBdKTtcclxuXHJcbiAgdXNlRWZmZWN0KCgpID0+IHtcclxuICAgIHRyYWNraW5nLmxvYWRBbmRTdGFydChtYWluRGF0YUxheWVyQ29uZik7XHJcbiAgfSwgW10pO1xyXG5cclxuICByZXR1cm4gKFxyXG4gICAgPFRyYWNraW5nUHJvdmlkZXJPcmlnaW5hbCB0cmFja2luZz17dHJhY2tpbmd9PlxyXG4gICAgICB7cHJvcHMuY2hpbGRyZW59XHJcbiAgICA8L1RyYWNraW5nUHJvdmlkZXJPcmlnaW5hbD5cclxuICApO1xyXG59XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2FwcHMvbmFqL3NyYy9zZXJ2aWNlcy90cmFja2luZy50c3gifQ==

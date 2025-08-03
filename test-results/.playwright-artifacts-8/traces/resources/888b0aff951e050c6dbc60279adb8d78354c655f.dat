@@ -1,0 +1,94 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepCta.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepCta.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { useEngine } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/index.ts";
+import { useTagId } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/index.ts";
+import { ButtonPln } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+import { CtaContainer } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/index.ts";
+import { getTrackingTag } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/index.ts";
+export function StepCta({ primaryButton, onBack }) {
+  _s();
+  const { prev } = useEngine();
+  const tagId = getTrackingTag("BACK_BUTTON", useTagId());
+  return /* @__PURE__ */ jsxDEV(CtaContainer, { children: ({ noMobileClassName }) => /* @__PURE__ */ jsxDEV(Fragment, { children: [
+    /* @__PURE__ */ jsxDEV(
+      ButtonPln,
+      {
+        "data-cs-override-id": tagId,
+        className: noMobileClassName,
+        color: "secondary",
+        onClick: onBack ?? prev,
+        children: "Indietro"
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepCta.tsx",
+        lineNumber: 21,
+        columnNumber: 11
+      },
+      this
+    ),
+    primaryButton
+  ] }, void 0, true, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepCta.tsx",
+    lineNumber: 20,
+    columnNumber: 7
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepCta.tsx",
+    lineNumber: 18,
+    columnNumber: 5
+  }, this);
+}
+_s(StepCta, "HylHuryunKmeFIRPk3EzNKhJYVs=", false, function() {
+  return [useEngine, useTagId];
+});
+_c = StepCta;
+export function TypCta({ primaryButton }) {
+  return /* @__PURE__ */ jsxDEV(CtaContainer, { children: primaryButton }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepCta.tsx",
+    lineNumber: 37,
+    columnNumber: 10
+  }, this);
+}
+_c2 = TypCta;
+var _c, _c2;
+$RefreshReg$(_c, "StepCta");
+$RefreshReg$(_c2, "TypCta");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepCta.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBbUJRLG1CQUNFLGNBREY7Ozs7O3FDQW5CUjtBQUFBLE9BQVNBLGlEQUFpQztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUMxQyxTQUFTQyxnQkFBZ0I7QUFDekIsU0FBU0MsaUJBQWlCO0FBQzFCLFNBQVNDLG9CQUFvQjtBQUM3QixTQUFTQyxzQkFBc0I7QUFReEIsZ0JBQVNDLFFBQVEsRUFBRUMsZUFBZUMsT0FBcUIsR0FBRztBQUFBQyxLQUFBO0FBQy9ELFFBQU0sRUFBRUMsS0FBSyxJQUFJVCxVQUFVO0FBRTNCLFFBQU1VLFFBQVFOLGVBQWUsZUFBZUgsU0FBUyxDQUFDO0FBQ3RELFNBQ0UsdUJBQUMsZ0JBQ0UsV0FBQyxFQUFFVSxrQkFBa0IsTUFDcEIsbUNBQ0U7QUFBQTtBQUFBLE1BQUM7QUFBQTtBQUFBLFFBQ0MsdUJBQXFCRDtBQUFBQSxRQUNyQixXQUFXQztBQUFBQSxRQUNYLE9BQU07QUFBQSxRQUNOLFNBQVNKLFVBQVVFO0FBQUFBLFFBQUs7QUFBQTtBQUFBLE1BSjFCO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxJQU9BO0FBQUEsSUFDQ0g7QUFBQUEsT0FUSDtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBVUEsS0FaSjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBY0E7QUFFSjtBQUFDRSxHQXJCZUgsU0FBTztBQUFBLFVBQ0pMLFdBRTJCQyxRQUFRO0FBQUE7QUFBQVcsS0FIdENQO0FBdUJULGdCQUFTUSxPQUFPLEVBQUVQLGNBQTRCLEdBQUc7QUFDdEQsU0FBTyx1QkFBQyxnQkFBY0EsMkJBQWY7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQUE2QjtBQUN0QztBQUFDUSxNQUZlRDtBQUFNLElBQUFELElBQUFFO0FBQUFDLGFBQUFILElBQUE7QUFBQUcsYUFBQUQsS0FBQSIsIm5hbWVzIjpbInVzZUVuZ2luZSIsInVzZVRhZ0lkIiwiQnV0dG9uUGxuIiwiQ3RhQ29udGFpbmVyIiwiZ2V0VHJhY2tpbmdUYWciLCJTdGVwQ3RhIiwicHJpbWFyeUJ1dHRvbiIsIm9uQmFjayIsIl9zIiwicHJldiIsInRhZ0lkIiwibm9Nb2JpbGVDbGFzc05hbWUiLCJfYyIsIlR5cEN0YSIsIl9jMiIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJTdGVwQ3RhLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VFbmdpbmUgfSBmcm9tICdAbmFqLXdvL2VuZ2luZSc7XHJcbmltcG9ydCB7IHVzZVRhZ0lkIH0gZnJvbSAnQG5hai13by90cmFja2luZy1yZWFjdCc7XHJcbmltcG9ydCB7IEJ1dHRvblBsbiB9IGZyb20gJ0BuYWotd28vdWktYXRvbXMnO1xyXG5pbXBvcnQgeyBDdGFDb250YWluZXIgfSBmcm9tICdAbmFqLXdvL3VpLW1vbGVjdWxlcyc7XHJcbmltcG9ydCB7IGdldFRyYWNraW5nVGFnIH0gZnJvbSAnQG5hai13by91dGlsJztcclxuaW1wb3J0IHsgUmVhY3ROb2RlIH0gZnJvbSAncmVhY3QnO1xyXG5cclxuZXhwb3J0IGludGVyZmFjZSBTdGVwQ3RhUHJvcHMge1xyXG4gIHByaW1hcnlCdXR0b246IFJlYWN0Tm9kZTtcclxuICBvbkJhY2s/OiAoKSA9PiB2b2lkO1xyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gU3RlcEN0YSh7IHByaW1hcnlCdXR0b24sIG9uQmFjayB9OiBTdGVwQ3RhUHJvcHMpIHtcclxuICBjb25zdCB7IHByZXYgfSA9IHVzZUVuZ2luZSgpO1xyXG5cclxuICBjb25zdCB0YWdJZCA9IGdldFRyYWNraW5nVGFnKCdCQUNLX0JVVFRPTicsIHVzZVRhZ0lkKCkpO1xyXG4gIHJldHVybiAoXHJcbiAgICA8Q3RhQ29udGFpbmVyPlxyXG4gICAgICB7KHsgbm9Nb2JpbGVDbGFzc05hbWUgfSkgPT4gKFxyXG4gICAgICAgIDw+XHJcbiAgICAgICAgICA8QnV0dG9uUGxuXHJcbiAgICAgICAgICAgIGRhdGEtY3Mtb3ZlcnJpZGUtaWQ9e3RhZ0lkfVxyXG4gICAgICAgICAgICBjbGFzc05hbWU9e25vTW9iaWxlQ2xhc3NOYW1lfVxyXG4gICAgICAgICAgICBjb2xvcj1cInNlY29uZGFyeVwiXHJcbiAgICAgICAgICAgIG9uQ2xpY2s9e29uQmFjayA/PyBwcmV2fVxyXG4gICAgICAgICAgPlxyXG4gICAgICAgICAgICBJbmRpZXRyb1xyXG4gICAgICAgICAgPC9CdXR0b25QbG4+XHJcbiAgICAgICAgICB7cHJpbWFyeUJ1dHRvbn1cclxuICAgICAgICA8Lz5cclxuICAgICAgKX1cclxuICAgIDwvQ3RhQ29udGFpbmVyPlxyXG4gICk7XHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBUeXBDdGEoeyBwcmltYXJ5QnV0dG9uIH06IFN0ZXBDdGFQcm9wcykge1xyXG4gIHJldHVybiA8Q3RhQ29udGFpbmVyPntwcmltYXJ5QnV0dG9ufTwvQ3RhQ29udGFpbmVyPjtcclxufVxyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL3VpLW9yZ2FuaXNtcy9zcmMvbGliL2xheW91dC9TdGVwQ3RhLnRzeCJ9

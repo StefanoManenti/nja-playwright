@@ -1,0 +1,109 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { atomAction, BadInputError, NotImplementedError } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/index.ts";
+import { atom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+import { saveUserLocationAtom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/api/ip/ip.ts";
+import { cvtAtom, fetchLeadByCvtMutationAtom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/api/lead/index.ts";
+import { workingOnPanelStandaloneAtom, workingProductAtom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/troubleshooting/troubleshooting.ts";
+import { OperativeMode } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/troubleshooting/types.ts";
+import { buildCommodityContract } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/contract/buildCommodityContract.ts";
+import { couponAtom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/coupon/index.ts";
+import { checkEmployeeOperationsAtom, checkSalesProductsLimitAtom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/employee-atoms.ts";
+const contractAtom = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\contract-atoms.ts/contractAtom", atom(null));
+contractAtom.debugLabel = "contractAtom";
+export const currentContract$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\contract-atoms.ts/currentContract$", atom((get) => {
+  return get(contractAtom);
+}));
+currentContract$.debugLabel = "currentContract$";
+export const createContracts$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\contract-atoms.ts/createContracts$", atomAction(async (get, set) => {
+  const hasContract = get(contractAtom);
+  if (hasContract) return;
+  const panelStandalone = get(workingOnPanelStandaloneAtom);
+  if (panelStandalone) {
+    const {
+      VirtualPanelContract
+    } = await import("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/contract/VirtualPanelContract.ts");
+    set(contractAtom, VirtualPanelContract.new());
+    return;
+  }
+  const workingProduct = get(workingProductAtom);
+  if (!workingProduct) {
+    throw new BadInputError("no workingProduct set");
+  }
+  const {
+    operativeMode,
+    broadband
+  } = workingProduct;
+  if (!operativeMode) {
+    throw new BadInputError("operativeMode not set");
+  }
+  if (operativeMode === OperativeMode.BROADBAND && broadband) {
+    const {
+      BroadbandContract
+    } = await import("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/contract/BroadbandContract.ts");
+    set(contractAtom, BroadbandContract.new());
+    return;
+  }
+  set(contractAtom, await buildCommodityContract(operativeMode));
+}));
+createContracts$.debugLabel = "createContracts$";
+const loadingContractsAtom = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\contract-atoms.ts/loadingContractsAtom", atom(
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  new Promise(() => {
+  })
+));
+loadingContractsAtom.debugLabel = "loadingContractsAtom";
+export const loadContracts$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\contract-atoms.ts/loadContracts$", atomAction(async (get, set) => {
+  const cvt = get(cvtAtom);
+  if (!cvt) {
+    set(loadingContractsAtom, false);
+    return;
+  }
+  const service = get(fetchLeadByCvtMutationAtom);
+  const lead = await service.mutateAsync(cvt);
+  if (lead.flussoWebOrder === "AGGIUNGI PANNELLO VIRTUALE") {
+    const {
+      VirtualPanelContract
+    } = await import("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/contract/VirtualPanelContract.ts");
+    const contract = await set(VirtualPanelContract.fromLead, lead);
+    set(contractAtom, contract);
+  } else {
+    throw new NotImplementedError();
+  }
+  set(loadingContractsAtom, false);
+}));
+loadContracts$.debugLabel = "loadContracts$";
+export const initWeborder$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\contract-atoms.ts/initWeborder$", atomAction(async (get, set) => {
+  await set(loadContracts$);
+}));
+initWeborder$.debugLabel = "initWeborder$";
+export const checkWeborder$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\contract-atoms.ts/checkWeborder$", atom(async (get) => {
+  await get(checkEmployeeOperationsAtom);
+  await get(checkSalesProductsLimitAtom);
+}));
+checkWeborder$.debugLabel = "checkWeborder$";
+export const saveContracts$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\contract-atoms.ts/saveContracts$", atomAction(async (get, set) => {
+  await set(createContracts$);
+  const contract = get(contractAtom);
+  if (!contract) return;
+  return set(contract.draft);
+}));
+saveContracts$.debugLabel = "saveContracts$";
+export const sendContracts$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\contract-atoms.ts/sendContracts$", atomAction(async (get, set) => {
+  const contract = get(contractAtom);
+  if (!contract) return;
+  await set(couponAtom, "REVALIDATE");
+  await set(saveUserLocationAtom);
+  return set(contract.send);
+}));
+sendContracts$.debugLabel = "sendContracts$";
+
+//# sourceMappingURL=data:application/json;base64,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akIsV0FBVyxPQUFPaUIsS0FBS0ksUUFBUTtBQUMxRCxRQUFNQSxJQUFJWSxjQUFjO0FBQzFCLENBQUMsQ0FBQztBQUFDUSxjQUFBdkIsYUFBQTtBQUVILGFBQUF3QixpQkFBQTNCLFdBQUFDLGVBQUFDLElBQUEsdUhBQThCZCxLQUFLLE9BQU9jLFFBQVE7QUFDaEQsUUFBTUEsSUFBSUwsMkJBQTJCO0FBQ3JDLFFBQU1LLElBQUlKLDJCQUEyQjtBQUN2QyxDQUFDLENBQUM7QUFFRjZCLGVBQUF4QixhQUFBO0FBR0EsYUFBQXlCLGlCQUFBNUIsV0FBQUMsZUFBQUMsSUFBQSx1SEFBOEJqQixXQUFXLE9BQU9pQixLQUFLSSxRQUFRO0FBQzNELFFBQU1BLElBQUlELGdCQUFnQjtBQUUxQixRQUFNbUIsV0FBV3RCLElBQUlILFlBQVk7QUFDakMsTUFBSSxDQUFDeUIsU0FBVTtBQUVmLFNBQU9sQixJQUFJa0IsU0FBU0ssS0FBSztBQUMzQixDQUFDLENBQUM7QUFFRkQsZUFBQXpCLGFBQUE7QUFHQSxhQUFBMkIsaUJBQUE5QixXQUFBQyxlQUFBQyxJQUFBLHVIQUE4QmpCLFdBQVcsT0FBT2lCLEtBQUtJLFFBQVE7QUFDM0QsUUFBTWtCLFdBQVd0QixJQUFJSCxZQUFZO0FBQ2pDLE1BQUksQ0FBQ3lCLFNBQVU7QUFFZixRQUFNbEIsSUFBSVYsWUFBWSxZQUFZO0FBQ2xDLFFBQU1VLElBQUlqQixvQkFBb0I7QUFDOUIsU0FBT2lCLElBQUlrQixTQUFTTyxJQUFJO0FBQzFCLENBQUMsQ0FBQztBQUFDRCxlQUFBM0IsYUFBQSIsIm5hbWVzIjpbImF0b21BY3Rpb24iLCJCYWRJbnB1dEVycm9yIiwiTm90SW1wbGVtZW50ZWRFcnJvciIsImF0b20iLCJzYXZlVXNlckxvY2F0aW9uQXRvbSIsImN2dEF0b20iLCJmZXRjaExlYWRCeUN2dE11dGF0aW9uQXRvbSIsIndvcmtpbmdPblBhbmVsU3RhbmRhbG9uZUF0b20iLCJ3b3JraW5nUHJvZHVjdEF0b20iLCJPcGVyYXRpdmVNb2RlIiwiYnVpbGRDb21tb2RpdHlDb250cmFjdCIsImNvdXBvbkF0b20iLCJjaGVja0VtcGxveWVlT3BlcmF0aW9uc0F0b20iLCJjaGVja1NhbGVzUHJvZHVjdHNMaW1pdEF0b20iLCJjb250cmFjdEF0b20iLCJnbG9iYWxUaGlzIiwiam90YWlBdG9tQ2FjaGUiLCJnZXQiLCJkZWJ1Z0xhYmVsIiwiY3VycmVudENvbnRyYWN0JCIsImNyZWF0ZUNvbnRyYWN0cyQiLCJzZXQiLCJoYXNDb250cmFjdCIsInBhbmVsU3RhbmRhbG9uZSIsIlZpcnR1YWxQYW5lbENvbnRyYWN0IiwibmV3Iiwid29ya2luZ1Byb2R1Y3QiLCJvcGVyYXRpdmVNb2RlIiwiYnJvYWRiYW5kIiwiQlJPQURCQU5EIiwiQnJvYWRiYW5kQ29udHJhY3QiLCJsb2FkaW5nQ29udHJhY3RzQXRvbSIsIlByb21pc2UiLCJsb2FkQ29udHJhY3RzJCIsImN2dCIsInNlcnZpY2UiLCJsZWFkIiwibXV0YXRlQXN5bmMiLCJmbHVzc29XZWJPcmRlciIsImNvbnRyYWN0IiwiZnJvbUxlYWQiLCJpbml0V2Vib3JkZXIkIiwiY2hlY2tXZWJvcmRlciQiLCJzYXZlQ29udHJhY3RzJCIsImRyYWZ0Iiwic2VuZENvbnRyYWN0cyQiLCJzZW5kIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbImNvbnRyYWN0LWF0b21zLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGF0b21BY3Rpb24sIEJhZElucHV0RXJyb3IsIE5vdEltcGxlbWVudGVkRXJyb3IgfSBmcm9tICdAbmFqLXdvL3V0aWwnO1xyXG5pbXBvcnQgeyBhdG9tIH0gZnJvbSAnam90YWknO1xyXG5pbXBvcnQgeyBzYXZlVXNlckxvY2F0aW9uQXRvbSB9IGZyb20gJy4uL2FwaS9pcC9pcCc7XHJcbmltcG9ydCB7IGN2dEF0b20sIGZldGNoTGVhZEJ5Q3Z0TXV0YXRpb25BdG9tIH0gZnJvbSAnLi4vYXBpL2xlYWQnO1xyXG5pbXBvcnQge1xyXG4gIHdvcmtpbmdPblBhbmVsU3RhbmRhbG9uZUF0b20sXHJcbiAgd29ya2luZ1Byb2R1Y3RBdG9tLFxyXG59IGZyb20gJy4uL3Ryb3VibGVzaG9vdGluZy90cm91Ymxlc2hvb3RpbmcnO1xyXG5pbXBvcnQgeyBPcGVyYXRpdmVNb2RlIH0gZnJvbSAnLi4vdHJvdWJsZXNob290aW5nL3R5cGVzJztcclxuaW1wb3J0IHsgYnVpbGRDb21tb2RpdHlDb250cmFjdCB9IGZyb20gJy4vY29udHJhY3QvYnVpbGRDb21tb2RpdHlDb250cmFjdCc7XHJcbmltcG9ydCB7IGNvdXBvbkF0b20gfSBmcm9tICcuL2NvdXBvbic7XHJcbmltcG9ydCB7XHJcbiAgY2hlY2tFbXBsb3llZU9wZXJhdGlvbnNBdG9tLFxyXG4gIGNoZWNrU2FsZXNQcm9kdWN0c0xpbWl0QXRvbSxcclxufSBmcm9tICcuL2VtcGxveWVlLWF0b21zJztcclxuaW1wb3J0IHsgQ29udHJhY3QgfSBmcm9tICcuL3R5cGVzJztcclxuXHJcbmNvbnN0IGNvbnRyYWN0QXRvbSA9IGF0b208Q29udHJhY3QgfCBudWxsPihudWxsKTtcclxuXHJcbmV4cG9ydCBjb25zdCBjdXJyZW50Q29udHJhY3QkID0gYXRvbSgoZ2V0KSA9PiB7XHJcbiAgcmV0dXJuIGdldChjb250cmFjdEF0b20pO1xyXG59KTtcclxuXHJcbmV4cG9ydCBjb25zdCBjcmVhdGVDb250cmFjdHMkID0gYXRvbUFjdGlvbihhc3luYyAoZ2V0LCBzZXQpID0+IHtcclxuICBjb25zdCBoYXNDb250cmFjdCA9IGdldChjb250cmFjdEF0b20pO1xyXG4gIGlmIChoYXNDb250cmFjdCkgcmV0dXJuO1xyXG5cclxuICBjb25zdCBwYW5lbFN0YW5kYWxvbmUgPSBnZXQod29ya2luZ09uUGFuZWxTdGFuZGFsb25lQXRvbSk7XHJcbiAgaWYgKHBhbmVsU3RhbmRhbG9uZSkge1xyXG4gICAgLy8gUGFuZWwgU3RhbmRhbG9uZVxyXG4gICAgY29uc3QgeyBWaXJ0dWFsUGFuZWxDb250cmFjdCB9ID0gYXdhaXQgaW1wb3J0KFxyXG4gICAgICAnLi9jb250cmFjdC9WaXJ0dWFsUGFuZWxDb250cmFjdCdcclxuICAgICk7XHJcbiAgICBzZXQoY29udHJhY3RBdG9tLCBWaXJ0dWFsUGFuZWxDb250cmFjdC5uZXcoKSk7XHJcbiAgICByZXR1cm47XHJcbiAgfVxyXG5cclxuICBjb25zdCB3b3JraW5nUHJvZHVjdCA9IGdldCh3b3JraW5nUHJvZHVjdEF0b20pO1xyXG4gIGlmICghd29ya2luZ1Byb2R1Y3QpIHtcclxuICAgIHRocm93IG5ldyBCYWRJbnB1dEVycm9yKCdubyB3b3JraW5nUHJvZHVjdCBzZXQnKTtcclxuICB9XHJcblxyXG4gIGNvbnN0IHsgb3BlcmF0aXZlTW9kZSwgYnJvYWRiYW5kIH0gPSB3b3JraW5nUHJvZHVjdDtcclxuICBpZiAoIW9wZXJhdGl2ZU1vZGUpIHtcclxuICAgIHRocm93IG5ldyBCYWRJbnB1dEVycm9yKCdvcGVyYXRpdmVNb2RlIG5vdCBzZXQnKTtcclxuICB9XHJcblxyXG4gIC8vIEJyb2FkYmFuZCBTdGFuZGFsb25lXHJcbiAgaWYgKG9wZXJhdGl2ZU1vZGUgPT09IE9wZXJhdGl2ZU1vZGUuQlJPQURCQU5EICYmIGJyb2FkYmFuZCkge1xyXG4gICAgY29uc3QgeyBCcm9hZGJhbmRDb250cmFjdCB9ID0gYXdhaXQgaW1wb3J0KCcuL2NvbnRyYWN0L0Jyb2FkYmFuZENvbnRyYWN0Jyk7XHJcbiAgICBzZXQoY29udHJhY3RBdG9tLCBCcm9hZGJhbmRDb250cmFjdC5uZXcoKSk7XHJcbiAgICByZXR1cm47XHJcbiAgfVxyXG5cclxuICBzZXQoY29udHJhY3RBdG9tLCBhd2FpdCBidWlsZENvbW1vZGl0eUNvbnRyYWN0KG9wZXJhdGl2ZU1vZGUpKTtcclxufSk7XHJcblxyXG5jb25zdCBsb2FkaW5nQ29udHJhY3RzQXRvbSA9IGF0b208UHJvbWlzZTx1bmtub3duPiB8IGZhbHNlPihcclxuICAvLyBlc2xpbnQtZGlzYWJsZS1uZXh0LWxpbmUgQHR5cGVzY3JpcHQtZXNsaW50L25vLWVtcHR5LWZ1bmN0aW9uXHJcbiAgbmV3IFByb21pc2UoKCkgPT4ge30pXHJcbik7XHJcblxyXG4vKipcclxuICogU2V0IHRoaXMgYXRvbSB0byBsb2FkIGFsbCB0aGUgY29udHJhY3RzXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgbG9hZENvbnRyYWN0cyQgPSBhdG9tQWN0aW9uKGFzeW5jIChnZXQsIHNldCkgPT4ge1xyXG4gIGNvbnN0IGN2dCA9IGdldChjdnRBdG9tKTtcclxuICBpZiAoIWN2dCkge1xyXG4gICAgc2V0KGxvYWRpbmdDb250cmFjdHNBdG9tLCBmYWxzZSk7XHJcbiAgICByZXR1cm47XHJcbiAgfVxyXG5cclxuICBjb25zdCBzZXJ2aWNlID0gZ2V0KGZldGNoTGVhZEJ5Q3Z0TXV0YXRpb25BdG9tKTtcclxuICBjb25zdCBsZWFkID0gYXdhaXQgc2VydmljZS5tdXRhdGVBc3luYyhjdnQpO1xyXG4gIGlmIChsZWFkLmZsdXNzb1dlYk9yZGVyID09PSAnQUdHSVVOR0kgUEFOTkVMTE8gVklSVFVBTEUnKSB7XHJcbiAgICBjb25zdCB7IFZpcnR1YWxQYW5lbENvbnRyYWN0IH0gPSBhd2FpdCBpbXBvcnQoXHJcbiAgICAgICcuL2NvbnRyYWN0L1ZpcnR1YWxQYW5lbENvbnRyYWN0J1xyXG4gICAgKTtcclxuICAgIGNvbnN0IGNvbnRyYWN0ID0gYXdhaXQgc2V0KFZpcnR1YWxQYW5lbENvbnRyYWN0LmZyb21MZWFkLCBsZWFkKTtcclxuICAgIHNldChjb250cmFjdEF0b20sIGNvbnRyYWN0KTtcclxuICB9IGVsc2Uge1xyXG4gICAgdGhyb3cgbmV3IE5vdEltcGxlbWVudGVkRXJyb3IoKTtcclxuICB9XHJcblxyXG4gIHNldChsb2FkaW5nQ29udHJhY3RzQXRvbSwgZmFsc2UpO1xyXG59KTtcclxuXHJcbmV4cG9ydCBjb25zdCBpbml0V2Vib3JkZXIkID0gYXRvbUFjdGlvbihhc3luYyAoZ2V0LCBzZXQpID0+IHtcclxuICBhd2FpdCBzZXQobG9hZENvbnRyYWN0cyQpO1xyXG59KTtcclxuXHJcbmV4cG9ydCBjb25zdCBjaGVja1dlYm9yZGVyJCA9IGF0b20oYXN5bmMgKGdldCkgPT4ge1xyXG4gIGF3YWl0IGdldChjaGVja0VtcGxveWVlT3BlcmF0aW9uc0F0b20pO1xyXG4gIGF3YWl0IGdldChjaGVja1NhbGVzUHJvZHVjdHNMaW1pdEF0b20pO1xyXG59KTtcclxuXHJcbi8qKlxyXG4gKiBTZXQgdGhpcyBhdG9tIHRvIHNhdmUgYWxsIHRoZSBjb250cmFjdHNcclxuICovXHJcbmV4cG9ydCBjb25zdCBzYXZlQ29udHJhY3RzJCA9IGF0b21BY3Rpb24oYXN5bmMgKGdldCwgc2V0KSA9PiB7XHJcbiAgYXdhaXQgc2V0KGNyZWF0ZUNvbnRyYWN0cyQpO1xyXG5cclxuICBjb25zdCBjb250cmFjdCA9IGdldChjb250cmFjdEF0b20pO1xyXG4gIGlmICghY29udHJhY3QpIHJldHVybjtcclxuXHJcbiAgcmV0dXJuIHNldChjb250cmFjdC5kcmFmdCk7XHJcbn0pO1xyXG5cclxuLyoqXHJcbiAqIFNldCB0aGlzIGF0b20gdG8gc2VuZCBhbGwgdGhlIGNvbnRyYWN0c1xyXG4gKi9cclxuZXhwb3J0IGNvbnN0IHNlbmRDb250cmFjdHMkID0gYXRvbUFjdGlvbihhc3luYyAoZ2V0LCBzZXQpID0+IHtcclxuICBjb25zdCBjb250cmFjdCA9IGdldChjb250cmFjdEF0b20pO1xyXG4gIGlmICghY29udHJhY3QpIHJldHVybjtcclxuXHJcbiAgYXdhaXQgc2V0KGNvdXBvbkF0b20sICdSRVZBTElEQVRFJyk7XHJcbiAgYXdhaXQgc2V0KHNhdmVVc2VyTG9jYXRpb25BdG9tKTtcclxuICByZXR1cm4gc2V0KGNvbnRyYWN0LnNlbmQpO1xyXG59KTtcclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy9kYXRhLWFjY2Vzcy9zcmMvbGliL2F0b21zL2NvbnRyYWN0LWF0b21zLnRzIn0=

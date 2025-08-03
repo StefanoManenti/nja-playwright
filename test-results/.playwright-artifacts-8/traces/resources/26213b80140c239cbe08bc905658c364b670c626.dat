@@ -1,0 +1,118 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/ModalAutocertificazioneConvenzioni.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/ModalAutocertificazioneConvenzioni.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { useTrackingCouponWeborder } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/index.ts";
+import { useTracking } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/index.ts";
+import { Modal, ModalCheckboxContent } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+import { AlertIcon } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/index.ts";
+export function ModalAutocertificazioneConvenzioni(props) {
+  _s();
+  useTrackingCouponWeborder();
+  const tracking = useTracking();
+  return /* @__PURE__ */ jsxDEV(Modal, { children: /* @__PURE__ */ jsxDEV(
+    ModalCheckboxContent,
+    {
+      icon: /* @__PURE__ */ jsxDEV(AlertIcon, {}, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/ModalAutocertificazioneConvenzioni.tsx",
+        lineNumber: 17,
+        columnNumber: 15
+      }, this),
+      title: /* @__PURE__ */ jsxDEV(Fragment, { children: "Accetta dichiarazione su dati e requisiti" }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/ModalAutocertificazioneConvenzioni.tsx",
+        lineNumber: 18,
+        columnNumber: 16
+      }, this),
+      text: /* @__PURE__ */ jsxDEV(Fragment, { children: "Per applicare questo coupon, leggi e accetta la dichiarazione con la quale dimostri di aver fornito dati corretti e di poter usufruire delle convenzioni." }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/ModalAutocertificazioneConvenzioni.tsx",
+        lineNumber: 20,
+        columnNumber: 9
+      }, this),
+      checkBoxText: /* @__PURE__ */ jsxDEV(Fragment, { children: `Ai fini del riconoscimento del codice voucher dedicato, il soggetto che formula la Proposta di Contratto (di seguito il "Proponente") dichiara di fornire dati personali veritieri e di appartenere al personale dipendente di un’azienda oppure ad un’associazione che ha sottoscritto un accordo di Convenzione con Eni Plenitude esteso ai propri dipendenti o associati tramite i canali di comunicazione interni o piattaforme dedicate, consapevole delle sanzioni penali previste in caso di dichiarazioni non veritiere richiamate dall'art. 76 del D.P.R. 445 del 28 dicembre 2000. Nel caso in cui il Proponente formuli la Proposta di Contratto non per sé, ma a nome e per conto di un familiare, quest'ultimo dichiara, sotto la propria responsabilità, di essere autorizzato dal soggetto indicato a stipulare e a compiere ogni atto e/o rendere ogni dichiarazione connessa alla stipula del Contratto, nonché a fornire dati personali del soggetto indicato.` }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/ModalAutocertificazioneConvenzioni.tsx",
+        lineNumber: 27,
+        columnNumber: 9
+      }, this),
+      cta1: /* @__PURE__ */ jsxDEV(Fragment, { children: "Continua senza coupon" }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/ModalAutocertificazioneConvenzioni.tsx",
+        lineNumber: 45,
+        columnNumber: 15
+      }, this),
+      onCta1Click: () => {
+        tracking.push({
+          event: "cta_click",
+          cta_cliccata: "Continua senza coupon"
+        });
+        props.onClose();
+      },
+      cta2: /* @__PURE__ */ jsxDEV(Fragment, { children: "Accetta e applica coupon" }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/ModalAutocertificazioneConvenzioni.tsx",
+        lineNumber: 54,
+        columnNumber: 15
+      }, this),
+      onCta2Click: () => {
+        tracking.push({
+          event: "cta_click",
+          cta_cliccata: "Accetta e applica coupon"
+        });
+        props.onConfirm();
+      },
+      showClose: false,
+      onClose: props.onClose
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/ModalAutocertificazioneConvenzioni.tsx",
+      lineNumber: 16,
+      columnNumber: 7
+    },
+    this
+  ) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/ModalAutocertificazioneConvenzioni.tsx",
+    lineNumber: 15,
+    columnNumber: 5
+  }, this);
+}
+_s(ModalAutocertificazioneConvenzioni, "Jrs9yjnn+GTBFJPnr5iicYpAYRE=", false, function() {
+  return [useTrackingCouponWeborder, useTracking];
+});
+_c = ModalAutocertificazioneConvenzioni;
+var _c;
+$RefreshReg$(_c, "ModalAutocertificazioneConvenzioni");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/ModalAutocertificazioneConvenzioni.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBZ0JjLFNBQ0MsVUFERDs7Ozs7cUNBaEJkO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0EsU0FBU0EsaUNBQWlDO0FBQzFDLFNBQVNDLG1CQUFtQjtBQUM1QixTQUFTQyxPQUFPQyw0QkFBNEI7QUFDNUMsU0FBU0MsaUJBQWlCO0FBRW5CLGdCQUFTQyxtQ0FBbUNDLE9BR2hEO0FBQUFDLEtBQUE7QUFDRFAsNEJBQTBCO0FBQzFCLFFBQU1RLFdBQVdQLFlBQVk7QUFFN0IsU0FDRSx1QkFBQyxTQUNDO0FBQUEsSUFBQztBQUFBO0FBQUEsTUFDQyxNQUFNLHVCQUFDLGVBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUFVO0FBQUEsTUFDaEIsT0FBTyxtQ0FBRSx5REFBRjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQTJDO0FBQUEsTUFDbEQsTUFDRSxtQ0FBRSx5S0FBRjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBSUE7QUFBQSxNQUVGLGNBQ0UsbUNBQUUsZzhCQUFGO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFnQkE7QUFBQSxNQUVGLE1BQU0sbUNBQUUscUNBQUY7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUF1QjtBQUFBLE1BQzdCLGFBQWEsTUFBTTtBQUNqQk8saUJBQVNDLEtBQUs7QUFBQSxVQUNaQyxPQUFPO0FBQUEsVUFDUEMsY0FBYztBQUFBLFFBQ2hCLENBQUM7QUFFREwsY0FBTU0sUUFBUTtBQUFBLE1BQ2hCO0FBQUEsTUFDQSxNQUFNLG1DQUFFLHdDQUFGO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFBMEI7QUFBQSxNQUNoQyxhQUFhLE1BQU07QUFDakJKLGlCQUFTQyxLQUFLO0FBQUEsVUFDWkMsT0FBTztBQUFBLFVBQ1BDLGNBQWM7QUFBQSxRQUNoQixDQUFDO0FBRURMLGNBQU1PLFVBQVU7QUFBQSxNQUNsQjtBQUFBLE1BQ0EsV0FBVztBQUFBLE1BQ1gsU0FBU1AsTUFBTU07QUFBQUE7QUFBQUEsSUFoRGpCO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxFQWdEeUIsS0FqRDNCO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FtREE7QUFFSjtBQUFDTCxHQTdEZUYsb0NBQWtDO0FBQUEsVUFJaERMLDJCQUNpQkMsV0FBVztBQUFBO0FBQUFhLEtBTGRUO0FBQWtDLElBQUFTO0FBQUFDLGFBQUFELElBQUEiLCJuYW1lcyI6WyJ1c2VUcmFja2luZ0NvdXBvbldlYm9yZGVyIiwidXNlVHJhY2tpbmciLCJNb2RhbCIsIk1vZGFsQ2hlY2tib3hDb250ZW50IiwiQWxlcnRJY29uIiwiTW9kYWxBdXRvY2VydGlmaWNhemlvbmVDb252ZW56aW9uaSIsInByb3BzIiwiX3MiLCJ0cmFja2luZyIsInB1c2giLCJldmVudCIsImN0YV9jbGljY2F0YSIsIm9uQ2xvc2UiLCJvbkNvbmZpcm0iLCJfYyIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJNb2RhbEF1dG9jZXJ0aWZpY2F6aW9uZUNvbnZlbnppb25pLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyIvKiBNb2RhbGUgcGVyIGNvbmZlcm1hcmUgbCdhcHBsaWNhemlvbmUgZGVsIGNvdXBvbiAqL1xyXG5pbXBvcnQgeyB1c2VUcmFja2luZ0NvdXBvbldlYm9yZGVyIH0gZnJvbSAnQG5hai13by90cmFja2luZy1hcHAnO1xyXG5pbXBvcnQgeyB1c2VUcmFja2luZyB9IGZyb20gJ0BuYWotd28vdHJhY2tpbmctcmVhY3QnO1xyXG5pbXBvcnQgeyBNb2RhbCwgTW9kYWxDaGVja2JveENvbnRlbnQgfSBmcm9tICdAbmFqLXdvL3VpLWF0b21zJztcclxuaW1wb3J0IHsgQWxlcnRJY29uIH0gZnJvbSAnQG5hai13by91aS1pY29ucyc7XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gTW9kYWxBdXRvY2VydGlmaWNhemlvbmVDb252ZW56aW9uaShwcm9wczoge1xyXG4gIG9uQ29uZmlybTogKCkgPT4gdm9pZDtcclxuICBvbkNsb3NlOiAoKSA9PiB2b2lkO1xyXG59KSB7XHJcbiAgdXNlVHJhY2tpbmdDb3Vwb25XZWJvcmRlcigpO1xyXG4gIGNvbnN0IHRyYWNraW5nID0gdXNlVHJhY2tpbmcoKTtcclxuXHJcbiAgcmV0dXJuIChcclxuICAgIDxNb2RhbD5cclxuICAgICAgPE1vZGFsQ2hlY2tib3hDb250ZW50XHJcbiAgICAgICAgaWNvbj17PEFsZXJ0SWNvbiAvPn1cclxuICAgICAgICB0aXRsZT17PD5BY2NldHRhIGRpY2hpYXJhemlvbmUgc3UgZGF0aSBlIHJlcXVpc2l0aTwvPn1cclxuICAgICAgICB0ZXh0PXtcclxuICAgICAgICAgIDw+XHJcbiAgICAgICAgICAgIFBlciBhcHBsaWNhcmUgcXVlc3RvIGNvdXBvbiwgbGVnZ2kgZSBhY2NldHRhIGxhIGRpY2hpYXJhemlvbmUgY29uIGxhXHJcbiAgICAgICAgICAgIHF1YWxlIGRpbW9zdHJpIGRpIGF2ZXIgZm9ybml0byBkYXRpIGNvcnJldHRpIGUgZGkgcG90ZXIgdXN1ZnJ1aXJlXHJcbiAgICAgICAgICAgIGRlbGxlIGNvbnZlbnppb25pLlxyXG4gICAgICAgICAgPC8+XHJcbiAgICAgICAgfVxyXG4gICAgICAgIGNoZWNrQm94VGV4dD17XHJcbiAgICAgICAgICA8PlxyXG4gICAgICAgICAgICBBaSBmaW5pIGRlbCByaWNvbm9zY2ltZW50byBkZWwgY29kaWNlIHZvdWNoZXIgZGVkaWNhdG8sIGlsIHNvZ2dldHRvXHJcbiAgICAgICAgICAgIGNoZSBmb3JtdWxhIGxhIFByb3Bvc3RhIGRpIENvbnRyYXR0byAoZGkgc2VndWl0byBpbCBcIlByb3BvbmVudGVcIilcclxuICAgICAgICAgICAgZGljaGlhcmEgZGkgZm9ybmlyZSBkYXRpIHBlcnNvbmFsaSB2ZXJpdGllcmkgZSBkaSBhcHBhcnRlbmVyZSBhbFxyXG4gICAgICAgICAgICBwZXJzb25hbGUgZGlwZW5kZW50ZSBkaSB1buKAmWF6aWVuZGEgb3BwdXJlIGFkIHVu4oCZYXNzb2NpYXppb25lIGNoZSBoYVxyXG4gICAgICAgICAgICBzb3R0b3Njcml0dG8gdW4gYWNjb3JkbyBkaSBDb252ZW56aW9uZSBjb24gRW5pIFBsZW5pdHVkZSBlc3Rlc28gYWlcclxuICAgICAgICAgICAgcHJvcHJpIGRpcGVuZGVudGkgbyBhc3NvY2lhdGkgdHJhbWl0ZSBpIGNhbmFsaSBkaSBjb211bmljYXppb25lXHJcbiAgICAgICAgICAgIGludGVybmkgbyBwaWF0dGFmb3JtZSBkZWRpY2F0ZSwgY29uc2FwZXZvbGUgZGVsbGUgc2FuemlvbmkgcGVuYWxpXHJcbiAgICAgICAgICAgIHByZXZpc3RlIGluIGNhc28gZGkgZGljaGlhcmF6aW9uaSBub24gdmVyaXRpZXJlIHJpY2hpYW1hdGUgZGFsbCdhcnQuXHJcbiAgICAgICAgICAgIDc2IGRlbCBELlAuUi4gNDQ1IGRlbCAyOCBkaWNlbWJyZSAyMDAwLiBOZWwgY2FzbyBpbiBjdWkgaWxcclxuICAgICAgICAgICAgUHJvcG9uZW50ZSBmb3JtdWxpIGxhIFByb3Bvc3RhIGRpIENvbnRyYXR0byBub24gcGVyIHPDqSwgbWEgYSBub21lIGVcclxuICAgICAgICAgICAgcGVyIGNvbnRvIGRpIHVuIGZhbWlsaWFyZSwgcXVlc3QndWx0aW1vIGRpY2hpYXJhLCBzb3R0byBsYSBwcm9wcmlhXHJcbiAgICAgICAgICAgIHJlc3BvbnNhYmlsaXTDoCwgZGkgZXNzZXJlIGF1dG9yaXp6YXRvIGRhbCBzb2dnZXR0byBpbmRpY2F0byBhXHJcbiAgICAgICAgICAgIHN0aXB1bGFyZSBlIGEgY29tcGllcmUgb2duaSBhdHRvIGUvbyByZW5kZXJlIG9nbmkgZGljaGlhcmF6aW9uZVxyXG4gICAgICAgICAgICBjb25uZXNzYSBhbGxhIHN0aXB1bGEgZGVsIENvbnRyYXR0bywgbm9uY2jDqSBhIGZvcm5pcmUgZGF0aSBwZXJzb25hbGlcclxuICAgICAgICAgICAgZGVsIHNvZ2dldHRvIGluZGljYXRvLlxyXG4gICAgICAgICAgPC8+XHJcbiAgICAgICAgfVxyXG4gICAgICAgIGN0YTE9ezw+Q29udGludWEgc2VuemEgY291cG9uPC8+fVxyXG4gICAgICAgIG9uQ3RhMUNsaWNrPXsoKSA9PiB7XHJcbiAgICAgICAgICB0cmFja2luZy5wdXNoKHtcclxuICAgICAgICAgICAgZXZlbnQ6ICdjdGFfY2xpY2snLFxyXG4gICAgICAgICAgICBjdGFfY2xpY2NhdGE6IFwiQ29udGludWEgc2VuemEgY291cG9uXCIsXHJcbiAgICAgICAgICB9KTtcclxuICAgICAgICAgICAgICAgIFxyXG4gICAgICAgICAgcHJvcHMub25DbG9zZSgpXHJcbiAgICAgICAgfX1cclxuICAgICAgICBjdGEyPXs8PkFjY2V0dGEgZSBhcHBsaWNhIGNvdXBvbjwvPn1cclxuICAgICAgICBvbkN0YTJDbGljaz17KCkgPT4ge1xyXG4gICAgICAgICAgdHJhY2tpbmcucHVzaCh7XHJcbiAgICAgICAgICAgIGV2ZW50OiAnY3RhX2NsaWNrJyxcclxuICAgICAgICAgICAgY3RhX2NsaWNjYXRhOiBcIkFjY2V0dGEgZSBhcHBsaWNhIGNvdXBvblwiLFxyXG4gICAgICAgICAgfSk7XHJcblxyXG4gICAgICAgICAgcHJvcHMub25Db25maXJtKClcclxuICAgICAgICB9fVxyXG4gICAgICAgIHNob3dDbG9zZT17ZmFsc2V9XHJcbiAgICAgICAgb25DbG9zZT17cHJvcHMub25DbG9zZX1cclxuICAgICAgLz5cclxuICAgIDwvTW9kYWw+XHJcbiAgKTtcclxufVxyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL3VpLW9yZ2FuaXNtcy9zcmMvbGliL2NhcnQvY291cG9uL01vZGFsQXV0b2NlcnRpZmljYXppb25lQ29udmVuemlvbmkudHN4In0=

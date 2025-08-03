@@ -1,0 +1,25 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { atom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+import { tipoTroubleshootingCalcolato$ } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/activations/tipo-troubleshooting.ts";
+import { TipoTroubleshooting } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/activations/types.ts";
+export const powerKwAlertAtom = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\step-helpers\\powerKwAlertAtom.ts/powerKwAlertAtom", atom(async (get) => {
+  const tipoTroubleshooting = await get(tipoTroubleshootingCalcolato$);
+  switch (tipoTroubleshooting) {
+    case TipoTroubleshooting.PowerS01:
+      return "Avrai una potenza **a pari valore** di quella precedente. Se vorrai cambiarla, potrai farlo nella tua Area Personale quando la fornitura sarà attiva.";
+    case TipoTroubleshooting.PowerA01:
+      return "Avrai una potenza **a pari valore** di quella predisposta sul punto. Se vorrai cambiarla, potrai farlo nella tua Area Personale quando la fornitura sarà attiva.";
+  }
+}));
+powerKwAlertAtom.debugLabel = "powerKwAlertAtom";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLFlBQVk7QUFDckIsU0FBU0MscUNBQXFDO0FBQzlDLFNBQVNDLDJCQUEyQjtBQUVwQyxhQUFBQyxtQkFBQUMsV0FBQUMsZUFBQUMsSUFBQSx5SUFBZ0NOLEtBQUssT0FBT00sUUFBUTtBQUNsRCxRQUFNQyxzQkFBc0IsTUFBTUQsSUFBSUwsNkJBQTZCO0FBQ25FLFVBQVFNLHFCQUFtQjtBQUFBLElBQ3pCLEtBQUtMLG9CQUFvQk07QUFDdkIsYUFBTztBQUFBLElBQ1QsS0FBS04sb0JBQW9CTztBQUN2QixhQUFPO0FBQUEsRUFDWDtBQUNGLENBQUMsQ0FBQztBQUFDTixpQkFBQU8sYUFBQSIsIm5hbWVzIjpbImF0b20iLCJ0aXBvVHJvdWJsZXNob290aW5nQ2FsY29sYXRvJCIsIlRpcG9Ucm91Ymxlc2hvb3RpbmciLCJwb3dlckt3QWxlcnRBdG9tIiwiZ2xvYmFsVGhpcyIsImpvdGFpQXRvbUNhY2hlIiwiZ2V0IiwidGlwb1Ryb3VibGVzaG9vdGluZyIsIlBvd2VyUzAxIiwiUG93ZXJBMDEiLCJkZWJ1Z0xhYmVsIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbInBvd2VyS3dBbGVydEF0b20udHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgYXRvbSB9IGZyb20gJ2pvdGFpJztcclxuaW1wb3J0IHsgdGlwb1Ryb3VibGVzaG9vdGluZ0NhbGNvbGF0byQgfSBmcm9tICcuLi9hY3RpdmF0aW9ucy90aXBvLXRyb3VibGVzaG9vdGluZyc7XHJcbmltcG9ydCB7IFRpcG9Ucm91Ymxlc2hvb3RpbmcgfSBmcm9tICcuLi9hY3RpdmF0aW9ucy90eXBlcyc7XHJcblxyXG5leHBvcnQgY29uc3QgcG93ZXJLd0FsZXJ0QXRvbSA9IGF0b20oYXN5bmMgKGdldCkgPT4ge1xyXG4gIGNvbnN0IHRpcG9Ucm91Ymxlc2hvb3RpbmcgPSBhd2FpdCBnZXQodGlwb1Ryb3VibGVzaG9vdGluZ0NhbGNvbGF0byQpO1xyXG4gIHN3aXRjaCAodGlwb1Ryb3VibGVzaG9vdGluZykge1xyXG4gICAgY2FzZSBUaXBvVHJvdWJsZXNob290aW5nLlBvd2VyUzAxOlxyXG4gICAgICByZXR1cm4gJ0F2cmFpIHVuYSBwb3RlbnphICoqYSBwYXJpIHZhbG9yZSoqIGRpIHF1ZWxsYSBwcmVjZWRlbnRlLiBTZSB2b3JyYWkgY2FtYmlhcmxhLCBwb3RyYWkgZmFybG8gbmVsbGEgdHVhIEFyZWEgUGVyc29uYWxlIHF1YW5kbyBsYSBmb3JuaXR1cmEgc2Fyw6AgYXR0aXZhLic7XHJcbiAgICBjYXNlIFRpcG9Ucm91Ymxlc2hvb3RpbmcuUG93ZXJBMDE6XHJcbiAgICAgIHJldHVybiAnQXZyYWkgdW5hIHBvdGVuemEgKiphIHBhcmkgdmFsb3JlKiogZGkgcXVlbGxhIHByZWRpc3Bvc3RhIHN1bCBwdW50by4gU2Ugdm9ycmFpIGNhbWJpYXJsYSwgcG90cmFpIGZhcmxvIG5lbGxhIHR1YSBBcmVhIFBlcnNvbmFsZSBxdWFuZG8gbGEgZm9ybml0dXJhIHNhcsOgIGF0dGl2YS4nO1xyXG4gIH1cclxufSk7XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvZGF0YS1hY2Nlc3Mvc3JjL2xpYi9hdG9tcy9zdGVwLWhlbHBlcnMvcG93ZXJLd0FsZXJ0QXRvbS50cyJ9

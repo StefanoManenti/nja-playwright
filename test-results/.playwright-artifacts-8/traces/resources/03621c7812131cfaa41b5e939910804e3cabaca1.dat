@@ -1,0 +1,24 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/LinkContent.module.less");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from "/@vite/client"
+const __vite__id = "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/LinkContent.module.less"
+const __vite__css = "._resetButton_1kgmo_1 {\n  background-color: transparent;\n  border: 0;\n  padding: 0;\n  cursor: pointer;\n  color: inherit;\n  text-align: left;\n}\n._resetButton_1kgmo_1:focus-visible {\n  outline: 2px solid var(--Text-Default-Grey);\n}\n._resetButtonWithPadding_1kgmo_12 {\n  background-color: transparent;\n  border: 0;\n  padding: 0;\n  cursor: pointer;\n  color: inherit;\n  text-align: left;\n  margin: calc(var(--grid-base) * -2);\n  padding: calc(var(--grid-base) * 2);\n  border-radius: var(--grid-base);\n  transition: all 150ms ease;\n  display: flex;\n  gap: var(--grid-base);\n  align-items: center;\n}\n._resetButtonWithPadding_1kgmo_12:focus-visible {\n  outline: 2px solid var(--Text-Default-Grey);\n}\n._resetButtonWithPadding_1kgmo_12:hover {\n  text-decoration-line: underline;\n}\n._resetButtonWithPadding_1kgmo_12:active {\n  background: var(--Background-Future-Grey);\n}\n/**\n * needs position: relative on some ancestor\n */\n.pln-control-input {\n  cursor: inherit;\n  position: absolute;\n  opacity: 0;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  left: 0;\n  margin: 0;\n  padding: 0;\n  z-index: -1;\n}\nbutton._root_1kgmo_51 {\n  background-color: transparent;\n  border: 0;\n  padding: 0;\n  cursor: pointer;\n  color: inherit;\n  text-align: left;\n  font: inherit;\n}\nbutton._root_1kgmo_51:focus-visible {\n  outline: 2px solid var(--Text-Default-Grey);\n}\n._root_1kgmo_51._root_1kgmo_51 {\n  font-weight: 600;\n  text-decoration: none;\n}\n._root_1kgmo_51._root_1kgmo_51._withPadding_1kgmo_67 {\n  background-color: transparent;\n  border: 0;\n  padding: 0;\n  cursor: pointer;\n  color: inherit;\n  text-align: left;\n  margin: calc(var(--grid-base) * -2);\n  padding: calc(var(--grid-base) * 2);\n  border-radius: var(--grid-base);\n  transition: all 150ms ease;\n  display: flex;\n  gap: var(--grid-base);\n  align-items: center;\n}\n._root_1kgmo_51._root_1kgmo_51._withPadding_1kgmo_67:focus-visible {\n  outline: 2px solid var(--Text-Default-Grey);\n}\n._root_1kgmo_51._root_1kgmo_51._withPadding_1kgmo_67:hover {\n  text-decoration-line: underline;\n}\n._root_1kgmo_51._root_1kgmo_51._withPadding_1kgmo_67:active {\n  background: var(--Background-Future-Grey);\n}\n._root_1kgmo_51._root_1kgmo_51._underline_1kgmo_91 {\n  text-decoration: underline;\n}\n._root_1kgmo_51._root_1kgmo_51:hover {\n  text-decoration: underline;\n}\n._root_1kgmo_51._withIcon_1kgmo_97 {\n  display: inline-flex;\n  align-items: center;\n  gap: var(--grid-base);\n}\n._icon_1kgmo_102 {\n  display: flex;\n}\n._icon_1kgmo_102._iconSizeLarge_1kgmo_105 {\n  font-size: 24px;\n}\n._root_1kgmo_51[disabled] {\n  cursor: not-allowed;\n  color: var(--Text-Medium-Grey);\n}\n"
+__vite__updateStyle(__vite__id, __vite__css)
+export const resetButton = "_resetButton_1kgmo_1";
+export const resetButtonWithPadding = "_resetButtonWithPadding_1kgmo_12";
+export const root = "_root_1kgmo_51";
+export const withPadding = "_withPadding_1kgmo_67";
+export const underline = "_underline_1kgmo_91";
+export const withIcon = "_withIcon_1kgmo_97";
+export const icon = "_icon_1kgmo_102";
+export const iconSizeLarge = "_iconSizeLarge_1kgmo_105";
+export default {
+	resetButton: resetButton,
+	resetButtonWithPadding: resetButtonWithPadding,
+	root: root,
+	withPadding: withPadding,
+	underline: underline,
+	withIcon: withIcon,
+	icon: icon,
+	iconSizeLarge: iconSizeLarge
+};
+
+import.meta.hot.prune(() => __vite__removeStyle(__vite__id))

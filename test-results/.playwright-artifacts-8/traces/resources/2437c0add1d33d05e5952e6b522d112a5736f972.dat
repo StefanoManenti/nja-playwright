@@ -1,0 +1,36 @@
+import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import {
+  ExpiredSessionFullScreenError,
+  MaxOperationErrorFullScreenError,
+  ServiceUnavailableFullScreenError
+} from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/index.ts";
+import { MaxOperationError, NotLoggedError } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/index.ts";
+export function getFullScreenErrorComponent(error) {
+  if (error instanceof NotLoggedError) {
+    return ExpiredSessionFullScreenError;
+  }
+  if (error instanceof MaxOperationError) {
+    return MaxOperationErrorFullScreenError;
+  }
+  return ServiceUnavailableFullScreenError;
+}
+export function renderFallback({
+  error,
+  retry
+}) {
+  const ErrorComponent = getFullScreenErrorComponent(error);
+  return /* @__PURE__ */ jsxDEV(ErrorComponent, { onRetry: retry }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/errors/renderFallback.tsx",
+    lineNumber: 29,
+    columnNumber: 10
+  }, this);
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBNEJTOzs7Ozs7OztBQTVCVDtBQUFBLEVBQ0VBO0FBQUFBLEVBQ0FDO0FBQUFBLEVBQ0FDO0FBQUFBLE9BQ0s7QUFDUCxTQUFTQyxtQkFBbUJDLHNCQUFzQjtBQUUzQyxnQkFBU0MsNEJBQTRCQyxPQUFnQjtBQUMxRCxNQUFJQSxpQkFBaUJGLGdCQUFnQjtBQUNuQyxXQUFPSjtBQUFBQSxFQUNUO0FBRUEsTUFBSU0saUJBQWlCSCxtQkFBbUI7QUFDdEMsV0FBT0Y7QUFBQUEsRUFDVDtBQUVBLFNBQU9DO0FBQ1Q7QUFFTyxnQkFBU0ssZUFBZTtBQUFBLEVBQzdCRDtBQUFBQSxFQUNBRTtBQUtGLEdBQUc7QUFDRCxRQUFNQyxpQkFBaUJKLDRCQUE0QkMsS0FBSztBQUN4RCxTQUFPLHVCQUFDLGtCQUFlLFNBQVNFLFNBQXpCO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FBK0I7QUFDeEMiLCJuYW1lcyI6WyJFeHBpcmVkU2Vzc2lvbkZ1bGxTY3JlZW5FcnJvciIsIk1heE9wZXJhdGlvbkVycm9yRnVsbFNjcmVlbkVycm9yIiwiU2VydmljZVVuYXZhaWxhYmxlRnVsbFNjcmVlbkVycm9yIiwiTWF4T3BlcmF0aW9uRXJyb3IiLCJOb3RMb2dnZWRFcnJvciIsImdldEZ1bGxTY3JlZW5FcnJvckNvbXBvbmVudCIsImVycm9yIiwicmVuZGVyRmFsbGJhY2siLCJyZXRyeSIsIkVycm9yQ29tcG9uZW50Il0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbInJlbmRlckZhbGxiYWNrLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge1xyXG4gIEV4cGlyZWRTZXNzaW9uRnVsbFNjcmVlbkVycm9yLFxyXG4gIE1heE9wZXJhdGlvbkVycm9yRnVsbFNjcmVlbkVycm9yLFxyXG4gIFNlcnZpY2VVbmF2YWlsYWJsZUZ1bGxTY3JlZW5FcnJvcixcclxufSBmcm9tICdAbmFqLXdvL3VpLW9yZ2FuaXNtcyc7XHJcbmltcG9ydCB7IE1heE9wZXJhdGlvbkVycm9yLCBOb3RMb2dnZWRFcnJvciB9IGZyb20gJ0BuYWotd28vdXRpbCc7XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gZ2V0RnVsbFNjcmVlbkVycm9yQ29tcG9uZW50KGVycm9yOiB1bmtub3duKSB7XHJcbiAgaWYgKGVycm9yIGluc3RhbmNlb2YgTm90TG9nZ2VkRXJyb3IpIHtcclxuICAgIHJldHVybiBFeHBpcmVkU2Vzc2lvbkZ1bGxTY3JlZW5FcnJvcjtcclxuICB9XHJcblxyXG4gIGlmIChlcnJvciBpbnN0YW5jZW9mIE1heE9wZXJhdGlvbkVycm9yKSB7XHJcbiAgICByZXR1cm4gTWF4T3BlcmF0aW9uRXJyb3JGdWxsU2NyZWVuRXJyb3I7XHJcbiAgfVxyXG5cclxuICByZXR1cm4gU2VydmljZVVuYXZhaWxhYmxlRnVsbFNjcmVlbkVycm9yO1xyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gcmVuZGVyRmFsbGJhY2soe1xyXG4gIGVycm9yLFxyXG4gIHJldHJ5LFxyXG59OiB7XHJcbiAgZXJyb3I6IHVua25vd247XHJcbiAgcmV0cnk6ICgpID0+IHZvaWQ7XHJcbiAgcmV0cnlhYmxlPzogYm9vbGVhbjtcclxufSkge1xyXG4gIGNvbnN0IEVycm9yQ29tcG9uZW50ID0gZ2V0RnVsbFNjcmVlbkVycm9yQ29tcG9uZW50KGVycm9yKTtcclxuICByZXR1cm4gPEVycm9yQ29tcG9uZW50IG9uUmV0cnk9e3JldHJ5fSAvPjtcclxufVxyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL3N0ZXBzL3NyYy9saWIvZXJyb3JzL3JlbmRlckZhbGxiYWNrLnRzeCJ9

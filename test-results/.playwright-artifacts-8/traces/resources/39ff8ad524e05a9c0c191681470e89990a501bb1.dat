@@ -1,0 +1,22 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/PlnFooter/PlnFooter.module.less");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from "/@vite/client"
+const __vite__id = "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/PlnFooter/PlnFooter.module.less"
+const __vite__css = "/* Viewport and media queries */\n/* Box shadows */\n._container_1ueds_3 {\n  background: var(--Background-Friendly-Beige);\n}\n.pln-app ._container_1ueds_3 {\n  display: none;\n}\n._borderTop_1ueds_9 {\n  height: 4px;\n  background-image: linear-gradient(to right, #009e62 0%, #95b849 50%, #ffcd00);\n}\n._innerContainer_1ueds_13 {\n  display: flex;\n  align-items: center;\n  padding: 20px 0 24px;\n  gap: calc(var(--grid-base) * 4);\n}\n@media (max-width: 767px) {\n  ._innerContainer_1ueds_13 {\n    gap: calc(var(--grid-base) * 3);\n  }\n}\n._logo_1ueds_24 {\n  flex: none;\n  align-self: flex-end;\n}\n._contents_1ueds_28 {\n  flex: 1;\n  display: flex;\n  flex-flow: column nowrap;\n}\n@media (max-width: 767px) {\n  ._desktop_1ueds_34 {\n    display: none;\n  }\n}\n@media (min-width: 768px) {\n  ._mobile_1ueds_39 {\n    display: none;\n  }\n}\n"
+__vite__updateStyle(__vite__id, __vite__css)
+export const container = "_container_1ueds_3";
+export const borderTop = "_borderTop_1ueds_9";
+export const innerContainer = "_innerContainer_1ueds_13";
+export const logo = "_logo_1ueds_24";
+export const contents = "_contents_1ueds_28";
+export const desktop = "_desktop_1ueds_34";
+export const mobile = "_mobile_1ueds_39";
+export default {
+	container: container,
+	borderTop: borderTop,
+	innerContainer: innerContainer,
+	logo: logo,
+	contents: contents,
+	desktop: desktop,
+	mobile: mobile
+};
+
+import.meta.hot.prune(() => __vite__removeStyle(__vite__id))

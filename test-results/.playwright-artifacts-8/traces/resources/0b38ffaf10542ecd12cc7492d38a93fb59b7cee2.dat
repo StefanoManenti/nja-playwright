@@ -1,0 +1,64 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/layout.module.less");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from "/@vite/client"
+const __vite__id = "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/layout.module.less"
+const __vite__css = "/* Viewport and media queries */\n/* Box shadows */\n/* % relative to viewport */\n:root {\n  --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);\n  --Gradient-Green-Horizontal-Left: linear-gradient(90deg, #008354 0.52%, #008354 51.04%, #95b849 100%);\n  --Gradient-Green-Yellow-Horizontal: linear-gradient(90deg, #009e62 23.46%, #95b849 67.63%, #a7bc3c 74.77%, #d7c51b 89.08%, #ffcd00 100%);\n  --Background-White: #fff;\n  --Background-Future-Grey: #f1f5f4;\n  --Background-Grey: #f4f4f4;\n  --Background-Friendly-Beige: #faf8f5;\n  --Background-Broadband: #5d44da;\n  --Primary-Acessible-Green: #008051;\n  --System-Colors-Forest-Green: #00613d;\n  --System-Colors-Platinum: #eaf2ef;\n  --System-Colors-Alert: #d0021b;\n  --System-Colors-Ruby-Red: #9d151c;\n  --System-Colors-Lavender-Blush: #fcedee;\n  --Text-Dark-Grey: #444;\n  --Text-Default-Grey: #333;\n  --Text-Medium-Grey: #767676;\n  --Text-Light-Grey: #eaeaea;\n  --Text-White: #fff;\n  --grid-base: 8px;\n}\nhtml {\n  scroll-padding-top: 104px;\n  scroll-padding-bottom: 114px;\n  scroll-behavior: smooth;\n}\n@media screen and (max-width: 767px) {\n  html {\n    scroll-padding-top: 76px;\n    scroll-padding-bottom: 98px;\n  }\n}\n._root_pujo7_37 {\n  min-height: 100dvh;\n  display: flex;\n  flex-direction: column;\n}\n._root_pujo7_37 > ._header_pujo7_42 {\n  flex: none;\n  position: sticky;\n  top: 0;\n  z-index: 100;\n}\n._root_pujo7_37 > ._page_pujo7_48 {\n  flex: 1 0 auto;\n  margin: calc(var(--grid-base) * 4) 0;\n}\n._root_pujo7_37 > ._stickyBottom_pujo7_52 {\n  flex: none;\n  position: sticky;\n  bottom: 0;\n  z-index: 100;\n}\n@media screen and (min-width: 1024px) {\n  ._root_pujo7_37._variantTyp_pujo7_59:after {\n    content: '';\n    height: 80px;\n  }\n  ._root_pujo7_37._variantTyp_pujo7_59 > ._page_pujo7_48 {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n  }\n  ._root_pujo7_37._variantTyp_pujo7_59 ._content_pujo7_68 {\n    display: flex;\n    justify-content: center;\n    flex-grow: 1;\n  }\n}\n._container_pujo7_74 {\n  box-sizing: content-box;\n  margin: 0 auto;\n  padding: 0 5vw;\n  max-width: 1140px;\n}\n._content_pujo7_68 {\n  display: flex;\n  gap: 5vw;\n}\n@media (min-width: 1254px) {\n  ._content_pujo7_68 {\n    gap: 0 62.7px;\n  }\n}\n._stickyBottom_pujo7_52,\n._headerBox_pujo7_90 {\n  background: var(--Background-White, #fff);\n  box-shadow: 0 0 15px 0 rgba(51, 51, 51, 0.15);\n}\n.pln-app ._headerBox_pujo7_90 {\n  display: none;\n}\n._stickyBottom_pujo7_52 {\n  padding: calc(var(--grid-base) * 3) 0;\n}\n._buttonsContainer_pujo7_100 {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  gap: calc(var(--grid-base) * 3);\n}\n._variantTyp_pujo7_59 ._buttonsContainer_pujo7_100 {\n  justify-content: center;\n}\n@media screen and (max-width: 1023px) {\n  ._stickyBottom_pujo7_52 {\n    padding: calc(var(--grid-base) * 2) 0 calc(var(--grid-base) * 2 + var(--safe-area-inset-bottom));\n  }\n  ._buttonsContainer_pujo7_100 {\n    justify-content: center;\n  }\n  /**\n   * Hide .stickyBottom if the CTA is disabled.\n   */\n  ._canHideOnMobile_pujo7_119:has([data-hide-footer]) {\n    height: 0;\n    padding: 0;\n    overflow: hidden;\n    box-shadow: none;\n  }\n}\n._ctaLayoutContainer_pujo7_126 {\n  align-self: stretch;\n}\n._headerLogo_pujo7_129 {\n  display: flex;\n}\n._headerBoxDesktop_pujo7_132 {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 0 calc(var(--grid-base) * 5);\n}\n@media screen and (max-width: 1023px) {\n  ._headerBoxDesktop_pujo7_132 {\n    display: none;\n  }\n}\n._headerBoxDesktop_pujo7_132 ._logo_pujo7_143 {\n  margin: 14px 0;\n}\n._headerBoxDesktop_pujo7_132 ._navbarDesktopControlsWrapper_pujo7_146 {\n  display: flex;\n  align-items: center;\n  gap: calc(var(--grid-base) * 5);\n}\n._headerBoxMobile_pujo7_151 {\n  display: none;\n  justify-content: space-between;\n  align-items: center;\n  padding: 0 calc(var(--grid-base) * 2);\n}\n@media screen and (max-width: 1023px) {\n  ._headerBoxMobile_pujo7_151 {\n    display: flex;\n  }\n}\n._headerBoxMobile_pujo7_151 ._logo_pujo7_143 {\n  margin: 11px 0;\n}\n._headerButtonMobile_pujo7_165 {\n  flex: 1;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n}\n._headerButtonMobile_pujo7_165:last-child {\n  justify-content: flex-end;\n}\n._progressBar_pujo7_174 {\n  height: 8px;\n  background: var(--Primary-Acessible-Green, #008051);\n  transition: width 300ms ease-in-out;\n}\n@media (prefers-reduced-motion) {\n  ._progressBar_pujo7_174 {\n    transition: none;\n  }\n}\n@media screen and (max-width: 1023px) {\n  ._noMobile_pujo7_185 {\n    display: none;\n  }\n}\n._disabled_pujo7_189 {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: rgba(255, 255, 255, 0.5);\n  z-index: 150;\n  animation: 0.7s linear _fadeIn_pujo7_1;\n}\n@keyframes _fadeIn_pujo7_1 {\n  0% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n/* Other components */\n._stepContainer_pujo7_208,\n._stepFieldset_pujo7_209 {\n  display: flex;\n  flex-flow: column nowrap;\n  gap: calc(var(--grid-base) * 3);\n}\n@media (max-width: 767px) {\n  ._stepContainer_pujo7_208,\n  ._stepFieldset_pujo7_209 {\n    gap: calc(var(--grid-base) * 2);\n  }\n}\n._titleWithIcon_pujo7_220 {\n  color: var(--Primary-Acessible-Green);\n}\n._titleWithIcon_pujo7_220 svg {\n  font-size: 24px;\n  margin-right: var(--grid-base);\n}\n._stepContainer_pujo7_208 {\n  container-type: inline-size;\n}\n._variantTyp_pujo7_59 ._stepContainer_pujo7_208 {\n  container-type: normal;\n}\n._stepContainer_pujo7_208._everything_pujo7_233 {\n  gap: calc(var(--grid-base) * 5);\n}\n@media (max-width: 767px) {\n  ._stepContainer_pujo7_208._everything_pujo7_233 {\n    gap: calc(var(--grid-base) * 3);\n  }\n}\n._stepFieldset_pujo7_209 {\n  border: 0;\n  padding: 0;\n  margin: 0;\n  min-inline-size: auto;\n}\n@container (width > 550px) {\n  ._stepFieldset_pujo7_209 {\n    border: 0;\n    padding: 0;\n  }\n  ._stepFieldset_pujo7_209._directionRow_pujo7_252 {\n    flex-flow: column nowrap;\n    display: grid;\n    grid-template-columns: repeat(var(--items-per-row, 2), minmax(0, 1fr));\n  }\n}\n._stepTitle_pujo7_258 {\n  display: flex;\n  flex-flow: column nowrap;\n  gap: var(--grid-base);\n}\n@media (max-width: 767px) {\n  ._stepTitle_pujo7_258 {\n    gap: calc(var(--grid-base) * 0.5);\n  }\n}\n._columns2_pujo7_268 {\n  grid-column: span 2;\n}\n"
+__vite__updateStyle(__vite__id, __vite__css)
+export const root = "_root_pujo7_37";
+export const header = "_header_pujo7_42";
+export const page = "_page_pujo7_48";
+export const stickyBottom = "_stickyBottom_pujo7_52";
+export const variantTyp = "_variantTyp_pujo7_59";
+export const content = "_content_pujo7_68";
+export const container = "_container_pujo7_74";
+export const headerBox = "_headerBox_pujo7_90";
+export const buttonsContainer = "_buttonsContainer_pujo7_100";
+export const canHideOnMobile = "_canHideOnMobile_pujo7_119";
+export const ctaLayoutContainer = "_ctaLayoutContainer_pujo7_126";
+export const headerLogo = "_headerLogo_pujo7_129";
+export const headerBoxDesktop = "_headerBoxDesktop_pujo7_132";
+export const logo = "_logo_pujo7_143";
+export const navbarDesktopControlsWrapper = "_navbarDesktopControlsWrapper_pujo7_146";
+export const headerBoxMobile = "_headerBoxMobile_pujo7_151";
+export const headerButtonMobile = "_headerButtonMobile_pujo7_165";
+export const progressBar = "_progressBar_pujo7_174";
+export const noMobile = "_noMobile_pujo7_185";
+export const disabled = "_disabled_pujo7_189";
+export const fadeIn = "_fadeIn_pujo7_1";
+export const stepContainer = "_stepContainer_pujo7_208";
+export const stepFieldset = "_stepFieldset_pujo7_209";
+export const titleWithIcon = "_titleWithIcon_pujo7_220";
+export const everything = "_everything_pujo7_233";
+export const directionRow = "_directionRow_pujo7_252";
+export const stepTitle = "_stepTitle_pujo7_258";
+export const columns2 = "_columns2_pujo7_268";
+export default {
+	root: root,
+	header: header,
+	page: page,
+	stickyBottom: stickyBottom,
+	variantTyp: variantTyp,
+	content: content,
+	container: container,
+	headerBox: headerBox,
+	buttonsContainer: buttonsContainer,
+	canHideOnMobile: canHideOnMobile,
+	ctaLayoutContainer: ctaLayoutContainer,
+	headerLogo: headerLogo,
+	headerBoxDesktop: headerBoxDesktop,
+	logo: logo,
+	navbarDesktopControlsWrapper: navbarDesktopControlsWrapper,
+	headerBoxMobile: headerBoxMobile,
+	headerButtonMobile: headerButtonMobile,
+	progressBar: progressBar,
+	noMobile: noMobile,
+	disabled: disabled,
+	fadeIn: fadeIn,
+	stepContainer: stepContainer,
+	stepFieldset: stepFieldset,
+	titleWithIcon: titleWithIcon,
+	everything: everything,
+	directionRow: directionRow,
+	stepTitle: stepTitle,
+	columns2: columns2
+};
+
+import.meta.hot.prune(() => __vite__removeStyle(__vite__id))

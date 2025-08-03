@@ -1,0 +1,93 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/podDueReti.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/podDueReti.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { Modal, ModalErrorContent } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+import { SmileBadIcon } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/index.ts";
+export const CheckDoubleNetPodError = {
+  modal: function CheckDoubleNetPodErrorModal(props) {
+    return /* @__PURE__ */ jsxDEV(ModalErrorDoubleNetPod, { onClose: props.onClose }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/podDueReti.tsx",
+      lineNumber: 9,
+      columnNumber: 12
+    }, this);
+  }
+};
+export function ModalErrorDoubleNetPod(props) {
+  return /* @__PURE__ */ jsxDEV(Modal, { children: /* @__PURE__ */ jsxDEV(
+    ModalErrorContent,
+    {
+      icon: /* @__PURE__ */ jsxDEV(SmileBadIcon, {}, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/podDueReti.tsx",
+        lineNumber: 17,
+        columnNumber: 15
+      }, this),
+      title: "POD non valido",
+      text: /* @__PURE__ */ jsxDEV(Fragment, { children: [
+        "Il tuo POD è cambiato. Inserisci il nuovo codice sostituendo IT001E con ",
+        /* @__PURE__ */ jsxDEV("b", { children: "IT253E" }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/podDueReti.tsx",
+          lineNumber: 22,
+          columnNumber: 17
+        }, this),
+        " lasciando invariati gli altri caratteri e che puoi trovare sulle bollette emesse a partire dal 1 gennaio 2025."
+      ] }, void 0, true, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/podDueReti.tsx",
+        lineNumber: 20,
+        columnNumber: 9
+      }, this),
+      cta: "Riprova",
+      onClose: props.onClose
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/podDueReti.tsx",
+      lineNumber: 16,
+      columnNumber: 7
+    },
+    this
+  ) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/podDueReti.tsx",
+    lineNumber: 15,
+    columnNumber: 5
+  }, this);
+}
+_c = ModalErrorDoubleNetPod;
+var _c;
+$RefreshReg$(_c, "ModalErrorDoubleNetPod");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/podDueReti.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBUVcsU0FXRCxVQVhDOzs7OztnQkFSWCxPQUFTQSxjQUFPQztBQUFBQSxPQUFpQixpREFBMEI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQzNELFNBQVNDLG9CQUFvQjtBQUt0QixhQUFNQyx5QkFBeUI7QUFBQSxFQUNwQ0MsT0FBTyxTQUFTQyw0QkFBNEJDLE9BQWdDO0FBQzFFLFdBQU8sdUJBQUMsMEJBQXVCLFNBQVNBLE1BQU1DLFdBQXZDO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBK0M7QUFBQSxFQUN4RDtBQUNGO0FBRU8sZ0JBQVNDLHVCQUF1QkYsT0FBZ0M7QUFDckUsU0FDRSx1QkFBQyxTQUNDO0FBQUEsSUFBQztBQUFBO0FBQUEsTUFDQyxNQUFNLHVCQUFDLGtCQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFBYTtBQUFBLE1BQ25CLE9BQU87QUFBQSxNQUNQLE1BQ0UsbUNBQUU7QUFBQTtBQUFBLFFBRUksdUJBQUMsT0FBRSxzQkFBSDtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQVM7QUFBQSxRQUFJO0FBQUEsV0FGbkI7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUlBO0FBQUEsTUFFRixLQUFLO0FBQUEsTUFDTCxTQUFTQSxNQUFNQztBQUFBQTtBQUFBQSxJQVhqQjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsRUFXeUIsS0FaM0I7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQWNBO0FBRUo7QUFBQ0UsS0FsQmVEO0FBQXNCLElBQUFDO0FBQUFDLGFBQUFELElBQUEiLCJuYW1lcyI6WyJNb2RhbCIsIk1vZGFsRXJyb3JDb250ZW50IiwiU21pbGVCYWRJY29uIiwiQ2hlY2tEb3VibGVOZXRQb2RFcnJvciIsIm1vZGFsIiwiQ2hlY2tEb3VibGVOZXRQb2RFcnJvck1vZGFsIiwicHJvcHMiLCJvbkNsb3NlIiwiTW9kYWxFcnJvckRvdWJsZU5ldFBvZCIsIl9jIiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbInBvZER1ZVJldGkudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE1vZGFsLCBNb2RhbEVycm9yQ29udGVudCB9IGZyb20gJ0BuYWotd28vdWktYXRvbXMnO1xyXG5pbXBvcnQgeyBTbWlsZUJhZEljb24gfSBmcm9tICdAbmFqLXdvL3VpLWljb25zJztcclxuXHJcbi8qKlxyXG4gKiBBbiBlcnJvciB0aGF0IGluZGljYXRlcyB0aGF0IHRoZSB1c2VyIGVudGVyZWQgYW4gb2xkIFBPRC5cclxuICovXHJcbmV4cG9ydCBjb25zdCBDaGVja0RvdWJsZU5ldFBvZEVycm9yID0ge1xyXG4gIG1vZGFsOiBmdW5jdGlvbiBDaGVja0RvdWJsZU5ldFBvZEVycm9yTW9kYWwocHJvcHM6IHsgb25DbG9zZTogKCkgPT4gdm9pZCB9KSB7XHJcbiAgICByZXR1cm4gPE1vZGFsRXJyb3JEb3VibGVOZXRQb2Qgb25DbG9zZT17cHJvcHMub25DbG9zZX0gLz47XHJcbiAgfSxcclxufTtcclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBNb2RhbEVycm9yRG91YmxlTmV0UG9kKHByb3BzOiB7IG9uQ2xvc2U6ICgpID0+IHZvaWQgfSkge1xyXG4gIHJldHVybiAoXHJcbiAgICA8TW9kYWw+XHJcbiAgICAgIDxNb2RhbEVycm9yQ29udGVudFxyXG4gICAgICAgIGljb249ezxTbWlsZUJhZEljb24gLz59XHJcbiAgICAgICAgdGl0bGU9eydQT0Qgbm9uIHZhbGlkbyd9XHJcbiAgICAgICAgdGV4dD17XHJcbiAgICAgICAgICA8PlxyXG4gICAgICAgICAgICBJbCB0dW8gUE9EIMOoIGNhbWJpYXRvLiBJbnNlcmlzY2kgaWwgbnVvdm8gY29kaWNlIHNvc3RpdHVlbmRvIElUMDAxRVxyXG4gICAgICAgICAgICBjb24gPGI+SVQyNTNFPC9iPiBsYXNjaWFuZG8gaW52YXJpYXRpIGdsaSBhbHRyaSBjYXJhdHRlcmkgZSBjaGUgcHVvaVxyXG4gICAgICAgICAgICB0cm92YXJlIHN1bGxlIGJvbGxldHRlIGVtZXNzZSBhIHBhcnRpcmUgZGFsIDEgZ2VubmFpbyAyMDI1LlxyXG4gICAgICAgICAgPC8+XHJcbiAgICAgICAgfVxyXG4gICAgICAgIGN0YT17J1JpcHJvdmEnfVxyXG4gICAgICAgIG9uQ2xvc2U9e3Byb3BzLm9uQ2xvc2V9XHJcbiAgICAgIC8+XHJcbiAgICA8L01vZGFsPlxyXG4gICk7XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy9zdGVwcy9zcmMvbGliL3NlcnZpY2VzLWVycm9ycy9wb2REdWVSZXRpLnRzeCJ9

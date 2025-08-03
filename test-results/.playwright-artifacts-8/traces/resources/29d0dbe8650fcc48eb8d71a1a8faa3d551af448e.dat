@@ -1,0 +1,10 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-fields/src/lib/InlineRadio.module.less");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from "/@vite/client"
+const __vite__id = "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-fields/src/lib/InlineRadio.module.less"
+const __vite__css = "._inlineRadio_mefsw_1 {\n  display: flex;\n  flex-flow: row wrap;\n  gap: calc(var(--grid-base) * 2) calc(var(--grid-base) * 10);\n}\n"
+__vite__updateStyle(__vite__id, __vite__css)
+export const inlineRadio = "_inlineRadio_mefsw_1";
+export default {
+	inlineRadio: inlineRadio
+};
+
+import.meta.hot.prune(() => __vite__removeStyle(__vite__id))

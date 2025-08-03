@@ -1,0 +1,54 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/hourglass.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/hourglass.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import SvgIcon from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/SvgIcon.tsx";
+export function HourglassIcon(props) {
+  return /* @__PURE__ */ jsxDEV(SvgIcon, { ...props, viewBox: "0 0 56 56", children: /* @__PURE__ */ jsxDEV("path", { d: "M7.97465 1.75103C7.64001 1.75103 7.30536 1.91519 7.13804 2.21068C6.95399 2.50616 6.95399 2.86731 7.13804 3.1628C7.32209 3.45828 7.64001 3.63886 7.97465 3.62244H10.8359V12.0602C10.8359 19.4638 15.6715 25.7346 22.4145 28C15.6715 30.2818 10.8359 36.5527 10.8359 43.9562V52.394H7.97465C7.64001 52.394 7.32209 52.5746 7.13804 52.8536C6.97072 53.1491 6.97072 53.5103 7.13804 53.7893C7.30536 54.0848 7.62327 54.2654 7.97465 54.249H48.0315C48.3662 54.249 48.6841 54.0684 48.8682 53.7893C49.0522 53.5103 49.0355 53.1327 48.8682 52.8536C48.7008 52.5746 48.3829 52.3776 48.0315 52.394H45.1703V43.9562C45.1703 36.5527 40.3347 30.2818 33.6084 28C40.3347 25.7182 45.1703 19.4638 45.1703 12.0602V3.62244H48.0315C48.3829 3.62244 48.7008 3.45828 48.8682 3.1628C49.0355 2.86731 49.0355 2.50616 48.8682 2.21068C48.7008 1.91519 48.3662 1.73462 48.0315 1.75103H7.97465ZM12.7433 3.62244H43.2629V12.0602C43.2629 20.3995 36.4696 27.0643 28.0031 27.0643C19.5366 27.0643 12.7433 20.3995 12.7433 12.0766V3.62244ZM28.0031 28.9521C36.4696 28.9521 43.2629 35.6334 43.2629 43.9726V52.4104H12.7433V43.9726C12.7433 35.6334 19.5366 28.9521 28.0031 28.9521Z" }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/hourglass.tsx",
+    lineNumber: 7,
+    columnNumber: 7
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/hourglass.tsx",
+    lineNumber: 6,
+    columnNumber: 5
+  }, this);
+}
+_c = HourglassIcon;
+var _c;
+$RefreshReg$(_c, "HourglassIcon");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/hourglass.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBTU07Ozs7O2dCQU5OLE9BQU9BLENBQUssYUFBYTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDekIsT0FBT0MsYUFBYTtBQUViLGdCQUFTQyxjQUFjQyxPQUFvQztBQUNoRSxTQUNFLHVCQUFDLFdBQVEsR0FBSUEsT0FBTyxTQUFRLGFBQzFCLGlDQUFDLFVBQUssR0FBRSx3bUNBQVI7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQUE0bUMsS0FEOW1DO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FFQTtBQUVKO0FBQUNDLEtBTmVGO0FBQWEsSUFBQUU7QUFBQUMsYUFBQUQsSUFBQSIsIm5hbWVzIjpbIlJlYWN0IiwiU3ZnSWNvbiIsIkhvdXJnbGFzc0ljb24iLCJwcm9wcyIsIl9jIiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbImhvdXJnbGFzcy50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcclxuaW1wb3J0IFN2Z0ljb24gZnJvbSAnLi9TdmdJY29uJztcclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBIb3VyZ2xhc3NJY29uKHByb3BzOiBSZWFjdC5Db21wb25lbnRQcm9wczwnc3ZnJz4pIHtcclxuICByZXR1cm4gKFxyXG4gICAgPFN2Z0ljb24gey4uLnByb3BzfSB2aWV3Qm94PVwiMCAwIDU2IDU2XCI+XHJcbiAgICAgIDxwYXRoIGQ9XCJNNy45NzQ2NSAxLjc1MTAzQzcuNjQwMDEgMS43NTEwMyA3LjMwNTM2IDEuOTE1MTkgNy4xMzgwNCAyLjIxMDY4QzYuOTUzOTkgMi41MDYxNiA2Ljk1Mzk5IDIuODY3MzEgNy4xMzgwNCAzLjE2MjhDNy4zMjIwOSAzLjQ1ODI4IDcuNjQwMDEgMy42Mzg4NiA3Ljk3NDY1IDMuNjIyNDRIMTAuODM1OVYxMi4wNjAyQzEwLjgzNTkgMTkuNDYzOCAxNS42NzE1IDI1LjczNDYgMjIuNDE0NSAyOEMxNS42NzE1IDMwLjI4MTggMTAuODM1OSAzNi41NTI3IDEwLjgzNTkgNDMuOTU2MlY1Mi4zOTRINy45NzQ2NUM3LjY0MDAxIDUyLjM5NCA3LjMyMjA5IDUyLjU3NDYgNy4xMzgwNCA1Mi44NTM2QzYuOTcwNzIgNTMuMTQ5MSA2Ljk3MDcyIDUzLjUxMDMgNy4xMzgwNCA1My43ODkzQzcuMzA1MzYgNTQuMDg0OCA3LjYyMzI3IDU0LjI2NTQgNy45NzQ2NSA1NC4yNDlINDguMDMxNUM0OC4zNjYyIDU0LjI0OSA0OC42ODQxIDU0LjA2ODQgNDguODY4MiA1My43ODkzQzQ5LjA1MjIgNTMuNTEwMyA0OS4wMzU1IDUzLjEzMjcgNDguODY4MiA1Mi44NTM2QzQ4LjcwMDggNTIuNTc0NiA0OC4zODI5IDUyLjM3NzYgNDguMDMxNSA1Mi4zOTRINDUuMTcwM1Y0My45NTYyQzQ1LjE3MDMgMzYuNTUyNyA0MC4zMzQ3IDMwLjI4MTggMzMuNjA4NCAyOEM0MC4zMzQ3IDI1LjcxODIgNDUuMTcwMyAxOS40NjM4IDQ1LjE3MDMgMTIuMDYwMlYzLjYyMjQ0SDQ4LjAzMTVDNDguMzgyOSAzLjYyMjQ0IDQ4LjcwMDggMy40NTgyOCA0OC44NjgyIDMuMTYyOEM0OS4wMzU1IDIuODY3MzEgNDkuMDM1NSAyLjUwNjE2IDQ4Ljg2ODIgMi4yMTA2OEM0OC43MDA4IDEuOTE1MTkgNDguMzY2MiAxLjczNDYyIDQ4LjAzMTUgMS43NTEwM0g3Ljk3NDY1Wk0xMi43NDMzIDMuNjIyNDRINDMuMjYyOVYxMi4wNjAyQzQzLjI2MjkgMjAuMzk5NSAzNi40Njk2IDI3LjA2NDMgMjguMDAzMSAyNy4wNjQzQzE5LjUzNjYgMjcuMDY0MyAxMi43NDMzIDIwLjM5OTUgMTIuNzQzMyAxMi4wNzY2VjMuNjIyNDRaTTI4LjAwMzEgMjguOTUyMUMzNi40Njk2IDI4Ljk1MjEgNDMuMjYyOSAzNS42MzM0IDQzLjI2MjkgNDMuOTcyNlY1Mi40MTA0SDEyLjc0MzNWNDMuOTcyNkMxMi43NDMzIDM1LjYzMzQgMTkuNTM2NiAyOC45NTIxIDI4LjAwMzEgMjguOTUyMVpcIiAvPlxyXG4gICAgPC9TdmdJY29uPlxyXG4gICk7XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy91aS1pY29ucy9zcmMvbGliL2hvdXJnbGFzcy50c3gifQ==

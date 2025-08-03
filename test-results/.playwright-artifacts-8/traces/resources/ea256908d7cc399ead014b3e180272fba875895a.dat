@@ -1,0 +1,15 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { atom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+export const termsAcceptedAtom = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\terms.ts/termsAcceptedAtom", atom(false));
+termsAcceptedAtom.debugLabel = "termsAcceptedAtom";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLFlBQVk7QUFLckIsYUFBQUMsb0JBQUFDLFdBQUFDLGVBQUFDLElBQUEsaUhBQWlDSixLQUFLLEtBQUssQ0FBQztBQUFDQyxrQkFBQUksYUFBQSIsIm5hbWVzIjpbImF0b20iLCJ0ZXJtc0FjY2VwdGVkQXRvbSIsImdsb2JhbFRoaXMiLCJqb3RhaUF0b21DYWNoZSIsImdldCIsImRlYnVnTGFiZWwiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsidGVybXMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgYXRvbSB9IGZyb20gJ2pvdGFpJztcclxuXHJcbi8qKlxyXG4gKiBUaGUgQ29udHJhY3QgVGVybXMgYXJlIGFjY2VwdGVkXHJcbiAqL1xyXG5leHBvcnQgY29uc3QgdGVybXNBY2NlcHRlZEF0b20gPSBhdG9tKGZhbHNlKTtcclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy9kYXRhLWFjY2Vzcy9zcmMvbGliL2F0b21zL3Rlcm1zLnRzIn0=

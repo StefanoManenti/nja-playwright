@@ -1,0 +1,57 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import {
+  billType$,
+  digitalBillMandatory$,
+  domiciliationMandatory$,
+  gasAtom,
+  OperativeMode,
+  operativeModeAtom,
+  operativeModeEnabled$,
+  paymentType$,
+  powerAtom,
+  powerRateAtom
+} from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/index.ts";
+import { Step, StepPriority } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/index.ts";
+import StepErrorBoundary from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx";
+class Options extends Step {
+  constructor() {
+    super(...arguments);
+    this.priority = new StepPriority(5);
+    this.skipIfDone = true;
+    this.lazy = () => import("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/supply/OptionsStep.tsx");
+    this.WrapperComponent = StepErrorBoundary;
+  }
+  toString() {
+    return "options";
+  }
+  isInFlux(get) {
+    return !(get(operativeModeEnabled$) && get(operativeModeAtom) === OperativeMode.CHANGE_OFFER);
+  }
+  async isAvailable(get) {
+    if (!get(powerAtom) && !get(gasAtom)) {
+      return false;
+    }
+    if (!get(powerAtom) && await get(domiciliationMandatory$) && await get(digitalBillMandatory$)) {
+      return false;
+    }
+    return true;
+  }
+  async toDo(get) {
+    return !!(!await get(billType$) || !await get(paymentType$) || get(powerAtom) && !get(powerRateAtom));
+  }
+  depends() {
+    return ["power", "gas"];
+  }
+  provides() {
+    return ["bill", "payment", "powerRate"];
+  }
+}
+export const options = new Options();
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBO0FBQUEsRUFDRUE7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQUM7QUFBQUEsT0FDSztBQUNQLFNBQVNDLE1BQU1DLG9CQUFvQjtBQUVuQyxPQUFPQyx1QkFBdUI7QUFLOUIsTUFBTUMsZ0JBQWdCSCxLQUFLO0FBQUEsRUFBM0I7QUFBQTtBQUNFSSxvQkFBVyxJQUFJSCxhQUFhLENBQUM7QUFDN0JJLHNCQUFhO0FBRWJDLGdCQUFPQSxNQUFNLE9BQU8sZUFBZTtBQUNuQ0MsNEJBQW1CTDtBQUFBQTtBQUFBQSxFQUVuQk0sV0FBVztBQUNULFdBQU87QUFBQSxFQUNUO0FBQUEsRUFFVUMsU0FBU0MsS0FBYTtBQUM5QixXQUFPLEVBQ0xBLElBQUlkLHFCQUFxQixLQUN6QmMsSUFBSWYsaUJBQWlCLE1BQU1ELGNBQWNpQjtBQUFBQSxFQUU3QztBQUFBLEVBRUEsTUFBZ0JDLFlBQVlGLEtBQWE7QUFDdkMsUUFBSSxDQUFDQSxJQUFJWixTQUFTLEtBQUssQ0FBQ1ksSUFBSWpCLE9BQU8sR0FBRztBQUNwQyxhQUFPO0FBQUEsSUFDVDtBQUdBLFFBQ0UsQ0FBQ2lCLElBQUlaLFNBQVMsS0FDYixNQUFNWSxJQUFJbEIsdUJBQXVCLEtBQ2pDLE1BQU1rQixJQUFJbkIscUJBQXFCLEdBQ2hDO0FBQ0EsYUFBTztBQUFBLElBQ1Q7QUFFQSxXQUFPO0FBQUEsRUFDVDtBQUFBLEVBRUEsTUFBZ0JzQixLQUFLSCxLQUFhO0FBQ2hDLFdBQU8sQ0FBQyxFQUNOLENBQUUsTUFBTUEsSUFBSXBCLFNBQVMsS0FDckIsQ0FBRSxNQUFNb0IsSUFBSWIsWUFBWSxLQUN2QmEsSUFBSVosU0FBUyxLQUFLLENBQUNZLElBQUlYLGFBQWE7QUFBQSxFQUV6QztBQUFBLEVBRUFlLFVBQVU7QUFDUixXQUFPLENBQUMsU0FBUyxLQUFLO0FBQUEsRUFDeEI7QUFBQSxFQUVBQyxXQUFXO0FBQ1QsV0FBTyxDQUFDLFFBQVEsV0FBVyxXQUFXO0FBQUEsRUFDeEM7QUFDRjtBQUVPLGFBQU1DLFVBQVUsSUFBSWIsUUFBUSIsIm5hbWVzIjpbImJpbGxUeXBlJCIsImRpZ2l0YWxCaWxsTWFuZGF0b3J5JCIsImRvbWljaWxpYXRpb25NYW5kYXRvcnkkIiwiZ2FzQXRvbSIsIk9wZXJhdGl2ZU1vZGUiLCJvcGVyYXRpdmVNb2RlQXRvbSIsIm9wZXJhdGl2ZU1vZGVFbmFibGVkJCIsInBheW1lbnRUeXBlJCIsInBvd2VyQXRvbSIsInBvd2VyUmF0ZUF0b20iLCJTdGVwIiwiU3RlcFByaW9yaXR5IiwiU3RlcEVycm9yQm91bmRhcnkiLCJPcHRpb25zIiwicHJpb3JpdHkiLCJza2lwSWZEb25lIiwibGF6eSIsIldyYXBwZXJDb21wb25lbnQiLCJ0b1N0cmluZyIsImlzSW5GbHV4IiwiZ2V0IiwiQ0hBTkdFX09GRkVSIiwiaXNBdmFpbGFibGUiLCJ0b0RvIiwiZGVwZW5kcyIsInByb3ZpZGVzIiwib3B0aW9ucyJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJvcHRpb25zLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge1xyXG4gIGJpbGxUeXBlJCxcclxuICBkaWdpdGFsQmlsbE1hbmRhdG9yeSQsXHJcbiAgZG9taWNpbGlhdGlvbk1hbmRhdG9yeSQsXHJcbiAgZ2FzQXRvbSxcclxuICBPcGVyYXRpdmVNb2RlLFxyXG4gIG9wZXJhdGl2ZU1vZGVBdG9tLFxyXG4gIG9wZXJhdGl2ZU1vZGVFbmFibGVkJCxcclxuICBwYXltZW50VHlwZSQsXHJcbiAgcG93ZXJBdG9tLFxyXG4gIHBvd2VyUmF0ZUF0b21cclxufSBmcm9tICdAbmFqLXdvL2RhdGEtYWNjZXNzJztcclxuaW1wb3J0IHsgU3RlcCwgU3RlcFByaW9yaXR5IH0gZnJvbSAnQG5hai13by9lbmdpbmUnO1xyXG5pbXBvcnQgeyBHZXR0ZXIgfSBmcm9tICdqb3RhaS92YW5pbGxhL3R5cGVVdGlscyc7XHJcbmltcG9ydCBTdGVwRXJyb3JCb3VuZGFyeSBmcm9tICcuLi9TdGVwRXJyb3JCb3VuZGFyeSc7XHJcblxyXG4vKipcclxuICogQGRlcHJlY2F0ZWQgbm9uIGwnaG8gY2FuY2VsbGF0bywgbm9uIHNpYSBjaGUgbWFpIHBvc3NhIHJpc2VydmlyZSBbMTQvMDIvMjAyNV1cclxuICovXHJcbmNsYXNzIE9wdGlvbnMgZXh0ZW5kcyBTdGVwIHtcclxuICBwcmlvcml0eSA9IG5ldyBTdGVwUHJpb3JpdHkoNSk7XHJcbiAgc2tpcElmRG9uZSA9IHRydWU7XHJcblxyXG4gIGxhenkgPSAoKSA9PiBpbXBvcnQoJy4vT3B0aW9uc1N0ZXAnKTtcclxuICBXcmFwcGVyQ29tcG9uZW50ID0gU3RlcEVycm9yQm91bmRhcnk7XHJcblxyXG4gIHRvU3RyaW5nKCkge1xyXG4gICAgcmV0dXJuICdvcHRpb25zJztcclxuICB9XHJcblxyXG4gIHByb3RlY3RlZCBpc0luRmx1eChnZXQ6IEdldHRlcikge1xyXG4gICAgcmV0dXJuICEoXHJcbiAgICAgIGdldChvcGVyYXRpdmVNb2RlRW5hYmxlZCQpICYmXHJcbiAgICAgIGdldChvcGVyYXRpdmVNb2RlQXRvbSkgPT09IE9wZXJhdGl2ZU1vZGUuQ0hBTkdFX09GRkVSXHJcbiAgICApO1xyXG4gIH1cclxuXHJcbiAgcHJvdGVjdGVkIGFzeW5jIGlzQXZhaWxhYmxlKGdldDogR2V0dGVyKSB7XHJcbiAgICBpZiAoIWdldChwb3dlckF0b20pICYmICFnZXQoZ2FzQXRvbSkpIHtcclxuICAgICAgcmV0dXJuIGZhbHNlO1xyXG4gICAgfVxyXG5cclxuICAgIC8vIHNlIHNvbG8gZ2FzIGUgbm9uIHNvbm8gZGlzcG9uaWJpbGkgYmlsbCBlIHBheW1lbnQgcXVlc3RvIHN0ZXAgbm9uIMOoIGRpc3BvbmliaWxlXHJcbiAgICBpZiAoXHJcbiAgICAgICFnZXQocG93ZXJBdG9tKSAmJlxyXG4gICAgICAoYXdhaXQgZ2V0KGRvbWljaWxpYXRpb25NYW5kYXRvcnkkKSkgJiZcclxuICAgICAgKGF3YWl0IGdldChkaWdpdGFsQmlsbE1hbmRhdG9yeSQpKVxyXG4gICAgKSB7XHJcbiAgICAgIHJldHVybiBmYWxzZTtcclxuICAgIH1cclxuXHJcbiAgICByZXR1cm4gdHJ1ZTtcclxuICB9XHJcblxyXG4gIHByb3RlY3RlZCBhc3luYyB0b0RvKGdldDogR2V0dGVyKSB7XHJcbiAgICByZXR1cm4gISEoXHJcbiAgICAgICEoYXdhaXQgZ2V0KGJpbGxUeXBlJCkpIHx8XHJcbiAgICAgICEoYXdhaXQgZ2V0KHBheW1lbnRUeXBlJCkpIHx8XHJcbiAgICAgIChnZXQocG93ZXJBdG9tKSAmJiAhZ2V0KHBvd2VyUmF0ZUF0b20pKVxyXG4gICAgKTtcclxuICB9XHJcblxyXG4gIGRlcGVuZHMoKSB7XHJcbiAgICByZXR1cm4gWydwb3dlcicsICdnYXMnXTtcclxuICB9XHJcblxyXG4gIHByb3ZpZGVzKCkge1xyXG4gICAgcmV0dXJuIFsnYmlsbCcsICdwYXltZW50JywgJ3Bvd2VyUmF0ZSddO1xyXG4gIH1cclxufVxyXG5cclxuZXhwb3J0IGNvbnN0IG9wdGlvbnMgPSBuZXcgT3B0aW9ucygpO1xyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL3N0ZXBzL3NyYy9saWIvc3VwcGx5L29wdGlvbnMudHN4In0=

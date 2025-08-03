@@ -1,0 +1,59 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/services/CollaudoIndicator.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/apps/naj/src/services/CollaudoIndicator.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { collaudo$, lastCollaudoSent$ } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/index.ts";
+import { useAtomValue } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+import classes from "/src/services/CollaudoIndicator.module.less";
+export function CollaudoIndicator() {
+  _s();
+  const collaudo = useAtomValue(collaudo$);
+  const lastCollaudoSent = useAtomValue(lastCollaudoSent$);
+  return collaudo || lastCollaudoSent ? /* @__PURE__ */ jsxDEV("div", { className: classes.CollaudoIndicator, children: collaudo && !lastCollaudoSent ? "Accensione modalità collaudo…" : !collaudo && lastCollaudoSent ? "Spegnimento modalità collaudo…" : "Modalità collaudo accesa" }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/apps/naj/src/services/CollaudoIndicator.tsx",
+    lineNumber: 10,
+    columnNumber: 3
+  }, this) : null;
+}
+_s(CollaudoIndicator, "88cDFOB+tidsjiYK/Ofp8t+ip8U=", false, function() {
+  return [useAtomValue, useAtomValue];
+});
+_c = CollaudoIndicator;
+var _c;
+$RefreshReg$(_c, "CollaudoIndicator");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/apps/naj/src/services/CollaudoIndicator.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBU0k7Ozs7O3FDQVRKO0FBQUEsT0FBU0EsaURBQW9DO0FBQUEsVUFBcUI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ2xFLFNBQVNDLG9CQUFvQjtBQUM3QixPQUFPQyxhQUFhO0FBRWIsZ0JBQVNDLG9CQUFvQjtBQUFBQyxLQUFBO0FBQ2xDLFFBQU1DLFdBQVdKLGFBQWFELFNBQVM7QUFDdkMsUUFBTU0sbUJBQW1CTCxhQUFhTSxpQkFBaUI7QUFFdkQsU0FBT0YsWUFBWUMsbUJBQ2pCLHVCQUFDLFNBQUksV0FBV0osUUFBUUMsbUJBQ3JCRSxzQkFBWSxDQUFDQyxtQkFDVixrQ0FDQSxDQUFDRCxZQUFZQyxtQkFDYixtQ0FDQSw4QkFMTjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBTUEsSUFDRTtBQUNOO0FBQUNGLEdBYmVELG1CQUFpQjtBQUFBLFVBQ2RGLGNBQ1FBLFlBQVk7QUFBQTtBQUFBTyxLQUZ2Qkw7QUFBaUIsSUFBQUs7QUFBQUMsYUFBQUQsSUFBQSIsIm5hbWVzIjpbImNvbGxhdWRvJCIsInVzZUF0b21WYWx1ZSIsImNsYXNzZXMiLCJDb2xsYXVkb0luZGljYXRvciIsIl9zIiwiY29sbGF1ZG8iLCJsYXN0Q29sbGF1ZG9TZW50IiwibGFzdENvbGxhdWRvU2VudCQiLCJfYyIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJDb2xsYXVkb0luZGljYXRvci50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgY29sbGF1ZG8kLCBsYXN0Q29sbGF1ZG9TZW50JCB9IGZyb20gJ0BuYWotd28vZGF0YS1hY2Nlc3MnO1xyXG5pbXBvcnQgeyB1c2VBdG9tVmFsdWUgfSBmcm9tICdqb3RhaSc7XHJcbmltcG9ydCBjbGFzc2VzIGZyb20gJy4vQ29sbGF1ZG9JbmRpY2F0b3IubW9kdWxlLmxlc3MnO1xyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIENvbGxhdWRvSW5kaWNhdG9yKCkge1xyXG4gIGNvbnN0IGNvbGxhdWRvID0gdXNlQXRvbVZhbHVlKGNvbGxhdWRvJCk7XHJcbiAgY29uc3QgbGFzdENvbGxhdWRvU2VudCA9IHVzZUF0b21WYWx1ZShsYXN0Q29sbGF1ZG9TZW50JCk7XHJcblxyXG4gIHJldHVybiBjb2xsYXVkbyB8fCBsYXN0Q29sbGF1ZG9TZW50ID8gKFxyXG4gICAgPGRpdiBjbGFzc05hbWU9e2NsYXNzZXMuQ29sbGF1ZG9JbmRpY2F0b3J9PlxyXG4gICAgICB7Y29sbGF1ZG8gJiYgIWxhc3RDb2xsYXVkb1NlbnRcclxuICAgICAgICA/ICdBY2NlbnNpb25lIG1vZGFsaXTDoCBjb2xsYXVkb+KApidcclxuICAgICAgICA6ICFjb2xsYXVkbyAmJiBsYXN0Q29sbGF1ZG9TZW50XHJcbiAgICAgICAgPyAnU3BlZ25pbWVudG8gbW9kYWxpdMOgIGNvbGxhdWRv4oCmJ1xyXG4gICAgICAgIDogJ01vZGFsaXTDoCBjb2xsYXVkbyBhY2Nlc2EnfVxyXG4gICAgPC9kaXY+XHJcbiAgKSA6IG51bGw7XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovYXBwcy9uYWovc3JjL3NlcnZpY2VzL0NvbGxhdWRvSW5kaWNhdG9yLnRzeCJ9

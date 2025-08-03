@@ -1,0 +1,24 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/errors/broadband.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/errors/change-offer.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/errors/coupon.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/errors/customer.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/errors/egon.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/errors/generic.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/errors/iban.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/errors/model-transfer.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/errors/otp.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/errors/pod.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/errors/podDueReti.tsx";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/errors/vulnerability.tsx";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLGNBQWM7QUFDZCxjQUFjO0FBQ2QsY0FBYztBQUNkLGNBQWM7QUFDZCxjQUFjO0FBQ2QsY0FBYztBQUNkLGNBQWM7QUFDZCxjQUFjO0FBQ2QsY0FBYztBQUNkLGNBQWM7QUFDZCxjQUFjO0FBQ2QsY0FBYyIsIm5hbWVzIjpbXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiaW5kZXgudHMiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0ICogZnJvbSAnLi9icm9hZGJhbmQnO1xyXG5leHBvcnQgKiBmcm9tICcuL2NoYW5nZS1vZmZlcic7XHJcbmV4cG9ydCAqIGZyb20gJy4vY291cG9uJztcclxuZXhwb3J0ICogZnJvbSAnLi9jdXN0b21lcic7XHJcbmV4cG9ydCAqIGZyb20gJy4vZWdvbic7XHJcbmV4cG9ydCAqIGZyb20gJy4vZ2VuZXJpYyc7XHJcbmV4cG9ydCAqIGZyb20gJy4vaWJhbic7XHJcbmV4cG9ydCAqIGZyb20gJy4vbW9kZWwtdHJhbnNmZXInO1xyXG5leHBvcnQgKiBmcm9tICcuL290cCc7XHJcbmV4cG9ydCAqIGZyb20gJy4vcG9kJztcclxuZXhwb3J0ICogZnJvbSAnLi9wb2REdWVSZXRpJztcclxuZXhwb3J0ICogZnJvbSAnLi92dWxuZXJhYmlsaXR5JztcclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy9kYXRhLWFjY2Vzcy9zcmMvbGliL2Vycm9ycy9pbmRleC50cyJ9

@@ -1,0 +1,89 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/field-errors/FieldErrorAlert.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/field-errors/FieldErrorAlert.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { AppAnchor, MarkdownParser } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/index.ts";
+import { Alert, LinkContent } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+export function FieldErrorAlert({
+  message,
+  type = "alert"
+}) {
+  if (!message) {
+    return null;
+  }
+  return /* @__PURE__ */ jsxDEV(Alert, { type, children: /* @__PURE__ */ jsxDEV(
+    MarkdownParser,
+    {
+      content: message,
+      renderLink: (key, s, href) => /* @__PURE__ */ jsxDEV(
+        LinkContent,
+        {
+          component: AppAnchor,
+          mode: "browser",
+          target: "_blank",
+          href,
+          underline: true,
+          children: s
+        },
+        key,
+        false,
+        {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/field-errors/FieldErrorAlert.tsx",
+          lineNumber: 24,
+          columnNumber: 9
+        },
+        this
+      )
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/field-errors/FieldErrorAlert.tsx",
+      lineNumber: 21,
+      columnNumber: 7
+    },
+    this
+  ) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/field-errors/FieldErrorAlert.tsx",
+    lineNumber: 20,
+    columnNumber: 5
+  }, this);
+}
+_c = FieldErrorAlert;
+var _c;
+$RefreshReg$(_c, "FieldErrorAlert");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/field-errors/FieldErrorAlert.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBdUJVOzs7OztnQkF2QlYsT0FBU0EsY0FBV0M7QUFBQUEsY0FBYywwQ0FBc0I7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBRXhELFNBQVNDLE9BQW1CQyxtQkFBbUI7QUFReEMsZ0JBQVNDLGdCQUFnQjtBQUFBLEVBQzlCQztBQUFBQSxFQUNBQyxPQUFPO0FBQ1EsR0FBd0I7QUFDdkMsTUFBSSxDQUFDRCxTQUFTO0FBQ1osV0FBTztBQUFBLEVBQ1Q7QUFFQSxTQUNFLHVCQUFDLFNBQU0sTUFDTDtBQUFBLElBQUM7QUFBQTtBQUFBLE1BQ0MsU0FBU0E7QUFBQUEsTUFDVCxZQUFZLENBQUNFLEtBQUtDLEdBQUdDLFNBQ25CO0FBQUEsUUFBQztBQUFBO0FBQUEsVUFFQyxXQUFXVDtBQUFBQSxVQUNYLE1BQU07QUFBQSxVQUNOLFFBQU87QUFBQSxVQUNQO0FBQUEsVUFDQSxXQUFTO0FBQUEsVUFFUlE7QUFBQUE7QUFBQUEsUUFQSUQ7QUFBQUEsUUFEUDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLE1BU0E7QUFBQTtBQUFBLElBWko7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLEVBYUksS0FkTjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBZ0JBO0FBRUo7QUFBQ0csS0EzQmVOO0FBQWUsSUFBQU07QUFBQUMsYUFBQUQsSUFBQSIsIm5hbWVzIjpbIkFwcEFuY2hvciIsIk1hcmtkb3duUGFyc2VyIiwiQWxlcnQiLCJMaW5rQ29udGVudCIsIkZpZWxkRXJyb3JBbGVydCIsIm1lc3NhZ2UiLCJ0eXBlIiwia2V5IiwicyIsImhyZWYiLCJfYyIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJGaWVsZEVycm9yQWxlcnQudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEFwcEFuY2hvciwgTWFya2Rvd25QYXJzZXIgfSBmcm9tICdAbmFqLXdvL3V0aWwnO1xyXG5pbXBvcnQgeyBSZWFjdEVsZW1lbnQgfSBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCB7IEFsZXJ0LCBBbGVydFByb3BzLCBMaW5rQ29udGVudCB9IGZyb20gJ0BuYWotd28vdWktYXRvbXMnO1xyXG5cclxuZXhwb3J0IGludGVyZmFjZSBGaWVsZEVycm9yUHJvcHMge1xyXG4gIC8qKiBPcHRpb25hbCBlcnJvciBtZXNzYWdlICovXHJcbiAgbWVzc2FnZT86IHN0cmluZztcclxuICB0eXBlPzogQWxlcnRQcm9wc1sndHlwZSddO1xyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gRmllbGRFcnJvckFsZXJ0KHtcclxuICBtZXNzYWdlLFxyXG4gIHR5cGUgPSAnYWxlcnQnLFxyXG59OiBGaWVsZEVycm9yUHJvcHMpOiBSZWFjdEVsZW1lbnQgfCBudWxsIHtcclxuICBpZiAoIW1lc3NhZ2UpIHtcclxuICAgIHJldHVybiBudWxsOyAvLyBSZW5kZXIgbm90aGluZyBpZiB0aGVyZeKAmXMgbm8gZXJyb3JcclxuICB9XHJcblxyXG4gIHJldHVybiAoXHJcbiAgICA8QWxlcnQgdHlwZT17dHlwZX0+XHJcbiAgICAgIDxNYXJrZG93blBhcnNlclxyXG4gICAgICAgIGNvbnRlbnQ9e21lc3NhZ2V9XHJcbiAgICAgICAgcmVuZGVyTGluaz17KGtleSwgcywgaHJlZikgPT4gKFxyXG4gICAgICAgICAgPExpbmtDb250ZW50XHJcbiAgICAgICAgICAgIGtleT17a2V5fVxyXG4gICAgICAgICAgICBjb21wb25lbnQ9e0FwcEFuY2hvcn1cclxuICAgICAgICAgICAgbW9kZT17J2Jyb3dzZXInfVxyXG4gICAgICAgICAgICB0YXJnZXQ9XCJfYmxhbmtcIlxyXG4gICAgICAgICAgICBocmVmPXtocmVmfVxyXG4gICAgICAgICAgICB1bmRlcmxpbmVcclxuICAgICAgICAgID5cclxuICAgICAgICAgICAge3N9XHJcbiAgICAgICAgICA8L0xpbmtDb250ZW50PlxyXG4gICAgICAgICl9XHJcbiAgICAgIC8+XHJcbiAgICA8L0FsZXJ0PlxyXG4gICk7XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy91aS1tb2xlY3VsZXMvc3JjL2xpYi9maWVsZC1lcnJvcnMvRmllbGRFcnJvckFsZXJ0LnRzeCJ9

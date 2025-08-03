@@ -1,0 +1,21 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { atom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+import { recapitiFooter$ } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/activations/index.ts";
+export const contactAlertAtom = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\step-helpers\\contactAlertAtom.ts/contactAlertAtom", atom(async (get) => {
+  const recapitiFooter = await get(recapitiFooter$);
+  if (recapitiFooter) {
+    return "Riceverai tramite e-mail e sms i **moduli necessari** e gli **aggiornamenti** relativi all'attivazione (es. eventuale appuntamento con il tecnico ed esito finale della richiesta)";
+  }
+}));
+contactAlertAtom.debugLabel = "contactAlertAtom";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLFlBQVk7QUFDckIsU0FBU0MsdUJBQXVCO0FBRWhDLGFBQUFDLG1CQUFBQyxXQUFBQyxlQUFBQyxJQUFBLHlJQUFnQ0wsS0FBSyxPQUFPSyxRQUFRO0FBQ2xELFFBQU1DLGlCQUFpQixNQUFNRCxJQUFJSixlQUFlO0FBQ2hELE1BQUlLLGdCQUFnQjtBQUNsQixXQUFPO0FBQUEsRUFDVDtBQUNGLENBQUMsQ0FBQztBQUFDSixpQkFBQUssYUFBQSIsIm5hbWVzIjpbImF0b20iLCJyZWNhcGl0aUZvb3RlciQiLCJjb250YWN0QWxlcnRBdG9tIiwiZ2xvYmFsVGhpcyIsImpvdGFpQXRvbUNhY2hlIiwiZ2V0IiwicmVjYXBpdGlGb290ZXIiLCJkZWJ1Z0xhYmVsIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbImNvbnRhY3RBbGVydEF0b20udHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgYXRvbSB9IGZyb20gJ2pvdGFpJztcclxuaW1wb3J0IHsgcmVjYXBpdGlGb290ZXIkIH0gZnJvbSAnLi4vYWN0aXZhdGlvbnMnO1xyXG5cclxuZXhwb3J0IGNvbnN0IGNvbnRhY3RBbGVydEF0b20gPSBhdG9tKGFzeW5jIChnZXQpID0+IHtcclxuICBjb25zdCByZWNhcGl0aUZvb3RlciA9IGF3YWl0IGdldChyZWNhcGl0aUZvb3RlciQpO1xyXG4gIGlmIChyZWNhcGl0aUZvb3Rlcikge1xyXG4gICAgcmV0dXJuIFwiUmljZXZlcmFpIHRyYW1pdGUgZS1tYWlsIGUgc21zIGkgKiptb2R1bGkgbmVjZXNzYXJpKiogZSBnbGkgKiphZ2dpb3JuYW1lbnRpKiogcmVsYXRpdmkgYWxsJ2F0dGl2YXppb25lIChlcy4gZXZlbnR1YWxlIGFwcHVudGFtZW50byBjb24gaWwgdGVjbmljbyBlZCBlc2l0byBmaW5hbGUgZGVsbGEgcmljaGllc3RhKVwiO1xyXG4gIH1cclxufSk7XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvZGF0YS1hY2Nlc3Mvc3JjL2xpYi9hdG9tcy9zdGVwLWhlbHBlcnMvY29udGFjdEFsZXJ0QXRvbS50cyJ9

@@ -1,0 +1,249 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/CouponUi.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/CouponUi.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$(), _s2 = $RefreshSig$(), _s3 = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { couponAtom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/index.ts";
+import { FormError, useFormErrors } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/index.ts";
+import { useTracking } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/index.ts";
+import { ModalWrapper } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+import { DeleteIcon } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/index.ts";
+import { DataElement } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/index.ts";
+import { atomAction, tryToClearError } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/index.ts";
+import { useAtomValue, useSetAtom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+import { useAtomCallback } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai_utils.js?v=0189a8d1";
+import __vite__cjsImport12_react from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react.js?v=0189a8d1"; const useCallback = __vite__cjsImport12_react["useCallback"]; const useId = __vite__cjsImport12_react["useId"];
+import {
+  Controller,
+  FormProvider,
+  useForm
+} from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react-hook-form.js?v=0189a8d1";
+import { CouponField } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/CouponField.tsx";
+import { ModalAutocertificazioneConvenzioni } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/ModalAutocertificazioneConvenzioni.tsx";
+const acceptCouponAtom = globalThis.jotaiAtomCache.get(
+  "C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\ui-organisms\\src\\lib\\cart\\coupon\\CouponUi.tsx/acceptCouponAtom",
+  atomAction((_get, set) => set(couponAtom, "ACCEPT"))
+);
+acceptCouponAtom.debugLabel = "acceptCouponAtom";
+const declineCouponAtom = globalThis.jotaiAtomCache.get(
+  "C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\ui-organisms\\src\\lib\\cart\\coupon\\CouponUi.tsx/declineCouponAtom",
+  atomAction((_get, set) => set(couponAtom, "DECLINE"))
+);
+declineCouponAtom.debugLabel = "declineCouponAtom";
+const deleteCouponAtom = globalThis.jotaiAtomCache.get(
+  "C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\ui-organisms\\src\\lib\\cart\\coupon\\CouponUi.tsx/deleteCouponAtom",
+  atomAction((_get, set) => set(couponAtom, "DELETE"))
+);
+deleteCouponAtom.debugLabel = "deleteCouponAtom";
+export default function CouponUi() {
+  _s();
+  const coupon = useAtomValue(couponAtom, { delay: 0 });
+  const acceptCoupon = useSetAtom(acceptCouponAtom);
+  const declineCoupon = useSetAtom(declineCouponAtom);
+  const deleteCoupon = useSetAtom(deleteCouponAtom);
+  const showModal = coupon?.showModal === "true" && !coupon.accepted;
+  return /* @__PURE__ */ jsxDEV(Fragment, { children: [
+    /* @__PURE__ */ jsxDEV(ModalWrapper, { children: showModal && /* @__PURE__ */ jsxDEV(
+      ModalAutocertificazioneConvenzioni,
+      {
+        onConfirm: acceptCoupon,
+        onClose: declineCoupon
+      },
+      1,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/CouponUi.tsx",
+        lineNumber: 47,
+        columnNumber: 9
+      },
+      this
+    ) }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/CouponUi.tsx",
+      lineNumber: 45,
+      columnNumber: 7
+    }, this),
+    coupon?.codiceCoupon ? /* @__PURE__ */ jsxDEV(
+      CouponAppliedElement,
+      {
+        onDelete: deleteCoupon,
+        description: coupon.codiceCoupon
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/CouponUi.tsx",
+        lineNumber: 56,
+        columnNumber: 7
+      },
+      this
+    ) : /* @__PURE__ */ jsxDEV(CouponForm, {}, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/CouponUi.tsx",
+      lineNumber: 61,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/CouponUi.tsx",
+    lineNumber: 44,
+    columnNumber: 5
+  }, this);
+}
+_s(CouponUi, "BkH8PpykRYMpcPRxdz0HIJCud/I=", false, function() {
+  return [useAtomValue, useSetAtom, useSetAtom, useSetAtom];
+});
+_c = CouponUi;
+function CouponAppliedElement(props) {
+  _s2();
+  const tracking = useTracking();
+  return /* @__PURE__ */ jsxDEV(
+    DataElement,
+    {
+      title: "Coupon applicato",
+      editing: true,
+      onEdit: () => {
+        tracking.push({
+          event: "cta_click",
+          cta_cliccata: "Elimina coupon"
+        });
+        props.onDelete();
+      },
+      icon: /* @__PURE__ */ jsxDEV(DeleteIcon, {}, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/CouponUi.tsx",
+        lineNumber: 85,
+        columnNumber: 13
+      }, this),
+      description: props.description
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/CouponUi.tsx",
+      lineNumber: 74,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_s2(CouponAppliedElement, "o1crP5p8SF42vfZfcqOI1MnatAs=", false, function() {
+  return [useTracking];
+});
+_c2 = CouponAppliedElement;
+const defaultValues = {
+  coupon: ""
+};
+function CouponForm() {
+  _s3();
+  const formId = useId();
+  const methods = useForm({
+    mode: "onChange",
+    defaultValues
+  });
+  const { control, handleSubmit, setError } = methods;
+  const setFormError = useFormErrors(setError);
+  const onSubmit = useAtomCallback(
+    useCallback(
+      async (get, set, { coupon }) => {
+        try {
+          await set(couponAtom, "VALIDATE", coupon);
+        } catch (e) {
+          set(tryToClearError, e);
+          setFormError("coupon", e);
+          return;
+        }
+      },
+      [setFormError]
+    )
+  );
+  return /* @__PURE__ */ jsxDEV(FormProvider, { ...methods, children: /* @__PURE__ */ jsxDEV("form", { id: formId, onSubmit: handleSubmit(onSubmit), children: [
+    /* @__PURE__ */ jsxDEV(
+      Controller,
+      {
+        control,
+        name: "coupon",
+        rules: {
+          required: true
+        },
+        render: ({ field, formState: { isSubmitting }, fieldState }) => /* @__PURE__ */ jsxDEV(
+          CouponField,
+          {
+            ...field,
+            loading: isSubmitting,
+            error: !!fieldState.error,
+            helperText: fieldState.error?.message || "Lascia il campo vuoto se non hai un codice"
+          },
+          void 0,
+          false,
+          {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/CouponUi.tsx",
+            lineNumber: 131,
+            columnNumber: 11
+          },
+          this
+        )
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/CouponUi.tsx",
+        lineNumber: 124,
+        columnNumber: 9
+      },
+      this
+    ),
+    /* @__PURE__ */ jsxDEV(FormError, { name: "coupon" }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/CouponUi.tsx",
+      lineNumber: 142,
+      columnNumber: 9
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/CouponUi.tsx",
+    lineNumber: 123,
+    columnNumber: 7
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/CouponUi.tsx",
+    lineNumber: 122,
+    columnNumber: 5
+  }, this);
+}
+_s3(CouponForm, "3Ypt4B0ATFXXO889feKFTmaQO6k=", false, function() {
+  return [useId, useForm, useFormErrors, useAtomCallback];
+});
+_c3 = CouponForm;
+var _c, _c2, _c3;
+$RefreshReg$(_c, "CouponUi");
+$RefreshReg$(_c2, "CouponAppliedElement");
+$RefreshReg$(_c3, "CouponForm");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/coupon/CouponUi.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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WUFDQyxHQUFJSDtBQUFBQSxZQUNKLFNBQVNFO0FBQUFBLFlBQ1QsT0FBTyxDQUFDLENBQUNDLFdBQVdDO0FBQUFBLFlBQ3BCLFlBQ0VELFdBQVdDLE9BQU9DLFdBQ2xCO0FBQUE7QUFBQSxVQU5KO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxRQU9HO0FBQUE7QUFBQSxNQWRQO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxJQWdCSTtBQUFBLElBRUosdUJBQUMsYUFBVSxNQUFLLFlBQWhCO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBd0I7QUFBQSxPQW5CMUI7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQW9CQSxLQXJCRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBc0JBO0FBRUo7QUFBQ2hCLElBbERRRCxZQUFVO0FBQUEsVUFDRnJDLE9BRUNHLFNBS0tkLGVBRW1CUyxlQUFlO0FBQUE7QUFBQXlELE1BVmhEbEI7QUFBVSxJQUFBWixJQUFBVSxLQUFBb0I7QUFBQUMsYUFBQS9CLElBQUE7QUFBQStCLGFBQUFyQixLQUFBO0FBQUFxQixhQUFBRCxLQUFBIiwibmFtZXMiOlsiY291cG9uQXRvbSIsIkZvcm1FcnJvciIsInVzZUZvcm1FcnJvcnMiLCJ1c2VUcmFja2luZyIsIk1vZGFsV3JhcHBlciIsIkRlbGV0ZUljb24iLCJEYXRhRWxlbWVudCIsImF0b21BY3Rpb24iLCJ0cnlUb0NsZWFyRXJyb3IiLCJ1c2VBdG9tVmFsdWUiLCJ1c2VTZXRBdG9tIiwidXNlQXRvbUNhbGxiYWNrIiwidXNlQ2FsbGJhY2siLCJ1c2VJZCIsIkNvbnRyb2xsZXIiLCJGb3JtUHJvdmlkZXIiLCJ1c2VGb3JtIiwiQ291cG9uRmllbGQiLCJNb2RhbEF1dG9jZXJ0aWZpY2F6aW9uZUNvbnZlbnppb25pIiwiYWNjZXB0Q291cG9uQXRvbSIsImdsb2JhbFRoaXMiLCJqb3RhaUF0b21DYWNoZSIsImdldCIsIl9nZXQiLCJzZXQiLCJkZWJ1Z0xhYmVsIiwiZGVjbGluZUNvdXBvbkF0b20iLCJkZWxldGVDb3Vwb25BdG9tIiwiQ291cG9uVWkiLCJfcyIsImNvdXBvbiIsImRlbGF5IiwiYWNjZXB0Q291cG9uIiwiZGVjbGluZUNvdXBvbiIsImRlbGV0ZUNvdXBvbiIsInNob3dNb2RhbCIsImFjY2VwdGVkIiwiY29kaWNlQ291cG9uIiwiX2MiLCJDb3Vwb25BcHBsaWVkRWxlbWVudCIsInByb3BzIiwiX3MyIiwidHJhY2tpbmciLCJwdXNoIiwiZXZlbnQiLCJjdGFfY2xpY2NhdGEiLCJvbkRlbGV0ZSIsImRlc2NyaXB0aW9uIiwiX2MyIiwiZGVmYXVsdFZhbHVlcyIsIkNvdXBvbkZvcm0iLCJfczMiLCJmb3JtSWQiLCJtZXRob2RzIiwibW9kZSIsImNvbnRyb2wiLCJoYW5kbGVTdWJtaXQiLCJzZXRFcnJvciIsInNldEZvcm1FcnJvciIsIm9uU3VibWl0IiwiZSIsInJlcXVpcmVkIiwiZmllbGQiLCJmb3JtU3RhdGUiLCJpc1N1Ym1pdHRpbmciLCJmaWVsZFN0YXRlIiwiZXJyb3IiLCJtZXNzYWdlIiwiX2MzIiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIkNvdXBvblVpLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBjb3Vwb25BdG9tIH0gZnJvbSAnQG5hai13by9kYXRhLWFjY2Vzcyc7XHJcbmltcG9ydCB7IEZvcm1FcnJvciwgdXNlRm9ybUVycm9ycyB9IGZyb20gJ0BuYWotd28vZm9ybS1lcnJvcnMnO1xyXG5pbXBvcnQgeyB1c2VUcmFja2luZyB9IGZyb20gJ0BuYWotd28vdHJhY2tpbmctcmVhY3QnO1xyXG5pbXBvcnQgeyBNb2RhbFdyYXBwZXIgfSBmcm9tICdAbmFqLXdvL3VpLWF0b21zJztcclxuaW1wb3J0IHsgRGVsZXRlSWNvbiB9IGZyb20gJ0BuYWotd28vdWktaWNvbnMnO1xyXG5pbXBvcnQgeyBEYXRhRWxlbWVudCB9IGZyb20gJ0BuYWotd28vdWktbW9sZWN1bGVzJztcclxuaW1wb3J0IHsgYXRvbUFjdGlvbiwgdHJ5VG9DbGVhckVycm9yIH0gZnJvbSAnQG5hai13by91dGlsJztcclxuaW1wb3J0IHsgdXNlQXRvbVZhbHVlLCB1c2VTZXRBdG9tIH0gZnJvbSAnam90YWknO1xyXG5pbXBvcnQgeyB1c2VBdG9tQ2FsbGJhY2sgfSBmcm9tICdqb3RhaS91dGlscyc7XHJcbmltcG9ydCB7IHVzZUNhbGxiYWNrLCB1c2VJZCB9IGZyb20gJ3JlYWN0JztcclxuaW1wb3J0IHtcclxuICBDb250cm9sbGVyLFxyXG4gIEZvcm1Qcm92aWRlcixcclxuICBTdWJtaXRIYW5kbGVyLFxyXG4gIHVzZUZvcm0sXHJcbn0gZnJvbSAncmVhY3QtaG9vay1mb3JtJztcclxuaW1wb3J0IHsgQ291cG9uRmllbGQgfSBmcm9tICcuL0NvdXBvbkZpZWxkJztcclxuaW1wb3J0IHsgTW9kYWxBdXRvY2VydGlmaWNhemlvbmVDb252ZW56aW9uaSB9IGZyb20gJy4vTW9kYWxBdXRvY2VydGlmaWNhemlvbmVDb252ZW56aW9uaSc7XHJcblxyXG5jb25zdCBhY2NlcHRDb3Vwb25BdG9tID0gYXRvbUFjdGlvbigoX2dldCwgc2V0KSA9PiBzZXQoY291cG9uQXRvbSwgJ0FDQ0VQVCcpKTtcclxuY29uc3QgZGVjbGluZUNvdXBvbkF0b20gPSBhdG9tQWN0aW9uKChfZ2V0LCBzZXQpID0+IHNldChjb3Vwb25BdG9tLCAnREVDTElORScpKTtcclxuY29uc3QgZGVsZXRlQ291cG9uQXRvbSA9IGF0b21BY3Rpb24oKF9nZXQsIHNldCkgPT4gc2V0KGNvdXBvbkF0b20sICdERUxFVEUnKSk7XHJcblxyXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBDb3Vwb25VaSgpIHtcclxuICBjb25zdCBjb3Vwb24gPSB1c2VBdG9tVmFsdWUoY291cG9uQXRvbSwgeyBkZWxheTogMCB9KTtcclxuXHJcbiAgLy8gVE9ETyBjYXRjaCBlcnJvcnNcclxuICBjb25zdCBhY2NlcHRDb3Vwb24gPSB1c2VTZXRBdG9tKGFjY2VwdENvdXBvbkF0b20pO1xyXG4gIGNvbnN0IGRlY2xpbmVDb3Vwb24gPSB1c2VTZXRBdG9tKGRlY2xpbmVDb3Vwb25BdG9tKTtcclxuICBjb25zdCBkZWxldGVDb3Vwb24gPSB1c2VTZXRBdG9tKGRlbGV0ZUNvdXBvbkF0b20pO1xyXG5cclxuICBjb25zdCBzaG93TW9kYWwgPSBjb3Vwb24/LnNob3dNb2RhbCA9PT0gJ3RydWUnICYmICFjb3Vwb24uYWNjZXB0ZWQ7XHJcbiAgLyppZiAoRVJST1IpIHtcclxuICAgIHJldHVybiAoXHJcbiAgICAgIDxBbGVydCB0eXBlPXsnYWxlcnQnfT5cclxuICAgICAgICBDaSBkaXNwaWFjZSwgYWwgbW9tZW50byBub24gw6ggcG9zc2liaWxlIGluc2VyaXJlIHVuIGNvZGljZSBwcm9tb3ppb25hbGUuXHJcbiAgICAgICAgPGJyIC8+XHJcbiAgICAgICAgPGI+Umlwcm92YSBwacO5IHRhcmRpPC9iPlxyXG4gICAgICA8L0FsZXJ0PlxyXG4gICAgKTtcclxuICB9Ki9cclxuXHJcbiAgcmV0dXJuIChcclxuICAgIDw+XHJcbiAgICAgIDxNb2RhbFdyYXBwZXI+XHJcbiAgICAgICAge3Nob3dNb2RhbCAmJiAoXHJcbiAgICAgICAgICA8TW9kYWxBdXRvY2VydGlmaWNhemlvbmVDb252ZW56aW9uaVxyXG4gICAgICAgICAgICBrZXk9ezF9XHJcbiAgICAgICAgICAgIG9uQ29uZmlybT17YWNjZXB0Q291cG9ufVxyXG4gICAgICAgICAgICBvbkNsb3NlPXtkZWNsaW5lQ291cG9ufVxyXG4gICAgICAgICAgLz5cclxuICAgICAgICApfVxyXG4gICAgICA8L01vZGFsV3JhcHBlcj5cclxuXHJcbiAgICAgIHtjb3Vwb24/LmNvZGljZUNvdXBvbiA/IChcclxuICAgICAgICA8Q291cG9uQXBwbGllZEVsZW1lbnRcclxuICAgICAgICAgIG9uRGVsZXRlPXtkZWxldGVDb3Vwb259XHJcbiAgICAgICAgICBkZXNjcmlwdGlvbj17Y291cG9uLmNvZGljZUNvdXBvbn1cclxuICAgICAgICAvPlxyXG4gICAgICApIDogKFxyXG4gICAgICAgIDxDb3Vwb25Gb3JtIC8+XHJcbiAgICAgICl9XHJcbiAgICA8Lz5cclxuICApO1xyXG59XHJcblxyXG5mdW5jdGlvbiBDb3Vwb25BcHBsaWVkRWxlbWVudChwcm9wczoge1xyXG4gIG9uRGVsZXRlOiAoKSA9PiB2b2lkO1xyXG4gIGRlc2NyaXB0aW9uOiBzdHJpbmc7XHJcbn0pIHtcclxuICBjb25zdCB0cmFja2luZyA9IHVzZVRyYWNraW5nKCk7XHJcblxyXG4gIHJldHVybiAoXHJcbiAgICA8RGF0YUVsZW1lbnRcclxuICAgICAgdGl0bGU9XCJDb3Vwb24gYXBwbGljYXRvXCJcclxuICAgICAgZWRpdGluZ1xyXG4gICAgICBvbkVkaXQ9eygpID0+IHtcclxuICAgICAgICB0cmFja2luZy5wdXNoKHtcclxuICAgICAgICAgIGV2ZW50OiAnY3RhX2NsaWNrJyxcclxuICAgICAgICAgIGN0YV9jbGljY2F0YTogJ0VsaW1pbmEgY291cG9uJyxcclxuICAgICAgICB9KTtcclxuXHJcbiAgICAgICAgcHJvcHMub25EZWxldGUoKTtcclxuICAgICAgfX1cclxuICAgICAgaWNvbj17PERlbGV0ZUljb24gLz59XHJcbiAgICAgIGRlc2NyaXB0aW9uPXtwcm9wcy5kZXNjcmlwdGlvbn1cclxuICAgIC8+XHJcbiAgKTtcclxufVxyXG5cclxuY29uc3QgZGVmYXVsdFZhbHVlcyA9IHtcclxuICBjb3Vwb246ICcnLFxyXG59O1xyXG50eXBlIElucHV0cyA9IHR5cGVvZiBkZWZhdWx0VmFsdWVzO1xyXG5cclxuZnVuY3Rpb24gQ291cG9uRm9ybSgpIHtcclxuICBjb25zdCBmb3JtSWQgPSB1c2VJZCgpO1xyXG5cclxuICBjb25zdCBtZXRob2RzID0gdXNlRm9ybSh7XHJcbiAgICBtb2RlOiAnb25DaGFuZ2UnLFxyXG4gICAgZGVmYXVsdFZhbHVlczogZGVmYXVsdFZhbHVlcyxcclxuICB9KTtcclxuICBjb25zdCB7IGNvbnRyb2wsIGhhbmRsZVN1Ym1pdCwgc2V0RXJyb3IgfSA9IG1ldGhvZHM7XHJcbiAgY29uc3Qgc2V0Rm9ybUVycm9yID0gdXNlRm9ybUVycm9ycyhzZXRFcnJvcik7XHJcblxyXG4gIGNvbnN0IG9uU3VibWl0OiBTdWJtaXRIYW5kbGVyPElucHV0cz4gPSB1c2VBdG9tQ2FsbGJhY2soXHJcbiAgICB1c2VDYWxsYmFjayhcclxuICAgICAgYXN5bmMgKGdldCwgc2V0LCB7IGNvdXBvbiB9KSA9PiB7XHJcbiAgICAgICAgdHJ5IHtcclxuICAgICAgICAgIGF3YWl0IHNldChjb3Vwb25BdG9tLCAnVkFMSURBVEUnLCBjb3Vwb24pO1xyXG4gICAgICAgIH0gY2F0Y2ggKGUpIHtcclxuICAgICAgICAgIHNldCh0cnlUb0NsZWFyRXJyb3IsIGUpO1xyXG4gICAgICAgICAgc2V0Rm9ybUVycm9yKCdjb3Vwb24nLCBlKTtcclxuICAgICAgICAgIHJldHVybjtcclxuICAgICAgICB9XHJcbiAgICAgIH0sXHJcbiAgICAgIFtzZXRGb3JtRXJyb3JdXHJcbiAgICApXHJcbiAgKTtcclxuXHJcbiAgcmV0dXJuIChcclxuICAgIDxGb3JtUHJvdmlkZXIgey4uLm1ldGhvZHN9PlxyXG4gICAgICA8Zm9ybSBpZD17Zm9ybUlkfSBvblN1Ym1pdD17aGFuZGxlU3VibWl0KG9uU3VibWl0KX0+XHJcbiAgICAgICAgPENvbnRyb2xsZXJcclxuICAgICAgICAgIGNvbnRyb2w9e2NvbnRyb2x9XHJcbiAgICAgICAgICBuYW1lPVwiY291cG9uXCJcclxuICAgICAgICAgIHJ1bGVzPXt7XHJcbiAgICAgICAgICAgIHJlcXVpcmVkOiB0cnVlLFxyXG4gICAgICAgICAgfX1cclxuICAgICAgICAgIHJlbmRlcj17KHsgZmllbGQsIGZvcm1TdGF0ZTogeyBpc1N1Ym1pdHRpbmcgfSwgZmllbGRTdGF0ZSB9KSA9PiAoXHJcbiAgICAgICAgICAgIDxDb3Vwb25GaWVsZFxyXG4gICAgICAgICAgICAgIHsuLi5maWVsZH1cclxuICAgICAgICAgICAgICBsb2FkaW5nPXtpc1N1Ym1pdHRpbmd9XHJcbiAgICAgICAgICAgICAgZXJyb3I9eyEhZmllbGRTdGF0ZS5lcnJvcn1cclxuICAgICAgICAgICAgICBoZWxwZXJUZXh0PXtcclxuICAgICAgICAgICAgICAgIGZpZWxkU3RhdGUuZXJyb3I/Lm1lc3NhZ2UgfHxcclxuICAgICAgICAgICAgICAgICdMYXNjaWEgaWwgY2FtcG8gdnVvdG8gc2Ugbm9uIGhhaSB1biBjb2RpY2UnXHJcbiAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAvPlxyXG4gICAgICAgICAgKX1cclxuICAgICAgICAvPlxyXG4gICAgICAgIDxGb3JtRXJyb3IgbmFtZT1cImNvdXBvblwiIC8+XHJcbiAgICAgIDwvZm9ybT5cclxuICAgIDwvRm9ybVByb3ZpZGVyPlxyXG4gICk7XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy91aS1vcmdhbmlzbXMvc3JjL2xpYi9jYXJ0L2NvdXBvbi9Db3Vwb25VaS50c3gifQ==

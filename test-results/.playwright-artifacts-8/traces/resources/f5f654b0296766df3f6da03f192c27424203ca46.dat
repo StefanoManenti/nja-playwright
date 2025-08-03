@@ -1,0 +1,174 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/broadband.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/broadband.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { Alert, LinkContent, Modal, ModalErrorContent } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+import { AlertIcon } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/index.ts";
+import { nop } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/index.ts";
+export const BroadbandNotCoveredError = {
+  alert: function BroadbandNotCoveredErrorAlert() {
+    return /* @__PURE__ */ jsxDEV(Alert, { type: "alert", children: "Ci dispiace, il tuo indirizzo non è ancora coperto" }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/broadband.tsx",
+      lineNumber: 8,
+      columnNumber: 7
+    }, this);
+  }
+};
+export const BroadbandCoveredSoonError = {
+  alert: function BroadbandCoveredSoonErrorAlert() {
+    return /* @__PURE__ */ jsxDEV(Alert, { type: "alert", children: [
+      /* @__PURE__ */ jsxDEV("b", { children: "Ci dispiace, il tuo indirizzo non è ancora coperto" }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/broadband.tsx",
+        lineNumber: 19,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/broadband.tsx",
+        lineNumber: 20,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV(
+        LinkContent,
+        {
+          underline: true,
+          component: "button",
+          type: "button",
+          onClick: nop,
+          children: "Lascia i tuoi dati"
+        },
+        void 0,
+        false,
+        {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/broadband.tsx",
+          lineNumber: 21,
+          columnNumber: 9
+        },
+        this
+      ),
+      " ",
+      "per sapere quando la Fibra di Plenitude arriverà a casa tua."
+    ] }, void 0, true, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/broadband.tsx",
+      lineNumber: 18,
+      columnNumber: 7
+    }, this);
+  }
+};
+export const BroadbandMigrationCodeNotValidError = {
+  alert: function BroadbandMigrationCodeNotValidErrorAlert() {
+    return /* @__PURE__ */ jsxDEV(Alert, { type: "alert", children: [
+      /* @__PURE__ */ jsxDEV("b", { children: "Attenzione!" }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/broadband.tsx",
+        lineNumber: 39,
+        columnNumber: 9
+      }, this),
+      " Codice migrazione non valido, riprova."
+    ] }, void 0, true, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/broadband.tsx",
+      lineNumber: 38,
+      columnNumber: 7
+    }, this);
+  }
+};
+export const BroadbandMigrationCodeAlreadyRegisteredError = {
+  alert: function BroadbandMigrationCodeAlreadyRegisteredErrorAlert() {
+    return /* @__PURE__ */ jsxDEV(Alert, { type: "alert", children: [
+      /* @__PURE__ */ jsxDEV("b", { children: "Attenzione!" }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/broadband.tsx",
+        lineNumber: 49,
+        columnNumber: 9
+      }, this),
+      " Il codice di migrazione risulta già registrato, quindi non è possibile procedere con l’attivazione dell’offerta."
+    ] }, void 0, true, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/broadband.tsx",
+      lineNumber: 48,
+      columnNumber: 7
+    }, this);
+  },
+  modal: function BroadbandMigrationCodeAlreadyRegisteredErrorModal(props) {
+    return /* @__PURE__ */ jsxDEV(
+      ModalErrorBroadbandMigrationCodeAlreadyRegistered,
+      {
+        onClose: props.onClose
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/broadband.tsx",
+        lineNumber: 58,
+        columnNumber: 7
+      },
+      this
+    );
+  }
+};
+function ModalErrorBroadbandMigrationCodeAlreadyRegistered(props) {
+  return /* @__PURE__ */ jsxDEV(Modal, { children: /* @__PURE__ */ jsxDEV(
+    ModalErrorContent,
+    {
+      icon: /* @__PURE__ */ jsxDEV(AlertIcon, {}, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/broadband.tsx",
+        lineNumber: 71,
+        columnNumber: 15
+      }, this),
+      title: "Attenzione",
+      text: /* @__PURE__ */ jsxDEV(Fragment, { children: "Il codice di migrazione risulta già registrato, quindi non è possibile procedere con l’attivazione dell’offerta." }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/broadband.tsx",
+        lineNumber: 74,
+        columnNumber: 9
+      }, this),
+      cta: "Esci",
+      onClose: props.onClose
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/broadband.tsx",
+      lineNumber: 70,
+      columnNumber: 7
+    },
+    this
+  ) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/broadband.tsx",
+    lineNumber: 69,
+    columnNumber: 5
+  }, this);
+}
+_c = ModalErrorBroadbandMigrationCodeAlreadyRegistered;
+var _c;
+$RefreshReg$(_c, "ModalErrorBroadbandMigrationCodeAlreadyRegistered");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/services-errors/broadband.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBT00sU0FrRUksVUFsRUo7Ozs7O2dCQVBOLE9BQVNBLGNBQU9DO0FBQVcsTUFBRUMsUUFBT0MsMENBQTJDO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUMvRSxTQUFTQyxpQkFBaUI7QUFDMUIsU0FBU0MsV0FBVztBQUViLGFBQU1DLDJCQUEyQjtBQUFBLEVBQ3RDQyxPQUFPLFNBQVNDLGdDQUFnQztBQUM5QyxXQUNFLHVCQUFDLFNBQU0sTUFBSyxTQUFRLGtFQUFwQjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBRUE7QUFBQSxFQUVKO0FBQ0Y7QUFFTyxhQUFNQyw0QkFBNEI7QUFBQSxFQUN2Q0YsT0FBTyxTQUFTRyxpQ0FBaUM7QUFDL0MsV0FDRSx1QkFBQyxTQUFNLE1BQUssU0FDVjtBQUFBLDZCQUFDLE9BQUUsa0VBQUg7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUFxRDtBQUFBLE1BQ3JELHVCQUFDLFVBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUFHO0FBQUEsTUFDSDtBQUFBLFFBQUM7QUFBQTtBQUFBLFVBQ0M7QUFBQSxVQUNBLFdBQVU7QUFBQSxVQUNWLE1BQUs7QUFBQSxVQUNMLFNBQVNMO0FBQUFBLFVBQUk7QUFBQTtBQUFBLFFBSmY7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLE1BT0E7QUFBQSxNQUFlO0FBQUEsTUFBSTtBQUFBLFNBVnJCO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FZQTtBQUFBLEVBRUo7QUFDRjtBQUVPLGFBQU1NLHNDQUFzQztBQUFBLEVBQ2pESixPQUFPLFNBQVNLLDJDQUEyQztBQUN6RCxXQUNFLHVCQUFDLFNBQU0sTUFBSyxTQUNWO0FBQUEsNkJBQUMsT0FBRSwyQkFBSDtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQWM7QUFBQSxNQUFJO0FBQUEsU0FEcEI7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUVBO0FBQUEsRUFFSjtBQUNGO0FBRU8sYUFBTUMsK0NBQStDO0FBQUEsRUFDMUROLE9BQU8sU0FBU08sb0RBQW9EO0FBQ2xFLFdBQ0UsdUJBQUMsU0FBTSxNQUFLLFNBQ1Y7QUFBQSw2QkFBQyxPQUFFLDJCQUFIO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFBYztBQUFBLE1BQUk7QUFBQSxTQURwQjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBR0E7QUFBQSxFQUVKO0FBQUEsRUFDQUMsT0FBTyxTQUFTQyxrREFBa0RDLE9BRS9EO0FBQ0QsV0FDRTtBQUFBLE1BQUM7QUFBQTtBQUFBLFFBQ0MsU0FBU0EsTUFBTUM7QUFBQUE7QUFBQUEsTUFEakI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLElBQ3lCO0FBQUEsRUFHN0I7QUFDRjtBQUVBLFNBQVNDLGtEQUFrREYsT0FFeEQ7QUFDRCxTQUNFLHVCQUFDLFNBQ0M7QUFBQSxJQUFDO0FBQUE7QUFBQSxNQUNDLE1BQU0sdUJBQUMsZUFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQVU7QUFBQSxNQUNoQixPQUFPO0FBQUEsTUFDUCxNQUNFLG1DQUFFLGdJQUFGO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFHQTtBQUFBLE1BRUYsS0FBSztBQUFBLE1BQ0wsU0FBU0EsTUFBTUM7QUFBQUE7QUFBQUEsSUFWakI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLEVBVXlCLEtBWDNCO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FhQTtBQUVKO0FBQUNFLEtBbkJRRDtBQUFpRCxJQUFBQztBQUFBQyxhQUFBRCxJQUFBIiwibmFtZXMiOlsiQWxlcnQiLCJMaW5rQ29udGVudCIsIk1vZGFsIiwiTW9kYWxFcnJvckNvbnRlbnQiLCJBbGVydEljb24iLCJub3AiLCJCcm9hZGJhbmROb3RDb3ZlcmVkRXJyb3IiLCJhbGVydCIsIkJyb2FkYmFuZE5vdENvdmVyZWRFcnJvckFsZXJ0IiwiQnJvYWRiYW5kQ292ZXJlZFNvb25FcnJvciIsIkJyb2FkYmFuZENvdmVyZWRTb29uRXJyb3JBbGVydCIsIkJyb2FkYmFuZE1pZ3JhdGlvbkNvZGVOb3RWYWxpZEVycm9yIiwiQnJvYWRiYW5kTWlncmF0aW9uQ29kZU5vdFZhbGlkRXJyb3JBbGVydCIsIkJyb2FkYmFuZE1pZ3JhdGlvbkNvZGVBbHJlYWR5UmVnaXN0ZXJlZEVycm9yIiwiQnJvYWRiYW5kTWlncmF0aW9uQ29kZUFscmVhZHlSZWdpc3RlcmVkRXJyb3JBbGVydCIsIm1vZGFsIiwiQnJvYWRiYW5kTWlncmF0aW9uQ29kZUFscmVhZHlSZWdpc3RlcmVkRXJyb3JNb2RhbCIsInByb3BzIiwib25DbG9zZSIsIk1vZGFsRXJyb3JCcm9hZGJhbmRNaWdyYXRpb25Db2RlQWxyZWFkeVJlZ2lzdGVyZWQiLCJfYyIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJicm9hZGJhbmQudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEFsZXJ0LCBMaW5rQ29udGVudCwgTW9kYWwsIE1vZGFsRXJyb3JDb250ZW50IH0gZnJvbSAnQG5hai13by91aS1hdG9tcyc7XHJcbmltcG9ydCB7IEFsZXJ0SWNvbiB9IGZyb20gJ0BuYWotd28vdWktaWNvbnMnO1xyXG5pbXBvcnQgeyBub3AgfSBmcm9tICdAbmFqLXdvL3V0aWwnO1xyXG5cclxuZXhwb3J0IGNvbnN0IEJyb2FkYmFuZE5vdENvdmVyZWRFcnJvciA9IHtcclxuICBhbGVydDogZnVuY3Rpb24gQnJvYWRiYW5kTm90Q292ZXJlZEVycm9yQWxlcnQoKSB7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICA8QWxlcnQgdHlwZT1cImFsZXJ0XCI+XHJcbiAgICAgICAgQ2kgZGlzcGlhY2UsIGlsIHR1byBpbmRpcml6em8gbm9uIMOoIGFuY29yYSBjb3BlcnRvXHJcbiAgICAgIDwvQWxlcnQ+XHJcbiAgICApO1xyXG4gIH0sXHJcbn07XHJcblxyXG5leHBvcnQgY29uc3QgQnJvYWRiYW5kQ292ZXJlZFNvb25FcnJvciA9IHtcclxuICBhbGVydDogZnVuY3Rpb24gQnJvYWRiYW5kQ292ZXJlZFNvb25FcnJvckFsZXJ0KCkge1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgPEFsZXJ0IHR5cGU9XCJhbGVydFwiPlxyXG4gICAgICAgIDxiPkNpIGRpc3BpYWNlLCBpbCB0dW8gaW5kaXJpenpvIG5vbiDDqCBhbmNvcmEgY29wZXJ0bzwvYj5cclxuICAgICAgICA8YnIgLz5cclxuICAgICAgICA8TGlua0NvbnRlbnQ8J2J1dHRvbic+XHJcbiAgICAgICAgICB1bmRlcmxpbmVcclxuICAgICAgICAgIGNvbXBvbmVudD1cImJ1dHRvblwiXHJcbiAgICAgICAgICB0eXBlPVwiYnV0dG9uXCJcclxuICAgICAgICAgIG9uQ2xpY2s9e25vcH1cclxuICAgICAgICA+XHJcbiAgICAgICAgICBMYXNjaWEgaSB0dW9pIGRhdGlcclxuICAgICAgICA8L0xpbmtDb250ZW50PnsnICd9XHJcbiAgICAgICAgcGVyIHNhcGVyZSBxdWFuZG8gbGEgRmlicmEgZGkgUGxlbml0dWRlIGFycml2ZXLDoCBhIGNhc2EgdHVhLlxyXG4gICAgICA8L0FsZXJ0PlxyXG4gICAgKTtcclxuICB9LFxyXG59O1xyXG5cclxuZXhwb3J0IGNvbnN0IEJyb2FkYmFuZE1pZ3JhdGlvbkNvZGVOb3RWYWxpZEVycm9yID0ge1xyXG4gIGFsZXJ0OiBmdW5jdGlvbiBCcm9hZGJhbmRNaWdyYXRpb25Db2RlTm90VmFsaWRFcnJvckFsZXJ0KCkge1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgPEFsZXJ0IHR5cGU9XCJhbGVydFwiPlxyXG4gICAgICAgIDxiPkF0dGVuemlvbmUhPC9iPiBDb2RpY2UgbWlncmF6aW9uZSBub24gdmFsaWRvLCByaXByb3ZhLlxyXG4gICAgICA8L0FsZXJ0PlxyXG4gICAgKTtcclxuICB9LFxyXG59O1xyXG5cclxuZXhwb3J0IGNvbnN0IEJyb2FkYmFuZE1pZ3JhdGlvbkNvZGVBbHJlYWR5UmVnaXN0ZXJlZEVycm9yID0ge1xyXG4gIGFsZXJ0OiBmdW5jdGlvbiBCcm9hZGJhbmRNaWdyYXRpb25Db2RlQWxyZWFkeVJlZ2lzdGVyZWRFcnJvckFsZXJ0KCkge1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgPEFsZXJ0IHR5cGU9XCJhbGVydFwiPlxyXG4gICAgICAgIDxiPkF0dGVuemlvbmUhPC9iPiBJbCBjb2RpY2UgZGkgbWlncmF6aW9uZSByaXN1bHRhIGdpw6AgcmVnaXN0cmF0byxcclxuICAgICAgICBxdWluZGkgbm9uIMOoIHBvc3NpYmlsZSBwcm9jZWRlcmUgY29uIGzigJlhdHRpdmF6aW9uZSBkZWxs4oCZb2ZmZXJ0YS5cclxuICAgICAgPC9BbGVydD5cclxuICAgICk7XHJcbiAgfSxcclxuICBtb2RhbDogZnVuY3Rpb24gQnJvYWRiYW5kTWlncmF0aW9uQ29kZUFscmVhZHlSZWdpc3RlcmVkRXJyb3JNb2RhbChwcm9wczoge1xyXG4gICAgb25DbG9zZTogKCkgPT4gdm9pZDtcclxuICB9KSB7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICA8TW9kYWxFcnJvckJyb2FkYmFuZE1pZ3JhdGlvbkNvZGVBbHJlYWR5UmVnaXN0ZXJlZFxyXG4gICAgICAgIG9uQ2xvc2U9e3Byb3BzLm9uQ2xvc2V9XHJcbiAgICAgIC8+XHJcbiAgICApO1xyXG4gIH0sXHJcbn07XHJcblxyXG5mdW5jdGlvbiBNb2RhbEVycm9yQnJvYWRiYW5kTWlncmF0aW9uQ29kZUFscmVhZHlSZWdpc3RlcmVkKHByb3BzOiB7XHJcbiAgb25DbG9zZTogKCkgPT4gdm9pZDtcclxufSkge1xyXG4gIHJldHVybiAoXHJcbiAgICA8TW9kYWw+XHJcbiAgICAgIDxNb2RhbEVycm9yQ29udGVudFxyXG4gICAgICAgIGljb249ezxBbGVydEljb24gLz59XHJcbiAgICAgICAgdGl0bGU9eydBdHRlbnppb25lJ31cclxuICAgICAgICB0ZXh0PXtcclxuICAgICAgICAgIDw+XHJcbiAgICAgICAgICAgIElsIGNvZGljZSBkaSBtaWdyYXppb25lIHJpc3VsdGEgZ2nDoCByZWdpc3RyYXRvLCBxdWluZGkgbm9uIMOoXHJcbiAgICAgICAgICAgIHBvc3NpYmlsZSBwcm9jZWRlcmUgY29uIGzigJlhdHRpdmF6aW9uZSBkZWxs4oCZb2ZmZXJ0YS5cclxuICAgICAgICAgIDwvPlxyXG4gICAgICAgIH1cclxuICAgICAgICBjdGE9eydFc2NpJ31cclxuICAgICAgICBvbkNsb3NlPXtwcm9wcy5vbkNsb3NlfVxyXG4gICAgICAvPlxyXG4gICAgPC9Nb2RhbD5cclxuICApO1xyXG59XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvc3RlcHMvc3JjL2xpYi9zZXJ2aWNlcy1lcnJvcnMvYnJvYWRiYW5kLnRzeCJ9

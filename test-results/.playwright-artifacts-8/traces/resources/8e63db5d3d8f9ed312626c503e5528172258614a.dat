@@ -1,0 +1,194 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/navbar.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/navbar.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { LinkContent } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+import { AppAnchor } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/index.ts";
+import clsx from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/clsx.js?v=0189a8d1";
+import __vite__cjsImport6_react from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react.js?v=0189a8d1"; const Suspense = __vite__cjsImport6_react["Suspense"]; const useMemo = __vite__cjsImport6_react["useMemo"];
+import { useMobile } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/layout-utils.ts";
+import classes from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/layout.module.less";
+import { PlnLogoDesktop, PlnLogoMobile } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/logo.tsx";
+import { NavbarDesktopSkeleton, NavbarMobileSkeleton } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/navbar-skeleton.tsx";
+export function Navbar(props) {
+  _s();
+  const { progress = 0, desktop, mobile } = props;
+  const progressStyle = useMemo(() => {
+    return { width: `${progress}%` };
+  }, [progress]);
+  const isMobile = useMobile();
+  return /* @__PURE__ */ jsxDEV("div", { className: classes.header, children: [
+    isMobile ? /* @__PURE__ */ jsxDEV(Suspense, { fallback: /* @__PURE__ */ jsxDEV(NavbarMobileSkeleton, {}, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/navbar.tsx",
+      lineNumber: 26,
+      columnNumber: 27
+    }, this), children: mobile }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/navbar.tsx",
+      lineNumber: 26,
+      columnNumber: 7
+    }, this) : /* @__PURE__ */ jsxDEV(Suspense, { fallback: /* @__PURE__ */ jsxDEV(NavbarDesktopSkeleton, {}, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/navbar.tsx",
+      lineNumber: 28,
+      columnNumber: 27
+    }, this), children: desktop }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/navbar.tsx",
+      lineNumber: 28,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: classes.progressBar, style: progressStyle }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/navbar.tsx",
+      lineNumber: 30,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/navbar.tsx",
+    lineNumber: 24,
+    columnNumber: 5
+  }, this);
+}
+_s(Navbar, "WNbJVx4FdfbActQ01xBFwwu+0zU=", false, function() {
+  return [useMobile];
+});
+_c = Navbar;
+export function NavbarDesktop(props) {
+  return /* @__PURE__ */ jsxDEV("header", { className: clsx(classes.headerBox, classes.headerBoxDesktop), children: [
+    /* @__PURE__ */ jsxDEV(
+      BackToHomeLink,
+      {
+        className: classes.logo,
+        "data-cs-override-id": "LOGO_DESKTOP",
+        "aria-label": "Torna alla Home",
+        children: /* @__PURE__ */ jsxDEV(PlnLogoDesktop, { alt: "Logo Eniplenitude" }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/navbar.tsx",
+          lineNumber: 43,
+          columnNumber: 9
+        }, this)
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/navbar.tsx",
+        lineNumber: 38,
+        columnNumber: 7
+      },
+      this
+    ),
+    /* @__PURE__ */ jsxDEV("div", { className: clsx(classes.navbarDesktopControlsWrapper), children: props.right }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/navbar.tsx",
+      lineNumber: 46,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/navbar.tsx",
+    lineNumber: 37,
+    columnNumber: 5
+  }, this);
+}
+_c2 = NavbarDesktop;
+export function NavbarMobile(props) {
+  return /* @__PURE__ */ jsxDEV("header", { className: clsx(classes.headerBox, classes.headerBoxMobile), children: [
+    /* @__PURE__ */ jsxDEV("div", { className: classes.headerButtonMobile, children: props.left }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/navbar.tsx",
+      lineNumber: 56,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(
+      BackToHomeLink,
+      {
+        "data-cs-override-id": "LOGO_MOBILE",
+        className: classes.logo,
+        "aria-label": "Torna alla Home",
+        children: /* @__PURE__ */ jsxDEV(PlnLogoMobile, { alt: "Logo Eniplenitude" }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/navbar.tsx",
+          lineNumber: 62,
+          columnNumber: 9
+        }, this)
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/navbar.tsx",
+        lineNumber: 57,
+        columnNumber: 7
+      },
+      this
+    ),
+    /* @__PURE__ */ jsxDEV("div", { className: classes.headerButtonMobile, children: props.right }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/navbar.tsx",
+      lineNumber: 64,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/navbar.tsx",
+    lineNumber: 55,
+    columnNumber: 5
+  }, this);
+}
+_c3 = NavbarMobile;
+function BackToHomeLink({
+  className,
+  children,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxDEV(
+    LinkContent,
+    {
+      className: clsx(classes.headerLogo, className),
+      component: AppAnchor,
+      mode: "browser",
+      href: "/",
+      ...props,
+      children
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/navbar.tsx",
+      lineNumber: 75,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_c4 = BackToHomeLink;
+var _c, _c2, _c3, _c4;
+$RefreshReg$(_c, "Navbar");
+$RefreshReg$(_c2, "NavbarDesktop");
+$RefreshReg$(_c3, "NavbarMobile");
+$RefreshReg$(_c4, "BackToHomeLink");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/navbar.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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QUE7QUFBQTtBQUFBLFdBQXlEO0FBQUEsT0FUM0Q7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQVVBO0FBRUo7QUFBQ00sTUFkZUo7QUFnQmhCLFNBQVNLLGVBQWU7QUFBQSxFQUN0QkM7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQSxHQUFHekI7QUFDOEIsR0FBRztBQUNwQyxTQUNFO0FBQUEsSUFBQztBQUFBO0FBQUEsTUFDQyxXQUFXVixLQUFLSSxRQUFRZ0MsWUFBWUYsU0FBUztBQUFBLE1BQzdDLFdBQVduQztBQUFBQSxNQUNYLE1BQU07QUFBQSxNQUNOLE1BQUs7QUFBQSxNQUNMLEdBQUlXO0FBQUFBLE1BRUh5QjtBQUFBQTtBQUFBQSxJQVBIO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxFQVFBO0FBRUo7QUFBQ0UsTUFoQlFKO0FBQWMsSUFBQWIsSUFBQU8sS0FBQUssS0FBQUs7QUFBQUMsYUFBQWxCLElBQUE7QUFBQWtCLGFBQUFYLEtBQUE7QUFBQVcsYUFBQU4sS0FBQTtBQUFBTSxhQUFBRCxLQUFBIiwibmFtZXMiOlsiTGlua0NvbnRlbnQiLCJBcHBBbmNob3IiLCJjbHN4IiwiU3VzcGVuc2UiLCJ1c2VNZW1vIiwidXNlTW9iaWxlIiwiY2xhc3NlcyIsIlBsbkxvZ29EZXNrdG9wIiwiUGxuTG9nb01vYmlsZSIsIk5hdmJhckRlc2t0b3BTa2VsZXRvbiIsIk5hdmJhck1vYmlsZVNrZWxldG9uIiwiTmF2YmFyIiwicHJvcHMiLCJfcyIsInByb2dyZXNzIiwiZGVza3RvcCIsIm1vYmlsZSIsInByb2dyZXNzU3R5bGUiLCJ3aWR0aCIsImlzTW9iaWxlIiwiaGVhZGVyIiwicHJvZ3Jlc3NCYXIiLCJfYyIsIk5hdmJhckRlc2t0b3AiLCJoZWFkZXJCb3giLCJoZWFkZXJCb3hEZXNrdG9wIiwibG9nbyIsIm5hdmJhckRlc2t0b3BDb250cm9sc1dyYXBwZXIiLCJyaWdodCIsIl9jMiIsIk5hdmJhck1vYmlsZSIsImhlYWRlckJveE1vYmlsZSIsImhlYWRlckJ1dHRvbk1vYmlsZSIsImxlZnQiLCJfYzMiLCJCYWNrVG9Ib21lTGluayIsImNsYXNzTmFtZSIsImNoaWxkcmVuIiwiaGVhZGVyTG9nbyIsIl9jNCIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJuYXZiYXIudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IExpbmtDb250ZW50IH0gZnJvbSAnQG5hai13by91aS1hdG9tcyc7XHJcbmltcG9ydCB7IEFwcEFuY2hvciB9IGZyb20gJ0BuYWotd28vdXRpbCc7XHJcbmltcG9ydCBjbHN4IGZyb20gJ2Nsc3gnO1xyXG5pbXBvcnQgeyBDb21wb25lbnRQcm9wcywgUmVhY3ROb2RlLCBTdXNwZW5zZSwgdXNlTWVtbyB9IGZyb20gJ3JlYWN0JztcclxuaW1wb3J0IHsgdXNlTW9iaWxlIH0gZnJvbSAnLi9sYXlvdXQtdXRpbHMnO1xyXG5pbXBvcnQgY2xhc3NlcyBmcm9tICcuL2xheW91dC5tb2R1bGUubGVzcyc7XHJcbmltcG9ydCB7IFBsbkxvZ29EZXNrdG9wLCBQbG5Mb2dvTW9iaWxlIH0gZnJvbSAnLi9sb2dvJztcclxuaW1wb3J0IHsgTmF2YmFyRGVza3RvcFNrZWxldG9uLCBOYXZiYXJNb2JpbGVTa2VsZXRvbiB9IGZyb20gJy4vbmF2YmFyLXNrZWxldG9uJztcclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBOYXZiYXIocHJvcHM6IHtcclxuICBwcm9ncmVzcz86IG51bWJlcjtcclxuICBkZXNrdG9wOiBSZWFjdE5vZGU7XHJcbiAgbW9iaWxlOiBSZWFjdE5vZGU7XHJcbn0pIHtcclxuICBjb25zdCB7IHByb2dyZXNzID0gMCwgZGVza3RvcCwgbW9iaWxlIH0gPSBwcm9wcztcclxuXHJcbiAgY29uc3QgcHJvZ3Jlc3NTdHlsZSA9IHVzZU1lbW8oKCkgPT4ge1xyXG4gICAgcmV0dXJuIHsgd2lkdGg6IGAke3Byb2dyZXNzfSVgIH07XHJcbiAgfSwgW3Byb2dyZXNzXSk7XHJcblxyXG4gIGNvbnN0IGlzTW9iaWxlID0gdXNlTW9iaWxlKCk7XHJcblxyXG4gIHJldHVybiAoXHJcbiAgICA8ZGl2IGNsYXNzTmFtZT17Y2xhc3Nlcy5oZWFkZXJ9PlxyXG4gICAgICB7aXNNb2JpbGUgPyAoXHJcbiAgICAgICAgPFN1c3BlbnNlIGZhbGxiYWNrPXs8TmF2YmFyTW9iaWxlU2tlbGV0b24gLz59Pnttb2JpbGV9PC9TdXNwZW5zZT5cclxuICAgICAgKSA6IChcclxuICAgICAgICA8U3VzcGVuc2UgZmFsbGJhY2s9ezxOYXZiYXJEZXNrdG9wU2tlbGV0b24gLz59PntkZXNrdG9wfTwvU3VzcGVuc2U+XHJcbiAgICAgICl9XHJcbiAgICAgIDxkaXYgY2xhc3NOYW1lPXtjbGFzc2VzLnByb2dyZXNzQmFyfSBzdHlsZT17cHJvZ3Jlc3NTdHlsZX0gLz5cclxuICAgIDwvZGl2PlxyXG4gICk7XHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBOYXZiYXJEZXNrdG9wKHByb3BzOiB7IHJpZ2h0PzogUmVhY3ROb2RlIH0pIHtcclxuICByZXR1cm4gKFxyXG4gICAgPGhlYWRlciBjbGFzc05hbWU9e2Nsc3goY2xhc3Nlcy5oZWFkZXJCb3gsIGNsYXNzZXMuaGVhZGVyQm94RGVza3RvcCl9PlxyXG4gICAgICA8QmFja1RvSG9tZUxpbmtcclxuICAgICAgICBjbGFzc05hbWU9e2NsYXNzZXMubG9nb31cclxuICAgICAgICBkYXRhLWNzLW92ZXJyaWRlLWlkPXsnTE9HT19ERVNLVE9QJ31cclxuICAgICAgICBhcmlhLWxhYmVsPVwiVG9ybmEgYWxsYSBIb21lXCJcclxuICAgICAgPlxyXG4gICAgICAgIDxQbG5Mb2dvRGVza3RvcCBhbHQ9XCJMb2dvIEVuaXBsZW5pdHVkZVwiIC8+XHJcbiAgICAgIDwvQmFja1RvSG9tZUxpbms+XHJcblxyXG4gICAgICA8ZGl2IGNsYXNzTmFtZT17Y2xzeChjbGFzc2VzLm5hdmJhckRlc2t0b3BDb250cm9sc1dyYXBwZXIpfT5cclxuICAgICAgICB7cHJvcHMucmlnaHR9XHJcbiAgICAgIDwvZGl2PlxyXG4gICAgPC9oZWFkZXI+XHJcbiAgKTtcclxufVxyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIE5hdmJhck1vYmlsZShwcm9wczogeyBsZWZ0PzogUmVhY3ROb2RlOyByaWdodD86IFJlYWN0Tm9kZSB9KSB7XHJcbiAgcmV0dXJuIChcclxuICAgIDxoZWFkZXIgY2xhc3NOYW1lPXtjbHN4KGNsYXNzZXMuaGVhZGVyQm94LCBjbGFzc2VzLmhlYWRlckJveE1vYmlsZSl9PlxyXG4gICAgICA8ZGl2IGNsYXNzTmFtZT17Y2xhc3Nlcy5oZWFkZXJCdXR0b25Nb2JpbGV9Pntwcm9wcy5sZWZ0fTwvZGl2PlxyXG4gICAgICA8QmFja1RvSG9tZUxpbmtcclxuICAgICAgICBkYXRhLWNzLW92ZXJyaWRlLWlkPXsnTE9HT19NT0JJTEUnfVxyXG4gICAgICAgIGNsYXNzTmFtZT17Y2xhc3Nlcy5sb2dvfVxyXG4gICAgICAgIGFyaWEtbGFiZWw9XCJUb3JuYSBhbGxhIEhvbWVcIlxyXG4gICAgICA+XHJcbiAgICAgICAgPFBsbkxvZ29Nb2JpbGUgYWx0PVwiTG9nbyBFbmlwbGVuaXR1ZGVcIiAvPlxyXG4gICAgICA8L0JhY2tUb0hvbWVMaW5rPlxyXG4gICAgICA8ZGl2IGNsYXNzTmFtZT17Y2xhc3Nlcy5oZWFkZXJCdXR0b25Nb2JpbGV9Pntwcm9wcy5yaWdodH08L2Rpdj5cclxuICAgIDwvaGVhZGVyPlxyXG4gICk7XHJcbn1cclxuXHJcbmZ1bmN0aW9uIEJhY2tUb0hvbWVMaW5rKHtcclxuICBjbGFzc05hbWUsXHJcbiAgY2hpbGRyZW4sXHJcbiAgLi4ucHJvcHNcclxufTogT21pdDxDb21wb25lbnRQcm9wczwnYSc+LCAnaHJlZic+KSB7XHJcbiAgcmV0dXJuIChcclxuICAgIDxMaW5rQ29udGVudFxyXG4gICAgICBjbGFzc05hbWU9e2Nsc3goY2xhc3Nlcy5oZWFkZXJMb2dvLCBjbGFzc05hbWUpfVxyXG4gICAgICBjb21wb25lbnQ9e0FwcEFuY2hvcn1cclxuICAgICAgbW9kZT17J2Jyb3dzZXInfVxyXG4gICAgICBocmVmPVwiL1wiXHJcbiAgICAgIHsuLi5wcm9wc31cclxuICAgID5cclxuICAgICAge2NoaWxkcmVufVxyXG4gICAgPC9MaW5rQ29udGVudD5cclxuICApO1xyXG59XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvdWktbW9sZWN1bGVzL3NyYy9saWIvbGF5b3V0L25hdmJhci50c3gifQ==

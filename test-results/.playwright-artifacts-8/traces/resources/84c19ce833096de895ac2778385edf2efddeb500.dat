@@ -1,0 +1,86 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataElementErrorBoundary.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataElementErrorBoundary.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { Alert, LinkContent } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+import { BaseErrorBoundary } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/index.ts";
+export function DataElementErrorBoundary(props) {
+  return /* @__PURE__ */ jsxDEV(
+    BaseErrorBoundary,
+    {
+      renderFallback: ({ error, retry }) => /* @__PURE__ */ jsxDEV(Alert, { type: "info", variant: "cart", children: [
+        props.fallbackText,
+        " ",
+        /* @__PURE__ */ jsxDEV(
+          LinkContent,
+          {
+            component: "button",
+            type: "button",
+            underline: true,
+            onClick: retry,
+            children: "Riprova"
+          },
+          void 0,
+          false,
+          {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataElementErrorBoundary.tsx",
+            lineNumber: 14,
+            columnNumber: 11
+          },
+          this
+        )
+      ] }, void 0, true, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataElementErrorBoundary.tsx",
+        lineNumber: 12,
+        columnNumber: 7
+      }, this),
+      children: props.children
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataElementErrorBoundary.tsx",
+      lineNumber: 10,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_c = DataElementErrorBoundary;
+var _c;
+$RefreshReg$(_c, "DataElementErrorBoundary");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/recap-box/DataElementErrorBoundary.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBYVU7Ozs7O2dCQWJWLE9BQVNBLGNBQU9DO0FBQVcsY0FBUSwwQ0FBa0I7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ3JELFNBQVNDLHlCQUF5QjtBQUczQixnQkFBU0MseUJBQXlCQyxPQUd0QztBQUNELFNBQ0U7QUFBQSxJQUFDO0FBQUE7QUFBQSxNQUNDLGdCQUFnQixDQUFDLEVBQUVDLE9BQU9DLE1BQU0sTUFDOUIsdUJBQUMsU0FBTSxNQUFLLFFBQU8sU0FBUSxRQUN4QkY7QUFBQUEsY0FBTUc7QUFBQUEsUUFBYztBQUFBLFFBQ3JCO0FBQUEsVUFBQztBQUFBO0FBQUEsWUFDQyxXQUFVO0FBQUEsWUFDVixNQUFLO0FBQUEsWUFDTDtBQUFBLFlBQ0EsU0FBU0Q7QUFBQUEsWUFBTTtBQUFBO0FBQUEsVUFKakI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLFFBT0E7QUFBQSxXQVRGO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFVQTtBQUFBLE1BR0RGLGdCQUFNSTtBQUFBQTtBQUFBQSxJQWZUO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxFQWdCQTtBQUVKO0FBQUNDLEtBdkJlTjtBQUF3QixJQUFBTTtBQUFBQyxhQUFBRCxJQUFBIiwibmFtZXMiOlsiQWxlcnQiLCJMaW5rQ29udGVudCIsIkJhc2VFcnJvckJvdW5kYXJ5IiwiRGF0YUVsZW1lbnRFcnJvckJvdW5kYXJ5IiwicHJvcHMiLCJlcnJvciIsInJldHJ5IiwiZmFsbGJhY2tUZXh0IiwiY2hpbGRyZW4iLCJfYyIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJEYXRhRWxlbWVudEVycm9yQm91bmRhcnkudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEFsZXJ0LCBMaW5rQ29udGVudCB9IGZyb20gJ0BuYWotd28vdWktYXRvbXMnO1xyXG5pbXBvcnQgeyBCYXNlRXJyb3JCb3VuZGFyeSB9IGZyb20gJ0BuYWotd28vdXRpbCc7XHJcbmltcG9ydCB7IFJlYWN0Tm9kZSB9IGZyb20gJ3JlYWN0JztcclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBEYXRhRWxlbWVudEVycm9yQm91bmRhcnkocHJvcHM6IHtcclxuICBjaGlsZHJlbjogUmVhY3ROb2RlO1xyXG4gIGZhbGxiYWNrVGV4dDogUmVhY3ROb2RlO1xyXG59KSB7XHJcbiAgcmV0dXJuIChcclxuICAgIDxCYXNlRXJyb3JCb3VuZGFyeVxyXG4gICAgICByZW5kZXJGYWxsYmFjaz17KHsgZXJyb3IsIHJldHJ5IH0pID0+IChcclxuICAgICAgICA8QWxlcnQgdHlwZT1cImluZm9cIiB2YXJpYW50PVwiY2FydFwiPlxyXG4gICAgICAgICAge3Byb3BzLmZhbGxiYWNrVGV4dH17JyAnfVxyXG4gICAgICAgICAgPExpbmtDb250ZW50XHJcbiAgICAgICAgICAgIGNvbXBvbmVudD1cImJ1dHRvblwiXHJcbiAgICAgICAgICAgIHR5cGU9XCJidXR0b25cIlxyXG4gICAgICAgICAgICB1bmRlcmxpbmVcclxuICAgICAgICAgICAgb25DbGljaz17cmV0cnl9XHJcbiAgICAgICAgICA+XHJcbiAgICAgICAgICAgIFJpcHJvdmFcclxuICAgICAgICAgIDwvTGlua0NvbnRlbnQ+XHJcbiAgICAgICAgPC9BbGVydD5cclxuICAgICAgKX1cclxuICAgID5cclxuICAgICAge3Byb3BzLmNoaWxkcmVufVxyXG4gICAgPC9CYXNlRXJyb3JCb3VuZGFyeT5cclxuICApO1xyXG59XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvdWktbW9sZWN1bGVzL3NyYy9saWIvcmVjYXAtYm94L0RhdGFFbGVtZW50RXJyb3JCb3VuZGFyeS50c3gifQ==

@@ -1,0 +1,17 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { delay, http, HttpResponse } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/msw.js?v=0189a8d1";
+export default http.post(/\/api\/webOrderCommonServices\/verificaIndirizzoEmail/, async () => {
+  await delay();
+  return HttpResponse.json(true);
+});
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLE9BQU9DLE1BQU1DLG9CQUFvQjtBQUUxQyxlQUFlRCxLQUFLRSxLQUNsQix5REFDQSxZQUFZO0FBQ1YsUUFBTUgsTUFBTTtBQUVaLFNBQU9FLGFBQWFFLEtBQUssSUFBSTtBQUMvQixDQUNGIiwibmFtZXMiOlsiZGVsYXkiLCJodHRwIiwiSHR0cFJlc3BvbnNlIiwicG9zdCIsImpzb24iXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsidmVyaWZpY2FJbmRpcml6em9FbWFpbC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBkZWxheSwgaHR0cCwgSHR0cFJlc3BvbnNlIH0gZnJvbSAnbXN3JztcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGh0dHAucG9zdChcclxuICAvXFwvYXBpXFwvd2ViT3JkZXJDb21tb25TZXJ2aWNlc1xcL3ZlcmlmaWNhSW5kaXJpenpvRW1haWwvLFxyXG4gIGFzeW5jICgpID0+IHtcclxuICAgIGF3YWl0IGRlbGF5KCk7XHJcblxyXG4gICAgcmV0dXJuIEh0dHBSZXNwb25zZS5qc29uKHRydWUpO1xyXG4gIH1cclxuKTtcclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy9kYXRhLWFjY2Vzcy1tb2NrL3NyYy9saWIvaGFuZGxlcnMvdmVyaWZpY2FJbmRpcml6em9FbWFpbC50cyJ9

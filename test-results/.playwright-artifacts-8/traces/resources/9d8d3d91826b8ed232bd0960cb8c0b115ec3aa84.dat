@@ -1,0 +1,28 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { atom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+import { workingOnPanelAtom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/troubleshooting/troubleshooting.ts";
+import { customerAtom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/customer-atoms.ts";
+export const accountListAtom = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\accounts-atoms.ts/accountListAtom", atom(async (get) => {
+  const customer = await get(customerAtom);
+  return get(customer.accounts);
+}));
+accountListAtom.debugLabel = "accountListAtom";
+export const availableAccountListAtom = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\accounts-atoms.ts/availableAccountListAtom", atom(async (get) => {
+  const accounts = await get(accountListAtom);
+  if (get(workingOnPanelAtom)) {
+    return new Map([...accounts.entries()].filter(([, v]) => v.commodity.power));
+  }
+  return accounts;
+}));
+availableAccountListAtom.debugLabel = "availableAccountListAtom";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLFlBQVk7QUFDckIsU0FBU0MsMEJBQTBCO0FBQ25DLFNBQVNDLG9CQUFvQjtBQUU3QixhQUFBQyxrQkFBQUMsV0FBQUMsZUFBQUMsSUFBQSx3SEFBK0JOLEtBQUssT0FBT00sUUFBUTtBQUNqRCxRQUFNQyxXQUFXLE1BQU1ELElBQUlKLFlBQVk7QUFDdkMsU0FBT0ksSUFBSUMsU0FBU0MsUUFBUTtBQUM5QixDQUFDLENBQUM7QUFBQ0wsZ0JBQUFNLGFBQUE7QUFFSCxhQUFBQywyQkFBQU4sV0FBQUMsZUFBQUMsSUFBQSxpSUFBd0NOLEtBQUssT0FBT00sUUFBUTtBQUMxRCxRQUFNRSxXQUFXLE1BQU1GLElBQUlILGVBQWU7QUFDMUMsTUFBSUcsSUFBSUwsa0JBQWtCLEdBQUc7QUFDM0IsV0FBTyxJQUFJVSxJQUNULENBQUMsR0FBR0gsU0FBU0ksUUFBUSxDQUFDLEVBQUVDLE9BQU8sQ0FBQyxHQUFHQyxDQUFDLE1BQU1BLEVBQUVDLFVBQVVDLEtBQUssQ0FDN0Q7QUFBQSxFQUNGO0FBRUEsU0FBT1I7QUFDVCxDQUFDLENBQUM7QUFBQ0UseUJBQUFELGFBQUEiLCJuYW1lcyI6WyJhdG9tIiwid29ya2luZ09uUGFuZWxBdG9tIiwiY3VzdG9tZXJBdG9tIiwiYWNjb3VudExpc3RBdG9tIiwiZ2xvYmFsVGhpcyIsImpvdGFpQXRvbUNhY2hlIiwiZ2V0IiwiY3VzdG9tZXIiLCJhY2NvdW50cyIsImRlYnVnTGFiZWwiLCJhdmFpbGFibGVBY2NvdW50TGlzdEF0b20iLCJNYXAiLCJlbnRyaWVzIiwiZmlsdGVyIiwidiIsImNvbW1vZGl0eSIsInBvd2VyIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbImFjY291bnRzLWF0b21zLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGF0b20gfSBmcm9tICdqb3RhaSc7XHJcbmltcG9ydCB7IHdvcmtpbmdPblBhbmVsQXRvbSB9IGZyb20gJy4uL3Ryb3VibGVzaG9vdGluZy90cm91Ymxlc2hvb3RpbmcnO1xyXG5pbXBvcnQgeyBjdXN0b21lckF0b20gfSBmcm9tICcuL2N1c3RvbWVyLWF0b21zJztcclxuXHJcbmV4cG9ydCBjb25zdCBhY2NvdW50TGlzdEF0b20gPSBhdG9tKGFzeW5jIChnZXQpID0+IHtcclxuICBjb25zdCBjdXN0b21lciA9IGF3YWl0IGdldChjdXN0b21lckF0b20pO1xyXG4gIHJldHVybiBnZXQoY3VzdG9tZXIuYWNjb3VudHMpO1xyXG59KTtcclxuXHJcbmV4cG9ydCBjb25zdCBhdmFpbGFibGVBY2NvdW50TGlzdEF0b20gPSBhdG9tKGFzeW5jIChnZXQpID0+IHtcclxuICBjb25zdCBhY2NvdW50cyA9IGF3YWl0IGdldChhY2NvdW50TGlzdEF0b20pO1xyXG4gIGlmIChnZXQod29ya2luZ09uUGFuZWxBdG9tKSkge1xyXG4gICAgcmV0dXJuIG5ldyBNYXAoXHJcbiAgICAgIFsuLi5hY2NvdW50cy5lbnRyaWVzKCldLmZpbHRlcigoWywgdl0pID0+IHYuY29tbW9kaXR5LnBvd2VyKVxyXG4gICAgKTtcclxuICB9XHJcblxyXG4gIHJldHVybiBhY2NvdW50cztcclxufSk7XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvZGF0YS1hY2Nlc3Mvc3JjL2xpYi9hdG9tcy9hY2NvdW50cy1hdG9tcy50cyJ9

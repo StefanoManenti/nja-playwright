@@ -1,0 +1,88 @@
+# Page snapshot
+
+```yaml
+- text: Accensione modalità collaudo…
+- banner:
+  - link "Torna alla Home":
+    - /url: https://eniplenitude.com/?dev=
+    - img "Logo Eniplenitude"
+  - button "Salva per dopo":
+    - img
+    - text: Salva per dopo
+  - link "Torna ai prodotti Plenitude":
+    - /url: https://eniplenitude.com/offerta/casa/gas-e-luce?dev=
+    - img
+    - text: Torna ai prodotti Plenitude
+- main:
+  - heading "A chi verrà intestata la fornitura?" [level=1]
+  - paragraph: Inserisci la tipologia e il nome dell'attività o dell'azienda.
+  - group:
+    - text: Forma giuridica
+    - combobox:
+      - text: ENTE
+      - img
+      - img
+  - group:
+    - text: Ragione sociale
+    - textbox "Ragione sociale": loremIpsum
+  - heading "Inserisci l’indirizzo della sede legale" [level=2]
+  - paragraph: Inserisci il tuo indirizzo e selezionalo dalla lista sottostante.
+  - group:
+    - text: Indirizzo sede legale
+    - img
+    - combobox "Indirizzo sede legale": CORSO REGINA MARGHERITA, 223, TORINO TO
+    - paragraph: Se la tua abitazione non ha numero civico, inserisci l’indirizzo seguito da snc.
+  - heading "Indica i relativi contatti" [level=2]
+  - group:
+    - text: Prefisso
+    - textbox "Prefisso": "+39"
+    - text: Numero cellulare
+    - textbox "Numero cellulare": "3926511138"
+    - checkbox "In caso di necessità, acconsento a ricevere supporto telefonico a questo numero per completare l'attivazione. In alternativa, contatterò direttamente io il servizio clienti se dovessi aver bisogno di supporto."
+    - img
+    - text: In caso di necessità, acconsento a ricevere supporto telefonico a questo numero per completare l'attivazione. In alternativa, contatterò direttamente io il servizio clienti se dovessi aver bisogno di supporto.
+  - text: Mail
+  - textbox "Mail": andrea.introna@external.eni.com
+  - paragraph: Riceverai a questo indirizzo il contratto della fornitura. Se hai già fatto la registrazione nell’Area Personale, usa la stessa email.
+  - heading "Inserisci partita IVA e codice fiscale" [level=2]
+  - paragraph: Inserisci i dati presenti nell’ultima bolletta.
+  - group:
+    - text: P.IVA
+    - textbox "P.IVA": IT001E33929817
+    - checkbox "Il codice fiscale della società è diverso dalla partita IVA"
+    - img
+    - text: Il codice fiscale della società è diverso dalla partita IVA
+- complementary:
+  - heading "Trend Business Gas" [level=2]
+  - paragraph: Cambio fornitore
+  - heading "Dettagli gas" [level=3]:
+    - img
+    - text: Dettagli gas
+  - text: Prezzo all’ingrosso PSV Contributo al consumo
+  - paragraph
+  - text: 0,1150 €/Smc Copertura costi di commercializzazione e vendita 192 €/anno Gas con CO₂ compensata Incluso
+  - link "Consulta il contratto Gas":
+    - /url: https://eniplenitude.com/content/dam/enigaseluce/documenti/campagna/allegati-offerte/GAS_SMALL_BASE_TNDVG.pdf?dev=
+    - text: Consulta il contratto Gas
+    - img
+  - heading "Pagamento e bolletta" [level=3]:
+    - img
+    - text: Pagamento e bolletta
+  - text: Modalità di pagamento Addebito su C/C Ricezione bolletta Digitale
+  - heading "Codice promozionale e sconti" [level=3]:
+    - img
+    - text: Codice promozionale e sconti
+  - text: Sconto domiciliazione 1 €/mese Hai un codice promozionale?
+  - textbox "Hai un codice promozionale?"
+  - paragraph: Lascia il campo vuoto se non hai un codice
+  - superscript: "1"
+  - text: Il prezzo all’ingrosso è il Corrispettivo gas Index, pari all'indice PSV (PSV Day Ahead Heren Mid) che corrisponde al prezzo del gas naturale all’ingrosso al PSV (Punto di Scambio Virtuale). L'indice è calcolato mensilmente come media dei prezzi Bid e Offer da ICIS Heren.
+  - superscript: "2"
+  - text: Plenitude finanzia progetti di conservazione acquistando crediti di carbonio per compensare la CO₂ prodotta dal consumo domestico di gas.
+- button "Indietro"
+- button "Prosegui"
+- contentinfo:
+  - img "Logo Eni Plenitude"
+  - paragraph: Eni Plenitude SPA Società Benefit
+  - paragraph: C.F. e Registro Imprese di Roma n° 00484960588 Partita IVA n° 00905811006
+```

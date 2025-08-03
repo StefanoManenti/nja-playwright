@@ -1,0 +1,294 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$(), _s2 = $RefreshSig$(), _s3 = $RefreshSig$(), _s4 = $RefreshSig$(), _s5 = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import {
+  ENABLE_CHANGE_OFFER,
+  gasAtom,
+  OperativeMode,
+  operativeModeAtom,
+  operativeModeEnabled$,
+  Payment,
+  paymentType$,
+  powerAtom,
+  showPdfField$,
+  weborderUrlAtom
+} from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/index.ts";
+import { LineSeparator, Typography } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+import { StepContainer, StepOfferTitle, StepTitle } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/index.ts";
+import { StepButton, StepCta, StepLayout } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/index.ts";
+import { getPlenitudeHref, goToPlenitude } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/index.ts";
+import { useAtomValue } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+import __vite__cjsImport9_react from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react.js?v=0189a8d1"; const useCallback = __vite__cjsImport9_react["useCallback"]; const useEffect = __vite__cjsImport9_react["useEffect"]; const useMemo = __vite__cjsImport9_react["useMemo"];
+import {
+  GlobalTrackingState,
+  TroubleshootingTrackingState,
+  useTrackingStepEnding
+} from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/index.ts";
+import { NextCtaConcludeTroubleshooting } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/components/NextCta.tsx";
+import classes from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.module.less";
+export default function StepEndingWrapped() {
+  _s();
+  const operativeMode = useAtomValue(operativeModeAtom);
+  if (operativeMode === OperativeMode.CHANGE_OFFER && !ENABLE_CHANGE_OFFER) {
+    return /* @__PURE__ */ jsxDEV(StepEndingChangeOffer, {}, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+      lineNumber: 32,
+      columnNumber: 12
+    }, this);
+  }
+  return /* @__PURE__ */ jsxDEV(GlobalTrackingState, { children: /* @__PURE__ */ jsxDEV(TroubleshootingTrackingState, { micro_step: "pre_wo", children: /* @__PURE__ */ jsxDEV(EndingStep, {}, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+    lineNumber: 38,
+    columnNumber: 9
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+    lineNumber: 37,
+    columnNumber: 7
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+    lineNumber: 36,
+    columnNumber: 5
+  }, this);
+}
+_s(StepEndingWrapped, "p3OL/oREIYB7ulHjtONv9dPTuUs=", false, function() {
+  return [useAtomValue];
+});
+_c = StepEndingWrapped;
+function StepEndingChangeOffer() {
+  _s2();
+  const url = useAtomValue(weborderUrlAtom);
+  useEffect(() => {
+    goToPlenitude(url);
+  }, [url]);
+  return null;
+}
+_s2(StepEndingChangeOffer, "EpxV1d7273qCiCe9FUttSGNUldA=", false, function() {
+  return [useAtomValue];
+});
+_c2 = StepEndingChangeOffer;
+function EndingStep() {
+  _s3();
+  const tracking = useTrackingStepEnding();
+  const enabled = useAtomValue(operativeModeEnabled$);
+  const Cta = useMemo(
+    () => enabled ? NextCtaConcludeTroubleshooting : GoToWebOrderCta,
+    [enabled]
+  );
+  return /* @__PURE__ */ jsxDEV(
+    StepLayout,
+    {
+      cta: /* @__PURE__ */ jsxDEV(Cta, { beforeOnClick: tracking.handleSubmit }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+        lineNumber: 64,
+        columnNumber: 12
+      }, this),
+      onEditBegin: tracking.onEditBegin,
+      onEditSelect: tracking.onEditSelect,
+      cartVariant: "single-product",
+      children: /* @__PURE__ */ jsxDEV(StepContainer, { children: [
+        /* @__PURE__ */ jsxDEV(StepOfferTitle, {}, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+          lineNumber: 70,
+          columnNumber: 9
+        }, this),
+        /* @__PURE__ */ jsxDEV(
+          StepTitle,
+          {
+            title: /* @__PURE__ */ jsxDEV(Fragment, { children: "Prossimi passi" }, void 0, false, {
+              fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+              lineNumber: 72,
+              columnNumber: 18
+            }, this),
+            subtitle: /* @__PURE__ */ jsxDEV(Fragment, { children: "Complimenti, hai scelto tutti i dettagli del tuo ordine. Ora puoi procedere per completare l'acquisto." }, void 0, false, {
+              fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+              lineNumber: 74,
+              columnNumber: 11
+            }, this)
+          },
+          void 0,
+          false,
+          {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+            lineNumber: 71,
+            columnNumber: 9
+          },
+          this
+        ),
+        /* @__PURE__ */ jsxDEV(RecapBox, {}, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+          lineNumber: 80,
+          columnNumber: 9
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+        lineNumber: 69,
+        columnNumber: 7
+      }, this)
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+      lineNumber: 63,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_s3(EndingStep, "z7VIhlSDKjgpOQVHOVsfzZMiPow=", false, function() {
+  return [useTrackingStepEnding, useAtomValue];
+});
+_c3 = EndingStep;
+function RecapBox() {
+  _s4();
+  const payment = useAtomValue(paymentType$, { delay: 0 });
+  const power = useAtomValue(powerAtom);
+  const gas = useAtomValue(gasAtom);
+  const showPdfField = useAtomValue(showPdfField$);
+  const podPdr = showPdfField && [power && "POD", gas && "PDR"].filter(Boolean).join("/");
+  const hasDomiciliation = payment === Payment.DOMICILIATION;
+  return /* @__PURE__ */ jsxDEV("div", { className: classes.recapBox, children: [
+    /* @__PURE__ */ jsxDEV(Typography, { component: "h2", variant: "h3", children: "Cosa devi avere" }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+      lineNumber: 98,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(Typography, { component: "p", variant: "subtitle3", children: "Assicurati di avere questi documenti a portata di mano per agevolare la procedura di acquisto" }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+      lineNumber: 101,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(LineSeparator, {}, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+      lineNumber: 105,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(Typography, { component: "ul", variant: "body2", children: [
+      /* @__PURE__ */ jsxDEV("li", { children: [
+        /* @__PURE__ */ jsxDEV("b", { children: "Documento d'identità" }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+          lineNumber: 108,
+          columnNumber: 11
+        }, this),
+        " in corso di validità"
+      ] }, void 0, true, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+        lineNumber: 107,
+        columnNumber: 9
+      }, this),
+      podPdr && /* @__PURE__ */ jsxDEV("li", { children: [
+        "Codice ",
+        /* @__PURE__ */ jsxDEV("b", { children: podPdr }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+          lineNumber: 112,
+          columnNumber: 20
+        }, this),
+        " reperibile sulla bolletta o sul display del tuo contatore digitale"
+      ] }, void 0, true, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+        lineNumber: 111,
+        columnNumber: 9
+      }, this),
+      " ",
+      hasDomiciliation && /* @__PURE__ */ jsxDEV("li", { children: [
+        /* @__PURE__ */ jsxDEV("b", { children: "Codice IBAN" }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+          lineNumber: 118,
+          columnNumber: 13
+        }, this),
+        " per la domiciliazione bancaria"
+      ] }, void 0, true, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+        lineNumber: 117,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+      lineNumber: 106,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+    lineNumber: 97,
+    columnNumber: 5
+  }, this);
+}
+_s4(RecapBox, "DRVGXvtyNYDf6gUXZLjeZZh3/Nw=", false, function() {
+  return [useAtomValue, useAtomValue, useAtomValue, useAtomValue];
+});
+_c4 = RecapBox;
+function GoToWebOrderCta(props) {
+  _s5();
+  const { beforeOnClick } = props;
+  const children = "Prosegui";
+  const handleClick = useCallback(() => {
+    beforeOnClick?.(children);
+  }, [beforeOnClick]);
+  const url = useAtomValue(weborderUrlAtom);
+  const href = useMemo(() => getPlenitudeHref(url), [url]);
+  return /* @__PURE__ */ jsxDEV(
+    StepCta,
+    {
+      primaryButton: /* @__PURE__ */ jsxDEV(StepButton, { onClick: handleClick, component: "a", href, children }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+        lineNumber: 140,
+        columnNumber: 7
+      }, this)
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx",
+      lineNumber: 138,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_s5(GoToWebOrderCta, "oik7ODSVIGOINhU3SwkusQeO+o4=", false, function() {
+  return [useAtomValue];
+});
+_c5 = GoToWebOrderCta;
+var _c, _c2, _c3, _c4, _c5;
+$RefreshReg$(_c, "StepEndingWrapped");
+$RefreshReg$(_c2, "StepEndingChangeOffer");
+$RefreshReg$(_c3, "EndingStep");
+$RefreshReg$(_c4, "RecapBox");
+$RefreshReg$(_c5, "GoToWebOrderCta");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/troubleshooting/EndingStep.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBK0JXLFNBd0NNLFVBeENOOzs7Ozs7O29CQS9CWDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxFQUNFQTtBQUFBQSxFQUNBQztBQUFBQSxFQUNBQztBQUFBQSxFQUNBQztBQUFBQSxFQUNBQztBQUFBQSxFQUNBQztBQUFBQSxFQUNBQztBQUFBQSxFQUNBQztBQUFBQSxFQUNBQztBQUFBQSxFQUNBQztBQUFBQSxPQUNLO0FBQ1AsU0FBU0MsZUFBZUMsa0JBQWtCO0FBQzFDLFNBQVNDLGVBQWVDLGdCQUFnQkMsaUJBQWlCO0FBQ3pELFNBQVNDLFlBQVlDLFNBQVNDLGtCQUFrQjtBQUNoRCxTQUFTQyxrQkFBa0JDLHFCQUFxQjtBQUNoRCxTQUFTQyxvQkFBb0I7QUFDN0IsU0FBZ0JDLGFBQWFDLFdBQVdDLGVBQWU7QUFDdkQ7QUFBQSxFQUNFQztBQUFBQSxFQUNBQztBQUFBQSxFQUNBQztBQUFBQSxPQUNLO0FBQ1AsU0FBU0Msc0NBQXNDO0FBQy9DLE9BQU9DLGFBQWE7QUFFcEIsd0JBQXdCQyxvQkFBb0I7QUFBQUMsS0FBQTtBQUMxQyxRQUFNQyxnQkFBZ0JYLGFBQWFqQixpQkFBaUI7QUFHcEQsTUFBSTRCLGtCQUFrQjdCLGNBQWM4QixnQkFBZ0IsQ0FBQ2hDLHFCQUFxQjtBQUN4RSxXQUFPLHVCQUFDLDJCQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBc0I7QUFBQSxFQUMvQjtBQUVBLFNBQ0UsdUJBQUMsdUJBQ0MsaUNBQUMsZ0NBQTZCLFlBQVcsVUFDdkMsaUNBQUMsZ0JBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQUFXLEtBRGI7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQUVBLEtBSEY7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQUlBO0FBRUo7QUFBQzhCLEdBZnVCRCxtQkFBaUI7QUFBQSxVQUNqQlQsWUFBWTtBQUFBO0FBQUFhLEtBRFpKO0FBaUJ4QixTQUFTSyx3QkFBd0I7QUFBQUMsTUFBQTtBQUMvQixRQUFNQyxNQUFNaEIsYUFBYVgsZUFBZTtBQUV4Q2EsWUFBVSxNQUFNO0FBQ2RILGtCQUFjaUIsR0FBRztBQUFBLEVBQ25CLEdBQUcsQ0FBQ0EsR0FBRyxDQUFDO0FBRVIsU0FBTztBQUNUO0FBQUNELElBUlFELHVCQUFxQjtBQUFBLFVBQ2hCZCxZQUFZO0FBQUE7QUFBQWlCLE1BRGpCSDtBQVVULFNBQVNJLGFBQWE7QUFBQUMsTUFBQTtBQUNwQixRQUFNQyxXQUFXZCxzQkFBc0I7QUFDdkMsUUFBTWUsVUFBVXJCLGFBQWFoQixxQkFBcUI7QUFDbEQsUUFBTXNDLE1BQU1uQjtBQUFBQSxJQUNWLE1BQU9rQixVQUFVZCxpQ0FBaUNnQjtBQUFBQSxJQUNsRCxDQUFDRixPQUFPO0FBQUEsRUFDVjtBQUVBLFNBQ0U7QUFBQSxJQUFDO0FBQUE7QUFBQSxNQUNDLEtBQUssdUJBQUMsT0FBSSxlQUFlRCxTQUFTSSxnQkFBN0I7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUEwQztBQUFBLE1BQy9DLGFBQWFKLFNBQVNLO0FBQUFBLE1BQ3RCLGNBQWNMLFNBQVNNO0FBQUFBLE1BQ3ZCLGFBQVk7QUFBQSxNQUVaLGlDQUFDLGlCQUNDO0FBQUEsK0JBQUMsb0JBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUFlO0FBQUEsUUFDZjtBQUFBLFVBQUM7QUFBQTtBQUFBLFlBQ0MsT0FBTyxtQ0FBRSw4QkFBRjtBQUFBO0FBQUE7QUFBQTtBQUFBLG1CQUFnQjtBQUFBLFlBQ3ZCLFVBQ0UsbUNBQUUsc0hBQUY7QUFBQTtBQUFBO0FBQUE7QUFBQSxtQkFHQTtBQUFBO0FBQUEsVUFOSjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsUUFPRztBQUFBLFFBRUgsdUJBQUMsY0FBRDtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQVM7QUFBQSxXQVhYO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFZQTtBQUFBO0FBQUEsSUFsQkY7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLEVBbUJBO0FBRUo7QUFBQ1AsSUE5QlFELFlBQVU7QUFBQSxVQUNBWix1QkFDRE4sWUFBWTtBQUFBO0FBQUEyQixNQUZyQlQ7QUFnQ1QsU0FBU1UsV0FBVztBQUFBQyxNQUFBO0FBQ2xCLFFBQU1DLFVBQVU5QixhQUFhZCxjQUFjLEVBQUU2QyxPQUFPLEVBQUUsQ0FBQztBQUN2RCxRQUFNQyxRQUFRaEMsYUFBYWIsU0FBUztBQUNwQyxRQUFNOEMsTUFBTWpDLGFBQWFuQixPQUFPO0FBQ2hDLFFBQU1xRCxlQUFlbEMsYUFBYVosYUFBYTtBQUUvQyxRQUFNK0MsU0FDSkQsZ0JBQWdCLENBQUNGLFNBQVMsT0FBT0MsT0FBTyxLQUFLLEVBQUVHLE9BQU9DLE9BQU8sRUFBRUMsS0FBSyxHQUFHO0FBQ3pFLFFBQU1DLG1CQUFtQlQsWUFBWTdDLFFBQVF1RDtBQUU3QyxTQUNFLHVCQUFDLFNBQUksV0FBV2hDLFFBQVFpQyxVQUN0QjtBQUFBLDJCQUFDLGNBQVcsV0FBVSxNQUFLLFNBQVEsTUFBSywrQkFBeEM7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUVBO0FBQUEsSUFDQSx1QkFBQyxjQUFXLFdBQVUsS0FBSSxTQUFRLGFBQVksNkdBQTlDO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FHQTtBQUFBLElBQ0EsdUJBQUMsbUJBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUFjO0FBQUEsSUFDZCx1QkFBQyxjQUFXLFdBQVUsTUFBSyxTQUFRLFNBQ2pDO0FBQUEsNkJBQUMsUUFDQztBQUFBLCtCQUFDLE9BQUUsb0NBQUg7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUF1QjtBQUFBLFFBQUk7QUFBQSxXQUQ3QjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBRUE7QUFBQSxNQUNDTixVQUNDLHVCQUFDLFFBQUc7QUFBQTtBQUFBLFFBQ0ssdUJBQUMsT0FBR0Esb0JBQUo7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUFXO0FBQUEsUUFBSTtBQUFBLFdBRHhCO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFHQTtBQUFBLE1BQ0M7QUFBQSxNQUNGSSxvQkFDQyx1QkFBQyxRQUNDO0FBQUEsK0JBQUMsT0FBRSwyQkFBSDtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQWM7QUFBQSxRQUFJO0FBQUEsV0FEcEI7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUVBO0FBQUEsU0FiSjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBZUE7QUFBQSxPQXhCRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBeUJBO0FBRUo7QUFBQ1YsSUF0Q1FELFVBQVE7QUFBQSxVQUNDNUIsY0FDRkEsY0FDRkEsY0FDU0EsWUFBWTtBQUFBO0FBQUEwQyxNQUoxQmQ7QUF3Q1QsU0FBU0wsZ0JBQWdCb0IsT0FBa0Q7QUFBQUMsTUFBQTtBQUN6RSxRQUFNLEVBQUVDLGNBQWMsSUFBSUY7QUFDMUIsUUFBTUcsV0FBVztBQUVqQixRQUFNQyxjQUFjOUMsWUFBWSxNQUFNO0FBQ3BDNEMsb0JBQWdCQyxRQUFRO0FBQUEsRUFDMUIsR0FBRyxDQUFDRCxhQUFhLENBQUM7QUFFbEIsUUFBTTdCLE1BQU1oQixhQUFhWCxlQUFlO0FBQ3hDLFFBQU0yRCxPQUFPN0MsUUFBUSxNQUFNTCxpQkFBaUJrQixHQUFHLEdBQUcsQ0FBQ0EsR0FBRyxDQUFDO0FBRXZELFNBQ0U7QUFBQSxJQUFDO0FBQUE7QUFBQSxNQUNDLGVBQ0UsdUJBQUMsY0FBVyxTQUFTK0IsYUFBYSxXQUFVLEtBQUksTUFDN0NELFlBREg7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUVBO0FBQUE7QUFBQSxJQUpKO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxFQUtHO0FBR1A7QUFBQ0YsSUFwQlFyQixpQkFBZTtBQUFBLFVBUVZ2QixZQUFZO0FBQUE7QUFBQWlELE1BUmpCMUI7QUFBZSxJQUFBVixJQUFBSSxLQUFBVSxLQUFBZSxLQUFBTztBQUFBQyxhQUFBckMsSUFBQTtBQUFBcUMsYUFBQWpDLEtBQUE7QUFBQWlDLGFBQUF2QixLQUFBO0FBQUF1QixhQUFBUixLQUFBO0FBQUFRLGFBQUFELEtBQUEiLCJuYW1lcyI6WyJFTkFCTEVfQ0hBTkdFX09GRkVSIiwiZ2FzQXRvbSIsIk9wZXJhdGl2ZU1vZGUiLCJvcGVyYXRpdmVNb2RlQXRvbSIsIm9wZXJhdGl2ZU1vZGVFbmFibGVkJCIsIlBheW1lbnQiLCJwYXltZW50VHlwZSQiLCJwb3dlckF0b20iLCJzaG93UGRmRmllbGQkIiwid2Vib3JkZXJVcmxBdG9tIiwiTGluZVNlcGFyYXRvciIsIlR5cG9ncmFwaHkiLCJTdGVwQ29udGFpbmVyIiwiU3RlcE9mZmVyVGl0bGUiLCJTdGVwVGl0bGUiLCJTdGVwQnV0dG9uIiwiU3RlcEN0YSIsIlN0ZXBMYXlvdXQiLCJnZXRQbGVuaXR1ZGVIcmVmIiwiZ29Ub1BsZW5pdHVkZSIsInVzZUF0b21WYWx1ZSIsInVzZUNhbGxiYWNrIiwidXNlRWZmZWN0IiwidXNlTWVtbyIsIkdsb2JhbFRyYWNraW5nU3RhdGUiLCJUcm91Ymxlc2hvb3RpbmdUcmFja2luZ1N0YXRlIiwidXNlVHJhY2tpbmdTdGVwRW5kaW5nIiwiTmV4dEN0YUNvbmNsdWRlVHJvdWJsZXNob290aW5nIiwiY2xhc3NlcyIsIlN0ZXBFbmRpbmdXcmFwcGVkIiwiX3MiLCJvcGVyYXRpdmVNb2RlIiwiQ0hBTkdFX09GRkVSIiwiX2MiLCJTdGVwRW5kaW5nQ2hhbmdlT2ZmZXIiLCJfczIiLCJ1cmwiLCJfYzIiLCJFbmRpbmdTdGVwIiwiX3MzIiwidHJhY2tpbmciLCJlbmFibGVkIiwiQ3RhIiwiR29Ub1dlYk9yZGVyQ3RhIiwiaGFuZGxlU3VibWl0Iiwib25FZGl0QmVnaW4iLCJvbkVkaXRTZWxlY3QiLCJfYzMiLCJSZWNhcEJveCIsIl9zNCIsInBheW1lbnQiLCJkZWxheSIsInBvd2VyIiwiZ2FzIiwic2hvd1BkZkZpZWxkIiwicG9kUGRyIiwiZmlsdGVyIiwiQm9vbGVhbiIsImpvaW4iLCJoYXNEb21pY2lsaWF0aW9uIiwiRE9NSUNJTElBVElPTiIsInJlY2FwQm94IiwiX2M0IiwicHJvcHMiLCJfczUiLCJiZWZvcmVPbkNsaWNrIiwiY2hpbGRyZW4iLCJoYW5kbGVDbGljayIsImhyZWYiLCJfYzUiLCIkUmVmcmVzaFJlZyQiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiRW5kaW5nU3RlcC50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtcclxuICBFTkFCTEVfQ0hBTkdFX09GRkVSLFxyXG4gIGdhc0F0b20sXHJcbiAgT3BlcmF0aXZlTW9kZSxcclxuICBvcGVyYXRpdmVNb2RlQXRvbSxcclxuICBvcGVyYXRpdmVNb2RlRW5hYmxlZCQsXHJcbiAgUGF5bWVudCxcclxuICBwYXltZW50VHlwZSQsXHJcbiAgcG93ZXJBdG9tLFxyXG4gIHNob3dQZGZGaWVsZCQsXHJcbiAgd2Vib3JkZXJVcmxBdG9tLFxyXG59IGZyb20gJ0BuYWotd28vZGF0YS1hY2Nlc3MnO1xyXG5pbXBvcnQgeyBMaW5lU2VwYXJhdG9yLCBUeXBvZ3JhcGh5IH0gZnJvbSAnQG5hai13by91aS1hdG9tcyc7XHJcbmltcG9ydCB7IFN0ZXBDb250YWluZXIsIFN0ZXBPZmZlclRpdGxlLCBTdGVwVGl0bGUgfSBmcm9tICdAbmFqLXdvL3VpLW1vbGVjdWxlcyc7XHJcbmltcG9ydCB7IFN0ZXBCdXR0b24sIFN0ZXBDdGEsIFN0ZXBMYXlvdXQgfSBmcm9tICdAbmFqLXdvL3VpLW9yZ2FuaXNtcyc7XHJcbmltcG9ydCB7IGdldFBsZW5pdHVkZUhyZWYsIGdvVG9QbGVuaXR1ZGUgfSBmcm9tICdAbmFqLXdvL3V0aWwnO1xyXG5pbXBvcnQgeyB1c2VBdG9tVmFsdWUgfSBmcm9tICdqb3RhaSc7XHJcbmltcG9ydCBSZWFjdCwgeyB1c2VDYWxsYmFjaywgdXNlRWZmZWN0LCB1c2VNZW1vIH0gZnJvbSAncmVhY3QnO1xyXG5pbXBvcnQge1xyXG4gIEdsb2JhbFRyYWNraW5nU3RhdGUsXHJcbiAgVHJvdWJsZXNob290aW5nVHJhY2tpbmdTdGF0ZSxcclxuICB1c2VUcmFja2luZ1N0ZXBFbmRpbmcsXHJcbn0gZnJvbSAnQG5hai13by90cmFja2luZy1hcHAnO1xyXG5pbXBvcnQgeyBOZXh0Q3RhQ29uY2x1ZGVUcm91Ymxlc2hvb3RpbmcgfSBmcm9tICcuLi9jb21wb25lbnRzL05leHRDdGEnO1xyXG5pbXBvcnQgY2xhc3NlcyBmcm9tICcuL0VuZGluZ1N0ZXAubW9kdWxlLmxlc3MnO1xyXG5cclxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gU3RlcEVuZGluZ1dyYXBwZWQoKSB7XHJcbiAgY29uc3Qgb3BlcmF0aXZlTW9kZSA9IHVzZUF0b21WYWx1ZShvcGVyYXRpdmVNb2RlQXRvbSk7XHJcblxyXG4gIC8vIFNlIGNhbWJpbyBvZmZlcnRhIGJpc29nbmEgZmFyZSBkaXJldHRhbWVudGUgaWwgcmVkaXJlY3Qgc2VuemEgZmFyIHZlZGVyZSBsbyBzdGVwXHJcbiAgaWYgKG9wZXJhdGl2ZU1vZGUgPT09IE9wZXJhdGl2ZU1vZGUuQ0hBTkdFX09GRkVSICYmICFFTkFCTEVfQ0hBTkdFX09GRkVSKSB7XHJcbiAgICByZXR1cm4gPFN0ZXBFbmRpbmdDaGFuZ2VPZmZlciAvPjtcclxuICB9XHJcblxyXG4gIHJldHVybiAoXHJcbiAgICA8R2xvYmFsVHJhY2tpbmdTdGF0ZT5cclxuICAgICAgPFRyb3VibGVzaG9vdGluZ1RyYWNraW5nU3RhdGUgbWljcm9fc3RlcD1cInByZV93b1wiPlxyXG4gICAgICAgIDxFbmRpbmdTdGVwIC8+XHJcbiAgICAgIDwvVHJvdWJsZXNob290aW5nVHJhY2tpbmdTdGF0ZT5cclxuICAgIDwvR2xvYmFsVHJhY2tpbmdTdGF0ZT5cclxuICApO1xyXG59XHJcblxyXG5mdW5jdGlvbiBTdGVwRW5kaW5nQ2hhbmdlT2ZmZXIoKSB7XHJcbiAgY29uc3QgdXJsID0gdXNlQXRvbVZhbHVlKHdlYm9yZGVyVXJsQXRvbSk7XHJcblxyXG4gIHVzZUVmZmVjdCgoKSA9PiB7XHJcbiAgICBnb1RvUGxlbml0dWRlKHVybCk7XHJcbiAgfSwgW3VybF0pO1xyXG5cclxuICByZXR1cm4gbnVsbDtcclxufVxyXG5cclxuZnVuY3Rpb24gRW5kaW5nU3RlcCgpIHtcclxuICBjb25zdCB0cmFja2luZyA9IHVzZVRyYWNraW5nU3RlcEVuZGluZygpO1xyXG4gIGNvbnN0IGVuYWJsZWQgPSB1c2VBdG9tVmFsdWUob3BlcmF0aXZlTW9kZUVuYWJsZWQkKTtcclxuICBjb25zdCBDdGEgPSB1c2VNZW1vKFxyXG4gICAgKCkgPT4gKGVuYWJsZWQgPyBOZXh0Q3RhQ29uY2x1ZGVUcm91Ymxlc2hvb3RpbmcgOiBHb1RvV2ViT3JkZXJDdGEpLFxyXG4gICAgW2VuYWJsZWRdXHJcbiAgKTtcclxuXHJcbiAgcmV0dXJuIChcclxuICAgIDxTdGVwTGF5b3V0XHJcbiAgICAgIGN0YT17PEN0YSBiZWZvcmVPbkNsaWNrPXt0cmFja2luZy5oYW5kbGVTdWJtaXR9IC8+fVxyXG4gICAgICBvbkVkaXRCZWdpbj17dHJhY2tpbmcub25FZGl0QmVnaW59XHJcbiAgICAgIG9uRWRpdFNlbGVjdD17dHJhY2tpbmcub25FZGl0U2VsZWN0fVxyXG4gICAgICBjYXJ0VmFyaWFudD1cInNpbmdsZS1wcm9kdWN0XCJcclxuICAgID5cclxuICAgICAgPFN0ZXBDb250YWluZXI+XHJcbiAgICAgICAgPFN0ZXBPZmZlclRpdGxlIC8+XHJcbiAgICAgICAgPFN0ZXBUaXRsZVxyXG4gICAgICAgICAgdGl0bGU9ezw+UHJvc3NpbWkgcGFzc2k8Lz59XHJcbiAgICAgICAgICBzdWJ0aXRsZT17XHJcbiAgICAgICAgICAgIDw+XHJcbiAgICAgICAgICAgICAgQ29tcGxpbWVudGksIGhhaSBzY2VsdG8gdHV0dGkgaSBkZXR0YWdsaSBkZWwgdHVvIG9yZGluZS4gT3JhIHB1b2lcclxuICAgICAgICAgICAgICBwcm9jZWRlcmUgcGVyIGNvbXBsZXRhcmUgbCdhY3F1aXN0by5cclxuICAgICAgICAgICAgPC8+XHJcbiAgICAgICAgICB9XHJcbiAgICAgICAgLz5cclxuICAgICAgICA8UmVjYXBCb3ggLz5cclxuICAgICAgPC9TdGVwQ29udGFpbmVyPlxyXG4gICAgPC9TdGVwTGF5b3V0PlxyXG4gICk7XHJcbn1cclxuXHJcbmZ1bmN0aW9uIFJlY2FwQm94KCkge1xyXG4gIGNvbnN0IHBheW1lbnQgPSB1c2VBdG9tVmFsdWUocGF5bWVudFR5cGUkLCB7IGRlbGF5OiAwIH0pO1xyXG4gIGNvbnN0IHBvd2VyID0gdXNlQXRvbVZhbHVlKHBvd2VyQXRvbSk7XHJcbiAgY29uc3QgZ2FzID0gdXNlQXRvbVZhbHVlKGdhc0F0b20pO1xyXG4gIGNvbnN0IHNob3dQZGZGaWVsZCA9IHVzZUF0b21WYWx1ZShzaG93UGRmRmllbGQkKTtcclxuXHJcbiAgY29uc3QgcG9kUGRyID1cclxuICAgIHNob3dQZGZGaWVsZCAmJiBbcG93ZXIgJiYgJ1BPRCcsIGdhcyAmJiAnUERSJ10uZmlsdGVyKEJvb2xlYW4pLmpvaW4oJy8nKTtcclxuICBjb25zdCBoYXNEb21pY2lsaWF0aW9uID0gcGF5bWVudCA9PT0gUGF5bWVudC5ET01JQ0lMSUFUSU9OO1xyXG5cclxuICByZXR1cm4gKFxyXG4gICAgPGRpdiBjbGFzc05hbWU9e2NsYXNzZXMucmVjYXBCb3h9PlxyXG4gICAgICA8VHlwb2dyYXBoeSBjb21wb25lbnQ9XCJoMlwiIHZhcmlhbnQ9XCJoM1wiPlxyXG4gICAgICAgIENvc2EgZGV2aSBhdmVyZVxyXG4gICAgICA8L1R5cG9ncmFwaHk+XHJcbiAgICAgIDxUeXBvZ3JhcGh5IGNvbXBvbmVudD1cInBcIiB2YXJpYW50PVwic3VidGl0bGUzXCI+XHJcbiAgICAgICAgQXNzaWN1cmF0aSBkaSBhdmVyZSBxdWVzdGkgZG9jdW1lbnRpIGEgcG9ydGF0YSBkaSBtYW5vIHBlciBhZ2V2b2xhcmUgbGFcclxuICAgICAgICBwcm9jZWR1cmEgZGkgYWNxdWlzdG9cclxuICAgICAgPC9UeXBvZ3JhcGh5PlxyXG4gICAgICA8TGluZVNlcGFyYXRvciAvPlxyXG4gICAgICA8VHlwb2dyYXBoeSBjb21wb25lbnQ9XCJ1bFwiIHZhcmlhbnQ9XCJib2R5MlwiPlxyXG4gICAgICAgIDxsaT5cclxuICAgICAgICAgIDxiPkRvY3VtZW50byBkJ2lkZW50aXTDoDwvYj4gaW4gY29yc28gZGkgdmFsaWRpdMOgXHJcbiAgICAgICAgPC9saT5cclxuICAgICAgICB7cG9kUGRyICYmIChcclxuICAgICAgICAgIDxsaT5cclxuICAgICAgICAgICAgQ29kaWNlIDxiPntwb2RQZHJ9PC9iPiByZXBlcmliaWxlIHN1bGxhIGJvbGxldHRhIG8gc3VsIGRpc3BsYXkgZGVsXHJcbiAgICAgICAgICAgIHR1byBjb250YXRvcmUgZGlnaXRhbGVcclxuICAgICAgICAgIDwvbGk+XHJcbiAgICAgICAgKX17JyAnfVxyXG4gICAgICAgIHtoYXNEb21pY2lsaWF0aW9uICYmIChcclxuICAgICAgICAgIDxsaT5cclxuICAgICAgICAgICAgPGI+Q29kaWNlIElCQU48L2I+IHBlciBsYSBkb21pY2lsaWF6aW9uZSBiYW5jYXJpYVxyXG4gICAgICAgICAgPC9saT5cclxuICAgICAgICApfVxyXG4gICAgICA8L1R5cG9ncmFwaHk+XHJcbiAgICA8L2Rpdj5cclxuICApO1xyXG59XHJcblxyXG5mdW5jdGlvbiBHb1RvV2ViT3JkZXJDdGEocHJvcHM6IHsgYmVmb3JlT25DbGljaz86IChjdGE6IHN0cmluZykgPT4gdm9pZCB9KSB7XHJcbiAgY29uc3QgeyBiZWZvcmVPbkNsaWNrIH0gPSBwcm9wcztcclxuICBjb25zdCBjaGlsZHJlbiA9ICdQcm9zZWd1aSc7XHJcblxyXG4gIGNvbnN0IGhhbmRsZUNsaWNrID0gdXNlQ2FsbGJhY2soKCkgPT4ge1xyXG4gICAgYmVmb3JlT25DbGljaz8uKGNoaWxkcmVuKTtcclxuICB9LCBbYmVmb3JlT25DbGlja10pO1xyXG5cclxuICBjb25zdCB1cmwgPSB1c2VBdG9tVmFsdWUod2Vib3JkZXJVcmxBdG9tKTtcclxuICBjb25zdCBocmVmID0gdXNlTWVtbygoKSA9PiBnZXRQbGVuaXR1ZGVIcmVmKHVybCksIFt1cmxdKTtcclxuXHJcbiAgcmV0dXJuIChcclxuICAgIDxTdGVwQ3RhXHJcbiAgICAgIHByaW1hcnlCdXR0b249e1xyXG4gICAgICAgIDxTdGVwQnV0dG9uIG9uQ2xpY2s9e2hhbmRsZUNsaWNrfSBjb21wb25lbnQ9XCJhXCIgaHJlZj17aHJlZn0+XHJcbiAgICAgICAgICB7Y2hpbGRyZW59XHJcbiAgICAgICAgPC9TdGVwQnV0dG9uPlxyXG4gICAgICB9XHJcbiAgICAvPlxyXG4gICk7XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy9zdGVwcy9zcmMvbGliL3Ryb3VibGVzaG9vdGluZy9FbmRpbmdTdGVwLnRzeCJ9

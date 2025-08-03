@@ -1,0 +1,196 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalCheckboxContent.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalCheckboxContent.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { CloseIcon } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/index.ts";
+import clsx from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/clsx.js?v=0189a8d1";
+import __vite__cjsImport5_react from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react.js?v=0189a8d1"; const useState = __vite__cjsImport5_react["useState"];
+import { ButtonPln } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/ButtonPln.tsx";
+import { FormControlLabel } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/FormControlLabel.tsx";
+import { IconButton } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/IconButton.tsx";
+import { Typography } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Typography.tsx";
+import classes from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/Modal.module.less";
+import { ModalTopIcon } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalTopIcon.tsx";
+export function ModalCheckboxContent(props) {
+  _s();
+  const [terms, setTerms] = useState(false);
+  return /* @__PURE__ */ jsxDEV("div", { className: clsx(classes.flex, classes.vPad), children: [
+    /* @__PURE__ */ jsxDEV("div", { className: clsx(classes.flex, classes.hPadClose), children: props.showClose && /* @__PURE__ */ jsxDEV(
+      IconButton,
+      {
+        className: clsx(classes.closeButton),
+        onClick: props.onClose,
+        children: /* @__PURE__ */ jsxDEV(CloseIcon, {}, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalCheckboxContent.tsx",
+          lineNumber: 35,
+          columnNumber: 13
+        }, this)
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalCheckboxContent.tsx",
+        lineNumber: 31,
+        columnNumber: 9
+      },
+      this
+    ) }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalCheckboxContent.tsx",
+      lineNumber: 29,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(
+      "div",
+      {
+        className: clsx(
+          classes.flex,
+          classes.center,
+          classes.hPad,
+          classes.gap4
+        ),
+        children: [
+          /* @__PURE__ */ jsxDEV("div", { className: clsx(classes.flex, classes.center, classes.gap2), children: [
+            /* @__PURE__ */ jsxDEV(ModalTopIcon, { icon: props.icon }, void 0, false, {
+              fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalCheckboxContent.tsx",
+              lineNumber: 48,
+              columnNumber: 11
+            }, this),
+            /* @__PURE__ */ jsxDEV(Typography, { variant: "h2", component: "h1", children: props.title }, void 0, false, {
+              fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalCheckboxContent.tsx",
+              lineNumber: 49,
+              columnNumber: 11
+            }, this),
+            /* @__PURE__ */ jsxDEV(Typography, { variant: "body2", children: props.text }, void 0, false, {
+              fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalCheckboxContent.tsx",
+              lineNumber: 52,
+              columnNumber: 11
+            }, this),
+            props.checkBoxText && /* @__PURE__ */ jsxDEV("div", { className: classes.formFieldCheckboxContainer, children: /* @__PURE__ */ jsxDEV(
+              FormControlLabel,
+              {
+                inputProps: {
+                  onChange: (event) => setTerms(event.target.checked)
+                },
+                type: "checkbox",
+                label: /* @__PURE__ */ jsxDEV(Typography, { variant: "body2", align: "left", children: props.checkBoxText }, void 0, false, {
+                  fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalCheckboxContent.tsx",
+                  lineNumber: 62,
+                  columnNumber: 15
+                }, this)
+              },
+              void 0,
+              false,
+              {
+                fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalCheckboxContent.tsx",
+                lineNumber: 56,
+                columnNumber: 15
+              },
+              this
+            ) }, void 0, false, {
+              fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalCheckboxContent.tsx",
+              lineNumber: 55,
+              columnNumber: 11
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalCheckboxContent.tsx",
+            lineNumber: 47,
+            columnNumber: 9
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: classes.btnModalContainer, children: [
+            /* @__PURE__ */ jsxDEV(
+              ButtonPln,
+              {
+                color: "secondary",
+                onClick: props.onCta1Click || props.onClose,
+                type: "button",
+                children: props.cta1
+              },
+              void 0,
+              false,
+              {
+                fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalCheckboxContent.tsx",
+                lineNumber: 72,
+                columnNumber: 11
+              },
+              this
+            ),
+            /* @__PURE__ */ jsxDEV(
+              ButtonPln,
+              {
+                color: "primary",
+                onClick: props.onCta2Click || props.onClose,
+                type: "button",
+                disabled: !terms,
+                children: props.cta2
+              },
+              void 0,
+              false,
+              {
+                fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalCheckboxContent.tsx",
+                lineNumber: 80,
+                columnNumber: 11
+              },
+              this
+            )
+          ] }, void 0, true, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalCheckboxContent.tsx",
+            lineNumber: 71,
+            columnNumber: 9
+          }, this)
+        ]
+      },
+      void 0,
+      true,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalCheckboxContent.tsx",
+        lineNumber: 39,
+        columnNumber: 7
+      },
+      this
+    )
+  ] }, void 0, true, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalCheckboxContent.tsx",
+    lineNumber: 28,
+    columnNumber: 5
+  }, this);
+}
+_s(ModalCheckboxContent, "VmsDto3YZL22qdZ9IvZtb9GBUZM=");
+_c = ModalCheckboxContent;
+var _c;
+$RefreshReg$(_c, "ModalCheckboxContent");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalCheckboxContent.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBa0NZOzs7OztxQ0FsQ1o7QUFBQSxPQUFTQSxpREFBbUM7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDNUMsT0FBT0MsVUFBVTtBQUNqQixTQUFnQ0MsZ0JBQWdCO0FBQ2hELFNBQVNDLGlCQUFpQjtBQUMxQixTQUFTQyx3QkFBd0I7QUFDakMsU0FBU0Msa0JBQWtCO0FBQzNCLFNBQVNDLGtCQUFrQjtBQUMzQixPQUFPQyxhQUFhO0FBQ3BCLFNBQVNDLG9CQUFvQjtBQWV0QixnQkFBU0MscUJBQXFCQyxPQUFrQztBQUFBQyxLQUFBO0FBQ3JFLFFBQU0sQ0FBQ0MsT0FBT0MsUUFBUSxJQUFJWCxTQUFrQixLQUFLO0FBRWpELFNBQ0UsdUJBQUMsU0FBSSxXQUFXRCxLQUFLTSxRQUFRTyxNQUFNUCxRQUFRUSxJQUFJLEdBQzdDO0FBQUEsMkJBQUMsU0FBSSxXQUFXZCxLQUFLTSxRQUFRTyxNQUFNUCxRQUFRUyxTQUFTLEdBQ2pETixnQkFBTU8sYUFDTDtBQUFBLE1BQUM7QUFBQTtBQUFBLFFBQ0MsV0FBV2hCLEtBQUtNLFFBQVFXLFdBQVc7QUFBQSxRQUNuQyxTQUFTUixNQUFNUztBQUFBQSxRQUVmLGlDQUFDLGVBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUFVO0FBQUE7QUFBQSxNQUpaO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxJQUtBLEtBUEo7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQVNBO0FBQUEsSUFDQTtBQUFBLE1BQUM7QUFBQTtBQUFBLFFBQ0MsV0FBV2xCO0FBQUFBLFVBQ1RNLFFBQVFPO0FBQUFBLFVBQ1JQLFFBQVFhO0FBQUFBLFVBQ1JiLFFBQVFjO0FBQUFBLFVBQ1JkLFFBQVFlO0FBQUFBLFFBQ1Y7QUFBQSxRQUVBO0FBQUEsaUNBQUMsU0FBSSxXQUFXckIsS0FBS00sUUFBUU8sTUFBTVAsUUFBUWEsUUFBUWIsUUFBUWdCLElBQUksR0FDN0Q7QUFBQSxtQ0FBQyxnQkFBYSxNQUFNYixNQUFNYyxRQUExQjtBQUFBO0FBQUE7QUFBQTtBQUFBLG1CQUErQjtBQUFBLFlBQy9CLHVCQUFDLGNBQVcsU0FBUSxNQUFLLFdBQVUsTUFDaENkLGdCQUFNZSxTQURUO0FBQUE7QUFBQTtBQUFBO0FBQUEsbUJBRUE7QUFBQSxZQUNBLHVCQUFDLGNBQVcsU0FBUSxTQUFTZixnQkFBTWdCLFFBQW5DO0FBQUE7QUFBQTtBQUFBO0FBQUEsbUJBQXdDO0FBQUEsWUFFdkNoQixNQUFNaUIsZ0JBQ0wsdUJBQUMsU0FBSSxXQUFXcEIsUUFBUXFCLDRCQUN0QjtBQUFBLGNBQUM7QUFBQTtBQUFBLGdCQUNDLFlBQVk7QUFBQSxrQkFDVkMsVUFBVUEsQ0FBQ0MsVUFBVWpCLFNBQVNpQixNQUFNQyxPQUFPQyxPQUFPO0FBQUEsZ0JBQ3BEO0FBQUEsZ0JBQ0EsTUFBSztBQUFBLGdCQUNMLE9BQ0UsdUJBQUMsY0FBVyxTQUFRLFNBQVEsT0FBTSxRQUMvQnRCLGdCQUFNaUIsZ0JBRFQ7QUFBQTtBQUFBO0FBQUE7QUFBQSx1QkFFQTtBQUFBO0FBQUEsY0FSSjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsWUFTRyxLQVZMO0FBQUE7QUFBQTtBQUFBO0FBQUEsbUJBWUE7QUFBQSxlQXBCSjtBQUFBO0FBQUE7QUFBQTtBQUFBLGlCQXNCQTtBQUFBLFVBRUEsdUJBQUMsU0FBSSxXQUFXcEIsUUFBUTBCLG1CQUN0QjtBQUFBO0FBQUEsY0FBQztBQUFBO0FBQUEsZ0JBQ0MsT0FBTTtBQUFBLGdCQUNOLFNBQVN2QixNQUFNd0IsZUFBZXhCLE1BQU1TO0FBQUFBLGdCQUNwQyxNQUFLO0FBQUEsZ0JBRUpULGdCQUFNeUI7QUFBQUE7QUFBQUEsY0FMVDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsWUFNQTtBQUFBLFlBRUE7QUFBQSxjQUFDO0FBQUE7QUFBQSxnQkFDQyxPQUFNO0FBQUEsZ0JBQ04sU0FBU3pCLE1BQU0wQixlQUFlMUIsTUFBTVM7QUFBQUEsZ0JBQ3BDLE1BQUs7QUFBQSxnQkFDTCxVQUFVLENBQUNQO0FBQUFBLGdCQUVWRixnQkFBTTJCO0FBQUFBO0FBQUFBLGNBTlQ7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLFlBT0E7QUFBQSxlQWhCRjtBQUFBO0FBQUE7QUFBQTtBQUFBLGlCQWlCQTtBQUFBO0FBQUE7QUFBQSxNQWpERjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsSUFrREE7QUFBQSxPQTdERjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBOERBO0FBRUo7QUFBQzFCLEdBcEVlRixzQkFBb0I7QUFBQTZCLEtBQXBCN0I7QUFBb0IsSUFBQTZCO0FBQUFDLGFBQUFELElBQUEiLCJuYW1lcyI6WyJDbG9zZUljb24iLCJjbHN4IiwidXNlU3RhdGUiLCJCdXR0b25QbG4iLCJGb3JtQ29udHJvbExhYmVsIiwiSWNvbkJ1dHRvbiIsIlR5cG9ncmFwaHkiLCJjbGFzc2VzIiwiTW9kYWxUb3BJY29uIiwiTW9kYWxDaGVja2JveENvbnRlbnQiLCJwcm9wcyIsIl9zIiwidGVybXMiLCJzZXRUZXJtcyIsImZsZXgiLCJ2UGFkIiwiaFBhZENsb3NlIiwic2hvd0Nsb3NlIiwiY2xvc2VCdXR0b24iLCJvbkNsb3NlIiwiY2VudGVyIiwiaFBhZCIsImdhcDQiLCJnYXAyIiwiaWNvbiIsInRpdGxlIiwidGV4dCIsImNoZWNrQm94VGV4dCIsImZvcm1GaWVsZENoZWNrYm94Q29udGFpbmVyIiwib25DaGFuZ2UiLCJldmVudCIsInRhcmdldCIsImNoZWNrZWQiLCJidG5Nb2RhbENvbnRhaW5lciIsIm9uQ3RhMUNsaWNrIiwiY3RhMSIsIm9uQ3RhMkNsaWNrIiwiY3RhMiIsIl9jIiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIk1vZGFsQ2hlY2tib3hDb250ZW50LnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDbG9zZUljb24gfSBmcm9tICdAbmFqLXdvL3VpLWljb25zJztcclxuaW1wb3J0IGNsc3ggZnJvbSAnY2xzeCc7XHJcbmltcG9ydCBSZWFjdCwgeyB0eXBlIFJlYWN0Tm9kZSwgdXNlU3RhdGUgfSBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCB7IEJ1dHRvblBsbiB9IGZyb20gJy4uL0J1dHRvblBsbic7XHJcbmltcG9ydCB7IEZvcm1Db250cm9sTGFiZWwgfSBmcm9tICcuLi9Gb3JtQ29udHJvbExhYmVsJztcclxuaW1wb3J0IHsgSWNvbkJ1dHRvbiB9IGZyb20gJy4uL0ljb25CdXR0b24nO1xyXG5pbXBvcnQgeyBUeXBvZ3JhcGh5IH0gZnJvbSAnLi4vVHlwb2dyYXBoeSc7XHJcbmltcG9ydCBjbGFzc2VzIGZyb20gJy4vTW9kYWwubW9kdWxlLmxlc3MnO1xyXG5pbXBvcnQgeyBNb2RhbFRvcEljb24gfSBmcm9tICcuL01vZGFsVG9wSWNvbic7XHJcblxyXG50eXBlIE1vZGFsQ2hlY2tib3hDb250ZW50UHJvcHMgPSB7XHJcbiAgaWNvbjogUmVhY3ROb2RlO1xyXG4gIHRpdGxlOiBSZWFjdE5vZGU7XHJcbiAgdGV4dDogUmVhY3ROb2RlO1xyXG4gIGN0YTE6IFJlYWN0Tm9kZTtcclxuICBjdGEyOiBSZWFjdE5vZGU7XHJcbiAgY2hlY2tCb3hUZXh0OiBSZWFjdE5vZGU7XHJcbiAgc2hvd0Nsb3NlOiBib29sZWFuO1xyXG4gIG9uQ2xvc2U6ICgpID0+IHZvaWQ7XHJcbiAgb25DdGExQ2xpY2s/OiAoKSA9PiB2b2lkO1xyXG4gIG9uQ3RhMkNsaWNrPzogKCkgPT4gdm9pZDtcclxufTtcclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBNb2RhbENoZWNrYm94Q29udGVudChwcm9wczogTW9kYWxDaGVja2JveENvbnRlbnRQcm9wcykge1xyXG4gIGNvbnN0IFt0ZXJtcywgc2V0VGVybXNdID0gdXNlU3RhdGU8Ym9vbGVhbj4oZmFsc2UpO1xyXG5cclxuICByZXR1cm4gKFxyXG4gICAgPGRpdiBjbGFzc05hbWU9e2Nsc3goY2xhc3Nlcy5mbGV4LCBjbGFzc2VzLnZQYWQpfT5cclxuICAgICAgPGRpdiBjbGFzc05hbWU9e2Nsc3goY2xhc3Nlcy5mbGV4LCBjbGFzc2VzLmhQYWRDbG9zZSl9PlxyXG4gICAgICAgIHtwcm9wcy5zaG93Q2xvc2UgJiYgKFxyXG4gICAgICAgICAgPEljb25CdXR0b25cclxuICAgICAgICAgICAgY2xhc3NOYW1lPXtjbHN4KGNsYXNzZXMuY2xvc2VCdXR0b24pfVxyXG4gICAgICAgICAgICBvbkNsaWNrPXtwcm9wcy5vbkNsb3NlfVxyXG4gICAgICAgICAgPlxyXG4gICAgICAgICAgICA8Q2xvc2VJY29uIC8+XHJcbiAgICAgICAgICA8L0ljb25CdXR0b24+XHJcbiAgICAgICAgKX1cclxuICAgICAgPC9kaXY+XHJcbiAgICAgIDxkaXZcclxuICAgICAgICBjbGFzc05hbWU9e2Nsc3goXHJcbiAgICAgICAgICBjbGFzc2VzLmZsZXgsXHJcbiAgICAgICAgICBjbGFzc2VzLmNlbnRlcixcclxuICAgICAgICAgIGNsYXNzZXMuaFBhZCxcclxuICAgICAgICAgIGNsYXNzZXMuZ2FwNFxyXG4gICAgICAgICl9XHJcbiAgICAgID5cclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT17Y2xzeChjbGFzc2VzLmZsZXgsIGNsYXNzZXMuY2VudGVyLCBjbGFzc2VzLmdhcDIpfT5cclxuICAgICAgICAgIDxNb2RhbFRvcEljb24gaWNvbj17cHJvcHMuaWNvbn0gLz5cclxuICAgICAgICAgIDxUeXBvZ3JhcGh5IHZhcmlhbnQ9XCJoMlwiIGNvbXBvbmVudD1cImgxXCI+XHJcbiAgICAgICAgICAgIHtwcm9wcy50aXRsZX1cclxuICAgICAgICAgIDwvVHlwb2dyYXBoeT5cclxuICAgICAgICAgIDxUeXBvZ3JhcGh5IHZhcmlhbnQ9XCJib2R5MlwiPntwcm9wcy50ZXh0fTwvVHlwb2dyYXBoeT5cclxuXHJcbiAgICAgICAgICB7cHJvcHMuY2hlY2tCb3hUZXh0ICYmIChcclxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9e2NsYXNzZXMuZm9ybUZpZWxkQ2hlY2tib3hDb250YWluZXJ9PlxyXG4gICAgICAgICAgICAgIDxGb3JtQ29udHJvbExhYmVsXHJcbiAgICAgICAgICAgICAgICBpbnB1dFByb3BzPXt7XHJcbiAgICAgICAgICAgICAgICAgIG9uQ2hhbmdlOiAoZXZlbnQpID0+IHNldFRlcm1zKGV2ZW50LnRhcmdldC5jaGVja2VkKSxcclxuICAgICAgICAgICAgICAgIH19XHJcbiAgICAgICAgICAgICAgICB0eXBlPVwiY2hlY2tib3hcIlxyXG4gICAgICAgICAgICAgICAgbGFiZWw9e1xyXG4gICAgICAgICAgICAgICAgICA8VHlwb2dyYXBoeSB2YXJpYW50PVwiYm9keTJcIiBhbGlnbj1cImxlZnRcIj5cclxuICAgICAgICAgICAgICAgICAgICB7cHJvcHMuY2hlY2tCb3hUZXh0fVxyXG4gICAgICAgICAgICAgICAgICA8L1R5cG9ncmFwaHk+XHJcbiAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgLz5cclxuICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICApfVxyXG4gICAgICAgIDwvZGl2PlxyXG5cclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT17Y2xhc3Nlcy5idG5Nb2RhbENvbnRhaW5lcn0+XHJcbiAgICAgICAgICA8QnV0dG9uUGxuXHJcbiAgICAgICAgICAgIGNvbG9yPVwic2Vjb25kYXJ5XCJcclxuICAgICAgICAgICAgb25DbGljaz17cHJvcHMub25DdGExQ2xpY2sgfHwgcHJvcHMub25DbG9zZX1cclxuICAgICAgICAgICAgdHlwZT1cImJ1dHRvblwiXHJcbiAgICAgICAgICA+XHJcbiAgICAgICAgICAgIHtwcm9wcy5jdGExfVxyXG4gICAgICAgICAgPC9CdXR0b25QbG4+XHJcblxyXG4gICAgICAgICAgPEJ1dHRvblBsblxyXG4gICAgICAgICAgICBjb2xvcj1cInByaW1hcnlcIlxyXG4gICAgICAgICAgICBvbkNsaWNrPXtwcm9wcy5vbkN0YTJDbGljayB8fCBwcm9wcy5vbkNsb3NlfVxyXG4gICAgICAgICAgICB0eXBlPVwiYnV0dG9uXCJcclxuICAgICAgICAgICAgZGlzYWJsZWQ9eyF0ZXJtc31cclxuICAgICAgICAgID5cclxuICAgICAgICAgICAge3Byb3BzLmN0YTJ9XHJcbiAgICAgICAgICA8L0J1dHRvblBsbj5cclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgPC9kaXY+XHJcbiAgICA8L2Rpdj5cclxuICApO1xyXG59XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvdWktYXRvbXMvc3JjL2xpYi9tb2RhbC9Nb2RhbENoZWNrYm94Q29udGVudC50c3gifQ==

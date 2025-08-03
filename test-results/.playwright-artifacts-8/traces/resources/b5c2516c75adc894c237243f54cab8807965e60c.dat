@@ -1,0 +1,76 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/app/app.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/apps/naj/src/app/app.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import __vite__cjsImport3_react from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react.js?v=0189a8d1"; const React = __vite__cjsImport3_react.__esModule ? __vite__cjsImport3_react.default : __vite__cjsImport3_react;
+import { GlobalSuspense } from "/src/app/suspense-components.tsx";
+const ErrorBoundary = React.lazy(_c = () => import("/src/app/ErrorBoundary.tsx"));
+_c2 = ErrorBoundary;
+const Services = React.lazy(_c3 = () => import("/src/services/services.tsx"));
+_c4 = Services;
+const Routes = React.lazy(_c5 = () => import("/src/app/routes.tsx?t=1754053241441"));
+_c6 = Routes;
+export function App() {
+  return /* @__PURE__ */ jsxDEV(GlobalSuspense, { children: /* @__PURE__ */ jsxDEV(ErrorBoundary, { children: /* @__PURE__ */ jsxDEV(Services, { children: /* @__PURE__ */ jsxDEV(Routes, {}, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/apps/naj/src/app/app.tsx",
+    lineNumber: 13,
+    columnNumber: 11
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/apps/naj/src/app/app.tsx",
+    lineNumber: 12,
+    columnNumber: 9
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/apps/naj/src/app/app.tsx",
+    lineNumber: 11,
+    columnNumber: 7
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/apps/naj/src/app/app.tsx",
+    lineNumber: 10,
+    columnNumber: 5
+  }, this);
+}
+_c7 = App;
+export default App;
+var _c, _c2, _c3, _c4, _c5, _c6, _c7;
+$RefreshReg$(_c, "ErrorBoundary$React.lazy");
+$RefreshReg$(_c2, "ErrorBoundary");
+$RefreshReg$(_c3, "Services$React.lazy");
+$RefreshReg$(_c4, "Services");
+$RefreshReg$(_c5, "Routes$React.lazy");
+$RefreshReg$(_c6, "Routes");
+$RefreshReg$(_c7, "App");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/apps/naj/src/app/app.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBWVU7Ozs7O2dCQVpWLE9BQU9BLENBQUssYUFBYTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUN6QixTQUFTQyxzQkFBc0I7QUFFL0IsTUFBTUMsZ0JBQWdCRixNQUFNRyxLQUFJQyxLQUFDQSxNQUFNLE9BQU8saUJBQWlCLENBQUM7QUFBRUMsTUFBNURIO0FBQ04sTUFBTUksV0FBV04sTUFBTUcsS0FBSUksTUFBQ0EsTUFBTSxPQUFPLHNCQUFzQixDQUFDO0FBQUVDLE1BQTVERjtBQUNOLE1BQU1HLFNBQVNULE1BQU1HLEtBQUlPLE1BQUNBLE1BQU0sT0FBTyxVQUFVLENBQUM7QUFBRUMsTUFBOUNGO0FBRUMsZ0JBQVNHLE1BQU07QUFDcEIsU0FDRSx1QkFBQyxrQkFDQyxpQ0FBQyxpQkFDQyxpQ0FBQyxZQUNDLGlDQUFDLFlBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQUFPLEtBRFQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQUVBLEtBSEY7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQUlBLEtBTEY7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQU1BO0FBRUo7QUFBQ0MsTUFWZUQ7QUFZaEIsZUFBZUE7QUFBSSxJQUFBUixJQUFBQyxLQUFBRSxLQUFBQyxLQUFBRSxLQUFBQyxLQUFBRTtBQUFBQyxhQUFBVixJQUFBO0FBQUFVLGFBQUFULEtBQUE7QUFBQVMsYUFBQVAsS0FBQTtBQUFBTyxhQUFBTixLQUFBO0FBQUFNLGFBQUFKLEtBQUE7QUFBQUksYUFBQUgsS0FBQTtBQUFBRyxhQUFBRCxLQUFBIiwibmFtZXMiOlsiUmVhY3QiLCJHbG9iYWxTdXNwZW5zZSIsIkVycm9yQm91bmRhcnkiLCJsYXp5IiwiX2MiLCJfYzIiLCJTZXJ2aWNlcyIsIl9jMyIsIl9jNCIsIlJvdXRlcyIsIl9jNSIsIl9jNiIsIkFwcCIsIl9jNyIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJhcHAudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCB7IEdsb2JhbFN1c3BlbnNlIH0gZnJvbSAnLi9zdXNwZW5zZS1jb21wb25lbnRzJztcclxuXHJcbmNvbnN0IEVycm9yQm91bmRhcnkgPSBSZWFjdC5sYXp5KCgpID0+IGltcG9ydCgnLi9FcnJvckJvdW5kYXJ5JykpO1xyXG5jb25zdCBTZXJ2aWNlcyA9IFJlYWN0LmxhenkoKCkgPT4gaW1wb3J0KCcuLi9zZXJ2aWNlcy9zZXJ2aWNlcycpKTtcclxuY29uc3QgUm91dGVzID0gUmVhY3QubGF6eSgoKSA9PiBpbXBvcnQoJy4vcm91dGVzJykpO1xyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIEFwcCgpIHtcclxuICByZXR1cm4gKFxyXG4gICAgPEdsb2JhbFN1c3BlbnNlPlxyXG4gICAgICA8RXJyb3JCb3VuZGFyeT5cclxuICAgICAgICA8U2VydmljZXM+XHJcbiAgICAgICAgICA8Um91dGVzIC8+XHJcbiAgICAgICAgPC9TZXJ2aWNlcz5cclxuICAgICAgPC9FcnJvckJvdW5kYXJ5PlxyXG4gICAgPC9HbG9iYWxTdXNwZW5zZT5cclxuICApO1xyXG59XHJcblxyXG5leHBvcnQgZGVmYXVsdCBBcHA7XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2FwcHMvbmFqL3NyYy9hcHAvYXBwLnRzeCJ9

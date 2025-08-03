@@ -1,0 +1,77 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { toLocalizedYesNo } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/index.ts";
+import { atom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+import { AppointmentPeriodOptions, MeterLocationOptions, UnitaAbitativeOptions } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/activations/inputs-definitions.ts";
+export const dataAttivazione$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\activations\\inputs.ts/dataAttivazione$", atom());
+dataAttivazione$.debugLabel = "dataAttivazione$";
+export const fasciaOrariaAppuntamento$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\activations\\inputs.ts/fasciaOrariaAppuntamento$", atom());
+fasciaOrariaAppuntamento$.debugLabel = "fasciaOrariaAppuntamento$";
+export const intestatarioPresenteAppuntamento$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\activations\\inputs.ts/intestatarioPresenteAppuntamento$", atom());
+intestatarioPresenteAppuntamento$.debugLabel = "intestatarioPresenteAppuntamento$";
+export const substituteName$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\activations\\inputs.ts/substituteName$", atom());
+substituteName$.debugLabel = "substituteName$";
+export const substituteSurname$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\activations\\inputs.ts/substituteSurname$", atom());
+substituteSurname$.debugLabel = "substituteSurname$";
+export const substitutePhoneNumber$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\activations\\inputs.ts/substitutePhoneNumber$", atom());
+substitutePhoneNumber$.debugLabel = "substitutePhoneNumber$";
+export const citofonoAccessibile$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\activations\\inputs.ts/citofonoAccessibile$", atom());
+citofonoAccessibile$.debugLabel = "citofonoAccessibile$";
+export const nominativoSulCitofono$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\activations\\inputs.ts/nominativoSulCitofono$", atom());
+nominativoSulCitofono$.debugLabel = "nominativoSulCitofono$";
+export const contatoreAccessibile$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\activations\\inputs.ts/contatoreAccessibile$", atom());
+contatoreAccessibile$.debugLabel = "contatoreAccessibile$";
+export const posizioneContatore$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\activations\\inputs.ts/posizioneContatore$", atom());
+posizioneContatore$.debugLabel = "posizioneContatore$";
+export const noteContatore$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\activations\\inputs.ts/noteContatore$", atom());
+noteContatore$.debugLabel = "noteContatore$";
+export const unitaAbitativeAtom = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\activations\\inputs.ts/unitaAbitativeAtom", atom());
+unitaAbitativeAtom.debugLabel = "unitaAbitativeAtom";
+export const unitaAbitativeAsStringAtom = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\activations\\inputs.ts/unitaAbitativeAsStringAtom", atom((get) => {
+  const value = get(unitaAbitativeAtom);
+  return findLabelFromOptions(Object.values(UnitaAbitativeOptions), value);
+}));
+unitaAbitativeAsStringAtom.debugLabel = "unitaAbitativeAsStringAtom";
+export const attivareFornituraAtom = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\activations\\inputs.ts/attivareFornituraAtom", atom({
+  activationDate: null,
+  activationRapid: false
+}));
+attivareFornituraAtom.debugLabel = "attivareFornituraAtom";
+export const activationDateAsStringAtom = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\activations\\inputs.ts/activationDateAsStringAtom", atom((get) => {
+  return get(attivareFornituraAtom).activationDate;
+}));
+activationDateAsStringAtom.debugLabel = "activationDateAsStringAtom";
+export const activationRapidAsStringAtom = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\activations\\inputs.ts/activationRapidAsStringAtom", atom((get) => {
+  return toLocalizedYesNo(get(attivareFornituraAtom).activationRapid);
+}));
+activationRapidAsStringAtom.debugLabel = "activationRapidAsStringAtom";
+export const appointmentPeriodAsStringAtom = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\activations\\inputs.ts/appointmentPeriodAsStringAtom", atom((get) => {
+  const value = get(fasciaOrariaAppuntamento$);
+  return findLabelFromOptions(AppointmentPeriodOptions, value);
+}));
+appointmentPeriodAsStringAtom.debugLabel = "appointmentPeriodAsStringAtom";
+export const contatoreAccessibileAsString$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\activations\\inputs.ts/contatoreAccessibileAsString$", atom((get) => {
+  return toLocalizedYesNo(get(contatoreAccessibile$));
+}));
+contatoreAccessibileAsString$.debugLabel = "contatoreAccessibileAsString$";
+export const locationMeterAsStringAtom = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\activations\\inputs.ts/locationMeterAsStringAtom", atom((get) => {
+  const value = get(posizioneContatore$);
+  return findLabelFromOptions(MeterLocationOptions, value);
+}));
+locationMeterAsStringAtom.debugLabel = "locationMeterAsStringAtom";
+function findLabelFromOptions(options, value) {
+  if (value == null) {
+    return;
+  }
+  return options.find((option) => option.value === value)?.label;
+}
+
+//# sourceMappingURL=data:application/json;base64,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QkFBQXZCLGFBQUE7QUFFSCxhQUFBd0IsNEJBQUEzQixXQUFBQyxlQUFBQyxJQUFBLHVJQUF5Q1AsS0FBTU8sU0FBUTtBQUNyRCxRQUFNYyxRQUFRZCxJQUFJVSxtQkFBbUI7QUFDckMsU0FBT0sscUJBQXFCcEIsc0JBQXNCbUIsS0FBSztBQUN6RCxDQUFDLENBQUM7QUFBQ1csMEJBQUF4QixhQUFBO0FBRUgsU0FBU2MscUJBQ1BXLFNBQ0FaLE9BQ0E7QUFDQSxNQUFJQSxTQUFTLE1BQU07QUFDakI7QUFBQSxFQUNGO0FBQ0EsU0FBT1ksUUFBUUMsS0FBTUMsWUFBV0EsT0FBT2QsVUFBVUEsS0FBSyxHQUFHZTtBQUMzRCIsIm5hbWVzIjpbInRvTG9jYWxpemVkWWVzTm8iLCJhdG9tIiwiQXBwb2ludG1lbnRQZXJpb2RPcHRpb25zIiwiTWV0ZXJMb2NhdGlvbk9wdGlvbnMiLCJVbml0YUFiaXRhdGl2ZU9wdGlvbnMiLCJkYXRhQXR0aXZhemlvbmUkIiwiZ2xvYmFsVGhpcyIsImpvdGFpQXRvbUNhY2hlIiwiZ2V0IiwiZGVidWdMYWJlbCIsImZhc2NpYU9yYXJpYUFwcHVudGFtZW50byQiLCJpbnRlc3RhdGFyaW9QcmVzZW50ZUFwcHVudGFtZW50byQiLCJzdWJzdGl0dXRlTmFtZSQiLCJzdWJzdGl0dXRlU3VybmFtZSQiLCJzdWJzdGl0dXRlUGhvbmVOdW1iZXIkIiwiY2l0b2Zvbm9BY2Nlc3NpYmlsZSQiLCJub21pbmF0aXZvU3VsQ2l0b2Zvbm8kIiwiY29udGF0b3JlQWNjZXNzaWJpbGUkIiwicG9zaXppb25lQ29udGF0b3JlJCIsIm5vdGVDb250YXRvcmUkIiwidW5pdGFBYml0YXRpdmVBdG9tIiwidW5pdGFBYml0YXRpdmVBc1N0cmluZ0F0b20iLCJ2YWx1ZSIsImZpbmRMYWJlbEZyb21PcHRpb25zIiwiT2JqZWN0IiwidmFsdWVzIiwiYXR0aXZhcmVGb3JuaXR1cmFBdG9tIiwiYWN0aXZhdGlvbkRhdGUiLCJhY3RpdmF0aW9uUmFwaWQiLCJhY3RpdmF0aW9uRGF0ZUFzU3RyaW5nQXRvbSIsImFjdGl2YXRpb25SYXBpZEFzU3RyaW5nQXRvbSIsImFwcG9pbnRtZW50UGVyaW9kQXNTdHJpbmdBdG9tIiwiY29udGF0b3JlQWNjZXNzaWJpbGVBc1N0cmluZyQiLCJsb2NhdGlvbk1ldGVyQXNTdHJpbmdBdG9tIiwib3B0aW9ucyIsImZpbmQiLCJvcHRpb24iLCJsYWJlbCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJpbnB1dHMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgdG9Mb2NhbGl6ZWRZZXNObyB9IGZyb20gJ0BuYWotd28vdXRpbCc7XHJcbmltcG9ydCB7IGF0b20gfSBmcm9tICdqb3RhaSc7XHJcbmltcG9ydCB7XHJcbiAgQXBwb2ludG1lbnRQZXJpb2QsXHJcbiAgQXBwb2ludG1lbnRQZXJpb2RPcHRpb25zLFxyXG4gIE1ldGVyTG9jYXRpb24sXHJcbiAgTWV0ZXJMb2NhdGlvbk9wdGlvbnMsXHJcbiAgVW5pdGFBYml0YXRpdmUsXHJcbiAgVW5pdGFBYml0YXRpdmVPcHRpb25zLFxyXG59IGZyb20gJy4vaW5wdXRzLWRlZmluaXRpb25zJztcclxuXHJcbmV4cG9ydCBjb25zdCBkYXRhQXR0aXZhemlvbmUkID0gYXRvbTxEYXRlPigpO1xyXG5leHBvcnQgY29uc3QgZmFzY2lhT3JhcmlhQXBwdW50YW1lbnRvJCA9IGF0b208QXBwb2ludG1lbnRQZXJpb2Q+KCk7XHJcbmV4cG9ydCBjb25zdCBpbnRlc3RhdGFyaW9QcmVzZW50ZUFwcHVudGFtZW50byQgPSBhdG9tPGJvb2xlYW4+KCk7XHJcbmV4cG9ydCBjb25zdCBzdWJzdGl0dXRlTmFtZSQgPSBhdG9tPHN0cmluZz4oKTtcclxuZXhwb3J0IGNvbnN0IHN1YnN0aXR1dGVTdXJuYW1lJCA9IGF0b208c3RyaW5nPigpO1xyXG5leHBvcnQgY29uc3Qgc3Vic3RpdHV0ZVBob25lTnVtYmVyJCA9IGF0b208c3RyaW5nPigpO1xyXG5leHBvcnQgY29uc3QgY2l0b2Zvbm9BY2Nlc3NpYmlsZSQgPSBhdG9tPGJvb2xlYW4+KCk7XHJcbmV4cG9ydCBjb25zdCBub21pbmF0aXZvU3VsQ2l0b2Zvbm8kID0gYXRvbTxzdHJpbmc+KCk7XHJcbmV4cG9ydCBjb25zdCBjb250YXRvcmVBY2Nlc3NpYmlsZSQgPSBhdG9tPGJvb2xlYW4+KCk7XHJcbmV4cG9ydCBjb25zdCBwb3NpemlvbmVDb250YXRvcmUkID0gYXRvbTxNZXRlckxvY2F0aW9uPigpO1xyXG5leHBvcnQgY29uc3Qgbm90ZUNvbnRhdG9yZSQgPSBhdG9tPHN0cmluZz4oKTtcclxuXHJcbmV4cG9ydCBjb25zdCB1bml0YUFiaXRhdGl2ZUF0b20gPSBhdG9tPFVuaXRhQWJpdGF0aXZlPigpO1xyXG5cclxuZXhwb3J0IGNvbnN0IHVuaXRhQWJpdGF0aXZlQXNTdHJpbmdBdG9tID0gYXRvbSgoZ2V0KSA9PiB7XHJcbiAgY29uc3QgdmFsdWUgPSBnZXQodW5pdGFBYml0YXRpdmVBdG9tKTtcclxuICByZXR1cm4gZmluZExhYmVsRnJvbU9wdGlvbnMoT2JqZWN0LnZhbHVlcyhVbml0YUFiaXRhdGl2ZU9wdGlvbnMpLCB2YWx1ZSk7XHJcbn0pO1xyXG5cclxuZXhwb3J0IGNvbnN0IGF0dGl2YXJlRm9ybml0dXJhQXRvbSA9IGF0b208e1xyXG4gIGFjdGl2YXRpb25EYXRlOiBzdHJpbmcgfCBudWxsO1xyXG4gIGFjdGl2YXRpb25SYXBpZD86IGJvb2xlYW47XHJcbn0+KHtcclxuICBhY3RpdmF0aW9uRGF0ZTogbnVsbCxcclxuICBhY3RpdmF0aW9uUmFwaWQ6IGZhbHNlLFxyXG59KTtcclxuXHJcbmV4cG9ydCBjb25zdCBhY3RpdmF0aW9uRGF0ZUFzU3RyaW5nQXRvbSA9IGF0b20oKGdldCkgPT4ge1xyXG4gIHJldHVybiBnZXQoYXR0aXZhcmVGb3JuaXR1cmFBdG9tKS5hY3RpdmF0aW9uRGF0ZTtcclxufSk7XHJcblxyXG5leHBvcnQgY29uc3QgYWN0aXZhdGlvblJhcGlkQXNTdHJpbmdBdG9tID0gYXRvbSgoZ2V0KSA9PiB7XHJcbiAgcmV0dXJuIHRvTG9jYWxpemVkWWVzTm8oZ2V0KGF0dGl2YXJlRm9ybml0dXJhQXRvbSkuYWN0aXZhdGlvblJhcGlkKTtcclxufSk7XHJcblxyXG5leHBvcnQgY29uc3QgYXBwb2ludG1lbnRQZXJpb2RBc1N0cmluZ0F0b20gPSBhdG9tKChnZXQpID0+IHtcclxuICBjb25zdCB2YWx1ZSA9IGdldChmYXNjaWFPcmFyaWFBcHB1bnRhbWVudG8kKTtcclxuICByZXR1cm4gZmluZExhYmVsRnJvbU9wdGlvbnMoQXBwb2ludG1lbnRQZXJpb2RPcHRpb25zLCB2YWx1ZSk7XHJcbn0pO1xyXG5cclxuZXhwb3J0IGNvbnN0IGNvbnRhdG9yZUFjY2Vzc2liaWxlQXNTdHJpbmckID0gYXRvbSgoZ2V0KSA9PiB7XHJcbiAgcmV0dXJuIHRvTG9jYWxpemVkWWVzTm8oZ2V0KGNvbnRhdG9yZUFjY2Vzc2liaWxlJCkpO1xyXG59KTtcclxuXHJcbmV4cG9ydCBjb25zdCBsb2NhdGlvbk1ldGVyQXNTdHJpbmdBdG9tID0gYXRvbSgoZ2V0KSA9PiB7XHJcbiAgY29uc3QgdmFsdWUgPSBnZXQocG9zaXppb25lQ29udGF0b3JlJCk7XHJcbiAgcmV0dXJuIGZpbmRMYWJlbEZyb21PcHRpb25zKE1ldGVyTG9jYXRpb25PcHRpb25zLCB2YWx1ZSk7XHJcbn0pO1xyXG5cclxuZnVuY3Rpb24gZmluZExhYmVsRnJvbU9wdGlvbnM8VmFsdWUgZXh0ZW5kcyBzdHJpbmc+KFxyXG4gIG9wdGlvbnM6IHJlYWRvbmx5IHsgdmFsdWU6IFZhbHVlOyBsYWJlbDogc3RyaW5nIH1bXSxcclxuICB2YWx1ZTogVmFsdWUgfCBudWxsIHwgdW5kZWZpbmVkXHJcbikge1xyXG4gIGlmICh2YWx1ZSA9PSBudWxsKSB7XHJcbiAgICByZXR1cm47XHJcbiAgfVxyXG4gIHJldHVybiBvcHRpb25zLmZpbmQoKG9wdGlvbikgPT4gb3B0aW9uLnZhbHVlID09PSB2YWx1ZSk/LmxhYmVsO1xyXG59XHJcblxyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL2RhdGEtYWNjZXNzL3NyYy9saWIvYXRvbXMvYWN0aXZhdGlvbnMvaW5wdXRzLnRzIn0=

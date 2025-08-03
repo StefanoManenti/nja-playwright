@@ -1,0 +1,21 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { atom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+export const numWorkersAtom = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\business\\company-atoms.ts/numWorkersAtom", atom());
+numWorkersAtom.debugLabel = "numWorkersAtom";
+export const salesVolumeAtom = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\business\\company-atoms.ts/salesVolumeAtom", atom());
+salesVolumeAtom.debugLabel = "salesVolumeAtom";
+export const pecBusinessAtom = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\business\\company-atoms.ts/pecBusinessAtom", atom());
+pecBusinessAtom.debugLabel = "pecBusinessAtom";
+export const sdiBusinessAtom = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\business\\company-atoms.ts/sdiBusinessAtom", atom());
+sdiBusinessAtom.debugLabel = "sdiBusinessAtom";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLFlBQVk7QUFHckIsYUFBQUMsaUJBQUFDLFdBQUFDLGVBQUFDLElBQUEsZ0lBQThCSixLQUFpQixDQUFDO0FBQUNDLGVBQUFJLGFBQUE7QUFDakQsYUFBQUMsa0JBQUFKLFdBQUFDLGVBQUFDLElBQUEsaUlBQStCSixLQUFrQixDQUFDO0FBQUNNLGdCQUFBRCxhQUFBO0FBQ25ELGFBQUFFLGtCQUFBTCxXQUFBQyxlQUFBQyxJQUFBLGlJQUErQkosS0FBYSxDQUFDO0FBQUNPLGdCQUFBRixhQUFBO0FBQzlDLGFBQUFHLGtCQUFBTixXQUFBQyxlQUFBQyxJQUFBLGlJQUErQkosS0FBYSxDQUFDO0FBQUNRLGdCQUFBSCxhQUFBIiwibmFtZXMiOlsiYXRvbSIsIm51bVdvcmtlcnNBdG9tIiwiZ2xvYmFsVGhpcyIsImpvdGFpQXRvbUNhY2hlIiwiZ2V0IiwiZGVidWdMYWJlbCIsInNhbGVzVm9sdW1lQXRvbSIsInBlY0J1c2luZXNzQXRvbSIsInNkaUJ1c2luZXNzQXRvbSJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJjb21wYW55LWF0b21zLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGF0b20gfSBmcm9tICdqb3RhaSc7XHJcbmltcG9ydCB7IE51bVdvcmtlcnMsIFNhbGVzVm9sdW1lIH0gZnJvbSAnLi9pbnB1dHMtZGVmaW5pdGlvbnMnO1xyXG5cclxuZXhwb3J0IGNvbnN0IG51bVdvcmtlcnNBdG9tID0gYXRvbTxOdW1Xb3JrZXJzPigpO1xyXG5leHBvcnQgY29uc3Qgc2FsZXNWb2x1bWVBdG9tID0gYXRvbTxTYWxlc1ZvbHVtZT4oKTtcclxuZXhwb3J0IGNvbnN0IHBlY0J1c2luZXNzQXRvbSA9IGF0b208c3RyaW5nPigpO1xyXG5leHBvcnQgY29uc3Qgc2RpQnVzaW5lc3NBdG9tID0gYXRvbTxzdHJpbmc+KCk7XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvZGF0YS1hY2Nlc3Mvc3JjL2xpYi9hdG9tcy9idXNpbmVzcy9jb21wYW55LWF0b21zLnRzIn0=

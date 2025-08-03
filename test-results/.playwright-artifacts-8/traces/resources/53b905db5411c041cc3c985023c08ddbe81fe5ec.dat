@@ -1,0 +1,151 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepSkeleton.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepSkeleton.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { Skeleton, Typography } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+import { StepContainer, StepTitle } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/index.ts";
+export function StepSkeleton() {
+  return /* @__PURE__ */ jsxDEV(StepContainer, { children: [
+    /* @__PURE__ */ jsxDEV(Typography, { component: "div", variant: "h1", children: /* @__PURE__ */ jsxDEV(Skeleton, { maxWidth: 224 }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepSkeleton.tsx",
+      lineNumber: 9,
+      columnNumber: 9
+    }, this) }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepSkeleton.tsx",
+      lineNumber: 8,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(
+      StepTitle,
+      {
+        title: /* @__PURE__ */ jsxDEV(Skeleton, { maxWidth: 390 }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepSkeleton.tsx",
+          lineNumber: 13,
+          columnNumber: 16
+        }, this),
+        subtitle: /* @__PURE__ */ jsxDEV(Skeleton, { maxWidth: 530 }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepSkeleton.tsx",
+          lineNumber: 14,
+          columnNumber: 19
+        }, this)
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepSkeleton.tsx",
+        lineNumber: 12,
+        columnNumber: 7
+      },
+      this
+    ),
+    /* @__PURE__ */ jsxDEV(Skeleton, { variant: "rounded", height: 67 }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepSkeleton.tsx",
+      lineNumber: 17,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(Skeleton, { variant: "rounded", height: 67 }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepSkeleton.tsx",
+      lineNumber: 18,
+      columnNumber: 7
+    }, this),
+    [0, 1].map(
+      (_, i) => /* @__PURE__ */ jsxDEV(
+        "div",
+        {
+          style: { display: "flex", flexDirection: "column", gap: 24 },
+          children: [
+            /* @__PURE__ */ jsxDEV(
+              StepTitle,
+              {
+                title: /* @__PURE__ */ jsxDEV(Skeleton, { maxWidth: 390 }, void 0, false, {
+                  fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepSkeleton.tsx",
+                  lineNumber: 26,
+                  columnNumber: 18
+                }, this),
+                subtitle: /* @__PURE__ */ jsxDEV(Skeleton, { maxWidth: 530 }, void 0, false, {
+                  fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepSkeleton.tsx",
+                  lineNumber: 27,
+                  columnNumber: 21
+                }, this)
+              },
+              void 0,
+              false,
+              {
+                fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepSkeleton.tsx",
+                lineNumber: 25,
+                columnNumber: 11
+              },
+              this
+            ),
+            /* @__PURE__ */ jsxDEV("div", { style: { display: "flex", gap: 24 }, children: [
+              /* @__PURE__ */ jsxDEV(Skeleton, { variant: "rounded", height: 67, style: { flex: "1" } }, void 0, false, {
+                fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepSkeleton.tsx",
+                lineNumber: 31,
+                columnNumber: 13
+              }, this),
+              /* @__PURE__ */ jsxDEV(Skeleton, { variant: "rounded", height: 67, style: { flex: "1" } }, void 0, false, {
+                fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepSkeleton.tsx",
+                lineNumber: 32,
+                columnNumber: 13
+              }, this)
+            ] }, void 0, true, {
+              fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepSkeleton.tsx",
+              lineNumber: 30,
+              columnNumber: 11
+            }, this)
+          ]
+        },
+        i,
+        true,
+        {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepSkeleton.tsx",
+          lineNumber: 21,
+          columnNumber: 7
+        },
+        this
+      )
+    )
+  ] }, void 0, true, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepSkeleton.tsx",
+    lineNumber: 7,
+    columnNumber: 5
+  }, this);
+}
+_c = StepSkeleton;
+var _c;
+$RefreshReg$(_c, "StepSkeleton");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepSkeleton.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBUVE7Ozs7O2dCQVJSLE9BQVNBLGNBQVVDO0FBQUFBLE1BQVUsUUFBUSwwQ0FBa0I7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ3ZELFNBQVNDLGVBQWVDLGlCQUFpQjtBQUdsQyxnQkFBU0MsZUFBZTtBQUM3QixTQUNFLHVCQUFDLGlCQUNDO0FBQUEsMkJBQUMsY0FBVyxXQUFVLE9BQU0sU0FBUSxNQUNsQyxpQ0FBQyxZQUFTLFVBQVUsT0FBcEI7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUF3QixLQUQxQjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBRUE7QUFBQSxJQUVBO0FBQUEsTUFBQztBQUFBO0FBQUEsUUFDQyxPQUFPLHVCQUFDLFlBQVMsVUFBVSxPQUFwQjtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQXdCO0FBQUEsUUFDL0IsVUFBVSx1QkFBQyxZQUFTLFVBQVUsT0FBcEI7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUF3QjtBQUFBO0FBQUEsTUFGcEM7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLElBRXdDO0FBQUEsSUFHeEMsdUJBQUMsWUFBUyxTQUFRLFdBQVUsUUFBUSxNQUFwQztBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQXVDO0FBQUEsSUFDdkMsdUJBQUMsWUFBUyxTQUFRLFdBQVUsUUFBUSxNQUFwQztBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQXVDO0FBQUEsSUFFdEMsQ0FBQyxHQUFHLENBQUMsRUFBRUM7QUFBQUEsTUFBSSxDQUFDQyxHQUFHQyxNQUNkO0FBQUEsUUFBQztBQUFBO0FBQUEsVUFFQyxPQUFPLEVBQUVDLFNBQVMsUUFBUUMsZUFBZSxVQUFVQyxLQUFLLEdBQUc7QUFBQSxVQUUzRDtBQUFBO0FBQUEsY0FBQztBQUFBO0FBQUEsZ0JBQ0MsT0FBTyx1QkFBQyxZQUFTLFVBQVUsT0FBcEI7QUFBQTtBQUFBO0FBQUE7QUFBQSx1QkFBd0I7QUFBQSxnQkFDL0IsVUFBVSx1QkFBQyxZQUFTLFVBQVUsT0FBcEI7QUFBQTtBQUFBO0FBQUE7QUFBQSx1QkFBd0I7QUFBQTtBQUFBLGNBRnBDO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxZQUV3QztBQUFBLFlBR3hDLHVCQUFDLFNBQUksT0FBTyxFQUFFRixTQUFTLFFBQVFFLEtBQUssR0FBRyxHQUNyQztBQUFBLHFDQUFDLFlBQVMsU0FBUSxXQUFVLFFBQVEsSUFBSSxPQUFPLEVBQUVDLE1BQU0sSUFBSSxLQUEzRDtBQUFBO0FBQUE7QUFBQTtBQUFBLHFCQUE2RDtBQUFBLGNBQzdELHVCQUFDLFlBQVMsU0FBUSxXQUFVLFFBQVEsSUFBSSxPQUFPLEVBQUVBLE1BQU0sSUFBSSxLQUEzRDtBQUFBO0FBQUE7QUFBQTtBQUFBLHFCQUE2RDtBQUFBLGlCQUYvRDtBQUFBO0FBQUE7QUFBQTtBQUFBLG1CQUdBO0FBQUE7QUFBQTtBQUFBLFFBWEtKO0FBQUFBLFFBRFA7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxNQWFBO0FBQUEsSUFDRDtBQUFBLE9BNUJIO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0E2QkE7QUFFSjtBQUFDSyxLQWpDZVI7QUFBWSxJQUFBUTtBQUFBQyxhQUFBRCxJQUFBIiwibmFtZXMiOlsiU2tlbGV0b24iLCJUeXBvZ3JhcGh5IiwiU3RlcENvbnRhaW5lciIsIlN0ZXBUaXRsZSIsIlN0ZXBTa2VsZXRvbiIsIm1hcCIsIl8iLCJpIiwiZGlzcGxheSIsImZsZXhEaXJlY3Rpb24iLCJnYXAiLCJmbGV4IiwiX2MiLCIkUmVmcmVzaFJlZyQiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiU3RlcFNrZWxldG9uLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBTa2VsZXRvbiwgVHlwb2dyYXBoeSB9IGZyb20gJ0BuYWotd28vdWktYXRvbXMnO1xyXG5pbXBvcnQgeyBTdGVwQ29udGFpbmVyLCBTdGVwVGl0bGUgfSBmcm9tICdAbmFqLXdvL3VpLW1vbGVjdWxlcyc7XHJcbmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gU3RlcFNrZWxldG9uKCkge1xyXG4gIHJldHVybiAoXHJcbiAgICA8U3RlcENvbnRhaW5lcj5cclxuICAgICAgPFR5cG9ncmFwaHkgY29tcG9uZW50PVwiZGl2XCIgdmFyaWFudD1cImgxXCI+XHJcbiAgICAgICAgPFNrZWxldG9uIG1heFdpZHRoPXsyMjR9IC8+XHJcbiAgICAgIDwvVHlwb2dyYXBoeT5cclxuXHJcbiAgICAgIDxTdGVwVGl0bGVcclxuICAgICAgICB0aXRsZT17PFNrZWxldG9uIG1heFdpZHRoPXszOTB9IC8+fVxyXG4gICAgICAgIHN1YnRpdGxlPXs8U2tlbGV0b24gbWF4V2lkdGg9ezUzMH0gLz59XHJcbiAgICAgIC8+XHJcblxyXG4gICAgICA8U2tlbGV0b24gdmFyaWFudD1cInJvdW5kZWRcIiBoZWlnaHQ9ezY3fSAvPlxyXG4gICAgICA8U2tlbGV0b24gdmFyaWFudD1cInJvdW5kZWRcIiBoZWlnaHQ9ezY3fSAvPlxyXG5cclxuICAgICAge1swLCAxXS5tYXAoKF8sIGkpID0+IChcclxuICAgICAgICA8ZGl2XHJcbiAgICAgICAgICBrZXk9e2l9XHJcbiAgICAgICAgICBzdHlsZT17eyBkaXNwbGF5OiAnZmxleCcsIGZsZXhEaXJlY3Rpb246ICdjb2x1bW4nLCBnYXA6IDI0IH19XHJcbiAgICAgICAgPlxyXG4gICAgICAgICAgPFN0ZXBUaXRsZVxyXG4gICAgICAgICAgICB0aXRsZT17PFNrZWxldG9uIG1heFdpZHRoPXszOTB9IC8+fVxyXG4gICAgICAgICAgICBzdWJ0aXRsZT17PFNrZWxldG9uIG1heFdpZHRoPXs1MzB9IC8+fVxyXG4gICAgICAgICAgLz5cclxuXHJcbiAgICAgICAgICA8ZGl2IHN0eWxlPXt7IGRpc3BsYXk6ICdmbGV4JywgZ2FwOiAyNCB9fT5cclxuICAgICAgICAgICAgPFNrZWxldG9uIHZhcmlhbnQ9XCJyb3VuZGVkXCIgaGVpZ2h0PXs2N30gc3R5bGU9e3sgZmxleDogJzEnIH19IC8+XHJcbiAgICAgICAgICAgIDxTa2VsZXRvbiB2YXJpYW50PVwicm91bmRlZFwiIGhlaWdodD17Njd9IHN0eWxlPXt7IGZsZXg6ICcxJyB9fSAvPlxyXG4gICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICAgICkpfVxyXG4gICAgPC9TdGVwQ29udGFpbmVyPlxyXG4gICk7XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy91aS1vcmdhbmlzbXMvc3JjL2xpYi9sYXlvdXQvU3RlcFNrZWxldG9uLnRzeCJ9

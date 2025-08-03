@@ -1,0 +1,35 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { Bill, Payment, PowerRate } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/index.ts";
+import { useTrackingStep } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-step.ts";
+export function useTrackingStepOptions() {
+  return useTrackingStep(getSelezione);
+}
+function getSelezione(values) {
+  const t = opzioneMap[values.powerRate ?? ""] ?? "tariffa non applicabile";
+  const p = pagamentoMap[values.payment] ?? "pagamento non applicabile";
+  const b = bollettaMap[values.bill] ?? "bolletta non applicabile";
+  return `${t} | ${p} | ${b}`;
+}
+const opzioneMap = {
+  [PowerRate.SINGLE]: "tariffa monoraria",
+  [PowerRate.BI_HOURLY]: "tariffa bioraria"
+};
+const pagamentoMap = {
+  [Payment.POSTAL]: "avviso pagamento",
+  [Payment.DOMICILIATION]: "addebito diretto"
+};
+const bollettaMap = {
+  [Bill.PAPER]: "cartacea",
+  [Bill.DIGITAL]: "digitale"
+};
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLE1BQU1DLFNBQVNDLGlCQUFpQjtBQUN6QyxTQUFTQyx1QkFBdUI7QUFFekIsZ0JBQVNDLHlCQUF5QjtBQUN2QyxTQUFPRCxnQkFBZ0JFLFlBQVk7QUFDckM7QUFFQSxTQUFTQSxhQUFhQyxRQUluQjtBQUNELFFBQU1DLElBQUlDLFdBQVdGLE9BQU9HLGFBQWEsRUFBRSxLQUFLO0FBQ2hELFFBQU1DLElBQUlDLGFBQWFMLE9BQU9NLE9BQU8sS0FBSztBQUMxQyxRQUFNQyxJQUFJQyxZQUFZUixPQUFPUyxJQUFJLEtBQUs7QUFDdEMsU0FBTyxHQUFHUixDQUFDLE1BQU1HLENBQUMsTUFBTUcsQ0FBQztBQUMzQjtBQUVBLE1BQU1MLGFBQWtDO0FBQUEsRUFDdEMsQ0FBQ04sVUFBVWMsTUFBTSxHQUFHO0FBQUEsRUFDcEIsQ0FBQ2QsVUFBVWUsU0FBUyxHQUFHO0FBQ3pCO0FBRUEsTUFBTU4sZUFBb0M7QUFBQSxFQUN4QyxDQUFDVixRQUFRaUIsTUFBTSxHQUFHO0FBQUEsRUFDbEIsQ0FBQ2pCLFFBQVFrQixhQUFhLEdBQUc7QUFDM0I7QUFFQSxNQUFNTCxjQUFtQztBQUFBLEVBQ3ZDLENBQUNkLEtBQUtvQixLQUFLLEdBQUc7QUFBQSxFQUNkLENBQUNwQixLQUFLcUIsT0FBTyxHQUFHO0FBQ2xCIiwibmFtZXMiOlsiQmlsbCIsIlBheW1lbnQiLCJQb3dlclJhdGUiLCJ1c2VUcmFja2luZ1N0ZXAiLCJ1c2VUcmFja2luZ1N0ZXBPcHRpb25zIiwiZ2V0U2VsZXppb25lIiwidmFsdWVzIiwidCIsIm9wemlvbmVNYXAiLCJwb3dlclJhdGUiLCJwIiwicGFnYW1lbnRvTWFwIiwicGF5bWVudCIsImIiLCJib2xsZXR0YU1hcCIsImJpbGwiLCJTSU5HTEUiLCJCSV9IT1VSTFkiLCJQT1NUQUwiLCJET01JQ0lMSUFUSU9OIiwiUEFQRVIiLCJESUdJVEFMIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbInRyYWNraW5nLXN0ZXAtb3B0aW9ucy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBCaWxsLCBQYXltZW50LCBQb3dlclJhdGUgfSBmcm9tICdAbmFqLXdvL2RhdGEtYWNjZXNzJztcclxuaW1wb3J0IHsgdXNlVHJhY2tpbmdTdGVwIH0gZnJvbSAnLi90cmFja2luZy1zdGVwJztcclxuXHJcbmV4cG9ydCBmdW5jdGlvbiB1c2VUcmFja2luZ1N0ZXBPcHRpb25zKCkge1xyXG4gIHJldHVybiB1c2VUcmFja2luZ1N0ZXAoZ2V0U2VsZXppb25lKTtcclxufVxyXG5cclxuZnVuY3Rpb24gZ2V0U2VsZXppb25lKHZhbHVlczoge1xyXG4gIHBvd2VyUmF0ZT86IFBvd2VyUmF0ZTtcclxuICBwYXltZW50OiBQYXltZW50O1xyXG4gIGJpbGw6IEJpbGw7XHJcbn0pIHtcclxuICBjb25zdCB0ID0gb3B6aW9uZU1hcFt2YWx1ZXMucG93ZXJSYXRlID8/ICcnXSA/PyAndGFyaWZmYSBub24gYXBwbGljYWJpbGUnO1xyXG4gIGNvbnN0IHAgPSBwYWdhbWVudG9NYXBbdmFsdWVzLnBheW1lbnRdID8/ICdwYWdhbWVudG8gbm9uIGFwcGxpY2FiaWxlJztcclxuICBjb25zdCBiID0gYm9sbGV0dGFNYXBbdmFsdWVzLmJpbGxdID8/ICdib2xsZXR0YSBub24gYXBwbGljYWJpbGUnO1xyXG4gIHJldHVybiBgJHt0fSB8ICR7cH0gfCAke2J9YDtcclxufVxyXG5cclxuY29uc3Qgb3B6aW9uZU1hcDogUmVjb3JkPGFueSwgc3RyaW5nPiA9IHtcclxuICBbUG93ZXJSYXRlLlNJTkdMRV06ICd0YXJpZmZhIG1vbm9yYXJpYScsXHJcbiAgW1Bvd2VyUmF0ZS5CSV9IT1VSTFldOiAndGFyaWZmYSBiaW9yYXJpYScsXHJcbn07XHJcblxyXG5jb25zdCBwYWdhbWVudG9NYXA6IFJlY29yZDxhbnksIHN0cmluZz4gPSB7XHJcbiAgW1BheW1lbnQuUE9TVEFMXTogJ2F2dmlzbyBwYWdhbWVudG8nLFxyXG4gIFtQYXltZW50LkRPTUlDSUxJQVRJT05dOiAnYWRkZWJpdG8gZGlyZXR0bycsXHJcbn07XHJcblxyXG5jb25zdCBib2xsZXR0YU1hcDogUmVjb3JkPGFueSwgc3RyaW5nPiA9IHtcclxuICBbQmlsbC5QQVBFUl06ICdjYXJ0YWNlYScsXHJcbiAgW0JpbGwuRElHSVRBTF06ICdkaWdpdGFsZScsXHJcbn07XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvdHJhY2tpbmctYXBwL3NyYy9saWIvdHJhY2tpbmctc3RlcC1vcHRpb25zLnRzIn0=

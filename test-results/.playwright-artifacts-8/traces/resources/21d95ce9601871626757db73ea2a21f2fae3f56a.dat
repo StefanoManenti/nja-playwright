@@ -1,0 +1,55 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/user-menu/IfUserLogged.tsx");import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/user-menu/IfUserLogged.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { isLoggedAtom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/index.ts";
+import { useAtomValue } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+export function IfUserLogged(props) {
+  _s();
+  const isLogged = useAtomValue(isLoggedAtom);
+  if (isLogged) {
+    return props.then;
+  }
+  return props.else ?? null;
+}
+_s(IfUserLogged, "MOSqaQVMtwt58Clrx6OIqbIQAnQ=", false, function() {
+  return [useAtomValue];
+});
+_c = IfUserLogged;
+var _c;
+$RefreshReg$(_c, "IfUserLogged");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/user-menu/IfUserLogged.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7OztxQ0FBQTtBQUFBLE9BQVNBLGlEQUF5QztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNsRCxTQUFTQyxvQkFBb0I7QUFRdEIsZ0JBQVNDLGFBQWFDLE9BQWM7QUFBQUMsS0FBQTtBQUN6QyxRQUFNQyxXQUFXSixhQUFhRCxZQUFZO0FBRTFDLE1BQUlLLFVBQVU7QUFDWixXQUFPRixNQUFNRztBQUFBQSxFQUNmO0FBRUEsU0FBT0gsTUFBTUksUUFBUTtBQUN2QjtBQUFDSCxHQVJlRixjQUFZO0FBQUEsVUFDVEQsWUFBWTtBQUFBO0FBQUFPLEtBRGZOO0FBQVksSUFBQU07QUFBQUMsYUFBQUQsSUFBQSIsIm5hbWVzIjpbImlzTG9nZ2VkQXRvbSIsInVzZUF0b21WYWx1ZSIsIklmVXNlckxvZ2dlZCIsInByb3BzIiwiX3MiLCJpc0xvZ2dlZCIsInRoZW4iLCJlbHNlIiwiX2MiLCIkUmVmcmVzaFJlZyQiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiSWZVc2VyTG9nZ2VkLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBpc0xvZ2dlZEF0b20gfSBmcm9tICdAbmFqLXdvL2RhdGEtYWNjZXNzJztcclxuaW1wb3J0IHsgdXNlQXRvbVZhbHVlIH0gZnJvbSAnam90YWknO1xyXG5pbXBvcnQgeyB0eXBlIFJlYWN0Tm9kZSB9IGZyb20gJ3JlYWN0JztcclxuXHJcbmludGVyZmFjZSBQcm9wcyB7XHJcbiAgdGhlbjogUmVhY3ROb2RlO1xyXG4gIGVsc2U/OiBSZWFjdE5vZGU7XHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBJZlVzZXJMb2dnZWQocHJvcHM6IFByb3BzKSB7XHJcbiAgY29uc3QgaXNMb2dnZWQgPSB1c2VBdG9tVmFsdWUoaXNMb2dnZWRBdG9tKTtcclxuXHJcbiAgaWYgKGlzTG9nZ2VkKSB7XHJcbiAgICByZXR1cm4gcHJvcHMudGhlbjtcclxuICB9XHJcblxyXG4gIHJldHVybiBwcm9wcy5lbHNlID8/IG51bGw7XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy91aS1tb2xlY3VsZXMvc3JjL2xpYi91c2VyLW1lbnUvSWZVc2VyTG9nZ2VkLnRzeCJ9

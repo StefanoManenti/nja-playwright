@@ -1,0 +1,41 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { generaCorrispettiviFixa } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/offerta/corrispettivi/corrispettivi-fixa.ts";
+export function generaCorrispettiviVulnerabili(offer, opzioni, scontistica = {}) {
+  return {
+    ...generaCorrispettiviFixa(offer, opzioni, scontistica),
+    prices: [{
+      rows: [{
+        name: {
+          main: "Materia prima gas",
+          descriptions: ["", ""]
+        },
+        price: {
+          type: "normal",
+          qty: "",
+          unit: "Cmem + CCR"
+        }
+      }],
+      extra: [{
+        name: {
+          main: "Costi di commercializzazione e vendita"
+        },
+        price: {
+          type: "normal",
+          qty: "",
+          unit: "QVD"
+        }
+      }]
+    }]
+  };
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUNBLFNBQVNBLCtCQUErQjtBQVdqQyxnQkFBU0MsK0JBQ2RDLE9BQ0FDLFNBQ0FDLGNBQTJCLENBQUMsR0FDUjtBQUNwQixTQUFPO0FBQUEsSUFDTCxHQUFHSix3QkFBd0JFLE9BQU9DLFNBQVNDLFdBQVc7QUFBQSxJQUN0REMsUUFBUSxDQUNOO0FBQUEsTUFDRUMsTUFBTSxDQUNKO0FBQUEsUUFDRUMsTUFBTTtBQUFBLFVBQ0pDLE1BQU07QUFBQSxVQUNOQyxjQUFjLENBQUMsSUFBSSxFQUFFO0FBQUEsUUFDdkI7QUFBQSxRQUNBQyxPQUFPO0FBQUEsVUFDTEMsTUFBTTtBQUFBLFVBQ05DLEtBQUs7QUFBQSxVQUNMQyxNQUFNO0FBQUEsUUFDUjtBQUFBLE1BQ0YsQ0FBQztBQUFBLE1BRUhDLE9BQU8sQ0FDTDtBQUFBLFFBQ0VQLE1BQU07QUFBQSxVQUNKQyxNQUFNO0FBQUEsUUFDUjtBQUFBLFFBQ0FFLE9BQU87QUFBQSxVQUNMQyxNQUFNO0FBQUEsVUFDTkMsS0FBSztBQUFBLFVBQ0xDLE1BQU07QUFBQSxRQUNSO0FBQUEsTUFDRixDQUFDO0FBQUEsSUFFTCxDQUFDO0FBQUEsRUFFTDtBQUNGIiwibmFtZXMiOlsiZ2VuZXJhQ29ycmlzcGV0dGl2aUZpeGEiLCJnZW5lcmFDb3JyaXNwZXR0aXZpVnVsbmVyYWJpbGkiLCJvZmZlciIsIm9wemlvbmkiLCJzY29udGlzdGljYSIsInByaWNlcyIsInJvd3MiLCJuYW1lIiwibWFpbiIsImRlc2NyaXB0aW9ucyIsInByaWNlIiwidHlwZSIsInF0eSIsInVuaXQiLCJleHRyYSJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJjb3JyaXNwZXR0aXZpLXZ1bG5lcmFiaWxpLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE9mZmVydGFTdGF0ZUZvckNvcnJpc3BldHRpdmksIE9wemlvbmkgfSBmcm9tICcuLi90eXBlcyc7XHJcbmltcG9ydCB7IGdlbmVyYUNvcnJpc3BldHRpdmlGaXhhIH0gZnJvbSAnLi9jb3JyaXNwZXR0aXZpLWZpeGEnO1xyXG5pbXBvcnQgeyBQcmljZXNBbmREaXNjb3VudHMgfSBmcm9tICcuL3ByaWNlcyc7XHJcbmltcG9ydCB7IFNjb250aXN0aWNhIH0gZnJvbSAnLi9zY29udGlzdGljYSc7XHJcblxyXG4vKipcclxuICogR2VuZXJhIGkgY29ycmlzcGV0dGl2aSBwZXIgbCdvZmZlcnRhIHZ1bG5lcmFiaWxpIGdhc1xyXG4gKlxyXG4gKiBAcGFyYW0gb2ZmZXJcclxuICogQHBhcmFtIG9wemlvbmlcclxuICogQHBhcmFtIHNjb250aXN0aWNhXHJcbiAqL1xyXG5leHBvcnQgZnVuY3Rpb24gZ2VuZXJhQ29ycmlzcGV0dGl2aVZ1bG5lcmFiaWxpKFxyXG4gIG9mZmVyOiBPZmZlcnRhU3RhdGVGb3JDb3JyaXNwZXR0aXZpLFxyXG4gIG9wemlvbmk6IE9wemlvbmksXHJcbiAgc2NvbnRpc3RpY2E6IFNjb250aXN0aWNhID0ge31cclxuKTogUHJpY2VzQW5kRGlzY291bnRzIHtcclxuICByZXR1cm4ge1xyXG4gICAgLi4uZ2VuZXJhQ29ycmlzcGV0dGl2aUZpeGEob2ZmZXIsIG9wemlvbmksIHNjb250aXN0aWNhKSxcclxuICAgIHByaWNlczogW1xyXG4gICAgICB7XHJcbiAgICAgICAgcm93czogW1xyXG4gICAgICAgICAge1xyXG4gICAgICAgICAgICBuYW1lOiB7XHJcbiAgICAgICAgICAgICAgbWFpbjogJ01hdGVyaWEgcHJpbWEgZ2FzJyxcclxuICAgICAgICAgICAgICBkZXNjcmlwdGlvbnM6IFsnJywgJyddLFxyXG4gICAgICAgICAgICB9LFxyXG4gICAgICAgICAgICBwcmljZToge1xyXG4gICAgICAgICAgICAgIHR5cGU6ICdub3JtYWwnLFxyXG4gICAgICAgICAgICAgIHF0eTogJycsXHJcbiAgICAgICAgICAgICAgdW5pdDogJ0NtZW0gKyBDQ1InLFxyXG4gICAgICAgICAgICB9LFxyXG4gICAgICAgICAgfSxcclxuICAgICAgICBdLFxyXG4gICAgICAgIGV4dHJhOiBbXHJcbiAgICAgICAgICB7XHJcbiAgICAgICAgICAgIG5hbWU6IHtcclxuICAgICAgICAgICAgICBtYWluOiAnQ29zdGkgZGkgY29tbWVyY2lhbGl6emF6aW9uZSBlIHZlbmRpdGEnLFxyXG4gICAgICAgICAgICB9LFxyXG4gICAgICAgICAgICBwcmljZToge1xyXG4gICAgICAgICAgICAgIHR5cGU6ICdub3JtYWwnLFxyXG4gICAgICAgICAgICAgIHF0eTogJycsXHJcbiAgICAgICAgICAgICAgdW5pdDogJ1FWRCcsXHJcbiAgICAgICAgICAgIH0sXHJcbiAgICAgICAgICB9LFxyXG4gICAgICAgIF0sXHJcbiAgICAgIH0sXHJcbiAgICBdLFxyXG4gIH07XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy9kYXRhLWFjY2Vzcy9zcmMvbGliL29mZmVydGEvY29ycmlzcGV0dGl2aS9jb3JyaXNwZXR0aXZpLXZ1bG5lcmFiaWxpLnRzIn0=

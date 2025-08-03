@@ -1,0 +1,26 @@
+import "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-KWBGLCVT.js?v=0189a8d1";
+import {
+  Provider,
+  useAtom,
+  useAtomValue,
+  useSetAtom,
+  useStore
+} from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-TVJE7VNB.js?v=0189a8d1";
+import {
+  atom,
+  createStore,
+  getDefaultStore
+} from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-CEPGVKFL.js?v=0189a8d1";
+import "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-GAIRWVJN.js?v=0189a8d1";
+import "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-OL46QLBJ.js?v=0189a8d1";
+export {
+  Provider,
+  atom,
+  createStore,
+  getDefaultStore,
+  useAtom,
+  useAtomValue,
+  useSetAtom,
+  useStore
+};
+//# sourceMappingURL=jotai_index.js.map

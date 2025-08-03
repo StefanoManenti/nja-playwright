@@ -1,0 +1,19 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { useTrackingStep } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-step.ts";
+export function useTrackingStepCommodity() {
+  return useTrackingStep(getSelezione);
+}
+function getSelezione(values) {
+  return values.power ? values.gas ? "luce e gas" : "luce" : values.gas ? "gas" : void 0;
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLHVCQUF1QjtBQUV6QixnQkFBU0MsMkJBQTJCO0FBQ3pDLFNBQU9ELGdCQUFnQkUsWUFBWTtBQUNyQztBQUVBLFNBQVNBLGFBQWFDLFFBQTBDO0FBQzlELFNBQU9BLE9BQU9DLFFBQ1ZELE9BQU9FLE1BQ0wsZUFDQSxTQUNGRixPQUFPRSxNQUNQLFFBQ0FDO0FBQ04iLCJuYW1lcyI6WyJ1c2VUcmFja2luZ1N0ZXAiLCJ1c2VUcmFja2luZ1N0ZXBDb21tb2RpdHkiLCJnZXRTZWxlemlvbmUiLCJ2YWx1ZXMiLCJwb3dlciIsImdhcyIsInVuZGVmaW5lZCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJ0cmFja2luZy1zdGVwLWNvbW1vZGl0eS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VUcmFja2luZ1N0ZXAgfSBmcm9tICcuL3RyYWNraW5nLXN0ZXAnO1xyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIHVzZVRyYWNraW5nU3RlcENvbW1vZGl0eSgpIHtcclxuICByZXR1cm4gdXNlVHJhY2tpbmdTdGVwKGdldFNlbGV6aW9uZSk7XHJcbn1cclxuXHJcbmZ1bmN0aW9uIGdldFNlbGV6aW9uZSh2YWx1ZXM6IHsgcG93ZXI6IGJvb2xlYW47IGdhczogYm9vbGVhbiB9KSB7XHJcbiAgcmV0dXJuIHZhbHVlcy5wb3dlclxyXG4gICAgPyB2YWx1ZXMuZ2FzXHJcbiAgICAgID8gJ2x1Y2UgZSBnYXMnXHJcbiAgICAgIDogJ2x1Y2UnXHJcbiAgICA6IHZhbHVlcy5nYXNcclxuICAgID8gJ2dhcydcclxuICAgIDogdW5kZWZpbmVkO1xyXG59XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvdHJhY2tpbmctYXBwL3NyYy9saWIvdHJhY2tpbmctc3RlcC1jb21tb2RpdHkudHMifQ==

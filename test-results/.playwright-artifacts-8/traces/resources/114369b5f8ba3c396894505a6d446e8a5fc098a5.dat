@@ -1,0 +1,87 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Tag.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Tag.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import clsx from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/clsx.js?v=0189a8d1";
+import classes from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Tag.module.less";
+export function Tag(props) {
+  const {
+    component: Component = "div",
+    border,
+    children,
+    className,
+    style,
+    size,
+    icon: Icon
+  } = props;
+  return /* @__PURE__ */ jsxDEV(
+    Component,
+    {
+      className: clsx(
+        classes.root,
+        border && classes.border,
+        size === "small" && classes.sizeSmall,
+        className
+      ),
+      style,
+      children: [
+        Icon && /* @__PURE__ */ jsxDEV(Icon, { className: classes.icon }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Tag.tsx",
+          lineNumber: 36,
+          columnNumber: 16
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: classes.tagTitle, children }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Tag.tsx",
+          lineNumber: 37,
+          columnNumber: 7
+        }, this)
+      ]
+    },
+    void 0,
+    true,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Tag.tsx",
+      lineNumber: 27,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_c = Tag;
+var _c;
+$RefreshReg$(_c, "Tag");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Tag.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBbUNlOzs7OztnQkFuQ2YsT0FBVyxjQUFZO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBRXZCLE9BQU9BLGFBQWE7QUFZYixnQkFBU0MsSUFBSUMsT0FBaUI7QUFDbkMsUUFBTTtBQUFBLElBQ0pDLFdBQVdDLFlBQVk7QUFBQSxJQUN2QkM7QUFBQUEsSUFDQUM7QUFBQUEsSUFDQUM7QUFBQUEsSUFDQUM7QUFBQUEsSUFDQUM7QUFBQUEsSUFDQUMsTUFBTUM7QUFBQUEsRUFDUixJQUFJVDtBQUVKLFNBQ0U7QUFBQSxJQUFDO0FBQUE7QUFBQSxNQUNDLFdBQVdVO0FBQUFBLFFBQ1RaLFFBQVFhO0FBQUFBLFFBQ1JSLFVBQVVMLFFBQVFLO0FBQUFBLFFBQ2xCSSxTQUFTLFdBQVdULFFBQVFjO0FBQUFBLFFBQzVCUDtBQUFBQSxNQUNGO0FBQUEsTUFDQTtBQUFBLE1BRUNJO0FBQUFBLGdCQUFRLHVCQUFDLFFBQUssV0FBV1gsUUFBUVUsUUFBekI7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUE4QjtBQUFBLFFBQ3ZDLHVCQUFDLFNBQUksV0FBV1YsUUFBUWUsVUFBV1QsWUFBbkM7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUE0QztBQUFBO0FBQUE7QUFBQSxJQVY5QztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsRUFXQTtBQUVKO0FBQUNVLEtBekJlZjtBQUFHLElBQUFlO0FBQUFDLGFBQUFELElBQUEiLCJuYW1lcyI6WyJjbGFzc2VzIiwiVGFnIiwicHJvcHMiLCJjb21wb25lbnQiLCJDb21wb25lbnQiLCJib3JkZXIiLCJjaGlsZHJlbiIsImNsYXNzTmFtZSIsInN0eWxlIiwic2l6ZSIsImljb24iLCJJY29uIiwiY2xzeCIsInJvb3QiLCJzaXplU21hbGwiLCJ0YWdUaXRsZSIsIl9jIiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIlRhZy50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGNsc3ggZnJvbSAnY2xzeCc7XHJcbmltcG9ydCBSZWFjdCwgeyBDU1NQcm9wZXJ0aWVzLCBFbGVtZW50VHlwZSwgUmVhY3ROb2RlIH0gZnJvbSAncmVhY3QnO1xyXG5pbXBvcnQgY2xhc3NlcyBmcm9tICcuL1RhZy5tb2R1bGUubGVzcyc7XHJcblxyXG50eXBlIFRhZ1Byb3BzID0ge1xyXG4gIGljb24/OiBFbGVtZW50VHlwZTtcclxuICBjb21wb25lbnQ/OiBFbGVtZW50VHlwZTtcclxuICBib3JkZXI/OiBib29sZWFuO1xyXG4gIGNoaWxkcmVuPzogUmVhY3ROb2RlO1xyXG4gIGNsYXNzTmFtZT86IHN0cmluZyB8IHVuZGVmaW5lZDtcclxuICBzdHlsZT86IENTU1Byb3BlcnRpZXMgfCB1bmRlZmluZWQ7XHJcbiAgc2l6ZT86ICdkZWZhdWx0JyB8ICdzbWFsbCc7XHJcbn07XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gVGFnKHByb3BzOiBUYWdQcm9wcykge1xyXG4gIGNvbnN0IHtcclxuICAgIGNvbXBvbmVudDogQ29tcG9uZW50ID0gJ2RpdicsXHJcbiAgICBib3JkZXIsXHJcbiAgICBjaGlsZHJlbixcclxuICAgIGNsYXNzTmFtZSxcclxuICAgIHN0eWxlLFxyXG4gICAgc2l6ZSxcclxuICAgIGljb246IEljb24sXHJcbiAgfSA9IHByb3BzO1xyXG5cclxuICByZXR1cm4gKFxyXG4gICAgPENvbXBvbmVudFxyXG4gICAgICBjbGFzc05hbWU9e2Nsc3goXHJcbiAgICAgICAgY2xhc3Nlcy5yb290LFxyXG4gICAgICAgIGJvcmRlciAmJiBjbGFzc2VzLmJvcmRlcixcclxuICAgICAgICBzaXplID09PSAnc21hbGwnICYmIGNsYXNzZXMuc2l6ZVNtYWxsLFxyXG4gICAgICAgIGNsYXNzTmFtZVxyXG4gICAgICApfVxyXG4gICAgICBzdHlsZT17c3R5bGV9XHJcbiAgICA+XHJcbiAgICAgIHtJY29uICYmIDxJY29uIGNsYXNzTmFtZT17Y2xhc3Nlcy5pY29ufSAvPn1cclxuICAgICAgPGRpdiBjbGFzc05hbWU9e2NsYXNzZXMudGFnVGl0bGV9PntjaGlsZHJlbn08L2Rpdj5cclxuICAgIDwvQ29tcG9uZW50PlxyXG4gICk7XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy91aS1hdG9tcy9zcmMvbGliL1RhZy50c3gifQ==

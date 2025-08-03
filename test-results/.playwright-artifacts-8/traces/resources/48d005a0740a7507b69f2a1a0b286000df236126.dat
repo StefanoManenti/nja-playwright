@@ -1,0 +1,12 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { ServiceValidationKoError } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/index.ts";
+export class CheckDoubleNetPodError extends ServiceValidationKoError {
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBLFNBQVNBLGdDQUFnQztBQUtsQyxhQUFNQywrQkFBK0JELHlCQUF5QjtBQUFBIiwibmFtZXMiOlsiU2VydmljZVZhbGlkYXRpb25Lb0Vycm9yIiwiQ2hlY2tEb3VibGVOZXRQb2RFcnJvciJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJwb2REdWVSZXRpLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBTZXJ2aWNlVmFsaWRhdGlvbktvRXJyb3IgfSBmcm9tICdAbmFqLXdvL3V0aWwnO1xyXG5cclxuLyoqXHJcbiAqIEFuIGVycm9yIHRoYXQgaW5kaWNhdGVzIHRoYXQgdGhlIHVzZXIgZW50ZXJlZCBhbiBvbGQgUE9ELlxyXG4gKi9cclxuZXhwb3J0IGNsYXNzIENoZWNrRG91YmxlTmV0UG9kRXJyb3IgZXh0ZW5kcyBTZXJ2aWNlVmFsaWRhdGlvbktvRXJyb3Ige31cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy9kYXRhLWFjY2Vzcy9zcmMvbGliL2Vycm9ycy9wb2REdWVSZXRpLnRzeCJ9

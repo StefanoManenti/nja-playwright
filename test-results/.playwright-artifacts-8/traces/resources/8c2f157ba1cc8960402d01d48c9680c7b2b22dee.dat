@@ -1,0 +1,54 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/user-menu/useLogoutButton.tsx");import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/user-menu/useLogoutButton.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { logoutFE } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/index.ts";
+import { useRedirectToLogin } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/index.ts";
+import __vite__cjsImport4_react from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react.js?v=0189a8d1"; const useCallback = __vite__cjsImport4_react["useCallback"];
+export function useLogoutButton() {
+  _s();
+  const redirectToLogin = useRedirectToLogin();
+  const handleChangeAccountClick = useCallback(async () => {
+    await logoutFE();
+    redirectToLogin();
+  }, [redirectToLogin]);
+  return ["Logout", handleChangeAccountClick];
+}
+_s(useLogoutButton, "wxJxbm8BPk0V8mW+uXgV3LwXs+Y=", false, function() {
+  return [useRedirectToLogin];
+});
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/user-menu/useLogoutButton.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7OztxQ0FBQTtBQUFBLE9BQVNBLGlEQUFxQztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUM5QyxTQUFTQywwQkFBMEI7QUFDbkMsU0FBU0MsbUJBQW1CO0FBRXJCLGdCQUFTQyxrQkFBa0I7QUFBQUMsS0FBQTtBQUNoQyxRQUFNQyxrQkFBa0JKLG1CQUFtQjtBQUMzQyxRQUFNSywyQkFBMkJKLFlBQVksWUFBWTtBQUN2RCxVQUFNRixTQUFTO0FBQ2ZLLG9CQUFnQjtBQUFBLEVBQ2xCLEdBQUcsQ0FBQ0EsZUFBZSxDQUFDO0FBRXBCLFNBQU8sQ0FBQyxVQUFVQyx3QkFBd0I7QUFDNUM7QUFBQ0YsR0FSZUQsaUJBQWU7QUFBQSxVQUNMRixrQkFBa0I7QUFBQSIsIm5hbWVzIjpbImxvZ291dEZFIiwidXNlUmVkaXJlY3RUb0xvZ2luIiwidXNlQ2FsbGJhY2siLCJ1c2VMb2dvdXRCdXR0b24iLCJfcyIsInJlZGlyZWN0VG9Mb2dpbiIsImhhbmRsZUNoYW5nZUFjY291bnRDbGljayJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJ1c2VMb2dvdXRCdXR0b24udHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGxvZ291dEZFIH0gZnJvbSAnQG5hai13by9kYXRhLWFjY2Vzcyc7XHJcbmltcG9ydCB7IHVzZVJlZGlyZWN0VG9Mb2dpbiB9IGZyb20gJ0BuYWotd28vdXRpbCc7XHJcbmltcG9ydCB7IHVzZUNhbGxiYWNrIH0gZnJvbSAncmVhY3QnO1xyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIHVzZUxvZ291dEJ1dHRvbigpIHtcclxuICBjb25zdCByZWRpcmVjdFRvTG9naW4gPSB1c2VSZWRpcmVjdFRvTG9naW4oKTtcclxuICBjb25zdCBoYW5kbGVDaGFuZ2VBY2NvdW50Q2xpY2sgPSB1c2VDYWxsYmFjayhhc3luYyAoKSA9PiB7XHJcbiAgICBhd2FpdCBsb2dvdXRGRSgpO1xyXG4gICAgcmVkaXJlY3RUb0xvZ2luKCk7XHJcbiAgfSwgW3JlZGlyZWN0VG9Mb2dpbl0pO1xyXG5cclxuICByZXR1cm4gWydMb2dvdXQnLCBoYW5kbGVDaGFuZ2VBY2NvdW50Q2xpY2tdIGFzIGNvbnN0O1xyXG59XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvdWktbW9sZWN1bGVzL3NyYy9saWIvdXNlci1tZW51L3VzZUxvZ291dEJ1dHRvbi50c3gifQ==

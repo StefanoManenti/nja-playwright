@@ -1,0 +1,38 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import {
+  OperativeMode,
+  operativeModeAtom,
+  operativeModeEnabled$
+} from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/index.ts";
+import { Step, StepPriority } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/index.ts";
+import { StepDependencies } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepDependencies.ts";
+import StepErrorBoundary from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx";
+class TransferPdfStep extends Step {
+  constructor() {
+    super(...arguments);
+    this.priority = new StepPriority(12);
+    this.WrapperComponent = StepErrorBoundary;
+    this.lazy = () => import("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/transfer/TransferPdfStep.tsx?t=1754053241441");
+  }
+  toString() {
+    return "transfer-pdf";
+  }
+  depends() {
+    return [];
+  }
+  provides() {
+    return [StepDependencies.POD, StepDependencies.PDR];
+  }
+  isInFlux(get) {
+    return get(operativeModeAtom) === OperativeMode.TRANSFER && get(operativeModeEnabled$);
+  }
+}
+export const transferPdfStep = new TransferPdfStep();
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBO0FBQUEsRUFDRUE7QUFBQUEsRUFDQUM7QUFBQUEsRUFDQUM7QUFBQUEsT0FDSztBQUNQLFNBQVNDLE1BQU1DLG9CQUFvQjtBQUVuQyxTQUFTQyx3QkFBd0I7QUFDakMsT0FBT0MsdUJBQXVCO0FBRTlCLE1BQU1DLHdCQUF3QkosS0FBSztBQUFBLEVBQW5DO0FBQUE7QUFDRUssb0JBQVcsSUFBSUosYUFBYSxFQUFFO0FBQzlCSyw0QkFBbUJIO0FBRW5CSSxnQkFBT0EsTUFBTSxPQUFPLG1CQUFtQjtBQUFBO0FBQUEsRUFFdkNDLFdBQVc7QUFDVCxXQUFPO0FBQUEsRUFDVDtBQUFBLEVBRUFDLFVBQVU7QUFDUixXQUFPO0FBQUEsRUFDVDtBQUFBLEVBRUFDLFdBQVc7QUFDVCxXQUFPLENBQUNSLGlCQUFpQlMsS0FBS1QsaUJBQWlCVSxHQUFHO0FBQUEsRUFDcEQ7QUFBQSxFQUVVQyxTQUFTQyxLQUFhO0FBQzlCLFdBQ0VBLElBQUloQixpQkFBaUIsTUFBTUQsY0FBY2tCLFlBQ3pDRCxJQUFJZixxQkFBcUI7QUFBQSxFQUU3QjtBQUNGO0FBRU8sYUFBTWlCLGtCQUFrQixJQUFJWixnQkFBZ0IiLCJuYW1lcyI6WyJPcGVyYXRpdmVNb2RlIiwib3BlcmF0aXZlTW9kZUF0b20iLCJvcGVyYXRpdmVNb2RlRW5hYmxlZCQiLCJTdGVwIiwiU3RlcFByaW9yaXR5IiwiU3RlcERlcGVuZGVuY2llcyIsIlN0ZXBFcnJvckJvdW5kYXJ5IiwiVHJhbnNmZXJQZGZTdGVwIiwicHJpb3JpdHkiLCJXcmFwcGVyQ29tcG9uZW50IiwibGF6eSIsInRvU3RyaW5nIiwiZGVwZW5kcyIsInByb3ZpZGVzIiwiUE9EIiwiUERSIiwiaXNJbkZsdXgiLCJnZXQiLCJUUkFOU0ZFUiIsInRyYW5zZmVyUGRmU3RlcCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJ0cmFuc2Zlci1wZGYudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7XHJcbiAgT3BlcmF0aXZlTW9kZSxcclxuICBvcGVyYXRpdmVNb2RlQXRvbSxcclxuICBvcGVyYXRpdmVNb2RlRW5hYmxlZCQsXHJcbn0gZnJvbSAnQG5hai13by9kYXRhLWFjY2Vzcyc7XHJcbmltcG9ydCB7IFN0ZXAsIFN0ZXBQcmlvcml0eSB9IGZyb20gJ0BuYWotd28vZW5naW5lJztcclxuaW1wb3J0IHsgR2V0dGVyIH0gZnJvbSAnam90YWkvdmFuaWxsYS90eXBlVXRpbHMnO1xyXG5pbXBvcnQgeyBTdGVwRGVwZW5kZW5jaWVzIH0gZnJvbSAnLi4vU3RlcERlcGVuZGVuY2llcyc7XHJcbmltcG9ydCBTdGVwRXJyb3JCb3VuZGFyeSBmcm9tICcuLi9TdGVwRXJyb3JCb3VuZGFyeSc7XHJcblxyXG5jbGFzcyBUcmFuc2ZlclBkZlN0ZXAgZXh0ZW5kcyBTdGVwIHtcclxuICBwcmlvcml0eSA9IG5ldyBTdGVwUHJpb3JpdHkoMTIpO1xyXG4gIFdyYXBwZXJDb21wb25lbnQgPSBTdGVwRXJyb3JCb3VuZGFyeTtcclxuXHJcbiAgbGF6eSA9ICgpID0+IGltcG9ydCgnLi9UcmFuc2ZlclBkZlN0ZXAnKTtcclxuXHJcbiAgdG9TdHJpbmcoKSB7XHJcbiAgICByZXR1cm4gJ3RyYW5zZmVyLXBkZic7XHJcbiAgfVxyXG5cclxuICBkZXBlbmRzKCkge1xyXG4gICAgcmV0dXJuIFtdO1xyXG4gIH1cclxuXHJcbiAgcHJvdmlkZXMoKSB7XHJcbiAgICByZXR1cm4gW1N0ZXBEZXBlbmRlbmNpZXMuUE9ELCBTdGVwRGVwZW5kZW5jaWVzLlBEUl07XHJcbiAgfVxyXG5cclxuICBwcm90ZWN0ZWQgaXNJbkZsdXgoZ2V0OiBHZXR0ZXIpIHtcclxuICAgIHJldHVybiAoXHJcbiAgICAgIGdldChvcGVyYXRpdmVNb2RlQXRvbSkgPT09IE9wZXJhdGl2ZU1vZGUuVFJBTlNGRVIgJiZcclxuICAgICAgZ2V0KG9wZXJhdGl2ZU1vZGVFbmFibGVkJClcclxuICAgICk7XHJcbiAgfVxyXG59XHJcblxyXG5leHBvcnQgY29uc3QgdHJhbnNmZXJQZGZTdGVwID0gbmV3IFRyYW5zZmVyUGRmU3RlcCgpO1xyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL3N0ZXBzL3NyYy9saWIvdHJhbnNmZXIvdHJhbnNmZXItcGRmLnRzeCJ9

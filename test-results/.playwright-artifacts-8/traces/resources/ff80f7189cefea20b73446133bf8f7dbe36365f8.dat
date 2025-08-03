@@ -1,0 +1,18 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { delay, http, HttpResponse } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/msw.js?v=0189a8d1";
+export default http.get(/\/webOrderCommonServices\/v1\.1\/dipendente\/operazioni\/count/, async () => {
+  await delay();
+  const result = true;
+  return HttpResponse.json(result);
+});
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLE9BQU9DLE1BQU1DLG9CQUFvQjtBQU8xQyxlQUFlRCxLQUFLRSxJQUNsQixrRUFDQSxZQUFZO0FBQ1YsUUFBTUgsTUFBTTtBQUlaLFFBQU1JLFNBQVM7QUFFZixTQUFPRixhQUFhRyxLQUFLRCxNQUFNO0FBQ2pDLENBQ0YiLCJuYW1lcyI6WyJkZWxheSIsImh0dHAiLCJIdHRwUmVzcG9uc2UiLCJnZXQiLCJyZXN1bHQiLCJqc29uIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbImNvdW50T3BlcmF6aW9uaS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBkZWxheSwgaHR0cCwgSHR0cFJlc3BvbnNlIH0gZnJvbSAnbXN3JztcclxuXHJcbi8qKlxyXG4gKiBNb2NrIGZvciBjb3VudE9wZXJhemlvbmkgQVBJXHJcbiAqIFJldHVybnMgdHJ1ZSBieSBkZWZhdWx0IChvcGVyYXRpb24gY291bnQgaXMgd2l0aGluIGxpbWl0cylcclxuICogQ2FuIGJlIGNvbmZpZ3VyZWQgdG8gcmV0dXJuIGZhbHNlIHRvIHNpbXVsYXRlIG1heCBvcGVyYXRpb24gZXJyb3JcclxuICovXHJcbmV4cG9ydCBkZWZhdWx0IGh0dHAuZ2V0KFxyXG4gIC9cXC93ZWJPcmRlckNvbW1vblNlcnZpY2VzXFwvdjFcXC4xXFwvZGlwZW5kZW50ZVxcL29wZXJhemlvbmlcXC9jb3VudC8sXHJcbiAgYXN5bmMgKCkgPT4ge1xyXG4gICAgYXdhaXQgZGVsYXkoKTtcclxuXHJcbiAgICAvLyBEZWZhdWx0IHRvIHRydWUgKG9wZXJhdGlvbiBjb3VudCBpcyB3aXRoaW4gbGltaXRzKVxyXG4gICAgLy8gVG8gc2ltdWxhdGUgbWF4IG9wZXJhdGlvbiBlcnJvciwgY2hhbmdlIHRoaXMgdG8gZmFsc2VcclxuICAgIGNvbnN0IHJlc3VsdCA9IHRydWU7XHJcblxyXG4gICAgcmV0dXJuIEh0dHBSZXNwb25zZS5qc29uKHJlc3VsdCk7XHJcbiAgfVxyXG4pO1xyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL2RhdGEtYWNjZXNzLW1vY2svc3JjL2xpYi9oYW5kbGVycy9jb3VudE9wZXJhemlvbmkudHMifQ==

@@ -1,0 +1,54 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/navigation.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/navigation.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import SvgIcon from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/SvgIcon.tsx";
+export function NavigationIcon(props) {
+  return /* @__PURE__ */ jsxDEV(SvgIcon, { ...props, viewBox: "0 0 18 18", children: /* @__PURE__ */ jsxDEV("path", { d: "M11.5942 0.831055C11.1965 0.831055 10.8749 1.15313 10.8749 1.5508C10.8749 1.94847 11.1965 2.27054 11.5942 2.27054H14.7033L7.04155 9.93917C6.76089 10.2201 6.76089 10.6763 7.04155 10.9572C7.18739 11.1031 7.36566 11.1679 7.55478 11.1679C7.74702 11.1679 7.92295 11.0967 8.06559 10.9596L15.7294 3.2889V6.40065C15.7294 6.79832 16.051 7.12039 16.4487 7.12039C16.8463 7.12039 17.1679 6.79832 17.1679 6.40065V1.54632C17.1679 1.45098 17.1452 1.36096 17.1148 1.28247L17.1156 1.28211C17.0436 1.10208 16.8968 0.96374 16.7262 0.889722L16.7217 0.887943C16.6411 0.855675 16.5478 0.831055 16.4487 0.831055H11.5942ZM3.23087 3.23103C1.90484 3.23103 0.831055 4.30481 0.831055 5.63085V14.7681C0.831055 16.0941 1.90484 17.1679 3.23087 17.1679H12.3681C13.6941 17.1679 14.7679 16.0941 14.7679 14.7681V9.78079C14.7679 9.43288 14.5266 9.14186 14.202 9.06583V9.04186H14.0336C13.6277 9.04186 13.2993 9.37031 13.2993 9.77619V14.7635C13.2993 15.2732 12.8824 15.69 12.3727 15.69H3.23087C2.72118 15.69 2.3043 15.2732 2.3043 14.7635V5.62625C2.3043 5.11656 2.72118 4.69967 3.23087 4.69967H8.21816C8.62403 4.69967 8.95248 4.37123 8.95248 3.96535C8.95248 3.55948 8.62403 3.23103 8.21816 3.23103H3.23087Z" }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/navigation.tsx",
+    lineNumber: 7,
+    columnNumber: 7
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/navigation.tsx",
+    lineNumber: 6,
+    columnNumber: 5
+  }, this);
+}
+_c = NavigationIcon;
+var _c;
+$RefreshReg$(_c, "NavigationIcon");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/navigation.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBTU07Ozs7O2dCQU5OLE9BQU9BLENBQUssYUFBYTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDekIsT0FBT0MsYUFBYTtBQUViLGdCQUFTQyxlQUFlQyxPQUFvQztBQUNqRSxTQUNFLHVCQUFDLFdBQVEsR0FBSUEsT0FBTyxTQUFRLGFBQzFCLGlDQUFDLFVBQUssR0FBRSxxcENBQVI7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQUF5cEMsS0FEM3BDO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FFQTtBQUVKO0FBQUNDLEtBTmVGO0FBQWMsSUFBQUU7QUFBQUMsYUFBQUQsSUFBQSIsIm5hbWVzIjpbIlJlYWN0IiwiU3ZnSWNvbiIsIk5hdmlnYXRpb25JY29uIiwicHJvcHMiLCJfYyIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJuYXZpZ2F0aW9uLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xyXG5pbXBvcnQgU3ZnSWNvbiBmcm9tICcuL1N2Z0ljb24nO1xyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIE5hdmlnYXRpb25JY29uKHByb3BzOiBSZWFjdC5Db21wb25lbnRQcm9wczwnc3ZnJz4pIHtcclxuICByZXR1cm4gKFxyXG4gICAgPFN2Z0ljb24gey4uLnByb3BzfSB2aWV3Qm94PVwiMCAwIDE4IDE4XCI+XHJcbiAgICAgIDxwYXRoIGQ9XCJNMTEuNTk0MiAwLjgzMTA1NUMxMS4xOTY1IDAuODMxMDU1IDEwLjg3NDkgMS4xNTMxMyAxMC44NzQ5IDEuNTUwOEMxMC44NzQ5IDEuOTQ4NDcgMTEuMTk2NSAyLjI3MDU0IDExLjU5NDIgMi4yNzA1NEgxNC43MDMzTDcuMDQxNTUgOS45MzkxN0M2Ljc2MDg5IDEwLjIyMDEgNi43NjA4OSAxMC42NzYzIDcuMDQxNTUgMTAuOTU3MkM3LjE4NzM5IDExLjEwMzEgNy4zNjU2NiAxMS4xNjc5IDcuNTU0NzggMTEuMTY3OUM3Ljc0NzAyIDExLjE2NzkgNy45MjI5NSAxMS4wOTY3IDguMDY1NTkgMTAuOTU5NkwxNS43Mjk0IDMuMjg4OVY2LjQwMDY1QzE1LjcyOTQgNi43OTgzMiAxNi4wNTEgNy4xMjAzOSAxNi40NDg3IDcuMTIwMzlDMTYuODQ2MyA3LjEyMDM5IDE3LjE2NzkgNi43OTgzMiAxNy4xNjc5IDYuNDAwNjVWMS41NDYzMkMxNy4xNjc5IDEuNDUwOTggMTcuMTQ1MiAxLjM2MDk2IDE3LjExNDggMS4yODI0N0wxNy4xMTU2IDEuMjgyMTFDMTcuMDQzNiAxLjEwMjA4IDE2Ljg5NjggMC45NjM3NCAxNi43MjYyIDAuODg5NzIyTDE2LjcyMTcgMC44ODc5NDNDMTYuNjQxMSAwLjg1NTY3NSAxNi41NDc4IDAuODMxMDU1IDE2LjQ0ODcgMC44MzEwNTVIMTEuNTk0MlpNMy4yMzA4NyAzLjIzMTAzQzEuOTA0ODQgMy4yMzEwMyAwLjgzMTA1NSA0LjMwNDgxIDAuODMxMDU1IDUuNjMwODVWMTQuNzY4MUMwLjgzMTA1NSAxNi4wOTQxIDEuOTA0ODQgMTcuMTY3OSAzLjIzMDg3IDE3LjE2NzlIMTIuMzY4MUMxMy42OTQxIDE3LjE2NzkgMTQuNzY3OSAxNi4wOTQxIDE0Ljc2NzkgMTQuNzY4MVY5Ljc4MDc5QzE0Ljc2NzkgOS40MzI4OCAxNC41MjY2IDkuMTQxODYgMTQuMjAyIDkuMDY1ODNWOS4wNDE4NkgxNC4wMzM2QzEzLjYyNzcgOS4wNDE4NiAxMy4yOTkzIDkuMzcwMzEgMTMuMjk5MyA5Ljc3NjE5VjE0Ljc2MzVDMTMuMjk5MyAxNS4yNzMyIDEyLjg4MjQgMTUuNjkgMTIuMzcyNyAxNS42OUgzLjIzMDg3QzIuNzIxMTggMTUuNjkgMi4zMDQzIDE1LjI3MzIgMi4zMDQzIDE0Ljc2MzVWNS42MjYyNUMyLjMwNDMgNS4xMTY1NiAyLjcyMTE4IDQuNjk5NjcgMy4yMzA4NyA0LjY5OTY3SDguMjE4MTZDOC42MjQwMyA0LjY5OTY3IDguOTUyNDggNC4zNzEyMyA4Ljk1MjQ4IDMuOTY1MzVDOC45NTI0OCAzLjU1OTQ4IDguNjI0MDMgMy4yMzEwMyA4LjIxODE2IDMuMjMxMDNIMy4yMzA4N1pcIiAvPlxyXG4gICAgPC9TdmdJY29uPlxyXG4gICk7XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy91aS1pY29ucy9zcmMvbGliL25hdmlnYXRpb24udHN4In0=

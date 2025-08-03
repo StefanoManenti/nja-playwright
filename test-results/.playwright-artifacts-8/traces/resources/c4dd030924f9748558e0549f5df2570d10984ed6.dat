@@ -1,0 +1,16 @@
+import {
+  CssAnimation,
+  CssTransition
+} from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-SJ452O5H.js?v=0189a8d1";
+import "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-DHW3RBWR.js?v=0189a8d1";
+import "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-2F5TGF5J.js?v=0189a8d1";
+import "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-E7YIAHMS.js?v=0189a8d1";
+import "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-MRXL75NW.js?v=0189a8d1";
+import "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-F25ENYEQ.js?v=0189a8d1";
+import "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-GAIRWVJN.js?v=0189a8d1";
+import "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-OL46QLBJ.js?v=0189a8d1";
+export {
+  CssAnimation,
+  CssTransition
+};
+//# sourceMappingURL=@mui_base_Transitions.js.map

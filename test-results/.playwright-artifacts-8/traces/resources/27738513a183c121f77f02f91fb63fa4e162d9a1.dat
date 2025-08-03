@@ -1,0 +1,226 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { broadband$ } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/index.ts";
+import { ButtonLink, FootnoteRef, Typography } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+import { BroadbandTechnologyIcon, FiberIcon } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/index.ts";
+import { DataElement } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/index.ts";
+import { AppAnchor, getPlenitudeHref } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/index.ts";
+import { atom, useAtomValue } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+import { CartSection } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/CartSection.tsx";
+import { Price } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/prices/Price.tsx";
+const broadBandCartInfo$ = globalThis.jotaiAtomCache.get(
+  "C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\ui-organisms\\src\\lib\\cart\\sections\\BroadbandCartSection.tsx/broadBandCartInfo$",
+  atom(async (get) => {
+    const broadband = await get(broadband$);
+    return await get(broadband.product$);
+  })
+);
+broadBandCartInfo$.debugLabel = "broadBandCartInfo$";
+export function BroadbandCartSection({ editable }) {
+  _s();
+  const info = useAtomValue(broadBandCartInfo$, {
+    delay: 0
+  });
+  return /* @__PURE__ */ jsxDEV(CartSection, { variant: "commodity", title: "Dettagli fibra", icon: FiberIcon, children: [
+    info.download && /* @__PURE__ */ jsxDEV(DataElement, { title: "Download", description: `Fino a ${info.download}` }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx",
+      lineNumber: 23,
+      columnNumber: 7
+    }, this),
+    info.upload && /* @__PURE__ */ jsxDEV(DataElement, { title: "Upload", description: `Fino a ${info.upload}` }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx",
+      lineNumber: 26,
+      columnNumber: 7
+    }, this),
+    info.technology && /* @__PURE__ */ jsxDEV(Typography, { variant: "caption1", children: [
+      "Velocità stimata grazie alla tecnologia",
+      " ",
+      /* @__PURE__ */ jsxDEV(BroadbandTechnology, { technology: info.technology }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx",
+        lineNumber: 31,
+        columnNumber: 11
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx",
+      lineNumber: 29,
+      columnNumber: 7
+    }, this),
+    info.monthlyFee && /* @__PURE__ */ jsxDEV(
+      DataElement,
+      {
+        title: "Canone mensile",
+        description: /* @__PURE__ */ jsxDEV(Price, { ...info.monthlyFee }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx",
+          lineNumber: 37,
+          columnNumber: 22
+        }, this)
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx",
+        lineNumber: 35,
+        columnNumber: 7
+      },
+      this
+    ),
+    /* @__PURE__ */ jsxDEV(
+      DataElement,
+      {
+        title: "Costo attivazione",
+        description: /* @__PURE__ */ jsxDEV(Price, { ...info.activationCost }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx",
+          lineNumber: 42,
+          columnNumber: 22
+        }, this)
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx",
+        lineNumber: 40,
+        columnNumber: 7
+      },
+      this
+    ),
+    /* @__PURE__ */ jsxDEV(DataElement, { title: "Modem", description: /* @__PURE__ */ jsxDEV(Price, { ...info.modemFee }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx",
+      lineNumber: 45,
+      columnNumber: 47
+    }, this) }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx",
+      lineNumber: 45,
+      columnNumber: 7
+    }, this),
+    !editable && /* @__PURE__ */ jsxDEV(
+      ButtonLink,
+      {
+        chevron: "next",
+        variant: "contract",
+        component: AppAnchor,
+        href: getPlenitudeHref(info.document),
+        mode: "modal-webview",
+        target: "_blank",
+        children: "Consulta il contratto Fibra"
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx",
+        lineNumber: 48,
+        columnNumber: 7
+      },
+      this
+    )
+  ] }, void 0, true, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx",
+    lineNumber: 21,
+    columnNumber: 5
+  }, this);
+}
+_s(BroadbandCartSection, "Mr4nzihLQr6Qsx7aB8MclT4vEKo=", false, function() {
+  return [useAtomValue];
+});
+_c = BroadbandCartSection;
+function BroadbandTechnology(props) {
+  const { technology } = props;
+  if (technology === "FTTH") {
+    return /* @__PURE__ */ jsxDEV(Fragment, { children: [
+      /* @__PURE__ */ jsxDEV(
+        FootnoteRef,
+        {
+          description: /* @__PURE__ */ jsxDEV(Fragment, { children: "L’acronimo FTTH sta per Fiber To The Home e rappresenta un tipo di collegamento internet realizzato con cavi in fibra ottica che partono dalla centrale e arrivano fino a casa tua." }, void 0, false, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx",
+            lineNumber: 71,
+            columnNumber: 11
+          }, this),
+          children: /* @__PURE__ */ jsxDEV("b", { children: "FTTH" }, void 0, false, {
+            fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx",
+            lineNumber: 78,
+            columnNumber: 11
+          }, this)
+        },
+        void 0,
+        false,
+        {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx",
+          lineNumber: 69,
+          columnNumber: 9
+        },
+        this
+      ),
+      " ",
+      /* @__PURE__ */ jsxDEV(BroadbandTechnologyIcon, { technology }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx",
+        lineNumber: 80,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx",
+      lineNumber: 68,
+      columnNumber: 7
+    }, this);
+  }
+  if (technology === "FTTC") {
+    return /* @__PURE__ */ jsxDEV(Fragment, { children: [
+      /* @__PURE__ */ jsxDEV("b", { children: "FTTC" }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx",
+        lineNumber: 89,
+        columnNumber: 9
+      }, this),
+      " ",
+      /* @__PURE__ */ jsxDEV(BroadbandTechnologyIcon, { technology }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx",
+        lineNumber: 89,
+        columnNumber: 21
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx",
+      lineNumber: 88,
+      columnNumber: 7
+    }, this);
+  }
+  return technology;
+}
+_c2 = BroadbandTechnology;
+var _c, _c2;
+$RefreshReg$(_c, "BroadbandCartSection");
+$RefreshReg$(_c2, "BroadbandTechnology");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/sections/BroadbandCartSection.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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LFlBQVk7QUFBQTtBQUFBc0IsS0FEWFo7QUFnRGhCLFNBQVNhLG9CQUFvQkMsT0FBaUQ7QUFDNUUsUUFBTSxFQUFFUCxXQUFXLElBQUlPO0FBRXZCLE1BQUlQLGVBQWUsUUFBUTtBQUN6QixXQUNFLG1DQUNFO0FBQUE7QUFBQSxRQUFDO0FBQUE7QUFBQSxVQUNDLGFBQ0UsbUNBQUUsbU1BQUY7QUFBQTtBQUFBO0FBQUE7QUFBQSxpQkFJQTtBQUFBLFVBR0YsaUNBQUMsT0FBRSxvQkFBSDtBQUFBO0FBQUE7QUFBQTtBQUFBLGlCQUFPO0FBQUE7QUFBQSxRQVRUO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxNQVVBO0FBQUEsTUFBZTtBQUFBLE1BQ2YsdUJBQUMsMkJBQXdCLGNBQXpCO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFBZ0Q7QUFBQSxTQVpsRDtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBYUE7QUFBQSxFQUVKO0FBR0EsTUFBSUEsZUFBZSxRQUFRO0FBQ3pCLFdBQ0UsbUNBQ0U7QUFBQSw2QkFBQyxPQUFFLG9CQUFIO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFBTztBQUFBLE1BQUk7QUFBQSxNQUFDLHVCQUFDLDJCQUF3QixjQUF6QjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQWdEO0FBQUEsU0FEOUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUVBO0FBQUEsRUFFSjtBQUVBLFNBQU9BO0FBQ1Q7QUFBQ1EsTUFoQ1FGO0FBQW1CLElBQUFELElBQUFHO0FBQUFDLGFBQUFKLElBQUE7QUFBQUksYUFBQUQsS0FBQSIsIm5hbWVzIjpbImJyb2FkYmFuZCQiLCJCdXR0b25MaW5rIiwiRm9vdG5vdGVSZWYiLCJUeXBvZ3JhcGh5IiwiQnJvYWRiYW5kVGVjaG5vbG9neUljb24iLCJGaWJlckljb24iLCJEYXRhRWxlbWVudCIsIkFwcEFuY2hvciIsImdldFBsZW5pdHVkZUhyZWYiLCJhdG9tIiwidXNlQXRvbVZhbHVlIiwiQ2FydFNlY3Rpb24iLCJQcmljZSIsImJyb2FkQmFuZENhcnRJbmZvJCIsImdsb2JhbFRoaXMiLCJqb3RhaUF0b21DYWNoZSIsImdldCIsImJyb2FkYmFuZCIsInByb2R1Y3QkIiwiZGVidWdMYWJlbCIsIkJyb2FkYmFuZENhcnRTZWN0aW9uIiwiZWRpdGFibGUiLCJfcyIsImluZm8iLCJkZWxheSIsImRvd25sb2FkIiwidXBsb2FkIiwidGVjaG5vbG9neSIsIm1vbnRobHlGZWUiLCJhY3RpdmF0aW9uQ29zdCIsIm1vZGVtRmVlIiwiZG9jdW1lbnQiLCJfYyIsIkJyb2FkYmFuZFRlY2hub2xvZ3kiLCJwcm9wcyIsIl9jMiIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJCcm9hZGJhbmRDYXJ0U2VjdGlvbi50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgYnJvYWRiYW5kJCB9IGZyb20gJ0BuYWotd28vZGF0YS1hY2Nlc3MnO1xyXG5pbXBvcnQgeyBCdXR0b25MaW5rLCBGb290bm90ZVJlZiwgVHlwb2dyYXBoeSB9IGZyb20gJ0BuYWotd28vdWktYXRvbXMnO1xyXG5pbXBvcnQgeyBCcm9hZGJhbmRUZWNobm9sb2d5SWNvbiwgRmliZXJJY29uIH0gZnJvbSAnQG5hai13by91aS1pY29ucyc7XHJcbmltcG9ydCB7IERhdGFFbGVtZW50IH0gZnJvbSAnQG5hai13by91aS1tb2xlY3VsZXMnO1xyXG5pbXBvcnQgeyBBcHBBbmNob3IsIGdldFBsZW5pdHVkZUhyZWYgfSBmcm9tICdAbmFqLXdvL3V0aWwnO1xyXG5pbXBvcnQgeyBhdG9tLCB1c2VBdG9tVmFsdWUgfSBmcm9tICdqb3RhaSc7XHJcbmltcG9ydCB7IENhcnRTZWN0aW9uIH0gZnJvbSAnLi4vQ2FydFNlY3Rpb24nO1xyXG5pbXBvcnQgeyBQcmljZSB9IGZyb20gJy4uL3ByaWNlcy9QcmljZSc7XHJcblxyXG5jb25zdCBicm9hZEJhbmRDYXJ0SW5mbyQgPSBhdG9tKGFzeW5jIChnZXQpID0+IHtcclxuICBjb25zdCBicm9hZGJhbmQgPSBhd2FpdCBnZXQoYnJvYWRiYW5kJCk7XHJcbiAgcmV0dXJuIGF3YWl0IGdldChicm9hZGJhbmQucHJvZHVjdCQpO1xyXG59KTtcclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBCcm9hZGJhbmRDYXJ0U2VjdGlvbih7IGVkaXRhYmxlIH06IHsgZWRpdGFibGU/OiBib29sZWFuIH0pIHtcclxuICBjb25zdCBpbmZvID0gdXNlQXRvbVZhbHVlKGJyb2FkQmFuZENhcnRJbmZvJCwge1xyXG4gICAgZGVsYXk6IDAsXHJcbiAgfSk7XHJcblxyXG4gIHJldHVybiAoXHJcbiAgICA8Q2FydFNlY3Rpb24gdmFyaWFudD1cImNvbW1vZGl0eVwiIHRpdGxlPXsnRGV0dGFnbGkgZmlicmEnfSBpY29uPXtGaWJlckljb259PlxyXG4gICAgICB7aW5mby5kb3dubG9hZCAmJiAoXHJcbiAgICAgICAgPERhdGFFbGVtZW50IHRpdGxlPVwiRG93bmxvYWRcIiBkZXNjcmlwdGlvbj17YEZpbm8gYSAke2luZm8uZG93bmxvYWR9YH0gLz5cclxuICAgICAgKX1cclxuICAgICAge2luZm8udXBsb2FkICYmIChcclxuICAgICAgICA8RGF0YUVsZW1lbnQgdGl0bGU9XCJVcGxvYWRcIiBkZXNjcmlwdGlvbj17YEZpbm8gYSAke2luZm8udXBsb2FkfWB9IC8+XHJcbiAgICAgICl9XHJcbiAgICAgIHtpbmZvLnRlY2hub2xvZ3kgJiYgKFxyXG4gICAgICAgIDxUeXBvZ3JhcGh5IHZhcmlhbnQ9XCJjYXB0aW9uMVwiPlxyXG4gICAgICAgICAgVmVsb2NpdMOgIHN0aW1hdGEgZ3JhemllIGFsbGEgdGVjbm9sb2dpYXsnICd9XHJcbiAgICAgICAgICA8QnJvYWRiYW5kVGVjaG5vbG9neSB0ZWNobm9sb2d5PXtpbmZvLnRlY2hub2xvZ3l9IC8+XHJcbiAgICAgICAgPC9UeXBvZ3JhcGh5PlxyXG4gICAgICApfVxyXG4gICAgICB7aW5mby5tb250aGx5RmVlICYmIChcclxuICAgICAgICA8RGF0YUVsZW1lbnRcclxuICAgICAgICAgIHRpdGxlPVwiQ2Fub25lIG1lbnNpbGVcIlxyXG4gICAgICAgICAgZGVzY3JpcHRpb249ezxQcmljZSB7Li4uaW5mby5tb250aGx5RmVlfSAvPn1cclxuICAgICAgICAvPlxyXG4gICAgICApfVxyXG4gICAgICA8RGF0YUVsZW1lbnRcclxuICAgICAgICB0aXRsZT1cIkNvc3RvIGF0dGl2YXppb25lXCJcclxuICAgICAgICBkZXNjcmlwdGlvbj17PFByaWNlIHsuLi5pbmZvLmFjdGl2YXRpb25Db3N0fSAvPn1cclxuICAgICAgLz5cclxuXHJcbiAgICAgIDxEYXRhRWxlbWVudCB0aXRsZT1cIk1vZGVtXCIgZGVzY3JpcHRpb249ezxQcmljZSB7Li4uaW5mby5tb2RlbUZlZX0gLz59IC8+XHJcblxyXG4gICAgICB7IWVkaXRhYmxlICYmIChcclxuICAgICAgICA8QnV0dG9uTGlua1xyXG4gICAgICAgICAgY2hldnJvbj1cIm5leHRcIlxyXG4gICAgICAgICAgdmFyaWFudD1cImNvbnRyYWN0XCJcclxuICAgICAgICAgIGNvbXBvbmVudD17QXBwQW5jaG9yfVxyXG4gICAgICAgICAgaHJlZj17Z2V0UGxlbml0dWRlSHJlZihpbmZvLmRvY3VtZW50KX1cclxuICAgICAgICAgIG1vZGU9XCJtb2RhbC13ZWJ2aWV3XCJcclxuICAgICAgICAgIHRhcmdldD1cIl9ibGFua1wiXHJcbiAgICAgICAgPlxyXG4gICAgICAgICAgQ29uc3VsdGEgaWwgY29udHJhdHRvIEZpYnJhXHJcbiAgICAgICAgPC9CdXR0b25MaW5rPlxyXG4gICAgICApfVxyXG4gICAgPC9DYXJ0U2VjdGlvbj5cclxuICApO1xyXG59XHJcblxyXG5mdW5jdGlvbiBCcm9hZGJhbmRUZWNobm9sb2d5KHByb3BzOiB7IHRlY2hub2xvZ3k6ICdGVFRIJyB8ICdGVFRDJyB8IHN0cmluZyB9KSB7XHJcbiAgY29uc3QgeyB0ZWNobm9sb2d5IH0gPSBwcm9wcztcclxuXHJcbiAgaWYgKHRlY2hub2xvZ3kgPT09ICdGVFRIJykge1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgPD5cclxuICAgICAgICA8Rm9vdG5vdGVSZWZcclxuICAgICAgICAgIGRlc2NyaXB0aW9uPXtcclxuICAgICAgICAgICAgPD5cclxuICAgICAgICAgICAgICBM4oCZYWNyb25pbW8gRlRUSCBzdGEgcGVyIEZpYmVyIFRvIFRoZSBIb21lIGUgcmFwcHJlc2VudGEgdW4gdGlwbyBkaVxyXG4gICAgICAgICAgICAgIGNvbGxlZ2FtZW50byBpbnRlcm5ldCByZWFsaXp6YXRvIGNvbiBjYXZpIGluIGZpYnJhIG90dGljYSBjaGVcclxuICAgICAgICAgICAgICBwYXJ0b25vIGRhbGxhIGNlbnRyYWxlIGUgYXJyaXZhbm8gZmlubyBhIGNhc2EgdHVhLlxyXG4gICAgICAgICAgICA8Lz5cclxuICAgICAgICAgIH1cclxuICAgICAgICA+XHJcbiAgICAgICAgICA8Yj5GVFRIPC9iPlxyXG4gICAgICAgIDwvRm9vdG5vdGVSZWY+eycgJ31cclxuICAgICAgICA8QnJvYWRiYW5kVGVjaG5vbG9neUljb24gdGVjaG5vbG9neT17dGVjaG5vbG9neX0gLz5cclxuICAgICAgPC8+XHJcbiAgICApO1xyXG4gIH1cclxuXHJcbiAgLy8gVE9ETyBGVFRDXHJcbiAgaWYgKHRlY2hub2xvZ3kgPT09ICdGVFRDJykge1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgPD5cclxuICAgICAgICA8Yj5GVFRDPC9iPiA8QnJvYWRiYW5kVGVjaG5vbG9neUljb24gdGVjaG5vbG9neT17dGVjaG5vbG9neX0gLz5cclxuICAgICAgPC8+XHJcbiAgICApO1xyXG4gIH1cclxuXHJcbiAgcmV0dXJuIHRlY2hub2xvZ3k7XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy91aS1vcmdhbmlzbXMvc3JjL2xpYi9jYXJ0L3NlY3Rpb25zL0Jyb2FkYmFuZENhcnRTZWN0aW9uLnRzeCJ9

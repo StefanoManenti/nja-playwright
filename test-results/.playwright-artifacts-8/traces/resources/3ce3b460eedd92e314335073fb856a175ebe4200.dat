@@ -1,0 +1,26 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { atom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+import { broadbandOffer$ } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/api/products-collection/index.ts";
+import { workingOnBroadbandAtom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/troubleshooting/troubleshooting.ts";
+export const broadband$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\broadband\\broadband.ts/broadband$", atom(async function() {
+  const {
+    Broadband
+  } = await import("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/broadband/BroadbandAtoms.ts");
+  return new Broadband(broadbandOffer$);
+}));
+broadband$.debugLabel = "broadband$";
+export const broadbandIfExists$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\broadband\\broadband.ts/broadbandIfExists$", atom(async function(get) {
+  return get(workingOnBroadbandAtom) ? get(broadband$) : void 0;
+}));
+broadbandIfExists$.debugLabel = "broadbandIfExists$";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLFlBQVk7QUFDckIsU0FBU0MsdUJBQXVCO0FBQ2hDLFNBQVNDLDhCQUE4QjtBQUd2QyxhQUFBQyxhQUFBQyxXQUFBQyxlQUFBQyxJQUFBLHlIQUEwQk4sS0FBSyxpQkFBa0I7QUFDL0MsUUFBTTtBQUFBLElBQUVPO0FBQUFBLEVBQVUsSUFBSSxNQUFNLE9BQU8sa0JBQWtCO0FBQ3JELFNBQU8sSUFBSUEsVUFBVU4sZUFBZTtBQUN0QyxDQUFDLENBQUM7QUFBQ0UsV0FBQUssYUFBQTtBQUVILGFBQUFDLHFCQUFBTCxXQUFBQyxlQUFBQyxJQUFBLGlJQUFrQ04sS0FBSyxlQUFnQk0sS0FBSztBQUMxRCxTQUFPQSxJQUFJSixzQkFBc0IsSUFBSUksSUFBSUgsVUFBVSxJQUFJTztBQUN6RCxDQUFDLENBQUM7QUFBQ0QsbUJBQUFELGFBQUEiLCJuYW1lcyI6WyJhdG9tIiwiYnJvYWRiYW5kT2ZmZXIkIiwid29ya2luZ09uQnJvYWRiYW5kQXRvbSIsImJyb2FkYmFuZCQiLCJnbG9iYWxUaGlzIiwiam90YWlBdG9tQ2FjaGUiLCJnZXQiLCJCcm9hZGJhbmQiLCJkZWJ1Z0xhYmVsIiwiYnJvYWRiYW5kSWZFeGlzdHMkIiwidW5kZWZpbmVkIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbImJyb2FkYmFuZC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBhdG9tIH0gZnJvbSAnam90YWknO1xyXG5pbXBvcnQgeyBicm9hZGJhbmRPZmZlciQgfSBmcm9tICcuLi8uLi9hcGkvcHJvZHVjdHMtY29sbGVjdGlvbic7XHJcbmltcG9ydCB7IHdvcmtpbmdPbkJyb2FkYmFuZEF0b20gfSBmcm9tICcuLi8uLi90cm91Ymxlc2hvb3RpbmcvdHJvdWJsZXNob290aW5nJztcclxuaW1wb3J0IHR5cGUgeyBJQnJvYWRiYW5kIH0gZnJvbSAnLi90eXBlcyc7XHJcblxyXG5leHBvcnQgY29uc3QgYnJvYWRiYW5kJCA9IGF0b20oYXN5bmMgZnVuY3Rpb24gKCkge1xyXG4gIGNvbnN0IHsgQnJvYWRiYW5kIH0gPSBhd2FpdCBpbXBvcnQoJy4vQnJvYWRiYW5kQXRvbXMnKTtcclxuICByZXR1cm4gbmV3IEJyb2FkYmFuZChicm9hZGJhbmRPZmZlciQpIGFzIElCcm9hZGJhbmQ7XHJcbn0pO1xyXG5cclxuZXhwb3J0IGNvbnN0IGJyb2FkYmFuZElmRXhpc3RzJCA9IGF0b20oYXN5bmMgZnVuY3Rpb24gKGdldCkge1xyXG4gIHJldHVybiBnZXQod29ya2luZ09uQnJvYWRiYW5kQXRvbSkgPyBnZXQoYnJvYWRiYW5kJCkgOiB1bmRlZmluZWQ7XHJcbn0pO1xyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL2RhdGEtYWNjZXNzL3NyYy9saWIvYXRvbXMvYnJvYWRiYW5kL2Jyb2FkYmFuZC50cyJ9

@@ -1,0 +1,761 @@
+import { Page } from "@playwright/test";
+import fs from "fs";
+import { MOCKS } from "./Mock";
+import path from "path";
+
+export enum WAIT {
+  SCREENSHOT = 300,
+  SHORT = 500,
+  MID = 1500,
+  DEFAULT = 2000,
+  LONG = 4000,
+}
+
+export async function addScriptInit(page: Page, script: string): Promise<void> {
+  await page.addInitScript({ content: script });
+}
+
+export async function addScriptRuntime(
+  page: Page,
+  script: any | string | Function
+): Promise<void> {
+  await page.evaluate(script);
+}
+export async function clearScreenshots(
+  path: string,
+  createFolder: boolean = true
+) {
+  const exists = await fs.promises
+    .access(path)
+    .then(() => true)
+    .catch(() => false);
+  if (!exists && createFolder) {
+    console.log("Create Screenshots Folder", path);
+    await fs.promises.mkdir(path, { recursive: true });
+  }
+  if (exists) {
+    const files = await fs.promises.readdir(path);
+    for (const file of files) {
+      await fs.promises.unlink(`${path}/${file}`);
+    }
+  }
+}
+
+export function countScreenshots(path: string): number {
+  return fs.readdirSync(path).filter((file) => file.endsWith(".png")).length;
+}
+
+export async function screenShot(page, path: string, screenName: string) {
+  const exists = await fs.promises
+    .access(path)
+    .then(() => true)
+    .catch(() => false);
+  if (!exists) {
+    await fs.promises.mkdir(path, { recursive: true });
+  }
+
+  const fullHeight = await page.evaluate(() => {
+    return Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight,
+      document.body.clientHeight,
+      document.documentElement.clientHeight
+    );
+  });
+
+  const index = 1 + (await countScreenshots(path));
+
+  await page.setViewportSize({ width: 1280, height: fullHeight });
+
+  const screenFileName = `${path}/${screenName}${index}.png`;
+
+  await page.waitForTimeout(WAIT.SCREENSHOT);
+
+  return await page.screenshot({
+    fullPage: true,
+    path: screenFileName,
+  });
+}
+
+export async function pageHasTitle(page, title: string[] | false) {
+  // Skip controllo titolo pagina se tile false
+  if (title === false) return true;
+
+  // Se la pagina non ha un form dentro al main allora non è una pagina compilabile, quindi skip
+  const hasMain = (await page.locator("main").count()) > 0;
+  const hasForm = hasMain && (await page.locator("main form").count()) > 0;
+  if (!hasForm) {
+    return true;
+  }
+
+  //altrimenti controlla il titolo in h1 o h2 in clausola OR
+  let hasTitle: boolean[] = [];
+  for (const t of title) {
+    const formLocator = await page.locator("h1, h2").filter({ hasText: t });
+    //.locator("xpath=ancestor::form[1]");
+    hasTitle.push(!!formLocator && (await formLocator.isVisible()));
+  }
+  return hasTitle.some((v) => v);
+}
+
+export async function nextStepButton(
+  page,
+  screenOnLoaded: boolean,
+  path: string,
+  screenName: string
+) {
+  // Eventuali dialog al caricamento della pagina
+  await dialogStep(page, path, screenName);
+
+  const submitButton = await page.locator(
+    'button[type="submit"], input[type="submit"]'
+  );
+
+  // Trigger di controllo per forzare onTouch su useForm
+  const inputs = await page.locator("form input");
+  const lastInput = inputs.last();
+  if (await lastInput.isVisible()) {
+    await lastInput.press("Tab");
+  }
+
+  await page.waitForTimeout(WAIT.MID);
+  if (await submitButton.isVisible()) {
+    if ((await submitButton.getAttribute("disabled")) !== null) {
+      failedError(
+        "Pulsante di invio disabilitato, invocato prima di completare tutto il form"
+      );
+    }
+    await submitButton.click();
+      
+    await page.waitForTimeout(WAIT.MID);
+    await dialogStep(page, path, screenName);
+
+    console.log("➡️  Avanzato allo step successivo");
+
+    if (screenOnLoaded) {
+      await screenShot(page, path, screenName);
+    }
+  }
+  // Pagina senza pulsante di submit ma solo prosegui type button
+  else {
+    const proseguiButton = page.locator(
+      'button:has-text("Prosegui"), a:has-text("Prosegui")'
+    );
+    //const proseguiButton = page.locator(""button.primary").last();
+    if (await proseguiButton.isVisible()) {
+      await proseguiButton.click();
+
+      await page.waitForTimeout(WAIT.MID);
+      await dialogStep(page, path, screenName);
+
+      if (screenOnLoaded) {
+        await screenShot(page, path, screenName);
+      }
+    } else {
+      failedError("Pulsante di prosegui non trovato");
+    }
+  }
+}
+
+export async function dialogStep(page, path: string, screenName: string) {
+  await page.waitForTimeout(WAIT.LONG);
+
+  // Cookie banner
+  const cookieButton = await page.locator("button#footer_tc_privacy_button_3");
+  if (await cookieButton.isVisible()) {
+    console.log("Trovato Cookie banner");
+    await cookieButton.click();
+    console.log("Click Accettata tutti Cookie banner");
+    await page.waitForTimeout(WAIT.SHORT);
+  } else {
+    console.log("Cookie banner NON trovato --> Continue");
+  }
+
+  let dialogLocator = await page.locator("div[class*='_dialog_']");
+  let dialogCount = await dialogLocator.count();
+  while (dialogCount > 0) {
+    const visibleDialog = await dialogLocator.first();
+    if (!(await visibleDialog.isVisible())) break;
+
+    const dialogText = await visibleDialog.locator("h1").first().textContent();
+
+    if (dialogText) console.log("➡️  Dialog Title: " + dialogText);
+
+    // dialog OTP
+    if (
+      dialogText &&
+      dialogText.includes("Conferma il tuo numero di telefono")
+    ) {
+      const otpInput = await visibleDialog.locator('input[type="text"]');
+      if (await otpInput.isVisible()) {
+        await otpInput.fill(MOCKS.otp);
+        await screenShot(page, path, screenName);
+        await page.waitForTimeout(WAIT.SHORT);
+      }
+    }
+
+    // dialog Scrollable
+    const scrollableBox = await visibleDialog.locator(
+      "[class*='_scrollable_']"
+    );
+    if (await scrollableBox.isVisible()) {
+      await scrollableBox.evaluate((el) => {
+        el.scrollTo(0, el.scrollHeight);
+      });
+      await page.waitForTimeout(WAIT.SHORT);
+      await screenShot(page, path, screenName);
+    }
+
+    //TODO altri modali con input
+
+    const button = await visibleDialog.locator("button.primary").first();
+    if (await button.isVisible()) {
+      await button.click();
+    }
+
+    await page.waitForTimeout(WAIT.LONG);
+    dialogCount = await dialogLocator.count();
+  }
+}
+
+export function failedError(errorMsg?: string) {
+  throw new Error(errorMsg ?? "Step non trovato");
+}
+export function getToday() {
+  const today = new Date();
+  const day = today.getDate().toString().padStart(2, "0");
+  const month = (today.getMonth() + 1).toString().padStart(2, "0");
+  const year = today.getFullYear().toString().padStart(4, "0");
+  return `${day}/${month}/${year}`;
+}
+export function getTomorrow() {
+  const today = new Date();
+  const tomorrow = new Date(today.setDate(today.getDate() + 1));
+  const day = tomorrow.getDate().toString().padStart(2, "0");
+  const month = (tomorrow.getMonth() + 1).toString().padStart(2, "0");
+  const year = tomorrow.getFullYear().toString().padStart(4, "0");
+  return `${day}/${month}/${year}`;
+}
+
+// Assicura che la cartella esista
+export async function ensureFolderExists(folder: string) {
+  if (
+    !(await fs.promises
+      .access(folder)
+      .then(() => true)
+      .catch(() => false))
+  ) {
+    await fs.promises.mkdir(folder, { recursive: true });
+  }
+}
+// Attacca i listener a page e raccoglie i messaggi
+export function setupPageLogging(page: Page, buffer: string[]) {
+  page.on("console", (msg) => {
+    buffer.push(`[browser-console] ${msg.type()}: ${msg.text()}`);
+  });
+  page.on("pageerror", (err) => {
+    buffer.push(`[browser-error] ${err.message}`);
+  });
+}
+
+// Scrive il buffer su file
+export async function flushLogsToFile(
+  buffer: string[],
+  folder: string,
+  fileName: string
+) {
+  await ensureFolderExists(folder);
+  const filePath = path.join(folder, fileName);
+  const content = buffer.join("\n") + "\n";
+  await fs.promises.writeFile(filePath, content, { encoding: "utf-8" });
+}
+// Cerca ricorsivamente una classe nei genitori, partendo da un elemento
+
+export const notSelectedStyle = "rgb(255, 255, 255)";
+export type ValuesOverrides = Record<string, string | string[]>;
+
+export async function autoFillForm(
+  page: Page,
+  path: string,
+  screenName: string,
+  valuesOverrides: ValuesOverrides = {}
+): Promise<void> {
+  console.log("🔁 Inizio compilazione ricorsiva del form…");
+
+  const form = page.locator("form").first();
+  if (!(await form.isVisible())) {
+    throw new Error("❌ Nessun form visibile trovato nella pagina.");
+  }
+
+  const processed = new Set<string>();
+  let didFill: boolean;
+
+  // Aggiungi un oggetto per tenere traccia dei radio già processati per nome
+  const radioProcessed = new Set<string>();
+
+  do {
+    didFill = false;
+
+    // 1) Recupera tutti i campi potenzialmente compilabili
+    const formFields = await form
+      .locator(
+        [
+          "input:not([type='hidden']):not([disabled]):not([readonly])",
+          "textarea:not([disabled]):not([readonly])",
+          "select:not([disabled]):not([readonly])",
+          "button[role='combobox']:not([disabled]):not([readonly])",
+        ].join(", ")
+      )
+      .elementHandles();
+
+    console.log(`🔍 Trovati ${formFields.length} campi.`);
+
+    // 2) Cicla ciascun campo non ancora processato
+    for (const handle of formFields) {
+      let indexSelect = 0;
+
+      let isCalendar = false;
+      isCalendar = await handle.evaluate((el: any) => {
+        if (el.closest('[class*="calendarWrapper"]')) return true;
+        else return false;
+      });
+      if (isCalendar) console.log("CALENDAR FIELD TROVATO");
+      else console.log("CALENDAR FIELD NON TROVATO");
+
+      const isSelect = await handle.evaluate((el: any) =>
+        el.classList.contains("base-Select-root")
+      );
+      if (isSelect) {
+        const handles = await page.$$("button[role='combobox']");
+        indexSelect = await page.evaluate(
+          (args) => {
+            const [handles, el] = args;
+            if (Array.isArray(handles)) {
+              return handles.indexOf(el as any);
+            }
+            return -1;
+          },
+          [handles, handle]
+        );
+      }
+
+      let fillValue: string | undefined;
+      const tag = await handle.evaluate((el: any) => el.tagName.toLowerCase());
+      const type = (await handle.getAttribute("type")) || tag;
+      let name =
+        (await handle.getAttribute("name")) ||
+        (await handle.getAttribute("formcontrolname")) ||
+        (await handle.getAttribute("id")) ||
+        "";
+
+      if (isSelect) {
+        const parentField = await handle.evaluateHandle((el: any) =>
+          el.closest("fieldset, div")
+        );
+        if (parentField) {
+          const parentElement = parentField.asElement();
+          if (parentElement) {
+            const ariaHiddenInput = await parentElement.$(
+              "input[aria-hidden='true']"
+            );
+            if (ariaHiddenInput) {
+              fillValue = await page.evaluate(
+                (el) => (el as HTMLInputElement).value,
+                ariaHiddenInput
+              );
+            }
+
+            const label = await parentElement.$("label");
+            console.log("isSelect: " + label);
+
+            if (label) {
+              const labelText = await label.textContent();
+              name = (labelText ?? "").toLowerCase().replace(/\s/g, "_");
+            }
+          }
+        }
+      }
+      const valueAttr = (await handle.getAttribute("value")) || "";
+
+      // Genera una chiave univoca per evitare doppia compilazione
+      const key = `${tag}::${name}::${valueAttr}`;
+      if (!name) {
+        console.log(`⚠️ Campo senza name (${tag}), skip.`);
+        continue;
+      }
+      if (processed.has(key)) continue;
+      if (!(await handle.isVisible())) {
+        console.log(`⚠️ Campo ${name} non visibile, skip.`);
+        processed.add(key);
+        continue;
+      }
+
+      // Segnalo che sto per processarlo
+      processed.add(key);
+      didFill = true;
+
+      // Determina il valore override / mock
+      const override = valuesOverrides[name];
+
+      if (isCalendar) {
+        handle.focus();
+        await page.waitForTimeout(WAIT.SHORT);
+        const calendarElement = await page.$("div[class*='react-calendar']");
+        if (calendarElement) {
+          const dayButtons = await calendarElement.$$(
+            "button:not([disabled])[class*='react-calendar__tile'][class*='react-calendar__month-view__days__day']"
+          );
+          if (dayButtons.length) {
+            await dayButtons[0].click();
+          }
+        }
+      } else {
+        if (!isSelect) {
+          switch (type) {
+            case "text":
+            case "email":
+            case "tel":
+            case "password":
+              {
+                const aria =
+                  (await handle.getAttribute("aria-describedby")) || "";
+                const isAddress =
+                  aria.includes("address") ||
+                  name.toLowerCase().includes("address");
+
+                const isFirstName =
+                  name.toLowerCase().includes("givenname") ||
+                  name.toLowerCase().includes("firstname");
+
+                const isLastName =
+                  name.toLowerCase().includes("familyname") ||
+                  name.toLowerCase().includes("lastname");
+
+                const isCodiceFiscale =
+                  name.toLowerCase().includes("taxcode") ||
+                  name.toLowerCase().includes("taxid") ||
+                  name.toLowerCase().includes("codice fiscale");
+                name.toLowerCase().includes("codicefiscale");
+
+                const isPartitaIva =
+                  name.toLowerCase().includes("vatnumber") ||
+                  name.toLowerCase().includes("partita iva");
+
+                const isSdi = name.toLowerCase().includes("businesssdi");
+
+                const isPrefixPhone =
+                  name.toLowerCase().includes("businessphoneprefix") ||
+                  name.toLowerCase().includes("telephonecountrycode") ||
+                  name.toLowerCase().includes("contactphonecountrycode");
+
+                const isPhone =
+                  !isPrefixPhone &&
+                  (aria.includes("phone") ||
+                    name.toLowerCase().includes("phone"));
+
+                const isDateField =
+                  (await handle.getAttribute("placeholder")) === "gg/mm/aaaa";
+
+                const isIban =
+                  aria.includes("iban") || name.toLowerCase().includes("iban");
+
+                const isSmc =
+                  aria.includes("annualconsumption") ||
+                  name.toLowerCase().includes("annualconsumption");
+
+                const isAteco =
+                  aria.includes("atecorecord") ||
+                  name.toLowerCase().includes("atecorecord") ||
+                  aria.includes("ateco") ||
+                  name.toLowerCase().includes("ateco");
+
+                const isPod =
+                  aria.includes("pod") || name.toLowerCase().includes("pod");
+
+                const isPdr =
+                  aria.includes("pdr") || name.toLowerCase().includes("pdr");
+
+                switch (true) {
+                  case typeof override === "string":
+                    fillValue = override;
+                    break;
+                  case isFirstName:
+                    fillValue = MOCKS.firstname;
+                    break;
+                  case isLastName:
+                    fillValue = MOCKS.lastname;
+                    break;
+                  case isAddress:
+                    fillValue = MOCKS.address;
+                    break;
+                  case isPrefixPhone:
+                    fillValue = MOCKS.prefixTel;
+                    break;
+                  case isPhone:
+                    fillValue = MOCKS.tel;
+                    break;
+                  case isCodiceFiscale:
+                    fillValue = MOCKS.codiceFiscale;
+                    break;
+                  case isPartitaIva:
+                    fillValue = MOCKS.partitaIva;
+                    break;
+                  case isSdi:
+                    fillValue = MOCKS.sdi;
+                    break;
+                  case isIban:
+                    fillValue = MOCKS.iban;
+                    break;
+                  case isAteco:
+                    fillValue = MOCKS.ateco;
+                    break;
+                  case isPod:
+                    fillValue = MOCKS.pod;
+                    break;
+                  case isPdr:
+                    fillValue = MOCKS.pdr;
+                    break;
+                  case isDateField:
+                    fillValue = getToday();
+                    break;
+                  case isSmc:
+                    fillValue = MOCKS.smc;
+                    break;
+                  default:
+                    fillValue = MOCKS[type] ?? MOCKS.text;
+                }
+
+                console.log(`✏️ [${type}] ${name}: "${fillValue}"`);
+                if (!valueAttr) {
+                  await handle.fill(fillValue!);
+                } else {
+                  // Forza reinserimento valore di default
+                  await handle.fill(valueAttr!);
+                  console.log(
+                    `⚠️ Campo ${name} già valorizzato con "${valueAttr}", skip.`
+                  );
+                }
+
+                if (isAddress) {
+                  // se è address, seleziono il primo suggerimento
+                  const addressId = await handle.getAttribute("id");
+                  await page.waitForTimeout(WAIT.MID);
+                  const firstSug = page
+                    .locator(`#${addressId}-listbox li`)
+                    .first();
+                  if (await firstSug.isVisible()) {
+                    console.log("📍 Seleziono suggerimento indirizzo");
+                    await firstSug.click();
+                  } else {
+                    console.log("⚠️ Suggerimento indirizzo non trovato");
+                  }
+                }
+              }
+              break;
+
+            case "textarea":
+              {
+                if (typeof override === "string") {
+                  fillValue = override;
+                } else {
+                  fillValue = MOCKS.textarea;
+                }
+                console.log(`📝 [textarea] ${name}: "${fillValue}"`);
+                await handle.fill(fillValue!);
+              }
+              break;
+
+            case "checkbox":
+              {
+                let shouldCheck = false;
+                if (override === undefined) {
+                  shouldCheck = true;
+                } else if (Array.isArray(override)) {
+                  shouldCheck = override.includes(valueAttr);
+                }
+                if (shouldCheck) {
+                  const id = await handle.getAttribute("id")!;
+                  const label = page.locator(`label[for="${id}"]`).first();
+                  if (await label.count()) {
+                    //Controllo che non sia già spuntata in base al colore di sfondo della card (da raffinare)
+                    const labelHandle = await label.elementHandle();
+                    let labelBackgroundStyle: string | undefined = undefined;
+                    if (labelHandle) {
+                      labelBackgroundStyle = await page.evaluate(
+                        (el) => getComputedStyle(el).backgroundColor,
+                        labelHandle
+                      );
+                      console.log(
+                        `labelBackgroundStyle: ${labelBackgroundStyle}`
+                      );
+                    }
+                    if (!labelBackgroundStyle) {
+                      await label.click();
+                      await dialogStep(page, path, screenName);
+                    } else if (
+                      labelBackgroundStyle &&
+                      labelBackgroundStyle !== notSelectedStyle
+                    ) {
+                      console.log(`☑️ [checkbox] ${name} label già spuntato`);
+                    } else {
+                      console.log(`☑️ [checkbox] ${name} label`);
+                      await label.click();
+                      await dialogStep(page, path, screenName);
+                      continue;
+                    }
+                  } else {
+                    console.log(`☑️ [checkbox] ${name} input`);
+                    await handle.check();
+                    await dialogStep(page, path, screenName);
+                  }
+                } else {
+                  console.log(
+                    `☐ [checkbox] ${name} skip (override non include "${valueAttr}")`
+                  );
+                }
+              }
+              break;
+
+            case "radio":
+              {
+                // Se l'override è presente, seleziona il radio corrispondente
+                if (typeof override === "string") {
+                  const isMatch =
+                    valueAttr.toLowerCase() === override.toLowerCase();
+
+                  if (isMatch && !radioProcessed.has(name)) {
+                    // Segna questo gruppo di radio come già processato
+                    radioProcessed.add(name);
+
+                    const id = await handle.getAttribute("id")!;
+                    const label = page.locator(`label[for="${id}"]`).first();
+                    console.log(`🔘 [radio] ${name} => "${valueAttr}"`);
+                    if (await label.count()) {
+                      // await label.click();
+                      // await dialogStep(page, path, screenName);
+                      //Controllo che non sia già spuntata in base al colore di sfondo della card (da raffinare)
+                      const labelHandle = await label.elementHandle();
+                      let labelBackgroundStyle: string | undefined = undefined;
+                      if (labelHandle) {
+                        labelBackgroundStyle = await page.evaluate(
+                          (el) => getComputedStyle(el).backgroundColor,
+                          labelHandle
+                        );
+                        console.log(
+                          `labelBackgroundStyle: ${labelBackgroundStyle}`
+                        );
+                      }
+                      if (!labelBackgroundStyle) {
+                        await label.click();
+                        await dialogStep(page, path, screenName);
+                      } else if (
+                        labelBackgroundStyle &&
+                        labelBackgroundStyle !== notSelectedStyle
+                      ) {
+                        console.log(`☑️ [radio] ${name} label già spuntato`);
+                      } else {
+                        console.log(`☑️ [radop] ${name} label`);
+                        await label.click();
+                        await dialogStep(page, path, screenName);
+                        continue;
+                      }
+                    } else {
+                      await handle.check();
+                      await dialogStep(page, path, screenName);
+                    }
+                  }
+                } else {
+                  // Se non ci sono override, seleziona solo il primo radio per ogni nome
+                  if (!radioProcessed.has(name)) {
+                    radioProcessed.add(name);
+
+                    const id = await handle.getAttribute("id")!;
+                    const label = page.locator(`label[for="${id}"]`).first();
+                    console.log(`🔘 [radio] ${name} => "${valueAttr}"`);
+                    if (await label.count()) {
+                      await label.click();
+                      await dialogStep(page, path, screenName);
+                    } else {
+                      await handle.check();
+                      await dialogStep(page, path, screenName);
+                    }
+                  }
+                }
+              }
+
+              break;
+
+            case "select": //da testare
+              {
+                const isMultiple = await handle.evaluate(
+                  (el: any) => el.multiple
+                );
+                if (isMultiple) {
+                  if (Array.isArray(override)) {
+                    console.log(
+                      `⬇️ [select multiple] ${name}: ${override.join(", ")}`
+                    );
+                    await handle.selectOption(
+                      override.map((v) => ({ value: v }))
+                    );
+                  } else {
+                    console.log(
+                      `⚠️ [select multiple] ${name} no override array, skip`
+                    );
+                  }
+                } else {
+                  if (typeof override === "string") {
+                    console.log(`⬇️ [select] ${name} => "${override}"`);
+                    await handle.selectOption({ value: override });
+                  } else {
+                    console.log(`⬇️ [select] ${name} => prima opzione`);
+                    await handle.selectOption({ index: 0 });
+                  }
+                }
+              }
+              break;
+
+            default:
+              console.log(
+                `⚠️ Tipo non gestito (${tag}/${type}) name="${name}"`
+              );
+              break;
+          }
+        } else {
+          handle.click();
+          await page.waitForTimeout(WAIT.SHORT);
+          const listbox = page
+            .locator("ul[class*='_listbox']")
+            .nth(indexSelect);
+          if (await listbox.count()) {
+            let foundOverride = false;
+            if (override) {
+              const optionToSelect = listbox.locator(
+                `li:has-text("${override}")`
+              );
+              if (await optionToSelect.isVisible()) {
+                await optionToSelect.click();
+                await page.waitForTimeout(WAIT.SHORT);
+                foundOverride = true;
+              }
+            }
+            if (!foundOverride) {
+              const firstOption = listbox.locator("li").first();
+              if (await firstOption.count()) {
+                await firstOption.click();
+                await page.waitForTimeout(WAIT.SHORT);
+              }
+            }
+          }
+        }
+      }
+    }
+    // Screenshot a fine step
+    await screenShot(page, path, screenName);
+    await page.waitForTimeout(WAIT.SHORT);
+  } while (didFill);
+
+  console.log("✅ Compilazione ricorsiva completata.");
+}

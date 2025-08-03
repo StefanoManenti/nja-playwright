@@ -1,0 +1,76 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/user-menu/User.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/user-menu/User.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { Typography } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+import { UserIcon } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/index.ts";
+import classes from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/user-menu/User.module.less";
+export function User(props) {
+  const { fullName = "Utente", email = "…", icon } = props;
+  return /* @__PURE__ */ jsxDEV("div", { className: classes.user, children: [
+    /* @__PURE__ */ jsxDEV(UserIcon, { className: classes.avatar }, void 0, false, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/user-menu/User.tsx",
+      lineNumber: 17,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: classes.userInfo, children: [
+      /* @__PURE__ */ jsxDEV(Typography, { variant: "subtitle4", children: fullName }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/user-menu/User.tsx",
+        lineNumber: 19,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV(Typography, { variant: "caption1", className: classes.userEmail, children: email }, void 0, false, {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/user-menu/User.tsx",
+        lineNumber: 20,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/user-menu/User.tsx",
+      lineNumber: 18,
+      columnNumber: 7
+    }, this),
+    icon
+  ] }, void 0, true, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/user-menu/User.tsx",
+    lineNumber: 16,
+    columnNumber: 5
+  }, this);
+}
+_c = User;
+var _c;
+$RefreshReg$(_c, "User");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/user-menu/User.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBZ0JNOzs7OztnQkFoQk4sT0FBU0EsY0FBVTtBQUFRLHdEQUFrQjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDN0MsU0FBU0MsZ0JBQWdCO0FBRXpCLE9BQU9DLGFBQWE7QUFRYixnQkFBU0MsS0FBS0MsT0FBa0I7QUFDckMsUUFBTSxFQUFFQyxXQUFXLFVBQVVDLFFBQVEsS0FBS0MsS0FBSyxJQUFJSDtBQUVuRCxTQUNFLHVCQUFDLFNBQUksV0FBV0YsUUFBUU0sTUFDdEI7QUFBQSwyQkFBQyxZQUFTLFdBQVdOLFFBQVFPLFVBQTdCO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBb0M7QUFBQSxJQUNwQyx1QkFBQyxTQUFJLFdBQVdQLFFBQVFRLFVBQ3RCO0FBQUEsNkJBQUMsY0FBVyxTQUFRLGFBQWFMLHNCQUFqQztBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQTBDO0FBQUEsTUFDMUMsdUJBQUMsY0FBVyxTQUFRLFlBQVcsV0FBV0gsUUFBUVMsV0FDL0NMLG1CQURIO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFFQTtBQUFBLFNBSkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUtBO0FBQUEsSUFDQ0M7QUFBQUEsT0FSSDtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBU0E7QUFFSjtBQUFDSyxLQWZlVDtBQUFJLElBQUFTO0FBQUFDLGFBQUFELElBQUEiLCJuYW1lcyI6WyJUeXBvZ3JhcGh5IiwiVXNlckljb24iLCJjbGFzc2VzIiwiVXNlciIsInByb3BzIiwiZnVsbE5hbWUiLCJlbWFpbCIsImljb24iLCJ1c2VyIiwiYXZhdGFyIiwidXNlckluZm8iLCJ1c2VyRW1haWwiLCJfYyIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJVc2VyLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBUeXBvZ3JhcGh5IH0gZnJvbSAnQG5hai13by91aS1hdG9tcyc7XHJcbmltcG9ydCB7IFVzZXJJY29uIH0gZnJvbSAnQG5hai13by91aS1pY29ucyc7XHJcbmltcG9ydCBSZWFjdCwgeyB0eXBlIFJlYWN0Tm9kZSB9IGZyb20gJ3JlYWN0JztcclxuaW1wb3J0IGNsYXNzZXMgZnJvbSAnLi9Vc2VyLm1vZHVsZS5sZXNzJztcclxuXHJcbnR5cGUgVXNlclByb3BzID0ge1xyXG4gIGZ1bGxOYW1lOiBzdHJpbmc7XHJcbiAgZW1haWw6IHN0cmluZztcclxuICBpY29uPzogUmVhY3ROb2RlO1xyXG59O1xyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIFVzZXIocHJvcHM6IFVzZXJQcm9wcykge1xyXG4gIGNvbnN0IHsgZnVsbE5hbWUgPSAnVXRlbnRlJywgZW1haWwgPSAn4oCmJywgaWNvbiB9ID0gcHJvcHM7XHJcblxyXG4gIHJldHVybiAoXHJcbiAgICA8ZGl2IGNsYXNzTmFtZT17Y2xhc3Nlcy51c2VyfT5cclxuICAgICAgPFVzZXJJY29uIGNsYXNzTmFtZT17Y2xhc3Nlcy5hdmF0YXJ9IC8+XHJcbiAgICAgIDxkaXYgY2xhc3NOYW1lPXtjbGFzc2VzLnVzZXJJbmZvfT5cclxuICAgICAgICA8VHlwb2dyYXBoeSB2YXJpYW50PVwic3VidGl0bGU0XCI+e2Z1bGxOYW1lfTwvVHlwb2dyYXBoeT5cclxuICAgICAgICA8VHlwb2dyYXBoeSB2YXJpYW50PVwiY2FwdGlvbjFcIiBjbGFzc05hbWU9e2NsYXNzZXMudXNlckVtYWlsfT5cclxuICAgICAgICAgIHtlbWFpbH1cclxuICAgICAgICA8L1R5cG9ncmFwaHk+XHJcbiAgICAgIDwvZGl2PlxyXG4gICAgICB7aWNvbn1cclxuICAgIDwvZGl2PlxyXG4gICk7XHJcbn1cclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy91aS1tb2xlY3VsZXMvc3JjL2xpYi91c2VyLW1lbnUvVXNlci50c3gifQ==

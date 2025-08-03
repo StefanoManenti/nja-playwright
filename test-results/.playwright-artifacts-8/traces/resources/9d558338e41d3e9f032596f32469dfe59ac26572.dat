@@ -1,0 +1,123 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/fields/PaymentOptionField.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/fields/PaymentOptionField.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { Payment } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/index.ts";
+import StepContainer from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-container.tsx";
+import { StepFieldset } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-fieldset.tsx";
+import { StepTitle } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-title.tsx";
+import { CardInput } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/fields/CardInput.tsx";
+export function PaymentOptionField(props) {
+  return /* @__PURE__ */ jsxDEV(StepContainer, { children: [
+    /* @__PURE__ */ jsxDEV(
+      StepTitle,
+      {
+        title2: /* @__PURE__ */ jsxDEV(Fragment, { children: "Scegli come desideri pagare" }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/fields/PaymentOptionField.tsx",
+          lineNumber: 15,
+          columnNumber: 17
+        }, this),
+        subtitle: /* @__PURE__ */ jsxDEV(Fragment, { children: "Indica la tua preferenza selezionando una delle due modalità" }, void 0, false, {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/fields/PaymentOptionField.tsx",
+          lineNumber: 18,
+          columnNumber: 9
+        }, this)
+      },
+      void 0,
+      false,
+      {
+        fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/fields/PaymentOptionField.tsx",
+        lineNumber: 14,
+        columnNumber: 7
+      },
+      this
+    ),
+    /* @__PURE__ */ jsxDEV(StepFieldset, { direction: "row", children: [
+      /* @__PURE__ */ jsxDEV(
+        CardInput,
+        {
+          ...props.inputProps,
+          labelTitle: "Avviso di pagamento",
+          value: Payment.POSTAL,
+          type: "radio"
+        },
+        void 0,
+        false,
+        {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/fields/PaymentOptionField.tsx",
+          lineNumber: 22,
+          columnNumber: 9
+        },
+        this
+      ),
+      /* @__PURE__ */ jsxDEV(
+        CardInput,
+        {
+          ...props.inputProps,
+          labelTitle: "Addebito diretto su C/C",
+          value: Payment.DOMICILIATION,
+          type: "radio"
+        },
+        void 0,
+        false,
+        {
+          fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/fields/PaymentOptionField.tsx",
+          lineNumber: 28,
+          columnNumber: 9
+        },
+        this
+      )
+    ] }, void 0, true, {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/fields/PaymentOptionField.tsx",
+      lineNumber: 21,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/fields/PaymentOptionField.tsx",
+    lineNumber: 13,
+    columnNumber: 5
+  }, this);
+}
+_c = PaymentOptionField;
+PaymentOptionField.validate = function(value) {
+  if (!value) {
+    return { type: "required" };
+  }
+};
+var _c;
+$RefreshReg$(_c, "PaymentOptionField");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/fields/PaymentOptionField.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBY2dCOzs7OztnQkFkaEIsT0FBU0EsY0FBZTtBQUFBLHdEQUFxQjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFHN0MsT0FBT0MsbUJBQW1CO0FBQzFCLFNBQVNDLG9CQUFvQjtBQUM3QixTQUFTQyxpQkFBaUI7QUFDMUIsU0FBU0MsaUJBQWlCO0FBRW5CLGdCQUFTQyxtQkFBbUJDLE9BRWhDO0FBQ0QsU0FDRSx1QkFBQyxpQkFDQztBQUFBO0FBQUEsTUFBQztBQUFBO0FBQUEsUUFDQyxRQUFRLG1DQUFFLDJDQUFGO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFBNkI7QUFBQSxRQUVyQyxVQUNFLG1DQUFFLDRFQUFGO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFBOEQ7QUFBQTtBQUFBLE1BSmxFO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxJQUtHO0FBQUEsSUFFSCx1QkFBQyxnQkFBYSxXQUFVLE9BQ3RCO0FBQUE7QUFBQSxRQUFDO0FBQUE7QUFBQSxVQUNDLEdBQUlBLE1BQU1DO0FBQUFBLFVBQ1YsWUFBVztBQUFBLFVBQ1gsT0FBT1AsUUFBUVE7QUFBQUEsVUFDZixNQUFLO0FBQUE7QUFBQSxRQUpQO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxNQUljO0FBQUEsTUFFZDtBQUFBLFFBQUM7QUFBQTtBQUFBLFVBQ0MsR0FBSUYsTUFBTUM7QUFBQUEsVUFDVixZQUFXO0FBQUEsVUFDWCxPQUFPUCxRQUFRUztBQUFBQSxVQUNmLE1BQUs7QUFBQTtBQUFBLFFBSlA7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLE1BSWM7QUFBQSxTQVhoQjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBYUE7QUFBQSxPQXJCRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBc0JBO0FBRUo7QUFBQ0MsS0E1QmVMO0FBOEJoQkEsbUJBQW1CTSxXQUFXLFNBQzVCQyxPQUN3QjtBQUN4QixNQUFJLENBQUNBLE9BQU87QUFDVixXQUFPLEVBQUVDLE1BQU0sV0FBVztBQUFBLEVBQzVCO0FBQ0Y7QUFBRSxJQUFBSDtBQUFBSSxhQUFBSixJQUFBIiwibmFtZXMiOlsiUGF5bWVudCIsIlN0ZXBDb250YWluZXIiLCJTdGVwRmllbGRzZXQiLCJTdGVwVGl0bGUiLCJDYXJkSW5wdXQiLCJQYXltZW50T3B0aW9uRmllbGQiLCJwcm9wcyIsImlucHV0UHJvcHMiLCJQT1NUQUwiLCJET01JQ0lMSUFUSU9OIiwiX2MiLCJ2YWxpZGF0ZSIsInZhbHVlIiwidHlwZSIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJQYXltZW50T3B0aW9uRmllbGQudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFBheW1lbnQgfSBmcm9tICdAbmFqLXdvL2RhdGEtYWNjZXNzJztcclxuaW1wb3J0IFJlYWN0LCB7IENvbXBvbmVudFByb3BzIH0gZnJvbSAncmVhY3QnO1xyXG5pbXBvcnQgeyBGaWVsZEVycm9yIH0gZnJvbSAncmVhY3QtaG9vay1mb3JtJztcclxuaW1wb3J0IFN0ZXBDb250YWluZXIgZnJvbSAnLi4vc3RlcC1jb250YWluZXInO1xyXG5pbXBvcnQgeyBTdGVwRmllbGRzZXQgfSBmcm9tICcuLi9zdGVwLWZpZWxkc2V0JztcclxuaW1wb3J0IHsgU3RlcFRpdGxlIH0gZnJvbSAnLi4vc3RlcC10aXRsZSc7XHJcbmltcG9ydCB7IENhcmRJbnB1dCB9IGZyb20gJy4vQ2FyZElucHV0JztcclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBQYXltZW50T3B0aW9uRmllbGQocHJvcHM6IHtcclxuICBpbnB1dFByb3BzPzogQ29tcG9uZW50UHJvcHM8J2lucHV0Jz47XHJcbn0pIHtcclxuICByZXR1cm4gKFxyXG4gICAgPFN0ZXBDb250YWluZXI+XHJcbiAgICAgIDxTdGVwVGl0bGVcclxuICAgICAgICB0aXRsZTI9ezw+U2NlZ2xpIGNvbWUgZGVzaWRlcmkgcGFnYXJlPC8+fVxyXG4gICAgICAgIC8vIFRoaXMgc2hvdWxkIGJlIHRoZSBcImxlZ2VuZFwiIG9mIHRoZSBTdGVwRmllbGRzZXQ/XHJcbiAgICAgICAgc3VidGl0bGU9e1xyXG4gICAgICAgICAgPD5JbmRpY2EgbGEgdHVhIHByZWZlcmVuemEgc2VsZXppb25hbmRvIHVuYSBkZWxsZSBkdWUgbW9kYWxpdMOgPC8+XHJcbiAgICAgICAgfVxyXG4gICAgICAvPlxyXG4gICAgICA8U3RlcEZpZWxkc2V0IGRpcmVjdGlvbj1cInJvd1wiPlxyXG4gICAgICAgIDxDYXJkSW5wdXRcclxuICAgICAgICAgIHsuLi5wcm9wcy5pbnB1dFByb3BzfVxyXG4gICAgICAgICAgbGFiZWxUaXRsZT1cIkF2dmlzbyBkaSBwYWdhbWVudG9cIlxyXG4gICAgICAgICAgdmFsdWU9e1BheW1lbnQuUE9TVEFMfVxyXG4gICAgICAgICAgdHlwZT1cInJhZGlvXCJcclxuICAgICAgICAvPlxyXG4gICAgICAgIDxDYXJkSW5wdXRcclxuICAgICAgICAgIHsuLi5wcm9wcy5pbnB1dFByb3BzfVxyXG4gICAgICAgICAgbGFiZWxUaXRsZT1cIkFkZGViaXRvIGRpcmV0dG8gc3UgQy9DXCJcclxuICAgICAgICAgIHZhbHVlPXtQYXltZW50LkRPTUlDSUxJQVRJT059XHJcbiAgICAgICAgICB0eXBlPVwicmFkaW9cIlxyXG4gICAgICAgIC8+XHJcbiAgICAgIDwvU3RlcEZpZWxkc2V0PlxyXG4gICAgPC9TdGVwQ29udGFpbmVyPlxyXG4gICk7XHJcbn1cclxuXHJcblBheW1lbnRPcHRpb25GaWVsZC52YWxpZGF0ZSA9IGZ1bmN0aW9uIChcclxuICB2YWx1ZTogUGF5bWVudCB8IHVuZGVmaW5lZFxyXG4pOiBGaWVsZEVycm9yIHwgdW5kZWZpbmVkIHtcclxuICBpZiAoIXZhbHVlKSB7XHJcbiAgICByZXR1cm4geyB0eXBlOiAncmVxdWlyZWQnIH07XHJcbiAgfVxyXG59O1xyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL3VpLW1vbGVjdWxlcy9zcmMvbGliL2ZpZWxkcy9QYXltZW50T3B0aW9uRmllbGQudHN4In0=

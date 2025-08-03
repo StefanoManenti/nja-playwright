@@ -1,0 +1,21 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { atom } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai.js?v=0189a8d1";
+import { store } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/store.ts";
+export const collaudo$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\collaudo.ts/collaudo$", atom(false));
+collaudo$.debugLabel = "collaudo$";
+export const lastCollaudoSent$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms\\collaudo.ts/lastCollaudoSent$", atom(false));
+lastCollaudoSent$.debugLabel = "lastCollaudoSent$";
+window.collaudo = (active = true) => {
+  store.set(collaudo$, active);
+};
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLFlBQVk7QUFDckIsU0FBU0MsYUFBYTtBQUt0QixhQUFBQyxZQUFBQyxXQUFBQyxlQUFBQyxJQUFBLDRHQUF5QkwsS0FBSyxLQUFLLENBQUM7QUFBQ0UsVUFBQUksYUFBQTtBQUNyQyxhQUFBQyxvQkFBQUosV0FBQUMsZUFBQUMsSUFBQSxvSEFBaUNMLEtBQUssS0FBSyxDQUFDO0FBQUNPLGtCQUFBRCxhQUFBO0FBRTVDRSxPQUFlQyxXQUFXLENBQUNDLFNBQVMsU0FBUztBQUM1Q1QsUUFBTVUsSUFBSVQsV0FBV1EsTUFBTTtBQUM3QiIsIm5hbWVzIjpbImF0b20iLCJzdG9yZSIsImNvbGxhdWRvJCIsImdsb2JhbFRoaXMiLCJqb3RhaUF0b21DYWNoZSIsImdldCIsImRlYnVnTGFiZWwiLCJsYXN0Q29sbGF1ZG9TZW50JCIsIndpbmRvdyIsImNvbGxhdWRvIiwiYWN0aXZlIiwic2V0Il0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbImNvbGxhdWRvLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGF0b20gfSBmcm9tICdqb3RhaSc7XHJcbmltcG9ydCB7IHN0b3JlIH0gZnJvbSAnLi4vdXRpbHMvc3RvcmUnO1xyXG5cclxuLyoqXHJcbiAqIEVuYWJsZS9EaXNhYmxlIGluc3BlY3Rpb24gbW9kZS4gU2VuZCBcImNvbGxhdWRvXCI6IHRydWUgdG8gYnVsayBvcmRlclxyXG4gKi9cclxuZXhwb3J0IGNvbnN0IGNvbGxhdWRvJCA9IGF0b20oZmFsc2UpO1xyXG5leHBvcnQgY29uc3QgbGFzdENvbGxhdWRvU2VudCQgPSBhdG9tKGZhbHNlKTtcclxuXHJcbih3aW5kb3cgYXMgYW55KS5jb2xsYXVkbyA9IChhY3RpdmUgPSB0cnVlKSA9PiB7XHJcbiAgc3RvcmUuc2V0KGNvbGxhdWRvJCwgYWN0aXZlKTtcclxufTtcclxuIl0sImZpbGUiOiJDOi9Vc2Vycy9haW50cm9uYS9EZXNrdG9wL0FwcC9yZWFjdC9uYWovbGlicy9kYXRhLWFjY2Vzcy9zcmMvbGliL2F0b21zL2NvbGxhdWRvLnRzIn0=

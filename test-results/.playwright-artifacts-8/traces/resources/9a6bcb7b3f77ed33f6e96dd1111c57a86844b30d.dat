@@ -1,0 +1,13 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+export { UserMenuConnected, UserAccordionConnected } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/user-menu/UserMenuConnected.tsx";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLG1CQUFtQkMsOEJBQThCIiwibmFtZXMiOlsiVXNlck1lbnVDb25uZWN0ZWQiLCJVc2VyQWNjb3JkaW9uQ29ubmVjdGVkIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbImluZGV4LnRzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCB7IFVzZXJNZW51Q29ubmVjdGVkLCBVc2VyQWNjb3JkaW9uQ29ubmVjdGVkIH0gZnJvbSAnLi9Vc2VyTWVudUNvbm5lY3RlZCc7XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvdWktbW9sZWN1bGVzL3NyYy9saWIvdXNlci1tZW51L2luZGV4LnRzIn0=

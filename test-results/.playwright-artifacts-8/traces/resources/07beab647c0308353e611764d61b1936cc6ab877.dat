@@ -1,0 +1,54 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/plus-circle.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/plus-circle.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import SvgIcon from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/SvgIcon.tsx";
+export function PlusCircle(props) {
+  return /* @__PURE__ */ jsxDEV(SvgIcon, { ...props, viewBox: "0 0 24 24", children: /* @__PURE__ */ jsxDEV("path", { d: "M0.5 11.853C0.5 5.51017 5.65714 0.353027 12 0.353027C18.3429 0.353027 23.5 5.51017 23.5 11.853C23.5 18.1959 18.3429 23.353 12 23.353C5.65714 23.353 0.5 18.1959 0.5 11.853ZM1.85714 11.853C1.85714 17.4459 6.40714 21.9959 12 21.9959C17.5929 21.9959 22.1429 17.4459 22.1429 11.853C22.1429 6.26017 17.5929 1.71017 12 1.71017C6.40714 1.71017 1.85714 6.26017 1.85714 11.853ZM12.7142 11.1387H16.2214C16.6142 11.1387 16.9356 11.4601 16.9356 11.853C16.9356 12.2458 16.6142 12.5672 16.2214 12.5672H12.7142V16.0744C12.7142 16.4672 12.3928 16.7887 11.9999 16.7887C11.6071 16.7887 11.2856 16.4672 11.2856 16.0744V12.5672H7.77849C7.38564 12.5672 7.06421 12.2458 7.06421 11.853C7.06421 11.4601 7.38564 11.1387 7.77849 11.1387H11.2856V7.63152C11.2856 7.23866 11.6071 6.91724 11.9999 6.91724C12.3928 6.91724 12.7142 7.23866 12.7142 7.63152V11.1387Z" }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/plus-circle.tsx",
+    lineNumber: 7,
+    columnNumber: 7
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/plus-circle.tsx",
+    lineNumber: 6,
+    columnNumber: 5
+  }, this);
+}
+_c = PlusCircle;
+var _c;
+$RefreshReg$(_c, "PlusCircle");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-icons/src/lib/plus-circle.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBTU07Ozs7O2dCQU5OLE9BQU9BLENBQUssYUFBYTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDekIsT0FBT0MsYUFBYTtBQUViLGdCQUFTQyxXQUFXQyxPQUFvQztBQUM3RCxTQUNFLHVCQUFDLFdBQVEsR0FBSUEsT0FBTyxTQUFRLGFBQzFCLGlDQUFDLFVBQUssR0FBRSxvMEJBQVI7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQUF3MEIsS0FEMTBCO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FFQTtBQUVKO0FBQUNDLEtBTmVGO0FBQVUsSUFBQUU7QUFBQUMsYUFBQUQsSUFBQSIsIm5hbWVzIjpbIlJlYWN0IiwiU3ZnSWNvbiIsIlBsdXNDaXJjbGUiLCJwcm9wcyIsIl9jIiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbInBsdXMtY2lyY2xlLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xyXG5pbXBvcnQgU3ZnSWNvbiBmcm9tICcuL1N2Z0ljb24nO1xyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIFBsdXNDaXJjbGUocHJvcHM6IFJlYWN0LkNvbXBvbmVudFByb3BzPCdzdmcnPikge1xyXG4gIHJldHVybiAoXHJcbiAgICA8U3ZnSWNvbiB7Li4ucHJvcHN9IHZpZXdCb3g9XCIwIDAgMjQgMjRcIj5cclxuICAgICAgPHBhdGggZD1cIk0wLjUgMTEuODUzQzAuNSA1LjUxMDE3IDUuNjU3MTQgMC4zNTMwMjcgMTIgMC4zNTMwMjdDMTguMzQyOSAwLjM1MzAyNyAyMy41IDUuNTEwMTcgMjMuNSAxMS44NTNDMjMuNSAxOC4xOTU5IDE4LjM0MjkgMjMuMzUzIDEyIDIzLjM1M0M1LjY1NzE0IDIzLjM1MyAwLjUgMTguMTk1OSAwLjUgMTEuODUzWk0xLjg1NzE0IDExLjg1M0MxLjg1NzE0IDE3LjQ0NTkgNi40MDcxNCAyMS45OTU5IDEyIDIxLjk5NTlDMTcuNTkyOSAyMS45OTU5IDIyLjE0MjkgMTcuNDQ1OSAyMi4xNDI5IDExLjg1M0MyMi4xNDI5IDYuMjYwMTcgMTcuNTkyOSAxLjcxMDE3IDEyIDEuNzEwMTdDNi40MDcxNCAxLjcxMDE3IDEuODU3MTQgNi4yNjAxNyAxLjg1NzE0IDExLjg1M1pNMTIuNzE0MiAxMS4xMzg3SDE2LjIyMTRDMTYuNjE0MiAxMS4xMzg3IDE2LjkzNTYgMTEuNDYwMSAxNi45MzU2IDExLjg1M0MxNi45MzU2IDEyLjI0NTggMTYuNjE0MiAxMi41NjcyIDE2LjIyMTQgMTIuNTY3MkgxMi43MTQyVjE2LjA3NDRDMTIuNzE0MiAxNi40NjcyIDEyLjM5MjggMTYuNzg4NyAxMS45OTk5IDE2Ljc4ODdDMTEuNjA3MSAxNi43ODg3IDExLjI4NTYgMTYuNDY3MiAxMS4yODU2IDE2LjA3NDRWMTIuNTY3Mkg3Ljc3ODQ5QzcuMzg1NjQgMTIuNTY3MiA3LjA2NDIxIDEyLjI0NTggNy4wNjQyMSAxMS44NTNDNy4wNjQyMSAxMS40NjAxIDcuMzg1NjQgMTEuMTM4NyA3Ljc3ODQ5IDExLjEzODdIMTEuMjg1NlY3LjYzMTUyQzExLjI4NTYgNy4yMzg2NiAxMS42MDcxIDYuOTE3MjQgMTEuOTk5OSA2LjkxNzI0QzEyLjM5MjggNi45MTcyNCAxMi43MTQyIDcuMjM4NjYgMTIuNzE0MiA3LjYzMTUyVjExLjEzODdaXCIgLz5cclxuICAgIDwvU3ZnSWNvbj5cclxuICApO1xyXG59XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvdWktaWNvbnMvc3JjL2xpYi9wbHVzLWNpcmNsZS50c3gifQ==

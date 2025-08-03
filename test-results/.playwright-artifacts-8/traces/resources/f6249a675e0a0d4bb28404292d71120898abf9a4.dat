@@ -1,0 +1,18 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/display/DataListBox.module.less");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from "/@vite/client"
+const __vite__id = "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/display/DataListBox.module.less"
+const __vite__css = "._dataListContainer_ridzd_1 {\n  display: flex;\n  flex-direction: column;\n  padding: calc(var(--grid-base) * 2);\n  gap: calc(var(--grid-base));\n  border-radius: calc(var(--grid-base) * 2);\n  border: 1px solid var(--Text-Light-Grey);\n  background: var(--Background-Friendly-Beige);\n}\n._dataListContainer_ridzd_1 ._dataListSeparator_ridzd_10 {\n  height: 1px;\n  background: var(--Text-Light-Grey);\n}\n._dataListContainer_ridzd_1 ._dataListRow_ridzd_14 {\n  display: flex;\n  justify-content: space-between;\n}\n._dataListContainer_ridzd_1 ._dataListRow_ridzd_14 ._dataListTitle_ridzd_18 {\n  font-size: 16px;\n  font-weight: 400;\n}\n._dataListContainer_ridzd_1 ._dataListRow_ridzd_14 ._dataListLabel_ridzd_22 {\n  flex: none;\n  font-size: 16px;\n  font-weight: 600;\n}\n"
+__vite__updateStyle(__vite__id, __vite__css)
+export const dataListContainer = "_dataListContainer_ridzd_1";
+export const dataListSeparator = "_dataListSeparator_ridzd_10";
+export const dataListRow = "_dataListRow_ridzd_14";
+export const dataListTitle = "_dataListTitle_ridzd_18";
+export const dataListLabel = "_dataListLabel_ridzd_22";
+export default {
+	dataListContainer: dataListContainer,
+	dataListSeparator: dataListSeparator,
+	dataListRow: dataListRow,
+	dataListTitle: dataListTitle,
+	dataListLabel: dataListLabel
+};
+
+import.meta.hot.prune(() => __vite__removeStyle(__vite__id))

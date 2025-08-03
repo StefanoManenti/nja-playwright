@@ -1,0 +1,24 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { delay, http, HttpResponse } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/msw.js?v=0189a8d1";
+export default http.post(/\/api\/webOrderCommonServices\/checkPdr/, async () => {
+  await delay();
+  return HttpResponse.json({
+    esito: "OK",
+    stato: "INESISTENTE",
+    logHash: "YCDJHNmHFHbIB",
+    pdr: "12345678901234",
+    matricola: null,
+    contatorePresente: false
+  });
+});
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLE9BQU9DLE1BQU1DLG9CQUFvQjtBQUUxQyxlQUFlRCxLQUFLRSxLQUNsQiwyQ0FDQSxZQUFZO0FBQ1YsUUFBTUgsTUFBTTtBQUVaLFNBQU9FLGFBQWFFLEtBQUs7QUFBQSxJQUN2QkMsT0FBTztBQUFBLElBQ1BDLE9BQU87QUFBQSxJQUNQQyxTQUFTO0FBQUEsSUFDVEMsS0FBSztBQUFBLElBQ0xDLFdBQVc7QUFBQSxJQUNYQyxtQkFBbUI7QUFBQSxFQUNyQixDQUFDO0FBQ0gsQ0FDRiIsIm5hbWVzIjpbImRlbGF5IiwiaHR0cCIsIkh0dHBSZXNwb25zZSIsInBvc3QiLCJqc29uIiwiZXNpdG8iLCJzdGF0byIsImxvZ0hhc2giLCJwZHIiLCJtYXRyaWNvbGEiLCJjb250YXRvcmVQcmVzZW50ZSJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJjaGVja1Bkci50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBkZWxheSwgaHR0cCwgSHR0cFJlc3BvbnNlIH0gZnJvbSAnbXN3JztcclxuXHJcbmV4cG9ydCBkZWZhdWx0IGh0dHAucG9zdChcclxuICAvXFwvYXBpXFwvd2ViT3JkZXJDb21tb25TZXJ2aWNlc1xcL2NoZWNrUGRyLyxcclxuICBhc3luYyAoKSA9PiB7XHJcbiAgICBhd2FpdCBkZWxheSgpO1xyXG5cclxuICAgIHJldHVybiBIdHRwUmVzcG9uc2UuanNvbih7XHJcbiAgICAgIGVzaXRvOiAnT0snLFxyXG4gICAgICBzdGF0bzogJ0lORVNJU1RFTlRFJyxcclxuICAgICAgbG9nSGFzaDogJ1lDREpITm1IRkhiSUInLFxyXG4gICAgICBwZHI6ICcxMjM0NTY3ODkwMTIzNCcsXHJcbiAgICAgIG1hdHJpY29sYTogbnVsbCxcclxuICAgICAgY29udGF0b3JlUHJlc2VudGU6IGZhbHNlLFxyXG4gICAgfSk7XHJcbiAgfVxyXG4pO1xyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL2RhdGEtYWNjZXNzLW1vY2svc3JjL2xpYi9oYW5kbGVycy9jaGVja1Bkci50cyJ9

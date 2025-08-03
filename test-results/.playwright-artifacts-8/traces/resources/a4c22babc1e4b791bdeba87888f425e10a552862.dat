@@ -1,0 +1,16 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/activations/inputs.ts";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/activations/inputs-definitions.ts";
+export * from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/activations/sales-process.ts";
+export { tipoTroubleshootingPower$, tipoTroubleshootingGas$ } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/activations/tipo-troubleshooting.ts";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUVBLGNBQWM7QUFDZCxjQUFjO0FBQ2QsY0FBYztBQUNkLFNBQ0VBLDJCQUNBQywrQkFDSyIsIm5hbWVzIjpbInRpcG9Ucm91Ymxlc2hvb3RpbmdQb3dlciQiLCJ0aXBvVHJvdWJsZXNob290aW5nR2FzJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJpbmRleC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBpbXBvcnQgdGhpcyBmaWxlIHVzaW5nIGR5bmFtaWMgaW1wb3J0XHJcblxyXG5leHBvcnQgKiBmcm9tICcuL2lucHV0cyc7XHJcbmV4cG9ydCAqIGZyb20gJy4vaW5wdXRzLWRlZmluaXRpb25zJztcclxuZXhwb3J0ICogZnJvbSAnLi9zYWxlcy1wcm9jZXNzJztcclxuZXhwb3J0IHtcclxuICB0aXBvVHJvdWJsZXNob290aW5nUG93ZXIkLFxyXG4gIHRpcG9Ucm91Ymxlc2hvb3RpbmdHYXMkLFxyXG59IGZyb20gJy4vdGlwby10cm91Ymxlc2hvb3RpbmcnO1xyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL2RhdGEtYWNjZXNzL3NyYy9saWIvYXRvbXMvYWN0aXZhdGlvbnMvaW5kZXgudHMifQ==

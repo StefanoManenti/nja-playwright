@@ -1,0 +1,1562 @@
+[test-start] 2025-07-06T13:08:48.556Z – DEVB3 - Trend Business / Luce
+[browser-console] debug: [vite] connecting...
+[browser-console] debug: [vite] connected.
+[browser-console] warning: Cannot determine tier from domain. Current tier: localhost
+[browser-console] info: %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[browser-console] startGroupCollapsed: %c[MSW] Mocking enabled. color:orangered;font-weight:bold;
+[browser-console] log: %cDocumentation: %chttps://mswjs.io/docs font-weight:bold font-weight:normal
+[browser-console] log: Found an issue? https://github.com/mswjs/msw/issues
+[browser-console] log: Worker script URL: http://localhost:4200/mockServiceWorker.js
+[browser-console] log: Worker scope: http://localhost:4200/
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: [MSW] 15:08:51 GET /serviceDAq/api/webOrderCommonServices/infoUtente (%c204 No Content%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 204, statusText: No Content, headers: Object, body: }
+[browser-console] endGroup: console.groupEnd
+[browser-console] info: Tracciamenti.load {userId: undefined, userLoginState: no, userUtenzeAttive: undefined, siteSection1: configura-offerta, siteSection2: configura-offerta}
+[browser-console] info: Tracciamenti.load {userId: undefined, userLoginState: no, userUtenzeAttive: undefined, siteSection1: configura-offerta, siteSection2: configura-offerta}
+[browser-console] warning: [MSW] Warning: intercepted a request without a matching request handler:
+
+  • GET /graphql/execute.json/enigaseluce/OffertaCommodityResidenzialeList;code=BASE_TNDVL-TNDVG?t=1751807332550
+
+If you still wish to intercept this unhandled request, please create a request handler for it.
+Read more: https://mswjs.io/docs/getting-started/mocks
+[browser-console] error: Failed to load resource: the server responded with a status of 500 (Internal Server Error)
+[browser-console] startGroupCollapsed: [MSW] 15:08:52 GET /graphql/execute.json/enigaseluce/OffertaCommodityBusinessList;code=BASE_TNDVL-TNDVG (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"data":{"eniGasELuceDettaglioOffertaCommodityBusi…,"attivazioneVariantePrezziIndicizzati":true}]}}}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(15)
+[browser-console] debug: dipendenze Map(17)
+[browser-console] debug: dipendenti Map(4)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "ibanBusiness"
+[browser-console] debug: Controllo step "power-consumption-business"
+[browser-console] debug: Controllo step "Identity-business"
+[browser-console] debug: Controllo step "address-business"
+[browser-console] debug: Controllo step "ateco"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "vulnerability-available"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Sovrascritta priority allo step "disambiguation" causato dallo step "recapMobile" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0.
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Sovrascritta priority allo step "commodity" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0/0.
+[browser-console] debug: Sovrascritta priority allo step "operativeModePower" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Sovrascritta priority allo step "operativeModeGas" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [-1/0/0] commodity
+[browser-console] log: [-1/0/2] operativeModePower
+[browser-console] log: [-1/0/2] operativeModeGas
+[browser-console] log: [-1/0] disambiguation
+[browser-console] log: [-1] recapMobile
+[browser-console] log: [0] ending
+[browser-console] log: [8] vas
+[browser-console] log: [10] vulnerability-available
+[browser-console] log: [11] address-business
+[browser-console] log: [20] power-consumption-business
+[browser-console] log: [26] ateco
+[browser-console] log: [28] Identity-business
+[browser-console] log: [30] ibanBusiness
+[browser-console] log: [90] contract
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+commodity / commodity,operativeModePower,operativeModeGas,address-business,power-consumption-business,ateco,Identity-business,ibanBusiness,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: OperativeModePower, direction: 0, progress: 16.666666666666664}
+[browser-console] info: GTM.push {platform: web, event: carrello, siteSection1: configura-offerta, siteSection2: configura-offerta, from: undefined}
+[browser-console] log: {prices: Array(4), discounts: Object, texts: Object, greenEnergyIncluded: true}
+[browser-console] log: {prices: Array(4), discounts: Object, texts: Object, greenEnergyIncluded: true}
+[browser-console] info: GTM.push {event: cart_step, step_funnel: modalita_operativa, selezione: switchin}
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(18)
+[browser-console] debug: dipendenze Map(20)
+[browser-console] debug: dipendenti Map(4)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "addressSwitchIn"
+[browser-console] debug: Controllo step "ibanBusiness"
+[browser-console] debug: Controllo step "power-consumption-business"
+[browser-console] debug: Controllo step "property-title-business"
+[browser-console] debug: Controllo step "Identity-business"
+[browser-console] debug: Controllo step "address-business"
+[browser-console] debug: Controllo step "ateco"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "effectiveDates"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "vulnerability-available"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Sovrascritta priority allo step "disambiguation" causato dallo step "recapMobile" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0.
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Sovrascritta priority allo step "commodity" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0/0.
+[browser-console] debug: Sovrascritta priority allo step "operativeModePower" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Sovrascritta priority allo step "operativeModeGas" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [-1/0/0] commodity
+[browser-console] log: [-1/0/2] operativeModePower
+[browser-console] log: [-1/0/2] operativeModeGas
+[browser-console] log: [-1/0] disambiguation
+[browser-console] log: [-1] recapMobile
+[browser-console] log: [0] ending
+[browser-console] log: [8] vas
+[browser-console] log: [10] vulnerability-available
+[browser-console] log: [11] address-business
+[browser-console] log: [12] addressSwitchIn
+[browser-console] log: [20] power-consumption-business
+[browser-console] log: [24] property-title-business
+[browser-console] log: [26] ateco
+[browser-console] log: [28] Identity-business
+[browser-console] log: [30] ibanBusiness
+[browser-console] log: [90] contract
+[browser-console] log: [92] effectiveDates
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+commodity,operativeModePower / commodity,operativeModePower,operativeModeGas,ending,address-business,addressSwitchIn,power-consumption-business,property-title-business,ateco,Identity-business,ibanBusiness,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: Ending, direction: 1, progress: 20, subflow: undefined}
+[browser-console] info: GTM.push {platform: web, event: carrello, siteSection1: configura-offerta, siteSection2: configura-offerta, from: undefined}
+[browser-console] log: {prices: Array(4), discounts: Object, texts: Object, greenEnergyIncluded: true}
+[browser-console] info: GTM.push {event: cart_step, step_funnel: pre_wo, selezione: Prosegui}
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(18)
+[browser-console] debug: dipendenze Map(20)
+[browser-console] debug: dipendenti Map(4)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "addressSwitchIn"
+[browser-console] debug: Controllo step "ibanBusiness"
+[browser-console] debug: Controllo step "power-consumption-business"
+[browser-console] debug: Controllo step "property-title-business"
+[browser-console] debug: Controllo step "Identity-business"
+[browser-console] debug: Controllo step "address-business"
+[browser-console] debug: Controllo step "ateco"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "effectiveDates"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "vulnerability-available"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Sovrascritta priority allo step "disambiguation" causato dallo step "recapMobile" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0.
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Sovrascritta priority allo step "commodity" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0/0.
+[browser-console] debug: Sovrascritta priority allo step "operativeModePower" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Sovrascritta priority allo step "operativeModeGas" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [-1/0/0] commodity
+[browser-console] log: [-1/0/2] operativeModePower
+[browser-console] log: [-1/0/2] operativeModeGas
+[browser-console] log: [-1/0] disambiguation
+[browser-console] log: [-1] recapMobile
+[browser-console] log: [0] ending
+[browser-console] log: [8] vas
+[browser-console] log: [10] vulnerability-available
+[browser-console] log: [11] address-business
+[browser-console] log: [12] addressSwitchIn
+[browser-console] log: [20] power-consumption-business
+[browser-console] log: [24] property-title-business
+[browser-console] log: [26] ateco
+[browser-console] log: [28] Identity-business
+[browser-console] log: [30] ibanBusiness
+[browser-console] log: [90] contract
+[browser-console] log: [92] effectiveDates
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+commodity,operativeModePower,ending / commodity,operativeModePower,operativeModeGas,ending,address-business,addressSwitchIn,power-consumption-business,property-title-business,ateco,Identity-business,ibanBusiness,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: NewBusiness, direction: 1, progress: 26.666666666666668, subflow: undefined}
+[browser-console] error: Warning: Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?%s%s 
+
+Check the render method of `Controller`. 
+    at AddressInput2 (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/address/AddressInput.tsx:51:3)
+    at Controller (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:313:35)
+    at fieldset
+    at StepFieldset (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-fieldset.tsx:30:3)
+    at div
+    at StepContainer (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-container.tsx:27:3)
+    at div
+    at StepContainer (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-container.tsx:27:3)
+    at form
+    at main
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:451:40)
+    at div
+    at Container (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/Container.tsx:26:29)
+    at div
+    at div
+    at Layout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/layout.tsx:29:3)
+    at StepLayout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepLayout.tsx:42:3)
+    at FormProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:102:11)
+    at NewBusinessStep (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/NewBusinessStep.tsx:141:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at WeborderTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:219:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at GlobalTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:45:3)
+    at AddressBusinessStepWrapped
+    at BaseErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:31:5)
+    at BaseErrorBoundaryConnected (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:102:17)
+    at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
+    at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:59:32)
+    at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:144:3)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:130:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:40:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx?t=1751807032757:38:15)
+    at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
+    at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
+    at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
+    at HydrateAtoms (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:46:25)
+    at Provider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-TVJE7VNB.js?v=0189a8d1:23:3)
+    at QueryClientProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/@tanstack_react-query.js?v=0189a8d1:58:3)
+    at QueryProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:56:23)
+    at AppProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/app/app-jsx.tsx:35:16)
+    at Services (http://localhost:4200/src/services/services.tsx:29:36)
+    at ErrorBoundary (http://localhost:4200/src/app/ErrorBoundary.tsx:15:5)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/src/app/suspense-components.tsx:26:34)
+    at App
+[browser-console] error: Warning: Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?%s%s 
+
+Check the render method of `ForwardRef(Select2)`. 
+    at listbox (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Select.tsx:149:21)
+    at div
+    at Portal2 (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-CRTCKSBJ.js?v=0189a8d1:34:5)
+    at Popup2 (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-LPP6A3PP.js?v=0189a8d1:312:13)
+    at Select2 (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-KA5QAW7A.js?v=0189a8d1:553:5)
+    at Select2 (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Select.tsx:125:3)
+    at Controller (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:313:35)
+    at SelectControlled (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-fields/src/lib/SelectControlled.tsx:27:3)
+    at fieldset
+    at StepFieldset (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-fieldset.tsx:30:3)
+    at div
+    at StepContainer (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-container.tsx:27:3)
+    at div
+    at StepContainer (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-container.tsx:27:3)
+    at form
+    at main
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:451:40)
+    at div
+    at Container (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/Container.tsx:26:29)
+    at div
+    at div
+    at Layout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/layout.tsx:29:3)
+    at StepLayout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepLayout.tsx:42:3)
+    at FormProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:102:11)
+    at NewBusinessStep (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/customer/NewBusinessStep.tsx:141:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at WeborderTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:219:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at GlobalTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:45:3)
+    at AddressBusinessStepWrapped
+    at BaseErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:31:5)
+    at BaseErrorBoundaryConnected (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:102:17)
+    at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
+    at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:59:32)
+    at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:144:3)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:130:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:40:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx?t=1751807032757:38:15)
+    at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
+    at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
+    at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
+    at HydrateAtoms (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:46:25)
+    at Provider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-TVJE7VNB.js?v=0189a8d1:23:3)
+    at QueryClientProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/@tanstack_react-query.js?v=0189a8d1:58:3)
+    at QueryProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:56:23)
+    at AppProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/app/app-jsx.tsx:35:16)
+    at Services (http://localhost:4200/src/services/services.tsx:29:36)
+    at ErrorBoundary (http://localhost:4200/src/app/ErrorBoundary.tsx:15:5)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/src/app/suspense-components.tsx:26:34)
+    at App
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: address_business, micro_step: inserisci_address_business, operazione: weborder}
+[browser-console] startGroupCollapsed: [MSW] 15:09:44 GET /serviceDAq/api/webOrderCommonServices/progressivoWebOrderProcName (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: WO_MOCK}
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: [MSW] 15:09:44 POST /serviceDAq/api/mongoServices/lead (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"productCode":"BASE_TNDVL","productCodeGeneric":"…false,"civilCodeApproved":false},"collaudo":true}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_TNDVL","productCodeGeneric":"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(18)
+[browser-console] debug: dipendenze Map(20)
+[browser-console] debug: dipendenti Map(4)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "addressSwitchIn"
+[browser-console] debug: Controllo step "ibanBusiness"
+[browser-console] debug: Controllo step "power-consumption-business"
+[browser-console] debug: Controllo step "property-title-business"
+[browser-console] debug: Controllo step "Identity-business"
+[browser-console] debug: Controllo step "address-business"
+[browser-console] debug: Controllo step "ateco"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "effectiveDates"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "vulnerability-available"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Sovrascritta priority allo step "disambiguation" causato dallo step "recapMobile" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0.
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Sovrascritta priority allo step "commodity" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0/0.
+[browser-console] debug: Sovrascritta priority allo step "operativeModePower" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Sovrascritta priority allo step "operativeModeGas" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [-1/0/0] commodity
+[browser-console] log: [-1/0/2] operativeModePower
+[browser-console] log: [-1/0/2] operativeModeGas
+[browser-console] log: [-1/0] disambiguation
+[browser-console] log: [-1] recapMobile
+[browser-console] log: [0] ending
+[browser-console] log: [8] vas
+[browser-console] log: [10] vulnerability-available
+[browser-console] log: [11] address-business
+[browser-console] log: [12] addressSwitchIn
+[browser-console] log: [20] power-consumption-business
+[browser-console] log: [24] property-title-business
+[browser-console] log: [26] ateco
+[browser-console] log: [28] Identity-business
+[browser-console] log: [30] ibanBusiness
+[browser-console] log: [90] contract
+[browser-console] log: [92] effectiveDates
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+commodity,operativeModePower,ending,address-business / commodity,operativeModePower,operativeModeGas,ending,address-business,addressSwitchIn,power-consumption-business,property-title-business,ateco,Identity-business,ibanBusiness,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: AddressSwitchIn, direction: 1, progress: 33.33333333333333, subflow: undefined}
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: address_switch_in, micro_step: address_switch_in, operazione: weborder}
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(18)
+[browser-console] debug: dipendenze Map(20)
+[browser-console] debug: dipendenti Map(4)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "addressSwitchIn"
+[browser-console] debug: Controllo step "ibanBusiness"
+[browser-console] debug: Controllo step "power-consumption-business"
+[browser-console] debug: Controllo step "property-title-business"
+[browser-console] debug: Controllo step "Identity-business"
+[browser-console] debug: Controllo step "address-business"
+[browser-console] debug: Controllo step "ateco"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "effectiveDates"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "vulnerability-available"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Sovrascritta priority allo step "disambiguation" causato dallo step "recapMobile" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0.
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Sovrascritta priority allo step "commodity" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0/0.
+[browser-console] debug: Sovrascritta priority allo step "operativeModePower" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Sovrascritta priority allo step "operativeModeGas" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [-1/0/0] commodity
+[browser-console] log: [-1/0/2] operativeModePower
+[browser-console] log: [-1/0/2] operativeModeGas
+[browser-console] log: [-1/0] disambiguation
+[browser-console] log: [-1] recapMobile
+[browser-console] log: [0] ending
+[browser-console] log: [8] vas
+[browser-console] log: [10] vulnerability-available
+[browser-console] log: [11] address-business
+[browser-console] log: [12] addressSwitchIn
+[browser-console] log: [20] power-consumption-business
+[browser-console] log: [24] property-title-business
+[browser-console] log: [26] ateco
+[browser-console] log: [28] Identity-business
+[browser-console] log: [30] ibanBusiness
+[browser-console] log: [90] contract
+[browser-console] log: [92] effectiveDates
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+commodity,operativeModePower,ending,address-business / commodity,operativeModePower,operativeModeGas,ending,address-business,addressSwitchIn,power-consumption-business,property-title-business,ateco,Identity-business,ibanBusiness,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: AddressSwitchIn, direction: 1, progress: 33.33333333333333, subflow: undefined}
+[browser-console] startGroupCollapsed: [MSW] 15:09:45 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_TNDVL","productCodeGeneric":"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_TNDVL","productCodeGeneric":"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(18)
+[browser-console] debug: dipendenze Map(20)
+[browser-console] debug: dipendenti Map(4)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "addressSwitchIn"
+[browser-console] debug: Controllo step "ibanBusiness"
+[browser-console] debug: Controllo step "power-consumption-business"
+[browser-console] debug: Controllo step "property-title-business"
+[browser-console] debug: Controllo step "Identity-business"
+[browser-console] debug: Controllo step "address-business"
+[browser-console] debug: Controllo step "ateco"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "effectiveDates"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "vulnerability-available"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Sovrascritta priority allo step "disambiguation" causato dallo step "recapMobile" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0.
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Sovrascritta priority allo step "commodity" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0/0.
+[browser-console] debug: Sovrascritta priority allo step "operativeModePower" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Sovrascritta priority allo step "operativeModeGas" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [-1/0/0] commodity
+[browser-console] log: [-1/0/2] operativeModePower
+[browser-console] log: [-1/0/2] operativeModeGas
+[browser-console] log: [-1/0] disambiguation
+[browser-console] log: [-1] recapMobile
+[browser-console] log: [0] ending
+[browser-console] log: [8] vas
+[browser-console] log: [10] vulnerability-available
+[browser-console] log: [11] address-business
+[browser-console] log: [12] addressSwitchIn
+[browser-console] log: [20] power-consumption-business
+[browser-console] log: [24] property-title-business
+[browser-console] log: [26] ateco
+[browser-console] log: [28] Identity-business
+[browser-console] log: [30] ibanBusiness
+[browser-console] log: [90] contract
+[browser-console] log: [92] effectiveDates
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+commodity,operativeModePower,ending,address-business,addressSwitchIn / commodity,operativeModePower,operativeModeGas,ending,address-business,addressSwitchIn,power-consumption-business,property-title-business,ateco,Identity-business,ibanBusiness,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: PowerConsumptionBusinessStep, direction: 1, progress: 40, subflow: undefined}
+[browser-console] startGroupCollapsed: [MSW] 15:10:03 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_TNDVL","productCodeGeneric":"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_TNDVL","productCodeGeneric":"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: power_consumption_bussiness, micro_step: inserisci_power_consumption_bussiness, operazione: weborder}
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(18)
+[browser-console] debug: dipendenze Map(20)
+[browser-console] debug: dipendenti Map(4)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "addressSwitchIn"
+[browser-console] debug: Controllo step "ibanBusiness"
+[browser-console] debug: Controllo step "power-consumption-business"
+[browser-console] debug: Controllo step "property-title-business"
+[browser-console] debug: Controllo step "Identity-business"
+[browser-console] debug: Controllo step "address-business"
+[browser-console] debug: Controllo step "ateco"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "effectiveDates"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "vulnerability-available"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Sovrascritta priority allo step "disambiguation" causato dallo step "recapMobile" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0.
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Sovrascritta priority allo step "commodity" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0/0.
+[browser-console] debug: Sovrascritta priority allo step "operativeModePower" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Sovrascritta priority allo step "operativeModeGas" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [-1/0/0] commodity
+[browser-console] log: [-1/0/2] operativeModePower
+[browser-console] log: [-1/0/2] operativeModeGas
+[browser-console] log: [-1/0] disambiguation
+[browser-console] log: [-1] recapMobile
+[browser-console] log: [0] ending
+[browser-console] log: [8] vas
+[browser-console] log: [10] vulnerability-available
+[browser-console] log: [11] address-business
+[browser-console] log: [12] addressSwitchIn
+[browser-console] log: [20] power-consumption-business
+[browser-console] log: [24] property-title-business
+[browser-console] log: [26] ateco
+[browser-console] log: [28] Identity-business
+[browser-console] log: [30] ibanBusiness
+[browser-console] log: [90] contract
+[browser-console] log: [92] effectiveDates
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+commodity,operativeModePower,ending,address-business,addressSwitchIn,power-consumption-business / commodity,operativeModePower,operativeModeGas,ending,address-business,addressSwitchIn,power-consumption-business,property-title-business,ateco,Identity-business,ibanBusiness,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: OwnershipBusiness, direction: 1, progress: 46.666666666666664, subflow: undefined}
+[browser-console] startGroupCollapsed: [MSW] 15:10:18 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_TNDVL","productCodeGeneric":"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_TNDVL","productCodeGeneric":"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(18)
+[browser-console] debug: dipendenze Map(20)
+[browser-console] debug: dipendenti Map(4)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "addressSwitchIn"
+[browser-console] debug: Controllo step "ibanBusiness"
+[browser-console] debug: Controllo step "power-consumption-business"
+[browser-console] debug: Controllo step "property-title-business"
+[browser-console] debug: Controllo step "Identity-business"
+[browser-console] debug: Controllo step "address-business"
+[browser-console] debug: Controllo step "ateco"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "effectiveDates"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "vulnerability-available"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Sovrascritta priority allo step "disambiguation" causato dallo step "recapMobile" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0.
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Sovrascritta priority allo step "commodity" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0/0.
+[browser-console] debug: Sovrascritta priority allo step "operativeModePower" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Sovrascritta priority allo step "operativeModeGas" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [-1/0/0] commodity
+[browser-console] log: [-1/0/2] operativeModePower
+[browser-console] log: [-1/0/2] operativeModeGas
+[browser-console] log: [-1/0] disambiguation
+[browser-console] log: [-1] recapMobile
+[browser-console] log: [0] ending
+[browser-console] log: [8] vas
+[browser-console] log: [10] vulnerability-available
+[browser-console] log: [11] address-business
+[browser-console] log: [12] addressSwitchIn
+[browser-console] log: [20] power-consumption-business
+[browser-console] log: [24] property-title-business
+[browser-console] log: [26] ateco
+[browser-console] log: [28] Identity-business
+[browser-console] log: [30] ibanBusiness
+[browser-console] log: [90] contract
+[browser-console] log: [92] effectiveDates
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+commodity,operativeModePower,ending,address-business,addressSwitchIn,power-consumption-business,property-title-business / commodity,operativeModePower,operativeModeGas,ending,address-business,addressSwitchIn,power-consumption-business,property-title-business,ateco,Identity-business,ibanBusiness,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: AtecoStep, direction: 1, progress: 53.333333333333336, subflow: undefined}
+[browser-console] startGroupCollapsed: [MSW] 15:10:37 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_TNDVL","productCodeGeneric":"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_TNDVL","productCodeGeneric":"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(18)
+[browser-console] debug: dipendenze Map(20)
+[browser-console] debug: dipendenti Map(4)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "addressSwitchIn"
+[browser-console] debug: Controllo step "ibanBusiness"
+[browser-console] debug: Controllo step "power-consumption-business"
+[browser-console] debug: Controllo step "property-title-business"
+[browser-console] debug: Controllo step "Identity-business"
+[browser-console] debug: Controllo step "address-business"
+[browser-console] debug: Controllo step "ateco"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "effectiveDates"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "vulnerability-available"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Sovrascritta priority allo step "disambiguation" causato dallo step "recapMobile" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0.
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Sovrascritta priority allo step "commodity" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0/0.
+[browser-console] debug: Sovrascritta priority allo step "operativeModePower" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Sovrascritta priority allo step "operativeModeGas" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [-1/0/0] commodity
+[browser-console] log: [-1/0/2] operativeModePower
+[browser-console] log: [-1/0/2] operativeModeGas
+[browser-console] log: [-1/0] disambiguation
+[browser-console] log: [-1] recapMobile
+[browser-console] log: [0] ending
+[browser-console] log: [8] vas
+[browser-console] log: [10] vulnerability-available
+[browser-console] log: [11] address-business
+[browser-console] log: [12] addressSwitchIn
+[browser-console] log: [20] power-consumption-business
+[browser-console] log: [24] property-title-business
+[browser-console] log: [26] ateco
+[browser-console] log: [28] Identity-business
+[browser-console] log: [30] ibanBusiness
+[browser-console] log: [90] contract
+[browser-console] log: [92] effectiveDates
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+commodity,operativeModePower,ending,address-business,addressSwitchIn,power-consumption-business,property-title-business,ateco / commodity,operativeModePower,operativeModeGas,ending,address-business,addressSwitchIn,power-consumption-business,property-title-business,ateco,Identity-business,ibanBusiness,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: IdentityBusinessStep, direction: 1, progress: 60, subflow: undefined}
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(18)
+[browser-console] debug: dipendenze Map(20)
+[browser-console] debug: dipendenti Map(4)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "addressSwitchIn"
+[browser-console] debug: Controllo step "ibanBusiness"
+[browser-console] debug: Controllo step "power-consumption-business"
+[browser-console] debug: Controllo step "property-title-business"
+[browser-console] debug: Controllo step "Identity-business"
+[browser-console] debug: Controllo step "address-business"
+[browser-console] debug: Controllo step "ateco"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "effectiveDates"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "vulnerability-available"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Sovrascritta priority allo step "disambiguation" causato dallo step "recapMobile" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0.
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Sovrascritta priority allo step "commodity" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0/0.
+[browser-console] debug: Sovrascritta priority allo step "operativeModePower" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Sovrascritta priority allo step "operativeModeGas" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [-1/0/0] commodity
+[browser-console] log: [-1/0/2] operativeModePower
+[browser-console] log: [-1/0/2] operativeModeGas
+[browser-console] log: [-1/0] disambiguation
+[browser-console] log: [-1] recapMobile
+[browser-console] log: [0] ending
+[browser-console] log: [8] vas
+[browser-console] log: [10] vulnerability-available
+[browser-console] log: [11] address-business
+[browser-console] log: [12] addressSwitchIn
+[browser-console] log: [20] power-consumption-business
+[browser-console] log: [24] property-title-business
+[browser-console] log: [26] ateco
+[browser-console] log: [28] Identity-business
+[browser-console] log: [30] ibanBusiness
+[browser-console] log: [90] contract
+[browser-console] log: [92] effectiveDates
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+commodity,operativeModePower,ending,address-business,addressSwitchIn,power-consumption-business,property-title-business,ateco,Identity-business / commodity,operativeModePower,operativeModeGas,ending,address-business,addressSwitchIn,power-consumption-business,property-title-business,ateco,Identity-business,ibanBusiness,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: IbanBusiness, direction: 1, progress: 66.66666666666666, subflow: undefined}
+[browser-console] startGroupCollapsed: [MSW] 15:11:16 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_TNDVL","productCodeGeneric":"…tle":"PROPRIETARIO"},"collaudo":true,"id":"MOCK"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_TNDVL","productCodeGeneric":"…tle":"PROPRIETARIO"},"collaudo":true,"id":"MOCK"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: addebito_diretto, micro_step: addebito_diretto, operazione: weborder}
+[browser-console] debug: [SWITCH IN]
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(18)
+[browser-console] debug: dipendenze Map(20)
+[browser-console] debug: dipendenti Map(4)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "addressSwitchIn"
+[browser-console] debug: Controllo step "ibanBusiness"
+[browser-console] debug: Controllo step "power-consumption-business"
+[browser-console] debug: Controllo step "property-title-business"
+[browser-console] debug: Controllo step "Identity-business"
+[browser-console] debug: Controllo step "address-business"
+[browser-console] debug: Controllo step "ateco"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "effectiveDates"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "vulnerability-available"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Sovrascritta priority allo step "disambiguation" causato dallo step "recapMobile" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0.
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Sovrascritta priority allo step "commodity" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0/0.
+[browser-console] debug: Sovrascritta priority allo step "operativeModePower" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Sovrascritta priority allo step "operativeModeGas" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [-1/0/0] commodity
+[browser-console] log: [-1/0/2] operativeModePower
+[browser-console] log: [-1/0/2] operativeModeGas
+[browser-console] log: [-1/0] disambiguation
+[browser-console] log: [-1] recapMobile
+[browser-console] log: [0] ending
+[browser-console] log: [8] vas
+[browser-console] log: [10] vulnerability-available
+[browser-console] log: [11] address-business
+[browser-console] log: [12] addressSwitchIn
+[browser-console] log: [20] power-consumption-business
+[browser-console] log: [24] property-title-business
+[browser-console] log: [26] ateco
+[browser-console] log: [28] Identity-business
+[browser-console] log: [30] ibanBusiness
+[browser-console] log: [90] contract
+[browser-console] log: [92] effectiveDates
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+commodity,operativeModePower,ending,address-business,addressSwitchIn,power-consumption-business,property-title-business,ateco,Identity-business,ibanBusiness / commodity,operativeModePower,operativeModeGas,ending,address-business,addressSwitchIn,power-consumption-business,property-title-business,ateco,Identity-business,ibanBusiness,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: Contract, direction: 1, progress: 73.33333333333333, subflow: undefined}
+[browser-console] startGroupCollapsed: [MSW] 15:11:36 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_TNDVL","productCodeGeneric":"…tle":"PROPRIETARIO"},"collaudo":true,"id":"MOCK"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_TNDVL","productCodeGeneric":"…tle":"PROPRIETARIO"},"collaudo":true,"id":"MOCK"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] error: Warning: Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?%s%s 
+
+Check the render method of `Controller`. 
+    at ContractFlagWithModal (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractFlagWithModal.tsx:34:3)
+    at Controller (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:313:35)
+    at fieldset
+    at StepFieldset (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-fieldset.tsx:30:3)
+    at div
+    at StepContainer (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-container.tsx:27:3)
+    at form
+    at main
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:451:40)
+    at div
+    at Container (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/Container.tsx:26:29)
+    at div
+    at div
+    at Layout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/layout.tsx:29:3)
+    at StepLayout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepLayout.tsx:42:3)
+    at FormProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:102:11)
+    at ContractStep (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractStep.tsx:72:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at WeborderTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:219:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at GlobalTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:45:3)
+    at ContractStepWrapped
+    at BaseErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:31:5)
+    at BaseErrorBoundaryConnected (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:102:17)
+    at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
+    at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:59:32)
+    at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:144:3)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:130:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:40:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx?t=1751807032757:38:15)
+    at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
+    at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
+    at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
+    at HydrateAtoms (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:46:25)
+    at Provider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-TVJE7VNB.js?v=0189a8d1:23:3)
+    at QueryClientProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/@tanstack_react-query.js?v=0189a8d1:58:3)
+    at QueryProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:56:23)
+    at AppProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/app/app-jsx.tsx:35:16)
+    at Services (http://localhost:4200/src/services/services.tsx:29:36)
+    at ErrorBoundary (http://localhost:4200/src/app/ErrorBoundary.tsx:15:5)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/src/app/suspense-components.tsx:26:34)
+    at App
+[browser-console] error: Warning: Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?%s%s 
+
+Check the render method of `Controller`. 
+    at ContractFlagWithModal (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractFlagWithModal.tsx:34:3)
+    at Controller (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:313:35)
+    at fieldset
+    at StepFieldset (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-fieldset.tsx:30:3)
+    at div
+    at StepContainer (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-container.tsx:27:3)
+    at form
+    at main
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:451:40)
+    at div
+    at Container (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/Container.tsx:26:29)
+    at div
+    at div
+    at Layout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/layout.tsx:29:3)
+    at StepLayout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepLayout.tsx:42:3)
+    at FormProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:102:11)
+    at ContractStep (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractStep.tsx:72:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at WeborderTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:219:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at GlobalTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:45:3)
+    at ContractStepWrapped
+    at BaseErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:31:5)
+    at BaseErrorBoundaryConnected (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:102:17)
+    at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
+    at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:59:32)
+    at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:144:3)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:130:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:40:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx?t=1751807032757:38:15)
+    at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
+    at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
+    at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
+    at HydrateAtoms (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:46:25)
+    at Provider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-TVJE7VNB.js?v=0189a8d1:23:3)
+    at QueryClientProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/@tanstack_react-query.js?v=0189a8d1:58:3)
+    at QueryProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:56:23)
+    at AppProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/app/app-jsx.tsx:35:16)
+    at Services (http://localhost:4200/src/services/services.tsx:29:36)
+    at ErrorBoundary (http://localhost:4200/src/app/ErrorBoundary.tsx:15:5)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/src/app/suspense-components.tsx:26:34)
+    at App
+[browser-console] error: Warning: Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?%s%s 
+
+Check the render method of `Controller`. 
+    at Clausole1341 (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/contracts/clausole1341.tsx:37:3)
+    at Controller (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:313:35)
+    at fieldset
+    at StepFieldset (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-fieldset.tsx:30:3)
+    at div
+    at StepContainer (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-container.tsx:27:3)
+    at form
+    at main
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:451:40)
+    at div
+    at Container (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/Container.tsx:26:29)
+    at div
+    at div
+    at Layout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/layout.tsx:29:3)
+    at StepLayout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepLayout.tsx:42:3)
+    at FormProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:102:11)
+    at ContractStep (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractStep.tsx:72:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at WeborderTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:219:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at GlobalTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:45:3)
+    at ContractStepWrapped
+    at BaseErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:31:5)
+    at BaseErrorBoundaryConnected (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:102:17)
+    at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
+    at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:59:32)
+    at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:144:3)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:130:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:40:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx?t=1751807032757:38:15)
+    at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
+    at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
+    at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
+    at HydrateAtoms (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:46:25)
+    at Provider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-TVJE7VNB.js?v=0189a8d1:23:3)
+    at QueryClientProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/@tanstack_react-query.js?v=0189a8d1:58:3)
+    at QueryProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:56:23)
+    at AppProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/app/app-jsx.tsx:35:16)
+    at Services (http://localhost:4200/src/services/services.tsx:29:36)
+    at ErrorBoundary (http://localhost:4200/src/app/ErrorBoundary.tsx:15:5)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/src/app/suspense-components.tsx:26:34)
+    at App
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: condizioni_contrattuali, micro_step: condizioni_contrattuali, operazione: weborder}
+[browser-console] error: Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <p> p 
+    at p
+    at div
+    at p
+    at Typography (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Typography.tsx:77:3)
+    at div
+    at div
+    at div
+    at div
+    at ModalContractContent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalContractContent.tsx:34:67)
+    at div
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:451:40)
+    at div
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:451:40)
+    at Portal2 (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-CRTCKSBJ.js?v=0189a8d1:34:5)
+    at Modal (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/Modal.tsx:31:3)
+    at ContractModal (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractModal.tsx:27:3)
+    at PresenceChild (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:7657:24)
+    at AnimatePresence (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:7714:26)
+    at ModalWrapper (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalWrapper.tsx:25:32)
+    at ContractFlagWithModal (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractFlagWithModal.tsx:34:3)
+    at Controller (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:313:35)
+    at fieldset
+    at StepFieldset (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-fieldset.tsx:30:3)
+    at div
+    at StepContainer (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-container.tsx:27:3)
+    at form
+    at main
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:451:40)
+    at div
+    at Container (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/Container.tsx:26:29)
+    at div
+    at div
+    at Layout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/layout.tsx:29:3)
+    at StepLayout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepLayout.tsx:42:3)
+    at FormProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:102:11)
+    at ContractStep (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractStep.tsx:72:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at WeborderTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:219:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at GlobalTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:45:3)
+    at ContractStepWrapped
+    at BaseErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:31:5)
+    at BaseErrorBoundaryConnected (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:102:17)
+    at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
+    at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:59:32)
+    at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:144:3)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:130:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:40:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx?t=1751807032757:38:15)
+    at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
+    at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
+    at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
+    at HydrateAtoms (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:46:25)
+    at Provider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-TVJE7VNB.js?v=0189a8d1:23:3)
+    at QueryClientProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/@tanstack_react-query.js?v=0189a8d1:58:3)
+    at QueryProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:56:23)
+    at AppProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/app/app-jsx.tsx:35:16)
+    at Services (http://localhost:4200/src/services/services.tsx:29:36)
+    at ErrorBoundary (http://localhost:4200/src/app/ErrorBoundary.tsx:15:5)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/src/app/suspense-components.tsx:26:34)
+    at App
+[browser-console] error: Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <ol> p 
+    at ol
+    at div
+    at p
+    at Typography (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Typography.tsx:77:3)
+    at div
+    at div
+    at div
+    at div
+    at ModalContractContent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalContractContent.tsx:34:67)
+    at div
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:451:40)
+    at div
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:451:40)
+    at Portal2 (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-CRTCKSBJ.js?v=0189a8d1:34:5)
+    at Modal (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/Modal.tsx:31:3)
+    at ContractModal (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractModal.tsx:27:3)
+    at PresenceChild (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:7657:24)
+    at AnimatePresence (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:7714:26)
+    at ModalWrapper (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalWrapper.tsx:25:32)
+    at ContractFlagWithModal (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractFlagWithModal.tsx:34:3)
+    at Controller (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:313:35)
+    at fieldset
+    at StepFieldset (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-fieldset.tsx:30:3)
+    at div
+    at StepContainer (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-container.tsx:27:3)
+    at form
+    at main
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:451:40)
+    at div
+    at Container (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/Container.tsx:26:29)
+    at div
+    at div
+    at Layout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/layout.tsx:29:3)
+    at StepLayout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepLayout.tsx:42:3)
+    at FormProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:102:11)
+    at ContractStep (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractStep.tsx:72:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at WeborderTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:219:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at GlobalTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:45:3)
+    at ContractStepWrapped
+    at BaseErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:31:5)
+    at BaseErrorBoundaryConnected (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:102:17)
+    at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
+    at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:59:32)
+    at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:144:3)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:130:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:40:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx?t=1751807032757:38:15)
+    at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
+    at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
+    at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
+    at HydrateAtoms (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:46:25)
+    at Provider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-TVJE7VNB.js?v=0189a8d1:23:3)
+    at QueryClientProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/@tanstack_react-query.js?v=0189a8d1:58:3)
+    at QueryProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:56:23)
+    at AppProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/app/app-jsx.tsx:35:16)
+    at Services (http://localhost:4200/src/services/services.tsx:29:36)
+    at ErrorBoundary (http://localhost:4200/src/app/ErrorBoundary.tsx:15:5)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/src/app/suspense-components.tsx:26:34)
+    at App
+[browser-console] error: Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <div> p 
+    at div
+    at p
+    at Typography (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Typography.tsx:77:3)
+    at div
+    at div
+    at div
+    at div
+    at ModalContractContent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalContractContent.tsx:34:67)
+    at div
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:451:40)
+    at div
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:451:40)
+    at Portal2 (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-CRTCKSBJ.js?v=0189a8d1:34:5)
+    at Modal (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/Modal.tsx:31:3)
+    at ContractModal (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractModal.tsx:27:3)
+    at PresenceChild (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:7657:24)
+    at AnimatePresence (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:7714:26)
+    at ModalWrapper (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/modal/ModalWrapper.tsx:25:32)
+    at ContractFlagWithModal (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractFlagWithModal.tsx:34:3)
+    at Controller (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:313:35)
+    at fieldset
+    at StepFieldset (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-fieldset.tsx:30:3)
+    at div
+    at StepContainer (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/step-container.tsx:27:3)
+    at form
+    at main
+    at MotionComponent (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/framer-motion.js?v=0189a8d1:451:40)
+    at div
+    at Container (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/Container.tsx:26:29)
+    at div
+    at div
+    at Layout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/layout.tsx:29:3)
+    at StepLayout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepLayout.tsx:42:3)
+    at FormProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:102:11)
+    at ContractStep (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/contracts/ContractStep.tsx:72:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at WeborderTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:219:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
+    at GlobalTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:45:3)
+    at ContractStepWrapped
+    at BaseErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:31:5)
+    at BaseErrorBoundaryConnected (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:102:17)
+    at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
+    at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:59:32)
+    at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:144:3)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:130:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1751807032757:40:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx?t=1751807032757:38:15)
+    at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
+    at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
+    at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
+    at HydrateAtoms (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:46:25)
+    at Provider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-TVJE7VNB.js?v=0189a8d1:23:3)
+    at QueryClientProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/@tanstack_react-query.js?v=0189a8d1:58:3)
+    at QueryProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:56:23)
+    at AppProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/app/app-jsx.tsx:35:16)
+    at Services (http://localhost:4200/src/services/services.tsx:29:36)
+    at ErrorBoundary (http://localhost:4200/src/app/ErrorBoundary.tsx:15:5)
+    at Suspense
+    at GlobalSuspense (http://localhost:4200/src/app/suspense-components.tsx:26:34)
+    at App
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: condizioni_contrattuali, micro_step: accettazione_clausole, operazione: weborder}
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(18)
+[browser-console] debug: dipendenze Map(20)
+[browser-console] debug: dipendenti Map(4)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "addressSwitchIn"
+[browser-console] debug: Controllo step "ibanBusiness"
+[browser-console] debug: Controllo step "power-consumption-business"
+[browser-console] debug: Controllo step "property-title-business"
+[browser-console] debug: Controllo step "Identity-business"
+[browser-console] debug: Controllo step "address-business"
+[browser-console] debug: Controllo step "ateco"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "effectiveDates"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "vulnerability-available"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Sovrascritta priority allo step "disambiguation" causato dallo step "recapMobile" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0.
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Sovrascritta priority allo step "commodity" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0/0.
+[browser-console] debug: Sovrascritta priority allo step "operativeModePower" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Sovrascritta priority allo step "operativeModeGas" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [-1/0/0] commodity
+[browser-console] log: [-1/0/2] operativeModePower
+[browser-console] log: [-1/0/2] operativeModeGas
+[browser-console] log: [-1/0] disambiguation
+[browser-console] log: [-1] recapMobile
+[browser-console] log: [0] ending
+[browser-console] log: [8] vas
+[browser-console] log: [10] vulnerability-available
+[browser-console] log: [11] address-business
+[browser-console] log: [12] addressSwitchIn
+[browser-console] log: [20] power-consumption-business
+[browser-console] log: [24] property-title-business
+[browser-console] log: [26] ateco
+[browser-console] log: [28] Identity-business
+[browser-console] log: [30] ibanBusiness
+[browser-console] log: [90] contract
+[browser-console] log: [92] effectiveDates
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+commodity,operativeModePower,ending,address-business,addressSwitchIn,power-consumption-business,property-title-business,ateco,Identity-business,ibanBusiness,contract / commodity,operativeModePower,operativeModeGas,ending,address-business,addressSwitchIn,power-consumption-business,property-title-business,ateco,Identity-business,ibanBusiness,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: Privacy, direction: 1, progress: 80, subflow: undefined}
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: consensi, micro_step: consensi_dati_pers, operazione: weborder}
+[browser-console] info: GTM.push {event: consensi_weborder, cta_cliccata: Vai alla verifica finale, consensi_marketing: acconsento|acconsento|acconsento}
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(18)
+[browser-console] debug: dipendenze Map(20)
+[browser-console] debug: dipendenti Map(4)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "addressSwitchIn"
+[browser-console] debug: Controllo step "ibanBusiness"
+[browser-console] debug: Controllo step "power-consumption-business"
+[browser-console] debug: Controllo step "property-title-business"
+[browser-console] debug: Controllo step "Identity-business"
+[browser-console] debug: Controllo step "address-business"
+[browser-console] debug: Controllo step "ateco"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "effectiveDates"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "vulnerability-available"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Sovrascritta priority allo step "disambiguation" causato dallo step "recapMobile" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0.
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Sovrascritta priority allo step "commodity" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0/0.
+[browser-console] debug: Sovrascritta priority allo step "operativeModePower" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Sovrascritta priority allo step "operativeModeGas" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [-1/0/0] commodity
+[browser-console] log: [-1/0/2] operativeModePower
+[browser-console] log: [-1/0/2] operativeModeGas
+[browser-console] log: [-1/0] disambiguation
+[browser-console] log: [-1] recapMobile
+[browser-console] log: [0] ending
+[browser-console] log: [8] vas
+[browser-console] log: [10] vulnerability-available
+[browser-console] log: [11] address-business
+[browser-console] log: [12] addressSwitchIn
+[browser-console] log: [20] power-consumption-business
+[browser-console] log: [24] property-title-business
+[browser-console] log: [26] ateco
+[browser-console] log: [28] Identity-business
+[browser-console] log: [30] ibanBusiness
+[browser-console] log: [90] contract
+[browser-console] log: [92] effectiveDates
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+commodity,operativeModePower,ending,address-business,addressSwitchIn,power-consumption-business,property-title-business,ateco,Identity-business,ibanBusiness,contract,privacy / commodity,operativeModePower,operativeModeGas,ending,address-business,addressSwitchIn,power-consumption-business,property-title-business,ateco,Identity-business,ibanBusiness,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: Recap, direction: 1, progress: 86.66666666666667, subflow: undefined}
+[browser-console] startGroupCollapsed: [MSW] 15:12:48 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_TNDVL","productCodeGeneric":"…tle":"PROPRIETARIO"},"collaudo":true,"id":"MOCK"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_TNDVL","productCodeGeneric":"…tle":"PROPRIETARIO"},"collaudo":true,"id":"MOCK"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: riepilogo, micro_step: riepilogo, operazione: weborder}
+[browser-console] startGroupCollapsed: [MSW] 15:13:01 GET https://jsonip.com/ (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"ip":"127.0.0.1"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] warning: GeolocationPositionError
+[browser-console] debug: [SWITCH IN]
+[browser-console] startGroupCollapsed: [MSW] 15:13:01 POST /serviceDAq/api/webOrderCommonServices/salvataggioDatiGeolocalizzazione (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"operationId":"kxviZkikVYavU","applicazione":"WEB….0.0.1","latitudine":"null","longitudine":"null"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: [MSW] 15:13:01 POST /serviceDAq/api/webOrderCommonServices/updateBulkOrder (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"idLead":"MOCK","logHash":"kxviZkikVcECd","plicoCode":"WO_MOCK","salesProcessForLog":"SWITCH_IN"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Graph
+[browser-console] debug: providers Map(18)
+[browser-console] debug: dipendenze Map(20)
+[browser-console] debug: dipendenti Map(4)
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: Priorities
+[browser-console] startGroupCollapsed: Controlli
+[browser-console] debug: Controllo step "addressSwitchIn"
+[browser-console] debug: Controllo step "ibanBusiness"
+[browser-console] debug: Controllo step "power-consumption-business"
+[browser-console] debug: Controllo step "property-title-business"
+[browser-console] debug: Controllo step "Identity-business"
+[browser-console] debug: Controllo step "address-business"
+[browser-console] debug: Controllo step "ateco"
+[browser-console] debug: Controllo step "typ"
+[browser-console] debug: Controllo step "contract"
+[browser-console] debug: Controllo step "privacy"
+[browser-console] debug: Controllo step "recap"
+[browser-console] debug: Controllo step "effectiveDates"
+[browser-console] debug: Controllo step "vas"
+[browser-console] debug: Controllo step "vulnerability-available"
+[browser-console] debug: Controllo step "recapMobile"
+[browser-console] debug: Sovrascritta priority allo step "disambiguation" causato dallo step "recapMobile" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0.
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Sovrascritta priority allo step "commodity" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 0.
+Nuova: -1/0/0.
+[browser-console] debug: Sovrascritta priority allo step "operativeModePower" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Sovrascritta priority allo step "operativeModeGas" causato dallo step "disambiguation" che dipende da esso.
+Vecchia: 2.
+Nuova: -1/0/2.
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "ending"
+[browser-console] debug: Controllo step "disambiguation"
+[browser-console] debug: Controllo step "operativeModeGas"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "operativeModePower"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] debug: Controllo step "commodity"
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: [-1/0/0] commodity
+[browser-console] log: [-1/0/2] operativeModePower
+[browser-console] log: [-1/0/2] operativeModeGas
+[browser-console] log: [-1/0] disambiguation
+[browser-console] log: [-1] recapMobile
+[browser-console] log: [0] ending
+[browser-console] log: [8] vas
+[browser-console] log: [10] vulnerability-available
+[browser-console] log: [11] address-business
+[browser-console] log: [12] addressSwitchIn
+[browser-console] log: [20] power-consumption-business
+[browser-console] log: [24] property-title-business
+[browser-console] log: [26] ateco
+[browser-console] log: [28] Identity-business
+[browser-console] log: [30] ibanBusiness
+[browser-console] log: [90] contract
+[browser-console] log: [92] effectiveDates
+[browser-console] log: [99] privacy
+[browser-console] log: [100] recap
+[browser-console] log: [110] typ
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: Progress:
+commodity,operativeModePower,ending,address-business,addressSwitchIn,power-consumption-business,property-title-business,ateco,Identity-business,ibanBusiness,contract,privacy,recap / commodity,operativeModePower,operativeModeGas,ending,address-business,addressSwitchIn,power-consumption-business,property-title-business,ateco,Identity-business,ibanBusiness,contract,privacy,recap,typ
+[browser-console] log: STEPS COLLECTION STATE {step: Typ, direction: 1, progress: 93.33333333333333, subflow: undefined}
+[browser-console] startGroupCollapsed: [MSW] 15:13:01 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_TNDVL","productCodeGeneric":"…laudo":true,"leadStatus":"COMPLETED","id":"MOCK"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_TNDVL","productCodeGeneric":"…laudo":true,"leadStatus":"COMPLETED","id":"MOCK"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: 7_typ, micro_step: 7_typ, operazione: weborder}
+[test-success] 2025-07-06T13:13:06.898Z – OK

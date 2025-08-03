@@ -1,0 +1,145 @@
+import {
+  InfiniteQueryObserver,
+  MutationObserver,
+  QueryClient,
+  QueryObserver,
+  notifyManager
+} from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-5WKJULSJ.js?v=0189a8d1";
+import "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-KWBGLCVT.js?v=0189a8d1";
+import "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-TVJE7VNB.js?v=0189a8d1";
+import {
+  atom
+} from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-CEPGVKFL.js?v=0189a8d1";
+import "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-GAIRWVJN.js?v=0189a8d1";
+import "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-OL46QLBJ.js?v=0189a8d1";
+
+// ../../node_modules/jotai-tanstack-query/dist/index.modern.js
+var c = atom(new QueryClient());
+function i() {
+  return i = Object.assign ? Object.assign.bind() : function(t) {
+    for (var e = 1; e < arguments.length; e++) {
+      var r = arguments[e];
+      for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (t[n] = r[n]);
+    }
+    return t;
+  }, i.apply(this, arguments);
+}
+c.debugPrivate = true;
+var a = (t, e, r) => (null == t ? void 0 : t.suspense) && p(e, r);
+var p = (t, e) => t.isPending && !e;
+var d = ({ result: t, throwOnError: e, query: r }) => t.isError && !t.isFetching && E(e, [t.error, r]);
+function E(t, e) {
+  return "function" == typeof t ? t(...e) : !!t;
+}
+var v = (t, e) => void 0 === e.state.data;
+var l = (t) => t.suspense && "number" != typeof t.staleTime ? i({}, t, { staleTime: 1e3 }) : t;
+function b(t, r, n = (t2) => t2(c)) {
+  const o = atom(0), s = atom(n);
+  s.debugPrivate = true;
+  const i2 = atom(() => /* @__PURE__ */ new WeakMap());
+  i2.debugPrivate = true;
+  const p2 = atom((e) => {
+    const r2 = e(s), n2 = t(e), o2 = r2.defaultQueryOptions(n2), u = e(i2).get(r2);
+    return o2._optimisticResults = "optimistic", u && u.setOptions(o2, { listeners: false }), l(o2);
+  });
+  p2.debugPrivate = true;
+  const E2 = atom((t2) => {
+    const e = t2(s), n2 = t2(p2), o2 = t2(i2), u = o2.get(e);
+    if (u) return u;
+    const c2 = new r(e, n2);
+    return o2.set(e, c2), c2;
+  });
+  E2.debugPrivate = true;
+  const v2 = atom((t2) => {
+    const r2 = t2(E2), n2 = t2(p2), o2 = r2.getOptimisticResult(n2), s2 = atom(o2);
+    return s2.debugPrivate = true, s2.onMount = (t3) => {
+      const n3 = r2.subscribe(notifyManager.batchCalls(t3));
+      return () => {
+        r2.getCurrentResult().isError && r2.getCurrentQuery().reset(), n3();
+      };
+    }, s2;
+  });
+  return v2.debugPrivate = true, atom((t2) => {
+    t2(o);
+    const e = t2(E2), r2 = t2(p2), n2 = t2(t2(v2));
+    if (a(r2, n2, false)) return e.fetchOptimistic(r2);
+    if (d({ result: n2, query: e.getCurrentQuery(), throwOnError: r2.throwOnError })) throw n2.error;
+    return n2;
+  }, (t2, e) => {
+    e(o, (t3) => t3 + 1);
+  });
+}
+function O(t, e = (t2) => t2(c)) {
+  return b(t, QueryObserver, e);
+}
+function f(t, e = (t2) => t2(c)) {
+  const n = atom((e2) => i({}, t(e2), { suspense: true, enabled: true, throwOnError: v }));
+  return b((t2) => t2(n), QueryObserver, e);
+}
+function g(t, e = (t2) => t2(c)) {
+  return b(t, InfiniteQueryObserver, e);
+}
+function N(t, r = (t2) => t2(c)) {
+  const n = Symbol(), s = atom((e) => {
+    const n2 = r(e), o = t(e);
+    return n2.defaultMutationOptions(o);
+  });
+  s.debugPrivate = true;
+  const a2 = atom(() => /* @__PURE__ */ new WeakMap());
+  a2.debugPrivate = true;
+  const p2 = atom((t2) => {
+    const e = t2(s), u = r(t2), c2 = t2(a2), i2 = c2.get(u);
+    if (i2) return i2[n] = true, i2.setOptions(e), delete i2[n], i2;
+    const p3 = new MutationObserver(u, e);
+    return c2.set(u, p3), p3;
+  });
+  p2.debugPrivate = true;
+  const d2 = atom((t2) => {
+    const r2 = t2(p2), n2 = r2.getCurrentResult(), o = atom(n2);
+    return o.onMount = (t3) => (r2.subscribe(notifyManager.batchCalls(t3)), () => {
+      r2.reset();
+    }), o.debugPrivate = true, o;
+  }), v2 = atom((t2) => {
+    const e = t2(p2);
+    return (t3, r2) => {
+      e.mutate(t3, r2).catch(m);
+    };
+  });
+  return v2.debugPrivate = true, atom((t2) => {
+    const e = t2(p2), r2 = t2(d2), n2 = t2(r2), o = t2(v2);
+    if (n2.isError && E(e.options.throwOnError, [n2.error])) throw n2.error;
+    return i({}, n2, { mutate: o, mutateAsync: n2.mutate });
+  });
+}
+function m() {
+}
+function h(t, e = (t2) => t2(c)) {
+  const r = atom((e2) => i({}, t(e2), { enabled: true, suspense: true, throwOnError: v }));
+  return b((t2) => t2(r), InfiniteQueryObserver, e);
+}
+var P = (t, e = (t2) => t2(c)) => {
+  const r = atom([]);
+  r.debugPrivate = true;
+  const n = atom((n2) => {
+    const o = e(n2).getMutationCache();
+    r.onMount = (r2) => {
+      const s = o.subscribe(() => {
+        r2(function(t2, e2) {
+          return t2.findAll(e2.filters).map((t3) => e2.select ? e2.select(t3) : t3.state);
+        }(e(n2).getMutationCache(), t(n2)));
+      });
+      return s;
+    };
+  });
+  return n.debugPrivate = true, atom((t2) => (t2(n), t2(r)));
+};
+export {
+  g as atomWithInfiniteQuery,
+  N as atomWithMutation,
+  P as atomWithMutationState,
+  O as atomWithQuery,
+  h as atomWithSuspenseInfiniteQuery,
+  f as atomWithSuspenseQuery,
+  c as queryClientAtom
+};
+//# sourceMappingURL=jotai-tanstack-query.js.map

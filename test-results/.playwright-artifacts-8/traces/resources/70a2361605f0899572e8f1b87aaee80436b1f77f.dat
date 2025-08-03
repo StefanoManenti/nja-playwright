@@ -1,0 +1,86 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/SubmitButtonPln.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react_jsx-dev-runtime.js?v=0189a8d1"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.__vite_plugin_react_preamble_installed__) {
+    throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong. See https://github.com/vitejs/vite-plugin-react/pull/11#discussion_r430879201");
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = (type, id) => {
+    RefreshRuntime.register(type, "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/SubmitButtonPln.tsx " + id);
+  };
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || { cache: /* @__PURE__ */ new Map(), get(name, inst) {
+  if (this.cache.has(name)) {
+    return this.cache.get(name);
+  }
+  this.cache.set(name, inst);
+  return inst;
+} };
+import { useEngine } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/index.ts";
+import { useTagId } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/index.ts";
+import { ButtonPln } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/index.ts";
+import { getTrackingTag } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/index.ts";
+import { useFormContext } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/react-hook-form.js?v=0189a8d1";
+export function SubmitButtonPln(props) {
+  _s();
+  const { formState } = useFormContext() || {};
+  const {
+    children = "Prosegui",
+    form,
+    isLoading = formState?.isLoading,
+    isValid = formState?.isValid,
+    isValidating = formState?.isValidating,
+    isSubmitting = formState?.isSubmitting
+  } = props;
+  const { isPending } = useEngine();
+  const loading = isPending || isLoading || isValidating || isSubmitting;
+  const tagId = getTrackingTag("SUBMIT_BUTTON", useTagId());
+  return /* @__PURE__ */ jsxDEV(
+    ButtonPln,
+    {
+      "data-cs-override-id": tagId,
+      type: "submit",
+      form,
+      disabled: !isValid || loading,
+      loading,
+      color: "primary",
+      children: loading ? "Attendere prego" : children
+    },
+    void 0,
+    false,
+    {
+      fileName: "C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/SubmitButtonPln.tsx",
+      lineNumber: 35,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_s(SubmitButtonPln, "AWs/gaut8tcxChXzgw8BYaMGx3E=", false, function() {
+  return [useFormContext, useEngine, useTagId];
+});
+_c = SubmitButtonPln;
+var _c;
+$RefreshReg$(_c, "SubmitButtonPln");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/SubmitButtonPln.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate(currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBa0NJOzs7OztxQ0FsQ0o7QUFBQSxPQUFTQSxpREFBaUM7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDMUMsU0FBU0MsZ0JBQWdCO0FBQ3pCLFNBQVNDLGlCQUFpQjtBQUMxQixTQUFTQyxzQkFBc0I7QUFFL0IsU0FBU0Msc0JBQXNCO0FBV3hCLGdCQUFTQyxnQkFBZ0JDLE9BQWdDO0FBQUFDLEtBQUE7QUFDOUQsUUFBTSxFQUFFQyxVQUFVLElBQUlKLGVBQWUsS0FBSyxDQUFDO0FBRTNDLFFBQU07QUFBQSxJQUNKSyxXQUFXO0FBQUEsSUFDWEM7QUFBQUEsSUFDQUMsWUFBWUgsV0FBV0c7QUFBQUEsSUFDdkJDLFVBQVVKLFdBQVdJO0FBQUFBLElBQ3JCQyxlQUFlTCxXQUFXSztBQUFBQSxJQUMxQkMsZUFBZU4sV0FBV007QUFBQUEsRUFDNUIsSUFBSVI7QUFFSixRQUFNLEVBQUVTLFVBQVUsSUFBSWYsVUFBVTtBQUNoQyxRQUFNZ0IsVUFBVUQsYUFBYUosYUFBYUUsZ0JBQWdCQztBQUUxRCxRQUFNRyxRQUFRZCxlQUFlLGlCQUFpQkYsU0FBUyxDQUFDO0FBRXhELFNBQ0U7QUFBQSxJQUFDO0FBQUE7QUFBQSxNQUNDLHVCQUFxQmdCO0FBQUFBLE1BQ3JCLE1BQUs7QUFBQSxNQUNMO0FBQUEsTUFDQSxVQUFVLENBQUNMLFdBQVdJO0FBQUFBLE1BQ3RCO0FBQUEsTUFDQSxPQUFNO0FBQUEsTUFFTEEsb0JBQVUsb0JBQW9CUDtBQUFBQTtBQUFBQSxJQVJqQztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsRUFTQTtBQUVKO0FBQUNGLEdBN0JlRixpQkFBZTtBQUFBLFVBQ1BELGdCQVdBSixXQUd3QkMsUUFBUTtBQUFBO0FBQUFpQixLQWZ4Q2I7QUFBZSxJQUFBYTtBQUFBQyxhQUFBRCxJQUFBIiwibmFtZXMiOlsidXNlRW5naW5lIiwidXNlVGFnSWQiLCJCdXR0b25QbG4iLCJnZXRUcmFja2luZ1RhZyIsInVzZUZvcm1Db250ZXh0IiwiU3VibWl0QnV0dG9uUGxuIiwicHJvcHMiLCJfcyIsImZvcm1TdGF0ZSIsImNoaWxkcmVuIiwiZm9ybSIsImlzTG9hZGluZyIsImlzVmFsaWQiLCJpc1ZhbGlkYXRpbmciLCJpc1N1Ym1pdHRpbmciLCJpc1BlbmRpbmciLCJsb2FkaW5nIiwidGFnSWQiLCJfYyIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJTdWJtaXRCdXR0b25QbG4udHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHVzZUVuZ2luZSB9IGZyb20gJ0BuYWotd28vZW5naW5lJztcclxuaW1wb3J0IHsgdXNlVGFnSWQgfSBmcm9tICdAbmFqLXdvL3RyYWNraW5nLXJlYWN0JztcclxuaW1wb3J0IHsgQnV0dG9uUGxuIH0gZnJvbSAnQG5hai13by91aS1hdG9tcyc7XHJcbmltcG9ydCB7IGdldFRyYWNraW5nVGFnIH0gZnJvbSAnQG5hai13by91dGlsJztcclxuaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcclxuaW1wb3J0IHsgdXNlRm9ybUNvbnRleHQgfSBmcm9tICdyZWFjdC1ob29rLWZvcm0nO1xyXG5cclxuZXhwb3J0IHR5cGUgQnV0dG9uUGxuQ29ubmVjdGVkUHJvcHMgPSB7XHJcbiAgZm9ybTogc3RyaW5nO1xyXG4gIGlzTG9hZGluZz86IGJvb2xlYW47XHJcbiAgaXNWYWxpZD86IGJvb2xlYW47XHJcbiAgaXNWYWxpZGF0aW5nPzogYm9vbGVhbjtcclxuICBpc1N1Ym1pdHRpbmc/OiBib29sZWFuO1xyXG4gIGNoaWxkcmVuPzogUmVhY3QuUmVhY3ROb2RlO1xyXG59O1xyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIFN1Ym1pdEJ1dHRvblBsbihwcm9wczogQnV0dG9uUGxuQ29ubmVjdGVkUHJvcHMpIHtcclxuICBjb25zdCB7IGZvcm1TdGF0ZSB9ID0gdXNlRm9ybUNvbnRleHQoKSB8fCB7fTtcclxuXHJcbiAgY29uc3Qge1xyXG4gICAgY2hpbGRyZW4gPSAnUHJvc2VndWknLFxyXG4gICAgZm9ybSxcclxuICAgIGlzTG9hZGluZyA9IGZvcm1TdGF0ZT8uaXNMb2FkaW5nLFxyXG4gICAgaXNWYWxpZCA9IGZvcm1TdGF0ZT8uaXNWYWxpZCxcclxuICAgIGlzVmFsaWRhdGluZyA9IGZvcm1TdGF0ZT8uaXNWYWxpZGF0aW5nLFxyXG4gICAgaXNTdWJtaXR0aW5nID0gZm9ybVN0YXRlPy5pc1N1Ym1pdHRpbmcsXHJcbiAgfSA9IHByb3BzO1xyXG5cclxuICBjb25zdCB7IGlzUGVuZGluZyB9ID0gdXNlRW5naW5lKCk7XHJcbiAgY29uc3QgbG9hZGluZyA9IGlzUGVuZGluZyB8fCBpc0xvYWRpbmcgfHwgaXNWYWxpZGF0aW5nIHx8IGlzU3VibWl0dGluZztcclxuXHJcbiAgY29uc3QgdGFnSWQgPSBnZXRUcmFja2luZ1RhZygnU1VCTUlUX0JVVFRPTicsIHVzZVRhZ0lkKCkpO1xyXG5cclxuICByZXR1cm4gKFxyXG4gICAgPEJ1dHRvblBsblxyXG4gICAgICBkYXRhLWNzLW92ZXJyaWRlLWlkPXt0YWdJZH1cclxuICAgICAgdHlwZT1cInN1Ym1pdFwiXHJcbiAgICAgIGZvcm09e2Zvcm19XHJcbiAgICAgIGRpc2FibGVkPXshaXNWYWxpZCB8fCBsb2FkaW5nfVxyXG4gICAgICBsb2FkaW5nPXtsb2FkaW5nfVxyXG4gICAgICBjb2xvcj1cInByaW1hcnlcIlxyXG4gICAgPlxyXG4gICAgICB7bG9hZGluZyA/ICdBdHRlbmRlcmUgcHJlZ28nIDogY2hpbGRyZW59XHJcbiAgICA8L0J1dHRvblBsbj5cclxuICApO1xyXG59XHJcbiJdLCJmaWxlIjoiQzovVXNlcnMvYWludHJvbmEvRGVza3RvcC9BcHAvcmVhY3QvbmFqL2xpYnMvdWktb3JnYW5pc21zL3NyYy9saWIvbGF5b3V0L1N1Ym1pdEJ1dHRvblBsbi50c3gifQ==

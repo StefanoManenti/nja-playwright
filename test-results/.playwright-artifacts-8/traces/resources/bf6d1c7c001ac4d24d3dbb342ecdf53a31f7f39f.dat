@@ -1,0 +1,18 @@
+globalThis.jotaiAtomCache = globalThis.jotaiAtomCache || {
+  cache: /* @__PURE__ */ new Map(),
+  get(name, inst) {
+    if (this.cache.has(name)) {
+      return this.cache.get(name);
+    }
+    this.cache.set(name, inst);
+    return inst;
+  }
+};
+import { atomWithLazy } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/jotai_utils.js?v=0189a8d1";
+import { restoreBillFromUrl, restorePaymentFromUrl } from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/troubleshooting/state-url.ts";
+export const sharedBillType$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms-generators\\shared-accounts-atoms.ts/sharedBillType$", atomWithLazy(restoreBillFromUrl));
+sharedBillType$.debugLabel = "sharedBillType$";
+export const sharedPaymentType$ = globalThis.jotaiAtomCache.get("C:\\Users\\aintrona\\Desktop\\App\\react\\naj\\libs\\data-access\\src\\lib\\atoms-generators\\shared-accounts-atoms.ts/sharedPaymentType$", atomWithLazy(restorePaymentFromUrl));
+sharedPaymentType$.debugLabel = "sharedPaymentType$";
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLFNBQVNBLG9CQUFvQjtBQUM3QixTQUNFQyxvQkFDQUMsNkJBQ0s7QUFFUCxhQUFBQyxrQkFBQUMsV0FBQUMsZUFBQUMsSUFBQSwwSUFBK0JOLGFBQWFDLGtCQUFrQixDQUFDO0FBQUNFLGdCQUFBSSxhQUFBO0FBQ2hFLGFBQUFDLHFCQUFBSixXQUFBQyxlQUFBQyxJQUFBLDZJQUFrQ04sYUFBYUUscUJBQXFCLENBQUM7QUFBQ00sbUJBQUFELGFBQUEiLCJuYW1lcyI6WyJhdG9tV2l0aExhenkiLCJyZXN0b3JlQmlsbEZyb21VcmwiLCJyZXN0b3JlUGF5bWVudEZyb21VcmwiLCJzaGFyZWRCaWxsVHlwZSQiLCJnbG9iYWxUaGlzIiwiam90YWlBdG9tQ2FjaGUiLCJnZXQiLCJkZWJ1Z0xhYmVsIiwic2hhcmVkUGF5bWVudFR5cGUkIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbInNoYXJlZC1hY2NvdW50cy1hdG9tcy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBhdG9tV2l0aExhenkgfSBmcm9tICdqb3RhaS91dGlscyc7XHJcbmltcG9ydCB7XHJcbiAgcmVzdG9yZUJpbGxGcm9tVXJsLFxyXG4gIHJlc3RvcmVQYXltZW50RnJvbVVybCxcclxufSBmcm9tICcuLi90cm91Ymxlc2hvb3Rpbmcvc3RhdGUtdXJsJztcclxuXHJcbmV4cG9ydCBjb25zdCBzaGFyZWRCaWxsVHlwZSQgPSBhdG9tV2l0aExhenkocmVzdG9yZUJpbGxGcm9tVXJsKTtcclxuZXhwb3J0IGNvbnN0IHNoYXJlZFBheW1lbnRUeXBlJCA9IGF0b21XaXRoTGF6eShyZXN0b3JlUGF5bWVudEZyb21VcmwpO1xyXG4iXSwiZmlsZSI6IkM6L1VzZXJzL2FpbnRyb25hL0Rlc2t0b3AvQXBwL3JlYWN0L25hai9saWJzL2RhdGEtYWNjZXNzL3NyYy9saWIvYXRvbXMtZ2VuZXJhdG9ycy9zaGFyZWQtYWNjb3VudHMtYXRvbXMudHMifQ==
