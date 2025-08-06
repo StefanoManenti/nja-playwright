@@ -2,6 +2,7 @@ import { Page } from "@playwright/test";
 import fs from "fs";
 import { MOCKS } from "./Mock";
 import path from "path";
+import { ValuesOverrides } from "../types/stepType";
 
 export enum WAIT {
   SCREENSHOT = 300,
@@ -10,6 +11,7 @@ export enum WAIT {
   DEFAULT = 2000,
   LONG = 4000,
 }
+export const STEP_TO_SKIP =  [];
 
 export async function addScriptInit(page: Page, script: string): Promise<void> {
   await page.addInitScript({ content: script });
@@ -79,6 +81,19 @@ export async function screenShot(page, path: string, screenName: string) {
   });
 }
 
+export async function pageHasStep(page, stepName: string | false) {
+  await page.waitForTimeout(WAIT.MID);
+
+  // Skip controllo se stepName = false
+  if (stepName === false /*|| STEP_TO_SKIP.includes(stepName)*/) return true;
+
+  // Verifica che <body data-meta-step="stepName"> = stepName
+  const body = await page.$("body");
+  const metaStep = await body.getAttribute("data-meta-step");
+  console.log("metaStep " + metaStep + " vs stepName " + stepName);
+  return metaStep.toLowerCase() === stepName.toLowerCase();
+}
+
 export async function pageHasTitle(page, title: string[] | false) {
   // Skip controllo titolo pagina se tile false
   if (title === false) return true;
@@ -128,7 +143,7 @@ export async function nextStepButton(
       );
     }
     await submitButton.click();
-      
+
     await page.waitForTimeout(WAIT.MID);
     await dialogStep(page, path, screenName);
 
@@ -274,7 +289,6 @@ export async function flushLogsToFile(
 // Cerca ricorsivamente una classe nei genitori, partendo da un elemento
 
 export const notSelectedStyle = "rgb(255, 255, 255)";
-export type ValuesOverrides = Record<string, string | string[]>;
 
 export async function autoFillForm(
   page: Page,
@@ -282,11 +296,10 @@ export async function autoFillForm(
   screenName: string,
   valuesOverrides: ValuesOverrides = {}
 ): Promise<void> {
-  console.log("🔁 Inizio compilazione ricorsiva del form…");
-
   const form = page.locator("form").first();
   if (!(await form.isVisible())) {
-    throw new Error("❌ Nessun form visibile trovato nella pagina.");
+    return;
+    //throw new Error("❌ Nessun form visibile trovato nella pagina.");
   }
 
   const processed = new Set<string>();

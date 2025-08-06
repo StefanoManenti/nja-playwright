@@ -1,15 +1,14 @@
-import { StepType } from "./types/stepType";
-import { test } from "./utils/loggedTest";
+//import { test } from "@playwright/test";
+import { test } from "../utils/loggedTest";
 import {
+  WAIT,
   addScriptRuntime,
   autoFillForm,
   clearScreenshots,
   failedError,
   nextStepButton,
-  pageHasStep,
   pageHasTitle,
-  WAIT,
-} from "./utils/utility";
+} from "../utils/utility";
 
 //NA -> trendcasa > gas
 const startUrl =
@@ -18,69 +17,140 @@ const startUrl =
 test("DEV - Nuova Attivazione / Trend Casa / Gas / Voltura", async ({
   page,
 }) => {
-  // Lista Step
-  const stepList: StepType[] = [
-    { step: "activation-gas-step" },
-    { step: "must-have-step" },
-    { step: "transfer-type-step" },
-    { step: "customer-step" },
-    { step: "customer-identity-residential-step" },
-    { step: "pdr-transfer-step" },
-    { step: "activation-address-step" },
-    { step: "gas-purpose-step" },
-    { step: "iban-residential-step" },
-    { step: "contract-step" },
-    { step: "privacy-step" },
-    { step: "recap-step" },
-    { step: "typ-step" },
-    //"recapMobile",
-    //"ending",
-    // "vas",
-    // "vulnerability-available",
-    // "newCustomer",
-    // "CustomerIdentityResidential",
-    // "address",
-    // "UnitaAbitative",
-    // "gasPdr",
-    // "iban",
-    // "contract",
-    // "effectiveDates",
-    // "GasAppointment",
-    // "LocationMeter",
-    // "privacy",
-    // "recap",
-    // "typ",
-  ];
-
   const subFolder = "DEV_NA_TRENDCASA_GAS_VOLTURA";
   const path = `tests/screens/${subFolder}`;
   const screenName = subFolder.toLowerCase() + "_";
 
+  await clearScreenshots(path);
+
   await page.goto(startUrl);
   await page.waitForTimeout(WAIT.LONG);
 
-  for (const [index, s] of stepList.entries()) {
-    if (index === 0) {
-      await clearScreenshots(path);
-      await addScriptRuntime(
-        page,
-        `window.collaudo(); bypassChecks.current = true;`
-      );
-    }
-    const isStep = await pageHasStep(page, s.step);
-    if (!isStep) {
-      failedError(`❌ Errore: Step ["${s.step}"] non trovato`);
+  const steps: {
+    title: string[] | false;
+    action: (page) => Promise<void>;
+  }[] = [
+    {
+      title: ["Trend Casa Attivazione Gas"],
+      action: async (page) => {
+        // ing Modalità collaudo
+        await addScriptRuntime(
+          page,
+          `
+          window.collaudo();
+          bypassChecks.current = true;
+        `
+        );
+        await page.waitForTimeout(WAIT.SHORT);
+        //End ing Modalità collaudo
+
+        await autoFillForm(page, path, screenName);
+        await nextStepButton(page, true, path, screenName);
+      },
+    },
+    {
+      title: ["Riepilogo"],
+      action: async (page) => {
+        await page.waitForTimeout(WAIT.SCREENSHOT);
+        await nextStepButton(page, true, path, screenName);
+      },
+    },
+    {
+      title: false,
+      action: async (page) => {
+        await page.waitForTimeout(WAIT.SCREENSHOT);
+        await autoFillForm(page, path, screenName);
+        await nextStepButton(page, true, path, screenName);
+      },
+    },
+    {
+      title: ["I tuoi dati anagrafici"],
+      action: async (page) => {
+        await page.waitForTimeout(WAIT.SCREENSHOT);
+        await autoFillForm(page, path, screenName);
+        await nextStepButton(page, true, path, screenName);
+      },
+    },
+    {
+      title: ["Scegli il tipo di documento"],
+      action: async (page) => {
+        await page.waitForTimeout(WAIT.SCREENSHOT);
+        await autoFillForm(page, path, screenName);
+        await nextStepButton(page, true, path, screenName);
+      },
+    },
+    {
+      title: ["Inserisci il punto di fornitura"],
+      action: async (page) => {
+        await page.waitForTimeout(WAIT.SCREENSHOT);
+        await autoFillForm(page, path, screenName);
+        await nextStepButton(page, true, path, screenName);
+      },
+    },
+    {
+      title: ["Dove vuoi attivare la fornitura"],
+      action: async (page) => {
+        await page.waitForTimeout(WAIT.SCREENSHOT);
+        await autoFillForm(page, path, screenName);
+        await nextStepButton(page, true, path, screenName);
+      },
+    },
+    {
+      title: ["Per quali scopi usi il gas?"],
+      action: async (page) => {
+        await page.waitForTimeout(WAIT.SCREENSHOT);
+        await autoFillForm(page, path, screenName);
+        await nextStepButton(page, true, path, screenName);
+      },
+    },
+    {
+      title: [
+        "Hai scelto la modalità di pagamento con addebito diretto sul conto corrente",
+      ],
+      action: async (page) => {
+        await page.waitForTimeout(WAIT.SCREENSHOT);
+        await autoFillForm(page, path, screenName);
+        await nextStepButton(page, true, path, screenName);
+      },
+    },
+    {
+      title: ["Accetta le condizioni contrattuali"],
+      action: async (page) => {
+        await page.waitForTimeout(WAIT.SCREENSHOT);
+        await autoFillForm(page, path, screenName);
+        await nextStepButton(page, true, path, screenName);
+      },
+    },
+    {
+      title: ["Consensi al trattamento dei dati personali"],
+      action: async (page) => {
+        await page.waitForTimeout(WAIT.SCREENSHOT);
+        await autoFillForm(page, path, screenName);
+        await nextStepButton(page, true, path, screenName);
+      },
+    },
+    {
+      title: ["Verifica Finale"],
+      action: async (page) => {
+        await page.waitForTimeout(WAIT.SCREENSHOT);
+        await nextStepButton(page, true, path, screenName);
+      },
+    },
+  ];
+
+  for (const step of steps) {
+    if (!(await pageHasTitle(page, step.title))) {
+      step.title &&
+        failedError(
+          `❌ Errore: Titolo ["${step.title.join(
+            " || "
+          )}"] non trovato o invisibile`
+        );
     }
 
-    await page.waitForTimeout(WAIT.SCREENSHOT);
-    await autoFillForm(page, path, screenName, s.data);
-    await page.waitForTimeout(WAIT.SHORT);
-    await nextStepButton(page, true, path, screenName);
+    await step.action(page);
   }
-  console.log("✅ TEST COMPLETATO CON SUCCESSO");
 });
-
-/*
 test("DEV - Nuova Attivazione / Trend Casa / Gas / Posa", async ({ page }) => {
   const subFolder = "DEV_NA_TRENDCASA_GAS_POSA";
   const path = `tests/screens/${subFolder}`;
@@ -91,16 +161,18 @@ test("DEV - Nuova Attivazione / Trend Casa / Gas / Posa", async ({ page }) => {
   await page.goto(startUrl);
   await page.waitForTimeout(WAIT.LONG);
 
-  const listSteps = [];
+  const listSteps=[];
 
   const compileForm = async (page, path, screenName) => {
     await autoFillForm(page, path, screenName);
     await nextStepButton(page, true, path, screenName);
-  };
-
+  }  
+  
   const steps: {
     title: string[] | false;
     action: (page) => Promise<void>;
+
+  
   }[] = [
     {
       title: ["Trend Casa Attivazione Gas"],
@@ -241,4 +313,3 @@ test("DEV - Nuova Attivazione / Trend Casa / Gas / Posa", async ({ page }) => {
     await step.action(page);
   }
 });
-*/

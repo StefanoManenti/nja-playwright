@@ -1,4 +1,4 @@
-[test-start] 2025-08-01T13:12:47.352Z – DEV - Adotta pannello
+[test-start] 2025-08-06T13:24:34.457Z – DEV - Adotta pannello
 [browser-console] debug: [vite] connecting...
 [browser-console] debug: [vite] connected.
 [browser-console] warning: Cannot determine tier from domain. Current tier: localhost
@@ -9,7 +9,7 @@
 [browser-console] log: Worker script URL: http://localhost:4200/mockServiceWorker.js
 [browser-console] log: Worker scope: http://localhost:4200/
 [browser-console] endGroup: console.groupEnd
-[browser-console] startGroupCollapsed: [MSW] 15:12:53 GET /serviceDAq/api/webOrderCommonServices/infoUtente (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 15:24:37 GET /serviceDAq/api/webOrderCommonServices/infoUtente (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"codiceFiscale":"TSTGRB80A01H501X","partitaIVA":"…OWER","utenzaCitta":"MILANO","utenzaCap":"20131"}}
@@ -56,29 +56,19 @@ Nuova: 20/20/1000.
 [browser-console] log: STEPS COLLECTION STATE {step: SelectAccount, direction: 0, progress: 14.285714285714285}
 [browser-console] warning: [MSW] Warning: intercepted a request without a matching request handler:
 
-  • GET /graphql/execute.json/enigaseluce/OffertaCommodityResidenzialeList;code=BASE_PANNELLO?t=1754053974697
+  • GET /graphql/execute.json/enigaseluce/OffertaCommodityResidenzialeList;code=BASE_PANNELLO?t=1754486678908
 
 If you still wish to intercept this unhandled request, please create a request handler for it.
 Read more: https://mswjs.io/docs/getting-started/mocks
 [browser-console] warning: [MSW] Warning: intercepted a request without a matching request handler:
 
-  • GET /graphql/execute.json/enigaseluce/OffertaCommodityBusinessList;code=BASE_PANNELLO?t=1754053974698
+  • GET /graphql/execute.json/enigaseluce/OffertaCommodityBusinessList;code=BASE_PANNELLO?t=1754486678909
 
 If you still wish to intercept this unhandled request, please create a request handler for it.
 Read more: https://mswjs.io/docs/getting-started/mocks
 [browser-console] error: Failed to load resource: the server responded with a status of 500 (Internal Server Error)
 [browser-console] error: Failed to load resource: the server responded with a status of 500 (Internal Server Error)
 [browser-console] warning: Error is not instance of CustomError
-[browser-console] startGroupCollapsed: [MSW] 15:12:54 GET /serviceDAq/api/c360/init (%c200 OK%c) color:#69AB32 color:inherit
-[browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
-[browser-console] log: Handler: HttpHandler
-[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"codiceCliente":"200012345678","codiceClienteImpe…"isLoyaltyRegistrated":false,"isAdminLead":false}}
-[browser-console] endGroup: console.groupEnd
-[browser-console] startGroupCollapsed: [MSW] 15:12:55 GET /serviceDAq/api/contiServices/conti/900012345678 (%c200 OK%c) color:#69AB32 color:inherit
-[browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
-[browser-console] log: Handler: HttpHandler
-[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"conto":[{"codice":"900012345678","alias":"LUCE E…99-12-31"}],"logHash":"a","tipoCliente":"RETAIL"}}
-[browser-console] endGroup: console.groupEnd
 [browser-error] OFFERTA NON TROVATA
 [browser-error] OFFERTA NON TROVATA
 [browser-console] error: The above error occurred in the <Panels> component:
@@ -87,9 +77,9 @@ Read more: https://mswjs.io/docs/getting-started/mocks
     at Suspense
     at div
     at div
-    at CartContainer (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/CartContainer.tsx:27:3)
+    at CartContainer (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/CartContainer.tsx?t=1754477455616:27:3)
     at PanelAdoptionCart
-    at Cart2 (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/Cart.tsx:48:29)
+    at Cart2 (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/cart/Cart.tsx?t=1754477455616:48:29)
     at Suspense
     at aside
     at div
@@ -97,38 +87,48 @@ Read more: https://mswjs.io/docs/getting-started/mocks
     at div
     at div
     at Layout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-molecules/src/lib/layout/layout.tsx:29:3)
-    at StepLayout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepLayout.tsx:42:3)
-    at FormProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=0189a8d1:102:11)
+    at StepLayout (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-organisms/src/lib/layout/StepLayout.tsx?t=1754477455616:42:3)
+    at FormProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=969bdece:102:11)
     at SelectAccountStep (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/supply/SelectAccountStep.tsx:80:3)
-    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
-    at WeborderTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:227:3)
-    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx:31:3)
-    at GlobalTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx:51:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx?t=1754468112071:31:3)
+    at WeborderTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx?t=1754468112071:227:3)
+    at TrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-state.tsx?t=1754468112071:31:3)
+    at GlobalTrackingState (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/tracking-state-weborder-unico.tsx?t=1754468112071:51:3)
     at SelectAccountStepWrapped
     at BaseErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:31:5)
     at BaseErrorBoundaryConnected (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/BaseErrorBoundary.tsx:102:17)
-    at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
-    at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:60:32)
+    at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx?t=1754477455616:32:23)
+    at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx?t=1754468091073:60:32)
     at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
-    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754053241441:149:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754477531733:149:3)
     at MaintenanceMode (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/MaintenanceMode.tsx:33:35)
     at Suspense
-    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754053241441:135:27)
-    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754053241441:41:31)
-    at Routes (http://localhost:4200/src/app/routes.tsx?t=1754053241441:38:15)
-    at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754477531733:135:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1754477531733:41:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx?t=1754477531733:38:15)
+    at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx?t=1754468112071:36:37)
     at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
-    at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
+    at TrackingProvider (http://localhost:4200/src/services/tracking.tsx?t=1754468112071:33:15)
     at HydrateAtoms (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:46:25)
-    at Provider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-TVJE7VNB.js?v=0189a8d1:23:3)
-    at QueryClientProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/@tanstack_react-query.js?v=0189a8d1:58:3)
+    at Provider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-TVJE7VNB.js?v=969bdece:23:3)
+    at QueryClientProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/@tanstack_react-query.js?v=43bd2efe:58:3)
     at QueryProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/utils/query.tsx:56:23)
     at AppProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/util/src/lib/app/app-jsx.tsx:35:16)
-    at Services (http://localhost:4200/src/services/services.tsx:29:36)
-    at ErrorBoundary (http://localhost:4200/src/app/ErrorBoundary.tsx:15:5)
+    at Services (http://localhost:4200/src/services/services.tsx?t=1754468112071:29:36)
+    at ErrorBoundary (http://localhost:4200/src/app/ErrorBoundary.tsx?t=1754477455616:15:5)
     at Suspense
-    at GlobalSuspense (http://localhost:4200/src/app/suspense-components.tsx:26:34)
+    at GlobalSuspense (http://localhost:4200/src/app/suspense-components.tsx?t=1754477455616:26:34)
     at App
 
 React will try to recreate this component tree from scratch using the error boundary you provided, BaseErrorBoundary.
-[test-error]   2025-08-01T13:12:56.032Z – ❌ Nessun form visibile trovato nella pagina.
+[browser-console] startGroupCollapsed: [MSW] 15:24:39 GET /serviceDAq/api/c360/init (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"codiceCliente":"200012345678","codiceClienteImpe…"isLoyaltyRegistrated":false,"isAdminLead":false}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: [MSW] 15:24:39 GET /serviceDAq/api/contiServices/conti/900012345678 (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"conto":[{"codice":"900012345678","alias":"LUCE E…99-12-31"}],"logHash":"a","tipoCliente":"RETAIL"}}
+[browser-console] endGroup: console.groupEnd
+[test-error]   2025-08-06T13:24:47.357Z – Pulsante di prosegui non trovato

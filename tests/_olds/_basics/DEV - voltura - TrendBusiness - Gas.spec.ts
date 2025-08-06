@@ -1,136 +1,59 @@
-import { StepType } from "./types/stepType";
-import { test } from "./utils/loggedTest";
+//import { test } from "@playwright/test";
+import { test } from "../utils/loggedTest";
 import {
+  WAIT,
   addScriptRuntime,
   autoFillForm,
   clearScreenshots,
   failedError,
   nextStepButton,
-  pageHasStep,
   pageHasTitle,
-  WAIT,
-} from "./utils/utility";
+} from "../utils/utility";
 
-//NA -> trendcasa > gas
+const subFolder = "DEV_VOLTURA_GAS";
+const path = `tests/screens/${subFolder}`;
+const screenName = subFolder.toLowerCase() + "_";
+
+//Voltura -> trend businness > gas
 const startUrl =
-  "http://localhost:4200/configura-offerta?codiceProdotto=BASE_LTCASAV-GTCASAV&codiceCanale=CWEB3EGP&codiceTpCanale=WB&direct-debit=true&bill-type=digitale&commodity=gas&salesProcess=NEW_ACTIVATION&mocks&dev"; //&aba
+  "http://localhost:4200/configura-offerta?codiceProdotto=BASE_TNDVL-TNDVG&codiceCanale=CWEB3EGP&codiceTpCanale=WB&direct-debit=true&bill-type=digitale&commodity=gas&salesProcess=TRANSFER&mocks&dev";
 
-test("DEV - Nuova Attivazione / Trend Casa / Gas / Voltura", async ({
-  page,
-}) => {
-  // Lista Step
-  const stepList: StepType[] = [
-    { step: "activation-gas-step" },
-    { step: "must-have-step" },
-    { step: "transfer-type-step" },
-    { step: "customer-step" },
-    { step: "customer-identity-residential-step" },
-    { step: "pdr-transfer-step" },
-    { step: "activation-address-step" },
-    { step: "gas-purpose-step" },
-    { step: "iban-residential-step" },
-    { step: "contract-step" },
-    { step: "privacy-step" },
-    { step: "recap-step" },
-    { step: "typ-step" },
-    //"recapMobile",
-    //"ending",
-    // "vas",
-    // "vulnerability-available",
-    // "newCustomer",
-    // "CustomerIdentityResidential",
-    // "address",
-    // "UnitaAbitative",
-    // "gasPdr",
-    // "iban",
-    // "contract",
-    // "effectiveDates",
-    // "GasAppointment",
-    // "LocationMeter",
-    // "privacy",
-    // "recap",
-    // "typ",
-  ];
-
-  const subFolder = "DEV_NA_TRENDCASA_GAS_VOLTURA";
-  const path = `tests/screens/${subFolder}`;
-  const screenName = subFolder.toLowerCase() + "_";
-
-  await page.goto(startUrl);
-  await page.waitForTimeout(WAIT.LONG);
-
-  for (const [index, s] of stepList.entries()) {
-    if (index === 0) {
-      await clearScreenshots(path);
-      await addScriptRuntime(
-        page,
-        `window.collaudo(); bypassChecks.current = true;`
-      );
-    }
-    const isStep = await pageHasStep(page, s.step);
-    if (!isStep) {
-      failedError(`❌ Errore: Step ["${s.step}"] non trovato`);
-    }
-
-    await page.waitForTimeout(WAIT.SCREENSHOT);
-    await autoFillForm(page, path, screenName, s.data);
-    await page.waitForTimeout(WAIT.SHORT);
-    await nextStepButton(page, true, path, screenName);
-  }
-  console.log("✅ TEST COMPLETATO CON SUCCESSO");
-});
-
-/*
-test("DEV - Nuova Attivazione / Trend Casa / Gas / Posa", async ({ page }) => {
-  const subFolder = "DEV_NA_TRENDCASA_GAS_POSA";
-  const path = `tests/screens/${subFolder}`;
-  const screenName = subFolder.toLowerCase() + "_";
-
+test("DEV - Voltura / Trend Business / Gas", async ({ page }) => {
   await clearScreenshots(path);
 
   await page.goto(startUrl);
   await page.waitForTimeout(WAIT.LONG);
-
-  const listSteps = [];
-
-  const compileForm = async (page, path, screenName) => {
-    await autoFillForm(page, path, screenName);
-    await nextStepButton(page, true, path, screenName);
-  };
 
   const steps: {
     title: string[] | false;
     action: (page) => Promise<void>;
   }[] = [
     {
-      title: ["Trend Casa Attivazione Gas"],
+      title: ["Trend Business Gas"],
       action: async (page) => {
         // ing Modalità collaudo
         await addScriptRuntime(
           page,
           `
-          window.collaudo();
-          bypassChecks.current = true;
-        `
+                  window.collaudo();
+                  bypassChecks.current = true;
+                `
         );
         await page.waitForTimeout(WAIT.SHORT);
         //End ing Modalità collaudo
-
-        await autoFillForm(page, path, screenName, {
-          contatorePresente: "no",
-        });
         await nextStepButton(page, true, path, screenName);
       },
     },
-    {
-      title: ["Riepilogo"],
+    /*{
+      title: ["Tipologia Voltura"],
       action: async (page) => {
         await page.waitForTimeout(WAIT.SCREENSHOT);
+        await autoFillForm(page, path, screenName);
         await nextStepButton(page, true, path, screenName);
       },
-    },
+    },*/
     {
-      title: ["I tuoi dati anagrafici"],
+      title: ["A chi verrà intestata la fornitura"],
       action: async (page) => {
         await page.waitForTimeout(WAIT.SCREENSHOT);
         await autoFillForm(page, path, screenName);
@@ -138,15 +61,46 @@ test("DEV - Nuova Attivazione / Trend Casa / Gas / Posa", async ({ page }) => {
       },
     },
     {
+      title: ["Inserisci il punto di fornitura"],
+      action: async (page) => {
+        await page.waitForTimeout(WAIT.SCREENSHOT);
+        await autoFillForm(page, path, screenName);
+        await nextStepButton(page, true, path, screenName);
+      },
+    },
+    {
+      title: ["Punto di fornitura"],
+      action: async (page) => {
+        await page.waitForTimeout(WAIT.SCREENSHOT);
+        await nextStepButton(page, true, path, screenName);
+      },
+    },
+    {
+      title: ["Per quali scopi usi il gas?"],
+      action: async (page) => {
+        await page.waitForTimeout(WAIT.SCREENSHOT);
+        await autoFillForm(page, path, screenName);
+        await nextStepButton(page, true, path, screenName);
+      },
+    },
+    {
+      title: ["A chi appartiene l'immobile?", "A chi appartiene l’immobile?"],
+      action: async (page) => {
+        await page.waitForTimeout(WAIT.SCREENSHOT);
+        await autoFillForm(page, path, screenName);
+        await nextStepButton(page, true, path, screenName);
+      },
+    },
+    /*{
       title: ["Scegli il tipo di documento"],
       action: async (page) => {
-        await page.waitForTimeout(WAIT.SCREENSHOT);
+        await page.waitForTimeout(WAIT.LONG);
         await autoFillForm(page, path, screenName);
         await nextStepButton(page, true, path, screenName);
       },
     },
     {
-      title: ["Dove vuoi attivare la fornitura"],
+      title: ["Inserisci l’indirizzo della sede legale"],
       action: async (page) => {
         await page.waitForTimeout(WAIT.SCREENSHOT);
         await autoFillForm(page, path, screenName);
@@ -154,7 +108,7 @@ test("DEV - Nuova Attivazione / Trend Casa / Gas / Posa", async ({ page }) => {
       },
     },
     {
-      title: ["Quante unità abitative alimenta il contatore?"],
+      title: ["Inserisci il punto di fornitura"],
       action: async (page) => {
         await page.waitForTimeout(WAIT.SCREENSHOT);
         await autoFillForm(page, path, screenName);
@@ -162,7 +116,22 @@ test("DEV - Nuova Attivazione / Trend Casa / Gas / Posa", async ({ page }) => {
       },
     },
     {
-      title: ["Inserisci il punto di fornitura", "Per quali scopi usi il gas?"],
+      title: ["Chi è il rappresentante legale dell’azienda?"],
+      action: async (page) => {
+        await page.waitForTimeout(WAIT.SCREENSHOT);
+        await autoFillForm(page, path, screenName);
+        await nextStepButton(page, true, path, screenName);
+      },
+    },
+    {
+      title: ["Punto di fornitura"],
+      action: async (page) => {
+        await page.waitForTimeout(WAIT.SCREENSHOT);
+        await nextStepButton(page, true, path, screenName);
+      },
+    },*/
+    {
+      title: ["Inserisci il codice ATECO"],
       action: async (page) => {
         await page.waitForTimeout(WAIT.SCREENSHOT);
         await autoFillForm(page, path, screenName);
@@ -171,40 +140,17 @@ test("DEV - Nuova Attivazione / Trend Casa / Gas / Posa", async ({ page }) => {
     },
     {
       title: [
+        "Inserisci l'IBAN per l'addebito diretto",
         "Hai scelto la modalità di pagamento con addebito diretto sul conto corrente",
       ],
       action: async (page) => {
-        await page.waitForTimeout(WAIT.SCREENSHOT);
+        await page.waitForTimeout(WAIT.LONG);
         await autoFillForm(page, path, screenName);
         await nextStepButton(page, true, path, screenName);
       },
     },
     {
       title: ["Accetta le condizioni contrattuali"],
-      action: async (page) => {
-        await page.waitForTimeout(WAIT.SCREENSHOT);
-        await autoFillForm(page, path, screenName);
-        await nextStepButton(page, true, path, screenName);
-      },
-    },
-    {
-      title: ["Quando possiamo attivare la fornitura?"],
-      action: async (page) => {
-        await page.waitForTimeout(WAIT.SCREENSHOT);
-        await autoFillForm(page, path, screenName);
-        await nextStepButton(page, true, path, screenName);
-      },
-    },
-    {
-      title: ["Organizziamo l’appuntamento", "Organizziamo l'appuntamento"],
-      action: async (page) => {
-        await page.waitForTimeout(WAIT.SCREENSHOT);
-        await autoFillForm(page, path, screenName);
-        await nextStepButton(page, true, path, screenName);
-      },
-    },
-    {
-      title: ["Il contatore è facilmente accessibile?"],
       action: async (page) => {
         await page.waitForTimeout(WAIT.SCREENSHOT);
         await autoFillForm(page, path, screenName);
@@ -241,4 +187,3 @@ test("DEV - Nuova Attivazione / Trend Casa / Gas / Posa", async ({ page }) => {
     await step.action(page);
   }
 });
-*/
