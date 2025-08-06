@@ -18,7 +18,22 @@ const startUrl =
 test("DEV - Nuova Attivazione / Trend Casa / Gas / Voltura", async ({
   page,
 }) => {
-  // Lista Step
+  // stepList : Lista Step 
+  /*
+  lista degli step da eseguire
+    ogni step può  contenere un oggetto con proprietà  "data" che rappresenta le override dei valori utilizzati
+    per compilare i campi del form
+    esempio:
+    [
+      { step: "step_name", data?: { campo1: "valore1", campo2: "valore2" } },
+      { step: "step_name2" }   
+    ]
+    
+    "data" è opzionale e se mancante allora compila i valori di default:
+      - i valori di mock
+      - per radiobox e dropdown, le prime primi intercettati nel form
+   */
+  
   const stepList: StepType[] = [
     { step: "activation-gas-step" },
     { step: "must-have-step" },
@@ -32,24 +47,7 @@ test("DEV - Nuova Attivazione / Trend Casa / Gas / Voltura", async ({
     { step: "contract-step" },
     { step: "privacy-step" },
     { step: "recap-step" },
-    { step: "typ-step" },
-    //"recapMobile",
-    //"ending",
-    // "vas",
-    // "vulnerability-available",
-    // "newCustomer",
-    // "CustomerIdentityResidential",
-    // "address",
-    // "UnitaAbitative",
-    // "gasPdr",
-    // "iban",
-    // "contract",
-    // "effectiveDates",
-    // "GasAppointment",
-    // "LocationMeter",
-    // "privacy",
-    // "recap",
-    // "typ",
+    { step: "typ-step" }
   ];
 
   const subFolder = "DEV_NA_TRENDCASA_GAS_VOLTURA";
