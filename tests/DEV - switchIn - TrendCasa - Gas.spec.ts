@@ -10,31 +10,27 @@ import {
   WAIT,
 } from "./utils/utility";
 
-//NA -> trendcasa > gas
+//SWITCH IN -> trendcasa > gas
 const startUrl =
-  "http://localhost:4200/configura-offerta?codiceProdotto=BASE_LTCASAV-GTCASAV&codiceCanale=CWEB3EGP&codiceTpCanale=WB&direct-debit=true&bill-type=digitale&commodity=gas&salesProcess=NEW_ACTIVATION&mocks&dev"; //&aba
+  "http://localhost:4200/configura-offerta?codiceProdotto=BASE_LTCASAV-GTCASAV&codiceCanale=CWEB3EGP&codiceTpCanale=WB&direct-debit=true&bill-type=digitale&commodity=gas&salesProcess=SWITCH_IN&mocks&dev";
 
-test("DEV - Nuova Attivazione / Trend Casa / Gas / Voltura", async ({
-  page,
-}) => {
+test("DEV - Switch In / Trend Casa / Gas ", async ({ page }) => {
   // Lista Step
   const stepList: StepType[] = [
-    { step: "activation-gas-step" },
     { step: ["must-have-step", "must-have-mobile-step"] },
-    { step: "transfer-type-step" },
+    { step: "ocr-step", data: { mode: "MANUAL" } },
     { step: "customer-step" },
-    { step: "customer-identity-residential-step" },
-    { step: "pdr-transfer-step" },
     { step: "activation-address-step" },
-    { step: "gas-purpose-step" },
+    { step: "gas-goal-step" },
     { step: "iban-residential-step" },
     { step: "contract-step" },
+    { step: "commodity-dates-step" },
     { step: "privacy-step" },
     { step: "recap-step" },
     { step: "typ-step" },
   ];
 
-  const subFolder = "DEV_NA_TRENDCASA_GAS_VOLTURA";
+  const subFolder = "DEV_SWITCH_IN_GAS";
   const path = `tests/screens/${subFolder}`;
   const screenName = subFolder.toLowerCase() + "_";
 

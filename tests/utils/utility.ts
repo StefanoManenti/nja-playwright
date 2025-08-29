@@ -1,8 +1,8 @@
 import { Page } from "@playwright/test";
 import fs from "fs";
-import { MOCKS } from "./Mock";
 import path from "path";
 import { ValuesOverrides } from "../types/stepType";
+import { MOCKS } from "./Mock";
 
 export enum WAIT {
   SCREENSHOT = 300,
@@ -11,7 +11,7 @@ export enum WAIT {
   DEFAULT = 2000,
   LONG = 4000,
 }
-export const STEP_TO_SKIP =  [];
+export const STEP_TO_SKIP = [];
 
 export async function addScriptInit(page: Page, script: string): Promise<void> {
   await page.addInitScript({ content: script });
@@ -81,17 +81,28 @@ export async function screenShot(page, path: string, screenName: string) {
   });
 }
 
-export async function pageHasStep(page, stepName: string | false) {
+export async function pageHasStep(page, stepName: string | string[] | false) {
   await page.waitForTimeout(WAIT.MID);
 
   // Skip controllo se stepName = false
-  if (stepName === false /*|| STEP_TO_SKIP.includes(stepName)*/) return true;
+  if (stepName === false) return true;
 
   // Verifica che <body data-meta-step="stepName"> = stepName
   const body = await page.$("body");
-  const metaStep = await body.getAttribute("data-meta-step");
-  console.log("metaStep " + metaStep + " vs stepName " + stepName);
-  return metaStep.toLowerCase() === stepName.toLowerCase();
+  let metaStep = await body.getAttribute("data-meta-step");
+  if (!metaStep) {
+    failedError("data-meta-step non trovato");
+    return false;
+  }
+  metaStep = metaStep.toLowerCase();
+  if (!Array.isArray(stepName)) {
+    stepName = [stepName];
+  }
+  stepName = stepName.map((s) => s.toLowerCase());
+  console.log(
+    "metaStep " + metaStep + " vs stepName [" + stepName.join(",") + "]"
+  );
+  return stepName.includes(metaStep);
 }
 
 export async function pageHasTitle(page, title: string[] | false) {
@@ -169,6 +180,8 @@ export async function nextStepButton(
         await screenShot(page, path, screenName);
       }
     } else {
+      // controllo di non essere in typ
+
       failedError("Pulsante di prosegui non trovato");
     }
   }
