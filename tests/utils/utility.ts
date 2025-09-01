@@ -130,7 +130,8 @@ export async function nextStepButton(
   page,
   screenOnLoaded: boolean,
   path: string,
-  screenName: string
+  screenName: string,
+  errorActions?: any
 ) {
   // Eventuali dialog al caricamento della pagina
   await dialogStep(page, path, screenName);
@@ -158,10 +159,27 @@ export async function nextStepButton(
     await page.waitForTimeout(WAIT.MID);
     await dialogStep(page, path, screenName);
 
-    console.log("➡️  Avanzato allo step successivo");
+    page.on("console", async (msg) => {
+      if (msg.type() === "error") {
+        msg = msg.text();
+        await page.evaluate((msg) => {
+          const el = document.createElement("div");
+          el.className = "error-console";
+          el.style.border = "4px solid red";
+          el.style.padding = "10px";
+          el.innerHTML = msg;
+          document.body.appendChild(el);
+        }, msg);
+      }
+    });
 
     if (screenOnLoaded) {
       await screenShot(page, path, screenName);
+
+      const errorConsoleElements = await page.$$("div.error-console");
+      for (const el of errorConsoleElements) {
+        await el.evaluate((el) => el.remove());
+      }
     }
   }
   // Pagina senza pulsante di submit ma solo prosegui type button
@@ -281,11 +299,14 @@ export async function ensureFolderExists(folder: string) {
 // Attacca i listener a page e raccoglie i messaggi
 export function setupPageLogging(page: Page, buffer: string[]) {
   page.on("console", (msg) => {
-    buffer.push(`[browser-console] ${msg.type()}: ${msg.text()}`);
+    if (msg.type() === "error") {
+      buffer.push(`[page-error] ${msg.text()}`);
+    } else {
+      buffer.push(`[browser-console] ${msg.type()}: ${msg.text()}`);
+    }
   });
-  page.on("pageerror", (err) => {
-    buffer.push(`[browser-error] ${err.message}`);
-  });
+
+  return true;
 }
 
 // Scrive il buffer su file

@@ -1,5 +1,0 @@
-[test-start] 2025-07-30T07:57:54.218Z – PP -Nuova Attivazione / Trend Casa / Gas
-[test-error]   2025-07-30T07:57:54.651Z – page.goto: net::ERR_NAME_NOT_RESOLVED at https://pp.eniplenitude.com/configura-offerta?codiceProdotto=BASE_LTCASAV-GTCASAV&codiceCanale=CWEB3EGP&codiceTpCanale=WB&direct-debit=true&bill-type=digitale&commodity=gas&salesProcess=NEW_ACTIVATION&dev=true
-Call log:
-[2m  - navigating to "https://pp.eniplenitude.com/configura-offerta?codiceProdotto=BASE_LTCASAV-GTCASAV&codiceCanale=CWEB3EGP&codiceTpCanale=WB&direct-debit=true&bill-type=digitale&commodity=gas&salesProcess=NEW_ACTIVATION&dev=true", waiting until "load"[22m
-

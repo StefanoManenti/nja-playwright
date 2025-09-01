@@ -10,7 +10,8 @@ export const test = ((
   baseTest(title, async ({ page }, testInfo) => {
     // 1) Buffer dei log
     const logs: string[] = [];
-    setupPageLogging(page, logs);
+    const erroPage = setupPageLogging(page, logs);
+    
     logs.push(`[test-start] ${new Date().toISOString()} – ${testInfo.title}`);
 
     try {

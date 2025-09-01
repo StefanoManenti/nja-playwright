@@ -1,6 +1,0 @@
-import {
-  require_react
-} from "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-GAIRWVJN.js?v=0189a8d1";
-import "/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-OL46QLBJ.js?v=0189a8d1";
-export default require_react();
-//# sourceMappingURL=react.js.map

@@ -1,4 +1,4 @@
-[test-start] 2025-08-06T15:37:43.130Z – DEV - Nuova Attivazione / Trend Casa / Gas / Voltura
+[test-start] 2025-08-29T14:56:26.746Z – DEV - Nuova Attivazione / Trend Casa / Gas / Voltura
 [browser-console] debug: [vite] connecting...
 [browser-console] debug: [vite] connected.
 [browser-console] warning: Cannot determine tier from domain. Current tier: localhost
@@ -9,7 +9,7 @@
 [browser-console] log: Worker script URL: http://localhost:4200/mockServiceWorker.js
 [browser-console] log: Worker scope: http://localhost:4200/
 [browser-console] endGroup: console.groupEnd
-[browser-console] startGroupCollapsed: [MSW] 17:37:46 GET /serviceDAq/api/webOrderCommonServices/infoUtente (%c204 No Content%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 16:56:32 GET /serviceDAq/api/webOrderCommonServices/infoUtente (%c204 No Content%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 204, statusText: No Content, headers: Object, body: }
@@ -18,98 +18,20 @@
 [browser-console] info: Tracciamenti.load {userId: undefined, userLoginState: no, userUtenzeAttive: undefined, siteSection1: configura-offerta, siteSection2: configura-offerta}
 [browser-console] warning: [MSW] Warning: intercepted a request without a matching request handler:
 
-  • GET /graphql/execute.json/enigaseluce/OffertaCommodityBusinessList;code=BASE_LTCASAV-GTCASAV?t=1754494667965
+  • GET /graphql/execute.json/enigaseluce/OffertaCommodityBusinessList;code=BASE_LTCASAV-GTCASAV?t=1756479393893
 
 If you still wish to intercept this unhandled request, please create a request handler for it.
 Read more: https://mswjs.io/docs/getting-started/mocks
-[browser-console] error: Failed to load resource: the server responded with a status of 500 (Internal Server Error)
-[browser-console] startGroupCollapsed: [MSW] 17:37:48 GET /graphql/execute.json/enigaseluce/OffertaCommodityResidenzialeList;code=BASE_LTCASAV-GTCASAV (%c200 OK%c) color:#69AB32 color:inherit
+[page-error] Failed to load resource: the server responded with a status of 500 (Internal Server Error)
+[browser-console] startGroupCollapsed: [MSW] 16:56:34 GET /graphql/execute.json/enigaseluce/OffertaCommodityResidenzialeList;code=BASE_LTCASAV-GTCASAV (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"data":{"eniGasELuceDettaglioOffertaCommodityResi…,"notaStep4CarrelloAStep":{"plaintext":null}}]}}}}
 [browser-console] endGroup: console.groupEnd
 [browser-console] startGroupCollapsed: Graph
-[browser-console] debug: providers Map(24)
-[browser-console] debug: dipendenze Map(21)
-[browser-console] debug: dipendenti Map(6)
-[browser-console] endGroup: console.groupEnd
-[browser-console] startGroupCollapsed: Priorities
-[browser-console] startGroupCollapsed: Controlli
-[browser-console] debug: Controllo step "customer-identity-residential-step"
-[browser-console] debug: Controllo step "iban-residential-step"
-[browser-console] debug: Controllo step "customer-step"
-[browser-console] debug: Controllo step "gas-goal-step"
-[browser-console] debug: Controllo step "activation-address-step"
-[browser-console] debug: Controllo step "LocationMeter"
-[browser-console] debug: Controllo step "GasAppointment"
-[browser-console] debug: Controllo step "UnitaAbitative"
-[browser-console] debug: Controllo step "typ-step"
-[browser-console] debug: Controllo step "contract-step"
-[browser-console] debug: Controllo step "privacy-step"
-[browser-console] debug: Controllo step "recap-step"
-[browser-console] debug: Controllo step "effectiveDates"
-[browser-console] debug: Controllo step "vas"
-[browser-console] debug: Controllo step "vulnerability-available"
-[browser-console] debug: Controllo step "must-have-mobile-step"
-[browser-console] debug: Controllo step "activation-gas-step"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "disambiguation"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "disambiguation"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "must-have-step"
-[browser-console] debug: Controllo step "activation-gas-step"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "disambiguation"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "disambiguation"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] endGroup: console.groupEnd
-[browser-console] log: [0] commodity
-[browser-console] log: [2] operativeModeGas
-[browser-console] log: [3] disambiguation
-[browser-console] log: [5] activation-gas-step
-[browser-console] log: [6] must-have-mobile-step
-[browser-console] log: [7] must-have-step
-[browser-console] log: [8] vas
-[browser-console] log: [10] vulnerability-available
-[browser-console] log: [10] customer-step
-[browser-console] log: [11] customer-identity-residential-step
-[browser-console] log: [15] activation-address-step
-[browser-console] log: [19] UnitaAbitative
-[browser-console] log: [21] gas-goal-step
-[browser-console] log: [30] iban-residential-step
-[browser-console] log: [90] contract-step
-[browser-console] log: [92] effectiveDates
-[browser-console] log: [97] GasAppointment
-[browser-console] log: [98] LocationMeter
-[browser-console] log: [99] privacy-step
-[browser-console] log: [100] recap-step
-[browser-console] log: [110] typ-step
-[browser-console] endGroup: console.groupEnd
-[browser-console] log: Progress:
-commodity,operativeModeGas / commodity,operativeModeGas,activation-gas-step,must-have-step,customer-step,customer-identity-residential-step,activation-address-step,UnitaAbitative,gas-goal-step,iban-residential-step,contract-step,effectiveDates,GasAppointment,LocationMeter,privacy-step,recap-step,typ-step
-[browser-console] log: STEPS COLLECTION STATE {step: ActivationGas, direction: 0, progress: 17.647058823529413}
-[browser-console] log: {prices: Array(4), discounts: Object, texts: Object, greenEnergyIncluded: true}
-[browser-console] log: {prices: Array(4), discounts: Object, texts: Object, greenEnergyIncluded: true}
-[browser-console] startGroupCollapsed: Graph
-[browser-console] debug: providers Map(22)
-[browser-console] debug: dipendenze Map(18)
-[browser-console] debug: dipendenti Map(6)
+[browser-console] debug: providers Map(21)
+[browser-console] debug: dipendenze Map(17)
+[browser-console] debug: dipendenti Map(5)
 [browser-console] endGroup: console.groupEnd
 [browser-console] startGroupCollapsed: Priorities
 [browser-console] startGroupCollapsed: Controlli
@@ -126,13 +48,6 @@ commodity,operativeModeGas / commodity,operativeModeGas,activation-gas-step,must
 [browser-console] debug: Controllo step "recap-step"
 [browser-console] debug: Controllo step "vas"
 [browser-console] debug: Controllo step "must-have-mobile-step"
-[browser-console] debug: Controllo step "activation-gas-step"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "disambiguation"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "operativeModeGas"
 [browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "disambiguation"
@@ -140,13 +55,6 @@ commodity,operativeModeGas / commodity,operativeModeGas,activation-gas-step,must
 [browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "must-have-step"
-[browser-console] debug: Controllo step "activation-gas-step"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "disambiguation"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "operativeModeGas"
 [browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "disambiguation"
@@ -157,7 +65,6 @@ commodity,operativeModeGas / commodity,operativeModeGas,activation-gas-step,must
 [browser-console] log: [0] commodity
 [browser-console] log: [2] operativeModeGas
 [browser-console] log: [3] disambiguation
-[browser-console] log: [5] activation-gas-step
 [browser-console] log: [6] must-have-mobile-step
 [browser-console] log: [7] must-have-step
 [browser-console] log: [8] vas
@@ -174,14 +81,15 @@ commodity,operativeModeGas / commodity,operativeModeGas,activation-gas-step,must
 [browser-console] log: [110] typ-step
 [browser-console] endGroup: console.groupEnd
 [browser-console] log: Progress:
-commodity,operativeModeGas,activation-gas-step / commodity,operativeModeGas,activation-gas-step,must-have-step,transfer-type-step,customer-step,customer-identity-residential-step,pdr-transfer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,privacy-step,recap-step,typ-step
-[browser-console] log: STEPS COLLECTION STATE {step: Ending, direction: 1, progress: 26.666666666666668, subflow: undefined}
+commodity,operativeModeGas / commodity,operativeModeGas,must-have-step,transfer-type-step,customer-step,customer-identity-residential-step,pdr-transfer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,privacy-step,recap-step,typ-step
+[browser-console] log: STEPS COLLECTION STATE {step: Ending, direction: 0, progress: 21.428571428571427}
 [browser-console] info: GTM.push {platform: web, event: carrello, siteSection1: configura-offerta, siteSection2: configura-offerta, from: undefined}
+[browser-console] log: {prices: Array(4), discounts: Object, texts: Object, greenEnergyIncluded: true}
 [browser-console] info: GTM.push {event: cart_step, step_funnel: pre_wo, selezione: Prosegui}
 [browser-console] startGroupCollapsed: Graph
-[browser-console] debug: providers Map(22)
-[browser-console] debug: dipendenze Map(18)
-[browser-console] debug: dipendenti Map(6)
+[browser-console] debug: providers Map(21)
+[browser-console] debug: dipendenze Map(17)
+[browser-console] debug: dipendenti Map(5)
 [browser-console] endGroup: console.groupEnd
 [browser-console] startGroupCollapsed: Priorities
 [browser-console] startGroupCollapsed: Controlli
@@ -198,13 +106,6 @@ commodity,operativeModeGas,activation-gas-step / commodity,operativeModeGas,acti
 [browser-console] debug: Controllo step "recap-step"
 [browser-console] debug: Controllo step "vas"
 [browser-console] debug: Controllo step "must-have-mobile-step"
-[browser-console] debug: Controllo step "activation-gas-step"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "disambiguation"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "operativeModeGas"
 [browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "disambiguation"
@@ -212,13 +113,6 @@ commodity,operativeModeGas,activation-gas-step / commodity,operativeModeGas,acti
 [browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "must-have-step"
-[browser-console] debug: Controllo step "activation-gas-step"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "disambiguation"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "operativeModeGas"
 [browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "disambiguation"
@@ -229,7 +123,6 @@ commodity,operativeModeGas,activation-gas-step / commodity,operativeModeGas,acti
 [browser-console] log: [0] commodity
 [browser-console] log: [2] operativeModeGas
 [browser-console] log: [3] disambiguation
-[browser-console] log: [5] activation-gas-step
 [browser-console] log: [6] must-have-mobile-step
 [browser-console] log: [7] must-have-step
 [browser-console] log: [8] vas
@@ -246,18 +139,18 @@ commodity,operativeModeGas,activation-gas-step / commodity,operativeModeGas,acti
 [browser-console] log: [110] typ-step
 [browser-console] endGroup: console.groupEnd
 [browser-console] log: Progress:
- / activation-gas-step,transfer-type-step,customer-step,customer-identity-residential-step,pdr-transfer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,privacy-step,recap-step,typ-step
-[browser-console] log: STEPS COLLECTION STATE {step: TransferType, direction: 1, progress: 8.333333333333332, subflow: undefined}
-[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: tipo_voltura, micro_step: tipo_voltura, operazione: voltura}
-[browser-console] startGroupCollapsed: [MSW] 17:38:26 POST /serviceDAq/api/webOrderCommonServices/v1/maintenance-mode/check (%c200 OK%c) color:#69AB32 color:inherit
+ / transfer-type-step,customer-step,customer-identity-residential-step,pdr-transfer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,privacy-step,recap-step,typ-step
+[browser-console] log: STEPS COLLECTION STATE {step: TransferType, direction: 1, progress: 9.090909090909092, subflow: undefined}
+[browser-console] startGroupCollapsed: [MSW] 16:56:44 POST /serviceDAq/api/webOrderCommonServices/v1/maintenance-mode/check (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: POST, headers: Object, body: }
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"attivazioni":false,"switchIn":false,"switchInVol…aleImpianti":false,"ndsStandaloneImpianti":false}}
 [browser-console] endGroup: console.groupEnd
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: tipo_voltura, micro_step: tipo_voltura, operazione: voltura}
 [browser-console] startGroupCollapsed: Graph
-[browser-console] debug: providers Map(22)
-[browser-console] debug: dipendenze Map(18)
-[browser-console] debug: dipendenti Map(6)
+[browser-console] debug: providers Map(21)
+[browser-console] debug: dipendenze Map(17)
+[browser-console] debug: dipendenti Map(5)
 [browser-console] endGroup: console.groupEnd
 [browser-console] startGroupCollapsed: Priorities
 [browser-console] startGroupCollapsed: Controlli
@@ -274,13 +167,6 @@ commodity,operativeModeGas,activation-gas-step / commodity,operativeModeGas,acti
 [browser-console] debug: Controllo step "recap-step"
 [browser-console] debug: Controllo step "vas"
 [browser-console] debug: Controllo step "must-have-mobile-step"
-[browser-console] debug: Controllo step "activation-gas-step"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "disambiguation"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "operativeModeGas"
 [browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "disambiguation"
@@ -288,13 +174,6 @@ commodity,operativeModeGas,activation-gas-step / commodity,operativeModeGas,acti
 [browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "must-have-step"
-[browser-console] debug: Controllo step "activation-gas-step"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "disambiguation"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "operativeModeGas"
 [browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "disambiguation"
@@ -305,7 +184,6 @@ commodity,operativeModeGas,activation-gas-step / commodity,operativeModeGas,acti
 [browser-console] log: [0] commodity
 [browser-console] log: [2] operativeModeGas
 [browser-console] log: [3] disambiguation
-[browser-console] log: [5] activation-gas-step
 [browser-console] log: [6] must-have-mobile-step
 [browser-console] log: [7] must-have-step
 [browser-console] log: [8] vas
@@ -322,23 +200,35 @@ commodity,operativeModeGas,activation-gas-step / commodity,operativeModeGas,acti
 [browser-console] log: [110] typ-step
 [browser-console] endGroup: console.groupEnd
 [browser-console] log: Progress:
-transfer-type-step / activation-gas-step,transfer-type-step,customer-step,customer-identity-residential-step,pdr-transfer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,privacy-step,recap-step,typ-step
-[browser-console] log: STEPS COLLECTION STATE {step: NewCustomer, direction: 1, progress: 16.666666666666664, subflow: undefined}
+transfer-type-step / transfer-type-step,customer-step,customer-identity-residential-step,pdr-transfer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,privacy-step,recap-step,typ-step
+[browser-console] log: STEPS COLLECTION STATE {step: NewCustomer, direction: 1, progress: 18.181818181818183, subflow: undefined}
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: anagrafica, micro_step: dati_utente, operazione: voltura}
-[browser-console] startGroupCollapsed: [MSW] 17:39:11 GET /serviceDAq/api/webOrderCommonServices/progressivoWebOrderProcName (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 16:57:34 GET /serviceDAq/api/webOrderCommonServices/progressivoWebOrderProcName (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: WO_MOCK}
 [browser-console] endGroup: console.groupEnd
-[browser-console] startGroupCollapsed: [MSW] 17:39:12 POST /serviceDAq/api/mongoServices/lead (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 16:57:34 POST /serviceDAq/api/mongoServices/lead (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ltura":{"tipologia":"ORDINARIA"},"collaudo":true}}
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
 [browser-console] endGroup: console.groupEnd
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: anagrafica, micro_step: 2_verifica, operazione: voltura}
+[browser-console] startGroupCollapsed: [MSW] 16:57:35 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: [MSW] 16:57:35 POST /serviceDAq/api/webOrderCommonServices/costiAttivazioni (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"logHash":"adKomLHNcXcDb","idLead":"MOCK","plicoC…DR":"2025-08-29T14:57:34.660Z","CodiceISTAT":""}}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"result":"001","status":"Success","response":{"He…PS":35,"PrezziRCA":null}},"errorManagement":null}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] info: GTM.push {event: otp_click, cta_cliccata: verifica_subito}
 [browser-console] startGroupCollapsed: Graph
-[browser-console] debug: providers Map(22)
-[browser-console] debug: dipendenze Map(18)
-[browser-console] debug: dipendenti Map(6)
+[browser-console] debug: providers Map(21)
+[browser-console] debug: dipendenze Map(17)
+[browser-console] debug: dipendenti Map(5)
 [browser-console] endGroup: console.groupEnd
 [browser-console] startGroupCollapsed: Priorities
 [browser-console] startGroupCollapsed: Controlli
@@ -355,13 +245,6 @@ transfer-type-step / activation-gas-step,transfer-type-step,customer-step,custom
 [browser-console] debug: Controllo step "recap-step"
 [browser-console] debug: Controllo step "vas"
 [browser-console] debug: Controllo step "must-have-mobile-step"
-[browser-console] debug: Controllo step "activation-gas-step"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "disambiguation"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "operativeModeGas"
 [browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "disambiguation"
@@ -369,13 +252,6 @@ transfer-type-step / activation-gas-step,transfer-type-step,customer-step,custom
 [browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "must-have-step"
-[browser-console] debug: Controllo step "activation-gas-step"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "disambiguation"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "operativeModeGas"
 [browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "disambiguation"
@@ -386,7 +262,6 @@ transfer-type-step / activation-gas-step,transfer-type-step,customer-step,custom
 [browser-console] log: [0] commodity
 [browser-console] log: [2] operativeModeGas
 [browser-console] log: [3] disambiguation
-[browser-console] log: [5] activation-gas-step
 [browser-console] log: [6] must-have-mobile-step
 [browser-console] log: [7] must-have-step
 [browser-console] log: [8] vas
@@ -403,14 +278,9 @@ transfer-type-step / activation-gas-step,transfer-type-step,customer-step,custom
 [browser-console] log: [110] typ-step
 [browser-console] endGroup: console.groupEnd
 [browser-console] log: Progress:
-transfer-type-step,customer-step / activation-gas-step,transfer-type-step,customer-step,customer-identity-residential-step,pdr-transfer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,privacy-step,recap-step,typ-step
-[browser-console] log: STEPS COLLECTION STATE {step: IdentityResidential, direction: 1, progress: 25, subflow: undefined}
-[browser-console] startGroupCollapsed: [MSW] 17:39:12 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
-[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
-[browser-console] log: Handler: HttpHandler
-[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
-[browser-console] endGroup: console.groupEnd
-[browser-console] error: Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <p> p 
+transfer-type-step,customer-step / transfer-type-step,customer-step,customer-identity-residential-step,pdr-transfer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,privacy-step,recap-step,typ-step
+[browser-console] log: STEPS COLLECTION STATE {step: IdentityResidential, direction: 1, progress: 27.27272727272727, subflow: undefined}
+[page-error] Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <p> p 
     at p
     at Typography (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/ui-atoms/src/lib/Typography.tsx:77:3)
     at p
@@ -448,12 +318,12 @@ transfer-type-step,customer-step / activation-gas-step,transfer-type-step,custom
     at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
     at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:60:32)
     at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
-    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx:149:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1756471942736:149:3)
     at MaintenanceMode (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/MaintenanceMode.tsx:33:35)
     at Suspense
-    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx:135:27)
-    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx:41:31)
-    at Routes (http://localhost:4200/src/app/routes.tsx:38:15)
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1756471942736:135:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1756471942736:41:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx?t=1756471942736:38:15)
     at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
     at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
     at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
@@ -468,10 +338,16 @@ transfer-type-step,customer-step / activation-gas-step,transfer-type-step,custom
     at GlobalSuspense (http://localhost:4200/src/app/suspense-components.tsx:26:34)
     at App
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: anagrafica, micro_step: documento_identita, operazione: voltura}
+[browser-console] warning: [MSW] Warning: intercepted a request without a matching request handler:
+
+  • GET https://eniplenitude.com/etc.clientlibs/myeni/clientlibs/clientlib-angular/resources/img/logo-plenitude-verticale.png
+
+If you still wish to intercept this unhandled request, please create a request handler for it.
+Read more: https://mswjs.io/docs/getting-started/mocks
 [browser-console] startGroupCollapsed: Graph
-[browser-console] debug: providers Map(22)
-[browser-console] debug: dipendenze Map(18)
-[browser-console] debug: dipendenti Map(6)
+[browser-console] debug: providers Map(21)
+[browser-console] debug: dipendenze Map(17)
+[browser-console] debug: dipendenti Map(5)
 [browser-console] endGroup: console.groupEnd
 [browser-console] startGroupCollapsed: Priorities
 [browser-console] startGroupCollapsed: Controlli
@@ -488,13 +364,6 @@ transfer-type-step,customer-step / activation-gas-step,transfer-type-step,custom
 [browser-console] debug: Controllo step "recap-step"
 [browser-console] debug: Controllo step "vas"
 [browser-console] debug: Controllo step "must-have-mobile-step"
-[browser-console] debug: Controllo step "activation-gas-step"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "disambiguation"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "operativeModeGas"
 [browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "disambiguation"
@@ -502,13 +371,6 @@ transfer-type-step,customer-step / activation-gas-step,transfer-type-step,custom
 [browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "must-have-step"
-[browser-console] debug: Controllo step "activation-gas-step"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "disambiguation"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "operativeModeGas"
 [browser-console] debug: Controllo step "commodity"
 [browser-console] debug: Controllo step "disambiguation"
@@ -519,7 +381,6 @@ transfer-type-step,customer-step / activation-gas-step,transfer-type-step,custom
 [browser-console] log: [0] commodity
 [browser-console] log: [2] operativeModeGas
 [browser-console] log: [3] disambiguation
-[browser-console] log: [5] activation-gas-step
 [browser-console] log: [6] must-have-mobile-step
 [browser-console] log: [7] must-have-step
 [browser-console] log: [8] vas
@@ -536,22 +397,22 @@ transfer-type-step,customer-step / activation-gas-step,transfer-type-step,custom
 [browser-console] log: [110] typ-step
 [browser-console] endGroup: console.groupEnd
 [browser-console] log: Progress:
-transfer-type-step,customer-step,customer-identity-residential-step / activation-gas-step,transfer-type-step,customer-step,customer-identity-residential-step,pdr-transfer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,privacy-step,recap-step,typ-step
-[browser-console] log: STEPS COLLECTION STATE {step: TransferPdfStep, direction: 1, progress: 33.33333333333333, subflow: undefined}
-[browser-console] startGroupCollapsed: [MSW] 17:39:42 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+transfer-type-step,customer-step,customer-identity-residential-step / transfer-type-step,customer-step,customer-identity-residential-step,pdr-transfer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,privacy-step,recap-step,typ-step
+[browser-console] log: STEPS COLLECTION STATE {step: TransferPdfStep, direction: 1, progress: 36.36363636363637, subflow: undefined}
+[browser-console] startGroupCollapsed: [MSW] 16:58:15 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
 [browser-console] endGroup: console.groupEnd
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: pod_pdr, micro_step: inserici_pod_pdr, operazione: voltura}
-[browser-console] error: PreconditionFailedError: fornituraLuce and fornituraGas are null
+[page-error] PreconditionFailedError: fornituraLuce and fornituraGas are null
     at Object.write (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms-generators/TransferAccount.ts:36:15)
     at async Object.write (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/account-selected-atoms.ts:46:19)
     at async http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/transfer/TransferPdfStep.tsx:117:11
     at async http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=3fb1a596:1681:9
-[browser-console] error: PreconditionFailedError: fornituraLuce and fornituraGas are null
+[page-error] PreconditionFailedError: fornituraLuce and fornituraGas are null
     at Object.write (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms-generators/TransferAccount.ts:36:15)
     at async Object.write (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/account-selected-atoms.ts:46:19)
     at async http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/transfer/TransferPdfStep.tsx:117:11
     at async http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=3fb1a596:1681:9
-[test-error]   2025-08-06T15:40:11.747Z – ❌ Errore: Step ["activation-address-step"] non trovato
+[test-error]   2025-08-29T14:58:50.463Z – ❌ Errore: Step ["activation-address-step"] non trovato
