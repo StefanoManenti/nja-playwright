@@ -2,7 +2,10 @@
 import { test as baseTest, Page } from "@playwright/test";
 import path from "path";
 import { setupPageLogging, flushLogsToFile } from "./utility";
+import { devices, chromium } from "@playwright/test";
 
+
+// Test Desktop
 export const test = ((
   title: string,
   fn: (ctx: { page: Page }) => Promise<void>,
@@ -31,6 +34,44 @@ export const test = ((
       throw err;
     } finally {
       // 3) Flush su file
+      const folder = path.join("tests", "logs");
+      const fileName = testInfo.title.replace(/\W+/g, "_") + ".log";
+      await flushLogsToFile(logs, folder, fileName);
+    }
+  });
+}) as typeof baseTest;
+
+
+// test Mobile o Tablet TODO parametrizzare device da mobileDevices in stepType.tsx
+export const testMobile = ((
+  title: string,
+  fn: (ctx: { page: Page }) => Promise<void>,
+) => {
+  baseTest(title, async ({ browser }, testInfo) => {
+
+    const mobileDevice = devices["iPhone 6"]; 
+
+    const logs: string[] = [];
+
+    // Contesto per simulare Device mobile
+    const context = await browser.newContext({
+      ...mobileDevice,
+    });
+
+    const page = await context.newPage();
+
+    const erroPage = setupPageLogging(page, logs);
+    logs.push(`[test-start] ${new Date().toISOString()} – ${testInfo.title}`);
+
+    try {
+      await fn({ page });
+      logs.push(`[test-success] ${new Date().toISOString()} – OK`);
+    } catch (err: any) {
+      logs.push(`[test-error]   ${new Date().toISOString()} – ${err.message}`);
+      throw err;
+    } finally {
+    
+      await context.close();
       const folder = path.join("tests", "logs");
       const fileName = testInfo.title.replace(/\W+/g, "_") + ".log";
       await flushLogsToFile(logs, folder, fileName);

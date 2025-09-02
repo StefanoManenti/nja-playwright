@@ -1,8 +1,8 @@
-import { Page } from "@playwright/test";
 import fs from "fs";
 import path from "path";
 import { ValuesOverrides } from "../types/stepType";
 import { MOCKS } from "./Mock";
+import { Page, Locator, ElementHandle } from "@playwright/test";
 
 export enum WAIT {
   SCREENSHOT = 300,
@@ -69,7 +69,8 @@ export async function screenShot(page, path: string, screenName: string) {
 
   const index = 1 + (await countScreenshots(path));
 
-  await page.setViewportSize({ width: 1280, height: fullHeight });
+  const currentWidth = await page.evaluate(() => window.innerWidth);
+  await page.setViewportSize({ width: currentWidth, height: fullHeight });
 
   const screenFileName = `${path}/${screenName}${index}.png`;
 
@@ -126,6 +127,17 @@ export async function pageHasTitle(page, title: string[] | false) {
   return hasTitle.some((v) => v);
 }
 
+export async function pressTab(page: Page, locator: Locator) {
+  const handle = await locator.elementHandle();
+  if (handle) {
+    await page.evaluate((el) => {
+      el.focus();
+      el.blur();
+    }, handle);
+  }
+  await locator.press("Tab");
+}
+
 export async function nextStepButton(
   page,
   screenOnLoaded: boolean,
@@ -133,6 +145,10 @@ export async function nextStepButton(
   screenName: string,
   errorActions?: any
 ) {
+  // Is mobile check
+  //const userAgent = await page.userAgent();
+  //const isMobile = userAgent.includes('Mobile');
+
   // Eventuali dialog al caricamento della pagina
   await dialogStep(page, path, screenName);
 
@@ -144,14 +160,14 @@ export async function nextStepButton(
   const inputs = await page.locator("form input");
   const lastInput = inputs.last();
   if (await lastInput.isVisible()) {
-    await lastInput.press("Tab");
+    await pressTab(page, lastInput);
+    await page.waitForTimeout(WAIT.SHORT);
   }
 
-  await page.waitForTimeout(WAIT.MID);
   if (await submitButton.isVisible()) {
     if ((await submitButton.getAttribute("disabled")) !== null) {
       failedError(
-        "Pulsante di invio disabilitato, invocato prima di completare tutto il form"
+        "Pulsante di invio disabilitato, cliccato prima di completare tutto il form"
       );
     }
     await submitButton.click();
