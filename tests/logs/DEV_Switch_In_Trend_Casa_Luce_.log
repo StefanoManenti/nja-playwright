@@ -1,4 +1,4 @@
-[test-start] 2025-08-29T14:05:46.050Z – DEV - Switch In / Trend Casa / Luce 
+[test-start] 2025-09-03T15:45:08.572Z – DEV - Switch In / Trend Casa / Luce 
 [browser-console] debug: [vite] connecting...
 [browser-console] debug: [vite] connected.
 [browser-console] warning: Cannot determine tier from domain. Current tier: localhost
@@ -9,21 +9,14 @@
 [browser-console] log: Worker script URL: http://localhost:4200/mockServiceWorker.js
 [browser-console] log: Worker scope: http://localhost:4200/
 [browser-console] endGroup: console.groupEnd
-[browser-console] startGroupCollapsed: [MSW] 16:05:49 GET /serviceDAq/api/webOrderCommonServices/infoUtente (%c204 No Content%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 17:45:13 GET /serviceDAq/api/webOrderCommonServices/infoUtente (%c204 No Content%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 204, statusText: No Content, headers: Object, body: }
 [browser-console] endGroup: console.groupEnd
 [browser-console] info: Tracciamenti.load {userId: undefined, userLoginState: no, userUtenzeAttive: undefined, siteSection1: configura-offerta, siteSection2: configura-offerta}
 [browser-console] info: Tracciamenti.load {userId: undefined, userLoginState: no, userUtenzeAttive: undefined, siteSection1: configura-offerta, siteSection2: configura-offerta}
-[browser-console] warning: [MSW] Warning: intercepted a request without a matching request handler:
-
-  • GET /graphql/execute.json/enigaseluce/OffertaCommodityBusinessList;code=BASE_LTCASAV-GTCASAV?t=1756476350785
-
-If you still wish to intercept this unhandled request, please create a request handler for it.
-Read more: https://mswjs.io/docs/getting-started/mocks
-[page-error] Failed to load resource: the server responded with a status of 500 (Internal Server Error)
-[browser-console] startGroupCollapsed: [MSW] 16:05:51 GET /graphql/execute.json/enigaseluce/OffertaCommodityResidenzialeList;code=BASE_LTCASAV-GTCASAV (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 17:45:15 GET /graphql/execute.json/enigaseluce/OffertaCommodityResidenzialeList;code=BASE_LTCASAV-GTCASAV (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"data":{"eniGasELuceDettaglioOffertaCommodityResi…,"notaStep4CarrelloAStep":{"plaintext":null}}]}}}}
@@ -84,7 +77,7 @@ Read more: https://mswjs.io/docs/getting-started/mocks
 commodity,operativeModePower / commodity,operativeModePower,must-have-step,ocr-step,customer-step,activation-address-step,pod-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step,recap-step,typ-step
 [browser-console] log: STEPS COLLECTION STATE {step: Ending, direction: 0, progress: 23.076923076923077}
 [browser-console] info: GTM.push {platform: web, event: carrello, siteSection1: configura-offerta, siteSection2: configura-offerta, from: undefined}
-[browser-console] log: {prices: Array(4), discounts: Object, texts: Object, greenEnergyIncluded: true}
+[browser-console] log: NewCartAdapter
 [browser-console] info: GTM.push {event: cart_step, step_funnel: pre_wo, selezione: Prosegui}
 [browser-console] startGroupCollapsed: Graph
 [browser-console] debug: providers Map(19)
@@ -141,12 +134,13 @@ commodity,operativeModePower / commodity,operativeModePower,must-have-step,ocr-s
 [browser-console] log: Progress:
  / ocr-step,customer-step,activation-address-step,pod-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step,recap-step,typ-step
 [browser-console] log: STEPS COLLECTION STATE {step: Ocr, direction: 1, progress: 10, subflow: undefined}
-[browser-console] startGroupCollapsed: [MSW] 16:06:01 POST /serviceDAq/api/webOrderCommonServices/v1/maintenance-mode/check (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 17:45:23 POST /serviceDAq/api/webOrderCommonServices/v1/maintenance-mode/check (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: POST, headers: Object, body: }
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"attivazioni":false,"switchIn":false,"switchInVol…aleImpianti":false,"ndsStandaloneImpianti":false}}
 [browser-console] endGroup: console.groupEnd
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: ocr_selezione_modalita, micro_step: ocr_selezione_modalita, operazione: weborder}
+[browser-console] log: NewCartAdapter
 [browser-console] info: GTM.push {event: ocr, ocr_azione: modalità manuale, cta_cliccata: Prosegui}
 [browser-console] startGroupCollapsed: Graph
 [browser-console] debug: providers Map(19)
@@ -203,14 +197,20 @@ commodity,operativeModePower / commodity,operativeModePower,must-have-step,ocr-s
 [browser-console] log: Progress:
  / customer-step,activation-address-step,pod-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step,recap-step,typ-step
 [browser-console] log: STEPS COLLECTION STATE {step: NewCustomer, direction: 1, progress: 11.11111111111111, subflow: undefined}
+[browser-console] log: NewCartAdapter
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: anagrafica, micro_step: dati_utente, operazione: weborder}
-[browser-console] startGroupCollapsed: [MSW] 16:06:46 GET /serviceDAq/api/webOrderCommonServices/progressivoWebOrderProcName (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 17:46:02 GET /serviceDAq/api/webOrderCommonServices/progressivoWebOrderProcName (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: WO_MOCK}
 [browser-console] endGroup: console.groupEnd
-[browser-console] startGroupCollapsed: [MSW] 16:06:46 POST /serviceDAq/api/mongoServices/lead (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 17:46:02 POST /serviceDAq/api/mongoServices/lead (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"productCode":"BASE_LTCASAV","productCodeGeneric"…false,"civilCodeApproved":false},"collaudo":true}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_LTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: [MSW] 17:46:03 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_LTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_LTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
 [browser-console] endGroup: console.groupEnd
@@ -269,17 +269,8 @@ commodity,operativeModePower / commodity,operativeModePower,must-have-step,ocr-s
 [browser-console] log: Progress:
 customer-step / customer-step,activation-address-step,pod-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step,recap-step,typ-step
 [browser-console] log: STEPS COLLECTION STATE {step: Address, direction: 1, progress: 22.22222222222222, subflow: undefined}
-[browser-console] startGroupCollapsed: [MSW] 16:06:47 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
-[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_LTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
-[browser-console] log: Handler: HttpHandler
-[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_LTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
-[browser-console] endGroup: console.groupEnd
+[browser-console] log: NewCartAdapter
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: fornitura_indirizzo, micro_step: fornitura_indirizzo, operazione: weborder}
-[browser-console] startGroupCollapsed: [MSW] 16:07:18 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
-[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_LTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
-[browser-console] log: Handler: HttpHandler
-[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_LTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
-[browser-console] endGroup: console.groupEnd
 [browser-console] startGroupCollapsed: Graph
 [browser-console] debug: providers Map(19)
 [browser-console] debug: dipendenze Map(17)
@@ -335,6 +326,12 @@ customer-step / customer-step,activation-address-step,pod-step,iban-residential-
 [browser-console] log: Progress:
 customer-step,activation-address-step / customer-step,activation-address-step,pod-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step,recap-step,typ-step
 [browser-console] log: STEPS COLLECTION STATE {step: PowerPod, direction: 1, progress: 33.33333333333333, subflow: undefined}
+[browser-console] startGroupCollapsed: [MSW] 17:46:33 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_LTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_LTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] log: NewCartAdapter
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: pod, micro_step: inserisci_pod, operazione: weborder}
 [browser-console] startGroupCollapsed: Graph
 [browser-console] debug: providers Map(19)
@@ -391,11 +388,12 @@ customer-step,activation-address-step / customer-step,activation-address-step,po
 [browser-console] log: Progress:
 customer-step,activation-address-step,pod-step / customer-step,activation-address-step,pod-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step,recap-step,typ-step
 [browser-console] log: STEPS COLLECTION STATE {step: IbanResidential, direction: 1, progress: 44.44444444444444, subflow: undefined}
-[browser-console] startGroupCollapsed: [MSW] 16:07:40 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 17:46:55 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_LTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_LTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
 [browser-console] endGroup: console.groupEnd
+[browser-console] log: NewCartAdapter
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: addebito_diretto, micro_step: addebito_diretto, operazione: weborder}
 [browser-console] debug: [SWITCH IN]
 [browser-console] startGroupCollapsed: Graph
@@ -453,7 +451,7 @@ customer-step,activation-address-step,pod-step / customer-step,activation-addres
 [browser-console] log: Progress:
 customer-step,activation-address-step,pod-step,iban-residential-step / customer-step,activation-address-step,pod-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step,recap-step,typ-step
 [browser-console] log: STEPS COLLECTION STATE {step: Contract, direction: 1, progress: 55.55555555555556, subflow: undefined}
-[browser-console] startGroupCollapsed: [MSW] 16:08:01 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 17:47:16 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_LTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_LTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
@@ -488,12 +486,12 @@ Check the render method of `Controller`.
     at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
     at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:60:32)
     at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
-    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1756471942736:149:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx:149:3)
     at MaintenanceMode (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/MaintenanceMode.tsx:33:35)
     at Suspense
-    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1756471942736:135:27)
-    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1756471942736:41:31)
-    at Routes (http://localhost:4200/src/app/routes.tsx?t=1756471942736:38:15)
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx:135:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx:41:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx:38:15)
     at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
     at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
     at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
@@ -537,12 +535,12 @@ Check the render method of `Controller`.
     at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
     at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:60:32)
     at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
-    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1756471942736:149:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx:149:3)
     at MaintenanceMode (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/MaintenanceMode.tsx:33:35)
     at Suspense
-    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1756471942736:135:27)
-    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1756471942736:41:31)
-    at Routes (http://localhost:4200/src/app/routes.tsx?t=1756471942736:38:15)
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx:135:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx:41:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx:38:15)
     at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
     at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
     at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
@@ -556,6 +554,7 @@ Check the render method of `Controller`.
     at Suspense
     at GlobalSuspense (http://localhost:4200/src/app/suspense-components.tsx:26:34)
     at App
+[browser-console] log: NewCartAdapter
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: condizioni_contrattuali, micro_step: condizioni_contrattuali, operazione: weborder}
 [page-error] Warning: validateDOMNesting(...): %s cannot appear as a descendant of <%s>.%s <ul> p 
     at ul
@@ -608,12 +607,12 @@ Check the render method of `Controller`.
     at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
     at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:60:32)
     at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
-    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1756471942736:149:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx:149:3)
     at MaintenanceMode (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/MaintenanceMode.tsx:33:35)
     at Suspense
-    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1756471942736:135:27)
-    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1756471942736:41:31)
-    at Routes (http://localhost:4200/src/app/routes.tsx?t=1756471942736:38:15)
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx:135:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx:41:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx:38:15)
     at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
     at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
     at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
@@ -678,12 +677,12 @@ Check the render method of `Controller`.
     at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
     at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:60:32)
     at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
-    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1756471942736:149:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx:149:3)
     at MaintenanceMode (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/MaintenanceMode.tsx:33:35)
     at Suspense
-    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1756471942736:135:27)
-    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1756471942736:41:31)
-    at Routes (http://localhost:4200/src/app/routes.tsx?t=1756471942736:38:15)
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx:135:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx:41:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx:38:15)
     at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
     at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
     at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
@@ -748,12 +747,12 @@ Check the render method of `Controller`.
     at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
     at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:60:32)
     at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
-    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1756471942736:149:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx:149:3)
     at MaintenanceMode (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/MaintenanceMode.tsx:33:35)
     at Suspense
-    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1756471942736:135:27)
-    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1756471942736:41:31)
-    at Routes (http://localhost:4200/src/app/routes.tsx?t=1756471942736:38:15)
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx:135:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx:41:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx:38:15)
     at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
     at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
     at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
@@ -817,12 +816,12 @@ Check the render method of `Controller`.
     at StepErrorBoundary (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/StepErrorBoundary.tsx:32:23)
     at Engine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/engine/src/lib/engine.tsx:60:32)
     at FormErrorProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/form-errors/src/lib/form-errors-context.tsx:32:3)
-    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1756471942736:149:3)
+    at ConnectedEngine (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx:149:3)
     at MaintenanceMode (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/MaintenanceMode.tsx:33:35)
     at Suspense
-    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1756471942736:135:27)
-    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx?t=1756471942736:41:31)
-    at Routes (http://localhost:4200/src/app/routes.tsx?t=1756471942736:38:15)
+    at GlobalSuspense (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx:135:27)
+    at EngineApp (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/engine-app.tsx:41:31)
+    at Routes (http://localhost:4200/src/app/routes.tsx:38:15)
     at CartStateProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-app/src/lib/cart-state.tsx:36:37)
     at TrackingProvider (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/tracking-react/src/lib/tracking-react.tsx:29:74)
     at TrackingProvider (http://localhost:4200/src/services/tracking.tsx:33:15)
@@ -837,12 +836,6 @@ Check the render method of `Controller`.
     at GlobalSuspense (http://localhost:4200/src/app/suspense-components.tsx:26:34)
     at App
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: condizioni_contrattuali, micro_step: consensi_dichiarazioni, operazione: weborder}
-[browser-console] warning: [MSW] Warning: intercepted a request without a matching request handler:
-
-  • GET https://eniplenitude.com/etc.clientlibs/myeni/clientlibs/clientlib-angular/resources/img/logo-plenitude-verticale.png
-
-If you still wish to intercept this unhandled request, please create a request handler for it.
-Read more: https://mswjs.io/docs/getting-started/mocks
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: condizioni_contrattuali, micro_step: accettazione_clausole, operazione: weborder}
 [browser-console] startGroupCollapsed: Graph
 [browser-console] debug: providers Map(19)
@@ -899,6 +892,7 @@ Read more: https://mswjs.io/docs/getting-started/mocks
 [browser-console] log: Progress:
 customer-step,activation-address-step,pod-step,iban-residential-step,contract-step / customer-step,activation-address-step,pod-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step,recap-step,typ-step
 [browser-console] log: STEPS COLLECTION STATE {step: CommodityEffectiveDates, direction: 1, progress: 66.66666666666666, subflow: undefined}
+[browser-console] log: NewCartAdapter
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: tempi_attivazione, micro_step: tempi_attivazione, operazione: weborder}
 [browser-console] startGroupCollapsed: Graph
 [browser-console] debug: providers Map(19)
@@ -955,11 +949,12 @@ customer-step,activation-address-step,pod-step,iban-residential-step,contract-st
 [browser-console] log: Progress:
 customer-step,activation-address-step,pod-step,iban-residential-step,contract-step,commodity-dates-step / customer-step,activation-address-step,pod-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step,recap-step,typ-step
 [browser-console] log: STEPS COLLECTION STATE {step: Privacy, direction: 1, progress: 77.77777777777779, subflow: undefined}
-[browser-console] startGroupCollapsed: [MSW] 16:11:29 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 17:48:13 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_LTCASAV","productCodeGeneric"…lCodeApproved":true},"collaudo":true,"id":"MOCK"}}
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_LTCASAV","productCodeGeneric"…lCodeApproved":true},"collaudo":true,"id":"MOCK"}}
 [browser-console] endGroup: console.groupEnd
+[browser-console] log: NewCartAdapter
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: consensi, micro_step: consensi_dati_pers, operazione: weborder}
 [browser-console] info: GTM.push {event: consensi_weborder, cta_cliccata: Vai alla verifica finale, consensi_marketing: acconsento|acconsento|acconsento}
 [browser-console] startGroupCollapsed: Graph
@@ -1017,25 +1012,26 @@ customer-step,activation-address-step,pod-step,iban-residential-step,contract-st
 [browser-console] log: Progress:
 customer-step,activation-address-step,pod-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step / customer-step,activation-address-step,pod-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step,recap-step,typ-step
 [browser-console] log: STEPS COLLECTION STATE {step: Recap, direction: 1, progress: 88.88888888888889, subflow: undefined}
-[browser-console] startGroupCollapsed: [MSW] 16:13:01 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 17:48:42 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_LTCASAV","productCodeGeneric"…lCodeApproved":true},"collaudo":true,"id":"MOCK"}}
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_LTCASAV","productCodeGeneric"…lCodeApproved":true},"collaudo":true,"id":"MOCK"}}
 [browser-console] endGroup: console.groupEnd
+[browser-console] log: NewCartAdapter
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: riepilogo, micro_step: riepilogo, operazione: weborder}
-[browser-console] startGroupCollapsed: [MSW] 16:14:11 GET https://jsonip.com/ (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 17:48:56 GET https://jsonip.com/ (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"ip":"127.0.0.1"}}
 [browser-console] endGroup: console.groupEnd
 [browser-console] warning: GeolocationPositionError
-[browser-console] startGroupCollapsed: [MSW] 16:14:11 POST /serviceDAq/api/webOrderCommonServices/salvataggioDatiGeolocalizzazione (%c200 OK%c) color:#69AB32 color:inherit
-[browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"operationId":"zamKCCinOJHTF","applicazione":"WEB….0.0.1","latitudine":"null","longitudine":"null"}}
+[browser-console] startGroupCollapsed: [MSW] 17:48:56 POST /serviceDAq/api/webOrderCommonServices/salvataggioDatiGeolocalizzazione (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"operationId":"TyCdvoVnZROdQ","applicazione":"WEB….0.0.1","latitudine":"null","longitudine":"null"}}
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {}}
 [browser-console] endGroup: console.groupEnd
-[browser-console] startGroupCollapsed: [MSW] 16:14:11 POST /serviceDAq/api/webOrderCommonServices/updateBulkOrder (%c200 OK%c) color:#69AB32 color:inherit
-[browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"idLead":"MOCK","logHash":"zamKCCinOtZeH","plicoCode":"WO_MOCK","salesProcessForLog":"SWITCH_IN"}}
+[browser-console] startGroupCollapsed: [MSW] 17:48:57 POST /serviceDAq/api/webOrderCommonServices/updateBulkOrder (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"idLead":"MOCK","logHash":"TyCdvoVnZStDr","plicoCode":"WO_MOCK","salesProcessForLog":"SWITCH_IN"}}
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {}}
 [browser-console] endGroup: console.groupEnd
@@ -1094,10 +1090,10 @@ customer-step,activation-address-step,pod-step,iban-residential-step,contract-st
 [browser-console] log: Progress:
 customer-step,activation-address-step,pod-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step,recap-step / customer-step,activation-address-step,pod-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step,recap-step,typ-step
 [browser-console] log: STEPS COLLECTION STATE {step: Typ, direction: 1, progress: 100, subflow: undefined}
-[browser-console] startGroupCollapsed: [MSW] 16:14:12 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 17:48:57 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_LTCASAV","productCodeGeneric"…laudo":true,"leadStatus":"COMPLETED","id":"MOCK"}}
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_LTCASAV","productCodeGeneric"…laudo":true,"leadStatus":"COMPLETED","id":"MOCK"}}
 [browser-console] endGroup: console.groupEnd
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: 7_typ, micro_step: 7_typ, operazione: weborder}
-[test-success] 2025-08-29T14:14:48.688Z – OK
+[test-success] 2025-09-03T15:49:05.088Z – OK

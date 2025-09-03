@@ -138,6 +138,112 @@ export async function pressTab(page: Page, locator: Locator) {
   await locator.press("Tab");
 }
 
+export async function clearErrors(page: Page) {
+  const warningConsoleElements = await page.$$("div.warning-console");
+  if (warningConsoleElements.length) {
+    for (const el of warningConsoleElements) {
+      await el.evaluate((el) => el.remove());
+    }
+  }
+  const errorConsoleElements = await page.$$("div.error-console");
+  if (errorConsoleElements.length) {
+    for (const el of errorConsoleElements) {
+      await el.evaluate((el) => el.remove());
+    }
+  }
+
+  await page.evaluate(() => {
+    document.body.style.height = "auto";
+  });
+}
+export async function forceBlur(
+  page: Page,
+  handle?: ElementHandle<unknown> | null
+) {
+  // prova a inviare blur/focusout al nodo specifico, senza ipotesi di tipo
+  if (handle) {
+    try {
+      await handle.evaluate((el: any) => {
+        el.dispatchEvent(
+          new FocusEvent("blur", { bubbles: true, cancelable: true })
+        );
+        el.dispatchEvent(
+          new FocusEvent("focusout", { bubbles: true, cancelable: true })
+        );
+        el.blur?.();
+      });
+    } catch {}
+  }
+
+  // defocalizza l'activeElement se ancora focussato
+  try {
+    await page.evaluate(() => {
+      const a = document.activeElement as any;
+      if (a && a !== document.body) a.blur?.();
+    });
+  } catch {}
+
+  // fallback robusto (desktop + mobile/WebKit)
+  try {
+    await page.evaluate(() => {
+      let trap = document.getElementById(
+        "__blur_trap__"
+      ) as HTMLInputElement | null;
+      if (!trap) {
+        trap = document.createElement("input");
+        trap.type = "text";
+        trap.id = "__blur_trap__";
+        Object.assign(trap.style, {
+          position: "fixed",
+          left: "-99999px",
+          top: "0",
+          opacity: "0",
+          width: "1px",
+          height: "1px",
+          zIndex: "-1",
+        } as CSSStyleDeclaration);
+        document.body.appendChild(trap);
+      }
+      trap.focus();
+    });
+  } catch {}
+
+  await page.waitForTimeout(10);
+}
+
+export async function addCss(page: Page) {
+  await page.evaluate(() => {
+    const style = document.createElement("style");
+    style.innerHTML = `
+    .error-console {
+      background-color: #f00;
+      color: #fff;
+      font-weight: bold;
+      font-size:6px;
+      line-height:10px;
+      padding: 10px;
+      border: 4px solid rgba(119, 5, 5, 1);
+      position: relative;
+      bottom: 0px;
+      z-index: 9999;
+    }
+    .warning-console {
+      display:none;
+      background-color: rgba(255, 187, 0, 1);
+      color: #fff;
+      font-weight: bold;
+      font-size:6px;
+      line-height:10px;
+      padding: 10px;
+      border: 4px solid rgba(224, 113, 10, 1);
+      position: relative;
+      bottom: 0px;
+      z-index: 9999;
+    }`;
+    document.head.appendChild(style);
+  });
+}
+
 export async function nextStepButton(
   page,
   screenOnLoaded: boolean,
@@ -145,10 +251,6 @@ export async function nextStepButton(
   screenName: string,
   errorActions?: any
 ) {
-  // Is mobile check
-  //const userAgent = await page.userAgent();
-  //const isMobile = userAgent.includes('Mobile');
-
   // Eventuali dialog al caricamento della pagina
   await dialogStep(page, path, screenName);
 
@@ -160,7 +262,9 @@ export async function nextStepButton(
   const inputs = await page.locator("form input");
   const lastInput = inputs.last();
   if (await lastInput.isVisible()) {
-    await pressTab(page, lastInput);
+    //await pressTab(page, lastInput);
+    await forceBlur(page, lastInput);
+
     await page.waitForTimeout(WAIT.SHORT);
   }
 
@@ -175,27 +279,42 @@ export async function nextStepButton(
     await page.waitForTimeout(WAIT.MID);
     await dialogStep(page, path, screenName);
 
+    let classErrorConsole = "";
     page.on("console", async (msg) => {
       if (msg.type() === "error") {
-        msg = msg.text();
-        await page.evaluate((msg) => {
-          const el = document.createElement("div");
-          el.className = "error-console";
-          el.style.border = "4px solid red";
-          el.style.padding = "10px";
-          el.innerHTML = msg;
-          document.body.appendChild(el);
-        }, msg);
+        const msgText = await msg.text();
+        classErrorConsole = msgText.includes("Warning:")
+          ? "warning-console"
+          : "error-console";
+        const existingError = await page
+          .$$("div." + classErrorConsole)
+          .then((elements) =>
+            elements.find(
+              (el) =>
+                el.textContent?.trim() ===
+                msgText
+                  .trim()
+                  .replace(/[^\w\s]/gi, "")
+                  .replace(/\s+/g, " ")
+            )
+          );
+        if (!existingError) {
+          await page.evaluate(
+            ({ classErrorConsole, msgText }) => {
+              const el = document.createElement("div");
+              el.className = classErrorConsole;
+              el.innerHTML = msgText;
+              document.body.appendChild(el);
+            },
+            { classErrorConsole, msgText }
+          );
+        }
       }
     });
 
     if (screenOnLoaded) {
       await screenShot(page, path, screenName);
-
-      const errorConsoleElements = await page.$$("div.error-console");
-      for (const el of errorConsoleElements) {
-        await el.evaluate((el) => el.remove());
-      }
+      await clearErrors(page);
     }
   }
   // Pagina senza pulsante di submit ma solo prosegui type button
@@ -219,6 +338,7 @@ export async function nextStepButton(
       failedError("Pulsante di prosegui non trovato");
     }
   }
+  await clearErrors(page);
 }
 
 export async function dialogStep(page, path: string, screenName: string) {
@@ -814,6 +934,8 @@ export async function autoFillForm(
           }
         }
       }
+
+      await forceBlur(page, handle);
     }
     // Screenshot a fine step
     await screenShot(page, path, screenName);

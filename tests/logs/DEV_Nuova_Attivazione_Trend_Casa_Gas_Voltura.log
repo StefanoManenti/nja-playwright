@@ -1,4 +1,4 @@
-[test-start] 2025-09-02T15:07:57.086Z – DEV - Nuova Attivazione / Trend Casa / Gas / Voltura
+[test-start] 2025-09-03T10:09:24.708Z – DEV - Nuova Attivazione / Trend Casa / Gas / Voltura
 [browser-console] debug: [vite] connecting...
 [browser-console] debug: [vite] connected.
 [browser-console] warning: Cannot determine tier from domain. Current tier: localhost
@@ -9,14 +9,14 @@
 [browser-console] log: Worker script URL: http://localhost:4200/mockServiceWorker.js
 [browser-console] log: Worker scope: http://localhost:4200/
 [browser-console] endGroup: console.groupEnd
-[browser-console] startGroupCollapsed: [MSW] 17:08:00 GET /serviceDAq/api/webOrderCommonServices/infoUtente (%c204 No Content%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 12:09:28 GET /serviceDAq/api/webOrderCommonServices/infoUtente (%c204 No Content%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 204, statusText: No Content, headers: Object, body: }
 [browser-console] endGroup: console.groupEnd
 [browser-console] info: Tracciamenti.load {userId: undefined, userLoginState: no, userUtenzeAttive: undefined, siteSection1: configura-offerta, siteSection2: configura-offerta}
 [browser-console] info: Tracciamenti.load {userId: undefined, userLoginState: no, userUtenzeAttive: undefined, siteSection1: configura-offerta, siteSection2: configura-offerta}
-[browser-console] startGroupCollapsed: [MSW] 17:08:02 GET /graphql/execute.json/enigaseluce/OffertaCommodityResidenzialeList;code=BASE_LTCASAV-GTCASAV (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 12:09:29 GET /graphql/execute.json/enigaseluce/OffertaCommodityResidenzialeList;code=BASE_LTCASAV-GTCASAV (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"data":{"eniGasELuceDettaglioOffertaCommodityResi…,"notaStep4CarrelloAStep":{"plaintext":null}}]}}}}
@@ -133,12 +133,12 @@ commodity,operativeModeGas / commodity,operativeModeGas,must-have-step,transfer-
 [browser-console] log: Progress:
  / transfer-type-step,customer-step,customer-identity-residential-step,pdr-transfer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,privacy-step,recap-step,typ-step
 [browser-console] log: STEPS COLLECTION STATE {step: TransferType, direction: 1, progress: 9.090909090909092, subflow: undefined}
-[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: tipo_voltura, micro_step: tipo_voltura, operazione: voltura}
-[browser-console] startGroupCollapsed: [MSW] 17:08:12 POST /serviceDAq/api/webOrderCommonServices/v1/maintenance-mode/check (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 12:09:38 POST /serviceDAq/api/webOrderCommonServices/v1/maintenance-mode/check (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: POST, headers: Object, body: }
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"attivazioni":false,"switchIn":false,"switchInVol…aleImpianti":false,"ndsStandaloneImpianti":false}}
 [browser-console] endGroup: console.groupEnd
+[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: tipo_voltura, micro_step: tipo_voltura, operazione: voltura}
 [browser-console] startGroupCollapsed: Graph
 [browser-console] debug: providers Map(21)
 [browser-console] debug: dipendenze Map(17)
@@ -195,23 +195,23 @@ commodity,operativeModeGas / commodity,operativeModeGas,must-have-step,transfer-
 transfer-type-step / transfer-type-step,customer-step,customer-identity-residential-step,pdr-transfer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,privacy-step,recap-step,typ-step
 [browser-console] log: STEPS COLLECTION STATE {step: NewCustomer, direction: 1, progress: 18.181818181818183, subflow: undefined}
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: anagrafica, micro_step: dati_utente, operazione: voltura}
-[browser-console] startGroupCollapsed: [MSW] 17:08:54 GET /serviceDAq/api/webOrderCommonServices/progressivoWebOrderProcName (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 12:10:20 GET /serviceDAq/api/webOrderCommonServices/progressivoWebOrderProcName (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: WO_MOCK}
 [browser-console] endGroup: console.groupEnd
-[browser-console] startGroupCollapsed: [MSW] 17:08:54 POST /serviceDAq/api/mongoServices/lead (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 12:10:20 POST /serviceDAq/api/mongoServices/lead (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ltura":{"tipologia":"ORDINARIA"},"collaudo":true}}
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
 [browser-console] endGroup: console.groupEnd
-[browser-console] startGroupCollapsed: [MSW] 17:08:54 POST /serviceDAq/api/webOrderCommonServices/costiAttivazioni (%c200 OK%c) color:#69AB32 color:inherit
-[browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"logHash":"RDDkJYxieQobj","idLead":"MOCK","plicoC…DR":"2025-09-02T15:08:54.711Z","CodiceISTAT":""}}}
+[browser-console] startGroupCollapsed: [MSW] 12:10:20 POST /serviceDAq/api/webOrderCommonServices/costiAttivazioni (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"logHash":"qFVxyOGVFgtFc","idLead":"MOCK","plicoC…DR":"2025-09-03T10:10:20.752Z","CodiceISTAT":""}}}
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"result":"001","status":"Success","response":{"He…PS":35,"PrezziRCA":null}},"errorManagement":null}}
 [browser-console] endGroup: console.groupEnd
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: anagrafica, micro_step: 2_verifica, operazione: voltura}
-[browser-console] startGroupCollapsed: [MSW] 17:08:55 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 12:10:21 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
@@ -330,75 +330,4 @@ transfer-type-step,customer-step / transfer-type-step,customer-step,customer-ide
     at GlobalSuspense (http://localhost:4200/src/app/suspense-components.tsx:26:34)
     at App
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: anagrafica, micro_step: documento_identita, operazione: voltura}
-[browser-console] startGroupCollapsed: Graph
-[browser-console] debug: providers Map(21)
-[browser-console] debug: dipendenze Map(17)
-[browser-console] debug: dipendenti Map(5)
-[browser-console] endGroup: console.groupEnd
-[browser-console] startGroupCollapsed: Priorities
-[browser-console] startGroupCollapsed: Controlli
-[browser-console] debug: Controllo step "customer-identity-residential-step"
-[browser-console] debug: Controllo step "pdr-transfer-step"
-[browser-console] debug: Controllo step "transfer-type-step"
-[browser-console] debug: Controllo step "iban-residential-step"
-[browser-console] debug: Controllo step "customer-step"
-[browser-console] debug: Controllo step "gas-goal-step"
-[browser-console] debug: Controllo step "activation-address-step"
-[browser-console] debug: Controllo step "typ-step"
-[browser-console] debug: Controllo step "contract-step"
-[browser-console] debug: Controllo step "privacy-step"
-[browser-console] debug: Controllo step "recap-step"
-[browser-console] debug: Controllo step "vas"
-[browser-console] debug: Controllo step "must-have-mobile-step"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "disambiguation"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "must-have-step"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "disambiguation"
-[browser-console] debug: Controllo step "operativeModeGas"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] debug: Controllo step "commodity"
-[browser-console] endGroup: console.groupEnd
-[browser-console] log: [0] commodity
-[browser-console] log: [2] operativeModeGas
-[browser-console] log: [3] disambiguation
-[browser-console] log: [6] must-have-mobile-step
-[browser-console] log: [7] must-have-step
-[browser-console] log: [8] vas
-[browser-console] log: [9] transfer-type-step
-[browser-console] log: [10] customer-step
-[browser-console] log: [11] customer-identity-residential-step
-[browser-console] log: [12] pdr-transfer-step
-[browser-console] log: [15] activation-address-step
-[browser-console] log: [21] gas-goal-step
-[browser-console] log: [30] iban-residential-step
-[browser-console] log: [90] contract-step
-[browser-console] log: [99] privacy-step
-[browser-console] log: [100] recap-step
-[browser-console] log: [110] typ-step
-[browser-console] endGroup: console.groupEnd
-[browser-console] log: Progress:
-transfer-type-step,customer-step,customer-identity-residential-step / transfer-type-step,customer-step,customer-identity-residential-step,pdr-transfer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,privacy-step,recap-step,typ-step
-[browser-console] log: STEPS COLLECTION STATE {step: TransferPdfStep, direction: 1, progress: 36.36363636363637, subflow: undefined}
-[browser-console] startGroupCollapsed: [MSW] 17:09:27 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
-[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
-[browser-console] log: Handler: HttpHandler
-[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…ologia":"ORDINARIA"},"collaudo":true,"id":"MOCK"}}
-[browser-console] endGroup: console.groupEnd
-[browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: pod_pdr, micro_step: inserici_pod_pdr, operazione: voltura}
-[page-error] PreconditionFailedError: fornituraLuce and fornituraGas are null
-    at Object.write (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms-generators/TransferAccount.ts:36:15)
-    at async Object.write (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/account-selected-atoms.ts:46:19)
-    at async http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/transfer/TransferPdfStep.tsx:117:11
-    at async http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=3fb1a596:1681:9
-[page-error] PreconditionFailedError: fornituraLuce and fornituraGas are null
-    at Object.write (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms-generators/TransferAccount.ts:36:15)
-    at async Object.write (http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/data-access/src/lib/atoms/account-selected-atoms.ts:46:19)
-    at async http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/libs/steps/src/lib/transfer/TransferPdfStep.tsx:117:11
-    at async http://localhost:4200/@fs/C:/Users/aintrona/Desktop/App/react/naj/node_modules/.vite/apps/naj/deps/chunk-J277VGXG.js?v=3fb1a596:1681:9
-[test-error]   2025-09-02T15:09:57.914Z – ❌ Errore: Step ["activation-address-step"] non trovato
+[test-error]   2025-09-03T10:10:49.029Z – page.waitForTimeout: Test ended.

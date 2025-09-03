@@ -1,6 +1,7 @@
 import { StepType } from "./types/stepType";
 import { test, testMobile } from "./utils/loggedTest";
 import {
+  addCss,
   addScriptRuntime,
   autoFillForm,
   clearScreenshots,
@@ -9,8 +10,6 @@ import {
   pageHasStep,
   WAIT,
 } from "./utils/utility";
-
-
 
 //SWITCH IN -> trendcasa > gas
 test("DEV - Switch In / Trend Casa / Gas ", async ({ page }) => {
@@ -45,6 +44,7 @@ test("DEV - Switch In / Trend Casa / Gas ", async ({ page }) => {
         page,
         `window.collaudo(); bypassChecks.current = true;`
       );
+      await addCss(page);
     }
 
     const isStep = await pageHasStep(page, s.step);
@@ -94,6 +94,7 @@ testMobile("DEV MOBILE - Switch In / Trend Casa / Gas ", async ({ page }) => {
         page,
         `window.collaudo(); bypassChecks.current = true;`
       );
+      await addCss(page);
     }
 
     const isStep = await pageHasStep(page, s.step);
@@ -145,6 +146,7 @@ test("DEV - Switch In / Trend Casa / Luce ", async ({ page }) => {
         page,
         `window.collaudo(); bypassChecks.current = true;`
       );
+      await addCss(page);
     }
 
     const isStep = await pageHasStep(page, s.step);
