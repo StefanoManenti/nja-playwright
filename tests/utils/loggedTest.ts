@@ -1,80 +1,60 @@
 // utils/loggedTest.ts
-import { test as baseTest, Page } from "@playwright/test";
+import { test as baseTest, Page, devices } from "@playwright/test";
 import path from "path";
 import { setupPageLogging, flushLogsToFile } from "./utility";
-import { devices, chromium } from "@playwright/test";
 
+type TestFn = (ctx: { page: Page }) => Promise<void>;
 
-// Test Desktop
-export const test = ((
+interface TestOptions {
+  mobileTest?: boolean;
+  device?: keyof typeof devices;
+}
+
+export function test(
   title: string,
-  fn: (ctx: { page: Page }) => Promise<void>,
-) => {
-  baseTest(title, async ({ page }, testInfo) => {
-    // 1) Buffer dei log
+  fn: TestFn,
+  options: TestOptions = {}
+) {
+  const { mobileTest = false, device = "iPhone 6" } = options;
+  let context = null as any;
+
+  baseTest(title, async ({ page, browser }, testInfo) => {
     const logs: string[] = [];
-    const erroPage = setupPageLogging(page, logs);
-    
     logs.push(`[test-start] ${new Date().toISOString()} – ${testInfo.title}`);
 
-    try {
-      // 2) Esegui il test “puro”
-      await fn({ page });
-      logs.push(`[test-success] ${new Date().toISOString()} – OK`);
-    } catch (err: any) {
-      logs.push(`[test-error]   ${new Date().toISOString()} – ${err.message}`);
-      /*if (err.response && err.response.json) {
-        const response = await err.response.json();
-        // TODO!!! "code_error" rappresenta il codice errore BE da codificare
-        if (response.code_error) {
-          console.error(`ERROR: ${decodeCodeErrore(response.code_error)}`);
-          //alert(`Errore: ${response.code_error}`);
-        }
-      }*/
-      throw err;
-    } finally {
-      // 3) Flush su file
-      const folder = path.join("tests", "logs");
-      const fileName = testInfo.title.replace(/\W+/g, "_") + ".log";
-      await flushLogsToFile(logs, folder, fileName);
-    }
-  });
-}) as typeof baseTest;
+    let usedPage: Page = page;
 
+    if (mobileTest) {
+      // crea contesto mobile
+      const mobileDevice = devices[device];
+      if (!mobileDevice) {
+        throw new Error(`Device "${device}" non trovato in Playwright devices`);
+      }
 
-// test Mobile o Tablet TODO parametrizzare device da mobileDevices in stepType.tsx
-export const testMobile = ((
-  title: string,
-  fn: (ctx: { page: Page }) => Promise<void>,
-) => {
-  baseTest(title, async ({ browser }, testInfo) => {
-
-    const mobileDevice = devices["iPhone 6"]; 
-
-    const logs: string[] = [];
-
-    // Contesto per simulare Device mobile
-    const context = await browser.newContext({
+      context = await browser.newContext({
       ...mobileDevice,
-    });
+      });
 
-    const page = await context.newPage();
+      usedPage = await context.newPage();
+    }
 
-    const erroPage = setupPageLogging(page, logs);
-    logs.push(`[test-start] ${new Date().toISOString()} – ${testInfo.title}`);
+    setupPageLogging(usedPage, logs);
 
     try {
-      await fn({ page });
+      await fn({ page: usedPage });
       logs.push(`[test-success] ${new Date().toISOString()} – OK`);
     } catch (err: any) {
-      logs.push(`[test-error]   ${new Date().toISOString()} – ${err.message}`);
+      logs.push(
+        `[test-error]   ${new Date().toISOString()} – ${err.message}`
+      );
       throw err;
     } finally {
-    
-      await context.close();
+      if (context) {
+        await context.close();
+      }
       const folder = path.join("tests", "logs");
       const fileName = testInfo.title.replace(/\W+/g, "_") + ".log";
       await flushLogsToFile(logs, folder, fileName);
     }
   });
-}) as typeof baseTest;
+}

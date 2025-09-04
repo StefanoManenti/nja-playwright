@@ -56,6 +56,11 @@ export async function screenShot(page, path: string, screenName: string) {
     await fs.promises.mkdir(path, { recursive: true });
   }
 
+  const index = 1 + (await countScreenshots(path));
+  const screenFileName = `${path}/${screenName}${index}.png`;
+  const currentWidth = await page.evaluate(() => window.innerWidth);
+  const currentHeight = await page.evaluate(() => window.innerHeight ||document.body.clientHeight);
+
   const fullHeight = await page.evaluate(() => {
     return Math.max(
       document.body.scrollHeight,
@@ -67,19 +72,20 @@ export async function screenShot(page, path: string, screenName: string) {
     );
   });
 
-  const index = 1 + (await countScreenshots(path));
 
-  const currentWidth = await page.evaluate(() => window.innerWidth);
   await page.setViewportSize({ width: currentWidth, height: fullHeight });
-
-  const screenFileName = `${path}/${screenName}${index}.png`;
-
   await page.waitForTimeout(WAIT.SCREENSHOT);
 
-  return await page.screenshot({
+  const completedSceen = await page.screenshot({
     fullPage: true,
     path: screenFileName,
   });
+
+  await page.setViewportSize({ width: currentWidth, height: currentHeight });
+
+  return completedSceen;
+
+
 }
 
 export async function pageHasStep(page, stepName: string | string[] | false) {
@@ -216,32 +222,100 @@ export async function addCss(page: Page) {
     const style = document.createElement("style");
     style.innerHTML = `
     .error-console {
-      background-color: #f00;
-      color: #fff;
+      display:block;
       font-weight: bold;
       font-size:6px;
       line-height:10px;
       padding: 10px;
-      border: 4px solid rgba(119, 5, 5, 1);
+      border: 4px solid #f00;
       position: relative;
       bottom: 0px;
-      z-index: 9999;
+      z-index: 10;
+      min-height:20px;
     }
     .warning-console {
-      display:none;
-      background-color: rgba(255, 187, 0, 1);
-      color: #fff;
+      display:block;
       font-weight: bold;
       font-size:6px;
       line-height:10px;
       padding: 10px;
-      border: 4px solid rgba(224, 113, 10, 1);
+      border: 4px solid #fb0;
       position: relative;
       bottom: 0px;
-      z-index: 9999;
+      z-index: 10;
+      min-height:20px;
     }`;
     document.head.appendChild(style);
   });
+}
+
+const seenConsoleErrors = new Set<string>();
+function normalizeConsoleMessage(raw: string): string {
+  return raw
+    .toLowerCase()
+    // rimuovi linee di stack
+    .split('\n').filter(l => !/^\s*at\s+/i.test(l)).join(' ')
+    // rimuovi url e path
+    .replace(/\bhttps?:\/\/\S+/g, '')
+    .replace(/[a-z]:[\\/][\w\-./\\]+/gi, '')     // C:\path\file.js:123:45
+    .replace(/\/[\w\-./]+/g, '')                 // /path/file.js:123:45
+    // normalizza numeri, hex, uuid
+    .replace(/\b0x[0-9a-f]+\b/gi, '')
+    .replace(/\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b/gi, '')
+    .replace(/\b\d+\b/g, '')
+    // togli punteggiatura/duplicati spazi
+    .replace(/[^\w\s]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+type PageWithFlag = Page & { _consoleListenerAttached?: boolean };
+
+export function attachConsoleOverlay(page: PageWithFlag) {
+  if (page._consoleListenerAttached) return;
+  page._consoleListenerAttached = true;
+
+  page.on('console', async (msg) => {
+    if (msg.type() !== 'error') return;
+
+    const msgText = msg.text(); // sync
+    const classErrorConsole = msgText.includes('Warning:')
+      ? 'warning-console'
+      : 'error-console';
+
+    const key = normalizeConsoleMessage(msgText);
+    if (seenConsoleErrors.has(key)) return;
+
+    seenConsoleErrors.add(key);
+
+    // (facoltativo) escape per sicurezza XSS
+    const safeHTML = msgText
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+
+    await page.evaluate(
+      ({ classErrorConsole, safeHTML }) => {
+        const el = document.createElement('div');
+        el.className = classErrorConsole;
+        el.innerHTML = safeHTML; // ora è safe
+        const footer = document.querySelector('footer');
+        if (footer) {
+          footer.insertAdjacentElement('afterend', el);
+        } else {
+          document.body.appendChild(el);
+        }
+      },
+      { classErrorConsole, safeHTML }
+    );
+  });
+}
+export function enableTestConsole(page: PageWithFlag) {
+  attachConsoleOverlay(page);
+  addCss(page);
+}
+export function resetTestConsole() {
+  seenConsoleErrors.clear();
 }
 
 export async function nextStepButton(
@@ -251,6 +325,9 @@ export async function nextStepButton(
   screenName: string,
   errorActions?: any
 ) {
+  // ✅ Abilita overlay e stile (idempotente)
+  enableTestConsole(page);
+
   // Eventuali dialog al caricamento della pagina
   await dialogStep(page, path, screenName);
 
@@ -262,9 +339,7 @@ export async function nextStepButton(
   const inputs = await page.locator("form input");
   const lastInput = inputs.last();
   if (await lastInput.isVisible()) {
-    //await pressTab(page, lastInput);
     await forceBlur(page, lastInput);
-
     await page.waitForTimeout(WAIT.SHORT);
   }
 
@@ -274,56 +349,25 @@ export async function nextStepButton(
         "Pulsante di invio disabilitato, cliccato prima di completare tutto il form"
       );
     }
+
+    resetTestConsole();
+
     await submitButton.click();
 
     await page.waitForTimeout(WAIT.MID);
     await dialogStep(page, path, screenName);
 
-    let classErrorConsole = "";
-    page.on("console", async (msg) => {
-      if (msg.type() === "error") {
-        const msgText = await msg.text();
-        classErrorConsole = msgText.includes("Warning:")
-          ? "warning-console"
-          : "error-console";
-        const existingError = await page
-          .$$("div." + classErrorConsole)
-          .then((elements) =>
-            elements.find(
-              (el) =>
-                el.textContent?.trim() ===
-                msgText
-                  .trim()
-                  .replace(/[^\w\s]/gi, "")
-                  .replace(/\s+/g, " ")
-            )
-          );
-        if (!existingError) {
-          await page.evaluate(
-            ({ classErrorConsole, msgText }) => {
-              const el = document.createElement("div");
-              el.className = classErrorConsole;
-              el.innerHTML = msgText;
-              document.body.appendChild(el);
-            },
-            { classErrorConsole, msgText }
-          );
-        }
-      }
-    });
-
     if (screenOnLoaded) {
       await screenShot(page, path, screenName);
-      await clearErrors(page);
+      await clearErrors(page); // rimuove i banner visivi dalla pagina
     }
-  }
-  // Pagina senza pulsante di submit ma solo prosegui type button
-  else {
+  } else {
     const proseguiButton = page.locator(
       'button:has-text("Prosegui"), a:has-text("Prosegui")'
     );
-    //const proseguiButton = page.locator(""button.primary").last();
     if (await proseguiButton.isVisible()) {
+      resetTestConsole();
+
       await proseguiButton.click();
 
       await page.waitForTimeout(WAIT.MID);
@@ -333,13 +377,13 @@ export async function nextStepButton(
         await screenShot(page, path, screenName);
       }
     } else {
-      // controllo di non essere in typ
-
       failedError("Pulsante di prosegui non trovato");
     }
   }
-  await clearErrors(page);
+
+  await clearErrors(page); // pulizia banner prima di uscire
 }
+
 
 export async function dialogStep(page, path: string, screenName: string) {
   await page.waitForTimeout(WAIT.LONG);

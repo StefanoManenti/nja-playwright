@@ -1,4 +1,4 @@
-[test-start] 2025-09-04T15:45:07.479Z – DEV MOBILE - Switch In / Trend Casa / Gas 
+[test-start] 2025-09-04T16:05:33.132Z – DEV PHONE - Switch In / Trend Casa / Gas 
 [browser-console] debug: [vite] connecting...
 [browser-console] debug: [vite] connected.
 [browser-console] warning: Cannot determine tier from domain. Current tier: localhost
@@ -8,14 +8,14 @@
 [browser-console] log: Worker script URL: http://localhost:4200/mockServiceWorker.js
 [browser-console] log: Worker scope: http://localhost:4200/
 [browser-console] endGroup: console.groupEnd
-[browser-console] startGroupCollapsed: [MSW] 17:45:10 GET /serviceDAq/api/webOrderCommonServices/infoUtente (%c204 No Content%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 18:05:36 GET /serviceDAq/api/webOrderCommonServices/infoUtente (%c204 No Content%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 204, statusText: No Content, headers: Object, body: }
 [browser-console] endGroup: console.groupEnd
 [browser-console] info: Tracciamenti.load {userId: undefined, userLoginState: no, userUtenzeAttive: undefined, siteSection1: configura-offerta, siteSection2: configura-offerta}
 [browser-console] info: Tracciamenti.load {userId: undefined, userLoginState: no, userUtenzeAttive: undefined, siteSection1: configura-offerta, siteSection2: configura-offerta}
-[browser-console] startGroupCollapsed: [MSW] 17:45:11 GET /graphql/execute.json/enigaseluce/OffertaCommodityResidenzialeList;code=BASE_LTCASAV-GTCASAV (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 18:05:37 GET /graphql/execute.json/enigaseluce/OffertaCommodityResidenzialeList;code=BASE_LTCASAV-GTCASAV (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"data":{"eniGasELuceDettaglioOffertaCommodityResi…,"notaStep4CarrelloAStep":{"plaintext":null}}]}}}}
@@ -196,7 +196,7 @@ commodity,operativeModeGas,must-have-mobile-step / commodity,operativeModeGas,mu
  / ocr-step,customer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step,recap-step,typ-step
 [browser-console] log: STEPS COLLECTION STATE {step: Ocr, direction: 1, progress: 10, subflow: undefined}
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: ocr_selezione_modalita, micro_step: ocr_selezione_modalita, operazione: weborder}
-[browser-console] startGroupCollapsed: [MSW] 17:45:34 POST /serviceDAq/api/webOrderCommonServices/v1/maintenance-mode/check (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 18:06:00 POST /serviceDAq/api/webOrderCommonServices/v1/maintenance-mode/check (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: POST, headers: Object, body: }
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"attivazioni":false,"switchIn":false,"switchInVol…aleImpianti":false,"ndsStandaloneImpianti":false}}
@@ -258,13 +258,18 @@ commodity,operativeModeGas,must-have-mobile-step / commodity,operativeModeGas,mu
  / customer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step,recap-step,typ-step
 [browser-console] log: STEPS COLLECTION STATE {step: NewCustomer, direction: 1, progress: 11.11111111111111, subflow: undefined}
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: anagrafica, micro_step: dati_utente, operazione: weborder}
-[browser-console] startGroupCollapsed: [MSW] 17:46:12 GET /serviceDAq/api/webOrderCommonServices/progressivoWebOrderProcName (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 18:06:40 GET /serviceDAq/api/webOrderCommonServices/progressivoWebOrderProcName (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: WO_MOCK}
 [browser-console] endGroup: console.groupEnd
-[browser-console] startGroupCollapsed: [MSW] 17:46:13 POST /serviceDAq/api/mongoServices/lead (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 18:06:40 POST /serviceDAq/api/mongoServices/lead (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…false,"civilCodeApproved":false},"collaudo":true}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: [MSW] 18:06:41 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
 [browser-console] endGroup: console.groupEnd
@@ -323,11 +328,6 @@ commodity,operativeModeGas,must-have-mobile-step / commodity,operativeModeGas,mu
 [browser-console] log: Progress:
 customer-step / customer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step,recap-step,typ-step
 [browser-console] log: STEPS COLLECTION STATE {step: Address, direction: 1, progress: 22.22222222222222, subflow: undefined}
-[browser-console] startGroupCollapsed: [MSW] 17:46:13 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
-[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
-[browser-console] log: Handler: HttpHandler
-[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
-[browser-console] endGroup: console.groupEnd
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: fornitura_indirizzo, micro_step: fornitura_indirizzo, operazione: weborder}
 [browser-console] startGroupCollapsed: Graph
 [browser-console] debug: providers Map(19)
@@ -384,7 +384,7 @@ customer-step / customer-step,activation-address-step,gas-goal-step,iban-residen
 [browser-console] log: Progress:
 customer-step,activation-address-step / customer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step,recap-step,typ-step
 [browser-console] log: STEPS COLLECTION STATE {step: GasPdr, direction: 1, progress: 33.33333333333333, subflow: undefined}
-[browser-console] startGroupCollapsed: [MSW] 17:46:44 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 18:07:12 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
@@ -520,7 +520,7 @@ customer-step,activation-address-step,gas-goal-step / customer-step,activation-a
 [browser-console] log: Progress:
 customer-step,activation-address-step,gas-goal-step,iban-residential-step / customer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step,recap-step,typ-step
 [browser-console] log: STEPS COLLECTION STATE {step: Contract, direction: 1, progress: 55.55555555555556, subflow: undefined}
-[browser-console] startGroupCollapsed: [MSW] 17:47:35 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 18:08:07 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…CodeApproved":false},"collaudo":true,"id":"MOCK"}}
@@ -1016,7 +1016,7 @@ customer-step,activation-address-step,gas-goal-step,iban-residential-step,contra
 [browser-console] log: Progress:
 customer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,commodity-dates-step / customer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step,recap-step,typ-step
 [browser-console] log: STEPS COLLECTION STATE {step: Privacy, direction: 1, progress: 77.77777777777779, subflow: undefined}
-[browser-console] startGroupCollapsed: [MSW] 17:48:35 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 18:09:10 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…lCodeApproved":true},"collaudo":true,"id":"MOCK"}}
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…lCodeApproved":true},"collaudo":true,"id":"MOCK"}}
@@ -1078,27 +1078,32 @@ customer-step,activation-address-step,gas-goal-step,iban-residential-step,contra
 [browser-console] log: Progress:
 customer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step / customer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step,recap-step,typ-step
 [browser-console] log: STEPS COLLECTION STATE {step: Recap, direction: 1, progress: 88.88888888888889, subflow: undefined}
-[browser-console] startGroupCollapsed: [MSW] 17:49:04 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 18:09:40 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…lCodeApproved":true},"collaudo":true,"id":"MOCK"}}
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…lCodeApproved":true},"collaudo":true,"id":"MOCK"}}
 [browser-console] endGroup: console.groupEnd
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: riepilogo, micro_step: riepilogo, operazione: weborder}
-[browser-console] startGroupCollapsed: [MSW] 17:49:19 GET https://jsonip.com/ (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] startGroupCollapsed: [MSW] 18:09:56 GET https://jsonip.com/ (%c200 OK%c) color:#69AB32 color:inherit
 [browser-console] log: Request {url: URL, method: GET, headers: Object, body: }
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"ip":"127.0.0.1"}}
 [browser-console] endGroup: console.groupEnd
 [browser-console] warning: GeolocationPositionError
-[browser-console] startGroupCollapsed: [MSW] 17:49:19 POST /serviceDAq/api/webOrderCommonServices/salvataggioDatiGeolocalizzazione (%c200 OK%c) color:#69AB32 color:inherit
-[browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"operationId":"UhffMtmZQJNzR","applicazione":"WEB….0.0.1","latitudine":"null","longitudine":"null"}}
+[browser-console] startGroupCollapsed: [MSW] 18:09:56 POST /serviceDAq/api/webOrderCommonServices/salvataggioDatiGeolocalizzazione (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"operationId":"vjNehZUgBNDlX","applicazione":"WEB….0.0.1","latitudine":"null","longitudine":"null"}}
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {}}
 [browser-console] endGroup: console.groupEnd
-[browser-console] startGroupCollapsed: [MSW] 17:49:20 POST /serviceDAq/api/webOrderCommonServices/updateBulkOrder (%c200 OK%c) color:#69AB32 color:inherit
-[browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"idLead":"MOCK","logHash":"UhffMtmZQdPnP","plicoCode":"WO_MOCK","salesProcessForLog":"SWITCH_IN"}}
+[browser-console] startGroupCollapsed: [MSW] 18:09:56 POST /serviceDAq/api/webOrderCommonServices/updateBulkOrder (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: POST, headers: Object, body: {"idLead":"MOCK","logHash":"vjNehZUgBVKTP","plicoCode":"WO_MOCK","salesProcessForLog":"SWITCH_IN"}}
 [browser-console] log: Handler: HttpHandler
 [browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {}}
+[browser-console] endGroup: console.groupEnd
+[browser-console] startGroupCollapsed: [MSW] 18:09:56 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
+[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…laudo":true,"leadStatus":"COMPLETED","id":"MOCK"}}
+[browser-console] log: Handler: HttpHandler
+[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…laudo":true,"leadStatus":"COMPLETED","id":"MOCK"}}
 [browser-console] endGroup: console.groupEnd
 [browser-console] startGroupCollapsed: Graph
 [browser-console] debug: providers Map(19)
@@ -1155,10 +1160,5 @@ customer-step,activation-address-step,gas-goal-step,iban-residential-step,contra
 [browser-console] log: Progress:
 customer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step,recap-step / customer-step,activation-address-step,gas-goal-step,iban-residential-step,contract-step,commodity-dates-step,privacy-step,recap-step,typ-step
 [browser-console] log: STEPS COLLECTION STATE {step: Typ, direction: 1, progress: 100, subflow: undefined}
-[browser-console] startGroupCollapsed: [MSW] 17:49:20 PUT /serviceDAq/api/mongoServices/lead/MOCK (%c200 OK%c) color:#69AB32 color:inherit
-[browser-console] log: Request {url: URL, method: PUT, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…laudo":true,"leadStatus":"COMPLETED","id":"MOCK"}}
-[browser-console] log: Handler: HttpHandler
-[browser-console] log: Response {status: 200, statusText: OK, headers: Object, body: {"productCode":"BASE_GTCASAV","productCodeGeneric"…laudo":true,"leadStatus":"COMPLETED","id":"MOCK"}}
-[browser-console] endGroup: console.groupEnd
 [browser-console] info: GTM.push {platform: web, event: weborder_unico, macro_step: 7_typ, micro_step: 7_typ, operazione: weborder}
-[test-success] 2025-09-04T15:49:28.135Z – OK
+[test-success] 2025-09-04T16:10:04.046Z – OK
