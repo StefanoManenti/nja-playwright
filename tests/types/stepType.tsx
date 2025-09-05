@@ -4,11 +4,6 @@ export type StepType = {
   data?: ValuesOverrides;
 };
 
-
-
-
-
-
 export const mobileDevices: string[] = [
   "iPhone 6",
   "iPhone 6 landscape",
@@ -165,7 +160,6 @@ export const mobileDevices: string[] = [
   "Desktop Edge",
   "Desktop Firefox"
 ];
-
 
 export const DEFAULT_DEVICE_PHONE = mobileDevices[0]; // iPhone 6
 export const DEFAULT_DEVICE_TABLET = mobileDevices[58] // iPad (gen 5) 

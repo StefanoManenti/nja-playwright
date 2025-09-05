@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { ValuesOverrides } from "../types/stepType";
 import { MOCKS } from "./Mock";
-import { Page, Locator, ElementHandle } from "@playwright/test";
+import { Page, Locator, ElementHandle, Request, Response } from "@playwright/test";
 
 export enum WAIT {
   SCREENSHOT = 300,
@@ -59,7 +59,9 @@ export async function screenShot(page, path: string, screenName: string) {
   const index = 1 + (await countScreenshots(path));
   const screenFileName = `${path}/${screenName}${index}.png`;
   const currentWidth = await page.evaluate(() => window.innerWidth);
-  const currentHeight = await page.evaluate(() => window.innerHeight ||document.body.clientHeight);
+  const currentHeight = await page.evaluate(
+    () => window.innerHeight || document.body.clientHeight
+  );
 
   const fullHeight = await page.evaluate(() => {
     return Math.max(
@@ -72,7 +74,6 @@ export async function screenShot(page, path: string, screenName: string) {
     );
   });
 
-
   await page.setViewportSize({ width: currentWidth, height: fullHeight });
   await page.waitForTimeout(WAIT.SCREENSHOT);
 
@@ -84,8 +85,6 @@ export async function screenShot(page, path: string, screenName: string) {
   await page.setViewportSize({ width: currentWidth, height: currentHeight });
 
   return completedSceen;
-
-
 }
 
 export async function pageHasStep(page, stepName: string | string[] | false) {
@@ -251,22 +250,29 @@ export async function addCss(page: Page) {
 
 const seenConsoleErrors = new Set<string>();
 function normalizeConsoleMessage(raw: string): string {
-  return raw
-    .toLowerCase()
-    // rimuovi linee di stack
-    .split('\n').filter(l => !/^\s*at\s+/i.test(l)).join(' ')
-    // rimuovi url e path
-    .replace(/\bhttps?:\/\/\S+/g, '')
-    .replace(/[a-z]:[\\/][\w\-./\\]+/gi, '')     // C:\path\file.js:123:45
-    .replace(/\/[\w\-./]+/g, '')                 // /path/file.js:123:45
-    // normalizza numeri, hex, uuid
-    .replace(/\b0x[0-9a-f]+\b/gi, '')
-    .replace(/\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b/gi, '')
-    .replace(/\b\d+\b/g, '')
-    // togli punteggiatura/duplicati spazi
-    .replace(/[^\w\s]+/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
+  return (
+    raw
+      .toLowerCase()
+      // rimuovi linee di stack
+      .split("\n")
+      .filter((l) => !/^\s*at\s+/i.test(l))
+      .join(" ")
+      // rimuovi url e path
+      .replace(/\bhttps?:\/\/\S+/g, "")
+      .replace(/[a-z]:[\\/][\w\-./\\]+/gi, "") // C:\path\file.js:123:45
+      .replace(/\/[\w\-./]+/g, "") // /path/file.js:123:45
+      // normalizza numeri, hex, uuid
+      .replace(/\b0x[0-9a-f]+\b/gi, "")
+      .replace(
+        /\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b/gi,
+        ""
+      )
+      .replace(/\b\d+\b/g, "")
+      // togli punteggiatura/duplicati spazi
+      .replace(/[^\w\s]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+  );
 }
 type PageWithFlag = Page & { _consoleListenerAttached?: boolean };
 
@@ -274,13 +280,13 @@ export function attachConsoleOverlay(page: PageWithFlag) {
   if (page._consoleListenerAttached) return;
   page._consoleListenerAttached = true;
 
-  page.on('console', async (msg) => {
-    if (msg.type() !== 'error') return;
+  page.on("console", async (msg) => {
+    if (msg.type() !== "error") return;
 
     const msgText = msg.text(); // sync
-    const classErrorConsole = msgText.includes('Warning:')
-      ? 'warning-console'
-      : 'error-console';
+    const classErrorConsole = msgText.includes("Warning:")
+      ? "warning-console"
+      : "error-console";
 
     const key = normalizeConsoleMessage(msgText);
     if (seenConsoleErrors.has(key)) return;
@@ -289,19 +295,19 @@ export function attachConsoleOverlay(page: PageWithFlag) {
 
     // (facoltativo) escape per sicurezza XSS
     const safeHTML = msgText
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;');
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
 
     await page.evaluate(
       ({ classErrorConsole, safeHTML }) => {
-        const el = document.createElement('div');
+        const el = document.createElement("div");
         el.className = classErrorConsole;
         el.innerHTML = safeHTML; // ora è safe
-        const footer = document.querySelector('footer');
+        const footer = document.querySelector("footer");
         if (footer) {
-          footer.insertAdjacentElement('afterend', el);
+          footer.insertAdjacentElement("afterend", el);
         } else {
           document.body.appendChild(el);
         }
@@ -383,7 +389,6 @@ export async function nextStepButton(
 
   await clearErrors(page); // pulizia banner prima di uscire
 }
-
 
 export async function dialogStep(page, path: string, screenName: string) {
   await page.waitForTimeout(WAIT.LONG);
@@ -476,18 +481,192 @@ export async function ensureFolderExists(folder: string) {
     await fs.promises.mkdir(folder, { recursive: true });
   }
 }
-// Attacca i listener a page e raccoglie i messaggi
-export function setupPageLogging(page: Page, buffer: string[]) {
+
+
+type LoggingOptions = {
+  logBodies?: boolean;          // abilita logging body request/response | default: false
+  prettyJson?: boolean;         // JSON formattato | default: true
+  bodyMaxLen?: number;          // default: 10000 chars
+  filterUrl?: (url: string) => boolean; // default: (url)=>true
+  redact?: (s: string) => string;       // default: built-in redactor
+};
+
+const DEFAULT_OPTS: LoggingOptions = {
+  logBodies: false,
+  prettyJson: true,
+  bodyMaxLen: 10000,
+  filterUrl: () => true,
+  redact: defaultRedact,
+};
+
+// semplice redactor: nasconde token/authorization e query sensibili
+function defaultRedact(s: string): string {
+  if (!s) return s;
+  let out = s
+    .replace(/(authorization:\s*bearer\s+)[^\s\r\n]+/gi, "$1***")
+    .replace(/(x-api-key:\s*)[^\s\r\n]+/gi, "$1***")
+    .replace(/([?&](?:token|apikey|api_key|auth|access_token)=)[^&\s]+/gi, "$1***");
+  // taglia payload troppo lunghi
+  if (out.length > 100000) out = out.slice(0, 100000) + "…";
+  return out;
+}
+
+export function setupPageLogging(page: Page, buffer: string[], options: Partial<LoggingOptions> = {}) {
+  // evita doppio attach
+  if ((page as any).__loggingAttached) return true;
+  (page as any).__loggingAttached = true;
+
+  const opts: LoggingOptions = { ...DEFAULT_OPTS, ...options };
+
+  // Correlazione e durata
+  let reqSeq = 0;
+  const startTimes = new Map<Request, number>();
+  const ids = new Map<Request, string>();
+
+  const now = () => Date.now();
+  const ms = (t: number) => `${t}ms`;
+
+  // Console browser con location
   page.on("console", (msg) => {
+    const loc = msg.location();
+    const locStr = loc?.url ? ` @ ${loc.url}:${loc.lineNumber ?? 0}:${loc.columnNumber ?? 0}` : "";
     if (msg.type() === "error") {
-      buffer.push(`[page-error] ${msg.text()}`);
+      buffer.push(`[page-error] ${msg.text()}${locStr}`);
     } else {
-      buffer.push(`[browser-console] ${msg.type()}: ${msg.text()}`);
+      buffer.push(`[browser-console] ${msg.type()}: ${msg.text()}${locStr}`);
     }
+  });
+
+  // Uncaught errors in pagina
+  page.on("pageerror", (err) => {
+    buffer.push(`[pageexception] ${err.name}: ${err.message}`);
+  });
+
+  // REQUEST
+  page.on("request", async (request) => {
+    const url = request.url();
+    if (!opts.filterUrl!(url)) return;
+
+    const id = `#${++reqSeq}`;
+    ids.set(request, id);
+    startTimes.set(request, now());
+
+    const method = request.method();
+    const rt = request.resourceType();
+    let line = `[api-request ${id}] ${method} ${opts.redact!(url)} (${rt})`;
+
+    // opzionale: log body della request (JSON) senza bloccare
+    if (opts.logBodies) {
+      try {
+        const post = request.postData();
+        if (post) {
+          const trimmed = trimAndMaybePretty(post, opts);
+          line += ` | req-body: ${trimmed}`;
+        }
+      } catch {}
+    }
+    buffer.push(line);
+  });
+
+  // RESPONSE (success)
+  page.on("response", async (response: Response) => {
+    try {
+      const req = response.request();
+      const url = response.url();
+      if (!opts.filterUrl!(url)) return;
+
+      const id = ids.get(req) ?? "?";
+      const status = response.status();
+      const statusText = response.statusText?.() ?? "";
+      const started = startTimes.get(req) ?? now();
+      const dur = ms(now() - started);
+
+      // redirect chain (se presente)
+      const from = req.redirectedFrom();
+      const chain = from ? " redirected" : "";
+
+      let line = `[api-response ${id}] ${req.method()} ${opts.redact!(url)} -> ${status} ${statusText}${chain} in ${dur}`;
+
+      // opzionale: log JSON response body
+      if (opts.logBodies) {
+        const ct = (response.headers()["content-type"] || "").toLowerCase();
+        if (ct.includes("application/json")) {
+          try {
+            const bodyObj = await response.json();
+            const pretty = formatJson(bodyObj, opts);
+            line += ` | res-body: ${pretty}`;
+          } catch (err: any) {
+            line += ` | res-body-read-error: ${err?.message || "unknown error"}`;
+          }
+        } else {
+          // prova a leggere testo breve (evita binari)
+          if (ct.startsWith("text/") || ct.includes("json")) {
+            try {
+              const text = await response.text();
+              line += ` | res-text: ${trimAndMaybePretty(text, opts)}`;
+            } catch {}
+          }
+        }
+      }
+
+      buffer.push(line);
+    } catch (err: any) {
+      // Se fallisce la lettura di response/request/url
+      try {
+        buffer.push(
+          `[api-response-error] ${response.url()} -> ${err?.message || "unknown error"}`
+        );
+      } catch {
+        buffer.push(`[api-response-error] <unavailable-url> -> ${err?.message || "unknown error"}`);
+      }
+    }
+  });
+
+  // FAIL (reti/timeout/abort)
+  page.on("requestfailed", (request) => {
+    const url = request.url();
+    if (!opts.filterUrl!(url)) return;
+    const id = ids.get(request) ?? "?";
+    const started = startTimes.get(request) ?? now();
+    const dur = ms(now() - started);
+    buffer.push(
+      `[api-failed ${id}] ${request.method()} ${opts.redact!(url)} -> ${request.failure()?.errorText || "failed"} in ${dur}`
+    );
+  });
+
+  // FINISH (chiusura request; utile se vuoi pulire mappe)
+  page.on("requestfinished", (request) => {
+    startTimes.delete(request);
+    ids.delete(request);
   });
 
   return true;
 }
+
+// Helpers
+
+function trimAndMaybePretty(s: string, opts: LoggingOptions): string {
+  const redacted = opts.redact!(s);
+  const limited = redacted.length > (opts.bodyMaxLen || 0)
+    ? redacted.slice(0, opts.bodyMaxLen) + "…"
+    : redacted;
+  // prova a pretty-print se è JSON
+  if (opts.prettyJson) {
+    try {
+      return JSON.stringify(JSON.parse(limited), null, 2);
+    } catch {
+      return limited;
+    }
+  }
+  return limited;
+}
+
+function formatJson(obj: any, opts: LoggingOptions): string {
+  const raw = opts.prettyJson ? JSON.stringify(obj, null, 2) : JSON.stringify(obj);
+  const red = opts.redact!(raw);
+  return red.length > (opts.bodyMaxLen || 0) ? red.slice(0, opts.bodyMaxLen) + "…" : red;
+}
+
 
 // Scrive il buffer su file
 export async function flushLogsToFile(

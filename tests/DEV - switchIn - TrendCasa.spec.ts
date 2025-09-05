@@ -111,7 +111,6 @@ test("DEV PHONE - Switch In / Trend Casa / Gas ", async ({ page }) => {
   }
   console.log("✅ TEST COMPLETATO CON SUCCESSO");
 }, { mobileTest: true, device: DEFAULT_DEVICE_PHONE });
-
 test("DEV TABLET - Switch In / Trend Casa / Gas ", async ({ page }) => {
   const startUrl =
     "http://localhost:4200/configura-offerta?codiceProdotto=BASE_LTCASAV-GTCASAV&codiceCanale=CWEB3EGP&codiceTpCanale=WB&direct-debit=true&bill-type=digitale&commodity=gas&salesProcess=SWITCH_IN&mocks&dev";
