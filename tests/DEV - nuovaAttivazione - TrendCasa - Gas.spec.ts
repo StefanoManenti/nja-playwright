@@ -4,6 +4,7 @@ import {
   addScriptRuntime,
   autoFillForm,
   clearScreenshots,
+  enableTestConsole,
   failedError,
   nextStepButton,
   pageHasStep,
@@ -42,25 +43,26 @@ test("DEV - Nuova Attivazione / Trend Casa / Gas / Voltura", async ({
   await page.waitForTimeout(WAIT.LONG);
 
   for (const [index, s] of stepList.entries()) {
-    if (index === 0) {
-      await clearScreenshots(path);
-      await addScriptRuntime(
-        page,
-        `window.collaudo(); bypassChecks.current = true;`
-      );
+      if (index === 0) {
+        await clearScreenshots(path);
+        await addScriptRuntime(
+          page,
+          `window.collaudo(); bypassChecks.current = true;`
+        );
+        await enableTestConsole(page);
+      }
+  
+      const isStep = await pageHasStep(page, s.step);
+      if (!isStep) {
+        failedError(`❌ Errore: Step ["${s.step}"] non raggiungibile`);
+      }
+  
+      await page.waitForTimeout(WAIT.SCREENSHOT);
+      await autoFillForm(page, path, screenName, s.data);
+      if (index !== stepList.length - 1) {
+        await page.waitForTimeout(WAIT.SHORT);
+        await nextStepButton(page, true, path, screenName);
+      }
     }
-
-    const isStep = await pageHasStep(page, s.step);
-    if (!isStep) {
-      failedError(`❌ Errore: Step ["${s.step}"] non trovato`);
-    }
-
-    await page.waitForTimeout(WAIT.SCREENSHOT);
-    await autoFillForm(page, path, screenName, s.data);
-    if (index !== stepList.length - 1) {
-      await page.waitForTimeout(WAIT.SHORT);
-      await nextStepButton(page, true, path, screenName);
-    }
-  }
-  console.log("✅ TEST COMPLETATO CON SUCCESSO");
+    console.log("✅ TEST COMPLETATO CON SUCCESSO");
 });

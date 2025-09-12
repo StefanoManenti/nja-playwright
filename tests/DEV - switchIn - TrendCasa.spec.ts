@@ -49,7 +49,7 @@ test("DEV - Switch In / Trend Casa / Gas ", async ({ page }) => {
 
     const isStep = await pageHasStep(page, s.step);
     if (!isStep) {
-      failedError(`❌ Errore: Step ["${s.step}"] non trovato`);
+      failedError(`❌ Errore: Step ["${s.step}"] non raggiungibile`);
     }
 
     await page.waitForTimeout(WAIT.SCREENSHOT);
@@ -99,7 +99,7 @@ test("DEV PHONE - Switch In / Trend Casa / Gas ", async ({ page }) => {
 
     const isStep = await pageHasStep(page, s.step);
     if (!isStep) {
-      failedError(`❌ Errore: Step ["${s.step}"] non trovato`);
+      failedError(`❌ Errore: Step ["${s.step}"] non raggiungibile`);
     }
 
     await page.waitForTimeout(WAIT.SCREENSHOT);
@@ -149,7 +149,7 @@ test("DEV TABLET - Switch In / Trend Casa / Gas ", async ({ page }) => {
 
     const isStep = await pageHasStep(page, s.step);
     if (!isStep) {
-      failedError(`❌ Errore: Step ["${s.step}"] non trovato`);
+      failedError(`❌ Errore: Step ["${s.step}"] non raggiungibile`);
     }
 
     await page.waitForTimeout(WAIT.SCREENSHOT);
@@ -201,7 +201,7 @@ test("DEV - Switch In / Trend Casa / Luce ", async ({ page }) => {
 
     const isStep = await pageHasStep(page, s.step);
     if (!isStep) {
-      failedError(`❌ Errore: Step ["${s.step}"] non trovato`);
+      failedError(`❌ Errore: Step ["${s.step}"] non raggiungibile`);
     }
 
     await page.waitForTimeout(WAIT.SCREENSHOT);

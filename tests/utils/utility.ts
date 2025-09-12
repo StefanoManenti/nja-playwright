@@ -1,8 +1,14 @@
+import {
+  ElementHandle,
+  Locator,
+  Page,
+  Request,
+  Response,
+} from "@playwright/test";
 import fs from "fs";
 import path from "path";
 import { ValuesOverrides } from "../types/stepType";
 import { MOCKS } from "./Mock";
-import { Page, Locator, ElementHandle, Request, Response } from "@playwright/test";
 
 export enum WAIT {
   SCREENSHOT = 300,
@@ -223,8 +229,8 @@ export async function addCss(page: Page) {
     .error-console {
       display:block;
       font-weight: bold;
-      font-size:6px;
-      line-height:10px;
+      font-size:16px;
+      line-height:20px;
       padding: 10px;
       border: 4px solid #f00;
       position: relative;
@@ -235,8 +241,8 @@ export async function addCss(page: Page) {
     .warning-console {
       display:block;
       font-weight: bold;
-      font-size:6px;
-      line-height:10px;
+      font-size:16px;
+      line-height:20px;
       padding: 10px;
       border: 4px solid #fb0;
       position: relative;
@@ -482,13 +488,12 @@ export async function ensureFolderExists(folder: string) {
   }
 }
 
-
 type LoggingOptions = {
-  logBodies?: boolean;          // abilita logging body request/response | default: false
-  prettyJson?: boolean;         // JSON formattato | default: true
-  bodyMaxLen?: number;          // default: 10000 chars
+  logBodies?: boolean; // abilita logging body request/response | default: false
+  prettyJson?: boolean; // JSON formattato | default: true
+  bodyMaxLen?: number; // default: 10000 chars
   filterUrl?: (url: string) => boolean; // default: (url)=>true
-  redact?: (s: string) => string;       // default: built-in redactor
+  redact?: (s: string) => string; // default: built-in redactor
 };
 
 const DEFAULT_OPTS: LoggingOptions = {
@@ -505,13 +510,20 @@ function defaultRedact(s: string): string {
   let out = s
     .replace(/(authorization:\s*bearer\s+)[^\s\r\n]+/gi, "$1***")
     .replace(/(x-api-key:\s*)[^\s\r\n]+/gi, "$1***")
-    .replace(/([?&](?:token|apikey|api_key|auth|access_token)=)[^&\s]+/gi, "$1***");
+    .replace(
+      /([?&](?:token|apikey|api_key|auth|access_token)=)[^&\s]+/gi,
+      "$1***"
+    );
   // taglia payload troppo lunghi
   if (out.length > 100000) out = out.slice(0, 100000) + "…";
   return out;
 }
 
-export function setupPageLogging(page: Page, buffer: string[], options: Partial<LoggingOptions> = {}) {
+export function setupPageLogging(
+  page: Page,
+  buffer: string[],
+  options: Partial<LoggingOptions> = {}
+) {
   // evita doppio attach
   if ((page as any).__loggingAttached) return true;
   (page as any).__loggingAttached = true;
@@ -529,7 +541,9 @@ export function setupPageLogging(page: Page, buffer: string[], options: Partial<
   // Console browser con location
   page.on("console", (msg) => {
     const loc = msg.location();
-    const locStr = loc?.url ? ` @ ${loc.url}:${loc.lineNumber ?? 0}:${loc.columnNumber ?? 0}` : "";
+    const locStr = loc?.url
+      ? ` @ ${loc.url}:${loc.lineNumber ?? 0}:${loc.columnNumber ?? 0}`
+      : "";
     if (msg.type() === "error") {
       buffer.push(`[page-error] ${msg.text()}${locStr}`);
     } else {
@@ -585,7 +599,9 @@ export function setupPageLogging(page: Page, buffer: string[], options: Partial<
       const from = req.redirectedFrom();
       const chain = from ? " redirected" : "";
 
-      let line = `[api-response ${id}] ${req.method()} ${opts.redact!(url)} -> ${status} ${statusText}${chain} in ${dur}`;
+      let line = `[api-response ${id}] ${req.method()} ${opts.redact!(
+        url
+      )} -> ${status} ${statusText}${chain} in ${dur}`;
 
       // opzionale: log JSON response body
       if (opts.logBodies) {
@@ -596,7 +612,9 @@ export function setupPageLogging(page: Page, buffer: string[], options: Partial<
             const pretty = formatJson(bodyObj, opts);
             line += ` | res-body: ${pretty}`;
           } catch (err: any) {
-            line += ` | res-body-read-error: ${err?.message || "unknown error"}`;
+            line += ` | res-body-read-error: ${
+              err?.message || "unknown error"
+            }`;
           }
         } else {
           // prova a leggere testo breve (evita binari)
@@ -614,10 +632,16 @@ export function setupPageLogging(page: Page, buffer: string[], options: Partial<
       // Se fallisce la lettura di response/request/url
       try {
         buffer.push(
-          `[api-response-error] ${response.url()} -> ${err?.message || "unknown error"}`
+          `[api-response-error] ${response.url()} -> ${
+            err?.message || "unknown error"
+          }`
         );
       } catch {
-        buffer.push(`[api-response-error] <unavailable-url> -> ${err?.message || "unknown error"}`);
+        buffer.push(
+          `[api-response-error] <unavailable-url> -> ${
+            err?.message || "unknown error"
+          }`
+        );
       }
     }
   });
@@ -630,7 +654,9 @@ export function setupPageLogging(page: Page, buffer: string[], options: Partial<
     const started = startTimes.get(request) ?? now();
     const dur = ms(now() - started);
     buffer.push(
-      `[api-failed ${id}] ${request.method()} ${opts.redact!(url)} -> ${request.failure()?.errorText || "failed"} in ${dur}`
+      `[api-failed ${id}] ${request.method()} ${opts.redact!(url)} -> ${
+        request.failure()?.errorText || "failed"
+      } in ${dur}`
     );
   });
 
@@ -647,9 +673,10 @@ export function setupPageLogging(page: Page, buffer: string[], options: Partial<
 
 function trimAndMaybePretty(s: string, opts: LoggingOptions): string {
   const redacted = opts.redact!(s);
-  const limited = redacted.length > (opts.bodyMaxLen || 0)
-    ? redacted.slice(0, opts.bodyMaxLen) + "…"
-    : redacted;
+  const limited =
+    redacted.length > (opts.bodyMaxLen || 0)
+      ? redacted.slice(0, opts.bodyMaxLen) + "…"
+      : redacted;
   // prova a pretty-print se è JSON
   if (opts.prettyJson) {
     try {
@@ -662,11 +689,14 @@ function trimAndMaybePretty(s: string, opts: LoggingOptions): string {
 }
 
 function formatJson(obj: any, opts: LoggingOptions): string {
-  const raw = opts.prettyJson ? JSON.stringify(obj, null, 2) : JSON.stringify(obj);
+  const raw = opts.prettyJson
+    ? JSON.stringify(obj, null, 2)
+    : JSON.stringify(obj);
   const red = opts.redact!(raw);
-  return red.length > (opts.bodyMaxLen || 0) ? red.slice(0, opts.bodyMaxLen) + "…" : red;
+  return red.length > (opts.bodyMaxLen || 0)
+    ? red.slice(0, opts.bodyMaxLen) + "…"
+    : red;
 }
-
 
 // Scrive il buffer su file
 export async function flushLogsToFile(
@@ -727,8 +757,8 @@ export async function autoFillForm(
         if (el.closest('[class*="calendarWrapper"]')) return true;
         else return false;
       });
-      if (isCalendar) console.log("CALENDAR FIELD TROVATO");
-      else console.log("CALENDAR FIELD NON TROVATO");
+      //if (isCalendar) console.log("CALENDAR FIELD TROVATO");
+      //else console.log("CALENDAR FIELD NON TROVATO");
 
       const isSelect = await handle.evaluate((el: any) =>
         el.classList.contains("base-Select-root")
