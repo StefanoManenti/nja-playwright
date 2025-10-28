@@ -19,6 +19,81 @@ export enum WAIT {
 }
 export const STEP_TO_SKIP = [];
 
+// === Upload helpers ===
+const DEFAULT_UPLOADS_DIR = path.resolve(process.cwd(), "");
+const DEFAULT_PDF_NAME = "sample.pdf";
+
+async function ensureDummyPdf(filePath: string) {
+  const exists = await fs.promises
+    .access(filePath)
+    .then(() => true)
+    .catch(() => false);
+  if (exists) return;
+  await fs.promises.mkdir(path.dirname(filePath), { recursive: true });
+  // PDF minimale e valido
+  const minimalPdf = `%PDF-1.4
+1 0 obj <</Type /Catalog /Pages 2 0 R>> endobj
+2 0 obj <</Type /Pages /Count 1 /Kids [3 0 R]>> endobj
+3 0 obj <</Type /Page /Parent 2 0 R /MediaBox [0 0 200 200] /Contents 4 0 R>> endobj
+4 0 obj <</Length 44>> stream
+BT /F1 12 Tf 50 150 Td (Test PDF) Tj ET
+endstream endobj
+xref
+0 5
+0000000000 65535 f 
+0000000010 00000 n 
+0000000062 00000 n 
+0000000117 00000 n 
+0000000217 00000 n 
+trailer <</Size 5/Root 1 0 R>>
+startxref
+300
+%%EOF`;
+  await fs.promises.writeFile(filePath, minimalPdf, "utf-8");
+}
+
+function resolveUploadPath(p?: string) {
+  if (!p) return null;
+  return path.isAbsolute(p) ? p : path.resolve(process.cwd(), p);
+}
+
+async function pickFilesForInput(
+  handle: ElementHandle<HTMLElement>,
+  name: string,
+  override: unknown
+): Promise<string[]> {
+  // 1) Se override è string o string[], usa quello
+  if (typeof override === "string") {
+    const abs = resolveUploadPath(override);
+    if (!abs) return [];
+    return [abs];
+  }
+  if (Array.isArray(override)) {
+    const arr = (override as string[])
+      .map(resolveUploadPath)
+      .filter(Boolean) as string[];
+    return arr;
+  }
+
+  // 2) Altrimenti usa un sample.pdf di default se l'input accetta PDF
+  const acceptAttr = (await handle.getAttribute("accept"))?.toLowerCase() ?? "";
+  const acceptsPdf =
+    acceptAttr === "" || // niente restriction
+    acceptAttr.includes("application/pdf") ||
+    acceptAttr.split(",").some((a) => a.trim().endsWith("pdf"));
+
+  if (!acceptsPdf) {
+    console.log(
+      `⚠️ [file] ${name}: input non accetta PDF (accept="${acceptAttr}"), skip.`
+    );
+    return [];
+  }
+
+  const defaultPdfPath = path.join(DEFAULT_UPLOADS_DIR, DEFAULT_PDF_NAME);
+  await ensureDummyPdf(defaultPdfPath);
+  return [defaultPdfPath];
+}
+
 export async function addScriptInit(page: Page, script: string): Promise<void> {
   await page.addInitScript({ content: script });
 }
@@ -763,6 +838,7 @@ export async function autoFillForm(
       const isSelect = await handle.evaluate((el: any) =>
         el.classList.contains("base-Select-root")
       );
+
       if (isSelect) {
         const handles = await page.$$("button[role='combobox']");
         indexSelect = await page.evaluate(
@@ -785,6 +861,18 @@ export async function autoFillForm(
         (await handle.getAttribute("formcontrolname")) ||
         (await handle.getAttribute("id")) ||
         "";
+
+      const isFile = type === "file";
+      if (isFile && !name) {
+        name = await (handle as any).evaluate((el: HTMLElement) => {
+          // crea un id stabile e persistente sul DOM
+          if (!el.dataset.autoKey) {
+            el.dataset.autoKey =
+              "file_upload_" + Math.random().toString(36).slice(2);
+          }
+          return el.dataset.autoKey;
+        });
+      }
 
       if (isSelect) {
         const parentField = await handle.evaluateHandle((el: any) =>
@@ -816,13 +904,27 @@ export async function autoFillForm(
       const valueAttr = (await handle.getAttribute("value")) || "";
 
       // Genera una chiave univoca per evitare doppia compilazione
-      const key = `${tag}::${name}::${valueAttr}`;
+      const key = isFile ? `${tag}::${name}` : `${tag}::${name}::${valueAttr}`;
+
+      // salta subito se è un file già autocompilato
+      if (isFile) {
+        const alreadyFilled = await (handle as any).evaluate(
+          (el: HTMLElement) => el.dataset.autoFilled === "1"
+        );
+        if (alreadyFilled) {
+          processed.add(
+            isFile ? `${tag}::${name}` : `${tag}::${name}::${valueAttr}`
+          );
+          continue;
+        }
+      }
+
       if (!name) {
         console.log(`⚠️ Campo senza name (${tag}), skip.`);
         continue;
       }
       if (processed.has(key)) continue;
-      if (!(await handle.isVisible())) {
+      if (type !== "file" && !(await handle.isVisible())) {
         console.log(`⚠️ Campo ${name} non visibile, skip.`);
         processed.add(key);
         continue;
@@ -850,6 +952,30 @@ export async function autoFillForm(
       } else {
         if (!isSelect) {
           switch (type) {
+            case "file": {
+              const alreadyFilled = await (handle as any).evaluate(
+                (el: HTMLElement) => el.dataset.autoFilled === "1"
+              );
+              if (alreadyFilled) break;
+
+              const files = await pickFilesForInput(
+                handle as any,
+                name,
+                override
+              );
+              if (files.length) {
+                console.log(`📎 [file] ${name}: upload ${files.join(", ")}`);
+                await (handle as any).setInputFiles(files);
+
+                // segna come processato in modo persistente sul DOM
+                await (handle as any).evaluate((el: HTMLElement) => {
+                  el.dataset.autoFilled = "1";
+                });
+              } else {
+                console.log(`📎 [file] ${name}: nessun file selezionato`);
+              }
+              break;
+            }
             case "text":
             case "email":
             case "tel":
