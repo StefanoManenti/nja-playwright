@@ -314,7 +314,7 @@ export async function addCss(page: Page) {
       min-height:20px;
     }
     .warning-console {
-      display:block;
+      display:none;
       font-weight: bold;
       font-size:16px;
       line-height:20px;
