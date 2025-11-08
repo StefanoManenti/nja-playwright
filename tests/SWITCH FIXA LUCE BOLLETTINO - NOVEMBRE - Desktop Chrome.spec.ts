@@ -91,7 +91,7 @@ test(`SWITCH FIXA LUCE BOLLETTINO`, async ({ page }) => {
     }
 
     const isStep = await pageHasStep(page, s.step);
-    if (!isStep) { failedError(`❌ Errore: Step ["${String('${s.step}')}"] non raggiungibile`); }
+    if (!isStep) { failedError(`❌ Errore: Step ["${String(s.step)}"] non raggiungibile`); }
 
     await page.waitForTimeout(WAIT.SCREENSHOT);
     await autoFillForm(page, path, screenName, (s as any).data);
