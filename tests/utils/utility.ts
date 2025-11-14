@@ -13,10 +13,12 @@ import { MOCKS } from "./Mock";
 export enum WAIT {
   SCREENSHOT = 300,
   SHORT = 500,
-  MID = 1500,
-  DEFAULT = 2000,
-  LONG = 4000,
+  MID = 700,
+  DEFAULT = 1500,
+  LONG = 5000,
+  LOGIN = 7000,
 }
+
 export const STEP_TO_SKIP = [];
 
 // === Upload helpers ===
@@ -128,7 +130,12 @@ export function countScreenshots(path: string): number {
   return fs.readdirSync(path).filter((file) => file.endsWith(".png")).length;
 }
 
-export async function screenShot(page, path: string, screenName: string) {
+export async function screenShot(
+  page: Page,
+  path: string,
+  screenName: string,
+  printErrors: boolean = false
+) {
   const exists = await fs.promises
     .access(path)
     .then(() => true)
@@ -137,12 +144,62 @@ export async function screenShot(page, path: string, screenName: string) {
     await fs.promises.mkdir(path, { recursive: true });
   }
 
-  const index = 1 + (await countScreenshots(path));
+  const index = 1 + countScreenshots(path);
   const screenFileName = `${path}/${screenName}${index}.png`;
   const currentWidth = await page.evaluate(() => window.innerWidth);
   const currentHeight = await page.evaluate(
     () => window.innerHeight || document.body.clientHeight
   );
+
+  // --- APPENDI ERRORI E WARNING PRIMA DELLO SCREENSHOT ---
+  const errors: string[] = [];
+  const warnings: string[] = [];
+
+  if (printErrors) {
+    //await clearErrors(page);
+    // intercetta console.error e console.warn solo per questa funzione
+    const originalError = console.error;
+    const originalWarn = console.warn;
+
+    console.error = (...args) => {
+      const msg = args.map(String).join(" ");
+      errors.push(msg);
+      originalError(...args);
+    };
+    console.warn = (...args) => {
+      const msg = args.map(String).join(" ");
+      warnings.push(msg);
+      originalWarn(...args);
+    };
+
+    // Attendi che eventuali log vengano raccolti
+    await page.waitForTimeout(WAIT.LONG * 2);
+
+    // ripristina console originali
+    console.error = originalError;
+    console.warn = originalWarn;
+  }
+
+  // Se ci sono errori o warning, appendili visivamente alla pagina con stile
+  if (errors.length || warnings.length) {
+    await addCss(page); // assicura che gli stili siano presenti
+
+    await page.evaluate(
+      ({ errors, warnings }) => {
+        const appendDiv = (msg: string, className: string) => {
+          const div = document.createElement("div");
+          div.className = className;
+          div.innerText = msg;
+          document.body.appendChild(div);
+        };
+
+        errors.forEach((e) => appendDiv(e, "error-console"));
+        warnings.forEach((w) => appendDiv(w, "warning-console"));
+      },
+      { errors, warnings }
+    );
+  }
+  // ---------------------------------------------------------
 
   const fullHeight = await page.evaluate(() => {
     return Math.max(
@@ -158,38 +215,59 @@ export async function screenShot(page, path: string, screenName: string) {
   await page.setViewportSize({ width: currentWidth, height: fullHeight });
   await page.waitForTimeout(WAIT.SCREENSHOT);
 
-  const completedSceen = await page.screenshot({
+  const completedScreen = await page.screenshot({
     fullPage: true,
     path: screenFileName,
   });
 
   await page.setViewportSize({ width: currentWidth, height: currentHeight });
 
-  return completedSceen;
+  // Rimuovi eventuali banner dopo lo screenshot
+  await clearErrors(page);
+
+  return completedScreen;
 }
 
-export async function pageHasStep(page, stepName: string | string[] | false) {
-  await page.waitForTimeout(WAIT.MID);
-
+export async function pageHasStep(page:any, stepName: string | string[] | false, path:string, screenName:string) {
   // Skip controllo se stepName = false
   if (stepName === false) return true;
+  await page.waitForTimeout(WAIT.MID);
 
   // Verifica che <body data-meta-step="stepName"> = stepName
   const body = await page.$("body");
   let metaStep = await body.getAttribute("data-meta-step");
   if (!metaStep) {
-    failedError("data-meta-step non trovato");
-    return false;
+    await page.waitForTimeout(WAIT.DEFAULT);
+    metaStep = await body.getAttribute("data-meta-step");
+    if (!metaStep) {
+      await screenShot(page, path, screenName + `ERROR_STEP_`, true);
+      failedError(
+        "❌ Attributo data-meta-step non trovato, errore nel caricamento della pagina"
+      );
+      return false;
+    }
   }
   metaStep = metaStep.toLowerCase();
   if (!Array.isArray(stepName)) {
     stepName = [stepName];
   }
   stepName = stepName.map((s) => s.toLowerCase());
-  console.log(
-    "metaStep " + metaStep + " vs stepName [" + stepName.join(",") + "]"
-  );
-  return stepName.includes(metaStep);
+
+  const msgStep =
+    "metaStep corrente " +
+    metaStep +
+    " vs stepName mappato [" +
+    stepName.join(",") +
+    "]";
+  const checkStepName = stepName.includes(metaStep);
+  if (!checkStepName) {
+    //TODO notifica campi non validi nello step corrente
+    failedError(`❌ Step successivo non raggiungibile:  ${msgStep}`);
+    return false;
+  } else {
+    console.log(`✅ Step raggiunto correttamente:  ${msgStep}`);
+    return true;
+  }
 }
 
 export async function pageHasTitle(page, title: string[] | false) {
@@ -314,7 +392,7 @@ export async function addCss(page: Page) {
       min-height:20px;
     }
     .warning-console {
-      display:none;
+      display:block;
       font-weight: bold;
       font-size:16px;
       line-height:20px;
@@ -432,8 +510,9 @@ export async function nextStepButton(
 
   if (await submitButton.isVisible()) {
     if ((await submitButton.getAttribute("disabled")) !== null) {
+      await screenShot(page, path, screenName + `ERROR_STEP_`, true);
       failedError(
-        "Pulsante di invio disabilitato, cliccato prima di completare tutto il form"
+        "Pulsante di invio disabilitato, la compilazione dello step attuale non è valida, controlla l'ultimo screenshot"
       );
     }
 
@@ -471,10 +550,7 @@ export async function nextStepButton(
   await clearErrors(page); // pulizia banner prima di uscire
 }
 
-export async function dialogStep(page, path: string, screenName: string) {
-  await page.waitForTimeout(WAIT.LONG);
-
-  // Cookie banner
+export async function checkCookie(page: any) {
   const cookieButton = await page.locator("button#footer_tc_privacy_button_3");
   if (await cookieButton.isVisible()) {
     console.log("Trovato Cookie banner");
@@ -484,6 +560,10 @@ export async function dialogStep(page, path: string, screenName: string) {
   } else {
     console.log("Cookie banner NON trovato --> Continue");
   }
+}
+export async function dialogStep(page: any, path: string, screenName: string) {
+  await page.waitForTimeout(WAIT.LONG);
+  await checkCookie(page);
 
   let dialogLocator = await page.locator("div[class*='_dialog_']");
   let dialogCount = await dialogLocator.count();
@@ -504,7 +584,7 @@ export async function dialogStep(page, path: string, screenName: string) {
       if (await otpInput.isVisible()) {
         await otpInput.fill(MOCKS.otp);
         await screenShot(page, path, screenName);
-        await page.waitForTimeout(WAIT.SHORT);
+        await page.waitForTimeout(WAIT.MID);
       }
     }
 
@@ -516,7 +596,7 @@ export async function dialogStep(page, path: string, screenName: string) {
       await scrollableBox.evaluate((el) => {
         el.scrollTo(0, el.scrollHeight);
       });
-      await page.waitForTimeout(WAIT.SHORT);
+      await page.waitForTimeout(WAIT.MID);
       await screenShot(page, path, screenName);
     }
 
@@ -787,6 +867,46 @@ export async function flushLogsToFile(
 // Cerca ricorsivamente una classe nei genitori, partendo da un elemento
 
 export const notSelectedStyle = "rgb(255, 255, 255)";
+
+export async function loginArea(
+  page: Page,
+  path: string,
+  screenName: string
+): Promise<void> {
+  await page.waitForTimeout(WAIT.DEFAULT);
+
+  // ✅ controllo NON bloccante: niente waitForSelector
+  const loginRoot = await page.$("#app-login");
+
+  if (!loginRoot) {
+    console.log("ℹ️ Area login non presente, proseguo senza autenticazione.");
+    return;
+  }
+
+  console.log("🔐 Area login trovata, eseguo autenticazione automatica.");
+
+  // opzionale: ti assicuri che sia visibile
+  try {
+    await loginRoot.waitForElementState?.("visible");
+  } catch {
+    // se per qualche motivo non diventa visibile, non bloccare il test
+    console.log("⚠️ Area login non visibile, proseguo senza autenticazione.");
+    return;
+  }
+
+  // da qui in poi il tuo flusso originale
+  await page.getByRole("textbox", { name: "email" }).fill(MOCKS.login_email);
+  await screenShot(page, path, screenName);
+
+  await page.getByRole("button", { name: "Prosegui", exact: true }).click();
+  await page.waitForTimeout(WAIT.LOGIN);
+
+  await page.getByRole("textbox", { name: "Password" }).fill(MOCKS.login_psw);
+  await screenShot(page, path, screenName);
+
+  await page.getByRole("button", { name: "ACCEDI" }).click();
+  await page.waitForTimeout(WAIT.LOGIN * 2);
+}
 
 export async function autoFillForm(
   page: Page,
@@ -1103,7 +1223,7 @@ export async function autoFillForm(
                 if (isAddress) {
                   // se è address, seleziono il primo suggerimento
                   const addressId = await handle.getAttribute("id");
-                  await page.waitForTimeout(WAIT.MID);
+                  await page.waitForTimeout(WAIT.DEFAULT);
                   const firstSug = page
                     .locator(`#${addressId}-listbox li`)
                     .first();

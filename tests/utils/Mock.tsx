@@ -1,8 +1,11 @@
 export const MOCKS = {
-  firstname: "CRISTIANO",
-  lastname: "DURANTE",
-  codiceFiscale: "DRNCST63M15Z505W",
-  codiceFiscale2: "MLSGLC75B02G337J",
+  firstname: "MARIO",
+  lastname: "ROSSI",
+  codiceFiscale: "RSSMRA80R20H501E",
+  firstname2: "CRISTIANO",
+  lastname2: "DURANTE",
+  codiceFiscale2: "DRNCST63M15Z505W",
+  codiceFiscale3: "MLSGLC75B02G337J",
   partitaIva: "IT001E33929817",
   sdi: "ABCDEFGHILMN",
   text: "loremIpsum",
@@ -22,4 +25,7 @@ export const MOCKS = {
   pod: "IT001E12345678",
   pdr: "00880000358192",
   smc: "100",
+
+  login_email:"grazianoilmatto@yopmail.com",
+  login_psw:"Qwerty1234!"
 };

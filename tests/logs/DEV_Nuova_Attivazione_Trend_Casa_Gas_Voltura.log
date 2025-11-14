@@ -1,9 +1,0 @@
-LISTA TEAM UTENTE
-https://db-functions-g5gqfkgsaxewd8bb.northeurope-01.azurewebsites.net/api/listRelUserTeamByUser?id=3
-
-LISTA PROGETTI
-https://db-functions-g5gqfkgsaxewd8bb.northeurope-01.azurewebsites.net/api/listProjects
-
-
-LISTA PROGETTI PER USER (KO - nessun risultato)
-https://db-functions-g5gqfkgsaxewd8bb.northeurope-01.azurewebsites.net/api/listRelUserProjectByUser?id=3
