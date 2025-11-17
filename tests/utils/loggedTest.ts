@@ -2,6 +2,7 @@
 import { test as baseTest, Page, devices } from "@playwright/test";
 import path from "path";
 import { setupPageLogging, flushLogsToFile } from "./utility";
+import { IS_LOCAL_TEST } from "../config";
 
 type TestFn = (ctx: { page: Page }) => Promise<void>;
 
@@ -10,13 +11,10 @@ interface TestOptions {
   device?: keyof typeof devices;
 }
 
-export function test(
-  title: string,
-  fn: TestFn,
-  options: TestOptions = {}
-) {
+export function test(title: string, fn: TestFn, options: TestOptions = {}) {
   const { mobileTest = false, device = "iPhone 6" } = options;
   let context = null as any;
+  const localTest = IS_LOCAL_TEST;
 
   baseTest(title, async ({ page, browser }, testInfo) => {
     const logs: string[] = [];
@@ -32,7 +30,7 @@ export function test(
       }
 
       context = await browser.newContext({
-      ...mobileDevice,
+        ...mobileDevice,
       });
 
       usedPage = await context.newPage();
@@ -44,16 +42,15 @@ export function test(
       await fn({ page: usedPage });
       logs.push(`[test-success] ${new Date().toISOString()} – OK`);
     } catch (err: any) {
-      logs.push(
-        `[test-error]   ${new Date().toISOString()} – ${err.message}`
-      );
+      logs.push(`[test-error]   ${new Date().toISOString()} – ${err.message}`);
       throw err;
     } finally {
       if (context) {
         await context.close();
       }
+      const prefix = localTest ? "LOCAL_" : "PP_";
       const folder = path.join("tests", "logs");
-      const fileName = testInfo.title.replace(/\W+/g, "_") + ".log";
+      const fileName = prefix + testInfo.title.replace(/\W+/g, "_") + ".log";
       await flushLogsToFile(logs, folder, fileName);
     }
   });

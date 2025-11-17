@@ -484,7 +484,7 @@ export function resetTestConsole() {
 }
 
 export async function nextStepButton(
-  page,
+  page:Page,
   screenOnLoaded: boolean,
   path: string,
   screenName: string,
