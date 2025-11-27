@@ -1,1 +1,1 @@
-export const IS_LOCAL_TEST = false;
+export const IS_LOCAL_TEST = true;

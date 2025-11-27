@@ -228,7 +228,12 @@ export async function screenShot(
   return completedScreen;
 }
 
-export async function pageHasStep(page:any, stepName: string | string[] | false, path:string, screenName:string) {
+export async function pageHasStep(
+  page: any,
+  stepName: string | string[] | false,
+  path: string,
+  screenName: string
+) {
   // Skip controllo se stepName = false
   if (stepName === false) return true;
   await page.waitForTimeout(WAIT.MID);
@@ -484,7 +489,7 @@ export function resetTestConsole() {
 }
 
 export async function nextStepButton(
-  page:Page,
+  page: Page,
   screenOnLoaded: boolean,
   path: string,
   screenName: string,
@@ -941,19 +946,27 @@ export async function autoFillForm(
       )
       .elementHandles();
 
-    console.log(`🔍 Trovati ${formFields.length} campi.`);
+    console.log(`🔍 Trovati ${formFields.length} campi.`, formFields);
 
     // 2) Cicla ciascun campo non ancora processato
     for (const handle of formFields) {
       let indexSelect = 0;
 
-      let isCalendar = false;
-      isCalendar = await handle.evaluate((el: any) => {
-        if (el.closest('[class*="calendarWrapper"]')) return true;
-        else return false;
+      const isCalendar = await handle.evaluate((el: any) => {
+        const input = el as HTMLElement;
+
+        const wrapper =
+          input.closest('div[class*="calendarWrapper"]') || // copre _calendarWrapper_10wvj_113
+          input.closest('div[class*="_calendarWrapper_"]'); // extra sicurezza
+
+        return !!wrapper;
       });
-      //if (isCalendar) console.log("CALENDAR FIELD TROVATO");
-      //else console.log("CALENDAR FIELD NON TROVATO");
+
+      // if (isCalendar) {
+      //   console.log("CALENDAR FIELD TROVATO");
+      // } else {
+      //   console.log("CALENDAR FIELD NON TROVATO");
+      // }
 
       const isSelect = await handle.evaluate((el: any) =>
         el.classList.contains("base-Select-root")
@@ -1058,8 +1071,10 @@ export async function autoFillForm(
       const override = valuesOverrides[name];
 
       if (isCalendar) {
-        handle.focus();
+        await handle.focus();
+        await handle.click();
         await page.waitForTimeout(WAIT.SHORT);
+
         const calendarElement = await page.$("div[class*='react-calendar']");
         if (calendarElement) {
           const dayButtons = await calendarElement.$$(

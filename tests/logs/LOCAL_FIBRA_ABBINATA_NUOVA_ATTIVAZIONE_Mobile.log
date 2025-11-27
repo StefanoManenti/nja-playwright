@@ -1,0 +1,7 @@
+[test-start] 2025-11-27T13:02:04.419Z – FIBRA ABBINATA NUOVA ATTIVAZIONE - Mobile
+[api-request #1] GET http://localhost:4200/configura-offerta?mocks&dev&codiceProdotto=BASE_BB&codiceCanale=CWEB3EGP&codiceTpCanale=WB&direct-debit=true&bill-type=digitale&commodity=gaseluce&salesProcess=NEW_ACTIVATION&fiber=BASE_BB&egonid=380100013650019 (document)
+[api-failed #1] GET http://localhost:4200/configura-offerta?mocks&dev&codiceProdotto=BASE_BB&codiceCanale=CWEB3EGP&codiceTpCanale=WB&direct-debit=true&bill-type=digitale&commodity=gaseluce&salesProcess=NEW_ACTIVATION&fiber=BASE_BB&egonid=380100013650019 -> net::ERR_CONNECTION_REFUSED in 2359ms
+[test-error]   2025-11-27T13:02:07.105Z – page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:4200/configura-offerta?mocks&dev&codiceProdotto=BASE_BB&codiceCanale=CWEB3EGP&codiceTpCanale=WB&direct-debit=true&bill-type=digitale&commodity=gaseluce&salesProcess=NEW_ACTIVATION&fiber=BASE_BB&egonid=380100013650019
+Call log:
+[2m  - navigating to "http://localhost:4200/configura-offerta?mocks&dev&codiceProdotto=BASE_BB&codiceCanale=CWEB3EGP&codiceTpCanale=WB&direct-debit=true&bill-type=digitale&commodity=gaseluce&salesProcess=NEW_ACTIVATION&fiber=BASE_BB&egonid=380100013650019", waiting until "load"[22m
+
