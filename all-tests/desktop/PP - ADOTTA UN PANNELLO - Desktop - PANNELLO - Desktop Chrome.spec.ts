@@ -95,7 +95,7 @@ test(`PP - ADOTTA UN PANNELLO - Desktop`, async ({ page }) => {
   for (const [index, s] of stepList.entries()) {
     if (index === 0) {
       await clearScreenshots(path);
-      awit addScriptRuntime(page, `window.collaudo(); bypassChecks.current = true;`);
+      await addScriptRuntime(page, `window.collaudo(); bypassChecks.current = true;`);
       await enableTestConsole(page);
     }
 
