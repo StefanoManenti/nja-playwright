@@ -1,7 +1,7 @@
 // utils/loggedTest.ts
 import { test as baseTest, Page, devices } from "@playwright/test";
 import path from "path";
-import { setupPageLogging, flushLogsToFile } from "./utility";
+import { setupPageLogging, flushLogsToFile, generateExcelReport } from "./utility";
 import { IS_LOCAL_TEST } from "../config";
 
 type TestFn = (ctx: { page: Page }) => Promise<void>;
@@ -48,10 +48,15 @@ export function test(title: string, fn: TestFn, options: TestOptions = {}) {
       if (context) {
         await context.close();
       }
+      testInfo
       const prefix = localTest ? "LOCAL_" : "PP_";
       const folder = path.join("tests", "logs");
       const fileName = prefix + testInfo.title.replace(/\W+/g, "_") + ".log";
-      await flushLogsToFile(logs, folder, fileName);
+      const logFileName = await flushLogsToFile(logs, folder, fileName);
+
+      await generateExcelReport(logFileName, localTest, testInfo.title, device.toString());
+
+      
     }
   });
 }

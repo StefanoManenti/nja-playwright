@@ -9,6 +9,7 @@ import fs from "fs";
 import path from "path";
 import { ValuesOverrides } from "../types/stepType";
 import { MOCKS } from "./Mock";
+import { spawn } from "child_process";
 
 export enum WAIT {
   SCREENSHOT = 300,
@@ -868,8 +869,58 @@ export async function flushLogsToFile(
   const filePath = path.join(folder, fileName);
   const content = buffer.join("\n") + "\n";
   await fs.promises.writeFile(filePath, content, { encoding: "utf-8" });
+  return filePath;
 }
-// Cerca ricorsivamente una classe nei genitori, partendo da un elemento
+
+
+// Report Excel
+export async function generateExcelReport(
+  logFilePath: string,
+  localTest:boolean,
+  testName:string,  
+  testDevice:string  
+) {
+  return new Promise<void>((resolve, reject) => {
+    // Try to find the script in both project root and parent directory
+    let scriptPath = path.join(process.cwd(), 'server', 'export-single-test.cjs');
+    if (!fs.existsSync(scriptPath)) {
+      scriptPath = path.join(__dirname, '..', '..', 'server', 'export-single-test.cjs');
+    }
+    if (!fs.existsSync(scriptPath)) {
+      console.warn('⚠️ Script export-single-test.cjs non trovato, skip generazione Excel');
+      return resolve();
+    }
+
+    const isLocalArg = localTest ? 'true' : 'false'; // Uses IS_LOCAL_TEST from config
+
+    const child = spawn('node', [scriptPath, logFilePath, testName, testName, testName, testDevice, isLocalArg], {
+      stdio: 'pipe',
+      shell: false
+    });
+
+    let stdout = '';
+    let stderr = '';
+
+    child.stdout?.on('data', (data) => { stdout += data.toString(); });
+    child.stderr?.on('data', (data) => { stderr += data.toString(); });
+
+    child.on('close', (code) => {
+      if (code === 0) {
+        console.log('📊 Excel report generato con successo');
+        console.log(stdout);
+        resolve();
+      } else {
+        console.error(`⚠️ Errore generazione Excel (exit code ${code}):`, stderr || stdout);
+        resolve(); // Non bloccare il test
+      }
+    });
+
+    child.on('error', (error) => {
+      console.error('⚠️ Errore esecuzione script Excel:', error);
+      resolve(); // Non bloccare il test
+    });
+  });
+}
 
 export const notSelectedStyle = "rgb(255, 255, 255)";
 
@@ -1458,3 +1509,5 @@ export async function autoFillForm(
 
   console.log("✅ Compilazione ricorsiva completata.");
 }
+
+
