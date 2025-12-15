@@ -41,52 +41,6 @@ async function saveLogsToFile(logs: string[], folder: string, fileName: string) 
   return filePath;
 }
 
-// Generate Excel report function
-async function generateExcelReport(logFilePath: string, testId: number, runId: number, testName: string) {
-  return new Promise<void>((resolve, reject) => {
-    // Try to find the script in both project root and parent directory
-    let scriptPath = path.join(process.cwd(), 'server', 'export-single-test.cjs');
-    if (!fs.existsSync(scriptPath)) {
-      scriptPath = path.join(__dirname, '..', '..', 'server', 'export-single-test.cjs');
-    }
-    if (!fs.existsSync(scriptPath)) {
-      console.warn('⚠️ Script export-single-test.cjs non trovato, skip generazione Excel');
-      return resolve();
-    }
-
-    const testNameArg = 'FIBRA STANDALONE MIGRAZIONE - Desktop';
-    const deviceArg = 'Desktop Chrome';
-    const isLocalArg = localTest ? 'true' : 'false'; // Uses IS_LOCAL_TEST from config
-
-    const child = spawn('node', [scriptPath, logFilePath, testId.toString(), runId.toString(), testNameArg, deviceArg, isLocalArg], {
-      stdio: 'pipe',
-      shell: true
-    });
-
-    let stdout = '';
-    let stderr = '';
-
-    child.stdout?.on('data', (data) => { stdout += data.toString(); });
-    child.stderr?.on('data', (data) => { stderr += data.toString(); });
-
-    child.on('close', (code) => {
-      if (code === 0) {
-        console.log('📊 Excel report generato con successo');
-        console.log(stdout);
-        resolve();
-      } else {
-        console.error(`⚠️ Errore generazione Excel (exit code ${code}):`, stderr || stdout);
-        resolve(); // Non bloccare il test
-      }
-    });
-
-    child.on('error', (error) => {
-      console.error('⚠️ Errore esecuzione script Excel:', error);
-      resolve(); // Non bloccare il test
-    });
-  });
-}
-
 test(`FIBRA STANDALONE MIGRAZIONE - Desktop`, async ({ page }) => {
   const startTime = new Date().toISOString();
   logs.push(`[test-start] ${startTime} – FIBRA STANDALONE MIGRAZIONE - Desktop`);
@@ -169,7 +123,7 @@ test(`FIBRA STANDALONE MIGRAZIONE - Desktop`, async ({ page }) => {
   for (const [index, s] of stepList.entries()) {
     if (index === 0) {
       await clearScreenshots(path);
-      await addScriptRuntime(page, `window.collaudo(); bypassChecks.current = true;`);
+      awit addScriptRuntime(page, `window.collaudo(); bypassChecks.current = true;`);
       await enableTestConsole(page);
     }
 
