@@ -54,9 +54,10 @@ export function test(title: string, fn: TestFn, options: TestOptions = {}) {
       const fileName = prefix + testInfo.title.replace(/\W+/g, "_") + ".log";
       const logFileName = await flushLogsToFile(logs, folder, fileName);
 
-      await generateExcelReport(logFileName, localTest, testInfo.title, device.toString());
-
-      
+      let tmp= fileName.split("_");
+      const logDevice=tmp[tmp.length-1].split(".")[0];
+      await generateExcelReport(logFileName, localTest, testInfo.title, logDevice);
+ 
     }
   });
 }

@@ -1,4 +1,5 @@
 #!/bin/bash
+chmod -R +x ./
 
 echo "==========================================="
 echo " Preparazione dei test..."

@@ -25,22 +25,6 @@ const startUrl = `${baseUrl}${queryString}`;
 
 // Logging setup
 const logs: string[] = [];
-const logFolder = path.join(process.cwd(), 'tests', 'logs');
-const testId = 4;
-let runId = Date.now(); // Timestamp as unique run ID
-const logFileName = `test_${testId}_run_${runId}_${new Date().toISOString().replace(/[:.]/g, '-')}.log`;
-
-// Save logs to file function
-async function saveLogsToFile(logs: string[], folder: string, fileName: string) {
-  if (!fs.existsSync(folder)) {
-    fs.mkdirSync(folder, { recursive: true });
-  }
-  const filePath = path.join(folder, fileName);
-  const content = logs.join('\\n') + '\\n';
-  fs.writeFileSync(filePath, content, { encoding: 'utf-8' });
-  return filePath;
-}
-
 test(`PP - ADOTTA UN PANNELLO - Desktop`, async ({ page }) => {
   const startTime = new Date().toISOString();
   logs.push(`[test-start] ${startTime} – PP - ADOTTA UN PANNELLO - Desktop`);
